@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Triage</title>
+<style>
+  :root{
+    --bg:#191919; --panel:#202020; --line:#2f2f2f; --hair:#252525;
+    --ink:#e9e9e7; --dim:#9b9a97; --faint:#6f6e6b;
+    --blue:#5b93d3; --gold:#c9a227; --red:#e06c6c; --green:#5fa87a; --purple:#9a6dd7;
+  }
+  @media (prefers-color-scheme: light){
+    :root{ --bg:#fff; --panel:#f7f7f5; --line:#e6e5e1; --hair:#efeeec;
+           --ink:#37352f; --dim:#787774; --faint:#9b9a97; }
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html,body{height:100%}
+  body{background:var(--bg);color:var(--ink);
+       font:13px/1.4 -apple-system,BlinkMacSystemFont,"Segoe UI",Inter,sans-serif;
+       -webkit-font-smoothing:antialiased;font-variant-numeric:tabular-nums;
+       padding:11px 13px;display:flex;flex-direction:column;gap:7px;overflow:hidden}
+
+  .hd{display:flex;align-items:baseline;justify-content:space-between;
+      font-size:10px;color:var(--faint);text-transform:uppercase;letter-spacing:.09em;
+      padding-bottom:7px;border-bottom:1px solid var(--line);flex:0 0 auto}
+  .hd b{font-size:10px;font-weight:600;color:var(--dim);letter-spacing:.09em}
+
+  .tiles{display:grid;grid-template-columns:repeat(3,1fr);gap:7px;flex:0 0 auto}
+  .tile{background:var(--panel);border:1px solid var(--line);border-radius:7px;
+        padding:7px 8px 6px;min-width:0;overflow:hidden}
+  .tile .n{font-size:24px;font-weight:600;letter-spacing:-.035em;line-height:1;
+           font-variant-numeric:tabular-nums}
+  .tile .n small{font-size:13px;font-weight:500;color:var(--faint);letter-spacing:-.01em}
+  .tile .k{font-size:9px;color:var(--faint);text-transform:uppercase;letter-spacing:.07em;
+           margin-top:4px;display:block;white-space:nowrap;overflow:hidden;
+           text-overflow:ellipsis}
+  .tile .s{font-size:10px;color:var(--dim);margin-top:1px;display:block;
+           white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .red .n{color:var(--red)} .green .n{color:var(--green)} .gold .n{color:var(--gold)}
+
+  .barwrap{flex:0 0 auto}
+  .bar{height:8px;border-radius:4px;overflow:hidden;display:flex;background:var(--hair)}
+  .bar i{display:block;height:100%;min-width:3px}
+  .lg{display:flex;flex-wrap:wrap;gap:10px;margin-top:6px;
+      font-size:10px;color:var(--dim)}
+  .lg span{display:inline-flex;align-items:center;gap:4px;white-space:nowrap}
+  .sw{width:7px;height:7px;border-radius:2px;flex:0 0 auto}
+
+  .call{background:var(--panel);border:1px solid var(--line);
+        border-left:2px solid var(--red);border-radius:0 6px 6px 0;
+        padding:6px 9px;font-size:11.5px;line-height:1.38;color:var(--dim);flex:0 0 auto}
+  .call b{color:var(--ink);font-weight:600}
+
+  .sec{font-size:9.5px;color:var(--faint);text-transform:uppercase;letter-spacing:.08em;
+       display:flex;justify-content:space-between;align-items:baseline;
+       padding-top:2px;padding-bottom:5px;border-bottom:1px solid var(--hair);flex:0 0 auto}
+  .sec em{font-style:normal;color:var(--faint);text-transform:none;letter-spacing:0;font-size:10px}
+
+  .list{flex:1 1 auto;overflow-y:auto;min-height:0}
+  .row{display:grid;grid-template-columns:46px 1fr auto;gap:9px;align-items:center;
+       padding:6px 2px;border-bottom:1px solid var(--hair);
+       text-decoration:none;color:inherit}
+  .row:last-child{border-bottom:0}
+  .row:hover{background:var(--panel)}
+  .tm{font-size:11px;color:var(--faint);font-variant-numeric:tabular-nums;text-align:right}
+  .tm.od{color:var(--red)}
+  .nm{min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-size:12.5px}
+  .tag{font-size:9px;color:var(--faint);text-transform:uppercase;letter-spacing:.06em;
+       border:1px solid var(--line);border-radius:3px;padding:1px 4px;white-space:nowrap}
+  .dgrp{font-size:9.5px;color:var(--faint);text-transform:uppercase;letter-spacing:.07em;
+        padding:7px 2px 3px}
+  .none{color:var(--faint);font-style:italic;font-size:11.5px;padding:12px 2px}
+
+  .ft{flex:0 0 auto;border-top:1px solid var(--line);padding-top:5px;
+      font-size:9.5px;color:var(--faint);line-height:1.4}
+  .ft b{color:var(--dim);font-weight:600}
+
+  /* Short embeds: the hero counts and the provenance footer must never be
+     clipped, so the itemised list is the first thing to go. */
+  @media (max-height:330px){
+    body{gap:6px;padding:10px 12px}
+    .tile .n{font-size:21px}
+    .tile .s{display:none}
+    .lg{display:none}
+    .sec,.list{display:none}
+    .call{font-size:11px}
+    .ft{font-size:9px}
+  }
+  @media (max-height:270px){
+    .tile .k{font-size:8.5px}
+  }
+</style>
+</head>
+<body>
+
+<div class="hd"><b>Triage</b><span id="stamp">—</span></div>
+
+<div class="tiles">
+  <div class="tile red"><div class="n" id="t-over">—</div>
+    <span class="k">Overdue</span><span class="s" id="t-over-s">&nbsp;</span></div>
+  <div class="tile gold"><div class="n" id="t-done">—</div>
+    <span class="k">Ever completed</span><span class="s" id="t-done-s">&nbsp;</span></div>
+  <div class="tile"><div class="n" id="t-rate">—</div>
+    <span class="k">Closed / 14 days</span><span class="s" id="t-rate-s">&nbsp;</span></div>
+</div>
+
+<div class="barwrap">
+  <div class="bar" id="bar"></div>
+  <div class="lg" id="legend"></div>
+</div>
+
+<div class="call" id="call">&nbsp;</div>
+
+<div class="sec"><span id="sec-t">Actionable</span><em id="sec-n"></em></div>
+<div class="list" id="list"><div class="none">loading…</div></div>
+
+<div class="ft" id="ft"></div>
+
+<script>
+(function(){
+  var MON=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+  var DOW=['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
+  function esc(s){return String(s==null?'':s).replace(/[<>&"]/g,function(c){
+    return {'<':'&lt;','>':'&gt;','&':'&amp;','"':'&quot;'}[c];});}
+
+  /* --- regex-only date handling: never new Date() on a raw offset ISO --- */
+  function ymd(v){ var m=/^(\d{4})-(\d{2})-(\d{2})/.exec(v||''); return m?m[0]:''; }
+  function hhmm(v){
+    var m=/^\d{4}-\d{2}-\d{2}T(\d{2}):(\d{2})/.exec(v||'');
+    return m ? m[1]+m[2] : null;              /* null => all-day */
+  }
+  /* build a Date from a bare Y-M-D only, at local noon: safe for weekday math */
+  function noon(d){ var m=/^(\d{4})-(\d{2})-(\d{2})$/.exec(d);
+    return m ? new Date(+m[1], +m[2]-1, +m[3], 12, 0, 0) : null; }
+  function dayDiff(a,b){ var A=noon(a),B=noon(b);
+    return (A&&B) ? Math.round((A-B)/86400000) : 0; }
+  function label(d,today){
+    var n=dayDiff(d,today);
+    if(n===0) return 'Today';
+    if(n===1) return 'Tomorrow';
+    var dt=noon(d); if(!dt) return d;
+    return DOW[dt.getDay()]+' '+String(dt.getDate()).padStart(2,'0')+' '+MON[dt.getMonth()];
+  }
+  function pct(n,d){ return d>0 ? Math.round(n*1000/d)/10 : 0; }
+
+  fetch('../data/tasks.json?t='+Date.now())
+    .then(function(r){ if(!r.ok) throw new Error('HTTP '+r.status); return r.json(); })
+    .then(render)
+    .catch(function(e){
+      document.getElementById('list').innerHTML=
+        '<div class="none">Could not load ../data/tasks.json — '+esc(e.message)+'</div>';
+    });
+
+  function render(d){
+    var c      = d.counts || {};
+    var today  = ymd(d.today) || '';
+    var total  = +c.total   || 0;
+    var open   = +c.open    || 0;
+    var done   = +c.done    || 0;
+    var over   = +c.overdue || 0;
+    var onTrack= Math.max(0, total - done - over);   /* open, not yet late */
+
+    /* header stamp */
+    var g = ymd(d.generated), gt = hhmm(d.generated);
+    var gd = noon(g);
+    document.getElementById('stamp').textContent =
+      (gd ? String(gd.getDate()).padStart(2,'0')+' '+MON[gd.getMonth()]+' '+gd.getFullYear() : '')
+      + (gt ? ' · '+gt : '');
+
+    /* ---------- tiles (all three are backed by counts/history) ---------- */
+    document.getElementById('t-over').innerHTML =
+      over + ' <small>/ '+open+'</small>';
+    document.getElementById('t-over-s').textContent =
+      pct(over, open)+'% of all open';
+
+    document.getElementById('t-done').innerHTML =
+      done + ' <small>/ '+total+'</small>';
+    document.getElementById('t-done-s').textContent =
+      pct(done, total)+'% of all rows';
+
+    /* completion over the history window (daily aggregates) */
+    var hist = Array.isArray(d.history) ? d.history : [];
+    var hDone=0, hTot=0;
+    hist.forEach(function(h){ hDone += (+h.done||0); hTot += (+h.total||0); });
+    var el=document.getElementById('t-rate');
+    el.innerHTML = hDone + ' <small>/ '+hTot+'</small>';
+    el.parentNode.className = 'tile ' + (hDone===0 ? 'red' : 'green');
+    document.getElementById('t-rate-s').textContent =
+      hist.length ? ('came due, last '+hist.length+'d') : 'no history';
+
+    /* ---------- composition bar: done + overdue + on-track = total ---------- */
+    var segs=[
+      {k:'Overdue',            v:over,    c:'var(--red)'},
+      {k:'Open, not yet late', v:onTrack, c:'var(--blue)'},
+      {k:'Done',               v:done,    c:'var(--green)'}
+    ].filter(function(s){ return s.v>0; });
+    document.getElementById('bar').innerHTML = segs.map(function(s){
+      return '<i style="flex:'+s.v+' 1 0;background:'+s.c+'"></i>'; }).join('');
+    document.getElementById('legend').innerHTML = segs.map(function(s){
+      return '<span><i class="sw" style="background:'+s.c+'"></i>'+
+             s.k+' <b style="color:var(--ink);font-weight:600">'+s.v+'</b></span>'; }).join('')
+      + '<span style="color:var(--faint)">'+total+' rows total</span>';
+
+    /* ---------- the honest headline ---------- */
+    var call;
+    if(hDone===0 && hTot>0){
+      call = '<b>Nothing closed in '+hist.length+' days.</b> '+hTot+' items came due, '+
+             hDone+' completed — the '+over+'-item overdue pile is not draining at all.';
+    } else if(hDone>0){
+      var perDay = hDone/hist.length;
+      var days   = Math.ceil(over/perDay);
+      call = '<b>At the last '+hist.length+'d pace ('+hDone+' closed), the '+over+
+             ' overdue items need ~'+days+' days to clear</b> — before anything new lands.';
+    } else {
+      call = '<b>'+over+' of '+open+' open items are past their date.</b> '+
+             'No completion history is available to estimate a drain rate.';
+    }
+    document.getElementById('call').innerHTML = call;
+
+    /* ---------- what we can actually itemise ---------- */
+    var seen={}, feed=[];
+    (d.today_items||[]).concat(d.upcoming||[]).forEach(function(it){
+      var key=(it.url||'')+'|'+(it.name||'')+'|'+(it.date||'');
+      if(seen[key]) return; seen[key]=1; feed.push(it);
+    });
+
+    var late = feed.filter(function(it){
+      var k=ymd(it.date); return k && today && k<today && !it.done; });
+    var live = feed.filter(function(it){ return late.indexOf(it)<0; });
+
+    /* honest section title: never imply the full overdue set is listed */
+    document.getElementById('sec-t').textContent =
+      late.length ? ('Overdue in feed · '+late.length+' of '+over) : 'Next up';
+    document.getElementById('sec-n').textContent =
+      feed.length+' of '+total+' rows in feed';
+
+    var rows = late.concat(live);
+    var html='', lastKey=null;
+    if(!rows.length){
+      html = '<div class="none">No individual rows in the feed.</div>';
+    } else {
+      rows.forEach(function(it){
+        var k = ymd(it.date), isLate = late.indexOf(it)>=0;
+        if(k!==lastKey){
+          lastKey=k;
+          var n = dayDiff(k, today);
+          var suffix = isLate ? ' · '+Math.abs(n)+'d late' : '';
+          html += '<div class="dgrp">'+esc(label(k,today))+esc(suffix)+'</div>';
+        }
+        var t = hhmm(it.date);
+        var tag = it.meeting_type || it.type || '';
+        html += '<a class="row" '+(it.url?'href="'+esc(it.url)+'" target="_blank" rel="noopener"':'')+'>'
+             +  '<span class="tm'+(isLate?' od':'')+'">'+(t?esc(t):'&mdash;')+'</span>'
+             +  '<span class="nm">'+esc(it.name||'Untitled')+'</span>'
+             +  (tag?'<span class="tag">'+esc(tag)+'</span>':'<span></span>')
+             +  '</a>';
+      });
+    }
+    document.getElementById('list').innerHTML = html;
+
+    /* ---------- provenance: state plainly what is and is not here ---------- */
+    var missing = over - late.length;
+    document.getElementById('ft').innerHTML =
+      '<b>Counts cover all '+total+' rows; only '+feed.length+' rows are itemised</b> '+
+      '(today + upcoming). '+
+      (missing>0
+        ? missing+' of the '+over+' overdue items are counted but <b>not listed</b> — the export '+
+          'carries no past-dated rows. Triage them in Notion. '
+        : 'All '+over+' overdue items are listed. ') +
+      'History is daily totals, not rows.';
+  }
+})();
+</script>
+</body>
+</html>

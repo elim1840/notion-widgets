@@ -22,7 +22,7 @@
        font:13.5px/1.45 -apple-system,BlinkMacSystemFont,"Segoe UI",Inter,sans-serif;
        -webkit-font-smoothing:antialiased;display:flex;flex-direction:column;overflow:hidden}
 
-  header{display:flex;align-items:flex-end;justify-content:space-between;
+  header{display:flex;align-items:flex-end;justify-content:space-between;gap:10px;
          padding:14px 18px 11px;border-bottom:1px solid var(--line);flex:0 0 auto}
   .dnum{font-size:27px;font-weight:600;letter-spacing:-.025em;line-height:1}
   .dow{font-size:10.5px;color:var(--dim);text-transform:uppercase;
@@ -31,6 +31,27 @@
   .clk{font-size:22px;font-weight:600;font-variant-numeric:tabular-nums;line-height:1;
        letter-spacing:-.01em}
   .meta{font-size:10.5px;color:var(--faint);margin-top:4px}
+
+  /* day navigation */
+  .nav{display:flex;align-items:center;gap:6px;flex:0 0 auto;padding-bottom:2px}
+  .nb{background:var(--panel);border:1px solid var(--line);color:var(--ink);
+      border-radius:5px;width:24px;height:22px;line-height:1;cursor:pointer;
+      font-size:11px;display:flex;align-items:center;justify-content:center;
+      font-family:inherit;padding:0}
+  .nb:hover{border-color:var(--blue)}
+  .nb:disabled{opacity:.3;cursor:default}
+  .nb.today{width:auto;padding:0 8px;font-size:9.5px;text-transform:uppercase;
+      letter-spacing:.09em;color:var(--dim)}
+  .nb.today.on{color:var(--now);border-color:var(--now)}
+  .dots{display:flex;gap:3px;margin:0 2px}
+  .dot{width:20px;height:22px;border-radius:4px;border:1px solid transparent;
+      background:transparent;cursor:pointer;color:var(--faint);font-family:inherit;
+      font-size:9px;letter-spacing:.04em;text-transform:uppercase;padding:0;
+      display:flex;align-items:center;justify-content:center}
+  .dot:hover{color:var(--ink);border-color:var(--line)}
+  .dot.sel{background:var(--panel);border-color:var(--line);color:var(--ink);font-weight:600}
+  .dot.isnow{color:var(--now)}
+  .dot.busy::after{content:"";position:absolute}
 
   /* all-day strip */
   .allday{flex:0 0 auto;padding:7px 18px;border-bottom:1px solid var(--line);
@@ -97,6 +118,12 @@
 <body>
 <header>
   <div><div class="dnum" id="dnum">—</div><div class="dow" id="dow"></div></div>
+  <div class="nav" id="nav">
+    <button class="nb" id="prev" title="Previous day (←)">&#9664;</button>
+    <div class="dots" id="dots"></div>
+    <button class="nb" id="next" title="Next day (→)">&#9654;</button>
+    <button class="nb today" id="tbtn" title="Jump to today (T)">Today</button>
+  </div>
   <div class="rt"><div class="clk" id="clk">----</div><div class="meta" id="sum"></div></div>
 </header>
 <div class="allday" id="allday" style="display:none"></div>
@@ -105,14 +132,18 @@
 
 <script>
 const H0 = 6, H1 = 24;            // 0600 -> 2400
-let HR = 52;                      // recomputed on load to fit the viewport
+let HR = 52;                      // recomputed on each render to fit the viewport
 const DOW=['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+const DOW3=['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
 const MON=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
 const esc=s=>(s||'').replace(/[<>&]/g,c=>({'<':'&lt;','>':'&gt;','&':'&amp;'}[c]));
 
 // read wall-clock digits off the ISO string; never new Date() on the value
 const mins = iso => { const m=/T(\d{2}):(\d{2})/.exec(iso||''); return m?(+m[1])*60+(+m[2]):null; };
 const hhmm = iso => { const m=/T(\d{2}):(\d{2})/.exec(iso||''); return m?m[1]+m[2]:''; };
+// date-only parts, also by regex - never new Date() on the raw value
+function ymd(s){ const m=/^(\d{4})-(\d{2})-(\d{2})/.exec(s||''); return m?[+m[1],+m[2],+m[3]]:null; }
+function dowOf(dateStr){ const p=ymd(dateStr); return p? new Date(p[0],p[1]-1,p[2]).getDay() : 0; }
 function durTxt(a,b){
   const s=mins(a),e=mins(b); if(s==null||e==null||e<=s) return '';
   const d=e-s; return d>=60 ? (d%60?`${Math.floor(d/60)}h${d%60}`:`${Math.floor(d/60)}h`) : `${d}m`;
@@ -130,18 +161,79 @@ function clkTxt(){ const n=new Date();
 
 document.getElementById('clk').textContent = clkTxt();
 
-fetch('../data/tasks.json?t='+Date.now()).then(r=>r.json()).then(d=>{
-  const day = new Date(d.today+'T12:00:00');
-  document.getElementById('dnum').textContent = MON[day.getMonth()]+' '+day.getDate();
-  document.getElementById('dow').textContent  = DOW[day.getDay()];
-  const c=d.counts;
-  document.getElementById('sum').textContent =
-    `${c.today_done}/${c.today_total} done · ${c.open} open · ${c.overdue} overdue`;
-  const g=new Date(d.generated);
+let DAYS=[], IDX=0, TODAY_IDX=0, COUNTS=null, nowTimer=null;
+
+Promise.all([
+  fetch('../data/week.json?t='+Date.now()).then(r=>r.json()),
+  fetch('../data/tasks.json?t='+Date.now()).then(r=>r.json()).catch(()=>null)
+]).then(([w, tasks])=>{
+  DAYS = (w && w.days) || [];
+  if(!DAYS.length) throw new Error('no days');
+  COUNTS = tasks && tasks.counts || null;
+  TODAY_IDX = Math.max(0, DAYS.findIndex(d=>d.is_today));
+  IDX = TODAY_IDX;
+
+  const g=new Date(w.generated);
   document.getElementById('gen').textContent =
     'synced '+String(g.getHours()).padStart(2,'0')+String(g.getMinutes()).padStart(2,'0');
 
-  const items = d.today_items || [];
+  buildDots();
+  wireNav();
+  render();
+})
+.catch(()=>{ document.getElementById('grid').innerHTML =
+  '<div class="empty">data not built yet</div>'; });
+
+function buildDots(){
+  const box=document.getElementById('dots');
+  box.innerHTML = DAYS.map((d,i)=>
+    `<button class="dot ${i===TODAY_IDX?'isnow':''}" data-i="${i}"
+       title="${d.date} · ${d.items.length} item${d.items.length===1?'':'s'}">${DOW3[dowOf(d.date)][0]}</button>`
+  ).join('');
+  box.querySelectorAll('.dot').forEach(b=>
+    b.addEventListener('click',()=>{ IDX=+b.dataset.i; render(); }));
+}
+
+function wireNav(){
+  document.getElementById('prev').addEventListener('click',()=>{ if(IDX>0){IDX--;render();} });
+  document.getElementById('next').addEventListener('click',()=>{ if(IDX<DAYS.length-1){IDX++;render();} });
+  document.getElementById('tbtn').addEventListener('click',()=>{ IDX=TODAY_IDX; render(); });
+  document.addEventListener('keydown',e=>{
+    if(e.key==='ArrowLeft'  && IDX>0){ IDX--; render(); }
+    else if(e.key==='ArrowRight' && IDX<DAYS.length-1){ IDX++; render(); }
+    else if(e.key==='t' || e.key==='T'){ IDX=TODAY_IDX; render(); }
+    else return;
+    e.preventDefault();
+  });
+  window.addEventListener('resize', ()=>render());
+}
+
+function render(){
+  const day   = DAYS[IDX];
+  const isToday = IDX===TODAY_IDX && !!day.is_today;
+  const items = day.items || [];
+  const parts = ymd(day.date) || [1970,1,1];
+
+  // ---- header
+  document.getElementById('dnum').textContent = MON[parts[1]-1]+' '+parts[2];
+  document.getElementById('dow').textContent  = DOW[dowOf(day.date)] +
+    (isToday ? ' · today' : '');
+  const done = items.filter(t=>t.done).length;
+  let sum = `${done}/${items.length} done`;
+  if(isToday && COUNTS) sum += ` · ${COUNTS.open} open · ${COUNTS.overdue} overdue`;
+  else {
+    const delta = IDX - TODAY_IDX;
+    sum += delta===0 ? '' : ` · ${delta>0?'+':''}${delta}d`;
+  }
+  document.getElementById('sum').textContent = sum;
+  document.getElementById('clk').textContent = clkTxt();
+
+  document.getElementById('prev').disabled = IDX===0;
+  document.getElementById('next').disabled = IDX===DAYS.length-1;
+  document.getElementById('tbtn').classList.toggle('on', isToday);
+  document.querySelectorAll('.dot').forEach(b=>
+    b.classList.toggle('sel', +b.dataset.i===IDX));
+
   const timed  = items.filter(t=>mins(t.date)!=null);
   const allday = items.filter(t=>mins(t.date)==null);
 
@@ -151,11 +243,12 @@ fetch('../data/tasks.json?t='+Date.now()).then(r=>r.json()).then(d=>{
     ad.style.display='flex';
     ad.innerHTML='<span class="lbl">All day</span>'+allday.map(t=>
       `<a class="ad ${t.done?'done':''}" href="${t.url}" target="_blank">${esc(t.name)||'(untitled)'}</a>`).join('');
-  }
+  } else { ad.style.display='none'; ad.innerHTML=''; }
 
   // ---- fit the whole 0600-2400 span into the available height (no scroll)
+  const shell=document.getElementById('scroll');
+  shell.classList.remove('fits');
   (function fit(){
-    const shell=document.getElementById('scroll');
     const avail=shell.clientHeight - 30;              // bottom padding
     const need =(H1-H0);
     const px   = Math.floor(avail/need);
@@ -217,29 +310,30 @@ fetch('../data/tasks.json?t='+Date.now()).then(r=>r.json()).then(d=>{
   }).join('');
 
   if(!items.length){
-    grid.insertAdjacentHTML('afterbegin','<div class="empty">nothing scheduled today</div>');
+    grid.insertAdjacentHTML('afterbegin',
+      `<div class="empty">nothing scheduled ${isToday?'today':'this day'}</div>`);
   }
 
-  // ---- now line
+  // ---- now line (only meaningful on today)
+  if(nowTimer){ clearInterval(nowTimer); nowTimer=null; }
   function drawNow(){
     document.querySelectorAll('.nowline,.nowtag').forEach(n=>n.remove());
-    const m=nowMin();
     document.getElementById('clk').textContent = clkTxt();
+    if(!isToday) return;
+    const m=nowMin();
     if(m < H0*60 || m > H1*60) return;
     const y=top(m);
     grid.insertAdjacentHTML('beforeend',
       `<div class="nowline" style="top:${y}px"></div>
        <div class="nowtag" style="top:${y}px">${clkTxt()}</div>`);
   }
-  drawNow(); setInterval(drawNow, 30000);
+  drawNow(); nowTimer=setInterval(drawNow, 30000);
 
-  // whole day is visible when it fits; otherwise centre on now
-  const sh=document.getElementById('scroll');
-  if(sh.scrollHeight <= sh.clientHeight+4){ sh.classList.add('fits'); }
-  else { const m=nowMin(); sh.scrollTop = (m>=H0*60&&m<=H1*60) ? Math.max(0, top(m)-180) : 0; }
-})
-.catch(()=>{ document.getElementById('grid').innerHTML =
-  '<div class="empty">data not built yet</div>'; });
+  // whole day is visible when it fits; otherwise centre on now (today) or top
+  if(shell.scrollHeight <= shell.clientHeight+4){ shell.classList.add('fits'); shell.scrollTop=0; }
+  else if(isToday){ const m=nowMin(); shell.scrollTop = (m>=H0*60&&m<=H1*60) ? Math.max(0, top(m)-180) : 0; }
+  else { shell.scrollTop = 0; }
+}
 </script>
 </body>
 </html>

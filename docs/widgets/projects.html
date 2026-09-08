@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Projects</title>
+<style>
+  :root{
+    --bg:#191919; --panel:#202020; --line:#2f2f2f; --hair:#252525;
+    --ink:#e9e9e7; --dim:#9b9a97; --faint:#6f6e6b;
+    --blue:#5b93d3; --gold:#c9a227; --red:#e06c6c; --green:#5fa87a; --purple:#9a6dd7;
+  }
+  @media (prefers-color-scheme: light){
+    :root{ --bg:#fff; --panel:#f7f7f5; --line:#e6e5e1; --hair:#efeeec;
+           --ink:#37352f; --dim:#787774; --faint:#9b9a97; }
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--bg);color:var(--ink);padding:12px 14px;
+       font:13px/1.4 -apple-system,BlinkMacSystemFont,"Segoe UI",Inter,sans-serif;
+       -webkit-font-smoothing:antialiased}
+
+  .hd{font-size:10px;color:var(--faint);text-transform:uppercase;letter-spacing:.09em;
+      display:flex;justify-content:space-between;align-items:baseline;gap:8px;
+      padding-bottom:7px;border-bottom:1px solid var(--line)}
+  .hd .r{color:var(--dim);letter-spacing:.04em}
+
+  .board{display:grid;gap:10px;margin-top:10px;
+         grid-template-columns:repeat(auto-fit,minmax(150px,1fr))}
+  .col{background:var(--panel);border:1px solid var(--line);border-radius:7px;
+       padding:8px 9px;min-width:0}
+  .ct{display:flex;align-items:center;gap:6px;margin-bottom:6px}
+  .ct b{font-size:9.5px;text-transform:uppercase;letter-spacing:.08em;font-weight:600}
+  .ct .n{font-size:9.5px;color:var(--faint);font-variant-numeric:tabular-nums;
+         margin-left:auto}
+  .dot{width:6px;height:6px;border-radius:50%;flex:0 0 auto}
+  .c-plan b{color:var(--blue)}   .c-plan .dot{background:var(--blue)}
+  .c-res  b{color:var(--purple)} .c-res  .dot{background:var(--purple)}
+  .c-none b{color:var(--faint)}  .c-none .dot{background:var(--faint)}
+
+  .it{display:block;padding:5px 0;border-bottom:1px solid var(--hair);min-width:0}
+  .it:last-child{border-bottom:0}
+  .it .nm{font-size:12px;line-height:1.3;display:block;
+          overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+  .it.hi .nm{font-weight:600}
+  .it .mt{display:flex;gap:4px;align-items:center;margin-top:3px;flex-wrap:wrap}
+  .chip{font-size:11px;padding:1px 7px;border-radius:3px;line-height:1.35;
+        white-space:nowrap}
+  .p-hi{background:rgba(224,108,108,.18);color:var(--red)}
+  .p-md{background:rgba(201,162,39,.18);color:var(--gold)}
+  .p-no{background:rgba(155,154,151,.14);color:var(--faint)}
+  .nx{background:rgba(95,168,122,.18);color:var(--green);font-variant-numeric:tabular-nums}
+  .more{font-size:10.5px;color:var(--faint);padding-top:5px;display:block}
+
+  .ft{margin-top:10px;padding-top:7px;border-top:1px solid var(--line);
+      display:flex;gap:8px;align-items:center;flex-wrap:wrap;
+      font-size:10.5px;color:var(--faint)}
+  .ft .arch{background:rgba(155,154,151,.14);color:var(--dim);
+            padding:1px 7px;border-radius:3px;font-size:11px}
+  .warn{color:var(--gold)}
+  .msg{color:var(--faint);font-style:italic;font-size:12px;padding:16px 0}
+</style>
+</head>
+<body>
+<div class="hd"><span>Projects</span><span class="r" id="hr"></span></div>
+<div id="out"><div class="msg">loading…</div></div>
+
+<script>
+(function(){
+  var esc=function(s){return String(s==null?'':s).replace(/[<>&"]/g,function(c){
+    return {'<':'&lt;','>':'&gt;','&':'&amp;','"':'&quot;'}[c];});};
+
+  // Column order is deliberate: work-in-motion first, unfiled next.
+  // Archive is NOT a column - it is a single footer count so it can't dominate.
+  var COLS=[
+    {key:'Planning', label:'Planning', cls:'c-plan'},
+    {key:'Research', label:'Research', cls:'c-res'},
+    {key:'',         label:'No phase', cls:'c-none'}
+  ];
+  var PRI={High:{c:'p-hi',t:'High',r:0},Medium:{c:'p-md',t:'Med',r:1}};
+  // Per-column visible cap keeps the widget inside a short iframe. Narrow embeds
+  // stack columns, so they get a tighter cap to stay near ~400-500px tall.
+  function cap(){ return window.innerWidth<480 ? 4 : 8; }
+
+  function card(p){
+    var pr=PRI[p.pri], hi=p.pri==='High';
+    var mt='';
+    if(pr) mt+='<span class="chip '+pr.c+'">'+pr.t+'</span>';
+    else   mt+='<span class="chip p-no">no pri</span>';
+    if(p.next) mt+='<span class="chip nx">next '+esc(p.next)+'</span>';
+    if(p.blocker) mt+='<span class="chip p-hi">blocked</span>';
+    return '<div class="it'+(hi?' hi':'')+'">'+
+           '<span class="nm" title="'+esc(p.name)+'">'+esc(p.name)+'</span>'+
+           '<span class="mt">'+mt+'</span></div>';
+  }
+
+  function render(rows){
+    var out=document.getElementById('out'), CAP=cap();
+    if(!rows.length){out.innerHTML='<div class="msg">No projects in Notion.</div>';return;}
+
+    var arch=rows.filter(function(p){return p.phase==='Archive';});
+    var live=rows.filter(function(p){return p.phase!=='Archive';});
+    var active=rows.filter(function(p){return p.status==='Active';}).length;
+
+    document.getElementById('hr').textContent=
+      rows.length+' total · '+active+' active · '+arch.length+' archived';
+
+    var html='<div class="board">', shown=0;
+    COLS.forEach(function(c){
+      var g=live.filter(function(p){return (p.phase||'')===c.key;});
+      g.sort(function(a,b){
+        var ra=PRI[a.pri]?PRI[a.pri].r:2, rb=PRI[b.pri]?PRI[b.pri].r:2;
+        if(ra!==rb) return ra-rb;
+        return a.name.localeCompare(b.name);
+      });
+      shown+=g.length;
+      html+='<div class="col '+c.cls+'"><div class="ct"><i class="dot"></i>'+
+            '<b>'+c.label+'</b><span class="n">'+g.length+'</span></div>';
+      if(!g.length){ html+='<span class="more">none</span>'; }
+      else{
+        g.slice(0,CAP).forEach(function(p){html+=card(p);});
+        if(g.length>CAP) html+='<span class="more">+'+(g.length-CAP)+' more</span>';
+      }
+      html+='</div>';
+    });
+    html+='</div>';
+
+    // Footer surfaces the real data shape rather than hiding it.
+    var noPhase=live.filter(function(p){return !p.phase;}).length;
+    html+='<div class="ft"><span class="arch">Archive '+arch.length+'</span>';
+    if(noPhase) html+='<span class="warn">'+noPhase+' unphased in Notion</span>';
+    html+='<span>no "Active" phase exists — status field only</span></div>';
+
+    out.innerHTML=html;
+  }
+
+  fetch('../data/spokes.json',{cache:'no-store'})
+    .then(function(r){ if(!r.ok) throw new Error('HTTP '+r.status); return r.json(); })
+    .then(function(d){
+      var rows=(d&&d.projects)||[];
+      rows=rows.filter(function(p){return p&&p.name&&String(p.name).trim();})
+               .map(function(p){
+                 return {name:String(p.name).trim(),
+                         phase:(p.phase||'').trim(),
+                         pri:(p.pri||'').trim(),
+                         blocker:(p.blocker||'').trim(),
+                         next:(p.next||'').trim(),
+                         status:(p.status||'').trim()};
+               });
+      render(rows);
+    })
+    .catch(function(e){
+      document.getElementById('out').innerHTML=
+        '<div class="msg">Could not load spokes.json — '+esc(e.message)+'</div>';
+    });
+})();
+</script>
+</body>
+</html>
