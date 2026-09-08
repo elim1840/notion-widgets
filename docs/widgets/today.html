@@ -86,6 +86,24 @@
   .item.past .n{color:var(--dim)}
 
   .empty{color:var(--faint);font-style:italic;padding:14px 4px;text-align:center;font-size:11.5px}
+
+  /* ---------- daily brief ---------- */
+  .brief{margin:12px 0 0;border:1px solid var(--line);border-radius:8px;
+         background:var(--panel);overflow:hidden}
+  .brief summary{list-style:none;cursor:pointer;padding:9px 11px;
+                 display:flex;align-items:center;justify-content:space-between;gap:8px}
+  .brief summary::-webkit-details-marker{display:none}
+  .brief .bt{font-size:9.5px;letter-spacing:.11em;text-transform:uppercase;color:var(--dim)}
+  .brief .bd8{font-size:10px;color:var(--faint);font-variant-numeric:tabular-nums}
+  .brief .inner{padding:0 11px 10px}
+  .brief li{font-size:11.5px;line-height:1.5;color:var(--ink);margin:0 0 5px 14px;
+            overflow-wrap:anywhere}
+  .brief li::marker{color:var(--faint)}
+  .brief a.open{display:inline-block;margin-top:4px;font-size:10.5px;color:var(--accent);
+                text-decoration:none}
+  .brief a.open:hover{text-decoration:underline}
+  .brief.stale{border-color:var(--amber)}
+  .brief .warn{font-size:10px;color:var(--amber);margin-bottom:6px}
   .foot{margin-top:12px;padding-top:8px;border-top:1px solid var(--line);
         font-size:9.5px;color:var(--faint);display:flex;justify-content:space-between;gap:8px}
 </style>
@@ -111,6 +129,7 @@
   </div>
 
   <div id="body"></div>
+  <div id="briefbox"></div>
 
   <div class="foot">
     <span id="gen"></span><span id="src"></span>
@@ -170,6 +189,29 @@ function itemHTML(it, nowM){
     </div>
   </${tag}>`;
 }
+
+// ---- daily brief: the abstract only, collapsed by default.
+// Full brief (with the PDF) lives on its own Notion page; this is the headline.
+fetch('../data/brief.json?t='+Date.now())
+  .then(r=>r.ok?r.json():Promise.reject())
+  .then(b=>{
+    if(!b.lines || !b.lines.length) return;
+    const d=new Date((b.date||'')+'T12:00:00');
+    const stamp = isNaN(d) ? '' : `${String(d.getDate()).padStart(2,'0')} ${
+      ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'][d.getMonth()]}`;
+    const warn = b.stale
+      ? `<div class="warn">\u26a0 This is the ${stamp} brief, not today's.</div>` : '';
+    document.getElementById('briefbox').innerHTML=`
+      <details class="brief${b.stale?' stale':''}">
+        <summary><span class="bt">Daily brief</span><span class="bd8">${stamp} \u203a</span></summary>
+        <div class="inner">
+          ${warn}
+          <ul>${b.lines.map(l=>`<li>${esc(l)}</li>`).join('')}</ul>
+          <a class="open" href="${b.url}" target="_blank">Open full brief \u2192</a>
+        </div>
+      </details>`;
+  })
+  .catch(()=>{});
 
 // ---- live clock, 24h. Ticks every 10s so the NOW strip stays honest.
 function tick(){
