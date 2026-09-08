@@ -53,27 +53,27 @@
 </head>
 <body>
   <div class="grid" id="g">
-    <a class="t deck" id="deck" href="#" target="_blank">
+    <a class="t deck" id="deck" href="#">
       <span class="ic">🏠</span>
       <div class="nm">Home</div>
       <div class="st" id="s-deck">&mdash;</div>
     </a>
-    <a class="t acad" id="acad" href="#" target="_blank">
+    <a class="t acad" id="acad" href="#">
       <span class="ic">🎓</span>
       <div class="nm">Academics</div>
       <div class="st" id="s-acad">&mdash;</div>
     </a>
-    <a class="t res" id="res" href="#" target="_blank">
+    <a class="t res" id="res" href="#">
       <span class="ic">🛰️</span>
       <div class="nm">Research</div>
       <div class="st" id="s-res">&mdash;</div>
     </a>
-    <a class="t adm" id="admin" href="#" target="_blank">
+    <a class="t adm" id="admin" href="#">
       <span class="ic">📋</span>
       <div class="nm">Admin</div>
       <div class="st" id="s-adm">&mdash;</div>
     </a>
-    <a class="t per" id="pers" href="#" target="_blank">
+    <a class="t per" id="pers" href="#">
       <span class="ic">🌊</span>
       <div class="nm">Personal</div>
       <div class="st" id="s-per">&mdash;</div>
@@ -84,7 +84,38 @@
 <script>
 // Tiles carry LIVE counts, not decoration. A link with a number on it tells you
 // whether it is worth clicking; a bare button does not.
+//
+// NAVIGATION: Notion sandboxes embed iframes WITHOUT allow-top-navigation, so a
+// plain link can only ever open a new tab -- the iframe is not permitted to move
+// the page it sits in. There is no CSS or JS trick around that; it is a browser
+// security boundary, not a Notion setting.
+// The one thing that DOES navigate in place is the notion:// protocol, which the
+// desktop app registers with the OS. Clicking it hands the URL to the already-open
+// Notion app, which navigates its current window instead of spawning a browser tab.
+// So: notion:// when the desktop app is likely present, https:// as the fallback.
 const THESIS = new Date('2027-01-15T12:00:00');
+
+function toDesktop(u){
+  // https://www.notion.so/<id>  ->  notion://www.notion.so/<id>
+  return (u||'').replace(/^https:\/\//, 'notion://');
+}
+
+function wireLink(el, url){
+  if(!el || !url) return;
+  el.href = url;                 // real href so hover/copy-link still work
+  el.removeAttribute('target');  // no more forced new tab
+  el.addEventListener('click', function(ev){
+    ev.preventDefault();
+    // Try the desktop app first: this navigates the existing Notion window.
+    window.location.href = toDesktop(url);
+    // If no protocol handler answers, nothing visible happens -- so fall back to
+    // a top-level open shortly after. 400ms is long enough for the OS handoff.
+    setTimeout(function(){
+      try { window.top.location.href = url; }   // blocked by sandbox, but try
+      catch(e) { window.open(url, '_blank'); }  // last resort
+    }, 400);
+  });
+}
 
 Promise.all([
   fetch('../data/nav.json?t='+Date.now()).then(r=>r.json()).catch(()=>({})),
@@ -93,8 +124,7 @@ Promise.all([
 ]).then(([nav, tk, sp])=>{
 
   for(const k of ['deck','acad','res','admin','pers']){
-    const el=document.getElementById(k);
-    if(nav[k] && el) el.href=nav[k];
+    wireLink(document.getElementById(k), nav[k]);
   }
 
   if(tk){
