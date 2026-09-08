@@ -21,90 +21,39 @@
     font:13px/1.45 -apple-system,BlinkMacSystemFont,"Segoe UI",Inter,sans-serif;
     padding:14px 14px 10px; -webkit-font-smoothing:antialiased;
   }
-
-  /* ---------- header: instrument panel ----------
-     Three panels (LOCAL / DATE / CAMBRIDGE) split by hairline rules, with a
-     5-day forecast strip welded on underneath. Reads like a gauge cluster,
-     not a card. Every number is tabular so the 1s clock tick never jitters. */
-  .head{margin-bottom:12px;border:1px solid var(--line);border-radius:9px;
-        background:var(--panel);overflow:hidden}
-  .hp{display:grid;grid-template-columns:1fr 1fr 1fr;
-      grid-template-areas:"loc date wx"}
-  .pan{padding:11px 12px 12px;min-width:0;border-left:1px solid var(--hair)}
-  .pan:first-child{border-left:0}
-  .p-loc{grid-area:loc}.p-date{grid-area:date}.p-wx{grid-area:wx}
-
-  .mlbl{font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:var(--faint);
-        line-height:1;overflow-wrap:anywhere}
-  .sublbl{font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:var(--faint);
-          line-height:1;margin-top:7px;overflow-wrap:anywhere}
-
-  .clock{font-size:34px;font-weight:300;line-height:1;margin-top:9px;
-         letter-spacing:-.01em;font-variant-numeric:tabular-nums;
-         display:flex;align-items:baseline;gap:0}
-  /* Dimmed colon, like a station clock -- the digits read as the number, the
-     separator recedes. Slight negative margins keep the glyph optically tight. */
-  .clock .cn{color:var(--faint);font-weight:200;margin:0 1px;
-             position:relative;top:-1px}
-  .clock .sec{font-size:18px;font-weight:300;color:var(--dim);margin-left:7px;
+  /* ---------- header: date left, clock right, one weather line ----------
+     Stripped to what is decision-relevant. Removed: "LOCAL" and "Cambridge, MA"
+     labels (he knows where he is), the T-minus counter and day-of-year (never
+     acted on), and the 5-day strip's second row. */
+  .head{margin-bottom:11px;border:1px solid var(--line);border-radius:9px;
+        background:var(--panel);padding:10px 12px 9px}
+  .hrow{display:flex;align-items:flex-start;justify-content:space-between;gap:10px}
+  .hleft{min-width:0}
+  .dow{font-size:15px;font-weight:600;text-transform:uppercase;letter-spacing:.035em;
+       line-height:1.05;overflow-wrap:anywhere}
+  .dstr{font-size:12px;color:var(--dim);margin-top:3px;line-height:1.1;
+        font-variant-numeric:tabular-nums}
+  .clock{font-size:32px;font-weight:300;line-height:.95;letter-spacing:-.015em;
+         font-variant-numeric:tabular-nums;display:flex;align-items:baseline;
+         flex:0 0 auto}
+  .clock .cn{color:var(--faint);font-weight:200;margin:0 1px;position:relative;top:-2px}
+  .clock .sec{font-size:16px;font-weight:300;color:var(--dim);margin-left:6px;
               font-variant-numeric:tabular-nums}
 
-  .dow{font-size:15px;font-weight:600;text-transform:uppercase;letter-spacing:.03em;
-       line-height:1.05;margin-top:9px;overflow-wrap:anywhere}
-  .dstr{font-size:12px;color:var(--dim);margin-top:6px;line-height:1.1;
-        font-variant-numeric:tabular-nums}
-  .dmeta{font-size:9.5px;color:var(--faint);letter-spacing:.09em;text-transform:uppercase;
-         margin-top:7px;line-height:1.35;font-variant-numeric:tabular-nums;
-         overflow-wrap:anywhere}
+  /* One weather line: now, then the next two days. Nothing below it. */
+  .wxline{display:flex;align-items:baseline;flex-wrap:wrap;gap:3px 12px;
+          margin-top:9px;padding-top:8px;border-top:1px solid var(--hair);
+          font-size:11px;color:var(--dim);font-variant-numeric:tabular-nums}
+  .wxline .nowt{color:var(--ink);font-size:15px;font-weight:600;letter-spacing:-.01em}
+  .wxline .cond{color:var(--dim)}
+  .wxline .d2{white-space:nowrap}
+  .wxline .d2 b{color:var(--ink);font-weight:600}
+  .wxline .adv{color:var(--accent)}
 
-  .temp{font-size:26px;font-weight:400;line-height:1;margin-top:9px;
-        font-variant-numeric:tabular-nums;
-        display:flex;align-items:baseline;gap:6px;flex-wrap:wrap}
-  .temp .ic{font-size:15px}
-  .temp .u{font-size:12px;color:var(--dim);font-weight:400}
-  .cond{font-size:11px;color:var(--dim);margin-top:6px;line-height:1.3;
-        overflow-wrap:anywhere}
-  .mstats{display:flex;flex-wrap:wrap;gap:4px 10px;margin-top:8px;font-size:9px;
-          letter-spacing:.08em;text-transform:uppercase;color:var(--faint);
-          line-height:1.4;font-variant-numeric:tabular-nums;overflow-wrap:anywhere}
-  .mstats b{color:var(--ink);font-weight:500;letter-spacing:.02em}
-
-  /* 5-day strip: five equal columns, hairline rules, no wasted padding.
-     Precip is shown only at >=20% -- below that it is noise. */
-  .fc{display:grid;grid-template-columns:repeat(5,1fr);border-top:1px solid var(--hair)}
-  .fcd{padding:6px 2px 7px;text-align:center;min-width:0;
-       border-left:1px solid var(--hair)}
-  .fcd:first-child{border-left:0}
-  .fcd .dy{font-size:9px;letter-spacing:.09em;text-transform:uppercase;
-           color:var(--dim);line-height:1}
-  .fcd.now .dy{color:var(--ink);font-weight:600}
-  .fcd .ic{font-size:12px;line-height:1;margin-top:4px}
-  .fcd .hl{font-size:10.5px;line-height:1;margin-top:4px;color:var(--dim);
-           font-variant-numeric:tabular-nums}
-  .fcd .hl b{color:var(--ink);font-weight:600}
-  .fcd .pp{font-size:9px;line-height:1;margin-top:3px;color:var(--accent);
-           font-variant-numeric:tabular-nums}
-
-  /* Narrow sidebar: 3-across needs ~520px. Below that, LOCAL|DATE stay side by
-     side and the weather panel takes a full-width second row -- laid out
-     HORIZONTALLY (temp left, micro-stats right) so the second row costs ~55px
-     instead of ~120px. Density is the point; nothing is padding for its own sake. */
-  @media (max-width:519px){
-    .hp{grid-template-columns:1fr 1fr;grid-template-areas:"loc date" "wx wx"}
-    .p-wx{border-left:0;border-top:1px solid var(--hair);
-          display:flex;align-items:center;gap:12px;padding:9px 12px 10px}
-    .p-wx .mlbl{display:none}
-    .wxL{flex:0 0 auto;min-width:0}
-    .temp{margin-top:0}
-    .cond{margin-top:3px}
-    .mstats{margin-top:0;flex:1 1 0;min-width:0;gap:3px 10px}
-  }
   @media (max-width:339px){
-    .pan{padding:10px 10px 11px}
-    .clock{font-size:29px}
-    .clock .sec{font-size:16px}
-    .p-wx{gap:10px;padding:9px 10px 10px}
-    .temp{font-size:23px}
+    .clock{font-size:27px}
+    .clock .sec{font-size:14px}
+    .wxline{font-size:10.5px;gap:2px 9px}
   }
 
   /* ---------- NOW strip: the one thing you look at ---------- */
@@ -157,28 +106,39 @@
        margin:14px 0 6px;padding-bottom:4px;border-bottom:1px solid var(--hair)}
   .sec:first-of-type{margin-top:0}
 
-  /* ---------- items: WRAP, never truncate ---------- */
-  .list{display:flex;flex-direction:column}
-  .item{display:grid;grid-template-columns:44px 1fr;gap:9px;align-items:start;
-        padding:8px 6px;border-radius:6px;text-decoration:none;color:inherit;
-        border-bottom:1px solid var(--hair)}
-  .item:last-child{border-bottom:0}
+  /* ---------- agenda as time blocks: WRAP, never truncate ---------- */
+  .list{display:flex;flex-direction:column;gap:3px}
+  /* Each row is a block whose height reflects duration (set inline). The left
+     rail carries start over end, so the day reads as a column of time. */
+  .item{display:grid;grid-template-columns:50px 1fr;gap:10px;align-items:stretch;
+        padding:7px 8px 7px 0;border-radius:6px;text-decoration:none;color:inherit;
+        border-left:2px solid var(--hair);position:relative}
   .item:hover{background:var(--panel)}
-  .tm{font-size:11.5px;color:var(--dim);font-variant-numeric:tabular-nums;
-      padding-top:1px;white-space:nowrap;font-weight:500}
-  .tm.allday{font-size:10px;letter-spacing:.04em}
-  .bd{min-width:0}
-  .n{font-size:12.5px;line-height:1.38;overflow-wrap:anywhere;word-break:break-word}
-  .meta{font-size:10.5px;color:var(--dim);margin-top:2px;line-height:1.4;
-        overflow-wrap:anywhere;display:flex;flex-wrap:wrap;gap:4px 8px}
+  .tm{display:flex;flex-direction:column;font-size:11.5px;color:var(--dim);
+      font-variant-numeric:tabular-nums;font-weight:600;padding-left:8px;
+      white-space:nowrap;line-height:1.25}
+  .tm .t1{color:var(--ink)}
+  .tm .t2{color:var(--faint);font-weight:500}
+  .tm .dur{font-size:9px;color:var(--faint);font-weight:500;letter-spacing:.04em;
+           margin-top:2px}
+  .tm .allday{font-size:9px;letter-spacing:.07em;color:var(--faint);font-weight:600}
+  .bd{min-width:0;display:flex;flex-direction:column;justify-content:center}
+  .n{font-size:12.5px;line-height:1.35;overflow-wrap:anywhere;word-break:break-word}
+  .meta{font-size:10.5px;color:var(--dim);margin-top:3px;line-height:1.4;
+        overflow-wrap:anywhere;display:flex;flex-wrap:wrap;gap:3px 8px}
   .pin{color:var(--dim)}
-  .tag{display:inline-block;font-size:9.5px;padding:0 5px;border-radius:3px;
+  .tag{display:inline-block;font-size:9px;padding:0 5px;border-radius:3px;
        background:var(--hair);color:var(--dim);line-height:15px;white-space:nowrap}
-  .item.mtg{border-left:2px solid var(--accent);padding-left:6px;margin-left:-8px}
+  /* Category rails: meetings blue, everything else neutral. */
+  .item.mtg{border-left-color:var(--accent);background:rgba(91,147,211,.045)}
   .item.mtg .n{font-weight:600}
+  /* Happening right now. */
+  .item.live{border-left-color:var(--green);background:rgba(95,168,122,.08)}
+  .item.live .n{font-weight:600}
+  .item.done{border-left-color:var(--green)}
   .item.done .n{text-decoration:line-through;color:var(--faint)}
-  .item.done .tm{color:var(--faint)}
-  .item.past .n{color:var(--dim)}
+  .item.done .tm .t1{color:var(--faint)}
+  .item.past{opacity:.62}
 
   .empty{color:var(--faint);font-style:italic;padding:14px 4px;text-align:center;font-size:11.5px}
 
@@ -205,27 +165,14 @@
 </head>
 <body>
   <div class="head">
-    <div class="hp">
-      <div class="pan p-loc">
-        <div class="mlbl">Local</div>
-        <div class="clock"><span id="clkh">--</span><span class="cn">:</span><span id="clkm">--</span><span class="sec" id="clks">--</span></div>
-        <div class="sublbl" id="tzl">Cambridge, MA</div>
-      </div>
-      <div class="pan p-date">
-        <div class="mlbl">Date</div>
+    <div class="hrow">
+      <div class="hleft">
         <div class="dow" id="w">&mdash;</div>
         <div class="dstr" id="d">&mdash;</div>
-        <div class="dmeta" id="dmeta"></div>
       </div>
-      <div class="pan p-wx">
-        <div class="mlbl">Cambridge, MA</div>
-        <div class="temp" id="wxt"><span class="u">loading</span></div>
-        <div class="cond" id="wxc"></div>
-        <div class="mstats" id="wx"></div>
-        <div class="wxadv" id="wxadv"></div>
-      </div>
+      <div class="clock"><span id="clkh">--</span><span class="cn">:</span><span id="clkm">--</span><span class="sec" id="clks">--</span></div>
     </div>
-    <div class="fc" id="fc"></div>
+    <div class="wxline" id="wxline"></div>
   </div>
 
   <div id="nowbox"></div>
@@ -260,19 +207,37 @@ function isMeeting(it){
   return ['research','draper','military','aeroastro','tpp','marstotable'].includes(mt) && !!hhmm(it.date);
 }
 
+// Agenda row as a TIME BLOCK: the left rail shows start and end, and the row's
+// minimum height scales with duration so a 2h event visibly outweighs a 15m one.
+// Height is capped so a 4h block cannot push the rest of the day off screen,
+// and items with no end time get the base height rather than a fabricated one.
 function itemHTML(it, nowM){
   const t=hhmm(it.date), t2=hhmm(it.end);
-  const m=mins(it.date);
+  const m=mins(it.date), m2=it.end?mins(it.end):null;
   const past = (m!==null && nowM!==null && m<nowM);
+  const live = (m!==null && m2!==null && nowM>=m && nowM<=m2);
+
   const cls=[
     'item',
     isMeeting(it)?'mtg':'',
     it.done?'done':'',
-    (past && !it.done)?'past':''
+    (past && !it.done)?'past':'',
+    live?'live':''
   ].filter(Boolean).join(' ');
 
-  const time = t ? (t2 ? `${t}<br><span style="opacity:.6">${t2}</span>` : t)
-                 : '<span class="allday">ALL<br>DAY</span>';
+  // Duration -> height. 1px per minute past the first 30, clamped to 96px.
+  let dur = (m!==null && m2!==null) ? Math.max(0, m2-m) : null;
+  let hStyle='';
+  if(dur!==null && dur>30){
+    hStyle=` style="min-height:${Math.min(96, 34+Math.round((dur-30)*0.34))}px"`;
+  }
+
+  const time = t
+    ? `<span class="t1">${t}</span>${t2?`<span class="t2">${t2}</span>`:''}`
+    : '<span class="allday">ALL DAY</span>';
+  const durTxt = (dur!==null && dur>=15)
+    ? `<span class="dur">${dur>=60?`${Math.floor(dur/60)}h${dur%60?String(dur%60).padStart(2,'0'):''}`:`${dur}m`}</span>`
+    : '';
 
   const bits=[];
   if(it.location) bits.push(`<span class="pin">\u{1F4CD} ${esc(it.location)}</span>`);
@@ -283,8 +248,8 @@ function itemHTML(it, nowM){
   const link = it.url ? ` href="${it.url}" target="_blank"` : '';
   const tag  = it.url ? 'a' : 'div';
 
-  return `<${tag}${link} class="${cls}">
-    <div class="tm">${time}</div>
+  return `<${tag}${link} class="${cls}"${hStyle}>
+    <div class="tm">${time}${durTxt}</div>
     <div class="bd">
       <div class="n">${esc(it.name)}</div>
       ${bits.length?`<div class="meta">${bits.join('')}</div>`:''}
@@ -333,13 +298,6 @@ function paintDate(dt){
   document.getElementById('w').textContent = DOW[dt.getDay()];
   document.getElementById('d').textContent =
     `${String(dt.getDate()).padStart(2,'0')} ${MONS[dt.getMonth()]} ${dt.getFullYear()}`;
-  const y=dt.getFullYear();
-  const start=new Date(y,0,1);
-  const doy=Math.round((new Date(y,dt.getMonth(),dt.getDate())-start)/86400000)+1;
-  const total=isLeap(y)?366:365;
-  const left=total-doy;
-  document.getElementById('dmeta').innerHTML =
-    `T\u2212${left}D EOY \u00b7 DAY ${doy}/${total}`;
 }
 paintDate(new Date());
 
@@ -369,73 +327,50 @@ fetch(WX_URL,{cache:'no-store'})
   .then(w=>{
     const c=w.current, dl=w.daily;
     if(!c || !dl) throw new Error('missing fields');
-    const icon=WMO[c.weather_code]||'';
     const r0=x=>(x==null?null:Math.round(x));
     const t=r0(c.temperature_2m);
     const hi=r0(dl.temperature_2m_max?.[0]);
     const lo=r0(dl.temperature_2m_min?.[0]);
     const pop=dl.precipitation_probability_max?.[0];
-    const feels=r0(c.apparent_temperature);
-    const wind=r0(c.wind_speed_10m);
 
-    document.getElementById('wxt').innerHTML =
-      `<span class="ic">${icon}</span>${t!=null?t:'\u2014'}<span class="u">\u00b0F</span>`;
-    document.getElementById('wxc').textContent = WMOT[c.weather_code]||'';
+    // ONE line: now, today's range, then the next two days. No second row.
+    const parts=[];
+    parts.push(`<span class="nowt">${WMO[c.weather_code]||''} ${t!=null?t:'\u2014'}\u00b0</span>`);
+    const cond=WMOT[c.weather_code]||'';
+    if(cond) parts.push(`<span class="cond">${cond}</span>`);
+    if(hi!=null&&lo!=null) parts.push(`<span class="d2"><b>${hi}\u00b0</b>/${lo}\u00b0</span>`);
 
-    const st=[];
-    if(feels!=null) st.push(`Feels <b>${feels}\u00b0</b>`);
-    if(hi!=null&&lo!=null) st.push(`<b>${hi}\u00b0</b>/<b>${lo}\u00b0</b>`);
-    if(pop!=null) st.push(`Precip <b>${pop}%</b>`);
-    if(wind!=null) st.push(`Wind <b>${wind}</b> mph`);
-    document.getElementById('wx').innerHTML=st.join('');
+    // Next two days only -- day 3+ is not a decision you make this morning.
+    for(let i=1;i<=2;i++){
+      const iso=dl.time?.[i];
+      if(!iso) continue;
+      const dd=new Date(iso+'T12:00:00');
+      const lab=DOW[dd.getDay()].slice(0,3);
+      const dh=r0(dl.temperature_2m_max?.[i]);
+      const dlo=r0(dl.temperature_2m_min?.[i]);
+      const di=WMO[dl.weather_code?.[i]]||'';
+      const dp=dl.precipitation_probability_max?.[i];
+      parts.push(`<span class="d2">${lab} ${di} <b>${dh!=null?dh:'\u2014'}</b>/${dlo!=null?dlo:'\u2014'}${(dp!=null&&dp>=30)?` ${dp}%`:''}</span>`);
+    }
 
-    // ---- Actionable line: the point of a weather widget is a DECISION, not
-    // a reading. Umbrella, layers, or nothing. Thresholds are deliberate:
-    // NWS treats >=50% as "likely"; 30-49% is worth a bag umbrella; below 20%
-    // is not worth mentioning at all.
+    // Only say something if there is something to carry or expect.
     const adv=[];
     if(pop!=null){
-      if(pop>=50) adv.push('\u2602\uFE0F Take an umbrella');
-      else if(pop>=30) adv.push('\u2602\uFE0F Umbrella in the bag');
-      else if(pop>=20) adv.push('Slight chance of rain');
+      if(pop>=50) adv.push('\u2602\uFE0F Umbrella');
+      else if(pop>=30) adv.push('\u2602\uFE0F Maybe umbrella');
     }
-    // Cambridge in September swings hard between afternoon and night.
-    if(hi!=null&&lo!=null && (hi-lo)>=22) adv.push('Big swing \u2014 take a layer');
-    else if(lo!=null && lo<=45) adv.push('Cold tonight \u2014 take a layer');
-    if(wind!=null && wind>=20) adv.push('Windy');
+    if(hi!=null&&lo!=null && (hi-lo)>=22) adv.push('Layer for tonight');
+    else if(lo!=null && lo<=45) adv.push('Cold tonight');
     const code=c.weather_code;
     if([95,96,99].includes(code)) adv.push('\u26c8\uFE0F Storms');
     else if([71,73,75].includes(code)) adv.push('\u2744\uFE0F Snow');
-    else if([45,48].includes(code)) adv.push('\u{1F32B}\uFE0F Fog \u2014 allow extra time');
+    else if([45,48].includes(code)) adv.push('\u{1F32B}\uFE0F Fog');
+    if(adv.length) parts.push(`<span class="adv">${adv.join(' \u00b7 ')}</span>`);
 
-    const advEl=document.getElementById('wxadv');
-    if(advEl){
-      if(adv.length){ advEl.textContent=adv.join(' \u00b7 '); advEl.style.display=''; }
-      else { advEl.textContent='Nothing to carry'; advEl.style.display=''; }
-    }
-
-    // ---- 5-day strip. Index 0 is today. 3-letter day labels so they survive
-    // ~58px columns at a 300px sidebar without ever truncating.
-    const days=(dl.time||[]).slice(0,5).map((iso,i)=>{
-      const dd=new Date(iso+'T12:00:00');
-      const lab = i===0 ? 'TODAY' : DOW[dd.getDay()].slice(0,3);
-      const dh=r0(dl.temperature_2m_max?.[i]);
-      const dlo=r0(dl.temperature_2m_min?.[i]);
-      const dp=dl.precipitation_probability_max?.[i];
-      const di=WMO[dl.weather_code?.[i]]||'';
-      return `<div class="fcd${i===0?' now':''}">
-        <div class="dy">${lab}</div>
-        <div class="ic">${di}</div>
-        <div class="hl"><b>${dh!=null?dh:'\u2014'}</b>/${dlo!=null?dlo:'\u2014'}</div>
-        ${(dp!=null&&dp>=20)?`<div class="pp">${dp}%</div>`:''}
-      </div>`;
-    });
-    document.getElementById('fc').innerHTML=days.join('');
+    document.getElementById('wxline').innerHTML=parts.join('');
   })
   .catch(()=>{
-    // Say it failed rather than showing a blank space that looks intentional.
-    document.getElementById('wxt').innerHTML='<span class="u">weather unavailable</span>';
-    document.getElementById('fc').innerHTML='';
+    document.getElementById('wxline').innerHTML='<span style="opacity:.55">weather unavailable</span>';
   });
 
 fetch('../data/tasks.json?t='+Date.now()).then(r=>r.json()).then(d=>{
@@ -452,24 +387,16 @@ fetch('../data/tasks.json?t='+Date.now()).then(r=>r.json()).then(d=>{
   // ---- NOW / NEXT: the single most useful line in the widget
   const timed=items.filter(x=>hhmm(x.date) && !x.done)
                    .sort((a,b)=>mins(a.date)-mins(b.date));
-  // Find BOTH: what you're inside right now, and what's coming after it.
-  // A timed item whose window covers the clock IS happening now -- including a
-  // task. Previously only the next item showed, so a task you should have been
-  // doing read as "NEXT", which is exactly backwards.
-  let cur=null, nxt=null, late=false;
+  // Find BOTH: what covers the clock right now, and what comes after.
+  // No LATE state -- a task whose window has passed is either happening (NOW)
+  // or it is not the thing you are looking at. Late-ness belongs in nowbar,
+  // not here; two panels answering the same question is one too many.
+  let cur=null, nxt=null;
+  const late=false;
   for(const it of timed){
     const s=mins(it.date), e=it.end?mins(it.end):s+45;
     if(nowM>=s && nowM<=e && !cur){ cur=it; continue; }
     if(s>nowM && !nxt){ nxt=it; }
-  }
-  // Nothing covering the clock, but something already started and isn't done:
-  // that is running late, and it is the most important thing on the widget.
-  if(!cur){
-    const started=timed.filter(it=>{
-      const s=mins(it.date), e=it.end?mins(it.end):s+45;
-      return s<=nowM && e<nowM;
-    });
-    if(started.length){ cur=started[started.length-1]; late=true; }
   }
 
   const panel=(it, isNext)=>{
