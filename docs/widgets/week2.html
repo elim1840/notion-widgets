@@ -39,15 +39,22 @@
          border-bottom:1px solid var(--line);background:var(--bg)}
   .ruler .sp{border-right:1px solid var(--line)}
   .ticks{position:relative;height:17px}
+  .ruler .tw{position:relative;height:17px;overflow:hidden}
   .ticks span{position:absolute;top:3px;font-size:9px;color:var(--faint);
        transform:translateX(-50%);font-variant-numeric:tabular-nums;letter-spacing:.02em}
+  .ticks span.e0{transform:translateX(0)}
+  .ticks span.e1{transform:translateX(-100%)}
 
-  .body{flex:1;overflow-y:auto;min-height:0}
+  .body{flex:1;overflow-y:auto;overflow-x:hidden;min-height:0}
+
+  /* ---------- GANTT TIMELINE ---------- */
   .row{display:grid;grid-template-columns:var(--gut) 1fr;
-       border-bottom:1px solid var(--hair);min-height:54px}
+       border-bottom:1px solid var(--line);min-height:46px}
   .row:last-child{border-bottom:0}
-  .row.today{background:rgba(91,147,211,.05)}
+  .row.today{background:rgba(91,147,211,.06)}
+  .row.wknd{background:rgba(127,127,127,.045)}
   .row.wknd .dname{color:var(--faint)}
+  .row.wknd.today{background:rgba(91,147,211,.06)}
 
   .dcol{border-right:1px solid var(--line);padding:7px 8px 5px;text-align:right}
   .dname{font-size:9.5px;text-transform:uppercase;letter-spacing:.09em;color:var(--dim);
@@ -57,30 +64,61 @@
   .row.today .dnum{color:var(--blue)}
   .cnt{font-size:9px;color:var(--faint);margin-top:1px}
 
-  .lane{position:relative;padding:5px 8px 5px 0}
-  .lane .gl{position:absolute;top:0;bottom:0;width:1px;background:var(--hair)}
-  .lane .noww{position:absolute;top:0;bottom:0;width:1.5px;background:var(--now);z-index:4}
+  /* lane spans the FULL 1fr column (no padding) so gridlines align with the ruler */
+  .lane{position:relative;padding:6px 0 6px;overflow:hidden}
+  .lane .gl{position:absolute;top:0;bottom:0;width:1px;background:var(--hair);z-index:0}
+  .lane .gl.mj{background:var(--line)}
+  .lane .noww{position:absolute;top:0;bottom:0;width:1.5px;background:var(--now);z-index:6}
+  .lane .noww::before{content:'';position:absolute;top:0;left:-2.25px;
+       width:6px;height:6px;border-radius:50%;background:var(--now)}
+  .stack{position:relative}
 
-  .ev{position:absolute;height:22px;border-radius:3px;padding:0 7px;
-      font-size:11.5px;line-height:22px;white-space:nowrap;overflow:hidden;
-      text-overflow:ellipsis;text-decoration:none;
+  /* proportional bar: width is ALWAYS duration-derived, never inflated for text */
+  .ev{position:absolute;height:21px;border-radius:3px;padding:0 6px;
+      font-size:11px;line-height:19px;text-decoration:none;
       background:var(--panel);border:1px solid var(--line);
-      border-left:2.5px solid var(--blue);color:var(--ink);z-index:2}
-  .ev:hover{z-index:9;border-color:var(--blue);overflow:visible;width:auto !important;
-      box-shadow:0 2px 10px rgba(0,0,0,.4)}
-  .ev.k-class{border-left-color:var(--gold)}
-  .ev.k-res  {border-left-color:var(--green)}
-  .ev.k-admin{border-left-color:var(--purple)}
-  .ev.k-mil  {border-left-color:var(--now)}
-  .ev.done{opacity:.45;text-decoration:line-through}
+      border-left:3px solid var(--blue);color:var(--ink);z-index:2;
+      overflow:hidden;min-width:3px}
+  .ev .lab{display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;
+      font-variant-numeric:tabular-nums;line-height:19px}
+  .ev .lab b{font-weight:600;color:var(--dim);margin-right:5px;font-size:10.5px}
+  /* label does not fit inside -> spill it to the right (or left near the edge) */
+  .ev.out,.ev.outl,.ev.half{overflow:visible}
+  .ev.half .tin{display:block;font-weight:600;color:var(--dim);font-size:10.5px;
+      line-height:19px;font-variant-numeric:tabular-nums}
+  .ev.half .lab.nm{position:absolute;left:100%;top:0;margin-left:6px;color:var(--ink);
+      text-overflow:clip;pointer-events:none;max-width:none}
+  .ev.out  .lab{position:absolute;left:100%;top:0;margin-left:6px;color:var(--ink);
+      text-overflow:clip;pointer-events:none;max-width:none}
+  .ev.outl .lab{position:absolute;right:100%;top:0;margin-right:6px;color:var(--ink);
+      text-overflow:clip;pointer-events:none;max-width:none;text-align:right}
+  .ev:hover{z-index:9;box-shadow:0 2px 12px rgba(0,0,0,.35);filter:brightness(1.14)}
+  .ev.k-class{background:rgba(201,162,39,.17);border-color:rgba(201,162,39,.38);
+      border-left-color:var(--gold)}
+  .ev.k-res  {background:rgba(95,168,122,.17);border-color:rgba(95,168,122,.38);
+      border-left-color:var(--green)}
+  .ev.k-admin{background:rgba(154,109,215,.17);border-color:rgba(154,109,215,.38);
+      border-left-color:var(--purple)}
+  .ev.k-mil  {background:rgba(224,108,108,.17);border-color:rgba(224,108,108,.38);
+      border-left-color:var(--now)}
+  .ev.k-oth  {background:rgba(91,147,211,.17);border-color:rgba(91,147,211,.38);
+      border-left-color:var(--blue)}
+  .ev.done{opacity:.42}
+  .ev.done .lab{text-decoration:line-through}
 
-  /* all-day chips sit in a right-hand tray */
-  .tray{display:flex;gap:4px;flex-wrap:wrap;padding:4px 0 0;margin-left:2px}
-  .ad{font-size:10px;background:var(--panel);border:1px solid var(--line);
-      border-radius:3px;padding:1px 6px;color:var(--dim);text-decoration:none;
-      max-width:230px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+  /* all-day items = full-span band, the gantt way */
+  .tray{display:flex;gap:4px;flex-wrap:wrap;padding:5px 8px 0 2px;position:relative;z-index:3}
+  .ad{font-size:10px;line-height:15px;background:var(--panel);
+      border:1px dashed var(--line);border-left:3px solid var(--faint);
+      border-radius:3px;padding:0 6px;color:var(--dim);text-decoration:none;
+      max-width:240px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+  .ad.k-class{border-left-color:var(--gold)} .ad.k-res{border-left-color:var(--green)}
+  .ad.k-admin{border-left-color:var(--purple)} .ad.k-mil{border-left-color:var(--now)}
+  .ad.k-oth{border-left-color:var(--blue)}
   .ad:hover{border-color:var(--blue);color:var(--ink)}
   .ad.done{text-decoration:line-through;opacity:.55}
+  .adl{font-size:9px;color:var(--faint);letter-spacing:.08em;line-height:15px;
+      text-transform:uppercase;padding-right:2px}
 
   footer{flex:0 0 auto;display:flex;gap:12px;align-items:center;flex-wrap:wrap;
          padding:6px 16px;border-top:1px solid var(--line);font-size:9.5px;color:var(--faint)}
@@ -214,7 +252,7 @@
   </span>
   <span class="hint" id="tot"></span>
 </header>
-<div class="ruler"><div class="sp"></div><div class="ticks" id="ticks"></div></div>
+<div class="ruler"><div class="sp"></div><div class="tw"><div class="ticks" id="ticks"></div></div></div>
 <div class="body" id="body"></div>
 <footer>
   <span class="key"><i class="sw" style="background:var(--gold)"></i>Class</span>
@@ -235,6 +273,32 @@ const mins=iso=>{const m=/T(\d{2}):(\d{2})/.exec(iso||''); return m?(+m[1])*60+(
 const hhmm=iso=>{const m=/T(\d{2}):(\d{2})/.exec(iso||''); return m?m[1]+m[2]:'';};
 const pct=m=>((m-H0*60)/((H1-H0)*60))*100;
 
+/* ---- gantt helpers -------------------------------------------------- */
+const FONT='-apple-system,BlinkMacSystemFont,"Segoe UI",Inter,sans-serif';
+let _cv=null, _mc={};
+function textW(s,weight,size){
+  const key=weight+'|'+size+'|'+s; if(_mc[key]!=null) return _mc[key];
+  if(!_cv) _cv=document.createElement('canvas').getContext('2d');
+  _cv.font=weight+' '+size+'px '+FONT;
+  return _mc[key]=_cv.measureText(s).width;
+}
+// no `end` in the feed -> estimate a duration from the kind of thing it is.
+function estDur(e){
+  const k=((e.kind||'')+' '+(e.type||'')+' '+(e.meeting_type||'')+' '+(e.name||'')).toLowerCase();
+  if(e.src==='class'||/lecture/.test(k)) return 90;
+  if(/recitation|seminar|office hours/.test(k)) return 60;
+  if(/retreat|weekend|fair|picnic|outing|crawl|party|dinner|breakfast|banquet|social/.test(k)) return 120;
+  if(/meeting|orientation|reorientation|training|visiting|pub|registering|group/.test(k)) return 60;
+  return 30;
+}
+function span(e){
+  const s=mins(e.date); if(s==null) return null;
+  let en=mins(e.end), est=false;
+  if(en==null||en<=s){ est=true; en=s+estDur(e); }
+  return {s,en,est};
+}
+const durTxt=m=>m>=60?(m/60).toFixed(m%60?1:0)+'h':m+'m';
+
 function kind(e){
   const k=((e.kind||'')+' '+(e.type||'')+' '+(e.meeting_type||'')).toLowerCase();
   if(e.src==='class'||/class|lecture|recitation/.test(k)) return 'k-class';
@@ -247,6 +311,13 @@ const KCOL={'k-class':'var(--gold)','k-res':'var(--green)','k-admin':'var(--purp
             'k-mil':'var(--now)','':'var(--blue)'};
 
 let DATA=null;
+let LANEW=600;                 // measured px width of the timeline lane column
+const RPAD=12;                 // breathing room at the right edge for spilled labels
+function measureLane(){
+  const l=document.querySelector('.body .lane');
+  const w = l ? l.clientWidth : ((document.getElementById('body').clientWidth||700)-52);
+  return Math.max(160, w-RPAD);
+}
 
 function autoRange(days){
   let lo=24*60, hi=0, any=false;
@@ -259,7 +330,7 @@ function autoRange(days){
   return [Math.max(0,Math.floor(lo/60)-1), Math.min(24,Math.ceil(hi/60)+1)];
 }
 
-function render(){
+function paint(){
   const d=DATA, days=d.days||[];
   const body=document.getElementById('body');
   const ruler=document.querySelector('.ruler');
@@ -275,49 +346,99 @@ function render(){
   ruler.style.display = (MODE==='time'||MODE==='free') ? '' : 'none';
   document.querySelector('footer').style.display = MODE==='load' ? 'none' : '';
 
-  // ---------------- TIMELINE ----------------
+  // ---------------- TIME RULER (timeline + free time) ----------------
   if(MODE==='time'||MODE==='free'){
     let tk=''; const step=(H1-H0)>10?2:1;
-    for(let h=H0; h<=H1; h+=step)
-      tk += `<span style="left:${pct(h*60)}%">${String(h).padStart(2,'0')}00</span>`;
+    if(MODE==='time'){
+      const px=m=>((m-H0*60)/((H1-H0)*60))*LANEW;
+      for(let h=H0; h<=H1; h+=step){
+        const cls = h===H0?'e0':(h>=H1-(step-1)?'e1':'');
+        tk += `<span class="${cls}" style="left:${px(h*60).toFixed(2)}px">${String(h).padStart(2,'0')}00</span>`;
+      }
+    } else {
+      for(let h=H0; h<=H1; h+=step){
+        const cls = h===H0?'e0':(h>=H1-(step-1)?'e1':'');
+        tk += `<span class="${cls}" style="left:${pct(h*60)}%">${String(h).padStart(2,'0')}00</span>`;
+      }
+    }
     document.getElementById('ticks').innerHTML=tk;
+    if(MODE==='free') document.getElementById('ticks').style.width='';
   }
 
+  // ---------------- TIMELINE (gantt) ----------------
   if(MODE==='time'){
     const step=(H1-H0)>10?2:1;
+    const LW=LANEW;
+    const T0=H0*60, T1=H1*60, SPAN=T1-T0;
+    const px=m=>((m-T0)/SPAN)*LW;
+    const ROWH=25, BARH=21;
+
+    // shared gridlines: minor every hour, major on every labelled hour
+    let gl=''; for(let h=H0; h<=H1; h++){
+      if(h===H0) continue;
+      const mj=((h-H0)%step===0)?' mj':'';
+      gl+=`<span class="gl${mj}" style="left:${px(h*60).toFixed(2)}px"></span>`;
+    }
+
     body.innerHTML = days.map(day=>{
       const dt=new Date(day.date+'T12:00:00');
       const wknd=[0,6].includes(dt.getDay());
-      const timed=day.items.filter(e=>mins(e.date)!=null);
+      const timed=day.items.filter(e=>mins(e.date)!=null)
+                           .sort((a,b)=>mins(a.date)-mins(b.date));
       const allday=day.items.filter(e=>mins(e.date)==null);
-      let gl=''; for(let h=H0+step; h<H1; h+=step) gl+=`<span class="gl" style="left:${pct(h*60)}%"></span>`;
-      const rows=[];
-      const placed=timed.sort((x,y)=>mins(x.date)-mins(y.date)).map(e=>{
-        const s=mins(e.date); let en=mins(e.end); if(en==null||en<=s) en=s+50;
-        let r=0; while(rows[r]!=null && rows[r]>s) r++;
-        rows[r]=en; return {e,s,en,r};
-      });
-      const depth=Math.max(1, rows.length);
-      const evs=placed.map(({e,s,en,r})=>{
-        const l=pct(s), natural=pct(en)-pct(s);
-        const w=Math.max(11, natural);
-        const label = natural>=7 ? hhmm(e.date)+'  '+(e.name||'') : (e.name||'');
-        if(l>100||l+w<0) return '';
-        return `<a class="ev ${kind(e)} ${e.done?'done':''}"
-           style="left:${l}%;width:${w}%;top:${5+r*25}px"
-           href="${e.url}" target="_blank" title="${esc(hhmm(e.date))} ${esc(e.name)}">${esc(label)}</a>`;
+
+      const rowEnd=[];                       // right-most px consumed per lane row
+      const bars=timed.map(e=>{
+        const sp=span(e); if(!sp) return '';
+        let {s,en,est}=sp;
+        if(en<=T0 || s>=T1) return '';       // fully outside the window
+        const cs=Math.max(s,T0), ce=Math.min(en,T1);
+        const l=px(cs), w=Math.max(4, px(ce)-px(cs));
+
+        const time=hhmm(e.date), name=(e.name||'(untitled)');
+        // trim absurdly long names before measuring — they never fit anywhere
+        const short=name.length>64?name.slice(0,63).replace(/\s+\S*$/,'')+'\u2026':name;
+        const tW=textW(time,'600',10.5), nW=textW(short,'400',11), lw=tW+5+nW;
+
+        // 3 tiers, cheapest first. The bar width NEVER changes to suit the text.
+        //   in   : whole "HHMM name" fits inside the bar
+        //   half : only "HHMM" fits inside; name spills to the right
+        //   out  : nothing fits; whole label sits to the right (or left at the edge)
+        let mode='in', lo=l, hi=l+w;
+        if(lw+14>w){
+          if(tW+13<=w && l+w+8+nW<=LW){ mode='half'; hi=l+w+8+nW; }
+          else if(l+w+8+lw<=LW){ mode='out';  hi=l+w+8+lw; }
+          else if(l-8-lw>=0){     mode='outl'; lo=l-8-lw; }
+          else { mode='out'; hi=l+w+8+lw; }   // last resort: let it clip at the edge
+        }
+        let r=0; while(rowEnd[r]!=null && rowEnd[r]>lo-6) r++;
+        rowEnd[r]=hi;
+
+        const lab = mode==='half'
+          ? `<b class="tin">${time}</b><span class="lab nm">${esc(short)}</span>`
+          : `<span class="lab"><b>${time}</b>${esc(short)}</span>`;
+        const cls = mode==='in' ? '' : mode;
+        return `<a class="ev ${kind(e)||'k-oth'} ${mode==='in'?'':mode} ${e.done?'done':''}"
+          style="left:${l.toFixed(2)}px;width:${w.toFixed(2)}px;top:${(r*ROWH).toFixed(0)}px;height:${BARH}px"
+          href="${e.url}" target="_blank"
+          title="${esc(time)}\u2013${String(Math.floor(en/60)%24).padStart(2,'0')}${String(en%60).padStart(2,'0')} \u00b7 ${durTxt(en-s)}${est?' (est)':''}\n${esc(name)}">${lab}</a>`;
       }).join('');
-      const nowline = day.is_today && nowM>=H0*60 && nowM<=H1*60
-        ? `<span class="noww" style="left:${pct(nowM)}%"></span>` : '';
+
+      const depth=Math.max(1,rowEnd.length);
+      const stackH=depth*ROWH-(ROWH-BARH);
+      const nowline = day.is_today && nowM>=T0 && nowM<=T1
+        ? `<span class="noww" style="left:${px(nowM).toFixed(2)}px"></span>` : '';
       const tray = allday.length
-        ? `<div class="tray" style="margin-top:${depth*25}px">`+
-          allday.map(e=>`<a class="ad ${e.done?'done':''}" href="${e.url}" target="_blank">${esc(e.name)}</a>`).join('')+`</div>` : '';
-      const h = Math.max(56, 10 + depth*25 + (allday.length?26:0));
-      return `<div class="row ${day.is_today?'today':''} ${wknd?'wknd':''}" style="min-height:${h}px">
+        ? `<div class="tray"><span class="adl">all day</span>`+
+          allday.map(e=>`<a class="ad ${kind(e)||'k-oth'} ${e.done?'done':''}" href="${e.url}"
+             target="_blank" title="${esc(e.name)}">${esc(e.name)}</a>`).join('')+`</div>` : '';
+
+      return `<div class="row ${day.is_today?'today':''} ${wknd?'wknd':''}">
         <div class="dcol"><div class="dname">${DOW[dt.getDay()]}</div>
           <div class="dnum">${dt.getDate()}</div>
           ${day.items.length?`<div class="cnt">${day.items.length}</div>`:''}</div>
-        <div class="lane">${gl}${nowline}${evs}${tray}</div></div>`;
+        <div class="lane">${gl}${nowline}
+          <div class="stack" style="height:${stackH}px">${bars}</div>${tray}</div></div>`;
     }).join('');
   }
 
@@ -461,6 +582,19 @@ function render(){
   document.getElementById('gen').textContent =
     'synced '+String(g.getHours()).padStart(2,'0')+String(g.getMinutes()).padStart(2,'0');
 }
+
+// two-pass: paint once to create the lane, measure its real px width,
+// then repaint if the assumed width was wrong. Keeps bars pixel-exact.
+function render(){
+  paint();
+  if(MODE!=='time') return;
+  const w=measureLane();
+  if(Math.abs(w-LANEW)>0.5){ LANEW=w; paint(); }
+  const lane=document.querySelector('.body .lane');
+  document.getElementById('ticks').style.width = lane ? lane.clientWidth+'px' : '';
+}
+let _rz=null;
+addEventListener('resize',()=>{ clearTimeout(_rz); _rz=setTimeout(()=>{ if(DATA) render(); },90); });
 
 // ---- controls
 document.querySelectorAll('#rangegrp button').forEach(b=>{

@@ -1,13 +1,13 @@
 {
- "generated": "2026-09-07T21:38:39-04:00",
+ "generated": "2026-09-07T23:39:08-04:00",
  "today": "2026-09-07",
  "counts": {
-  "total": 176,
-  "open": 173,
+  "total": 150,
+  "open": 147,
   "done": 3,
   "today_total": 3,
   "today_done": 0,
-  "overdue": 94
+  "overdue": 93
  },
  "today_items": [
   {
@@ -321,7 +321,7 @@
   },
   {
    "date": "2026-09-04",
-   "total": 7,
+   "total": 6,
    "done": 0
   },
   {

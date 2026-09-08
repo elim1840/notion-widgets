@@ -160,27 +160,39 @@ def main():
     for t in tasks:
         if in_week(t["date"]) and t["type"] != "Task":
             events.append({
-                "name": t["name"], "date": t["date"], "done": t["done"],
+                "name": t["name"], "date": t["date"], "end": t.get("end") or "",
+                "done": t["done"],
                 "kind": t["meeting_type"] or "Meeting", "src": "task",
+                "location": t.get("location") or "", "type": t.get("type") or "",
+                "meeting_type": t.get("meeting_type") or "",
                 "url": t["url"],
             })
         elif in_week(t["date"]) and t["type"] == "Task":
             events.append({
-                "name": t["name"], "date": t["date"], "done": t["done"],
+                "name": t["name"], "date": t["date"], "end": t.get("end") or "",
+                "done": t["done"],
                 "kind": t["meeting_type"] or "Task", "src": "task",
+                "location": t.get("location") or "", "type": t.get("type") or "",
+                "meeting_type": t.get("meeting_type") or "",
                 "url": t["url"],
             })
 
     for r in query_all(CLASS_DS):
         p = r["properties"]
         d = txt(p.get("Date"))
+        dobj = (p.get("Date") or {}).get("date") or {}
+        cats = [o["name"] for o in (p.get("Class Category") or {}).get("multi_select", [])]
         if in_week(d):
             events.append({
                 "name": txt(p.get("Class Item")),
                 "date": d,
-                "done": False,
+                "end": dobj.get("end") or "",
+                "done": txt(p.get("Task Status")) == "Done",
                 "kind": txt(p.get("Class Code")) or "Class",
                 "src": "class",
+                "location": txt(p.get("Room")),
+                "type": ", ".join(cats),
+                "meeting_type": "Class",
                 "url": r.get("url", ""),
             })
 
