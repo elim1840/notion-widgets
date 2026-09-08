@@ -22,6 +22,7 @@ OUT = os.path.join(os.path.dirname(__file__), "..", "docs", "data")
 
 TASKS_DS = "cd1ad116-e9e2-4719-954d-e75189cf3ce3"   # Tasks & Meetings
 CLASS_DS = "beb6c6ee-20b1-4c1d-a8c3-93b13fae040c"   # Class Database
+PROJ_DS  = "35aea74e-b779-8088-94b2-000b6c0b3cc5"   # Projects
 ET = timezone(timedelta(hours=-4))                   # EDT; -5 in winter
 
 
@@ -218,6 +219,31 @@ def main():
     }
     with open(os.path.join(OUT, "week.json"), "w") as f:
         json.dump(week, f, indent=1)
+
+    # ---- spokes.json: full class + project lists for the spoke widgets
+    def ms(p):
+        return ", ".join(o["name"] for o in (p or {}).get("multi_select", []))
+    spokes = {"classes": [], "projects": []}
+    for r in query_all(CLASS_DS):
+        p = r["properties"]
+        spokes["classes"].append({
+            "name": txt(p.get("Class Item")), "code": txt(p.get("Class Code")),
+            "date": txt(p.get("Date")), "due": str(txt(p.get("Due in #"))),
+            "status": txt(p.get("Task Status")), "type": ms(p.get("Class Category")),
+            "room": txt(p.get("Room")), "url": r.get("url", ""),
+        })
+    for r in query_all(PROJ_DS):
+        p = r["properties"]
+        nm = next((k for k, v in p.items() if v["type"] == "title"), None)
+        spokes["projects"].append({
+            "name": txt(p.get(nm)), "phase": txt(p.get("Phase")),
+            "pri": txt(p.get("Priority")), "blocker": txt(p.get("Blocker")),
+            "next": txt(p.get("Next Milestone Date")), "status": txt(p.get("Status")),
+            "url": r.get("url", ""),
+        })
+    with open(os.path.join(OUT, "spokes.json"), "w") as f:
+        json.dump(spokes, f, indent=1)
+    print(f"wrote spokes.json — {len(spokes['classes'])} classes, {len(spokes['projects'])} projects")
 
     print(f"wrote week.json — {len(events)} events "
           f"{monday.isoformat()}..{sunday.isoformat()}")

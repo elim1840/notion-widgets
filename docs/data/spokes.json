@@ -1,364 +1,714 @@
 {
  "classes": [
   {
+   "name": "24.134 Experiential Ethics final due",
+   "code": "24.134",
+   "date": "2026-09-04T23:59:00.000-04:00",
+   "due": "",
+   "status": "Not started",
+   "type": "Homework",
+   "room": "",
+   "url": "https://app.notion.com/p/24-134-Experiential-Ethics-final-due-3d5ea74eb7798157bbeddf48ecc792bc"
+  },
+  {
+   "name": "16.842 \u00b7 Session 01 SE Overview & Stakeholders",
+   "code": "16.842",
+   "date": "2026-09-15T11:00:00.000-04:00",
+   "due": "",
+   "status": "Not started",
+   "type": "Lecture",
+   "room": "",
+   "url": "https://app.notion.com/p/16-842-Session-01-SE-Overview-Stakeholders-3d5ea74eb77981f4a439f7df80618056"
+  },
+  {
+   "name": "16.842 \u00b7 Session 02 Requirements & Margins",
+   "code": "16.842",
+   "date": "2026-09-22T11:00:00.000-04:00",
+   "due": "",
+   "status": "Not started",
+   "type": "Lecture",
+   "room": "",
+   "url": "https://app.notion.com/p/16-842-Session-02-Requirements-Margins-3d5ea74eb77981a48d71fb409da4838b"
+  },
+  {
+   "name": "16.842 \u00b7 Session 03 System Thinking",
+   "code": "16.842",
+   "date": "2026-09-29T11:00:00.000-04:00",
+   "due": "",
+   "status": "Not started",
+   "type": "Lecture",
+   "room": "",
+   "url": "https://app.notion.com/p/16-842-Session-03-System-Thinking-3d5ea74eb7798194bb20f2f90b0aad55"
+  },
+  {
+   "name": "16.842 \u00b7 Session 04 Concept & Architecture",
+   "code": "16.842",
+   "date": "2026-10-06T11:00:00.000-04:00",
+   "due": "",
+   "status": "Not started",
+   "type": "Lecture",
+   "room": "",
+   "url": "https://app.notion.com/p/16-842-Session-04-Concept-Architecture-3d5ea74eb779815aaf0ac81e31721838"
+  },
+  {
+   "name": "16.842 \u00b7 Session 05 Modeling, DSM & Trade Space Analysis",
+   "code": "16.842",
+   "date": "2026-10-20T11:00:00.000-04:00",
+   "due": "",
+   "status": "Not started",
+   "type": "Lecture",
+   "room": "",
+   "url": "https://app.notion.com/p/16-842-Session-05-Modeling-DSM-Trade-Space-Analysis-3d5ea74eb779816bb3a7da3054862824"
+  },
+  {
+   "name": "16.842 \u00b7 Session 06 MDO",
+   "code": "16.842",
+   "date": "2026-10-27T11:00:00.000-04:00",
+   "due": "",
+   "status": "Not started",
+   "type": "Lecture",
+   "room": "",
+   "url": "https://app.notion.com/p/16-842-Session-06-MDO-3d5ea74eb779811a9519ec374af5c757"
+  },
+  {
+   "name": "16.842 \u00b7 Session 07 Finance, Budgets & Cost Estimation",
+   "code": "16.842",
+   "date": "2026-11-03T11:00:00.000-05:00",
+   "due": "",
+   "status": "Not started",
+   "type": "Lecture",
+   "room": "",
+   "url": "https://app.notion.com/p/16-842-Session-07-Finance-Budgets-Cost-Estimation-3d5ea74eb779810cb018c43d4a8b743a"
+  },
+  {
+   "name": "16.842 \u00b7 Session 08 Safety",
+   "code": "16.842",
+   "date": "2026-11-10T11:00:00.000-05:00",
+   "due": "",
+   "status": "Not started",
+   "type": "Lecture",
+   "room": "",
+   "url": "https://app.notion.com/p/16-842-Session-08-Safety-3d5ea74eb779817480acc4c484816d1e"
+  },
+  {
+   "name": "16.842 \u00b7 Session 09 Verification, Validation & Risk",
+   "code": "16.842",
+   "date": "2026-11-17T11:00:00.000-05:00",
+   "due": "",
+   "status": "Not started",
+   "type": "Lecture",
+   "room": "",
+   "url": "https://app.notion.com/p/16-842-Session-09-Verification-Validation-Risk-3d5ea74eb77981fabdbcf97aa927857c"
+  },
+  {
+   "name": "16.842 \u00b7 Session 10 Integration & Operations",
+   "code": "16.842",
+   "date": "2026-11-24T11:00:00.000-05:00",
+   "due": "",
+   "status": "Not started",
+   "type": "Lecture",
+   "room": "",
+   "url": "https://app.notion.com/p/16-842-Session-10-Integration-Operations-3d5ea74eb77981daa038d458c7e3fdad"
+  },
+  {
+   "name": "16.842 \u00b7 No Class \u2014 MIT Monday Schedule",
+   "code": "16.842",
+   "date": "2026-10-13",
+   "due": "",
+   "status": "Not started",
+   "type": "Project",
+   "room": "",
+   "url": "https://app.notion.com/p/16-842-No-Class-MIT-Monday-Schedule-3d5ea74eb77981728f13e402b96fed20"
+  },
+  {
+   "name": "16.842 \u00b7 A1 Team Formation, Stakeholders, ConOps DUE",
+   "code": "16.842",
+   "date": "2026-09-28",
+   "due": "",
+   "status": "Not started",
+   "type": "Homework",
+   "room": "",
+   "url": "https://app.notion.com/p/16-842-A1-Team-Formation-Stakeholders-ConOps-DUE-3d5ea74eb779817898e2c3426e6ffd5e"
+  },
+  {
+   "name": "16.842 \u00b7 A2 Requirements Definition & Margins Allocation DUE",
+   "code": "16.842",
+   "date": "2026-10-12",
+   "due": "",
+   "status": "Not started",
+   "type": "Homework",
+   "room": "",
+   "url": "https://app.notion.com/p/16-842-A2-Requirements-Definition-Margins-Allocation-DUE-3d5ea74eb77981928598c5541bd55532"
+  },
+  {
+   "name": "16.842 \u00b7 A3 System Architecture & Concept Generation DUE",
+   "code": "16.842",
+   "date": "2026-10-26",
+   "due": "",
+   "status": "Not started",
+   "type": "Homework",
+   "room": "",
+   "url": "https://app.notion.com/p/16-842-A3-System-Architecture-Concept-Generation-DUE-3d5ea74eb77981f1b413e4eb1ed842ae"
+  },
+  {
+   "name": "16.842 \u00b7 A4 Trade Space Exploration & Concept Selection DUE",
+   "code": "16.842",
+   "date": "2026-11-09",
+   "due": "",
+   "status": "Not started",
+   "type": "Homework",
+   "room": "",
+   "url": "https://app.notion.com/p/16-842-A4-Trade-Space-Exploration-Concept-Selection-DUE-3d5ea74eb77981eb8a0bd191d27a1e77"
+  },
+  {
+   "name": "16.842 \u00b7 A6 Written Reflective Memo (individual) DUE",
+   "code": "16.842",
+   "date": "2026-11-16",
+   "due": "",
+   "status": "Not started",
+   "type": "Homework",
+   "room": "",
+   "url": "https://app.notion.com/p/16-842-A6-Written-Reflective-Memo-individual-DUE-3d5ea74eb779815d9a25d49f453d942f"
+  },
+  {
+   "name": "16.842 \u00b7 A5 Final Project Presentation Materials DUE",
+   "code": "16.842",
+   "date": "2026-12-07",
+   "due": "",
+   "status": "Not started",
+   "type": "Presentation",
+   "room": "",
+   "url": "https://app.notion.com/p/16-842-A5-Final-Project-Presentation-Materials-DUE-3d5ea74eb7798193b3a8cb40ccf07446"
+  },
+  {
+   "name": "16.842 \u00b7 Individual Oral Exam",
+   "code": "16.842",
+   "date": "2026-12-01T11:00:00.000-05:00",
+   "due": "",
+   "status": "Not started",
+   "type": "Exam",
+   "room": "",
+   "url": "https://app.notion.com/p/16-842-Individual-Oral-Exam-3d5ea74eb779817fa452f3b7379ba5ca"
+  },
+  {
+   "name": "16.842 \u00b7 Final Team Presentation (30 min)",
+   "code": "16.842",
+   "date": "2026-12-08T11:00:00.000-05:00",
+   "due": "",
+   "status": "Not started",
+   "type": "Presentation",
+   "room": "",
+   "url": "https://app.notion.com/p/16-842-Final-Team-Presentation-30-min-3d5ea74eb77981a9b6bddc00e3609d11"
+  },
+  {
+   "name": "16.S896 Competition Info Session (special Mon session)",
+   "code": "16.S896",
+   "date": "2026-09-14T17:00:00.000-04:00",
+   "due": "",
+   "status": "Not started",
+   "type": "Lecture",
+   "room": "",
+   "url": "https://app.notion.com/p/16-S896-Competition-Info-Session-special-Mon-session-3d5ea74eb7798197a5ffc5497475ca30"
+  },
+  {
+   "name": "16.S896 Skills Survey + Team Pitches Due",
+   "code": "16.S896",
+   "date": "2026-09-18",
+   "due": "",
+   "status": "Not started",
+   "type": "Presentation",
+   "room": "",
+   "url": "https://app.notion.com/p/16-S896-Skills-Survey-Team-Pitches-Due-3d5ea74eb77981668e68ecad205e5417"
+  },
+  {
+   "name": "16.S896 RASC-AL Notice of Intent Due (optional)",
+   "code": "16.S896",
+   "date": "2026-10-13",
+   "due": "",
+   "status": "Not started",
+   "type": "Homework",
+   "room": "",
+   "url": "https://app.notion.com/p/16-S896-RASC-AL-Notice-of-Intent-Due-optional-3d5ea74eb77981c79bddf15157f21120"
+  },
+  {
+   "name": "16.S896 Concept Review (midterm, 15%)",
+   "code": "16.S896",
+   "date": "2026-11-06T15:00:00.000-05:00",
+   "due": "",
+   "status": "Not started",
+   "type": "Presentation",
+   "room": "",
+   "url": "https://app.notion.com/p/16-S896-Concept-Review-midterm-15-3d5ea74eb779817d9edff57ab65768a5"
+  },
+  {
+   "name": "16.S896 Draft Proposal/Paper Due (20%)",
+   "code": "16.S896",
+   "date": "2026-11-20",
+   "due": "",
+   "status": "Not started",
+   "type": "Homework",
+   "room": "",
+   "url": "https://app.notion.com/p/16-S896-Draft-Proposal-Paper-Due-20-3d5ea74eb7798186b383dee4283336db"
+  },
+  {
+   "name": "16.S896 Final Concept Review (external judges, 20%)",
+   "code": "16.S896",
+   "date": "2026-12-04T15:00:00.000-05:00",
+   "due": "",
+   "status": "Not started",
+   "type": "Presentation",
+   "room": "",
+   "url": "https://app.notion.com/p/16-S896-Final-Concept-Review-external-judges-20-3d5ea74eb779811d9e42ce0e0a09fc28"
+  },
+  {
    "name": "14.003 Recitation",
    "code": "14.003",
    "date": "2026-09-11T09:00:00.000-04:00",
-   "due": "3 days",
+   "due": "",
    "status": "",
-   "type": ""
+   "type": "Seminar",
+   "room": "E52-164",
+   "url": "https://app.notion.com/p/14-003-Recitation-3d3ea74eb77981118fd8da259e02e85c"
   },
   {
    "name": "14.003 Lecture",
    "code": "14.003",
    "date": "2026-09-14T10:30:00.000-04:00",
-   "due": "6 days",
+   "due": "",
    "status": "",
-   "type": ""
+   "type": "Lecture",
+   "room": "E51-376",
+   "url": "https://app.notion.com/p/14-003-Lecture-3d3ea74eb7798126bf40fb82b778bf4e"
   },
   {
    "name": "14.003 Lecture",
    "code": "14.003",
    "date": "2026-09-09T10:30:00.000-04:00",
-   "due": "1 day",
+   "due": "",
    "status": "",
-   "type": ""
+   "type": "Lecture",
+   "room": "E51-376",
+   "url": "https://app.notion.com/p/14-003-Lecture-3d3ea74eb7798132902de5f43016933e"
   },
   {
    "name": "14.003 Lecture",
    "code": "14.003",
    "date": "2026-09-16T10:30:00.000-04:00",
-   "due": "8 days",
+   "due": "",
    "status": "",
-   "type": ""
+   "type": "Lecture",
+   "room": "E51-376",
+   "url": "https://app.notion.com/p/14-003-Lecture-3d3ea74eb779813d900dc288693e91d4"
   },
   {
    "name": "6.9270 Lecture",
    "code": "6.9270",
    "date": "2026-09-14T16:00:00.000-04:00",
-   "due": "6 days",
+   "due": "",
    "status": "",
-   "type": ""
+   "type": "Lecture",
+   "room": "56-114",
+   "url": "https://app.notion.com/p/6-9270-Lecture-3d3ea74eb779813f8b01ee415d5602b7"
   },
   {
    "name": "IDS.412 Lecture",
    "code": "IDS.412",
    "date": "2026-09-09T13:00:00.000-04:00",
-   "due": "1 day",
+   "due": "",
    "status": "",
-   "type": ""
+   "type": "Lecture",
+   "room": "66-168",
+   "url": "https://app.notion.com/p/IDS-412-Lecture-3d3ea74eb779814ba901c446cf3cf72b"
   },
   {
    "name": "16.987 Seminar",
    "code": "16.987",
    "date": "2026-09-14T11:30:00.000-04:00",
-   "due": "6 days",
+   "due": "",
    "status": "",
-   "type": ""
+   "type": "Seminar",
+   "room": "37-252",
+   "url": "https://app.notion.com/p/16-987-Seminar-3d3ea74eb77981558a66d8e03fbcb5c5"
   },
   {
    "name": "IDS.412 Lecture",
    "code": "IDS.412",
    "date": "2026-09-16T13:00:00.000-04:00",
-   "due": "8 days",
+   "due": "",
    "status": "",
-   "type": ""
+   "type": "Lecture",
+   "room": "66-168",
+   "url": "https://app.notion.com/p/IDS-412-Lecture-3d3ea74eb779815f8390cbf673fa5389"
   },
   {
    "name": "16.990 Lecture",
    "code": "16.990",
    "date": "2026-09-16T14:30:00.000-04:00",
-   "due": "8 days",
+   "due": "",
    "status": "",
-   "type": ""
+   "type": "Lecture",
+   "room": "9-354",
+   "url": "https://app.notion.com/p/16-990-Lecture-3d3ea74eb77981739594f7c7157aea3a"
   },
   {
    "name": "16.S896 Lecture",
    "code": "16.S896",
    "date": "2026-09-11T15:00:00.000-04:00",
-   "due": "3 days",
+   "due": "",
    "status": "",
-   "type": ""
+   "type": "Lecture",
+   "room": "35-225",
+   "url": "https://app.notion.com/p/16-S896-Lecture-3d3ea74eb77981789645cd0634a83f8b"
   },
   {
    "name": "16.990 Lecture",
    "code": "16.990",
    "date": "2026-09-09T14:30:00.000-04:00",
-   "due": "1 day",
+   "due": "",
    "status": "",
-   "type": ""
+   "type": "Lecture",
+   "room": "9-354",
+   "url": "https://app.notion.com/p/16-990-Lecture-3d3ea74eb77981a1bd1fd73f769992b7"
   },
   {
    "name": "16.S896 Lecture",
    "code": "16.S896",
    "date": "2026-09-18T15:00:00.000-04:00",
-   "due": "10 days",
+   "due": "",
    "status": "",
-   "type": ""
+   "type": "Lecture",
+   "room": "35-225",
+   "url": "https://app.notion.com/p/16-S896-Lecture-3d3ea74eb77981b29ed3c7fa60b49f11"
   },
   {
    "name": "14.003 Recitation",
    "code": "14.003",
    "date": "2026-09-18T09:00:00.000-04:00",
-   "due": "10 days",
+   "due": "",
    "status": "",
-   "type": ""
+   "type": "Seminar",
+   "room": "E52-164",
+   "url": "https://app.notion.com/p/14-003-Recitation-3d3ea74eb77981bb82d9d670e305e3d0"
   },
   {
    "name": "IDS.412 Lecture",
    "code": "IDS.412",
    "date": "2026-09-14T13:00:00.000-04:00",
-   "due": "6 days",
+   "due": "",
    "status": "",
-   "type": ""
+   "type": "Lecture",
+   "room": "66-168",
+   "url": "https://app.notion.com/p/IDS-412-Lecture-3d3ea74eb77981d69d4ac5e486eba982"
   },
   {
    "name": "16.990 Lecture",
    "code": "16.990",
    "date": "2026-09-14T14:30:00.000-04:00",
-   "due": "6 days",
+   "due": "",
    "status": "",
-   "type": ""
+   "type": "Lecture",
+   "room": "9-354",
+   "url": "https://app.notion.com/p/16-990-Lecture-3d3ea74eb77981f5b253e0ac0282c890"
   },
   {
    "name": "Template Page",
    "code": "24.134",
    "date": "2026-08-18",
-   "due": "Overdue by 21 days",
+   "due": "",
    "status": "",
-   "type": ""
+   "type": "",
+   "room": "",
+   "url": "https://app.notion.com/p/Template-Page-3c0ea74eb77980e8a94eeabc91e9fdc5"
   },
   {
    "name": "[HW] 24.134 \u2014 Complete pre-reading + assignments (before Week 10)",
    "code": "24.134",
    "date": "2026-08-09",
-   "due": "Overdue by 30 days",
+   "due": "",
    "status": "Not started",
-   "type": ""
+   "type": "Homework",
+   "room": "",
+   "url": "https://app.notion.com/p/HW-24-134-Complete-pre-reading-assignments-before-Week-10-49789eb8592640b38b40838499820c17"
   },
   {
    "name": "[HW] 24.134 \u2014 Complete pre-reading + assignments (before Week 9)",
    "code": "24.134",
    "date": "2026-08-02",
-   "due": "Overdue by 37 days",
+   "due": "",
    "status": "Not started",
-   "type": ""
+   "type": "Homework",
+   "room": "",
+   "url": "https://app.notion.com/p/HW-24-134-Complete-pre-reading-assignments-before-Week-9-8204f614e8094d95886f096883d057fb"
   },
   {
    "name": "[HW] 24.134 \u2014 Complete pre-reading + assignments (before Week 8)",
    "code": "24.134",
    "date": "2026-07-26",
-   "due": "Overdue by 44 days",
+   "due": "",
    "status": "Not started",
-   "type": ""
+   "type": "Homework",
+   "room": "",
+   "url": "https://app.notion.com/p/HW-24-134-Complete-pre-reading-assignments-before-Week-8-2cdf60119e1f4bd5af501961c3c702f2"
   },
   {
    "name": "[HW] 24.134 \u2014 Complete pre-reading + assignments (before Week 7)",
    "code": "24.134",
    "date": "2026-07-19",
-   "due": "Overdue by 51 days",
+   "due": "",
    "status": "Not started",
-   "type": ""
+   "type": "Homework",
+   "room": "",
+   "url": "https://app.notion.com/p/HW-24-134-Complete-pre-reading-assignments-before-Week-7-bd484f8bc6b34af2bacaa9e951ea946f"
   },
   {
    "name": "[HW] 24.134 \u2014 Complete pre-reading + assignments (before Week 5)",
    "code": "24.134",
    "date": "2026-07-05",
-   "due": "Overdue by 65 days",
+   "due": "",
    "status": "Not started",
-   "type": ""
+   "type": "Homework",
+   "room": "",
+   "url": "https://app.notion.com/p/HW-24-134-Complete-pre-reading-assignments-before-Week-5-4d452ba54695450fbffdccf375ae2c21"
   },
   {
    "name": "[HW] 24.134 \u2014 Complete pre-reading + assignments (before Week 6)",
    "code": "24.134",
    "date": "2026-07-12",
-   "due": "Overdue by 58 days",
+   "due": "",
    "status": "Not started",
-   "type": ""
+   "type": "Homework",
+   "room": "",
+   "url": "https://app.notion.com/p/HW-24-134-Complete-pre-reading-assignments-before-Week-6-b72639a7611f4d8d932dd34337eb5269"
   },
   {
    "name": "[HW] 24.134 \u2014 Complete pre-reading + assignments (before Week 4)",
    "code": "24.134",
    "date": "2026-06-28",
-   "due": "Overdue by 72 days",
+   "due": "",
    "status": "Not started",
-   "type": ""
+   "type": "Homework",
+   "room": "",
+   "url": "https://app.notion.com/p/HW-24-134-Complete-pre-reading-assignments-before-Week-4-f4277ae492954c1780a36e21d3b12c6e"
   },
   {
    "name": "[HW] 24.134 \u2014 Complete pre-reading + assignments (before Week 2)",
    "code": "24.134",
    "date": "2026-06-14",
-   "due": "Overdue by 86 days",
+   "due": "",
    "status": "Not started",
-   "type": ""
+   "type": "Homework",
+   "room": "",
+   "url": "https://app.notion.com/p/HW-24-134-Complete-pre-reading-assignments-before-Week-2-5bcdd49b22e34739a653a471b1286c1f"
   },
   {
    "name": "[HW] 24.134 \u2014 Complete pre-reading + assignments (before Week 3)",
    "code": "24.134",
    "date": "2026-06-21",
-   "due": "Overdue by 79 days",
+   "due": "",
    "status": "Not started",
-   "type": ""
+   "type": "Homework",
+   "room": "",
+   "url": "https://app.notion.com/p/HW-24-134-Complete-pre-reading-assignments-before-Week-3-fb747407c2084cb7b087d9e5b9e48b1a"
   },
   {
    "name": "24.134 \u2014 Showcase signup form due",
    "code": "24.134",
    "date": "2026-08-15",
-   "due": "Overdue by 24 days",
+   "due": "",
    "status": "Not started",
-   "type": ""
+   "type": "Homework",
+   "room": "",
+   "url": "https://app.notion.com/p/24-134-Showcase-signup-form-due-aa6260dcacc04d488ce7ccacbe34e22b"
   },
   {
    "name": "24.134 \u2014 Meet TF to discuss project idea",
    "code": "24.134",
    "date": "2026-07-07",
-   "due": "Overdue by 63 days",
+   "due": "",
    "status": "Not started",
-   "type": ""
+   "type": "Project",
+   "room": "",
+   "url": "https://app.notion.com/p/24-134-Meet-TF-to-discuss-project-idea-36f2bb40626e4ba589beaf79345d2a9a"
   },
   {
    "name": "24.134 \u2014 Ethical Case Study assignment due",
    "code": "24.134",
    "date": "2026-06-30T12:30:00.000-04:00",
-   "due": "Overdue by 69 days",
+   "due": "",
    "status": "Not started",
-   "type": ""
+   "type": "Homework",
+   "room": "",
+   "url": "https://app.notion.com/p/24-134-Ethical-Case-Study-assignment-due-1a85798a36c84c63b0d79aa973ce5ca4"
   },
   {
    "name": "24.134 \u2014 Complete Midterm Evaluation Form",
    "code": "24.134",
    "date": "2026-07-07",
-   "due": "Overdue by 63 days",
+   "due": "",
    "status": "Not started",
-   "type": ""
+   "type": "Homework",
+   "room": "",
+   "url": "https://app.notion.com/p/24-134-Complete-Midterm-Evaluation-Form-f1ed039186784172a5d32c7a4903ea4e"
   },
   {
    "name": "24.134 \u2014 Advocacy Conversation due",
    "code": "24.134",
    "date": "2026-07-21",
-   "due": "Overdue by 49 days",
+   "due": "",
    "status": "Not started",
-   "type": ""
+   "type": "Homework",
+   "room": "",
+   "url": "https://app.notion.com/p/24-134-Advocacy-Conversation-due-ffa210ac625b44f2b2cd8a7010980c51"
   },
   {
    "name": "24.134 \u2014 Workshop project + submit shareable component draft",
    "code": "24.134",
    "date": "2026-07-28",
-   "due": "Overdue by 42 days",
+   "due": "",
    "status": "Not started",
-   "type": ""
+   "type": "",
+   "room": "",
+   "url": "https://app.notion.com/p/24-134-Workshop-project-submit-shareable-component-draft-88b822766cb644e5a630854ad7614d10"
   },
   {
    "name": "24.134 \u2014 Fall Showcase",
    "code": "24.134",
    "date": "2026-09-16",
-   "due": "8 days",
+   "due": "",
    "status": "Not started",
-   "type": ""
+   "type": "",
+   "room": "",
+   "url": "https://app.notion.com/p/24-134-Fall-Showcase-cf80d7e18d8a433d8d8610269d50e49c"
   },
   {
    "name": "24.134 \u2014 Project Proposal due",
    "code": "24.134",
    "date": "2026-07-14",
-   "due": "Overdue by 56 days",
+   "due": "",
    "status": "Not started",
-   "type": ""
+   "type": "Project",
+   "room": "",
+   "url": "https://app.notion.com/p/24-134-Project-Proposal-due-ed06272acd2540a0ba9fa50b45cb9d9c"
   },
   {
    "name": "24.134 \u2014 Submit project to TF + upload shareable component",
    "code": "24.134",
    "date": "2026-08-21",
-   "due": "Overdue by 18 days",
+   "due": "",
    "status": "Not started",
-   "type": ""
+   "type": "",
+   "room": "",
+   "url": "https://app.notion.com/p/24-134-Submit-project-to-TF-upload-shareable-component-9b7706085a7b4e94b073b5ecfa4f0317"
   },
   {
    "name": "24.134 \u2014 Week 10: Living in Light of Your Values (Wrap-Up)",
    "code": "24.134",
    "date": "2026-08-12",
-   "due": "Overdue by 27 days",
+   "due": "",
    "status": "Not started",
-   "type": ""
+   "type": "Lecture",
+   "room": "",
+   "url": "https://app.notion.com/p/24-134-Week-10-Living-in-Light-of-Your-Values-Wrap-Up-0e188bd001a6431da6cac7b7e8a7a238"
   },
   {
    "name": "24.134 \u2014 Week 9: Ethics at MIT",
    "code": "24.134",
    "date": "2026-08-05",
-   "due": "Overdue by 34 days",
+   "due": "",
    "status": "Not started",
-   "type": ""
+   "type": "Lecture",
+   "room": "",
+   "url": "https://app.notion.com/p/24-134-Week-9-Ethics-at-MIT-7e6e1a6c2faf47a5b74e0afb08986530"
   },
   {
    "name": "24.134 \u2014 Week 8: Project Workshop",
    "code": "24.134",
    "date": "2026-07-29",
-   "due": "Overdue by 41 days",
+   "due": "",
    "status": "Not started",
-   "type": ""
+   "type": "Lecture",
+   "room": "",
+   "url": "https://app.notion.com/p/24-134-Week-8-Project-Workshop-a3615205c9a648bca4f5f516fade88f5"
   },
   {
    "name": "24.134 \u2014 Week 7: Responsibility and Social Roles",
    "code": "24.134",
    "date": "2026-07-22",
-   "due": "Overdue by 48 days",
+   "due": "",
    "status": "Not started",
-   "type": ""
+   "type": "Lecture",
+   "room": "",
+   "url": "https://app.notion.com/p/24-134-Week-7-Responsibility-and-Social-Roles-ab048536cd2d499d9e0957085805b5db"
   },
   {
    "name": "24.134 \u2014 Week 6: Social Structures and Structural Injustice",
    "code": "24.134",
    "date": "2026-07-15",
-   "due": "Overdue by 55 days",
+   "due": "",
    "status": "Not started",
-   "type": ""
+   "type": "Lecture",
+   "room": "",
+   "url": "https://app.notion.com/p/24-134-Week-6-Social-Structures-and-Structural-Injustice-e9a95b08e13b4e15856b8596af1edcb3"
   },
   {
    "name": "24.134 \u2014 Week 5: Technology and Justice",
    "code": "24.134",
    "date": "2026-07-08",
-   "due": "Overdue by 62 days",
+   "due": "",
    "status": "Not started",
-   "type": ""
+   "type": "Lecture",
+   "room": "",
+   "url": "https://app.notion.com/p/24-134-Week-5-Technology-and-Justice-a1baef8257dc42088f42ff34e9a91188"
   },
   {
    "name": "24.134 \u2014 Week 3: Decision-Making With Stakeholders in Mind (Ethics Protocol)",
    "code": "24.134",
    "date": "2026-06-24",
-   "due": "Overdue by 76 days",
+   "due": "",
    "status": "Not started",
-   "type": ""
+   "type": "Lecture",
+   "room": "",
+   "url": "https://app.notion.com/p/24-134-Week-3-Decision-Making-With-Stakeholders-in-Mind-Ethics-Protocol-dd6f3a375d734c25a397aacfe5c48ee0"
   },
   {
    "name": "24.134 \u2014 Week 4: Values in Science and Technology",
    "code": "24.134",
    "date": "2026-07-01",
-   "due": "Overdue by 69 days",
+   "due": "",
    "status": "Not started",
-   "type": ""
+   "type": "Lecture",
+   "room": "",
+   "url": "https://app.notion.com/p/24-134-Week-4-Values-in-Science-and-Technology-81679a655d4e4a0295901c7f9acf7f23"
   },
   {
    "name": "24.134 \u2014 Week 1: Introduction \u2014 Ethics of Science and Technology",
    "code": "24.134",
    "date": "2026-06-10",
-   "due": "Overdue by 90 days",
+   "due": "",
    "status": "Not started",
-   "type": ""
+   "type": "Lecture",
+   "room": "",
+   "url": "https://app.notion.com/p/24-134-Week-1-Introduction-Ethics-of-Science-and-Technology-de4f1eb6968a43a8b65e6ffa564c7885"
   },
   {
    "name": "24.134 \u2014 Week 2: Effective Altruism",
    "code": "24.134",
    "date": "2026-06-17",
-   "due": "Overdue by 83 days",
+   "due": "",
    "status": "Not started",
-   "type": ""
+   "type": "Lecture",
+   "room": "",
+   "url": "https://app.notion.com/p/24-134-Week-2-Effective-Altruism-dd70a677bd7b4bbe889eb37a2623c4ea"
   },
   {
    "name": "24.134 Experiential Ethics",
    "code": "24.134",
    "date": "",
-   "due": "No date set",
+   "due": "",
    "status": "Not started",
-   "type": ""
+   "type": "Lecture",
+   "room": "",
+   "url": "https://app.notion.com/p/24-134-Experiential-Ethics-696e9f9a7a8445b787740c028911cf4c"
   }
  ],
  "projects": [
@@ -368,7 +718,8 @@
    "pri": "",
    "blocker": "",
    "next": "",
-   "status": "Active"
+   "status": "",
+   "url": "https://app.notion.com/p/AI-Lab-Bridge-Multi-Machine-Agent-Pipeline-3c9ea74eb7798189b5c2f9df0607bbe2"
   },
   {
    "name": "Career + Certifications",
@@ -376,7 +727,8 @@
    "pri": "Medium",
    "blocker": "",
    "next": "",
-   "status": "Active"
+   "status": "",
+   "url": "https://app.notion.com/p/Career-Certifications-3bfea74eb77981c7b2d3c990a04ee2fc"
   },
   {
    "name": "AI + Automation Workshop with Yohan 2nd Version",
@@ -384,7 +736,8 @@
    "pri": "",
    "blocker": "",
    "next": "",
-   "status": ""
+   "status": "",
+   "url": "https://app.notion.com/p/AI-Automation-Workshop-with-Yohan-2nd-Version-3feea74eb779830bb6fb819b9d03d988"
   },
   {
    "name": "Personal Investing System",
@@ -392,7 +745,8 @@
    "pri": "High",
    "blocker": "",
    "next": "",
-   "status": "Active"
+   "status": "",
+   "url": "https://app.notion.com/p/Personal-Investing-System-370ea74eb77981afaceef0dd611ef98c"
   },
   {
    "name": "New Page Template",
@@ -400,7 +754,8 @@
    "pri": "",
    "blocker": "",
    "next": "",
-   "status": ""
+   "status": "",
+   "url": "https://app.notion.com/p/New-Page-Template-364ea74eb7798009b6c5f3948e929322"
   },
   {
    "name": "\ud83d\udcca Portfolio Terminal \u2014 MVP Foundation",
@@ -408,7 +763,8 @@
    "pri": "High",
    "blocker": "",
    "next": "",
-   "status": "Active"
+   "status": "",
+   "url": "https://app.notion.com/p/Portfolio-Terminal-MVP-Foundation-364ea74eb779810cb7bacff95395396b"
   },
   {
    "name": "\ud83d\udcc8 Claude/Codex \u2194 TradingView + Real-Time Trading Stack",
@@ -416,7 +772,8 @@
    "pri": "Medium",
    "blocker": "",
    "next": "",
-   "status": "Active"
+   "status": "",
+   "url": "https://app.notion.com/p/Claude-Codex-TradingView-Real-Time-Trading-Stack-364ea74eb77981cbae0fc27c2d43f510"
   },
   {
    "name": "\ud83d\uddfa\ufe0f OutTheChat \u2014 Travel App + Marketing Site",
@@ -424,7 +781,8 @@
    "pri": "Medium",
    "blocker": "",
    "next": "",
-   "status": "Active"
+   "status": "",
+   "url": "https://app.notion.com/p/OutTheChat-Travel-App-Marketing-Site-361ea74eb77981b4b73de6e592cb2104"
   },
   {
    "name": "Adventures + Personal Travel Log",
@@ -432,7 +790,8 @@
    "pri": "Medium",
    "blocker": "",
    "next": "",
-   "status": "Active"
+   "status": "",
+   "url": "https://app.notion.com/p/Adventures-Personal-Travel-Log-361ea74eb77981b5af3edf6465521dba"
   },
   {
    "name": "Send Patrick the Mass Estimates of each of the components",
@@ -440,7 +799,8 @@
    "pri": "",
    "blocker": "",
    "next": "",
-   "status": ""
+   "status": "",
+   "url": "https://app.notion.com/p/Send-Patrick-the-Mass-Estimates-of-each-of-the-components-35fea74eb779808b8b01cba9c357b98c"
   },
   {
    "name": "Fitness",
@@ -448,7 +808,8 @@
    "pri": "High",
    "blocker": "",
    "next": "2026-06-09",
-   "status": "Active"
+   "status": "",
+   "url": "https://app.notion.com/p/Fitness-35eea74eb77981638eb8de66a6f8b994"
   },
   {
    "name": "AeroSpace Class Task",
@@ -456,7 +817,8 @@
    "pri": "",
    "blocker": "",
    "next": "",
-   "status": ""
+   "status": "",
+   "url": "https://app.notion.com/p/AeroSpace-Class-Task-35dea74eb77980aeb781d9d6da5433f4"
   },
   {
    "name": "Startups",
@@ -464,7 +826,8 @@
    "pri": "Medium",
    "blocker": "",
    "next": "",
-   "status": "Active"
+   "status": "",
+   "url": "https://app.notion.com/p/Startups-35dea74eb77981518646f5d65b7d76ca"
   },
   {
    "name": "Supervised Machine Learning Methods",
@@ -472,7 +835,8 @@
    "pri": "",
    "blocker": "",
    "next": "",
-   "status": "Active"
+   "status": "",
+   "url": "https://app.notion.com/p/Supervised-Machine-Learning-Methods-35bea74eb7798133bcfbefcc585acc10"
   },
   {
    "name": "Reports & Summaries",
@@ -480,7 +844,8 @@
    "pri": "Medium",
    "blocker": "",
    "next": "",
-   "status": "Active"
+   "status": "",
+   "url": "https://app.notion.com/p/Reports-Summaries-35bea74eb77981308c0cdc6d883733fe"
   },
   {
    "name": "AI + Research Workflows Study",
@@ -488,7 +853,8 @@
    "pri": "High",
    "blocker": "",
    "next": "",
-   "status": "Active"
+   "status": "",
+   "url": "https://app.notion.com/p/AI-Research-Workflows-Study-35bea74eb77981abad96eb76e1998648"
   },
   {
    "name": "Notion + AI Power User",
@@ -496,7 +862,8 @@
    "pri": "High",
    "blocker": "",
    "next": "",
-   "status": "Active"
+   "status": "",
+   "url": "https://app.notion.com/p/Notion-AI-Power-User-35bea74eb77981b8b84de1228281111d"
   },
   {
    "name": "Vibe Coding MVP Workflow",
@@ -504,7 +871,8 @@
    "pri": "High",
    "blocker": "",
    "next": "",
-   "status": "Active"
+   "status": "",
+   "url": "https://app.notion.com/p/Vibe-Coding-MVP-Workflow-35bea74eb77981bbb3b9ec70902b80ea"
   },
   {
    "name": "AI Agents Mastery",
@@ -512,7 +880,8 @@
    "pri": "High",
    "blocker": "",
    "next": "",
-   "status": "Active"
+   "status": "",
+   "url": "https://app.notion.com/p/AI-Agents-Mastery-35bea74eb77981f09ddbe49bc490afd4"
   },
   {
    "name": "Personal Portfolio",
@@ -520,7 +889,8 @@
    "pri": "Medium",
    "blocker": "",
    "next": "",
-   "status": "Active"
+   "status": "",
+   "url": "https://app.notion.com/p/Personal-Portfolio-35bea74eb779815d9166d914a63b0fd0"
   },
   {
    "name": "AI Skill Stack REPO",
@@ -528,7 +898,8 @@
    "pri": "Medium",
    "blocker": "",
    "next": "",
-   "status": "Active"
+   "status": "",
+   "url": "https://app.notion.com/p/AI-Skill-Stack-REPO-35bea74eb779811aa368cb283ee409ab"
   },
   {
    "name": "RASCAL",
@@ -536,7 +907,8 @@
    "pri": "",
    "blocker": "",
    "next": "2026-05-12",
-   "status": ""
+   "status": "",
+   "url": "https://app.notion.com/p/RASCAL-35aea74eb779807fae07d793a1294e36"
   },
   {
    "name": "AI + Automation Workshop with Yohan",
@@ -544,7 +916,8 @@
    "pri": "",
    "blocker": "",
    "next": "",
-   "status": ""
+   "status": "",
+   "url": "https://app.notion.com/p/AI-Automation-Workshop-with-Yohan-35aea74eb7798045bc02fcc624ed52ed"
   },
   {
    "name": "AI Certifications",
@@ -552,7 +925,8 @@
    "pri": "",
    "blocker": "",
    "next": "",
-   "status": ""
+   "status": "",
+   "url": "https://app.notion.com/p/AI-Certifications-35aea74eb779805f838de7c2202c22c8"
   },
   {
    "name": "MarsToTable",
@@ -560,7 +934,8 @@
    "pri": "",
    "blocker": "",
    "next": "",
-   "status": ""
+   "status": "",
+   "url": "https://app.notion.com/p/MarsToTable-35aea74eb77980c98f39e25cfcdaff16"
   },
   {
    "name": "MITRE ",
@@ -568,7 +943,8 @@
    "pri": "",
    "blocker": "",
    "next": "",
-   "status": ""
+   "status": "",
+   "url": "https://app.notion.com/p/MITRE-35aea74eb779800db8fec033df5e85e1"
   },
   {
    "name": "Publication",
@@ -576,7 +952,8 @@
    "pri": "",
    "blocker": "",
    "next": "",
-   "status": ""
+   "status": "",
+   "url": "https://app.notion.com/p/Publication-35aea74eb779808b828dc068a33a6629"
   },
   {
    "name": "TPP/AERO Thesis",
@@ -584,8 +961,8 @@
    "pri": "",
    "blocker": "",
    "next": "",
-   "status": ""
+   "status": "",
+   "url": "https://app.notion.com/p/TPP-AERO-Thesis-35aea74eb7798083aec1c1cd7c40868a"
   }
- ],
- "lit": []
+ ]
 }
