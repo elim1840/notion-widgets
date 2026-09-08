@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Project Portfolio Health</title>
+<style>
+  :root{
+    --bg:#191919; --panel:#202020; --line:#2f2f2f; --hair:#252525;
+    --ink:#e9e9e7; --dim:#9b9a97; --faint:#6f6e6b;
+    --blue:#5b93d3; --gold:#c9a227; --red:#e06c6c; --green:#5fa87a; --purple:#9a6dd7;
+  }
+  @media (prefers-color-scheme: light){
+    :root{ --bg:#fff; --panel:#f7f7f5; --line:#e6e5e1; --hair:#efeeec;
+           --ink:#37352f; --dim:#787774; --faint:#9b9a97; }
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--bg);color:var(--ink);padding:13px 15px 14px;
+       font:13px/1.4 -apple-system,BlinkMacSystemFont,"Segoe UI",Inter,sans-serif;
+       -webkit-font-smoothing:antialiased;font-variant-numeric:tabular-nums}
+  .hd{display:flex;justify-content:space-between;align-items:baseline;
+      font-size:10px;color:var(--faint);text-transform:uppercase;letter-spacing:.09em}
+  .hd b{font-weight:600;color:var(--dim)}
+
+  .strip{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);
+         border:1px solid var(--line);border-radius:4px;overflow:hidden;margin:9px 0 8px}
+  .st{background:var(--bg);padding:7px 10px 6px}
+  .st .n{font-size:20px;font-weight:600;letter-spacing:-.03em;line-height:1.05}
+  .st .n.red{color:var(--red)} .st .n.amb{color:var(--gold)}
+  .st .n.grn{color:var(--green)} .st .n.dim{color:var(--faint)}
+  .st .l{font-size:9.5px;color:var(--faint);text-transform:uppercase;letter-spacing:.07em;
+         margin-top:2px}
+
+  .finding{display:flex;gap:7px;align-items:flex-start;font-size:10.5px;color:var(--dim);
+           background:rgba(201,162,39,.09);border-left:2px solid var(--gold);
+           padding:5px 9px;border-radius:0 3px 3px 0;margin-bottom:7px;line-height:1.35}
+  .finding b{color:var(--gold);font-weight:600}
+
+  .rows{border-top:1px solid var(--line)}
+  .r{display:grid;grid-template-columns:11px minmax(0,1fr) 92px 58px 136px;gap:8px;
+     align-items:center;padding:4px 0 4px;border-bottom:1px solid var(--hair);
+     text-decoration:none;color:inherit}
+  .r:hover{background:var(--panel)}
+  .dot{width:7px;height:7px;border-radius:50%;margin-left:2px}
+  .dot.red{background:var(--red)} .dot.amb{background:var(--gold)}
+  .dot.grn{background:var(--green)}
+  .nm{font-size:12.5px;font-weight:500;line-height:16px;max-height:30px;overflow:hidden;
+      text-overflow:ellipsis;white-space:nowrap}
+  .nm b{font-weight:500;line-height:16px}
+  .nm span{display:block;font-size:10px;line-height:13px;color:var(--faint);font-weight:400;
+           white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .nm span.blk{color:var(--red)}
+  .ph{font-size:11px;padding:1px 7px;border-radius:3px;justify-self:start;
+      color:var(--dim);background:rgba(155,154,151,.12)}
+  .ph.research{color:var(--blue);background:rgba(91,147,211,.13)}
+  .ph.planning{color:var(--purple);background:rgba(154,109,215,.13)}
+  .ph.nil{color:var(--faint);background:transparent;border:1px dashed var(--line)}
+  .pri{font-size:10.5px;color:var(--dim);text-align:right}
+  .pri.high{color:var(--red)} .pri.nil{color:var(--faint)}
+  .ms{font-size:10.5px;color:var(--dim);text-align:right;white-space:nowrap}
+  .ms.red{color:var(--red)} .ms.nil{color:var(--faint);font-style:italic}
+  .ft{margin-top:9px;font-size:10px;color:var(--faint);display:flex;justify-content:space-between}
+  .none{color:var(--faint);font-style:italic;padding:16px 0}
+  .more{font-size:10px;color:var(--faint);padding:7px 0 0}
+</style>
+</head>
+<body>
+<div class="hd"><b>Project portfolio · health</b><span id="stamp"></span></div>
+<div class="strip" id="strip"></div>
+<div id="finding"></div>
+<div class="rows" id="rows"><div class="none">loading…</div></div>
+<div class="ft"><span id="ftl"></span><span id="ftr"></span></div>
+
+<script>
+const MON=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+const esc=s=>(s||'').replace(/[<>&]/g,c=>({'<':'&lt;','>':'&gt;','&':'&amp;'}[c]));
+const day=v=>(String(v||'').match(/^(\d{4}-\d{2}-\d{2})/)||[])[1]||'';
+const hhmm=v=>(String(v||'').match(/T(\d{2}):(\d{2})/)||[]).slice(1,3).join('')||'';
+const diff=(a,b)=>Math.round((new Date(b+'T12:00:00')-new Date(a+'T12:00:00'))/864e5);
+const fmt=d=>{const p=d.split('-');return (+p[2])+' '+MON[+p[1]-1];};
+const ARCH=/^archive/i;
+const ACTIVE=/active|in progress|in-progress|doing|execut/i;
+
+Promise.all([
+  fetch('../data/spokes.json?t='+Date.now()).then(r=>r.json()),
+  fetch('../data/tasks.json?t='+Date.now()).then(r=>r.json())
+]).then(([S,T])=>{
+  const today=day(T.today)||day(T.generated);
+  const all=(S.projects||[]);
+  const archived=all.filter(p=>ARCH.test(p.phase||''));
+  const live=all.filter(p=>!ARCH.test(p.phase||''));
+
+  const rows = live.map(p=>{
+    const ms=day(p.next);
+    const blocked = !!(p.blocker||'').trim();
+    let health, msTxt, msCls, d=null;
+    if(!ms){ health='amb'; msTxt='no milestone set'; msCls='nil'; }
+    else { d=diff(today,ms);
+      if(d>=0){ health='grn'; msTxt='in '+d+' d · '+fmt(ms); msCls=''; }
+      else    { health='red'; msTxt=(-d)+' d overdue · '+fmt(ms); msCls='red'; } }
+    if(blocked) health='red';
+    return {p, ms, d, blocked, health, msTxt, msCls};
+  });
+  const ord={red:0, amb:1, grn:2};
+  rows.sort((a,b)=> ord[a.health]-ord[b.health]
+    || (a.d==null)-(b.d==null)
+    || ((a.d==null?0:a.d)-(b.d==null?0:b.d))
+    || a.p.name.localeCompare(b.p.name));
+
+  const nBlocked = rows.filter(r=>r.blocked).length;
+  const nNoMs    = rows.filter(r=>!r.ms).length;
+  const nFlight  = rows.filter(r=>r.health==='grn').length;
+
+  document.getElementById('strip').innerHTML=[
+    ['In flight', nFlight, nFlight?'grn':'dim', 'future milestone'],
+    ['Blocked',   nBlocked, nBlocked?'red':'dim', 'blocker text set'],
+    ['No milestone', nNoMs, nNoMs?'amb':'dim', 'next date empty'],
+    ['Archived',  archived.length, 'dim', 'of '+all.length+' total']
+  ].map(([l,n,c,s])=>`<div class="st"><div class="n ${c}">${n}</div>
+      <div class="l">${esc(l)}</div><div class="l" style="letter-spacing:.02em;
+      text-transform:none;color:var(--faint)">${esc(s)}</div></div>`).join('');
+
+  /* the finding: does an execution phase exist at all? */
+  const phaseSet={}; all.forEach(p=>{const k=(p.phase||'').trim()||'(none)';phaseSet[k]=(phaseSet[k]||0)+1;});
+  const names=Object.keys(phaseSet).sort((a,b)=>phaseSet[b]-phaseSet[a]);
+  const hasActive=names.some(n=>ACTIVE.test(n));
+  document.getElementById('finding').innerHTML = hasActive ? '' :
+    `<div class="finding"><b>Finding</b><span>No <b>Active</b> phase exists anywhere on the
+      board — every project sits in ${esc(names.map(n=>n+' '+phaseSet[n]).join(' · '))}.
+      Nothing is formally in execution, so &ldquo;in flight&rdquo; below is inferred from a
+      future milestone date, not from a phase.</span></div>`;
+
+  const CAP=9;
+  const html = rows.slice(0,CAP).map(r=>{
+    const p=r.p, ph=(p.phase||'').trim();
+    const phCls = !ph?'nil':/research/i.test(ph)?'research':/planning/i.test(ph)?'planning':'';
+    const pri=(p.pri||'').trim();
+    const sub = r.blocked ? `<span class="blk">⛔ ${esc(p.blocker)}</span>`
+              : (p.status||'').trim() ? `<span>${esc(p.status)}</span>` : '';
+    const tag=p.url?'a':'div', at=p.url?`href="${esc(p.url)}" target="_blank"`:'';
+    return `<${tag} class="r" ${at}>
+      <span class="dot ${r.health}"></span>
+      <div class="nm"><b>${esc(p.name)}</b>${sub}</div>
+      <span class="ph ${phCls}">${esc(ph||'no phase')}</span>
+      <span class="pri ${/high/i.test(pri)?'high':pri?'':'nil'}">${esc(pri||'—')}</span>
+      <span class="ms ${r.msCls}">${esc(r.msTxt)}</span>
+    </${tag}>`;
+  }).join('');
+  const restCount = rows.length-CAP;
+  const restAmb = rows.slice(CAP).filter(r=>r.health==='amb').length;
+  document.getElementById('rows').innerHTML = html +
+    (restCount>0 ? `<div class="more">+ ${restCount} more non-archived · ${restAmb} of them
+       amber (no milestone set), ${restCount-restAmb} other</div>` : '');
+
+  document.getElementById('stamp').textContent=fmt(today);
+  document.getElementById('ftl').textContent=
+    'red = blocker or milestone past · amber = no milestone · green = milestone ahead';
+  document.getElementById('ftr').textContent=
+    'data ' + (day(T.generated)?fmt(day(T.generated)):'—') +
+    (hhmm(T.generated)?' '+hhmm(T.generated):'');
+}).catch(e=>{
+  document.getElementById('rows').innerHTML='<div class="none">data unavailable — '+e.message+'</div>';
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Contact Cadence</title>
+<style>
+  :root{
+    --bg:#191919; --panel:#202020; --line:#2f2f2f; --hair:#252525;
+    --ink:#e9e9e7; --dim:#9b9a97; --faint:#6f6e6b;
+    --blue:#5b93d3; --gold:#c9a227; --red:#e06c6c; --green:#5fa87a; --purple:#9a6dd7;
+  }
+  @media (prefers-color-scheme: light){
+    :root{ --bg:#fff; --panel:#f7f7f5; --line:#e6e5e1; --hair:#efeeec;
+           --ink:#37352f; --dim:#787774; --faint:#9b9a97; }
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--bg);color:var(--ink);padding:12px 14px;
+       font:13px/1.4 -apple-system,BlinkMacSystemFont,"Segoe UI",Inter,sans-serif;
+       -webkit-font-smoothing:antialiased}
+  .num,.n,.days,.dt{font-variant-numeric:tabular-nums}
+
+  .hd{font-size:10px;color:var(--faint);text-transform:uppercase;letter-spacing:.09em;
+      display:flex;justify-content:space-between;align-items:baseline;gap:8px;
+      padding-bottom:7px;border-bottom:1px solid var(--line)}
+  .hd .r{color:var(--dim);letter-spacing:.04em;font-variant-numeric:tabular-nums}
+
+  /* The scope caveat is load-bearing, not decoration: this widget only knows
+     the task database, so it says so above the fold, every time. */
+  .scope{margin-top:8px;padding:6px 8px;background:var(--panel);
+         border:1px solid var(--line);border-left:2px solid var(--gold);
+         border-radius:5px;font-size:10.5px;line-height:1.45;color:var(--dim)}
+  .scope b{color:var(--gold);font-weight:600}
+  .scope .win{color:var(--faint);font-variant-numeric:tabular-nums}
+
+  .grp{margin-top:9px}
+  .gt{font-size:9.5px;text-transform:uppercase;letter-spacing:.08em;color:var(--faint);
+      display:flex;align-items:baseline;gap:6px;margin-bottom:4px}
+  .gt .n{margin-left:auto;font-variant-numeric:tabular-nums}
+
+  .row{display:flex;align-items:center;gap:8px;padding:5px 0;
+       border-bottom:1px solid var(--hair);min-width:0}
+  .row:last-child{border-bottom:0}
+  .dot{width:6px;height:6px;border-radius:50%;flex:0 0 auto}
+  .d-g{background:var(--green)} .d-a{background:var(--gold)} .d-r{background:var(--red)}
+  .who{flex:1 1 auto;min-width:0}
+  .who .nm{font-size:12.5px;display:block;overflow:hidden;
+           text-overflow:ellipsis;white-space:nowrap}
+  .who .sub{font-size:10.5px;color:var(--faint);display:block;overflow:hidden;
+            text-overflow:ellipsis;white-space:nowrap;margin-top:1px;
+            font-variant-numeric:tabular-nums}
+  .gap{flex:0 0 auto;text-align:right;font-variant-numeric:tabular-nums;
+       font-size:11.5px;line-height:1.2}
+  .gap b{display:block;font-weight:600;font-size:13px}
+  .gap span{display:block;font-size:9.5px;color:var(--faint);
+            text-transform:uppercase;letter-spacing:.06em}
+  .g-g b{color:var(--green)} .g-a b{color:var(--gold)} .g-r b{color:var(--red)}
+  .g-n b{color:var(--faint)}
+
+  .nxt{font-size:11px;padding:1px 6px;border-radius:3px;white-space:nowrap;
+       background:rgba(91,147,211,.16);color:var(--blue);flex:0 0 auto;
+       font-variant-numeric:tabular-nums}
+
+  .ft{margin-top:9px;padding-top:7px;border-top:1px solid var(--line);
+      display:flex;gap:10px;flex-wrap:wrap;font-size:10px;color:var(--faint)}
+  .key{display:flex;align-items:center;gap:4px}
+  .msg{color:var(--faint);font-style:italic;font-size:12px;padding:16px 0}
+</style>
+</head>
+<body>
+<div class="hd"><span>Contact cadence</span><span class="r" id="hr"></span></div>
+<div class="scope" id="scope"></div>
+<div id="out"><div class="msg">loading…</div></div>
+
+<script>
+(function(){
+  var esc=function(s){return String(s==null?'':s).replace(/[<>&"]/g,function(c){
+    return {'<':'&lt;','>':'&gt;','&':'&amp;','"':'&quot;'}[c];});};
+
+  /* ---- date handling -------------------------------------------------
+     Every date arrives as an ISO-ish string. We pull YYYY-MM-DD by regex
+     and only ever build a Date from '<day>T12:00:00' so DST and the
+     UTC-parse rule can never shift a day. new Date(rawValue) is banned. */
+  function ymd(v){ var m=/^(\d{4})-(\d{2})-(\d{2})/.exec(String(v||'')); return m?m[0]:null; }
+  function dnum(d){ return Date.parse(d+'T12:00:00'); }
+  function diffDays(a,b){ return Math.round((dnum(b)-dnum(a))/86400000); }
+  function fmt(d){ // 07 Sep — no am/pm anywhere in this dashboard
+    var M=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+    return d.slice(8,10)+' '+M[+d.slice(5,7)-1];
+  }
+
+  /* Stakeholder meeting-type labels that name a real person. These are
+     schema values of the Notion Meeting Type field, not invented people.
+     If one has no row in the loaded window we say exactly that. */
+  var PERSON_MT=['Dr. Palladino (Draper)','Dr. Eric Evans (MIT)','MAJ S (SPACECOM)'];
+  // Rank/title-prefixed names inside task titles, e.g. "Meet with MAJ Gramlich".
+  var TITLE=/\b(?:Dr\.|Prof\.|MAJ|LTC|COL|CPT|SGT|Gen\.)\s+[A-Z][a-zA-Z\-']+(?:\s+[A-Z][a-zA-Z\-']+)?/g;
+
+  function collect(tasks,week){
+    var recs=[], push=function(a){ (a||[]).forEach(function(i){ if(i) recs.push(i); }); };
+    push(tasks.today_items); push(tasks.upcoming);
+    ((week&&week.days)||[]).forEach(function(d){ push(d.items); });
+
+    // De-duplicate: the same row appears in both tasks.json and week.json.
+    var uniq={}, out=[];
+    recs.forEach(function(i){
+      var k=(i.name||'')+'|'+(ymd(i.date)||'');
+      if(uniq[k]){ // merge so an attendees value in one copy is not lost
+        for(var f in i){ if(!uniq[k][f] && i[f]) uniq[k][f]=i[f]; }
+      } else { uniq[k]=JSON.parse(JSON.stringify(i)); out.push(uniq[k]); }
+    });
+    return out;
+  }
+
+  function render(tasks,week){
+    var recs=collect(tasks,week);
+    var today=ymd(tasks.today)||ymd(tasks.generated);
+    if(!today){ document.getElementById('out').innerHTML=
+      '<div class="msg">tasks.json has no usable today/generated date.</div>'; return; }
+
+    // Observed window = the real span of dated rows we can actually see.
+    var dates=[];
+    recs.forEach(function(i){ var d=ymd(i.date); if(d) dates.push(d); });
+    dates.sort();
+    var win=dates.length? fmt(dates[0])+' – '+fmt(dates[dates.length-1]) : 'no dated rows';
+
+    var people={};
+    function ent(name){
+      return people[name]||(people[name]={name:name,src:{},past:null,pastWhat:'',
+                                          next:null,nextWhat:'',hits:0});
+    }
+    function log(name,src,d,item){
+      var e=ent(name); e.src[src]=1; e.hits++;
+      if(!d) return;
+      if(d<=today){ if(!e.past||d>e.past){ e.past=d; e.pastWhat=item.name||''; } }
+      else { if(!e.next||d<e.next){ e.next=d; e.nextWhat=item.name||''; } }
+    }
+
+    recs.forEach(function(i){
+      var d=ymd(i.date);
+      var mt=String(i.meeting_type||'').trim();
+      if(mt && PERSON_MT.indexOf(mt)>=0) log(mt,'meeting type',d,i);
+      String(i.attendees||'').split(/[,;]| and /).forEach(function(a){
+        a=a.trim(); if(a && a.toLowerCase()!=='none') log(a,'attendees',d,i);
+      });
+      var m=String(i.name||'').match(TITLE);
+      if(m) m.forEach(function(x){ log(x.trim(),'task text',d,i); });
+    });
+
+    // Fold a bare "Dr. Eric Evans" into the fuller "Dr. Eric Evans (MIT)" label.
+    Object.keys(people).forEach(function(k){
+      PERSON_MT.forEach(function(full){
+        if(full!==k && full.indexOf(k)===0 && people[full]){
+          var a=people[k], b=people[full];
+          if(a.past && (!b.past||a.past>b.past)){ b.past=a.past; b.pastWhat=a.pastWhat; }
+          if(a.next && (!b.next||a.next<b.next)){ b.next=a.next; b.nextWhat=a.nextWhat; }
+          b.hits+=a.hits; for(var s in a.src) b.src[s]=1;
+          delete people[k];
+        }
+      });
+    });
+
+    // Schema stakeholders with zero rows still belong on the list: silence is
+    // the signal this widget exists to show.
+    PERSON_MT.forEach(function(p){ var e=ent(p); e.src['meeting type']=1; });
+
+    var rows=Object.keys(people).map(function(k){
+      var e=people[k];
+      e.days = e.past!==null ? diffDays(e.past,today) : null;
+      if(e.days!==null && e.days<=14) e.st='g';
+      else if(e.next) e.st='g';
+      else if(e.days!==null && e.days<=30) e.st='a';
+      else e.st='r';
+      return e;
+    });
+
+    // Most-overdue first: never-contacted at the top, then longest gap.
+    var R={r:0,a:1,g:2};
+    rows.sort(function(a,b){
+      if(R[a.st]!==R[b.st]) return R[a.st]-R[b.st];
+      var da=a.days===null?1e9:a.days, db=b.days===null?1e9:b.days;
+      if(da!==db) return db-da;
+      return a.name.localeCompare(b.name);
+    });
+
+    var nRed=0,nAmb=0,nGrn=0;
+    rows.forEach(function(e){ if(e.st==='r')nRed++; else if(e.st==='a')nAmb++; else nGrn++; });
+
+    document.getElementById('hr').textContent =
+      rows.length+' people · '+nRed+' cold · '+nAmb+' ageing · '+nGrn+' warm';
+
+    document.getElementById('scope').innerHTML =
+      '<b>Scope:</b> derived only from the Notion task database — meeting type, '+
+      'attendees and rank-prefixed names in task titles. It cannot see email, '+
+      'Slack, calls or hallway conversations, so “no contact recorded” means '+
+      '<i>absent from the data</i>, not that it did not happen. '+
+      '<span class="win">Window '+esc(win)+' · reference day '+esc(today)+'</span>';
+
+    if(!rows.length){
+      document.getElementById('out').innerHTML=
+        '<div class="msg">No named people found in the task data.</div>'; return;
+    }
+
+    var html='<div class="grp">';
+    rows.forEach(function(e){
+      var gap, gcl;
+      if(e.days===null){ gap='<b>—</b><span>no record</span>'; gcl='g-n'; }
+      else { gap='<b>'+e.days+'</b><span>'+(e.days===1?'day':'days')+' ago</span>';
+             gcl='g-'+e.st; }
+      var sub;
+      if(e.past) sub='last '+fmt(e.past)+' · '+esc(e.pastWhat);
+      else sub='not in window · source: '+Object.keys(e.src).join(', ');
+      var nx = e.next ? '<span class="nxt">next '+fmt(e.next)+'</span>' : '';
+      html+='<div class="row"><i class="dot d-'+e.st+'"></i>'+
+            '<span class="who"><span class="nm" title="'+esc(e.name)+'">'+esc(e.name)+'</span>'+
+            '<span class="sub" title="'+esc(sub)+'">'+sub+'</span></span>'+
+            nx+'<span class="gap '+gcl+'">'+gap+'</span></div>';
+    });
+    html+='</div>';
+
+    html+='<div class="ft">'+
+      '<span class="key"><i class="dot d-g"></i>≤14d or scheduled</span>'+
+      '<span class="key"><i class="dot d-a"></i>15–30d</span>'+
+      '<span class="key"><i class="dot d-r"></i>30d+ or never</span>'+
+      '<span>no people invented — every name is a literal string in the data</span>'+
+      '</div>';
+
+    document.getElementById('out').innerHTML=html;
+  }
+
+  Promise.all([
+    fetch('../data/tasks.json',{cache:'no-store'}),
+    fetch('../data/week.json',{cache:'no-store'})
+  ]).then(function(rs){
+    rs.forEach(function(r){ if(!r.ok) throw new Error('HTTP '+r.status); });
+    return Promise.all(rs.map(function(r){ return r.json(); }));
+  }).then(function(d){ render(d[0]||{}, d[1]||{}); })
+   .catch(function(e){
+     document.getElementById('out').innerHTML=
+       '<div class="msg">Could not load task data — '+esc(e.message)+'</div>';
+     document.getElementById('scope').textContent='data unavailable';
+   });
+})();
+</script>
+</body>
+</html>

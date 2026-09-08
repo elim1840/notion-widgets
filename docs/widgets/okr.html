@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Objectives &amp; Key Results</title>
+<style>
+  :root{
+    --bg:#191919; --panel:#202020; --line:#2f2f2f; --hair:#252525;
+    --ink:#e9e9e7; --dim:#9b9a97; --faint:#6f6e6b;
+    --blue:#5b93d3; --gold:#c9a227; --red:#e06c6c; --green:#5fa87a; --purple:#9a6dd7;
+  }
+  @media (prefers-color-scheme: light){
+    :root{ --bg:#fff; --panel:#f7f7f5; --line:#e6e5e1; --hair:#efeeec;
+           --ink:#37352f; --dim:#787774; --faint:#9b9a97; }
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--bg);color:var(--ink);padding:13px 15px 14px;
+       font:13px/1.4 -apple-system,BlinkMacSystemFont,"Segoe UI",Inter,sans-serif;
+       -webkit-font-smoothing:antialiased;font-variant-numeric:tabular-nums}
+  .hd{display:flex;justify-content:space-between;align-items:baseline;
+      font-size:10px;color:var(--faint);text-transform:uppercase;letter-spacing:.09em;
+      padding-bottom:9px;border-bottom:1px solid var(--line);margin-bottom:11px}
+  .hd b{font-weight:600;color:var(--dim)}
+
+  .cols{display:grid;grid-template-columns:repeat(2,1fr);gap:11px 22px}
+  @media (max-width:640px){ .cols{grid-template-columns:1fr} }
+
+  .obj{border-left:2px solid var(--line);padding-left:11px}
+  .obj.red{border-left-color:var(--red)}
+  .obj.amb{border-left-color:var(--gold)}
+  .obj.grn{border-left-color:var(--green)}
+  .obj.nul{border-left-color:var(--line)}
+  .ohd{display:flex;justify-content:space-between;align-items:baseline;gap:8px;
+       margin-bottom:7px}
+  .oname{font-size:12.5px;font-weight:600;letter-spacing:-.005em}
+  .oscore{font-size:15px;font-weight:600;letter-spacing:-.02em;white-space:nowrap}
+  .oscore.red{color:var(--red)} .oscore.amb{color:var(--gold)}
+  .oscore.grn{color:var(--green)} .oscore.nul{color:var(--faint);font-size:11px;font-weight:500}
+
+  .kr{padding:5px 0 6px;border-top:1px solid var(--hair)}
+  .krtop{display:flex;justify-content:space-between;align-items:baseline;gap:8px}
+  .krname{font-size:11.5px;color:var(--ink)}
+  .krval{font-size:11.5px;font-weight:600;white-space:nowrap}
+  .krval.red{color:var(--red)} .krval.amb{color:var(--gold)}
+  .krval.grn{color:var(--green)} .krval.nul{color:var(--faint);font-weight:500}
+  .bar{height:3px;background:var(--hair);border-radius:2px;margin:5px 0 4px;overflow:hidden}
+  .bar i{display:block;height:100%;border-radius:2px}
+  .bar.nul{background:repeating-linear-gradient(90deg,var(--hair) 0 4px,transparent 4px 8px);
+           height:3px}
+  .fx{font-size:9.5px;color:var(--faint);letter-spacing:.01em;
+      display:flex;justify-content:space-between;gap:8px}
+  .chip{font-size:11px;padding:1px 7px;border-radius:3px;font-weight:500;white-space:nowrap}
+  .chip.red{color:var(--red);background:rgba(224,108,108,.13)}
+  .chip.amb{color:var(--gold);background:rgba(201,162,39,.14)}
+  .chip.grn{color:var(--green);background:rgba(95,168,122,.14)}
+  .chip.nul{color:var(--faint);background:rgba(155,154,151,.12)}
+  .ft{margin-top:11px;padding-top:8px;border-top:1px solid var(--line);
+      font-size:10px;color:var(--faint);display:flex;justify-content:space-between}
+  .none{color:var(--faint);font-style:italic;padding:16px 0}
+</style>
+</head>
+<body>
+<div class="hd"><b>Objectives &amp; Key Results · Fall 2026</b><span id="stamp"></span></div>
+<div id="out" class="none">loading…</div>
+<div class="ft"><span id="ftl"></span><span id="ftr"></span></div>
+
+<script>
+const TERM_START="2026-09-09", THESIS_DUE="2027-01-15", FINISHED_CODE="24.134";
+const GRADED=["Homework","Exam","Project","Presentation","Quiz","Paper"];
+const MON=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+const esc=s=>(s||'').replace(/[<>&]/g,c=>({'<':'&lt;','>':'&gt;','&':'&amp;'}[c]));
+const day=v=>(String(v||'').match(/^(\d{4}-\d{2}-\d{2})/)||[])[1]||'';
+const hhmm=v=>(String(v||'').match(/T(\d{2}):(\d{2})/)||[]).slice(1,3).join('')||'';
+const diff=(a,b)=>Math.round((new Date(b+'T12:00:00')-new Date(a+'T12:00:00'))/864e5);
+const fmt=d=>{const p=d.split('-');return (+p[2])+' '+MON[+p[1]-1];};
+
+/* a KR is either scored (pct 0-100) or explicitly unscored (pct null = no signal) */
+function KR(name, formula, pct, note, invert){
+  let st='nul';
+  if(pct!=null){ st = pct>=70?'grn' : pct>=40?'amb' : 'red'; }
+  return {name, formula, pct, note, st};
+}
+function renderKR(k){
+  const v = k.pct==null ? 'no signal' : k.pct.toFixed(0)+'%';
+  const bar = k.pct==null
+    ? `<div class="bar nul"></div>`
+    : `<div class="bar"><i style="width:${Math.max(1.5,Math.min(100,k.pct)).toFixed(1)}%;
+        background:var(--${k.st==='grn'?'green':k.st==='amb'?'gold':'red'})"></i></div>`;
+  return `<div class="kr">
+    <div class="krtop"><span class="krname">${esc(k.name)}</span>
+      <span class="krval ${k.st}">${v}</span></div>
+    ${bar}
+    <div class="fx"><span>${esc(k.formula)}</span><span>${esc(k.note||'')}</span></div>
+  </div>`;
+}
+function renderObj(o){
+  const scored=o.krs.filter(k=>k.pct!=null);
+  let st='nul', score='no signal';
+  if(scored.length){
+    const avg=Math.round(scored.reduce((a,k)=>a+k.pct,0)/scored.length);
+    st = avg>=70?'grn' : avg>=40?'amb' : 'red';
+    score = avg+'%';
+  }
+  const chipTxt = st==='nul' ? 'no data'
+    : st==='grn' ? 'on track' : st==='amb' ? 'at risk' : 'off track';
+  return `<div class="obj ${st}">
+    <div class="ohd"><span class="oname">${esc(o.name)}</span>
+      <span class="oscore ${st}">${score} <span class="chip ${st}">${chipTxt}</span></span></div>
+    ${o.krs.map(renderKR).join('')}
+  </div>`;
+}
+
+Promise.all([
+  fetch('../data/tasks.json?t='+Date.now()).then(r=>r.json()),
+  fetch('../data/spokes.json?t='+Date.now()).then(r=>r.json()),
+  fetch('../data/week.json?t='+Date.now()).then(r=>r.json())
+]).then(([T,S,W])=>{
+  const today=day(T.today)||day(T.generated);
+  const c=T.counts||{}, hist=T.history||[];
+  const hDays=hist.length, hDone=hist.reduce((a,x)=>a+(+x.done||0),0);
+  const perWk = hDays ? (hDone/hDays)*7 : null;
+
+  const projects=(S.projects||[]);
+  const live = projects.filter(p=>(p.phase||'')!=='Archive');
+  const withNext = live.filter(p=>day(p.next));
+  const nextFuture = withNext.filter(p=>day(p.next)>=today);
+
+  const cls=(S.classes||[]).filter(x=>x.code!==FINISHED_CODE);
+  const graded=cls.filter(x=>GRADED.indexOf(x.type)>=0 && day(x.date));
+  const gradedOK=graded.filter(x=>day(x.date)>=today);
+  const soon=gradedOK.filter(x=>diff(today,day(x.date))<=14);
+
+  const left=diff(today,THESIS_DUE), span=diff(TERM_START,THESIS_DUE);
+  const gone=diff(TERM_START,today);
+  const runwayUsed = gone<=0 ? 0 : 100*gone/span;
+
+  const objs=[];
+
+  /* O1 — Backlog under control */
+  objs.push({name:'Backlog under control', krs:[
+    KR('Overdue share of open items',
+       'overdue / open, inverted',
+       c.open ? Math.max(0, 100 - 100*c.overdue/c.open) : null,
+       c.open ? `${c.overdue} overdue / ${c.open} open` : 'no counts'),
+    KR('Weekly throughput vs target 5/wk',
+       '(done in window ÷ days × 7) ÷ 5',
+       hDays ? Math.min(100, (perWk/5)*100) : null,
+       hDays ? `${hDone} closed in ${hDays} d` : 'no history'),
+    KR('Lifetime completion rate',
+       'done / total ever created',
+       c.total ? 100*c.done/c.total : null,
+       c.total ? `${c.done} / ${c.total}` : 'no counts')
+  ]});
+
+  /* O2 — Thesis on track */
+  const thesisKRs=[
+    KR('Runway remaining to 15 Jan 2027',
+       'days left ÷ full 128-day runway',
+       Math.max(0, Math.min(100, 100*left/span)),
+       `${left} d left of ${span}`),
+    KR('Research projects with a live next date',
+       'non-archived w/ future next ÷ non-archived',
+       live.length ? 100*nextFuture.length/live.length : null,
+       `${nextFuture.length} / ${live.length} live projects`)
+  ];
+  /* thesis-writing progress is not in any feed — say so, do not fake it */
+  thesisKRs.push(KR('Thesis drafting progress',
+       'no chapter/word-count field in any feed', null, 'not tracked'));
+  objs.push({name:'Thesis on track', krs:thesisKRs});
+
+  /* O3 — Coursework current */
+  objs.push({name:'Coursework current', krs:[
+    KR('Graded items not yet past due',
+       'graded dated ≥ today ÷ all dated graded',
+       graded.length ? 100*gradedOK.length/graded.length : null,
+       `${gradedOK.length} / ${graded.length} · ${FINISHED_CODE} excluded`),
+    KR('14-day crunch headroom (cap 5)',
+       '1 − (graded due ≤14 d ÷ 5)',
+       Math.max(0, Math.min(100, 100*(1 - soon.length/5))),
+       `${soon.length} due within 14 d`),
+    KR('Course rows carrying a status',
+       'rows with non-empty status ÷ rows',
+       cls.length ? 100*cls.filter(x=>x.status).length/cls.length : null,
+       `${cls.filter(x=>x.status).length} / ${cls.length} rows`)
+  ]});
+
+  /* O4 — Research pipeline moving */
+  const phases={}; projects.forEach(p=>{const k=p.phase||'(none)'; phases[k]=(phases[k]||0)+1;});
+  const hasActive = Object.keys(phases).some(k=>/active|in progress|doing/i.test(k));
+  const phased = live.filter(p=>p.phase);
+  const prioritised = live.filter(p=>p.pri);
+  objs.push({name:'Research pipeline moving', krs:[
+    KR('Live projects in an execution phase',
+       'phase matching Active/In progress ÷ live',
+       hasActive ? null : 0,
+       hasActive ? '' : 'no Active phase exists in the board'),
+    KR('Live projects with a phase set',
+       'non-archived with phase ÷ non-archived',
+       live.length ? 100*phased.length/live.length : null,
+       `${phased.length} / ${live.length}`),
+    KR('Live projects with a priority set',
+       'non-archived with priority ÷ non-archived',
+       live.length ? 100*prioritised.length/live.length : null,
+       `${prioritised.length} / ${live.length}`)
+  ]});
+
+  document.getElementById('out').className='cols';
+  document.getElementById('out').innerHTML = objs.map(renderObj).join('');
+  document.getElementById('stamp').textContent = fmt(today);
+  document.getElementById('ftl').textContent =
+    'every KR computed live from tasks.json · spokes.json — formula shown under each bar';
+  document.getElementById('ftr').textContent =
+    'data ' + (day(T.generated)?fmt(day(T.generated)):'—') +
+    (hhmm(T.generated)?' '+hhmm(T.generated):'');
+}).catch(e=>{
+  document.getElementById('out').textContent='data unavailable — '+e.message;
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Month</title>
+<style>
+  :root{
+    --bg:#191919; --panel:#202020; --line:#2f2f2f; --hair:#252525;
+    --ink:#e9e9e7; --dim:#9b9a97; --faint:#6f6e6b;
+    --blue:#5b93d3; --gold:#c9a227; --red:#e06c6c; --green:#5fa87a; --purple:#9a6dd7;
+  }
+  @media (prefers-color-scheme: light){
+    :root{ --bg:#fff; --panel:#f7f7f5; --line:#e6e5e1; --hair:#efeeec;
+           --ink:#37352f; --dim:#787774; --faint:#9b9a97; }
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--bg);color:var(--ink);padding:10px 12px 11px;
+       font:13px/1.4 -apple-system,BlinkMacSystemFont,"Segoe UI",Inter,sans-serif;
+       -webkit-font-smoothing:antialiased;font-variant-numeric:tabular-nums}
+  .hd{display:flex;align-items:center;justify-content:space-between;gap:10px;
+      padding-bottom:6px;margin-bottom:7px;border-bottom:1px solid var(--line)}
+  .ttl{font-size:11.5px;letter-spacing:.02em;color:var(--ink);font-weight:600;
+       font-variant-numeric:tabular-nums}
+  .ttl i{font-style:normal;color:var(--faint);font-weight:400;margin-left:7px;font-size:10px}
+  .nav{display:flex;align-items:center;gap:4px}
+  .nav button{background:transparent;border:1px solid var(--line);color:var(--dim);
+      font:inherit;font-size:11px;line-height:1;padding:4px 8px;border-radius:3px;
+      cursor:pointer;-webkit-appearance:none}
+  .nav button:hover{border-color:var(--faint);color:var(--ink)}
+  .nav button.now{font-size:9px;text-transform:uppercase;letter-spacing:.07em;padding:5px 7px}
+  .dow{display:grid;grid-template-columns:repeat(7,1fr);gap:3px;margin-bottom:3px}
+  .dow span{font-size:8.5px;color:var(--faint);text-transform:uppercase;
+            letter-spacing:.08em;text-align:center;padding-bottom:1px}
+  .grid{display:grid;grid-template-columns:repeat(7,1fr);gap:3px}
+  .cell{position:relative;min-height:52px;border:1px solid var(--hair);border-radius:3px;
+        background:var(--panel);padding:4px 5px 5px;display:flex;flex-direction:column}
+  .cell.out{background:transparent;border-color:transparent}
+  .cell.out .dn{color:var(--faint);opacity:.45}
+  .cell.wknd{background:transparent}
+  .cell.today{border-color:var(--blue);box-shadow:inset 0 0 0 1px var(--blue)}
+  .dn{font-size:10.5px;color:var(--dim);line-height:1;font-variant-numeric:tabular-nums}
+  .cell.today .dn{color:var(--blue);font-weight:600}
+  .dots{display:flex;flex-wrap:wrap;gap:2.5px;margin-top:5px;align-content:flex-start}
+  .dots i{width:5px;height:5px;border-radius:50%;display:block;flex:0 0 auto}
+  /* graded coursework: larger rotated square + halo so it separates from a
+     routine-lecture dot at 5px without needing a second colour channel */
+  .dots i.grade{width:7px;height:7px;border-radius:1px;transform:rotate(45deg);
+                margin:1px 2px;box-shadow:0 0 0 1px var(--bg)}
+  .more{font-size:8px;color:var(--faint);margin-top:auto;padding-top:2px;
+        font-variant-numeric:tabular-nums}
+  .cnt{position:absolute;top:3px;right:4px;font-size:9px;color:var(--faint);
+       font-variant-numeric:tabular-nums}
+  .lgd{display:flex;gap:11px;flex-wrap:wrap;font-size:9px;color:var(--faint);
+       margin-top:8px;padding-top:7px;border-top:1px solid var(--hair);align-items:center}
+  .lgd span{display:flex;align-items:center;gap:4px}
+  .lgd i{width:6px;height:6px;border-radius:50%;display:block}
+  .lgd i.grade{width:7px;height:7px;border-radius:1px;transform:rotate(45deg);background:var(--gold)}
+  .lgd i.ring{width:8px;height:8px;border-radius:2px;background:transparent;
+              border:1px solid var(--blue)}
+  .none{color:var(--faint);font-style:italic;padding:16px 0;font-size:12px}
+</style>
+</head>
+<body>
+<div class="hd">
+  <span class="ttl" id="ttl">—</span>
+  <span class="nav">
+    <button id="prev" type="button" aria-label="previous month">‹</button>
+    <button id="now" class="now" type="button">today</button>
+    <button id="next" type="button" aria-label="next month">›</button>
+  </span>
+</div>
+<div class="dow"><span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span><span>Sun</span></div>
+<div class="grid" id="grid"><div class="none">loading…</div></div>
+<div class="lgd" id="lgd"></div>
+
+<script>
+const MON=['January','February','March','April','May','June','July','August','September','October','November','December'];
+const ISO=/(\d{4}-\d{2}-\d{2})/;
+const TIME=/T(\d{2}):(\d{2})/;
+// date-only maths: append T12:00:00 so no timezone can slide the day
+const dayOf = v => { const m=ISO.exec(String(v==null?'':v)); return m?m[1]:null; };
+const D = iso => new Date(iso+'T12:00:00');
+const hhmm = v => { const m=TIME.exec(String(v==null?'':v)); return m?m[1]+m[2]:null; };
+const esc = s => String(s==null?'':s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const key = (y,m,d) => y+'-'+String(m+1).padStart(2,'0')+'-'+String(d).padStart(2,'0');
+
+// category → colour, per the dashboard palette
+const CAT={class:'var(--gold)',research:'var(--green)',admin:'var(--purple)',
+           military:'var(--red)',other:'var(--blue)'};
+const GRADED=/exam|homework|quiz|presentation|project|final|midterm|pset|problem set/i;
+const CLASSCODE=/^\d{1,2}[.A-Z]?\S*\.\S+|^(IDS|STS|ESD|SP|CMS)\./i;
+
+function categorise(it){
+  if(it.src==='class' || it.__class) return 'class';
+  const hay = [it.kind,it.meeting_type,it.type].filter(Boolean).join(' ').toLowerCase();
+  if(/research|thesis|draper|serg|lincoln/.test(hay)) return 'research';
+  if(/admin|logistic|errand/.test(hay))               return 'admin';
+  if(/milit|army|rotc|guard|drill/.test(hay))         return 'military';
+  if(/class|lecture|seminar|recitation|course/.test(hay)) return 'class';
+  if(CLASSCODE.test(String(it.kind||''))) return 'class';
+  return 'other';
+}
+
+let ITEMS={};           // iso -> [{name,cat,graded,time}]
+let TODAY=null;
+let cur={y:0,m:0};
+
+Promise.all([
+  fetch('../data/week.json?t='+Date.now()).then(r=>r.json()).catch(()=>null),
+  fetch('../data/spokes.json?t='+Date.now()).then(r=>r.json()).catch(()=>null),
+  fetch('../data/tasks.json?t='+Date.now()).then(r=>r.json()).catch(()=>null)
+]).then(([W,S,T])=>{
+  TODAY = dayOf(T&&T.today) || dayOf(W&&W.today) || dayOf(new Date().toISOString());
+
+  const seen=new Set();
+  const add = (it, cat, graded) => {
+    const d = dayOf(it.date) || dayOf(it.due);
+    if(!d) return;
+    const k = (it.url ? it.url : (it.name||'')) + '|' + d;
+    if(seen.has(k)) return;
+    seen.add(k);
+    (ITEMS[d] = ITEMS[d]||[]).push({
+      name: it.name||'(untitled)', cat, graded, time: hhmm(it.date)
+    });
+  };
+
+  // 1. week.json events
+  if(W && Array.isArray(W.days)) W.days.forEach(dd=>(dd.items||[]).forEach(it=>{
+    add(it, categorise(it), it.src==='class' && GRADED.test(String(it.type||'')));
+  }));
+  // 2. spokes.json class rows — graded coursework flagged off `type`
+  if(S && Array.isArray(S.classes)) S.classes.forEach(c=>{
+    add(c, 'class', GRADED.test(String(c.type||'')));
+  });
+  // 3. tasks.json upcoming + today
+  const tl = [].concat(Array.isArray(T&&T.today_items)?T.today_items:[],
+                       Array.isArray(T&&T.upcoming)?T.upcoming:[]);
+  tl.forEach(it=>add(it, categorise(it), false));
+
+  const t = TODAY ? D(TODAY) : new Date();
+  cur = {y:t.getFullYear(), m:t.getMonth()};
+  render();
+
+  document.getElementById('prev').onclick=()=>{ cur.m--; if(cur.m<0){cur.m=11;cur.y--;} render(); };
+  document.getElementById('next').onclick=()=>{ cur.m++; if(cur.m>11){cur.m=0;cur.y++;} render(); };
+  document.getElementById('now').onclick=()=>{ const d=D(TODAY); cur={y:d.getFullYear(),m:d.getMonth()}; render(); };
+
+  document.getElementById('lgd').innerHTML =
+    ['class','research','admin','military','other']
+      .map(c=>`<span><i style="background:${CAT[c]}"></i>${c}</span>`).join('') +
+    `<span><i class="grade"></i>graded work</span><span><i class="ring"></i>today</span>`;
+}).catch(e=>{
+  document.getElementById('grid').innerHTML =
+    '<div class="none">data unavailable — '+esc(e&&e.message||e)+'</div>';
+});
+
+function render(){
+  const {y,m}=cur;
+  // Monday-first offset: JS getDay() 0=Sun, we want Mon=0
+  const first = new Date(y, m, 1, 12, 0, 0);
+  const lead  = (first.getDay()+6)%7;
+  const dim   = new Date(y, m+1, 0, 12, 0, 0).getDate();
+  const pdim  = new Date(y, m, 0, 12, 0, 0).getDate();
+  const cells = Math.ceil((lead+dim)/7)*7;          // 28/35/42 — no fake padding weeks
+
+  let monthCount=0, gradedCount=0;
+  let h='';
+  for(let i=0;i<cells;i++){
+    const dnum = i-lead+1;
+    const inMonth = dnum>=1 && dnum<=dim;
+    let iso, label;
+    if(inMonth){ iso=key(y,m,dnum); label=dnum; }
+    else if(dnum<1){ const pm=new Date(y,m-1,1,12,0,0);
+      iso=key(pm.getFullYear(),pm.getMonth(),pdim+dnum); label=pdim+dnum; }
+    else { const nm=new Date(y,m+1,1,12,0,0);
+      iso=key(nm.getFullYear(),nm.getMonth(),dnum-dim); label=dnum-dim; }
+
+    const list = ITEMS[iso]||[];
+    const isToday = iso===TODAY;
+    const dow = (i%7);
+    const cls = ['cell'];
+    if(!inMonth) cls.push('out');
+    if(dow>=5)   cls.push('wknd');
+    if(isToday)  cls.push('today');
+
+    if(inMonth){ monthCount += list.length; gradedCount += list.filter(x=>x.graded).length; }
+
+    const shown = list.slice(0,8);
+    const dots = shown.map(x=>
+        `<i class="${x.graded?'grade':''}" style="background:${CAT[x.cat]||CAT.other}"></i>`).join('');
+    const more = list.length>8 ? `<span class="more">+${list.length-8}</span>` : '';
+    const cnt  = list.length ? `<span class="cnt">${list.length}</span>` : '';
+    const tip  = list.length
+      ? esc(list.slice(0,10).map(x=>(x.time?x.time+'  ':'')+x.name).join('\n'))
+      : '';
+
+    h += `<div class="${cls.join(' ')}"${tip?` title="${tip}"`:''}>`
+       + `<span class="dn">${String(label).padStart(2,'0')}</span>${cnt}`
+       + (dots?`<span class="dots">${dots}</span>`:'')
+       + more + `</div>`;
+  }
+  document.getElementById('grid').innerHTML=h;
+  document.getElementById('ttl').innerHTML =
+    esc(MON[m])+' '+y +
+    `<i>${monthCount} item${monthCount===1?'':'s'}${gradedCount?' · '+gradedCount+' graded':''}</i>`;
+}
+</script>
+</body>
+</html>

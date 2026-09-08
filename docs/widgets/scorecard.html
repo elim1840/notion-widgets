@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Executive Scorecard</title>
+<style>
+  :root{
+    --bg:#191919; --panel:#202020; --line:#2f2f2f; --hair:#252525;
+    --ink:#e9e9e7; --dim:#9b9a97; --faint:#6f6e6b;
+    --blue:#5b93d3; --gold:#c9a227; --red:#e06c6c; --green:#5fa87a; --purple:#9a6dd7;
+  }
+  @media (prefers-color-scheme: light){
+    :root{ --bg:#fff; --panel:#f7f7f5; --line:#e6e5e1; --hair:#efeeec;
+           --ink:#37352f; --dim:#787774; --faint:#9b9a97; }
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--bg);color:var(--ink);padding:13px 15px 15px;
+       font:13px/1.4 -apple-system,BlinkMacSystemFont,"Segoe UI",Inter,sans-serif;
+       -webkit-font-smoothing:antialiased}
+  .hd{display:flex;justify-content:space-between;align-items:baseline;
+      font-size:10px;color:var(--faint);text-transform:uppercase;letter-spacing:.09em}
+  .hd b{font-weight:600;color:var(--dim)}
+  #head{margin:9px 0 11px;padding-bottom:10px;border-bottom:1px solid var(--line);
+        font-size:14.5px;line-height:1.35;font-weight:500;letter-spacing:-.005em}
+  #head .k{font-variant-numeric:tabular-nums;font-weight:600}
+  #head .red{color:var(--red)} #head .green{color:var(--green)} #head .gold{color:var(--gold)}
+
+  .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);
+        border:1px solid var(--line);border-radius:4px;overflow:hidden}
+  @media (max-width:720px){ .grid{grid-template-columns:repeat(2,1fr)} }
+  .tile{background:var(--bg);padding:11px 12px 10px;position:relative;min-height:96px;
+        display:flex;flex-direction:column;justify-content:space-between}
+  .tile::before{content:"";position:absolute;left:0;top:0;bottom:0;width:2px;background:var(--faint)}
+  .tile.red::before{background:var(--red)}
+  .tile.amb::before{background:var(--gold)}
+  .tile.grn::before{background:var(--green)}
+  .tile.nul::before{background:var(--line)}
+  .lab{font-size:9.5px;color:var(--faint);text-transform:uppercase;letter-spacing:.08em;
+       display:flex;justify-content:space-between;align-items:center;gap:6px}
+  .chip{font-size:11px;padding:1px 7px;border-radius:3px;font-weight:500;
+        letter-spacing:0;text-transform:none;white-space:nowrap;
+        font-variant-numeric:tabular-nums}
+  .chip.red{color:var(--red);background:rgba(224,108,108,.13)}
+  .chip.amb{color:var(--gold);background:rgba(201,162,39,.14)}
+  .chip.grn{color:var(--green);background:rgba(95,168,122,.14)}
+  .chip.nul{color:var(--faint);background:rgba(155,154,151,.12)}
+  .val{font-size:30px;font-weight:600;letter-spacing:-.035em;line-height:1;
+       font-variant-numeric:tabular-nums;margin:9px 0 3px}
+  .val.red{color:var(--red)} .val.amb{color:var(--gold)} .val.grn{color:var(--green)}
+  .val.nul{color:var(--faint);font-size:19px;font-weight:500;letter-spacing:0}
+  .val u{font-size:13px;font-weight:500;text-decoration:none;color:var(--dim);
+         margin-left:3px;letter-spacing:0}
+  .sub{font-size:10.5px;color:var(--dim);line-height:1.35;font-variant-numeric:tabular-nums}
+  .bar{height:2px;background:var(--hair);border-radius:2px;margin-top:6px;overflow:hidden}
+  .bar i{display:block;height:100%;border-radius:2px}
+  .ft{margin-top:9px;font-size:10px;color:var(--faint);display:flex;
+      justify-content:space-between;font-variant-numeric:tabular-nums}
+  .none{color:var(--faint);font-style:italic;padding:16px 0}
+</style>
+</head>
+<body>
+<div class="hd"><b>Executive Scorecard</b><span id="stamp"></span></div>
+<div id="head" class="none">loading…</div>
+<div id="grid" class="grid"></div>
+<div class="ft"><span id="ftl"></span><span id="ftr"></span></div>
+
+<script>
+/* ---- fixed calendar anchors (registrar / thesis) ---- */
+const TERM_START = "2026-09-09";
+const THESIS_DUE = "2027-01-15";
+const FINISHED_CODE = "24.134";   // completed class — excluded from load
+const GRADED = ["Homework","Exam","Project","Presentation","Quiz","Paper"];
+
+const MON=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+const esc=s=>(s||'').replace(/[<>&]/g,c=>({'<':'&lt;','>':'&gt;','&':'&amp;'}[c]));
+/* date-only maths: regex the ISO day out, never new Date() on a raw value */
+const day = v => (String(v||'').match(/^(\d{4}-\d{2}-\d{2})/)||[])[1] || '';
+const hhmm= v => (String(v||'').match(/T(\d{2}):(\d{2})/)||[]).slice(1,3).join('') || '';
+function diff(a,b){ return Math.round((new Date(b+'T12:00:00')-new Date(a+'T12:00:00'))/864e5); }
+function fmt(d){ const p=d.split('-'); return (+p[2])+' '+MON[+p[1]-1]; }
+function mins(v){ const h=hhmm(v); return h? (+h.slice(0,2))*60 + (+h.slice(2)) : null; }
+
+function tile(o){
+  const s=o.state; // 'red'|'amb'|'grn'|'nul'
+  const bar = o.pct==null ? '' :
+    `<div class="bar"><i style="width:${Math.max(1.5,Math.min(100,o.pct)).toFixed(1)}%;
+      background:var(--${s==='red'?'red':s==='amb'?'gold':s==='grn'?'green':'faint'})"></i></div>`;
+  const v = s==='nul' ? `<div class="val nul">${esc(o.val)}</div>`
+        : `<div class="val ${s}">${o.val}${o.unit?`<u>${esc(o.unit)}</u>`:''}</div>`;
+  return `<div class="tile ${s}">
+    <div class="lab"><span>${esc(o.lab)}</span><span class="chip ${s}">${esc(o.chip)}</span></div>
+    <div>${v}<div class="sub">${o.sub}</div>${bar}</div>
+  </div>`;
+}
+
+Promise.all([
+  fetch('../data/tasks.json?t='+Date.now()).then(r=>r.json()),
+  fetch('../data/spokes.json?t='+Date.now()).then(r=>r.json()),
+  fetch('../data/week.json?t='+Date.now()).then(r=>r.json())
+]).then(([T,S,W])=>{
+  const today = day(T.today) || day(T.generated);
+  const c = T.counts||{};
+  const hist = T.history||[];
+  const tiles=[];
+
+  /* 1 — THROUGHPUT: items closed per week over the history window */
+  const hDays = hist.length;
+  const hDone = hist.reduce((a,x)=>a+(+x.done||0),0);
+  const perWk = hDays ? (hDone/hDays)*7 : null;
+  if(hDays===0){
+    tiles.push({lab:'Throughput', state:'nul', val:'no history', chip:'no signal',
+      sub:'tasks.json carried no history window'});
+  } else {
+    const st = perWk===0 ? 'red' : perWk<1 ? 'amb' : 'grn';
+    tiles.push({lab:'Throughput', state:st,
+      val:(perWk%1?perWk.toFixed(1):perWk.toFixed(0)), unit:'/wk',
+      chip: perWk===0?'stalled':'≥1/wk',
+      sub:`${hDone} closed in last ${hDays} days · target ≥ 1/wk`,
+      pct: Math.min(100, perWk*100)});
+  }
+
+  /* 2 — BACKLOG HEALTH: overdue as % of open */
+  if(c.open){
+    const p = 100*c.overdue/c.open;
+    const st = p>=40?'red':p>=15?'amb':'grn';
+    tiles.push({lab:'Backlog health', state:st, val:p.toFixed(0), unit:'% overdue',
+      chip:`${c.overdue}/${c.open}`,
+      sub:`${c.overdue} overdue of ${c.open} open · green &lt; 15%, red ≥ 40%`,
+      pct:p});
+  }
+
+  /* 3 — THESIS RUNWAY */
+  const left = diff(today, THESIS_DUE);
+  const span = diff(TERM_START, THESIS_DUE);
+  const gone = diff(TERM_START, today);            // negative before term start
+  const used = gone<=0 ? 0 : 100*gone/span;
+  const st3 = left<=30?'red':left<=60?'amb':'grn';
+  tiles.push({lab:'Thesis runway', state:st3, val:left, unit:'days',
+    chip: fmt(THESIS_DUE),
+    sub: gone<0 ? `term starts in ${-gone} d · 0% of the ${span}-day runway used`
+                : `${used.toFixed(0)}% of the ${span}-day runway used`,
+    pct: used});
+
+  /* 4 — COURSEWORK LOAD: graded items still ahead, finished class excluded */
+  const cls = (S.classes||[]).filter(x=>x.code!==FINISHED_CODE);
+  const gradedAll = cls.filter(x=>GRADED.indexOf(x.type)>=0 && day(x.date));
+  const ahead = gradedAll.filter(x=>day(x.date)>=today);
+  const soon  = ahead.filter(x=>diff(today,day(x.date))<=14);
+  if(!gradedAll.length){
+    tiles.push({lab:'Coursework load', state:'nul', val:'no graded rows', chip:'no signal',
+      sub:'no dated graded items outside '+FINISHED_CODE});
+  } else {
+    const st = soon.length>=5?'red':soon.length>=3?'amb':'grn';
+    tiles.push({lab:'Coursework load', state:st, val:ahead.length, unit:'graded ahead',
+      chip:`${soon.length} in 14 d`,
+      sub:`${ahead.length} of ${gradedAll.length} dated graded items still ahead · ${FINISHED_CODE} excluded (finished)`,
+      pct: 100*ahead.length/gradedAll.length});
+  }
+
+  /* 5 — COMMITMENT DENSITY: this week's events + scheduled hours */
+  const evs = (W.days||[]).flatMap(d=>d.items||[]);
+  const timed = evs.filter(e=>mins(e.date)!=null && mins(e.end)!=null && mins(e.end)>mins(e.date));
+  const hrs = timed.reduce((a,e)=>a+(mins(e.end)-mins(e.date))/60,0);
+  const st5 = hrs>=35?'red':hrs>=20?'amb':'grn';
+  tiles.push({lab:'Commitment density', state:st5, val:hrs.toFixed(1), unit:'h booked',
+    chip:`${evs.length} events`,
+    sub:`${timed.length} timed of ${evs.length} across ${(W.days||[]).length} days · ${evs.length-timed.length} untimed`,
+    pct: Math.min(100, hrs/40*100)});
+
+  /* 6 — LIFETIME CLOSE RATE */
+  if(c.total){
+    const p = 100*c.done/c.total;
+    const st = p<10?'red':p<40?'amb':'grn';
+    tiles.push({lab:'Close rate (all time)', state:st, val:p.toFixed(0), unit:'%',
+      chip:`${c.done}/${c.total}`,
+      sub:`${c.done} done of ${c.total} items ever created`, pct:p});
+  }
+
+  document.getElementById('grid').innerHTML = tiles.map(tile).join('');
+
+  /* ---- headline: computed, worst true fact first ---- */
+  const ovp = c.open ? Math.round(100*c.overdue/c.open) : null;
+  let hl;
+  if(hDays && hDone===0 && ovp!=null){
+    hl = `Nothing has closed in <span class="k red">${hDays}</span> days while
+          <span class="k red">${c.overdue}</span> of <span class="k">${c.open}</span>
+          open items (<span class="k red">${ovp}%</span>) are past due —
+          <span class="k">${left}</span> days to thesis.`;
+  } else if(ovp!=null && ovp>=40){
+    hl = `<span class="k red">${ovp}%</span> of open items are overdue
+          (<span class="k">${c.overdue}</span>/<span class="k">${c.open}</span>);
+          throughput <span class="k">${perWk.toFixed(1)}</span>/wk over ${hDays} days.`;
+  } else {
+    hl = `<span class="k green">${c.done}</span> closed of
+          <span class="k">${c.total}</span>; <span class="k">${left}</span> days to thesis.`;
+  }
+  document.getElementById('head').className=''; 
+  document.getElementById('head').innerHTML = hl;
+
+  document.getElementById('stamp').textContent = fmt(today);
+  document.getElementById('ftl').textContent =
+    'thresholds computed from tasks.json · spokes.json · week.json';
+  document.getElementById('ftr').textContent =
+    'data ' + (day(T.generated)?fmt(day(T.generated)):'—') +
+    (hhmm(T.generated)?' '+hhmm(T.generated):'');
+}).catch(e=>{
+  document.getElementById('head').textContent = 'data unavailable — '+e.message;
+});
+</script>
+</body>
+</html>

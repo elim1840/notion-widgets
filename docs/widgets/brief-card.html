@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Daily Brief</title>
+<style>
+  :root{
+    --bg:#191919; --panel:#202020; --line:#2f2f2f; --hair:#252525;
+    --ink:#e9e9e7; --dim:#9b9a97; --faint:#6f6e6b;
+    --blue:#5b93d3; --gold:#c9a227; --red:#e06c6c; --green:#5fa87a; --purple:#9a6dd7;
+  }
+  @media (prefers-color-scheme: light){
+    :root{ --bg:#fff; --panel:#f7f7f5; --line:#e6e5e1; --hair:#efeeec;
+           --ink:#37352f; --dim:#787774; --faint:#9b9a97; }
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--bg);color:var(--ink);padding:12px 14px;
+       font:13px/1.4 -apple-system,BlinkMacSystemFont,"Segoe UI",Inter,sans-serif;
+       -webkit-font-smoothing:antialiased}
+
+  .top{display:flex;align-items:flex-start;justify-content:space-between;gap:10px;
+       padding-bottom:8px;border-bottom:1px solid var(--line)}
+  .date .d{font-size:16px;font-weight:600;letter-spacing:-.01em;
+           font-variant-numeric:tabular-nums;line-height:1.15}
+  .date .k{font-size:9.5px;text-transform:uppercase;letter-spacing:.09em;
+           color:var(--faint);margin-top:2px}
+  /* 24h clock. No am/pm, no seconds squeezed smaller — four zero-padded digits. */
+  .clk{text-align:right;line-height:1}
+  .clk .t{font-size:28px;font-weight:600;font-variant-numeric:tabular-nums;
+          letter-spacing:-.02em;display:block}
+  .clk .s{font-size:9.5px;color:var(--faint);font-variant-numeric:tabular-nums;
+          letter-spacing:.08em;display:block;margin-top:3px}
+
+  .strip{display:flex;gap:8px;margin-top:9px}
+  .cell{flex:1 1 0;background:var(--panel);border:1px solid var(--line);
+        border-radius:6px;padding:6px 8px;min-width:0}
+  .cell .k{font-size:9px;text-transform:uppercase;letter-spacing:.07em;color:var(--faint);
+           white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .cell .v{font-size:19px;font-weight:600;font-variant-numeric:tabular-nums;
+           line-height:1.15;margin-top:1px}
+  .v.ok{color:var(--green)} .v.warn{color:var(--gold)} .v.bad{color:var(--red)}
+
+  .st{font-size:9.5px;text-transform:uppercase;letter-spacing:.08em;color:var(--faint);
+      display:flex;align-items:baseline;gap:6px;margin:10px 0 4px}
+  .st .n{margin-left:auto;color:var(--dim);font-variant-numeric:tabular-nums}
+
+  .row{display:flex;gap:8px;align-items:baseline;padding:5px 0;
+       border-bottom:1px solid var(--hair);min-width:0}
+  .row:last-child{border-bottom:0}
+  .when{flex:0 0 auto;width:74px;font-variant-numeric:tabular-nums;font-size:11.5px;
+        color:var(--dim);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .when b{color:var(--ink);font-weight:600}
+  .body{flex:1 1 auto;min-width:0}
+  .body .nm{font-size:12.5px;display:block;overflow:hidden;
+            text-overflow:ellipsis;white-space:nowrap}
+  .body .tag{font-size:10px;color:var(--faint);margin-top:1px;display:block;
+             overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+  .in{flex:0 0 auto;font-size:10.5px;font-variant-numeric:tabular-nums;color:var(--faint)}
+  .in.now{color:var(--gold)} .in.late{color:var(--red)}
+  a{color:inherit;text-decoration:none}
+  a.nm:hover{text-decoration:underline}
+
+  /* The one outbound action on the card. */
+  .brief{display:flex;align-items:center;gap:9px;margin-top:10px;padding:8px 10px;
+         background:var(--panel);border:1px solid var(--line);
+         border-left:2px solid var(--blue);border-radius:7px;color:inherit}
+  .brief:hover{border-color:var(--blue)}
+  .brief .bt{flex:1 1 auto;min-width:0}
+  .brief .bt b{display:block;font-size:12.5px;font-weight:600}
+  .brief .bt span{display:block;font-size:10.5px;color:var(--faint);margin-top:1px}
+  .brief svg{flex:0 0 auto;display:block}
+
+  .msg{color:var(--faint);font-style:italic;font-size:12px;padding:12px 0}
+  .foot{margin-top:8px;padding-top:7px;border-top:1px solid var(--line);
+        font-size:10px;color:var(--faint);font-variant-numeric:tabular-nums}
+</style>
+</head>
+<body>
+<div class="top">
+  <div class="date"><div class="d" id="dt">—</div><div class="k" id="dk">daily brief</div></div>
+  <div class="clk"><span class="t" id="ct">--:--</span><span class="s" id="cs">--</span></div>
+</div>
+<div id="out"><div class="msg">loading…</div></div>
+
+<script>
+(function(){
+  var esc=function(s){return String(s==null?'':s).replace(/[<>&"]/g,function(c){
+    return {'<':'&lt;','>':'&gt;','&':'&amp;','"':'&quot;'}[c];});};
+  var BRIEF='https://www.notion.so/3d5ea74eb7798179899ee61e32e8dc1f';
+  var M=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+  var W=['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
+
+  /* Date/time parsing is regex-only off the ISO string. A value may or may
+     not carry a clock component; we never let the browser guess a zone. */
+  function ymd(v){ var m=/^(\d{4})-(\d{2})-(\d{2})/.exec(String(v||'')); return m?m[0]:null; }
+  function hm(v){  // returns 'HHMM' or null when the row is date-only
+    var m=/^\d{4}-\d{2}-\d{2}T(\d{2}):(\d{2})/.exec(String(v||''));
+    return m? m[1]+m[2] : null;
+  }
+  function dnum(d){ return Date.parse(d+'T12:00:00'); }
+  function diff(a,b){ return Math.round((dnum(b)-dnum(a))/86400000); }
+  function fmtDay(d){ // 07 Sep 2026
+    return d.slice(8,10)+' '+M[+d.slice(5,7)-1]+' '+d.slice(0,4); }
+  function weekday(d){ return W[new Date(dnum(d)).getDay()]; }
+
+  // ---- live 24h clock: local wall time, zero-padded, no meridiem ----------
+  function tick(){
+    var n=new Date();
+    var p=function(x){ return ('0'+x).slice(-2); };
+    document.getElementById('ct').textContent=p(n.getHours())+':'+p(n.getMinutes());
+    document.getElementById('cs').textContent=
+      p(n.getHours())+p(n.getMinutes())+p(n.getSeconds())+' LOCAL';
+  }
+  tick(); setInterval(tick,1000);
+
+  function render(tasks,week,spokes){
+    var today=ymd(tasks.today)||ymd(tasks.generated);
+    if(!today){ document.getElementById('out').innerHTML=
+      '<div class="msg">tasks.json has no usable reference date.</div>'; return; }
+
+    document.getElementById('dt').textContent=fmtDay(today);
+    document.getElementById('dk').textContent=weekday(today)+' · daily brief';
+
+    // ---- unify tasks + week + classes into one dated stream --------------
+    var all=[],uniq={};
+    function add(i,src){
+      if(!i||!i.name) return;
+      var d=ymd(i.date)||ymd(i.due); if(!d) return;
+      var k=i.name+'|'+d;
+      if(uniq[k]){ if(!uniq[k].t && hm(i.date)) uniq[k].t=hm(i.date); return; }
+      uniq[k]={name:String(i.name),d:d,t:hm(i.date)||hm(i.due),
+               tag:(i.meeting_type||i.code||i.type||src),url:i.url||'',src:src,
+               done:!!i.done};
+      all.push(uniq[k]);
+    }
+    (tasks.today_items||[]).forEach(function(i){ add(i,'task'); });
+    (tasks.upcoming||[]).forEach(function(i){ add(i,'task'); });
+    ((week&&week.days)||[]).forEach(function(dd){
+      (dd.items||[]).forEach(function(i){ add(i,'task'); }); });
+    ((spokes&&spokes.classes)||[]).forEach(function(c){ add(c,'class'); });
+
+    var live=all.filter(function(i){ return !i.done; });
+    var todays=live.filter(function(i){ return i.d===today; });
+    var ahead=live.filter(function(i){ return i.d>today; });
+
+    function bytime(a,b){
+      if(a.d!==b.d) return a.d<b.d?-1:1;
+      var ta=a.t||'2359', tb=b.t||'2359';
+      if(ta!==tb) return ta<tb?-1:1;
+      return a.name.localeCompare(b.name);
+    }
+    todays.sort(bytime); ahead.sort(bytime);
+
+    var isToday = todays.length>0;
+    var top = (isToday? todays : ahead).slice(0,3);
+
+    // ---- counters strip ---------------------------------------------------
+    var c=tasks.counts||{};
+    var od = typeof c.overdue==='number' ? c.overdue : null;
+    var strip='<div class="strip">'+
+      '<div class="cell"><div class="k">Today</div><div class="v'+
+        (todays.length?'':' ok')+'">'+todays.length+'</div></div>'+
+      '<div class="cell"><div class="k">Overdue</div><div class="v '+
+        (od===null?'':(od>0?'bad':'ok'))+'">'+(od===null?'—':od)+'</div></div>'+
+      '<div class="cell"><div class="k">Open</div><div class="v">'+
+        (typeof c.open==='number'?c.open:'—')+'</div></div>'+
+      '<div class="cell"><div class="k">Next 7d</div><div class="v">'+
+        ahead.filter(function(i){ return diff(today,i.d)<=7; }).length+'</div></div>'+
+      '</div>';
+
+    // ---- top-3 list -------------------------------------------------------
+    var head = isToday
+      ? '<div class="st"><span>Due soonest · today</span><span class="n">'+
+        todays.length+' scheduled</span></div>'
+      : '<div class="st"><span>Nothing scheduled today · next up</span>'+
+        '<span class="n">'+ahead.length+' ahead</span></div>';
+
+    var list;
+    if(!top.length){
+      list='<div class="msg">No dated items in tasks, week or class data.</div>';
+    } else {
+      list=top.map(function(i){
+        var dd=diff(today,i.d);
+        var when = i.t ? '<b>'+i.t.slice(0,2)+':'+i.t.slice(2)+'</b>'
+                       : '<span>all&nbsp;day</span>';
+        var day = dd===0 ? '' : ' '+i.d.slice(8,10)+' '+M[+i.d.slice(5,7)-1];
+        var inTxt, inCls='';
+        if(dd===0){ inTxt='today'; inCls=' now'; }
+        else if(dd===1){ inTxt='+1 day'; }
+        else { inTxt='+'+dd+' days'; }
+        var nm = i.url
+          ? '<a class="nm" href="'+esc(i.url)+'" target="_blank" rel="noopener" title="'+esc(i.name)+'">'+esc(i.name)+'</a>'
+          : '<span class="nm" title="'+esc(i.name)+'">'+esc(i.name)+'</span>';
+        return '<div class="row"><span class="when">'+when+day+'</span>'+
+               '<span class="body">'+nm+
+               '<span class="tag">'+esc(i.tag||i.src)+' · '+esc(i.src)+'</span></span>'+
+               '<span class="in'+inCls+'">'+inTxt+'</span></div>';
+      }).join('');
+    }
+
+    // ---- brief link -------------------------------------------------------
+    var arrow='<svg width="13" height="13" viewBox="0 0 13 13" fill="none" '+
+      'stroke="currentColor" stroke-width="1.4" stroke-linecap="round" '+
+      'stroke-linejoin="round" aria-hidden="true">'+
+      '<path d="M3 10 L10 3"/><path d="M4.6 3 H10 V8.4"/></svg>';
+    var brief='<a class="brief" href="'+BRIEF+'" target="_blank" rel="noopener">'+
+      '<span class="bt"><b>Open Daily Brief</b>'+
+      '<span>Full PDF brief · published to Notion each morning</span></span>'+
+      arrow+'</a>';
+
+    var gen=tasks.generated||'';
+    var gt=hm(gen);
+    document.getElementById('out').innerHTML=
+      strip+head+list+brief+
+      '<div class="foot">Sources: tasks + week + classes · data generated '+
+      esc(ymd(gen)||'unknown')+(gt?' '+gt.slice(0,2)+':'+gt.slice(2):'')+'</div>';
+  }
+
+  Promise.all([
+    fetch('../data/tasks.json',{cache:'no-store'}),
+    fetch('../data/week.json',{cache:'no-store'}),
+    fetch('../data/spokes.json',{cache:'no-store'})
+  ]).then(function(rs){
+    rs.forEach(function(r){ if(!r.ok) throw new Error('HTTP '+r.status); });
+    return Promise.all(rs.map(function(r){ return r.json(); }));
+  }).then(function(d){ render(d[0]||{}, d[1]||{}, d[2]||{}); })
+   .catch(function(e){
+     document.getElementById('out').innerHTML=
+       '<div class="msg">Could not load data — '+esc(e.message)+'</div>';
+   });
+})();
+</script>
+</body>
+</html>

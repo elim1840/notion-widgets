@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Velocity</title>
+<style>
+  :root{
+    --bg:#191919; --panel:#202020; --line:#2f2f2f; --hair:#252525;
+    --ink:#e9e9e7; --dim:#9b9a97; --faint:#6f6e6b;
+    --blue:#5b93d3; --gold:#c9a227; --red:#e06c6c; --green:#5fa87a; --purple:#9a6dd7;
+  }
+  @media (prefers-color-scheme: light){
+    :root{ --bg:#fff; --panel:#f7f7f5; --line:#e6e5e1; --hair:#efeeec;
+           --ink:#37352f; --dim:#787774; --faint:#9b9a97; }
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--bg);color:var(--ink);padding:10px 14px 10px;
+       font:13px/1.4 -apple-system,BlinkMacSystemFont,"Segoe UI",Inter,sans-serif;
+       -webkit-font-smoothing:antialiased;font-variant-numeric:tabular-nums}
+  .hd{font-size:10px;color:var(--faint);text-transform:uppercase;letter-spacing:.09em;
+      padding-bottom:5px;margin-bottom:7px;border-bottom:1px solid var(--line);
+      display:flex;justify-content:space-between;gap:10px}
+  .kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:6px}
+  .k{border-left:2px solid var(--hair);padding-left:9px}
+  .k.red{border-left-color:var(--red)} .k.blue{border-left-color:var(--blue)}
+  .k.gold{border-left-color:var(--gold)}
+  .n{font-size:22px;font-weight:600;letter-spacing:-.035em;line-height:1;
+     font-variant-numeric:tabular-nums}
+  .n.sm{font-size:14px;letter-spacing:-.01em;line-height:1.2}
+  .n.red{color:var(--red)}
+  .u{font-size:9px;color:var(--faint);text-transform:uppercase;letter-spacing:.07em;
+     display:block;margin-top:5px;line-height:1.35}
+  svg{display:block;width:100%;height:auto}
+  text{font-family:inherit;font-variant-numeric:tabular-nums}
+  .cap{font-size:9.5px;color:var(--faint);text-transform:uppercase;letter-spacing:.08em;
+       margin:8px 0 4px;padding-top:7px;border-top:1px solid var(--hair)}
+  .cap:first-of-type{border-top:0;padding-top:0;margin-top:4px}
+  .lgd{display:flex;gap:12px;flex-wrap:wrap;font-size:9px;color:var(--faint);margin-top:5px}
+  .lgd span{display:flex;align-items:center;gap:4px}
+  .lgd i{width:9px;height:9px;border-radius:2px;display:block}
+  .lgd i.ln{width:14px;height:0;border-radius:0;border-top:1.5px solid var(--blue)}
+  .lgd i.dash{width:14px;height:0;border-radius:0;border-top:1.5px dashed var(--red)}
+  .note{font-size:9.5px;color:var(--faint);line-height:1.5;margin-top:7px;
+        padding-top:7px;border-top:1px solid var(--hair)}
+  .note b{color:var(--dim);font-weight:500}
+  .note b.alert{color:var(--red)}
+  .none{color:var(--faint);font-style:italic;padding:16px 0;font-size:12px}
+</style>
+</head>
+<body>
+<div class="hd"><span>Velocity · throughput</span><span id="win"></span></div>
+<div id="out"><div class="none">loading…</div></div>
+
+<script>
+const MON=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+const ISO=/(\d{4}-\d{2}-\d{2})/;
+const dayOf = v => { const m=ISO.exec(String(v==null?'':v)); return m?m[1]:null; };
+const D = iso => new Date(iso+'T12:00:00');
+const fmtShort = iso => { const d=D(iso); return String(d.getDate()).padStart(2,'0')+' '+MON[d.getMonth()]; };
+const esc = s => String(s==null?'':s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+
+fetch('../data/tasks.json?t='+Date.now()).then(r=>r.json()).then(T=>{
+  const out=document.getElementById('out');
+  const c=T.counts||{};
+  const open=Number(c.open)||0, overdue=Number(c.overdue)||0;
+
+  const H=(Array.isArray(T.history)?T.history:[])
+    .map(h=>({d:dayOf(h.date), inflow:Number(h.total)||0, done:Number(h.done)||0}))
+    .filter(h=>h.d).sort((a,b)=>a.d<b.d?-1:a.d>b.d?1:0);
+
+  if(!H.length){ out.innerHTML='<div class="none">no history rows — no throughput to measure</div>'; return; }
+
+  const N=H.length;
+  document.getElementById('win').textContent =
+    fmtShort(H[0].d)+' – '+fmtShort(H[N-1].d)+' · '+N+'d';
+
+  const closed = H.reduce((a,h)=>a+h.done,0);
+  const inflow = H.reduce((a,h)=>a+h.inflow,0);
+  const rate   = closed / N;                    // items closed per day, observed
+  const net    = (inflow - closed) / N;         // net backlog growth per day
+
+  // ---- PROJECTION. Guarded: a zero (or non-positive) rate has no finite
+  // clearance date. We state that in words — never Infinity, NaN, or blank.
+  let clearBig, clearSub, clearCls;
+  if(rate > 0){
+    const days = Math.ceil(open / rate);
+    const eta  = new Date(D(H[N-1].d).getTime() + days*86400000);
+    clearBig = days.toLocaleString();
+    clearSub = 'days to clear '+open+' open · eta '+
+               String(eta.getDate()).padStart(2,'0')+' '+MON[eta.getMonth()]+' '+eta.getFullYear();
+    clearCls = 'n sm';
+  } else {
+    clearBig = 'Never';
+    clearSub = 'at the observed rate of 0.00/day the '+open+' open items never clear';
+    clearCls = 'n sm red';
+  }
+
+  // ---- rolling average (centred-trailing, window 3)
+  const RW=3;
+  const roll = H.map((_,i)=>{
+    const a=Math.max(0,i-RW+1);
+    const s=H.slice(a,i+1);
+    return s.reduce((x,h)=>x+h.done,0)/s.length;
+  });
+
+  // ================= chart 1 : completions per day =================
+  const maxDone = Math.max(...H.map(h=>h.done));
+  // a flat-zero series needs no headroom — collapse the panel rather than
+  // stretching an empty plot to fill space it hasn't earned
+  const W=620, CH=(maxDone===0?68:108), L=30, R=10, Tp=10, B=20;
+  const iw=W-L-R, ih=CH-Tp-B;
+  const yMax = Math.max(1, maxDone===0 ? 1 : Math.ceil(maxDone*1.25));
+  const bx = i => L + i*(iw/N) + (iw/N)*0.18;
+  const bw = Math.max(3, (iw/N)*0.64);
+  const cxr = i => L + i*(iw/N) + (iw/N)/2;
+  const y  = v => Tp + ih - (v/yMax)*ih;
+
+  let g='';
+  // integer, de-duplicated ticks — a yMax of 1 must not print "1,1,0"
+  const ticks=[]; const stepT=Math.max(1,Math.ceil(yMax/2));
+  for(let v=0; v<=yMax; v+=stepT) if(ticks.indexOf(v)<0) ticks.push(v);
+  if(ticks[ticks.length-1]!==yMax) ticks.push(yMax);
+  ticks.forEach(v=>{
+    const yy=y(v);
+    g+=`<line x1="${L}" y1="${yy.toFixed(1)}" x2="${W-R}" y2="${yy.toFixed(1)}" stroke="var(--hair)"/>`;
+    g+=`<text x="${L-5}" y="${(yy+3).toFixed(1)}" font-size="9" fill="var(--faint)" text-anchor="end">${v}</text>`;
+  });
+  // zero baseline emphasised — with 0 throughput every bar sits on it
+  g+=`<line x1="${L}" y1="${y(0).toFixed(1)}" x2="${W-R}" y2="${y(0).toFixed(1)}" stroke="var(--line)"/>`;
+
+  H.forEach((h,i)=>{
+    if(h.done>0){
+      const bh=Math.max(1.5, (h.done/yMax)*ih);
+      g+=`<rect x="${bx(i).toFixed(1)}" y="${(y(0)-bh).toFixed(1)}" width="${bw.toFixed(1)}"
+            height="${bh.toFixed(1)}" rx="1.5" fill="var(--green)"><title>${h.d}: ${h.done} closed</title></rect>`;
+    } else {
+      // explicit zero tick so an empty day reads as measured-zero, not missing data
+      g+=`<rect x="${bx(i).toFixed(1)}" y="${(y(0)-1.5).toFixed(1)}" width="${bw.toFixed(1)}"
+            height="1.5" fill="var(--faint)" fill-opacity="0.5"><title>${h.d}: 0 closed</title></rect>`;
+    }
+  });
+  // rolling average
+  g+=`<path d="${roll.map((v,i)=>(i?'L':'M')+cxr(i).toFixed(1)+' '+y(v).toFixed(1)).join(' ')}"
+        fill="none" stroke="var(--blue)" stroke-width="1.6" stroke-linejoin="round"/>`;
+  // x labels: first, middle, last
+  [0, Math.floor((N-1)/2), N-1].filter((v,i,a)=>a.indexOf(v)===i).forEach(i=>{
+    g+=`<text x="${cxr(i).toFixed(1)}" y="${CH-6}" font-size="9" fill="var(--faint)" text-anchor="middle">${fmtShort(H[i].d)}</text>`;
+  });
+  if(closed===0){
+    g+=`<text x="${(L+iw/2).toFixed(1)}" y="${(Tp+ih*0.46).toFixed(1)}" font-size="11"
+          fill="var(--red)" text-anchor="middle" letter-spacing="0.02em">flat at zero — no task closed in ${N} days</text>`;
+  }
+
+  // ================= chart 2 : inflow vs outflow =================
+  const W2=620, CH2=66, L2=30, R2=10, T2=6, B2=16;
+  const iw2=W2-L2-R2, ih2=CH2-T2-B2;
+  const maxFlow=Math.max(1, ...H.map(h=>Math.max(h.inflow,h.done)));
+  const bw2=Math.max(2.5,(iw2/N)*0.30);
+  const slot = i => L2 + i*(iw2/N) + (iw2/N)/2;
+  const y2 = v => T2 + ih2 - (v/maxFlow)*ih2;
+
+  let g2='';
+  g2+=`<line x1="${L2}" y1="${y2(0).toFixed(1)}" x2="${W2-R2}" y2="${y2(0).toFixed(1)}" stroke="var(--line)"/>`;
+  g2+=`<text x="${L2-5}" y="${(y2(maxFlow)+7).toFixed(1)}" font-size="9" fill="var(--faint)" text-anchor="end">${maxFlow}</text>`;
+  g2+=`<text x="${L2-5}" y="${(y2(0)+3).toFixed(1)}" font-size="9" fill="var(--faint)" text-anchor="end">0</text>`;
+  H.forEach((h,i)=>{
+    const s=slot(i);
+    const hi=(h.inflow/maxFlow)*ih2, ho=(h.done/maxFlow)*ih2;
+    g2+=`<rect x="${(s-bw2-1).toFixed(1)}" y="${(y2(0)-Math.max(h.inflow?1.5:0,hi)).toFixed(1)}"
+          width="${bw2.toFixed(1)}" height="${Math.max(h.inflow?1.5:0,hi).toFixed(1)}" rx="1"
+          fill="var(--gold)"><title>${h.d}: ${h.inflow} became due</title></rect>`;
+    g2+=`<rect x="${(s+1).toFixed(1)}" y="${(y2(0)-Math.max(h.done?1.5:0,ho)).toFixed(1)}"
+          width="${bw2.toFixed(1)}" height="${Math.max(h.done?1.5:0,ho).toFixed(1)}" rx="1"
+          fill="var(--green)"><title>${h.d}: ${h.done} closed</title></rect>`;
+  });
+  g2+=`<text x="${L2}" y="${CH2-4}" font-size="9" fill="var(--faint)">${fmtShort(H[0].d)}</text>`;
+  g2+=`<text x="${W2-R2}" y="${CH2-4}" font-size="9" fill="var(--faint)" text-anchor="end">${fmtShort(H[N-1].d)}</text>`;
+
+  const netTxt = net>0 ? '+'+net.toFixed(2)+'/day net growth'
+               : net<0 ? net.toFixed(2)+'/day net drain'
+               : 'flat — inflow equals outflow';
+
+  out.innerHTML = `
+    <div class="kpis">
+      <div class="k blue"><div class="n">${rate.toFixed(2)}</div>
+        <span class="u">closed / day<br>observed over ${N}d</span></div>
+      <div class="k gold"><div class="n">${(inflow/N).toFixed(2)}</div>
+        <span class="u">became due / day<br>${inflow} in window</span></div>
+      <div class="k ${rate>0?'blue':'red'}"><div class="${clearCls}">${esc(clearBig)}</div>
+        <span class="u">backlog clears</span></div>
+    </div>
+    <div class="cap">Completions per day · rolling ${RW}-day average</div>
+    <svg viewBox="0 0 ${W} ${CH}" role="img" aria-label="Completions per day, ${closed} total over ${N} days">${g}</svg>
+    <div class="lgd"><span><i style="background:var(--green)"></i>closed</span>
+      <span><i class="ln"></i>${RW}-day average</span>
+      <span><i style="background:var(--faint);opacity:.5"></i>measured zero</span></div>
+    <div class="cap">Inflow vs outflow · items becoming due against items closed</div>
+    <svg viewBox="0 0 ${W2} ${CH2}" role="img" aria-label="Inflow ${inflow} versus outflow ${closed}">${g2}</svg>
+    <div class="lgd"><span><i style="background:var(--gold)"></i>became due (inflow ${inflow})</span>
+      <span><i style="background:var(--green)"></i>closed (outflow ${closed})</span>
+      <span>${esc(netTxt)}</span></div>
+    <div class="note">
+      <b${rate>0?'':' class="alert"'}>Projection — backlog clears: ${esc(clearBig==='Never'?'never':'in '+clearBig+' days')}.</b>
+      ${esc(clearSub.charAt(0).toUpperCase()+clearSub.slice(1))}.
+      <b>${inflow}</b> in, <b>${closed}</b> out over ${N} days — that gap is the ${open}-item backlog, ${overdue} overdue.
+    </div>`;
+}).catch(e=>{
+  document.getElementById('out').innerHTML =
+    '<div class="none">data unavailable — '+esc(e&&e.message||e)+'</div>';
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Thesis &amp; Research</title>
+<style>
+  :root{
+    --bg:#191919; --panel:#202020; --line:#2f2f2f; --hair:#252525;
+    --ink:#e9e9e7; --dim:#9b9a97; --faint:#6f6e6b;
+    --blue:#5b93d3; --gold:#c9a227; --red:#e06c6c; --green:#5fa87a; --purple:#9a6dd7;
+  }
+  @media (prefers-color-scheme: light){
+    :root{ --bg:#fff; --panel:#f7f7f5; --line:#e6e5e1; --hair:#efeeec;
+           --ink:#37352f; --dim:#787774; --faint:#9b9a97; }
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--bg);color:var(--ink);padding:12px 14px;
+       font:13px/1.4 -apple-system,BlinkMacSystemFont,"Segoe UI",Inter,sans-serif;
+       -webkit-font-smoothing:antialiased}
+  b,strong{font-weight:600}
+  .num{font-variant-numeric:tabular-nums}
+
+  .hd{font-size:10px;color:var(--faint);text-transform:uppercase;letter-spacing:.09em;
+      display:flex;justify-content:space-between;align-items:baseline;gap:8px;
+      padding-bottom:7px;border-bottom:1px solid var(--line)}
+  .hd .r{color:var(--dim);letter-spacing:.04em;font-variant-numeric:tabular-nums}
+
+  /* Three countdowns share one strip; thesis is visually dominant because it
+     is the only irreversible date on the board. */
+  .cds{display:grid;grid-template-columns:1.35fr 1fr 1fr;gap:8px;margin-top:10px}
+  .cd{background:var(--panel);border:1px solid var(--line);border-radius:7px;
+      padding:7px 9px;min-width:0}
+  .cd .k{font-size:9px;text-transform:uppercase;letter-spacing:.07em;color:var(--faint);
+         white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .cd .v{font-variant-numeric:tabular-nums;line-height:1.05;margin-top:3px;
+         display:flex;align-items:baseline;gap:4px}
+  .cd .v b{font-size:26px;letter-spacing:-.02em}
+  .cd .v i{font-style:normal;font-size:10px;color:var(--faint)}
+  .cd .d{font-size:10px;color:var(--dim);font-variant-numeric:tabular-nums;margin-top:2px}
+  .cd.sm .v b{font-size:19px}
+  .c-red b{color:var(--red)} .c-gold b{color:var(--gold)} .c-blue b{color:var(--blue)}
+  .c-red{border-left:2px solid var(--red)}
+  .c-gold{border-left:2px solid var(--gold)}
+  .c-blue{border-left:2px solid var(--blue)}
+
+  .sec{margin-top:10px}
+  .st{font-size:9.5px;text-transform:uppercase;letter-spacing:.08em;color:var(--faint);
+      display:flex;align-items:baseline;gap:6px;margin-bottom:5px}
+  .st .n{margin-left:auto;font-variant-numeric:tabular-nums;color:var(--dim)}
+
+  .bar{height:9px;border-radius:5px;background:var(--hair);overflow:hidden;
+       border:1px solid var(--line);display:flex}
+  .bar i{display:block;height:100%;background:var(--purple)}
+  .bmeta{display:flex;justify-content:space-between;font-size:10px;color:var(--faint);
+         margin-top:4px;font-variant-numeric:tabular-nums;gap:8px}
+
+  /* Blocker panel is deliberately the loudest element after the countdown. */
+  .blk{margin-top:10px;background:var(--panel);border:1px solid var(--line);
+       border-left:2px solid var(--red);border-radius:7px;padding:8px 10px}
+  .blk.none{border-left-color:var(--faint)}
+  .blk .bt{font-size:9px;text-transform:uppercase;letter-spacing:.09em;color:var(--red);
+           font-weight:600}
+  .blk.none .bt{color:var(--faint)}
+  .blk .bb{font-size:12.5px;margin-top:3px;line-height:1.35}
+  .blk .bs{font-size:10.5px;color:var(--faint);margin-top:3px}
+
+  .grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:10px}
+  .fig{background:var(--panel);border:1px solid var(--line);border-radius:7px;
+       padding:7px 9px}
+  .fig .k{font-size:9px;text-transform:uppercase;letter-spacing:.07em;color:var(--faint)}
+  .fig .v{font-variant-numeric:tabular-nums;font-size:22px;font-weight:600;
+          line-height:1.1;margin-top:2px}
+  .fig .s{font-size:10px;color:var(--faint);margin-top:2px;line-height:1.35}
+  .ok{color:var(--green)} .warn{color:var(--gold)} .bad{color:var(--red)}
+
+  .lst .row{display:flex;gap:7px;align-items:center;padding:4px 0;
+            border-bottom:1px solid var(--hair);min-width:0}
+  .lst .row:last-child{border-bottom:0}
+  .lst .dt{font-variant-numeric:tabular-nums;font-size:11px;color:var(--dim);
+           flex:0 0 auto;width:46px}
+  .lst .nm{flex:1 1 auto;min-width:0;font-size:12px;overflow:hidden;
+           text-overflow:ellipsis;white-space:nowrap}
+  a{color:inherit;text-decoration:none}
+  a.nm:hover{text-decoration:underline}
+  .msg{color:var(--faint);font-style:italic;font-size:12px;padding:16px 0}
+  .foot{margin-top:9px;padding-top:7px;border-top:1px solid var(--line);
+        font-size:10px;color:var(--faint)}
+</style>
+</head>
+<body>
+<div class="hd"><span>Thesis &amp; research</span><span class="r" id="hr"></span></div>
+<div id="out"><div class="msg">loading…</div></div>
+
+<script>
+(function(){
+  var esc=function(s){return String(s==null?'':s).replace(/[<>&"]/g,function(c){
+    return {'<':'&lt;','>':'&gt;','&':'&amp;','"':'&quot;'}[c];});};
+
+  /* Fixed programme dates. Parsed the same way as data dates: never a raw
+     Date() on an event value, always '<YYYY-MM-DD>T12:00:00'. */
+  var TERM_START='2026-09-09';
+  var MILE=[
+    {k:'Thesis due',        d:'2027-01-15', cls:'c-red',  big:true},
+    {k:'Thesis title due',  d:'2026-12-11', cls:'c-gold', big:false},
+    {k:'Degree application',d:'2026-09-11', cls:'c-blue', big:false}
+  ];
+
+  function ymd(v){ var m=/^(\d{4})-(\d{2})-(\d{2})/.exec(String(v||'')); return m?m[0]:null; }
+  function dnum(d){ return Date.parse(d+'T12:00:00'); }
+  function diff(a,b){ return Math.round((dnum(b)-dnum(a))/86400000); }
+  function fmt(d){
+    var M=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+    return d.slice(8,10)+' '+M[+d.slice(5,7)-1]+' '+d.slice(0,4);
+  }
+  function fmtShort(d){
+    var M=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+    return d.slice(8,10)+' '+M[+d.slice(5,7)-1];
+  }
+
+  function render(tasks,week,spokes){
+    var today=ymd(tasks.today)||ymd(tasks.generated);
+    if(!today){ document.getElementById('out').innerHTML=
+      '<div class="msg">tasks.json has no usable reference date.</div>'; return; }
+
+    // ---- de-duplicated view of every dated row we can see -------------
+    var recs=[],uniq={};
+    function push(a){ (a||[]).forEach(function(i){
+      if(!i) return; var k=(i.name||'')+'|'+(ymd(i.date)||'');
+      if(uniq[k]){ for(var f in i){ if(!uniq[k][f]&&i[f]) uniq[k][f]=i[f]; } }
+      else { uniq[k]=JSON.parse(JSON.stringify(i)); recs.push(uniq[k]); }
+    }); }
+    push(tasks.today_items); push(tasks.upcoming);
+    ((week&&week.days)||[]).forEach(function(d){ push(d.items); });
+
+    var isRes=function(i){ return i.meeting_type==='Research'||i.type==='Research'; };
+    var research=recs.filter(isRes);
+    var h14=today, t14=null;
+    (function(){ var ms=dnum(today)+14*86400000, dt=new Date(ms);
+      t14=dt.getFullYear()+'-'+('0'+(dt.getMonth()+1)).slice(-2)+'-'+('0'+dt.getDate()).slice(-2); })();
+    var res14=research.filter(function(i){ var d=ymd(i.date); return d&&d>=h14&&d<=t14; });
+
+    // "Am I doing research or admin?" — same 14-day window, Admin as the foil.
+    var adm14=recs.filter(function(i){
+      var d=ymd(i.date); return i.meeting_type==='Admin'&&d&&d>=h14&&d<=t14; });
+
+    // ---- countdowns ---------------------------------------------------
+    var cds=MILE.map(function(m){
+      var n=diff(today,m.d);
+      return '<div class="cd '+m.cls+(m.big?'':' sm')+'">'+
+             '<div class="k">'+esc(m.k)+'</div>'+
+             '<div class="v"><b>'+(n<0?'−'+Math.abs(n):n)+'</b><i>'+
+               (n<0?'days past':'days')+'</i></div>'+
+             '<div class="d">'+fmt(m.d)+'</div></div>';
+    }).join('');
+
+    // ---- runway: term start -> thesis due ------------------------------
+    var span=diff(TERM_START,MILE[0].d);
+    var gone=diff(TERM_START,today);
+    var pct=Math.max(0,Math.min(100, span>0 ? (gone/span)*100 : 0));
+    var pre = gone<0;
+    var runway=
+      '<div class="sec"><div class="st"><span>Runway · term start → thesis due</span>'+
+      '<span class="n">'+Math.round(pct)+'% elapsed</span></div>'+
+      '<div class="bar"><i style="width:'+pct.toFixed(1)+'%"></i></div>'+
+      '<div class="bmeta"><span>'+fmtShort(TERM_START)+'</span>'+
+      '<span>'+(pre? Math.abs(gone)+' days before term start'
+                   : gone+' of '+span+' days used · '+(span-gone)+' left')+'</span>'+
+      '<span>'+fmtShort(MILE[0].d)+'</span></div></div>';
+
+    // ---- thesis projects ------------------------------------------------
+    var projs=((spokes&&spokes.projects)||[]).filter(function(p){
+      return p&&p.name&&/thesis/i.test(String(p.name)+' '+String(p.blocker||''));
+    });
+    var pj;
+    if(projs.length){
+      pj='<div class="sec lst"><div class="st"><span>Thesis project</span>'+
+         '<span class="n">'+projs.length+'</span></div>'+
+         projs.map(function(p){
+           var meta=[p.phase,p.pri,p.status].filter(function(x){return x&&String(x).trim();});
+           var nm=esc(p.name)+(meta.length?'':' · no phase / priority / status set');
+           return '<div class="row"><span class="dt">'+esc(meta[0]||'—')+'</span>'+
+                  (p.url? '<a class="nm" href="'+esc(p.url)+'" target="_blank" rel="noopener" title="'+esc(p.name)+'">'+nm+'</a>'
+                        : '<span class="nm" title="'+esc(p.name)+'">'+nm+'</span>')+'</div>';
+         }).join('')+'</div>';
+    } else {
+      pj='<div class="sec"><div class="st"><span>Thesis project</span></div>'+
+         '<div class="msg">No project matching “thesis” in spokes.json.</div></div>';
+    }
+
+    // ---- blocker panel ---------------------------------------------------
+    var blocked=((spokes&&spokes.projects)||[]).filter(function(p){
+      return p && String(p.blocker||'').trim(); });
+    var blk;
+    if(blocked.length){
+      blk='<div class="blk"><div class="bt">Blocker</div>'+
+          blocked.slice(0,3).map(function(p){
+            return '<div class="bb">'+esc(p.blocker)+'</div>'+
+                   '<div class="bs">'+esc(p.name)+'</div>'; }).join('')+
+          (blocked.length>3?'<div class="bs">+'+(blocked.length-3)+' more blocked</div>':'')+
+          '</div>';
+    } else {
+      // Honest negative: the Blocker field is empty across all 28 projects.
+      blk='<div class="blk none"><div class="bt">Blocker</div>'+
+          '<div class="bb">No blocker recorded.</div>'+
+          '<div class="bs">The Blocker field is empty on all '+
+          ((spokes&&spokes.projects)||[]).length+' projects in Notion — '+
+          'nothing is inferred here. If thesis scope is still undefined, it is '+
+          'not written down anywhere this widget can read.</div></div>';
+    }
+
+    // ---- cadence figures --------------------------------------------------
+    var ratio = adm14.length ? (res14.length/adm14.length) : null;
+    var cadCls = res14.length>=4?'ok':(res14.length>=2?'warn':'bad');
+    var figs='<div class="grid">'+
+      '<div class="fig"><div class="k">Research items · next 14 days</div>'+
+      '<div class="v '+cadCls+'">'+res14.length+'</div>'+
+      '<div class="s">vs '+adm14.length+' admin'+
+        (ratio!==null?' · ratio '+ratio.toFixed(2)+':1':'')+'</div></div>'+
+      '<div class="fig"><div class="k">Research items in pipeline</div>'+
+      '<div class="v">'+research.length+'</div>'+
+      '<div class="s">of '+recs.length+' dated rows loaded ('+
+        fmtShort(ymd(tasks.today)||today)+' window)</div></div>'+
+      '</div>';
+
+    // ---- research list -----------------------------------------------------
+    var rl;
+    if(research.length){
+      var sorted=research.slice().sort(function(a,b){
+        return (ymd(a.date)||'9999').localeCompare(ymd(b.date)||'9999'); });
+      rl='<div class="sec lst"><div class="st"><span>Research pipeline</span>'+
+         '<span class="n">'+research.length+'</span></div>'+
+         sorted.slice(0,5).map(function(i){
+           var d=ymd(i.date);
+           return '<div class="row"><span class="dt">'+(d?fmtShort(d):'—')+'</span>'+
+             (i.url? '<a class="nm" href="'+esc(i.url)+'" target="_blank" rel="noopener" title="'+esc(i.name)+'">'+esc(i.name)+'</a>'
+                   : '<span class="nm" title="'+esc(i.name)+'">'+esc(i.name)+'</span>')+'</div>';
+         }).join('')+
+         (research.length>5?'<div class="foot">+'+(research.length-5)+' more</div>':'')+
+         '</div>';
+    } else {
+      rl='<div class="sec"><div class="st"><span>Research pipeline</span></div>'+
+         '<div class="msg">No Research-tagged items in the loaded window.</div></div>';
+    }
+
+    document.getElementById('hr').textContent=
+      'ref '+today+' · '+diff(today,MILE[0].d)+' days to submission';
+
+    document.getElementById('out').innerHTML=
+      '<div class="cds">'+cds+'</div>'+runway+blk+figs+pj+rl+
+      '<div class="foot">Counts cover only dated rows present in tasks.json + '+
+      'week.json; the archive beyond that window is not loaded.</div>';
+  }
+
+  Promise.all([
+    fetch('../data/tasks.json',{cache:'no-store'}),
+    fetch('../data/week.json',{cache:'no-store'}),
+    fetch('../data/spokes.json',{cache:'no-store'})
+  ]).then(function(rs){
+    rs.forEach(function(r){ if(!r.ok) throw new Error('HTTP '+r.status); });
+    return Promise.all(rs.map(function(r){ return r.json(); }));
+  }).then(function(d){ render(d[0]||{}, d[1]||{}, d[2]||{}); })
+   .catch(function(e){
+     document.getElementById('out').innerHTML=
+       '<div class="msg">Could not load data — '+esc(e.message)+'</div>';
+   });
+})();
+</script>
+</body>
+</html>
