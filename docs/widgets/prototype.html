@@ -62,7 +62,7 @@
   .callout.warn{border-color:var(--gold);background:rgba(201,162,39,.07)}
 
   /* quick-links strip: on every page, right under the callout */
-  .nav{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));
+  .nav{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));
        gap:8px;margin:16px 0 6px}
   .nav a{display:flex;align-items:center;gap:8px;text-decoration:none;color:inherit;
      background:var(--panel);border:1px solid var(--line);border-radius:6px;padding:8px 10px;
@@ -176,7 +176,8 @@
   <div class="sect">Spokes</div>
   <div class="snav" data-p="acad">&#127891; Academics</div>
   <div class="snav" data-p="res">&#128300; Research</div>
-  <div class="snav" data-p="pers">&#127968; Personal</div>
+  <div class="snav" data-p="admin">&#128206; Admin</div>
+  <div class="snav" data-p="pers">&#127947;&#65039; Personal</div>
   <div class="sect">Databases</div>
   <div class="snav">&#128203; Tasks &amp; Meetings</div>
   <div class="snav">&#127891; Class Database</div>
@@ -455,12 +456,12 @@
 </section>
 
 <!-- ==================== COMMITMENTS ==================== -->
-<section data-page="pers" class="hide">
+<section data-page="admin" class="hide">
   <div class="cover cv-com"></div>
   <div class="wrap">
-    <div class="crumb" data-home>Home / Personal</div>
-    <div class="icon">&#127968;</div>
-    <h1 class="title">Personal</h1>
+    <div class="crumb" data-home>Home / Admin</div>
+    <div class="icon">&#128206;</div>
+    <h1 class="title">Admin</h1>
     <div class="nav" data-nav></div>
 
     <div class="cols">
@@ -544,7 +545,17 @@
 </section>
 
 <!-- ==================== BODY ==================== -->
-    <h2 class="sec" style="margin-top:34px">Body</h2>
+    </div></div></div></section>
+
+<section data-page="pers" class="hide">
+  <div class="cover cv-body"></div>
+  <div class="wrap">
+    <div class="crumb" data-home>Home / Personal</div>
+    <div class="icon">&#127947;&#65039;</div>
+    <h1 class="title">Personal</h1>
+    <div class="nav" data-nav></div>
+    <div class="cols"><div>
+      <h2 class="sec">Body</h2>
     <div class="nav" data-nav></div>
 
     <div class="cols">
@@ -602,10 +613,11 @@
 
 <script>
 const NAV=[
-  ['deck','&#128760;&#65039;','Home','today &middot; this week'],
+  ['deck','&#127968;','Home','today &middot; this week'],
   ['acad','&#127891;','Academics','6 classes'],
   ['res','&#128300;','Research','thesis &middot; SERG'],
-  ['pers','&#127968;','Personal','commitments &middot; body'],
+  ['admin','&#128206;','Admin','deadlines &middot; forms'],
+  ['pers','&#127947;&#65039;','Personal','train &middot; eat'],
 ];
 document.querySelectorAll('[data-nav]').forEach(n=>{
   n.innerHTML = NAV.map(([k,ic,t,s])=>
