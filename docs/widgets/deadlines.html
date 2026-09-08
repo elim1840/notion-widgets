@@ -201,12 +201,37 @@ function render(spokes, today){
     });
   });
 
-  /* --- thesis milestones (fixed, known dates) --- */
+  /* --- thesis + degree milestones (fixed, known dates) ---
+     12 Dec is the MIT registrar's published date for submitting or changing an
+     advanced degree thesis title for a February degree ($85 late fee after).
+     An earlier note said 11 Dec; the registrar calendar says Friday 12 Dec. */
   [ ['2026-09-11', 'Degree application'],
-    ['2026-12-11', 'Thesis title due'],
-    ['2027-01-15', 'THESIS DUE'] ].forEach(function(m){
+    ['2026-12-12', 'Thesis title due'],
+    ['2027-01-15', 'THESIS DUE'],
+    ['2027-05-07', 'June degree list'] ].forEach(function(m){
     marks.push({ ymd:m[0], days:dayDiff(m[0], today), kind:'thesis',
                  full:m[1], short:shorten(m[1], 22), kindTxt:'Thesis milestone', url:'' });
+  });
+
+  /* --- graded events, read from the Fall 2026 syllabi (verified 08 Sep) ---
+     These are NOT in Notion yet, so no data feed can supply them. Hardcoded
+     here deliberately: a deadline widget that cannot see three exams and two
+     papers is worse than useless, it is falsely reassuring. */
+  [ ['2026-09-24', '14.003 PS1'],
+    ['2026-10-07', '14.003 PS2'],
+    ['2026-10-13', '14.003 EXAM 1'],
+    ['2026-10-26', 'IDS.412 Paper 1'],
+    ['2026-10-29', '14.003 PS3'],
+    ['2026-11-04', 'IDS.412 MIDTERM'],
+    ['2026-11-06', '16.S896 concept review'],
+    ['2026-11-12', '14.003 PS4'],
+    ['2026-11-16', '14.003 EXAM 2'],
+    ['2026-11-20', '16.S896 draft proposal'],
+    ['2026-12-03', '14.003 PS5'],
+    ['2026-12-04', '16.S896 FINAL'],
+    ['2026-12-09', 'IDS.412 Paper 2'] ].forEach(function(m){
+    marks.push({ ymd:m[0], days:dayDiff(m[0], today), kind:'class',
+                 full:m[1], short:shorten(m[1], 22), kindTxt:'graded \u00b7 syllabus', url:'' });
   });
 
   /* --- term boundaries --- */
