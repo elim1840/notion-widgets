@@ -1,12 +1,12 @@
 {
- "generated": "2026-09-08T13:05:04-04:00",
+ "generated": "2026-09-08T16:46:28-04:00",
  "today": "2026-09-08",
  "counts": {
-  "total": 166,
+  "total": 167,
   "open": 163,
-  "done": 3,
-  "today_total": 14,
-  "today_done": 1,
+  "done": 4,
+  "today_total": 15,
+  "today_done": 2,
   "overdue": 96
  },
  "today_items": [
@@ -150,7 +150,7 @@
    "name": "Claude Campus Ambassador \u2014 confirm Army + Draper approval BEFORE applying",
    "date": "2026-09-08T13:00:00.000-04:00",
    "end": "2026-09-08T13:30:00.000-04:00",
-   "done": false,
+   "done": true,
    "status": "This Week",
    "type": "Task",
    "meeting_type": "Admin",
@@ -162,6 +162,23 @@
    "link": "",
    "notes": "",
    "url": "https://app.notion.com/p/Claude-Campus-Ambassador-confirm-Army-Draper-approval-BEFORE-applying-3d5ea74eb77981f78144ef6486dbd64a"
+  },
+  {
+   "name": "ASK BARB TODAY: when is the TPP thesis proposal due?",
+   "date": "2026-09-08T13:10:00.000-04:00",
+   "end": "2026-09-08T13:25:00.000-04:00",
+   "done": false,
+   "status": "Not Started",
+   "type": "Task",
+   "meeting_type": "Admin",
+   "priority": "High",
+   "energy": "Errand",
+   "location": "",
+   "attendees": "",
+   "agenda": "You are already meeting Barb at 1310 today for registration. Add this one question - it is time-sensitive in a way the others are not.\n\nTHE QUESTION:\n  'TPP says the thesis proposal goes to the Thesis Committee no later than the start of my final semester. If I'm targeting a February 2027 degree, was that deadline the start of this term? And if I move to June 2027, when would it be?'\n\nWHY IT MATTERS: tpp.mit.edu states the proposal is submitted for review by the TPP Thesis Committee 'no later than the start of the student's final semester at MIT.' If February 2027 is the target, the final semester is Fall 2026, which began 09 Sep - so that deadline may already have passed. If June 2027, the final semester is Spring 2027 and there is comfortable room.\n\nThis one answer determines whether you are behind schedule or fine, and it may force the Feb-vs-June decision earlier than the 29 Sep block.\n\nWHILE YOU HAVE HER, if there is time:\n  - Is there a proposal template or required format?\n  - Does one thesis satisfy both TPP and AeroAstro, or is separate work needed?\n  - What does the dual degree petition actually require - form or memo?\n\nFull checklist: the 'TPP thesis - everything owed, and to whom' page on Home.",
+   "link": "",
+   "notes": "",
+   "url": "https://app.notion.com/p/ASK-BARB-TODAY-when-is-the-TPP-thesis-proposal-due-3d5ea74eb77981efa22de5adea2a16bb"
   },
   {
    "name": "Registering for Classes -- Barb (TPP Lounge)",
@@ -233,8 +250,8 @@
   },
   {
    "name": "Work on Diffraqtion White Paper w/ Charlie - DUE tonight to send",
-   "date": "2026-09-08T21:00:00.000-04:00",
-   "end": "",
+   "date": "2026-09-08T22:00:00.000-04:00",
+   "end": "2026-09-08T22:00:00.000-04:00",
    "done": false,
    "status": "Not Started",
    "type": "",
@@ -370,21 +387,21 @@
    "url": "https://app.notion.com/p/TPP-Mandatory-Reorientation-3d1ea74eb77981319252d3864a6c8608"
   },
   {
-   "name": "Claude Campus Ambassador \u2014 confirm Army + Draper approval BEFORE applying",
-   "date": "2026-09-08T13:00:00.000-04:00",
-   "end": "2026-09-08T13:30:00.000-04:00",
+   "name": "ASK BARB TODAY: when is the TPP thesis proposal due?",
+   "date": "2026-09-08T13:10:00.000-04:00",
+   "end": "2026-09-08T13:25:00.000-04:00",
    "done": false,
-   "status": "This Week",
+   "status": "Not Started",
    "type": "Task",
    "meeting_type": "Admin",
    "priority": "High",
-   "energy": "Deep",
+   "energy": "Errand",
    "location": "",
    "attendees": "",
-   "agenda": "BLOCKER for the application. Two approvals: (1) Army outside-employment \u2014 JER DoD 5500.07-R requires command/ethics-official review for paid outside activity; ask your ethics counselor or S1. (2) Draper Scholar terms \u2014 fellowship agreements commonly restrict outside paid work; ask Dr. Palladino / Draper program office. The $3,600 stipend is what triggers both.",
+   "agenda": "You are already meeting Barb at 1310 today for registration. Add this one question - it is time-sensitive in a way the others are not.\n\nTHE QUESTION:\n  'TPP says the thesis proposal goes to the Thesis Committee no later than the start of my final semester. If I'm targeting a February 2027 degree, was that deadline the start of this term? And if I move to June 2027, when would it be?'\n\nWHY IT MATTERS: tpp.mit.edu states the proposal is submitted for review by the TPP Thesis Committee 'no later than the start of the student's final semester at MIT.' If February 2027 is the target, the final semester is Fall 2026, which began 09 Sep - so that deadline may already have passed. If June 2027, the final semester is Spring 2027 and there is comfortable room.\n\nThis one answer determines whether you are behind schedule or fine, and it may force the Feb-vs-June decision earlier than the 29 Sep block.\n\nWHILE YOU HAVE HER, if there is time:\n  - Is there a proposal template or required format?\n  - Does one thesis satisfy both TPP and AeroAstro, or is separate work needed?\n  - What does the dual degree petition actually require - form or memo?\n\nFull checklist: the 'TPP thesis - everything owed, and to whom' page on Home.",
    "link": "",
    "notes": "",
-   "url": "https://app.notion.com/p/Claude-Campus-Ambassador-confirm-Army-Draper-approval-BEFORE-applying-3d5ea74eb77981f78144ef6486dbd64a"
+   "url": "https://app.notion.com/p/ASK-BARB-TODAY-when-is-the-TPP-thesis-proposal-due-3d5ea74eb77981efa22de5adea2a16bb"
   },
   {
    "name": "Registering for Classes -- Barb (TPP Lounge)",
@@ -523,8 +540,8 @@
   },
   {
    "date": "2026-09-08",
-   "total": 14,
-   "done": 1
+   "total": 15,
+   "done": 2
   }
  ]
 }
