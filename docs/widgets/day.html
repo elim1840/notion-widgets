@@ -9,7 +9,7 @@
     --bg:#191919; --panel:#202020; --line:#2f2f2f; --hair:#232323;
     --ink:#e9e9e7; --dim:#9b9a97; --faint:#6f6e6b;
     --now:#e06c6c; --blue:#5b93d3; --gold:#c9a227; --green:#5fa87a; --purple:#9a6dd7;
-    --hr:64px;              /* height of one hour row */
+    --hr:52px;              /* height of one hour row */
     --gut:54px;             /* left time gutter */
   }
   @media (prefers-color-scheme: light){
@@ -45,9 +45,15 @@
 
   /* scrolling grid */
   .scroll{flex:1;overflow-y:auto;position:relative;min-height:0}
+  .scroll.fits{overflow-y:hidden}
   .grid{position:relative;padding:0 18px 30px}
   .hour{position:relative;height:var(--hr);border-top:1px solid var(--hair)}
   .hour.major{border-top-color:var(--line)}
+  .hour.night{background:linear-gradient(90deg,transparent,rgba(120,120,140,.035) 12%)}
+  .hour.core{background:linear-gradient(90deg,transparent,rgba(91,147,211,.045) 12%)}
+  .hour.dpstart{border-top:1px solid var(--line)}
+  .hour .dp{position:absolute;right:4px;top:3px;z-index:3;font-size:8.5px;color:var(--faint);
+       letter-spacing:.12em;text-transform:uppercase;opacity:.55}
   .hour .hl{position:absolute;left:0;top:-8px;width:calc(var(--gut) - 12px);
        text-align:right;font-size:10.5px;color:var(--faint);
        font-variant-numeric:tabular-nums;letter-spacing:.02em}
@@ -98,8 +104,8 @@
 <footer><span id="gen"></span><span id="src">Tasks &amp; Meetings</span></footer>
 
 <script>
-const H0 = 5, H1 = 24;            // 0500 -> 2400
-const HR = 64;                    // must match --hr
+const H0 = 6, H1 = 24;            // 0600 -> 2400
+let HR = 52;                      // recomputed on load to fit the viewport
 const DOW=['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
 const MON=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
 const esc=s=>(s||'').replace(/[<>&]/g,c=>({'<':'&lt;','>':'&gt;','&':'&amp;'}[c]));
@@ -147,13 +153,28 @@ fetch('../data/tasks.json?t='+Date.now()).then(r=>r.json()).then(d=>{
       `<a class="ad ${t.done?'done':''}" href="${t.url}" target="_blank">${esc(t.name)||'(untitled)'}</a>`).join('');
   }
 
+  // ---- fit the whole 0600-2400 span into the available height (no scroll)
+  (function fit(){
+    const shell=document.getElementById('scroll');
+    const avail=shell.clientHeight - 30;              // bottom padding
+    const need =(H1-H0);
+    const px   = Math.floor(avail/need);
+    HR = Math.max(26, Math.min(64, px));              // floor 26px keeps text legible
+    document.documentElement.style.setProperty('--hr', HR+'px');
+  })();
+
   // ---- hour rows
   const grid=document.getElementById('grid');
   let html='';
+  const PART = h => h<12 ? 'MORNING' : h<17 ? 'AFTERNOON' : h<21 ? 'EVENING' : 'NIGHT';
   for(let h=H0; h<H1; h++){
     const wake = h>=7 && h<=22;
-    html += `<div class="hour ${h%2===0?'major':''} ${wake?'wake':''}">
-       <span class="hl">${String(h).padStart(2,'0')}00</span></div>`;
+    const core = h>=9 && h<18;
+    const night= h>=21;
+    const newPart = h===H0 || PART(h)!==PART(h-1);
+    html += `<div class="hour ${h%2===0?'major':''} ${wake?'wake':''} ${core?'core':''} ${night?'night':''} ${newPart?'dpstart':''}">
+       <span class="hl">${String(h).padStart(2,'0')}00</span>
+       ${newPart?`<span class="dp">${PART(h)}</span>`:''}</div>`;
   }
   html += `<div class="hour" style="height:0"><span class="hl">2400</span></div>`;
   html += `<div class="layer" id="layer"></div>`;
@@ -186,7 +207,7 @@ fetch('../data/tasks.json?t='+Date.now()).then(r=>r.json()).then(d=>{
     const style = `top:${top(x.s)}px;height:${h}px;`+
                   `width:calc((100% - var(--gut)) * ${wpct/100} - 4px);`+
                   `left:calc(var(--gut) + (100% - var(--gut)) * ${x.col*wpct/100});`;
-    const showMeta = h>=40, showWhere = h>=60 && t.location;
+    const showMeta = h>=34, showWhere = h>=56 && t.location;
     return `<a class="ev ${kindClass(t)} ${t.done?'done':''}" style="${style}"
               href="${t.url}" target="_blank">
        <span class="et">${esc(t.name)||'(untitled)'}</span>
@@ -212,10 +233,10 @@ fetch('../data/tasks.json?t='+Date.now()).then(r=>r.json()).then(d=>{
   }
   drawNow(); setInterval(drawNow, 30000);
 
-  // scroll so the current hour sits near the top third
-  const m=nowMin();
-  const target = Math.max(0, top(m) - 180);
-  document.getElementById('scroll').scrollTop = (m>=H0*60&&m<=H1*60) ? target : Math.max(0, top(8*60)-40);
+  // whole day is visible when it fits; otherwise centre on now
+  const sh=document.getElementById('scroll');
+  if(sh.scrollHeight <= sh.clientHeight+4){ sh.classList.add('fits'); }
+  else { const m=nowMin(); sh.scrollTop = (m>=H0*60&&m<=H1*60) ? Math.max(0, top(m)-180) : 0; }
 })
 .catch(()=>{ document.getElementById('grid').innerHTML =
   '<div class="empty">data not built yet</div>'; });
