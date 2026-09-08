@@ -3,12 +3,13 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Dashboard prototype</title>
+<title>Dashboard prototype — Layout A</title>
 <style>
   :root{
     --bg:#191919; --side:#202020; --panel:#252525; --line:#2f2f2f; --hair:#282828;
     --ink:#e9e9e7; --dim:#9b9a97; --faint:#6f6e6b;
     --blue:#5b93d3; --gold:#c9a227; --red:#e06c6c; --green:#5fa87a; --purple:#9a6dd7;
+    --rail:1fr; --main:1.62fr;
   }
   body.light{
     --bg:#fff; --side:#fbfbfa; --panel:#f7f7f5; --line:#e9e9e7; --hair:#efeeec;
@@ -41,46 +42,67 @@
         padding:14px 8px 4px}
 
   main{flex:1;overflow-y:auto;position:relative}
-  .cover{height:140px;position:relative}
+  .cover{height:132px;position:relative}
   .cv-deck{background:linear-gradient(115deg,#0f1c2e,#1b3a5c 45%,#2d5a87)}
   .cv-acad{background:linear-gradient(115deg,#2a1e3d,#4a3468 50%,#6b4d94)}
-  .cv-res{background:linear-gradient(115deg,#0d2620,#1a4a3a 50%,#2d6b52)}
-  .cv-com{background:linear-gradient(115deg,#3d2416,#6b3f22 50%,#94592f)}
+  .cv-res {background:linear-gradient(115deg,#0d2620,#1a4a3a 50%,#2d6b52)}
+  .cv-com {background:linear-gradient(115deg,#3d2416,#6b3f22 50%,#94592f)}
   .cv-body{background:linear-gradient(115deg,#2b1a1a,#5c2f2f 50%,#874646)}
   .cover::after{content:"";position:absolute;inset:0;
        background:radial-gradient(circle at 76% 30%,rgba(255,255,255,.15),transparent 45%)}
-  .wrap{max-width:100%;padding:0 74px 90px}
-  .icon{font-size:54px;margin-top:-38px;position:relative;line-height:1}
-  h1.title{font-size:37px;font-weight:700;letter-spacing:-.02em;margin:6px 0 2px}
-  .crumb{font-size:11.5px;color:var(--faint);padding:9px 0 0}
+  .wrap{max-width:100%;padding:0 68px 90px}
+  .icon{font-size:52px;margin-top:-36px;position:relative;line-height:1}
+  h1.title{font-size:36px;font-weight:700;letter-spacing:-.02em;margin:5px 0 2px}
+  .crumb{font-size:11.5px;color:var(--faint);padding:9px 0 0;cursor:pointer}
+  .crumb:hover{color:var(--dim)}
 
+  /* --- LAYOUT A GRAMMAR --------------------------------------------- */
   .callout{display:flex;gap:10px;background:var(--panel);border-radius:6px;
-     padding:13px 14px;margin:16px 0 20px;font-size:13.5px;border:1px solid var(--line)}
-  h2.sec{font-size:19px;font-weight:600;letter-spacing:-.01em;margin:26px 0 8px;
+     padding:13px 14px;margin:14px 0 6px;font-size:13.5px;border:1px solid var(--line)}
+  .callout.warn{border-color:var(--gold);background:rgba(201,162,39,.07)}
+
+  /* quick-links strip: on every page, right under the callout */
+  .nav{display:grid;grid-template-columns:repeat(auto-fit,minmax(132px,1fr));
+       gap:7px;margin:12px 0 4px}
+  .nav a{display:flex;align-items:center;gap:8px;text-decoration:none;color:inherit;
+     background:var(--panel);border:1px solid var(--line);border-radius:6px;padding:8px 10px;
+     cursor:pointer}
+  .nav a:hover{border-color:var(--blue)}
+  .nav a.cur{border-color:var(--blue);background:rgba(91,147,211,.08)}
+  .nav .ic{font-size:15px}
+  .nav b{font-size:12.5px;font-weight:500;display:block;line-height:1.2}
+  .nav span{font-size:9.5px;color:var(--faint);display:block;margin-top:1px}
+
+  /* the A split: main + rail, collapses under 1000px */
+  .cols{display:grid;gap:26px;margin-top:4px;
+        grid-template-columns:var(--main) var(--rail);align-items:start}
+  @media (max-width:1000px){ .cols{grid-template-columns:1fr;gap:18px} }
+
+  h2.sec{font-size:18.5px;font-weight:600;letter-spacing:-.01em;margin:22px 0 8px;
      display:flex;align-items:center;gap:9px}
+  h2.sec:first-child{margin-top:14px}
   h2.sec .cnt{font-size:11px;color:var(--faint);font-weight:400;
      border:1px solid var(--line);border-radius:9px;padding:1px 7px}
-  h3.sub3{font-size:15.5px;font-weight:600;margin:20px 0 7px}
-  .sub{font-size:12px;color:var(--dim);margin:-3px 0 10px}
-
-  .cols{display:grid;gap:26px;margin-top:6px}
-  .c2{grid-template-columns:1.62fr 1fr}
-  .c2e{grid-template-columns:1fr 1fr}
+  h3.r{font-size:11px;color:var(--faint);text-transform:uppercase;letter-spacing:.08em;
+       margin:20px 0 7px;font-weight:600}
+  h3.r:first-child{margin-top:14px}
+  .sub{font-size:12px;color:var(--dim);margin:-3px 0 9px}
 
   .vbar{display:flex;gap:3px;align-items:center;border-bottom:1px solid var(--line);
-        margin-bottom:2px;padding-bottom:5px}
+        margin-bottom:2px;padding-bottom:5px;flex-wrap:wrap}
   .vtab{font-size:12.5px;color:var(--dim);padding:3px 8px;border-radius:4px;cursor:pointer}
+  .vtab:hover{background:var(--hair);color:var(--ink)}
   .vtab.on{color:var(--ink);font-weight:500;box-shadow:inset 0 -2px 0 var(--ink)}
   .vspacer{flex:1}
-  .vbtn{font-size:11px;color:var(--faint);padding:3px 7px}
+  .vbtn{font-size:10.5px;color:var(--faint);padding:3px 6px}
 
   table{width:100%;border-collapse:collapse;font-size:13px}
   th{text-align:left;font-weight:400;font-size:11.5px;color:var(--faint);
      padding:6px 8px;border-bottom:1px solid var(--line);white-space:nowrap}
   td{padding:7px 8px;border-bottom:1px solid var(--hair);vertical-align:middle}
   tr:hover td{background:var(--panel)}
-  .gt{font-size:11.5px;color:var(--dim);font-weight:500;padding:9px 8px 4px;
-      display:flex;gap:7px;align-items:center}
+  .gt{font-size:11.5px;color:var(--dim);font-weight:500;padding:10px 8px 4px;
+      display:flex;gap:7px;align-items:center;flex-wrap:wrap}
   .chip{display:inline-block;font-size:11px;padding:1px 7px;border-radius:3px;
         background:var(--hair);color:var(--dim);white-space:nowrap}
   .chip.b{background:rgba(91,147,211,.18);color:var(--blue)}
@@ -94,50 +116,54 @@
   .cb.on::after{content:"\2713";position:absolute;inset:0;color:#fff;font-size:9px;
       display:grid;place-items:center}
 
-  .board{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:9px}
-  .bcol{background:var(--panel);border-radius:6px;padding:8px;min-height:110px}
+  /* board — from Layout B, now part of the A grammar */
+  .board{display:grid;gap:9px;grid-template-columns:repeat(4,minmax(0,1fr))}
+  @media (max-width:1000px){ .board{grid-template-columns:repeat(2,minmax(0,1fr))} }
+  .bcol{background:var(--panel);border-radius:6px;padding:8px;min-height:104px}
+  .bcol.hi{outline:1px dashed var(--gold)}
   .bhead{font-size:11.5px;color:var(--dim);font-weight:500;margin-bottom:7px;
          display:flex;justify-content:space-between}
   .card{background:var(--bg);border:1px solid var(--line);border-radius:5px;
-        padding:8px 9px;margin-bottom:6px;font-size:12.5px}
+        padding:8px 9px;margin-bottom:6px;font-size:12.5px;line-height:1.35}
   body.light .card{background:#fff}
   .card .cm{margin-top:5px;display:flex;gap:5px;flex-wrap:wrap}
+  .card .bl{font-size:10.5px;color:var(--red);margin-top:4px}
 
-  .gal{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}
+  .gal{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+  @media (max-width:1000px){ .gal{grid-template-columns:repeat(2,minmax(0,1fr))} }
   .gcard{border:1px solid var(--line);border-radius:6px;overflow:hidden}
-  .gimg{height:66px;background:linear-gradient(135deg,#243b53,#3a6ea5)}
+  .gimg{height:62px;background:linear-gradient(135deg,#243b53,#3a6ea5)}
   .gbody{padding:8px 9px}
   .gtt{font-size:12.5px;font-weight:500;margin-bottom:4px;line-height:1.3}
 
+  /* rail furniture */
+  .rbox{background:var(--panel);border:1px solid var(--line);border-radius:7px;
+        padding:11px 13px;margin-bottom:9px}
+  .rrow{display:flex;justify-content:space-between;align-items:baseline;
+        padding:5px 0;border-bottom:1px solid var(--hair);font-size:12.5px}
+  .rrow:last-child{border-bottom:0}
+  .rrow .v{font-variant-numeric:tabular-nums;font-weight:600}
+  .big{font-size:27px;font-weight:600;letter-spacing:-.025em;line-height:1;
+       font-variant-numeric:tabular-nums}
+  .biglab{font-size:10px;color:var(--faint);text-transform:uppercase;
+       letter-spacing:.07em;margin-top:3px}
+  .prog{height:4px;background:var(--hair);border-radius:3px;overflow:hidden;margin-top:6px}
+  .prog i{display:block;height:100%;border-radius:3px;background:var(--blue)}
+
   .embed{border:1px solid var(--line);border-radius:6px;overflow:hidden;background:var(--panel)}
   .embed iframe{display:block;width:100%;border:0}
-  .elab{font-size:10px;color:var(--faint);padding:4px 8px;border-bottom:1px solid var(--line);
+  .elab{font-size:9.5px;color:var(--faint);padding:4px 8px;border-bottom:1px solid var(--line);
         letter-spacing:.05em;text-transform:uppercase}
 
-  .btnrow{display:flex;gap:8px;flex-wrap:wrap;margin:10px 0 4px}
-  .pbtn{border:1px solid var(--line);border-radius:6px;padding:10px 13px;font-size:13px;
-        display:flex;align-items:center;gap:9px;background:var(--panel);cursor:pointer;flex:1;min-width:150px}
-  .pbtn:hover{border-color:var(--blue)}
-  .pbtn .pi{font-size:16px}
-  .pbtn .pd{font-size:10.5px;color:var(--faint);display:block;margin-top:1px}
-
-  .warn{border-left:3px solid var(--gold);background:rgba(201,162,39,.07);
+  .warnbox{border-left:3px solid var(--gold);background:rgba(201,162,39,.07);
         padding:10px 13px;border-radius:0 5px 5px 0;font-size:12.5px;margin:12px 0}
-  .prog{height:5px;background:var(--hair);border-radius:3px;overflow:hidden;margin-top:5px}
-  .prog i{display:block;height:100%;background:var(--blue)}
-  .stat{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:10px 0}
-  .sbox{background:var(--panel);border:1px solid var(--line);border-radius:6px;padding:11px 13px}
-  .sn{font-size:23px;font-weight:600;letter-spacing:-.02em}
-  .sl{font-size:10.5px;color:var(--faint);text-transform:uppercase;letter-spacing:.06em;margin-top:2px}
   .hide{display:none !important}
   .note{font-size:11.5px;color:var(--faint);font-style:italic;margin-top:6px}
 </style>
 </head>
 <body>
 
-<div id="ctl">
-  <button id="th">Light</button>
-</div>
+<div id="ctl"><button id="th">Light</button><button id="nar">Narrow</button></div>
 
 <aside>
   <div class="ws"><span class="av">Y</span> Yohan's 2nd Brain</div>
@@ -146,7 +172,7 @@
   <div class="snav cur" data-p="deck">&#128760;&#65039; Flight Deck</div>
   <div class="sect">Spokes</div>
   <div class="snav" data-p="acad">&#127891; Academics</div>
-  <div class="snav" data-p="res">&#128760;&#65039; Research &amp; Thesis</div>
+  <div class="snav" data-p="res">&#128300; Research &amp; Thesis</div>
   <div class="snav" data-p="com">&#128206; Commitments</div>
   <div class="snav" data-p="body">&#127947;&#65039; Body</div>
   <div class="sect">Databases</div>
@@ -156,6 +182,7 @@
 </aside>
 
 <main>
+
 <!-- ==================== FLIGHT DECK ==================== -->
 <section data-page="deck">
   <div class="cover cv-deck"></div>
@@ -164,27 +191,54 @@
     <h1 class="title">Flight Deck</h1>
     <div class="callout"><span>&#128197;</span><span>Fall term, week 1. Classes start Wed 09 Sep.
       Thesis scoping is the one thing that matters this month.</span></div>
+    <div class="nav" data-nav></div>
 
-    <div class="cols c2">
+    <div class="cols">
       <div>
         <h2 class="sec">Today</h2>
-        <div class="embed"><div class="elab">embed &middot; agenda.html</div>
-          <iframe src="agenda.html" height="330" loading="lazy"></iframe></div>
+        <div class="embed"><div class="elab">embed &middot; day.html</div>
+          <iframe src="day.html" height="440" loading="lazy"></iframe></div>
+
         <h2 class="sec">This week <span class="cnt">34 events</span></h2>
         <div class="embed"><div class="elab">embed &middot; grid-b.html</div>
           <iframe src="grid-b.html" height="330" loading="lazy"></iframe></div>
-      </div>
-      <div>
-        <h2 class="sec">Counting down</h2>
-        <div class="embed"><div class="elab">embed &middot; countdown.html</div>
-          <iframe src="countdown.html" height="250" loading="lazy"></iframe></div>
-        <h2 class="sec">Go deeper</h2>
-        <div class="btnrow" style="flex-direction:column">
-          <div class="pbtn" data-go="acad"><span class="pi">&#127891;</span><span>Academics<span class="pd">7 classes &middot; graded events</span></span></div>
-          <div class="pbtn" data-go="res"><span class="pi">&#128760;&#65039;</span><span>Research &amp; Thesis<span class="pd">28 projects</span></span></div>
-          <div class="pbtn" data-go="com"><span class="pi">&#128206;</span><span>Commitments<span class="pd">external deadlines</span></span></div>
-          <div class="pbtn" data-go="body"><span class="pi">&#127947;&#65039;</span><span>Body<span class="pd">no data yet</span></span></div>
+
+        <h2 class="sec">Active projects <span class="cnt">Board &middot; by Phase</span></h2>
+        <div class="sub">From Projects. Drag a card between columns to change its phase.</div>
+        <div class="board">
+          <div class="bcol"><div class="bhead"><span>Planning</span><span>3</span></div>
+            <div class="card">Career + Certifications<div class="cm"><span class="chip g">Medium</span></div></div>
+            <div class="card">Portfolio Terminal &mdash; MVP<div class="cm"><span class="chip r">High</span></div></div>
+          </div>
+          <div class="bcol"><div class="bhead"><span>Research</span><span>4</span></div>
+            <div class="card">AI-Lab-Bridge<div class="cm"><span class="chip">Multi-agent</span></div></div>
+            <div class="card">Personal Investing System<div class="cm"><span class="chip r">High</span></div></div>
+          </div>
+          <div class="bcol hi"><div class="bhead"><span>Active</span><span>0</span></div>
+            <div class="card" style="opacity:.5">phase does not exist yet</div>
+          </div>
+          <div class="bcol"><div class="bhead"><span>Archive</span><span>21</span></div>
+            <div class="card" style="opacity:.5">collapsed</div>
+          </div>
         </div>
+      </div>
+
+      <div>
+        <h3 class="r">Runway</h3>
+        <div class="embed"><div class="elab">embed &middot; runway.html</div>
+          <iframe src="runway.html" height="330" loading="lazy"></iframe></div>
+
+        <h3 class="r">This week at a glance</h3>
+        <div class="rbox">
+          <div class="rrow"><span>Events</span><span class="v">34</span></div>
+          <div class="rrow"><span>Heaviest day</span><span class="v">Tue &middot; 12</span></div>
+          <div class="rrow"><span>Open tasks</span><span class="v">173</span></div>
+          <div class="rrow"><span>Overdue</span><span class="v" style="color:var(--red)">94</span></div>
+        </div>
+
+        <h3 class="r">Load</h3>
+        <div class="embed"><div class="elab">embed &middot; grid-c.html</div>
+          <iframe src="grid-c.html" height="230" loading="lazy"></iframe></div>
       </div>
     </div>
   </div>
@@ -194,122 +248,127 @@
 <section data-page="acad" class="hide">
   <div class="cover cv-acad"></div>
   <div class="wrap">
-    <div class="crumb">Flight Deck / Academics</div>
+    <div class="crumb" data-home>Flight Deck / Academics</div>
     <div class="icon">&#127891;</div>
     <h1 class="title">Academics</h1>
-    <div class="sub">Graded events only. Lectures live in the calendar, not here.</div>
+    <div class="callout"><span>&#127891;</span><span>Six classes this term.
+      Classes end 10 Dec &middot; no assignments after 4 Dec &middot; finals 14&ndash;18 Dec.</span></div>
+    <div class="nav" data-nav></div>
 
-    <div class="stat">
-      <div class="sbox"><div class="sn">6</div><div class="sl">Active classes</div></div>
-      <div class="sbox"><div class="sn">15</div><div class="sl">Items this term</div></div>
-      <div class="sbox"><div class="sn">1</div><div class="sl">Due this week</div></div>
-      <div class="sbox"><div class="sn">30</div><div class="sl">Archived (24.134)</div></div>
-    </div>
-
-    <h2 class="sec">By class <span class="cnt">grouped</span></h2>
-    <div class="vbar" data-vg="acad">
-      <span class="vtab on" data-v="table">Table</span><span class="vtab" data-v="board">Board</span>
-      <span class="vtab" data-v="cal">Calendar</span><span class="vtab" data-v="tl">Timeline</span>
-      <span class="vspacer"></span><span class="vbtn">Filter: not Done</span>
-      <span class="vbtn">Sort: Date</span><span class="vbtn">Group: Class Code</span></div>
-
-    <!-- TABLE -->
-    <div data-view="acad-table">
-      <div class="gt"><span class="chip b">14.003</span> Microeconomic Theory &mdash; 5 items</div>
-      <table>
-        <tr><th style="width:30px"></th><th>Item</th><th>Type</th><th>Date</th><th>Due in</th></tr>
-        <tr><td><span class="cb"></span></td><td>14.003 Lecture</td><td><span class="chip">Lecture</span></td><td>Wed 09 Sep</td><td><span class="chip r">1 day</span></td></tr>
-        <tr><td><span class="cb"></span></td><td>14.003 Recitation</td><td><span class="chip">Recitation</span></td><td>Fri 11 Sep</td><td>3 days</td></tr>
-        <tr><td><span class="cb"></span></td><td>14.003 Lecture</td><td><span class="chip">Lecture</span></td><td>Mon 14 Sep</td><td>6 days</td></tr>
-      </table>
-      <div class="gt"><span class="chip g">IDS.412</span> &mdash; 3 items</div>
-      <table>
-        <tr><td style="width:30px"><span class="cb"></span></td><td>IDS.412 Lecture</td><td><span class="chip">Lecture</span></td><td>Wed 09 Sep</td><td><span class="chip r">1 day</span></td></tr>
-        <tr><td><span class="cb"></span></td><td>IDS.412 Lecture</td><td><span class="chip">Lecture</span></td><td>Mon 14 Sep</td><td>6 days</td></tr>
-      </table>
-      <div class="gt"><span class="chip p">16.990</span> &mdash; 3 items &nbsp;
-        <span class="chip">16.987</span> <span class="chip">16.S896</span> <span class="chip">6.9270</span></div>
-    </div>
-
-    <!-- BOARD -->
-    <div data-view="acad-board" class="hide">
-      <div class="board" style="grid-template-columns:repeat(4,minmax(0,1fr))">
-        <div class="bcol"><div class="bhead"><span>14.003</span><span>5</span></div>
-          <div class="card">Lecture<div class="cm"><span class="chip r">1 day</span></div></div>
-          <div class="card">Recitation<div class="cm"><span class="chip">3 days</span></div></div>
-          <div class="card">Lecture<div class="cm"><span class="chip">6 days</span></div></div>
+    <div class="cols">
+      <div>
+        <h2 class="sec">Due in 7 days <span class="cnt">List</span></h2>
+        <div class="sub">The only section that changes daily. Flat list, no grouping.</div>
+        <div class="vbar" data-vg="due">
+          <span class="vtab on" data-v="list">List</span>
+          <span class="vtab" data-v="cal">Calendar</span>
+          <span class="vspacer"></span>
+          <span class="vbtn">Filter: Due in &le; 7, not Done</span><span class="vbtn">Sort: Due in</span></div>
+        <div data-view="due-list">
+          <table>
+            <tr><td style="width:28px"><span class="cb"></span></td><td>14.003 Lecture</td>
+                <td><span class="chip b">14.003</span></td><td>Wed 09 Sep</td><td><span class="chip r">1 day</span></td></tr>
+            <tr><td><span class="cb"></span></td><td>IDS.412 Lecture</td>
+                <td><span class="chip g">IDS.412</span></td><td>Wed 09 Sep</td><td><span class="chip r">1 day</span></td></tr>
+            <tr><td><span class="cb"></span></td><td>14.003 Recitation</td>
+                <td><span class="chip b">14.003</span></td><td>Fri 11 Sep</td><td>3 days</td></tr>
+            <tr><td><span class="cb"></span></td><td>16.990 Lecture</td>
+                <td><span class="chip p">16.990</span></td><td>Mon 14 Sep</td><td>6 days</td></tr>
+          </table>
         </div>
-        <div class="bcol"><div class="bhead"><span>IDS.412</span><span>3</span></div>
-          <div class="card">Lecture<div class="cm"><span class="chip r">1 day</span></div></div>
-          <div class="card">Lecture<div class="cm"><span class="chip">6 days</span></div></div>
+        <div data-view="due-cal" class="hide">
+          <table style="table-layout:fixed">
+            <tr><th>Mon</th><th>Tue</th><th>Wed</th><th>Thu</th><th>Fri</th><th>Sat</th><th>Sun</th></tr>
+            <tr style="height:72px;vertical-align:top">
+              <td><span style="font-size:11px;color:var(--faint)">7</span></td>
+              <td><span style="font-size:11px;color:var(--faint)">8</span><div class="chip" style="margin-top:3px">Reorient</div></td>
+              <td style="background:var(--panel)"><span style="font-size:11px;font-weight:600">9</span>
+                  <div class="chip b" style="margin-top:3px">14.003</div>
+                  <div class="chip g" style="margin-top:3px">IDS.412</div></td>
+              <td><span style="font-size:11px;color:var(--faint)">10</span></td>
+              <td><span style="font-size:11px;color:var(--faint)">11</span><div class="chip b" style="margin-top:3px">Rec</div></td>
+              <td><span style="font-size:11px;color:var(--faint)">12</span></td>
+              <td><span style="font-size:11px;color:var(--faint)">13</span></td>
+            </tr>
+          </table>
         </div>
-        <div class="bcol"><div class="bhead"><span>16.990</span><span>3</span></div>
-          <div class="card">Lecture<div class="cm"><span class="chip">6 days</span></div></div>
+
+        <h2 class="sec">By class <span class="cnt">grouped</span></h2>
+        <div class="vbar" data-vg="acad">
+          <span class="vtab on" data-v="table">Table</span><span class="vtab" data-v="board">Board</span>
+          <span class="vtab" data-v="tl">Timeline</span>
+          <span class="vspacer"></span><span class="vbtn">Group: Class Code</span></div>
+
+        <div data-view="acad-table">
+          <div class="gt"><span class="chip b">14.003</span> Microeconomic Theory &mdash; 5 items</div>
+          <table>
+            <tr><td style="width:28px"><span class="cb"></span></td><td>Lecture</td><td>Wed 09 Sep</td><td><span class="chip r">1 day</span></td></tr>
+            <tr><td><span class="cb"></span></td><td>Recitation</td><td>Fri 11 Sep</td><td>3 days</td></tr>
+          </table>
+          <div class="gt"><span class="chip g">IDS.412</span> &mdash; 3 items</div>
+          <table>
+            <tr><td style="width:28px"><span class="cb"></span></td><td>Lecture</td><td>Wed 09 Sep</td><td><span class="chip r">1 day</span></td></tr>
+          </table>
+          <div class="gt"><span class="chip p">16.990</span> 3 &nbsp;<span class="chip">16.987</span> 1
+            &nbsp;<span class="chip">16.S896</span> 2 &nbsp;<span class="chip">6.9270</span> 1</div>
         </div>
-        <div class="bcol"><div class="bhead"><span>Other</span><span>4</span></div>
-          <div class="card">16.987 &middot; 16.S896 &middot; 6.9270<div class="cm"><span class="chip">later</span></div></div>
+
+        <div data-view="acad-board" class="hide">
+          <div class="board">
+            <div class="bcol"><div class="bhead"><span>14.003</span><span>5</span></div>
+              <div class="card">Lecture<div class="cm"><span class="chip r">1 day</span></div></div>
+              <div class="card">Recitation<div class="cm"><span class="chip">3 days</span></div></div>
+            </div>
+            <div class="bcol"><div class="bhead"><span>IDS.412</span><span>3</span></div>
+              <div class="card">Lecture<div class="cm"><span class="chip r">1 day</span></div></div>
+            </div>
+            <div class="bcol"><div class="bhead"><span>16.990</span><span>3</span></div>
+              <div class="card">Lecture<div class="cm"><span class="chip">6 days</span></div></div>
+            </div>
+            <div class="bcol"><div class="bhead"><span>Other</span><span>4</span></div>
+              <div class="card">16.987 &middot; 16.S896 &middot; 6.9270</div>
+            </div>
+          </div>
+        </div>
+
+        <div data-view="acad-tl" class="hide">
+          <table>
+            <tr><th style="width:86px">Class</th><th>Sep</th><th>Oct</th><th>Nov</th><th>Dec</th></tr>
+            <tr><td><span class="chip b">14.003</span></td><td colspan="4"><div class="prog"><i style="width:96%"></i></div></td></tr>
+            <tr><td><span class="chip g">IDS.412</span></td><td colspan="4"><div class="prog"><i style="width:96%;background:var(--gold)"></i></div></td></tr>
+            <tr><td><span class="chip p">16.990</span></td><td colspan="4"><div class="prog"><i style="width:96%;background:var(--purple)"></i></div></td></tr>
+          </table>
+          <div class="note">Timeline needs a start and end date on each row.</div>
+        </div>
+
+        <div class="warnbox"><b>Gap:</b> Task Status is empty on all 45 rows, so "not Done"
+          filters nothing yet. Fill it on graded items only.</div>
+      </div>
+
+      <div>
+        <h3 class="r">Term</h3>
+        <div class="rbox">
+          <div class="rrow"><span>Classes end</span><span class="v">10 Dec</span></div>
+          <div class="rrow"><span>No assignments after</span><span class="v">4 Dec</span></div>
+          <div class="rrow"><span>Finals</span><span class="v">14&ndash;18 Dec</span></div>
+        </div>
+        <h3 class="r">Load</h3>
+        <div class="rbox">
+          <div class="big">6</div><div class="biglab">Active classes</div>
+          <div class="prog" style="margin-top:9px"><i style="width:33%"></i></div>
+          <div class="note" style="margin-top:6px">15 items this term &middot; 30 archived (24.134)</div>
+        </div>
+        <h3 class="r">Classes</h3>
+        <div class="rbox">
+          <div class="rrow"><span><span class="chip b">14.003</span></span><span class="v">5</span></div>
+          <div class="rrow"><span><span class="chip p">16.990</span></span><span class="v">3</span></div>
+          <div class="rrow"><span><span class="chip g">IDS.412</span></span><span class="v">3</span></div>
+          <div class="rrow"><span><span class="chip">16.S896</span></span><span class="v">2</span></div>
+          <div class="rrow"><span><span class="chip">16.987</span></span><span class="v">1</span></div>
+          <div class="rrow"><span><span class="chip">6.9270</span></span><span class="v">1</span></div>
         </div>
       </div>
-      <div class="note">Board grouped by Class Code &mdash; drag a card to reassign its class.</div>
     </div>
-
-    <!-- CALENDAR -->
-    <div data-view="acad-cal" class="hide">
-      <table style="table-layout:fixed">
-        <tr><th>Mon</th><th>Tue</th><th>Wed</th><th>Thu</th><th>Fri</th><th>Sat</th><th>Sun</th></tr>
-        <tr style="height:78px;vertical-align:top">
-          <td><div style="font-size:11px;color:var(--faint)">7</div></td>
-          <td><div style="font-size:11px;color:var(--faint)">8</div>
-              <div class="chip" style="margin-top:3px">Reorientation</div></td>
-          <td style="background:var(--panel)"><div style="font-size:11px;font-weight:600">9</div>
-              <div class="chip b" style="margin-top:3px">14.003</div>
-              <div class="chip g" style="margin-top:3px">IDS.412</div></td>
-          <td><div style="font-size:11px;color:var(--faint)">10</div></td>
-          <td><div style="font-size:11px;color:var(--faint)">11</div>
-              <div class="chip b" style="margin-top:3px">14.003 Rec</div></td>
-          <td><div style="font-size:11px;color:var(--faint)">12</div></td>
-          <td><div style="font-size:11px;color:var(--faint)">13</div></td>
-        </tr>
-        <tr style="height:78px;vertical-align:top">
-          <td><div style="font-size:11px;color:var(--faint)">14</div>
-              <div class="chip b" style="margin-top:3px">14.003</div>
-              <div class="chip p" style="margin-top:3px">6.9270</div></td>
-          <td><div style="font-size:11px;color:var(--faint)">15</div></td>
-          <td><div style="font-size:11px;color:var(--faint)">16</div>
-              <div class="chip g" style="margin-top:3px">IDS.412</div></td>
-          <td><div style="font-size:11px;color:var(--faint)">17</div></td>
-          <td><div style="font-size:11px;color:var(--faint)">18</div></td>
-          <td><div style="font-size:11px;color:var(--faint)">19</div></td>
-          <td><div style="font-size:11px;color:var(--faint)">20</div></td>
-        </tr>
-      </table>
-      <div class="note">Calendar view of the same rows &mdash; best for spotting collision weeks.</div>
-    </div>
-
-    <!-- TIMELINE -->
-    <div data-view="acad-tl" class="hide">
-      <table>
-        <tr><th style="width:90px">Class</th><th>Sep</th><th>Oct</th><th>Nov</th><th>Dec</th></tr>
-        <tr><td><span class="chip b">14.003</span></td><td colspan="4"><div class="prog"><i style="width:96%"></i></div></td></tr>
-        <tr><td><span class="chip g">IDS.412</span></td><td colspan="4"><div class="prog"><i style="width:96%;background:var(--gold)"></i></div></td></tr>
-        <tr><td><span class="chip p">16.990</span></td><td colspan="4"><div class="prog"><i style="width:96%;background:var(--purple)"></i></div></td></tr>
-        <tr><td><span class="chip">16.987</span></td><td colspan="4"><div class="prog"><i style="width:62%;background:var(--green)"></i></div></td></tr>
-      </table>
-      <div class="note">Timeline &mdash; one bar per class across the term. Needs a start and end date on each row.</div>
-    </div>
-
-    <div class="warn"><b>Gap:</b> Task Status is empty on all 45 rows, so "not Done" cannot filter anything yet.
-      Fill it on graded items only &mdash; lectures do not need a status.</div>
-
-    <h2 class="sec">Term timeline</h2>
-    <div class="sub">Same database, Timeline view &mdash; one bar per class across the term.</div>
-    <table>
-      <tr><th>Class</th><th>Sep</th><th>Oct</th><th>Nov</th><th>Dec</th></tr>
-      <tr><td><span class="chip b">14.003</span></td><td colspan="4"><div class="prog"><i style="width:96%"></i></div></td></tr>
-      <tr><td><span class="chip p">16.990</span></td><td colspan="4"><div class="prog"><i style="width:96%;background:var(--purple)"></i></div></td></tr>
-      <tr><td><span class="chip g">IDS.412</span></td><td colspan="4"><div class="prog"><i style="width:96%;background:var(--gold)"></i></div></td></tr>
-    </table>
-    <div class="note">Classes end 10 Dec &middot; finals 14&ndash;18 Dec &middot; no assignments after 4 Dec.</div>
   </div>
 </section>
 
@@ -317,62 +376,102 @@
 <section data-page="res" class="hide">
   <div class="cover cv-res"></div>
   <div class="wrap">
-    <div class="crumb">Flight Deck / Research &amp; Thesis</div>
-    <div class="icon">&#128760;&#65039;</div>
+    <div class="crumb" data-home>Flight Deck / Research &amp; Thesis</div>
+    <div class="icon">&#128300;</div>
     <h1 class="title">Research &amp; Thesis</h1>
     <div class="callout"><span>&#127919;</span><span><b>Thesis, Feb 2027.</b>
       Degree application 11 Sep 26 &middot; title due 11 Dec &middot; thesis due 15 Jan 27.
       Scope is the blocker.</span></div>
+    <div class="nav" data-nav></div>
 
-    <div class="stat">
-      <div class="sbox"><div class="sn">4</div><div class="sl">In research</div></div>
-      <div class="sbox"><div class="sn">3</div><div class="sl">Planning</div></div>
-      <div class="sbox"><div class="sn">21</div><div class="sl">Archived</div></div>
-      <div class="sbox"><div class="sn">4</div><div class="sl">Days to degree app</div></div>
+    <div class="cols">
+      <div>
+        <h2 class="sec">Active projects <span class="cnt">Board &middot; by Phase</span></h2>
+        <div class="vbar" data-vg="proj">
+          <span class="vtab on" data-v="board">Board</span><span class="vtab" data-v="table">Table</span>
+          <span class="vspacer"></span><span class="vbtn">Group: Phase</span><span class="vbtn">Filter: not Archive</span></div>
+
+        <div data-view="proj-board">
+          <div class="board">
+            <div class="bcol"><div class="bhead"><span>Planning</span><span>3</span></div>
+              <div class="card">Career + Certifications<div class="cm"><span class="chip g">Medium</span></div></div>
+              <div class="card">Portfolio Terminal &mdash; MVP<div class="cm"><span class="chip r">High</span></div></div>
+            </div>
+            <div class="bcol"><div class="bhead"><span>Research</span><span>4</span></div>
+              <div class="card">AI-Lab-Bridge<div class="cm"><span class="chip">Multi-agent</span></div></div>
+              <div class="card">Personal Investing System<div class="cm"><span class="chip r">High</span></div></div>
+              <div class="card">GEO maneuver detection
+                <div class="cm"><span class="chip b">Thesis</span></div>
+                <div class="bl">blocked: scope undefined</div></div>
+            </div>
+            <div class="bcol hi"><div class="bhead"><span>Active</span><span>0</span></div>
+              <div class="card" style="opacity:.5">phase does not exist yet</div>
+            </div>
+            <div class="bcol"><div class="bhead"><span>Archive</span><span>21</span></div>
+              <div class="card" style="opacity:.5">collapsed</div>
+            </div>
+          </div>
+        </div>
+
+        <div data-view="proj-table" class="hide">
+          <table>
+            <tr><th>Project</th><th>Phase</th><th>Priority</th><th>Blocker</th></tr>
+            <tr><td>GEO maneuver detection</td><td><span class="chip gr">Research</span></td><td><span class="chip r">High</span></td><td><span class="chip r">scope</span></td></tr>
+            <tr><td>AI-Lab-Bridge</td><td><span class="chip gr">Research</span></td><td>&mdash;</td><td>&mdash;</td></tr>
+            <tr><td>Portfolio Terminal</td><td><span class="chip">Planning</span></td><td><span class="chip r">High</span></td><td>&mdash;</td></tr>
+          </table>
+        </div>
+
+        <div class="warnbox"><b>Add an "Active" phase.</b> 21 of 28 projects sit in Archive and
+          nothing is marked in flight, so the board cannot answer "what am I working on".</div>
+
+        <h2 class="sec">Thesis milestones</h2>
+        <table>
+          <tr><th style="width:28px"></th><th>Milestone</th><th>Date</th><th>Runway</th></tr>
+          <tr><td><span class="cb"></span></td><td>Submit degree application</td><td>11 Sep 2026</td><td><span class="chip r">4 days</span></td></tr>
+          <tr><td><span class="cb"></span></td><td>Scope memo &mdash; first draft</td><td>Sep 2026</td><td><span class="chip g">blocker</span></td></tr>
+          <tr><td><span class="cb"></span></td><td>Thesis title due</td><td>11 Dec 2026</td><td>95 days</td></tr>
+          <tr><td><span class="cb"></span></td><td>Thesis due</td><td>15 Jan 2027</td><td>130 days</td></tr>
+        </table>
+
+        <h2 class="sec">Reading queue <span class="cnt">Gallery</span></h2>
+        <div class="gal">
+          <div class="gcard"><div class="gimg"></div><div class="gbody">
+            <div class="gtt">GEO maneuver detection &mdash; survey</div><span class="chip b">Thesis</span></div></div>
+          <div class="gcard"><div class="gimg" style="background:linear-gradient(135deg,#3d2b52,#6b4d94)"></div>
+            <div class="gbody"><div class="gtt">SDA sensor tasking</div><span class="chip">Queued</span></div></div>
+          <div class="gcard"><div class="gimg" style="background:linear-gradient(135deg,#1a3d2b,#2d6b52)"></div>
+            <div class="gbody"><div class="gtt">Pattern-of-life anomaly detection</div><span class="chip gr">Read</span></div></div>
+        </div>
+        <div class="warnbox"><b>Literature Review is duplicated</b> &mdash; two databases, 22 rows
+          each, different parents. Merge before wiring this view.</div>
+      </div>
+
+      <div>
+        <h3 class="r">Runway to thesis</h3>
+        <div class="rbox">
+          <div class="big" style="color:var(--red)">4</div><div class="biglab">Days to degree app</div>
+          <div class="prog" style="margin-top:9px"><i style="width:3%;background:var(--red)"></i></div>
+        </div>
+        <div class="rbox">
+          <div class="big">130</div><div class="biglab">Days to thesis due</div>
+          <div class="prog" style="margin-top:9px"><i style="width:12%"></i></div>
+          <div class="note" style="margin-top:6px">15 Jan 2027 &middot; hard deadline</div>
+        </div>
+        <h3 class="r">Pipeline</h3>
+        <div class="rbox">
+          <div class="rrow"><span>Projects in research</span><span class="v">4</span></div>
+          <div class="rrow"><span>Planning</span><span class="v">3</span></div>
+          <div class="rrow"><span>Archived</span><span class="v">21</span></div>
+          <div class="rrow"><span>Papers logged</span><span class="v">22</span></div>
+        </div>
+        <h3 class="r">Blocked</h3>
+        <div class="rbox">
+          <div class="rrow"><span>GEO maneuver detection</span><span class="chip r">scope</span></div>
+          <div class="note" style="margin-top:6px">THESIS-SCOPE.md is the blocker note.</div>
+        </div>
+      </div>
     </div>
-
-    <h2 class="sec">Projects <span class="cnt">Board &middot; grouped by Phase</span></h2>
-    <div class="board">
-      <div class="bcol"><div class="bhead"><span>Planning</span><span>3</span></div>
-        <div class="card">Career + Certifications<div class="cm"><span class="chip g">Medium</span></div></div>
-        <div class="card">Portfolio Terminal &mdash; MVP<div class="cm"><span class="chip r">High</span></div></div>
-      </div>
-      <div class="bcol"><div class="bhead"><span>Research</span><span>4</span></div>
-        <div class="card">AI-Lab-Bridge<div class="cm"><span class="chip">Multi-agent</span></div></div>
-        <div class="card">Personal Investing System<div class="cm"><span class="chip r">High</span></div></div>
-      </div>
-      <div class="bcol" style="outline:1px dashed var(--gold)"><div class="bhead"><span>Active</span><span>0</span></div>
-        <div class="card" style="opacity:.5">does not exist yet</div>
-      </div>
-      <div class="bcol"><div class="bhead"><span>Archive</span><span>21</span></div>
-        <div class="card" style="opacity:.5">collapsed</div>
-      </div>
-    </div>
-    <div class="warn"><b>Add an "Active" phase.</b> 21 of 28 projects sit in Archive and nothing is
-      marked in flight &mdash; so the board cannot answer "what am I working on".</div>
-
-    <h2 class="sec">Thesis milestones</h2>
-    <table>
-      <tr><th style="width:30px"></th><th>Milestone</th><th>Date</th><th>Status</th></tr>
-      <tr><td><span class="cb"></span></td><td>Submit degree application</td><td>11 Sep 2026</td><td><span class="chip r">4 days</span></td></tr>
-      <tr><td><span class="cb"></span></td><td>Scope memo &mdash; first draft</td><td>Sep 2026</td><td><span class="chip g">Blocker</span></td></tr>
-      <tr><td><span class="cb"></span></td><td>Thesis title due</td><td>11 Dec 2026</td><td>95 days</td></tr>
-      <tr><td><span class="cb"></span></td><td>Thesis due</td><td>15 Jan 2027</td><td>130 days</td></tr>
-    </table>
-
-    <h2 class="sec">Reading queue <span class="cnt">Gallery</span></h2>
-    <div class="gal">
-      <div class="gcard"><div class="gimg"></div><div class="gbody">
-        <div class="gtt">GEO maneuver detection &mdash; survey</div><span class="chip b">Thesis</span></div></div>
-      <div class="gcard"><div class="gimg" style="background:linear-gradient(135deg,#3d2b52,#6b4d94)"></div><div class="gbody">
-        <div class="gtt">SDA sensor tasking</div><span class="chip">Queued</span></div></div>
-      <div class="gcard"><div class="gimg" style="background:linear-gradient(135deg,#1a3d2b,#2d6b52)"></div><div class="gbody">
-        <div class="gtt">Pattern-of-life anomaly detection</div><span class="chip gr">Read</span></div></div>
-      <div class="gcard" style="border-style:dashed;opacity:.6"><div class="gbody" style="padding:18px 9px">
-        <div class="gtt">+ New</div></div></div>
-    </div>
-    <div class="warn"><b>Literature Review is duplicated</b> &mdash; two databases, 22 rows each,
-      different parents. Merge before wiring this view.</div>
   </div>
 </section>
 
@@ -380,35 +479,90 @@
 <section data-page="com" class="hide">
   <div class="cover cv-com"></div>
   <div class="wrap">
-    <div class="crumb">Flight Deck / Commitments</div>
+    <div class="crumb" data-home>Flight Deck / Commitments</div>
     <div class="icon">&#128206;</div>
     <h1 class="title">Commitments</h1>
-    <div class="sub">External deadlines. Nobody sends a reminder for these.</div>
+    <div class="callout warn"><span>&#9888;&#65039;</span><span>External deadlines with no reminder.
+      The goal for the tripwire section is to be <b>empty</b>.</span></div>
+    <div class="nav" data-nav></div>
 
-    <h2 class="sec">Next up</h2>
-    <div class="vbar"><span class="vtab on">Table</span><span class="vtab">Calendar</span>
-      <span class="vspacer"></span><span class="vbtn">Filter: Done unchecked</span><span class="vbtn">Sort: Date</span></div>
-    <table>
-      <tr><th style="width:30px"></th><th>Commitment</th><th>Type</th><th>Date</th><th>Priority</th></tr>
-      <tr><td><span class="cb"></span></td><td>Submit petition to Rachael and Barb</td><td><span class="chip">Admin</span></td><td>Tue 08 Sep 1600</td><td><span class="chip r">High</span></td></tr>
-      <tr><td><span class="cb"></span></td><td>TPP Mandatory Reorientation</td><td><span class="chip">Admin</span></td><td>Tue 08 Sep</td><td><span class="chip g">Medium</span></td></tr>
-      <tr><td><span class="cb"></span></td><td>Degree application</td><td><span class="chip p">Thesis</span></td><td>Fri 11 Sep</td><td><span class="chip r">High</span></td></tr>
-      <tr><td><span class="cb"></span></td><td>Makerspace training &mdash; cancel if no spot</td><td><span class="chip">Admin</span></td><td>Sat 12 Sep 1000</td><td>Low</td></tr>
-      <tr><td><span class="cb"></span></td><td>Call hotel re: 7 Nov</td><td><span class="chip">Travel</span></td><td>Nov</td><td><span class="chip g">City unknown</span></td></tr>
-    </table>
+    <div class="cols">
+      <div>
+        <h2 class="sec">Tripwire <span class="cnt">start now or behind</span></h2>
+        <div class="sub">Surfaces 4&ndash;8 weeks out, not 2 days out.</div>
+        <table>
+          <tr><td style="width:28px"><span class="cb"></span></td><td>Degree application</td>
+              <td><span class="chip p">Thesis</span></td><td>Fri 11 Sep</td><td><span class="chip r">START NOW</span></td></tr>
+          <tr><td><span class="cb"></span></td><td>Submit petition to Rachael and Barb</td>
+              <td><span class="chip">Admin</span></td><td>Tue 08 Sep 1600</td><td><span class="chip r">1 day</span></td></tr>
+        </table>
 
-    <h2 class="sec">Fellowships &amp; applications</h2>
-    <div class="gal" style="grid-template-columns:repeat(3,1fr)">
-      <div class="gcard"><div class="gimg" style="background:linear-gradient(135deg,#3d2416,#94592f)"></div>
-        <div class="gbody"><div class="gtt">Draper Scholar &mdash; quarterly</div><span class="chip">Recurring</span></div></div>
-      <div class="gcard" style="border-style:dashed;opacity:.6"><div class="gbody" style="padding:20px 9px">
-        <div class="gtt">+ Add fellowship</div></div></div>
-      <div class="gcard" style="border-style:dashed;opacity:.6"><div class="gbody" style="padding:20px 9px">
-        <div class="gtt">+ Add application</div></div></div>
+        <h2 class="sec">The three <span class="cnt">today</span></h2>
+        <div class="sub">One to three. Never more. Clear the flag each morning.</div>
+        <table>
+          <tr><td style="width:28px"><span class="cb on"></span></td><td>Petition to Rachael and Barb</td>
+              <td><span class="chip">Block</span></td><td><span class="chip">1600</span></td></tr>
+          <tr><td><span class="cb"></span></td><td>Thesis scope memo &mdash; outline</td>
+              <td><span class="chip">Block</span></td><td><span class="chip gr">deep</span></td></tr>
+        </table>
+
+        <h2 class="sec">Next up <span class="cnt">Table</span></h2>
+        <div class="vbar" data-vg="com">
+          <span class="vtab on" data-v="table">Table</span><span class="vtab" data-v="cal">Calendar</span>
+          <span class="vspacer"></span><span class="vbtn">Filter: Done unchecked</span><span class="vbtn">Sort: Date</span></div>
+        <div data-view="com-table">
+          <table>
+            <tr><th style="width:28px"></th><th>Commitment</th><th>Type</th><th>Date</th><th>Runway</th></tr>
+            <tr><td><span class="cb"></span></td><td>TPP Mandatory Reorientation</td><td><span class="chip">Admin</span></td><td>Tue 08 Sep</td><td><span class="chip r">1 day</span></td></tr>
+            <tr><td><span class="cb"></span></td><td>Makerspace training &mdash; cancel if no spot</td><td><span class="chip">Admin</span></td><td>Sat 12 Sep 1000</td><td>5 days</td></tr>
+            <tr><td><span class="cb"></span></td><td>Call hotel re: 7 Nov</td><td><span class="chip">Travel</span></td><td>Nov</td><td><span class="chip g">city unknown</span></td></tr>
+          </table>
+        </div>
+        <div data-view="com-cal" class="hide">
+          <table style="table-layout:fixed">
+            <tr><th>Mon</th><th>Tue</th><th>Wed</th><th>Thu</th><th>Fri</th><th>Sat</th><th>Sun</th></tr>
+            <tr style="height:72px;vertical-align:top">
+              <td><span style="font-size:11px;color:var(--faint)">7</span></td>
+              <td><span style="font-size:11px;color:var(--faint)">8</span>
+                  <div class="chip r" style="margin-top:3px">Petition 1600</div></td>
+              <td><span style="font-size:11px;color:var(--faint)">9</span></td>
+              <td><span style="font-size:11px;color:var(--faint)">10</span></td>
+              <td><span style="font-size:11px;color:var(--faint)">11</span>
+                  <div class="chip p" style="margin-top:3px">Degree app</div></td>
+              <td><span style="font-size:11px;color:var(--faint)">12</span>
+                  <div class="chip" style="margin-top:3px">Makerspace</div></td>
+              <td><span style="font-size:11px;color:var(--faint)">13</span></td>
+            </tr>
+          </table>
+        </div>
+
+        <div class="warnbox"><b>Needs a Kind property.</b> Nothing is tagged as a fellowship or
+          application today, so this page cannot fill itself. Add <b>Kind</b>
+          (External Deadline / Application / Form / Admin) and <b>Lead time</b> in weeks.</div>
+      </div>
+
+      <div>
+        <h3 class="r">Triage</h3>
+        <div class="rbox">
+          <div class="rrow"><span>Open</span><span class="v">173</span></div>
+          <div class="rrow"><span>Overdue</span><span class="v" style="color:var(--red)">94</span></div>
+          <div class="rrow"><span>No status</span><span class="v" style="color:var(--gold)">85</span></div>
+          <div class="rrow"><span>Marked done</span><span class="v">2</span></div>
+        </div>
+        <div class="warnbox" style="margin-top:0">Over half the database is overdue. That is a
+          triage problem, not a display problem.</div>
+
+        <h3 class="r">Horizon</h3>
+        <div class="rbox">
+          <div class="rrow"><span>Today</span><span class="v">3</span></div>
+          <div class="rrow"><span>This week</span><span class="v">11</span></div>
+          <div class="rrow"><span>Next week</span><span class="v">6</span></div>
+          <div class="rrow"><span>Inbox</span><span class="v">85</span></div>
+        </div>
+        <div class="note">Horizon beats Eisenhower here: all 94 overdue items would land in one
+          quadrant.</div>
+      </div>
     </div>
-    <div class="warn"><b>Nearly empty by design.</b> Nothing in Tasks &amp; Meetings is tagged as a
-      fellowship or application. Add a <b>Scope</b> select &mdash; Now / Project / Someday &mdash; so a
-      thesis chapter stops looking like an errand.</div>
   </div>
 </section>
 
@@ -416,68 +570,96 @@
 <section data-page="body" class="hide">
   <div class="cover cv-body"></div>
   <div class="wrap">
-    <div class="crumb">Flight Deck / Body</div>
+    <div class="crumb" data-home>Flight Deck / Body</div>
     <div class="icon">&#127947;&#65039;</div>
     <h1 class="title">Body</h1>
-    <div class="callout" style="border-color:var(--gold)"><span>&#9888;&#65039;</span>
-      <span><b>This page has no data behind it.</b> Workouts has 0 rows and Meal Log has no date
-      property &mdash; so every view below would render empty today. This is the mockup of what it
-      becomes once seeded.</span></div>
+    <div class="callout warn"><span>&#9888;&#65039;</span><span><b>No data behind this page yet.</b>
+      Workouts has 0 rows and Meal Log has no date property, so every view below would render
+      empty today. This is what it becomes once seeded.</span></div>
+    <div class="nav" data-nav></div>
 
-    <div class="cols c2e">
+    <div class="cols">
       <div>
-        <h2 class="sec">This week &mdash; training</h2>
-        <div class="vbar"><span class="vtab on">Calendar</span><span class="vtab">Table</span>
-          <span class="vspacer"></span><span class="vbtn">Filter: this week</span></div>
+        <h2 class="sec">This week <span class="cnt">7 days stacked</span></h2>
+        <div class="sub">Vertical week &mdash; one row per day, training and meals side by side.</div>
         <table>
-          <tr><th>Day</th><th>Session</th><th>Where</th></tr>
-          <tr><td>Mon</td><td><span class="chip b">Push</span> Bench, OHP, dips</td><td>Z Center</td></tr>
-          <tr><td>Tue</td><td><span class="chip gr">Zone 2</span> 40 min</td><td>Charles</td></tr>
-          <tr><td>Wed</td><td><span class="chip p">Pull</span> Rows, chins</td><td>Z Center</td></tr>
-          <tr><td>Thu</td><td><span class="chip">Rest</span></td><td>&mdash;</td></tr>
-          <tr><td>Fri</td><td><span class="chip g">Legs</span> Squat, RDL</td><td>Z Center</td></tr>
+          <tr><th style="width:64px">Day</th><th>Training</th><th>Meals</th></tr>
+          <tr><td><b>Mon</b></td>
+              <td><span class="chip b">Push</span> Bench, OHP, dips <span class="chip">Z Center</span></td>
+              <td>Oats &middot; chicken bowl &middot; spicy pork</td></tr>
+          <tr><td><b>Tue</b></td>
+              <td><span class="chip gr">Zone 2</span> 40 min <span class="chip">Charles</span></td>
+              <td>Leftover bowl</td></tr>
+          <tr><td><b>Wed</b></td>
+              <td><span class="chip p">Pull</span> Rows, chins <span class="chip">Z Center</span></td>
+              <td>&mdash;</td></tr>
+          <tr><td><b>Thu</b></td><td><span class="chip">Rest</span></td><td>&mdash;</td></tr>
+          <tr><td><b>Fri</b></td>
+              <td><span class="chip g">Legs</span> Squat, RDL <span class="chip">Z Center</span></td>
+              <td>&mdash;</td></tr>
+          <tr><td><b>Sat</b></td><td><span class="chip">Open</span></td><td>&mdash;</td></tr>
+          <tr><td><b>Sun</b></td><td><span class="chip">Rest</span></td><td>Meal prep</td></tr>
+        </table>
+
+        <h2 class="sec">To make this real</h2>
+        <table>
+          <tr><td style="width:28px"><span class="cb"></span></td><td>Add a <b>Date</b> property to Meal Log</td><td><span class="chip">2 min</span></td></tr>
+          <tr><td><span class="cb"></span></td><td>Rename "Meal Log / Food Library" &rarr; <b>Workout Set Log</b> (its rows are bench press and cable crunches)</td><td><span class="chip">1 min</span></td></tr>
+          <tr><td><span class="cb"></span></td><td>Seed <b>Workouts</b> with one repeating week</td><td><span class="chip">10 min</span></td></tr>
         </table>
       </div>
+
       <div>
-        <h2 class="sec">Meals</h2>
-        <div class="vbar"><span class="vtab on">Calendar</span><span class="vtab">Gallery</span>
-          <span class="vspacer"></span><span class="vbtn">Group: Meal</span></div>
-        <table>
-          <tr><th>When</th><th>Meal</th><th>Notes</th></tr>
-          <tr><td>Mon 0730</td><td>Oats, eggs</td><td><span class="chip gr">GF</span></td></tr>
-          <tr><td>Mon 1230</td><td>Chicken rice bowl</td><td>meal prep</td></tr>
-          <tr><td>Mon 1900</td><td>Spicy pork, banchan</td><td><span class="chip r">no walnuts</span></td></tr>
-          <tr><td>Tue 1230</td><td>Leftover bowl</td><td>&mdash;</td></tr>
-        </table>
-        <div class="note">Allergy constraints carried from your rules: no crab, shrimp, or walnuts;
-          gluten-free option at every meal.</div>
+        <h3 class="r">Dietary rules</h3>
+        <div class="rbox">
+          <div class="rrow"><span>No crab</span><span class="chip r">always</span></div>
+          <div class="rrow"><span>No shrimp</span><span class="chip r">always</span></div>
+          <div class="rrow"><span>No walnuts</span><span class="chip r">always</span></div>
+          <div class="rrow"><span>GF option</span><span class="chip gr">every meal</span></div>
+          <div class="note" style="margin-top:7px">Watch shrimp paste in kimchi and candied
+            walnuts in banchan.</div>
+        </div>
+        <h3 class="r">Week</h3>
+        <div class="rbox">
+          <div class="big">4</div><div class="biglab">Sessions planned</div>
+          <div class="prog" style="margin-top:9px"><i style="width:0%"></i></div>
+          <div class="note" style="margin-top:6px">0 logged &mdash; database is empty</div>
+        </div>
       </div>
     </div>
-
-    <h2 class="sec">To make this real</h2>
-    <table>
-      <tr><td style="width:30px"><span class="cb"></span></td><td>Add a <b>Date</b> property to Meal Log</td><td><span class="chip">2 min</span></td></tr>
-      <tr><td><span class="cb"></span></td><td>Rename "Meal Log / Food Library" &rarr; <b>Workout Set Log</b> (its rows are bench press and cable crunches)</td><td><span class="chip">1 min</span></td></tr>
-      <tr><td><span class="cb"></span></td><td>Seed <b>Workouts</b> with one repeating week</td><td><span class="chip">10 min</span></td></tr>
-    </table>
   </div>
 </section>
 </main>
 
 <script>
+const NAV=[
+  ['deck','&#128760;&#65039;','Flight Deck','home'],
+  ['acad','&#127891;','Academics','6 classes'],
+  ['res','&#128300;','Research','thesis &middot; SERG'],
+  ['com','&#128206;','Commitments','deadlines'],
+  ['body','&#127947;&#65039;','Body','train &middot; eat'],
+];
+document.querySelectorAll('[data-nav]').forEach(n=>{
+  n.innerHTML = NAV.map(([k,ic,t,s])=>
+    `<a data-go="${k}"><span class="ic">${ic}</span><span><b>${t}</b><span>${s}</span></span></a>`).join('');
+});
+
 const pages=[...document.querySelectorAll('section[data-page]')];
 function go(p){
   pages.forEach(s=>s.classList.toggle('hide', s.dataset.page!==p));
   document.querySelectorAll('.snav[data-p]').forEach(n=>n.classList.toggle('cur',n.dataset.p===p));
+  document.querySelectorAll('.nav a[data-go]').forEach(a=>a.classList.toggle('cur',a.dataset.go===p));
   document.querySelector('main').scrollTop=0;
   location.hash=p;
 }
 document.querySelectorAll('.snav[data-p]').forEach(n=>n.onclick=()=>go(n.dataset.p));
-document.querySelectorAll('[data-go]').forEach(b=>b.onclick=()=>go(b.dataset.go));
-document.querySelectorAll('.crumb').forEach(c=>{c.style.cursor='pointer';c.onclick=()=>go('deck');});
-if(location.hash) go(location.hash.slice(1));
+document.addEventListener('click',e=>{
+  const a=e.target.closest('[data-go]'); if(a){ go(a.dataset.go); }
+  if(e.target.closest('[data-home]')) go('deck');
+});
+if(location.hash) go(location.hash.slice(1)); else go('deck');
 
-// database view tabs — actually switch the rendered view
+// database view tabs
 document.querySelectorAll('.vbar[data-vg]').forEach(bar=>{
   const grp=bar.dataset.vg;
   bar.querySelectorAll('.vtab[data-v]').forEach(tab=>{
@@ -491,8 +673,17 @@ document.querySelectorAll('.vbar[data-vg]').forEach(bar=>{
   });
 });
 
-const th=document.getElementById('th');
-th.onclick=()=>{const l=document.body.classList.toggle('light');th.textContent=l?'Dark':'Light';};
+document.getElementById('th').onclick=function(){
+  const l=document.body.classList.toggle('light'); this.textContent=l?'Dark':'Light';
+};
+// simulate the portrait monitor: force the 1-column breakpoint
+document.getElementById('nar').onclick=function(){
+  const on=this.classList.toggle('on');
+  document.querySelector('aside').style.display = on?'none':'';
+  document.querySelector('main').style.maxWidth = on?'1100px':'';
+  document.querySelector('main').style.margin   = on?'0 auto':'';
+  this.textContent = on?'Wide':'Narrow';
+};
 </script>
 </body>
 </html>
