@@ -103,7 +103,6 @@
       border-left-color:var(--now)}
   .ev.k-oth  {background:rgba(91,147,211,.17);border-color:rgba(91,147,211,.38);
       border-left-color:var(--blue)}
-  .ev.done{opacity:.42}
   .ev.done .lab{text-decoration:line-through}
 
   /* all-day items = full-span band, the gantt way */
@@ -116,7 +115,7 @@
   .ad.k-admin{border-left-color:var(--purple)} .ad.k-mil{border-left-color:var(--now)}
   .ad.k-oth{border-left-color:var(--blue)}
   .ad:hover{border-color:var(--blue);color:var(--ink)}
-  .ad.done{text-decoration:line-through;opacity:.55}
+  .ad.done{text-decoration:line-through}
   .adl{font-size:9px;color:var(--faint);letter-spacing:.08em;line-height:15px;
       text-transform:uppercase;padding-right:2px}
 
@@ -164,7 +163,6 @@
   .cc.k-res{border-left-color:var(--green)}
   .cc.k-admin{border-left-color:var(--purple)}
   .cc.k-mil{border-left-color:var(--now)}
-  .cc.done{opacity:.45}
   .cc .ct{font-variant-numeric:tabular-nums;color:var(--dim);font-size:9.5px;display:block;
       letter-spacing:.01em}
   .cc .cl{display:block;margin-top:3px;font-size:9.5px;color:var(--faint);
@@ -231,6 +229,71 @@
   .ldn{text-align:right;padding-right:12px;font-size:15px;font-weight:600;
       font-variant-numeric:tabular-nums}
   .ldn.zero{color:var(--faint);font-weight:400}
+
+  /* ---------- ITEM STATE: done / past / overdue ----------------------
+     done    — finished. Struck through but STILL LEGIBLE in every mode.
+               Opacity stays high enough to read; the strike carries the
+               meaning, not the fade.
+     past    — a meeting/event whose time has simply gone by. Nothing is
+               owed. Greyscaled + quiet, neutral grey rail. Not an alarm.
+     overdue — actionable work whose time has gone by and is NOT done.
+               Red rail, red text, warning glyph, full contrast. This is
+               the only state allowed to nag.
+     Exactly one of these classes is ever applied (done wins). ------- */
+
+  .done{opacity:.8}
+  .done:hover{opacity:1}
+  .done .ln, .done .n2, .done .cn, .done .lab, .done .tin,
+  .cati.done .n, .li.done .ln, .agi.done .n2{
+      text-decoration:line-through;
+      text-decoration-thickness:1.5px;
+      text-decoration-color:currentColor}
+  .ev.done .lab, .ev.done .lab.nm, .ev.done .tin{text-decoration:line-through}
+  a.ad.done{text-decoration:line-through;opacity:.8}
+  /* Keep struck text readable. Measured: dimming the colour AND the opacity
+     dropped 'done' to 2.5:1 on the light theme — under the 3:1 floor and no
+     longer "visible". The strike carries the meaning; the colour stays ink. */
+  .li.done .ln, .agi.done .n2, .cati.done .n, .cc.done .cn{color:inherit}
+
+  .past{opacity:.85;filter:grayscale(1)}
+  .past:hover{opacity:1;filter:grayscale(.3)}
+  .li.past, .agi.past, .cc.past, .ev.past, .ad.past, .cati.past{
+      border-left-color:var(--faint) !important}
+  .cati.past, .cati.overdue{border-left:2.5px solid var(--faint);padding-left:6px}
+  /* 'past' is signalled by full greyscale + a neutral grey rail, NOT by fading
+     the words away — on the light theme var(--dim) measured only 2.7:1. */
+  .past .ln, .past .n2, .past .cn, .past .n{color:inherit}
+  .past .lt, .past .t, .past .ct{color:var(--dim)}
+
+  .overdue{opacity:1}
+  .li.overdue, .agi.overdue, .cc.overdue, .ev.overdue, .ad.overdue, .cati.overdue{
+      border-left-color:var(--now) !important}
+  .overdue .ln, .overdue .n2, .overdue .cn, .overdue .n, .overdue .lab{
+      color:var(--now);font-weight:600}
+  .li.overdue .ln::before, .agi.overdue .n2::before,
+  .cati.overdue .n::before, .cc.overdue .cn::before,
+  .ad.overdue::before{content:"\26A0\FE0E\00a0";font-weight:700}
+  .ev.overdue{box-shadow:inset 0 0 0 1px var(--now);
+      background:rgba(224,108,108,.20);border-color:rgba(224,108,108,.55)}
+  /* spilled labels (.ev.out/.outl/.half .lab) set their own colour at 0,3,0 —
+     match that specificity or overdue bars keep plain ink text. */
+  .ev.overdue .lab, .ev.overdue .lab.nm, .ev.overdue .tin,
+  .ev.out.overdue .lab, .ev.outl.overdue .lab, .ev.half.overdue .lab.nm{
+      color:var(--now);font-weight:600}
+  .ev.past .lab, .ev.past .lab.nm, .ev.past .tin,
+  .ev.out.past .lab, .ev.outl.past .lab, .ev.half.past .lab.nm{color:inherit}
+  .ev.done .lab, .ev.done .lab.nm,
+  .ev.out.done .lab, .ev.outl.done .lab, .ev.half.done .lab.nm{
+      text-decoration:line-through;text-decoration-thickness:1.5px}
+  .ad.overdue{color:var(--now);border-style:solid}
+  .cc.overdue{background:rgba(224,108,108,.08)}
+
+  /* footer key swatches for the three states */
+  .sw.s-done{background:var(--dim);position:relative}
+  .sw.s-done::after{content:'';position:absolute;left:-1px;right:-1px;top:3px;
+      height:1px;background:var(--ink)}
+  .sw.s-past{background:var(--faint);opacity:.55}
+  .sw.s-over{background:var(--now)}
 </style>
 </head>
 <body>
@@ -269,6 +332,10 @@
   <span class="key"><i class="sw" style="background:var(--purple)"></i>Admin</span>
   <span class="key"><i class="sw" style="background:var(--now)"></i>Military</span>
   <span class="key"><i class="sw" style="background:var(--blue)"></i>Other</span>
+  <span style="width:10px"></span>
+  <span class="key"><i class="sw s-done"></i>Done</span>
+  <span class="key"><i class="sw s-past"></i>Past</span>
+  <span class="key"><i class="sw s-over"></i>Overdue</span>
   <span style="flex:1"></span><span id="gen"></span>
 </footer>
 
@@ -320,7 +387,61 @@ function kind(e){
 const KCOL={'k-class':'var(--gold)','k-res':'var(--green)','k-admin':'var(--purple)',
             'k-mil':'var(--now)','':'var(--blue)'};
 
+/* ---- item state: done / past / overdue -------------------------------
+   The widget previously drew "the moment has passed" and "you owe this"
+   identically (a fade). Those are different facts. Split them:
+
+     done    -> finished; struck through, still legible.
+     past    -> an EVENT (meeting, class, social) whose time has gone by.
+                Nothing is owed. Render quiet + greyscale.
+     overdue -> an ACTIONABLE task, time gone by, not done. Render loud.
+
+   The task/event split is what makes past != overdue, so it is decided
+   explicitly rather than by fading everything that is behind us. ---- */
+
+const EVENT_RE=/\b(lecture|recitation|seminar|class|meeting|orientation|reorientation|retreat|fair|picnic|outing|crawl|party|dinner|breakfast|banquet|social|pub|visiting|training|making|event|welcome)\b/;
+const TASK_RE=/\b(submit|apply|email|call|reach out|ask|check|sign up|register|registering|upload|create|fix|confirm|cancel|due|deadline|brainstorm|offer|petition|work on)\b/;
+
+function isEvent(e){
+  // classes from the course feed are always events
+  if(e.src==='class') return true;
+  const ty=(e.type||'').toLowerCase();
+  if(ty==='task') return false;                 // explicitly typed as work
+  if(ty==='meeting'||ty==='lecture'||ty==='seminar') return true;
+  const nm=(e.name||'').toLowerCase();
+  if(TASK_RE.test(nm)) return false;            // verb-led => something to do
+  if(EVENT_RE.test(nm)) return true;
+  const k=((e.kind||'')+' '+(e.meeting_type||'')).toLowerCase();
+  if(/meeting|class/.test(k)) return true;
+  return false;                                 // default: treat as work
+}
+
+// Absolute end-of-item timestamp (ms). All-day items are "owed by" end of day.
+function endTs(e){
+  const iso=e.date||''; if(!iso) return null;
+  const dOnly=!/T\d{2}:/.test(iso);
+  if(dOnly){
+    const last=(e.end&&!/T\d{2}:/.test(e.end))?e.end:iso;
+    return new Date(last+'T23:59:59').getTime();
+  }
+  const st=new Date(iso).getTime(); if(isNaN(st)) return null;
+  let en=e.end?new Date(e.end).getTime():NaN;
+  if(isNaN(en)||en<=st) en=st+estDur(e)*60000;
+  return en;
+}
+
+// '' | 'done' | 'past' | 'overdue'  — exactly one, done wins.
+function state(e,now){
+  if(e.done) return 'done';
+  const en=endTs(e);
+  if(en==null||en>=(now==null?Date.now():now)) return '';
+  return isEvent(e)?'past':'overdue';
+}
+// class attribute helper used by every mode
+const sc=(e,now)=>{const s=state(e,now); return s?' '+s:'';};
+
 let DATA=null;
+let NOWTS=Date.now();   // frozen per-paint 'now', so all modes agree
 let LANEW=600;                 // measured px width of the timeline lane column
 const RPAD=12;                 // breathing room at the right edge for spilled labels
 function measureLane(){
@@ -368,6 +489,7 @@ function paint(){
   document.getElementById('tot').textContent = n+' events';
 
   const now=new Date(), nowM=now.getHours()*60+now.getMinutes();
+  NOWTS=now.getTime();
   ruler.style.display = (MODE==='time'||MODE==='free') ? '' : 'none';
   document.querySelector('footer').style.display = MODE==='load' ? 'none' : '';
 
@@ -443,7 +565,7 @@ function paint(){
           ? `<b class="tin">${time}</b><span class="lab nm">${esc(short)}</span>`
           : `<span class="lab"><b>${time}</b>${esc(short)}</span>`;
         const cls = mode==='in' ? '' : mode;
-        return `<a class="ev ${kind(e)||'k-oth'} ${mode==='in'?'':mode} ${e.done?'done':''}"
+        return `<a class="ev ${kind(e)||'k-oth'} ${mode==='in'?'':mode}${sc(e,NOWTS)}"
           style="left:${l.toFixed(2)}px;width:${w.toFixed(2)}px;top:${(r*ROWH).toFixed(0)}px;height:${BARH}px"
           href="${e.url}" target="_blank"
           title="${esc(time)}\u2013${String(Math.floor(en/60)%24).padStart(2,'0')}${String(en%60).padStart(2,'0')} \u00b7 ${durTxt(en-s)}${est?' (est)':''}\n${esc(name)}">${lab}</a>`;
@@ -455,7 +577,7 @@ function paint(){
         ? `<span class="noww" style="left:${px(nowM).toFixed(2)}px"></span>` : '';
       const tray = allday.length
         ? `<div class="tray"><span class="adl">all day</span>`+
-          allday.map(e=>`<a class="ad ${kind(e)||'k-oth'} ${e.done?'done':''}" href="${e.url}"
+          allday.map(e=>`<a class="ad ${kind(e)||'k-oth'}${sc(e,NOWTS)}" href="${e.url}"
              target="_blank" title="${esc(e.name)}">${esc(e.name)}</a>`).join('')+`</div>` : '';
 
       return `<div data-today="${day.is_today?1:0}" class="row ${day.is_today?'today':''} ${wknd?'wknd':''}">
@@ -480,7 +602,7 @@ function paint(){
         const s0=mins(e.date);
         const t = s0==null ? '\u2014'
                 : (e.end && mins(e.end)>s0 ? hhmm(e.date)+'\u2013'+hhmm(e.end) : hhmm(e.date));
-        return `<a class="li ${kind(e)} ${e.done?'done':''}" href="${e.url}" target="_blank">
+        return `<a class="li ${kind(e)}${sc(e,NOWTS)}" href="${e.url}" target="_blank">
           <span class="lt">${t}</span><span class="ln">${esc(e.name)||'(untitled)'}</span>
           ${e.location?`<span class="lw">${esc(e.location)}</span>`:''}</a>`;
       }).join('') : '<div class="lnone">clear</div>';
@@ -503,7 +625,7 @@ function paint(){
         const s0=mins(e.date);
         const t = s0==null ? 'ALL DAY'
                 : (e.end && mins(e.end)>s0 ? hhmm(e.date)+'\u2013'+hhmm(e.end) : hhmm(e.date));
-        return `<a class="cc ${kind(e)} ${e.done?'done':''}" href="${e.url}" target="_blank"
+        return `<a class="cc ${kind(e)}${sc(e,NOWTS)}" href="${e.url}" target="_blank"
              title="${esc(t)} ${esc(e.name)}${e.location?' \u00b7 '+esc(e.location):''}">
            <span class="ct">${t}</span>
            <span class="cn">${esc(e.name)||'(untitled)'}</span>
@@ -532,7 +654,7 @@ function paint(){
           const s0=mins(e.date);
           const t = s0==null ? '\u2014'
                   : (e.end && mins(e.end)>s0 ? hhmm(e.date)+'\u2013'+hhmm(e.end) : hhmm(e.date));
-          return `<a class="agi ${kind(e)} ${e.done?'done':''}" href="${e.url}" target="_blank">
+          return `<a class="agi ${kind(e)}${sc(e,NOWTS)}" href="${e.url}" target="_blank">
           <span class="t">${t}</span>
           <span class="n2">${esc(e.name)||'(untitled)'}</span>
           ${e.location?`<span class="w">${esc(e.location)}</span>`:''}</a>`;}).join('');
@@ -556,7 +678,7 @@ function paint(){
       return `<div class="catsec">
         <div class="cath"><span class="dot" style="background:${KCOL[k]}"></span>
           ${LBL[k]}<span class="k">${rows.length}</span></div>` +
-        rows.map(({e,dt})=>`<a class="cati ${e.done?'done':''}" href="${e.url}" target="_blank">
+        rows.map(({e,dt})=>`<a class="cati ${kind(e)}${sc(e,NOWTS)}" href="${e.url}" target="_blank">
           <span class="d">${DOW[dt.getDay()]} ${dt.getDate()}</span>
           <span class="t">${mins(e.date)==null?'—':hhmm(e.date)}</span>
           <span class="n">${esc(e.name)||'(untitled)'}</span></a>`).join('') + `</div>`;

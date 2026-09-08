@@ -32,9 +32,17 @@
   .row{display:grid;grid-template-columns:58px 1fr;gap:14px;
        padding:11px 0;border-bottom:1px solid var(--hair);position:relative}
   .row:last-child{border-bottom:0}
-  .row.past{opacity:.42}
+  /* A row whose time has passed is dimmed, but never below readable.
+     .42 opacity made completed work effectively invisible. */
+  .row.past{opacity:.72}
   .row.current::before{content:"";position:absolute;left:-18px;top:0;bottom:0;
        width:3px;background:var(--now);border-radius:0 2px 2px 0}
+  /* an undone TASK past its due instant = a real debt */
+  .row.overdue::before{content:"";position:absolute;left:-18px;top:0;bottom:0;
+       width:3px;background:var(--now);opacity:.55;border-radius:0 2px 2px 0}
+  /* an undone MEETING that already ended = it happened, not a debt */
+  .row.ended{opacity:.6}
+  .row.done{opacity:1}
 
   .tcol{text-align:right;padding-top:1px}
   .t1{font-size:15px;font-weight:600;font-variant-numeric:tabular-nums;
@@ -45,9 +53,23 @@
           letter-spacing:.07em;padding-top:3px}
 
   .body{min-width:0}
-  .nm{font-size:14px;font-weight:500;display:block;text-decoration:none;color:inherit}
+  .ttl{display:flex;align-items:baseline;gap:0;min-width:0}
+  .nm{font-size:14px;font-weight:500;display:block;text-decoration:none;color:inherit;min-width:0}
   .nm:hover{text-decoration:underline}
-  .row.done .nm{text-decoration:line-through;color:var(--faint)}
+  /* Completed: struck through but STILL LEGIBLE — kept at --dim, not
+     --faint, with a green rule so it reads as "finished", not "gone". */
+  .row.done .nm{text-decoration:line-through;text-decoration-color:var(--done);
+       text-decoration-thickness:1.5px;color:var(--dim)}
+  .row.done .t1,.row.done .t2,.row.done .allday{color:var(--dim);
+       text-decoration:line-through;text-decoration-color:var(--done)}
+  .row.overdue .nm{color:var(--now)}
+  /* state chip, right of the title row */
+  .st{font-size:9px;letter-spacing:.09em;text-transform:uppercase;font-weight:600;
+      border-radius:3px;padding:1px 5px;border:1px solid currentColor;
+      margin-left:7px;vertical-align:1px;display:inline-block}
+  .st.done{color:var(--done)}
+  .st.overdue{color:var(--now)}
+  .st.ended{color:var(--faint);font-weight:500}
   .tags{margin-top:4px;display:flex;flex-wrap:wrap;gap:5px;align-items:center}
   .tag{font-size:9.5px;letter-spacing:.04em;color:var(--faint);
        border:1px solid var(--line);border-radius:3px;padding:1px 5px}
@@ -102,6 +124,22 @@ function tick(){
 }
 tick(); setInterval(tick,20000);
 
+/* ------------------------------------------------------------------
+   Meeting vs. task. A meeting occupies a SPAN of time; once it ends it
+   simply happened, so an unchecked past meeting is not a debt and must
+   not be styled like one. A task is a due INSTANT (all-day, zero-length,
+   or type="Task"); when that instant passes unchecked, it IS overdue.
+   Same rule scripts/build_data.py uses to keep counts.overdue honest.
+   ------------------------------------------------------------------ */
+function isMeeting(t){
+  if((t.type||'')==='Task') return false;
+  if((t.type||'')==='Meeting') return true;
+  // Blank type: a block of 30 minutes or more is a real appointment; a
+  // 15-minute sliver is a self-scheduled work slot, i.e. a task you owe.
+  const s=mins(t.date), e=mins(t.end);
+  return s!=null && e!=null && (e-s)>=30;
+}
+
 fetch('../data/tasks.json?t='+Date.now())
  .then(r=>r.json())
  .then(d=>{
@@ -114,8 +152,10 @@ fetch('../data/tasks.json?t='+Date.now())
    if(!items.length){ items=d.upcoming.slice(0,7); heading='nothing today — what is next'; }
 
    const c=d.counts;
+   // Past meetings are NOT overdue — they happened. Shown separately.
    document.getElementById('sum').textContent =
-     `${c.today_done}/${c.today_total} done · ${c.open} open · ${c.overdue} overdue`;
+     `${c.today_done}/${c.today_total} done · ${c.open} open · ${c.overdue} overdue`
+     + (c.past_meetings ? ` · ${c.past_meetings} past mtgs` : '');
 
    const nowM=new Date().getHours()*60+new Date().getMinutes();
    const L=document.getElementById('list');
@@ -140,6 +180,15 @@ fetch('../data/tasks.json?t='+Date.now())
      const past = !allday && e!=null ? e<nowM : (!allday && s+60<nowM);
      const cur  = !allday && s!=null && s<=nowM && (e!=null?nowM<e:nowM<s+60);
 
+     // ---- state: done / overdue (task past due) / ended (meeting over)
+     const dstr = (t.date||'').slice(0,10);
+     const dayPast = dstr && dstr < d.today;
+     const isPast  = dayPast || (!dstr || dstr===d.today ? past : false);
+     let st = '';
+     if(t.done)        st = 'done';
+     else if(isPast)   st = isMeeting(t) ? 'ended' : 'overdue';
+     const chip = st ? `<span class="st ${st}">${st}</span>` : '';
+
      const tcol = allday
        ? `<div class="allday">All day</div>`
        : `<div class="t1">${hhmm(t.date)}</div>`+
@@ -156,10 +205,10 @@ fetch('../data/tasks.json?t='+Date.now())
      if(t.agenda)    det.push(`<div><b>Agenda</b><span>${esc(t.agenda)}</span></div>`);
      if(t.link)      det.push(`<div><b>Join</b><a href="${t.link}" target="_blank">${esc(t.link.replace(/^https?:\/\//,'').slice(0,44))}</a></div>`);
 
-     html += `<div class="row ${past?'past':''} ${cur?'current':''} ${t.done?'done':''}">
+     html += `<div class="row ${past?'past':''} ${cur?'current':''} ${st}" data-status="${st||'open'}">
        <div class="tcol">${tcol}</div>
        <div class="body">
-         <a class="nm" href="${t.url}" target="_blank">${esc(t.name)||'(untitled)'}</a>
+         <div class="ttl"><a class="nm" href="${t.url}" target="_blank">${esc(t.name)||'(untitled)'}</a>${chip}</div>
          ${tags.length?`<div class="tags">${tags.join('')}</div>`:''}
          ${det.length?`<div class="det">${det.join('')}</div>`:''}
        </div></div>`;

@@ -62,7 +62,16 @@
       border-radius:4px;padding:2px 8px;color:var(--ink);text-decoration:none;
       display:inline-block;max-width:100%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
   .ad:hover{border-color:var(--blue)}
-  .ad.done{color:var(--faint);text-decoration:line-through}
+  /* completed: struck through but still legible (not faded into the background) */
+  .ad.done{color:var(--dim);text-decoration:line-through;
+      text-decoration-color:var(--green);text-decoration-thickness:1.5px}
+  .ad.done::before{content:"\2713 ";color:var(--green);text-decoration:none;
+      display:inline-block;text-decoration-line:none}
+  /* an undone TASK whose date has passed = genuinely overdue */
+  .ad.overdue{border-color:var(--now);color:var(--now)}
+  .ad.overdue::before{content:"! ";font-weight:700}
+  /* an undone MEETING whose date has passed simply happened; not a debt */
+  .ad.ended{color:var(--faint);border-style:dashed}
 
   /* scrolling grid */
   .scroll{flex:1;overflow-y:auto;position:relative;min-height:0}
@@ -92,8 +101,27 @@
   .ev.k-class{border-left-color:var(--gold)}
   .ev.k-res{border-left-color:var(--green)}
   .ev.k-admin{border-left-color:var(--purple)}
-  .ev.done{opacity:.5}
-  .ev.done .et{text-decoration:line-through}
+
+  /* ---- state layer -------------------------------------------------
+     done    completed -> struck through, STILL READABLE (opacity .85)
+     overdue an undone TASK whose time has passed -> red, a real debt
+     ended   an undone MEETING whose time has passed -> it happened, dim
+     -------------------------------------------------------------------*/
+  .ev.done{opacity:.85;border-left-color:var(--green)}
+  .ev.done .et,.ev.done .em,.ev.done .ew{text-decoration:line-through;
+      text-decoration-color:var(--green);text-decoration-thickness:1.5px;
+      color:var(--dim)}
+  .ev.overdue{border-left-color:var(--now);border-color:var(--now);
+      background:linear-gradient(90deg,rgba(224,108,108,.10),transparent 60%)}
+  .ev.overdue .et{color:var(--now)}
+  .ev.ended{opacity:.62;border-left-style:dashed}
+  .ev .flag{position:absolute;top:3px;right:5px;font-size:8px;line-height:1;
+      letter-spacing:.08em;text-transform:uppercase;font-weight:600;
+      text-decoration:none;pointer-events:none}
+  .ev.done .flag{color:var(--green)}
+  .ev.overdue .flag{color:var(--now)}
+  .ev.ended .flag{color:var(--faint);font-weight:500}
+  .ev.hasflag .et{padding-right:46px}
   .et{font-size:12.5px;font-weight:500;line-height:1.25;
       overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
   .em{font-size:10.5px;color:var(--dim);font-variant-numeric:tabular-nums;
@@ -159,9 +187,50 @@ function nowMin(){ const n=new Date(); return n.getHours()*60+n.getMinutes(); }
 function clkTxt(){ const n=new Date();
   return String(n.getHours()).padStart(2,'0')+String(n.getMinutes()).padStart(2,'0'); }
 
+/* ------------------------------------------------------------------
+   Meeting vs. task, and what "past" means for each.
+
+   A meeting OCCUPIES a span of time. Once it is over it simply
+   happened -- leaving it unchecked is not a debt you owe, so it must
+   never be coloured like one. A task is a due INSTANT: an all-day
+   item, a zero-length item, or anything the source marks type="Task".
+   When a task's instant passes with the box unchecked, that IS a debt.
+
+   This mirrors scripts/build_data.py, which stopped counting past
+   meetings as overdue (it had inflated "overdue" to 96 from ~19).
+   ------------------------------------------------------------------ */
+function isMeeting(t){
+  if((t.type||'')==='Task') return false;        // source says task
+  if(t.src==='class') return true;               // class DB row
+  if((t.type||'')==='Meeting') return true;      // source says meeting
+  // Blank type: fall back to shape. A block of 30 minutes or more is a
+  // real appointment; a 15-minute sliver is a self-scheduled work slot,
+  // i.e. still a task you owe. (Verified against the live data: this
+  // reads "Grad Resource Fair"/60m as a meeting and "Check Merch Store
+  // Progress"/15m as a task, which the type field alone gets wrong.)
+  const s=mins(t.date), e=mins(t.end);
+  return s!=null && e!=null && (e-s)>=30;
+}
+// '', 'done', 'overdue' (task past due) or 'ended' (meeting already happened)
+function statusOf(t, dayDate, isToday){
+  if(t.done) return 'done';
+  const cmp = dayDate.localeCompare(TODAY_DATE);
+  let past;
+  if(cmp < 0) past = true;                       // whole day is behind us
+  else if(cmp > 0) past = false;                 // day is ahead
+  else {
+    const s=mins(t.date), e=mins(t.end);
+    if(s==null) past = false;                    // all-day today: still live
+    else past = (e!=null && e>s ? e : s) < nowMin();
+  }
+  if(!past) return '';
+  return isMeeting(t) ? 'ended' : 'overdue';
+}
+const FLAG={done:'done', overdue:'overdue', ended:'ended'};
+
 document.getElementById('clk').textContent = clkTxt();
 
-let DAYS=[], IDX=0, TODAY_IDX=0, COUNTS=null, nowTimer=null;
+let DAYS=[], IDX=0, TODAY_IDX=0, COUNTS=null, nowTimer=null, TODAY_DATE='';
 
 Promise.all([
   fetch('../data/week.json?t='+Date.now()).then(r=>r.json()),
@@ -171,6 +240,7 @@ Promise.all([
   if(!DAYS.length) throw new Error('no days');
   COUNTS = tasks && tasks.counts || null;
   TODAY_IDX = Math.max(0, DAYS.findIndex(d=>d.is_today));
+  TODAY_DATE = (w.today) || (DAYS[TODAY_IDX] && DAYS[TODAY_IDX].date) || '';
   IDX = TODAY_IDX;
 
   const g=new Date(w.generated);
@@ -220,7 +290,12 @@ function render(){
     (isToday ? ' · today' : '');
   const done = items.filter(t=>t.done).length;
   let sum = `${done}/${items.length} done`;
-  if(isToday && COUNTS) sum += ` · ${COUNTS.open} open · ${COUNTS.overdue} overdue`;
+  // Overdue = tasks still owed. Past meetings are reported separately,
+  // never added in, because a finished meeting is not a debt.
+  if(isToday && COUNTS){
+    sum += ` · ${COUNTS.open} open · ${COUNTS.overdue} overdue`;
+    if(COUNTS.past_meetings) sum += ` · ${COUNTS.past_meetings} past mtgs`;
+  }
   else {
     const delta = IDX - TODAY_IDX;
     sum += delta===0 ? '' : ` · ${delta>0?'+':''}${delta}d`;
@@ -241,8 +316,10 @@ function render(){
   const ad=document.getElementById('allday');
   if(allday.length){
     ad.style.display='flex';
-    ad.innerHTML='<span class="lbl">All day</span>'+allday.map(t=>
-      `<a class="ad ${t.done?'done':''}" href="${t.url}" target="_blank">${esc(t.name)||'(untitled)'}</a>`).join('');
+    ad.innerHTML='<span class="lbl">All day</span>'+allday.map(t=>{
+      const st=statusOf(t, day.date, isToday);
+      return `<a class="ad ${st}" data-status="${st||'open'}" href="${t.url}" target="_blank">${esc(t.name)||'(untitled)'}</a>`;
+    }).join('');
   } else { ad.style.display='none'; ad.innerHTML=''; }
 
   // ---- fit the whole 0600-2400 span into the available height (no scroll)
@@ -301,8 +378,11 @@ function render(){
                   `width:calc((100% - var(--gut)) * ${wpct/100} - 4px);`+
                   `left:calc(var(--gut) + (100% - var(--gut)) * ${x.col*wpct/100});`;
     const showMeta = h>=34, showWhere = h>=56 && t.location;
-    return `<a class="ev ${kindClass(t)} ${t.done?'done':''}" style="${style}"
-              href="${t.url}" target="_blank">
+    const st = statusOf(t, day.date, isToday);
+    const flag = st ? `<span class="flag">${FLAG[st]}</span>` : '';
+    return `<a class="ev ${kindClass(t)} ${st} ${st?'hasflag':''}" data-status="${st||'open'}"
+              style="${style}" href="${t.url}" target="_blank">
+       ${flag}
        <span class="et">${esc(t.name)||'(untitled)'}</span>
        ${showMeta?`<span class="em">${hhmm(t.date)}${t.end?'–'+hhmm(t.end):''}${durTxt(t.date,t.end)?' · '+durTxt(t.date,t.end):''}</span>`:''}
        ${showWhere?`<span class="ew">${esc(t.location)}</span>`:''}
