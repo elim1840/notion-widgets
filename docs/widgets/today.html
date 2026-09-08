@@ -6,101 +6,235 @@
 <title>Today</title>
 <style>
   :root{
-    --bg:#191919; --panel:#202020; --line:#2f2f2f;
-    --ink:#e9e9e7; --dim:#9b9a97; --accent:#5b93d3;
-    --red:#e06c6c; --green:#5fa87a; --amber:#c9a227;
+    --bg:#191919; --panel:#202020; --line:#2f2f2f; --hair:#262626;
+    --ink:#e9e9e7; --dim:#9b9a97; --faint:#6b6a67;
+    --accent:#5b93d3; --red:#e06c6c; --green:#5fa87a; --amber:#c9a227;
+    --gold:#c9a227; --purple:#9a7fd0;
   }
   @media (prefers-color-scheme: light){
-    :root{ --bg:#fff; --panel:#f7f7f5; --line:#e6e5e1;
-           --ink:#37352f; --dim:#787774; }
+    :root{ --bg:#fff; --panel:#f7f7f5; --line:#e6e5e1; --hair:#eeedea;
+           --ink:#37352f; --dim:#787774; --faint:#9b9a97; }
   }
   *{box-sizing:border-box;margin:0;padding:0}
   body{
     background:var(--bg); color:var(--ink);
-    font:14px/1.45 -apple-system,BlinkMacSystemFont,"Segoe UI",Inter,sans-serif;
-    padding:16px; -webkit-font-smoothing:antialiased;
+    font:13px/1.45 -apple-system,BlinkMacSystemFont,"Segoe UI",Inter,sans-serif;
+    padding:14px 14px 10px; -webkit-font-smoothing:antialiased;
   }
-  .head{display:flex;align-items:baseline;justify-content:space-between;margin-bottom:14px}
-  .date{font-size:22px;font-weight:600;letter-spacing:-.01em}
-  .day{font-size:12px;color:var(--dim);text-transform:uppercase;letter-spacing:.08em}
-  .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:14px}
-  .stat{background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:10px 12px}
-  .stat b{display:block;font-size:20px;font-weight:600;line-height:1.1}
-  .stat span{font-size:11px;color:var(--dim);text-transform:uppercase;letter-spacing:.06em}
+
+  /* ---------- header ---------- */
+  .head{margin-bottom:12px}
+  .date{font-size:20px;font-weight:600;letter-spacing:-.01em;line-height:1.1}
+  .day{font-size:11px;color:var(--dim);text-transform:uppercase;letter-spacing:.08em;margin-top:2px}
+
+  /* ---------- NOW strip: the one thing you look at ---------- */
+  .now{margin:10px 0 12px;padding:10px 11px;border-radius:8px;
+       background:var(--panel);border:1px solid var(--line);
+       border-left:3px solid var(--accent)}
+  .now .lbl{font-size:9.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--dim)}
+  .now .n{font-size:13.5px;font-weight:600;margin-top:3px;line-height:1.3;
+          overflow-wrap:anywhere}
+  .now .meta{font-size:11px;color:var(--dim);margin-top:3px;line-height:1.4;
+             overflow-wrap:anywhere}
+  .now.none{border-left-color:var(--faint)}
+  .now.none .n{font-weight:500;color:var(--dim)}
+
+  /* ---------- counters ---------- */
+  .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;margin-bottom:12px}
+  .stat{background:var(--panel);border:1px solid var(--line);border-radius:7px;padding:8px 9px}
+  .stat b{display:block;font-size:17px;font-weight:600;line-height:1.1;
+          font-variant-numeric:tabular-nums}
+  .stat span{font-size:9.5px;color:var(--dim);text-transform:uppercase;letter-spacing:.06em;
+             display:block;margin-top:2px}
   .over b{color:var(--red)}
-  .list{display:flex;flex-direction:column;gap:1px}
-  .item{display:flex;gap:10px;align-items:flex-start;padding:9px 10px;border-radius:6px;
-        text-decoration:none;color:inherit}
+  .over.clear b{color:var(--green)}
+
+  /* ---------- section headings ---------- */
+  .sec{font-size:9.5px;letter-spacing:.11em;text-transform:uppercase;color:var(--faint);
+       margin:14px 0 6px;padding-bottom:4px;border-bottom:1px solid var(--hair)}
+  .sec:first-of-type{margin-top:0}
+
+  /* ---------- items: WRAP, never truncate ---------- */
+  .list{display:flex;flex-direction:column}
+  .item{display:grid;grid-template-columns:44px 1fr;gap:9px;align-items:start;
+        padding:8px 6px;border-radius:6px;text-decoration:none;color:inherit;
+        border-bottom:1px solid var(--hair)}
+  .item:last-child{border-bottom:0}
   .item:hover{background:var(--panel)}
-  .dot{width:7px;height:7px;border-radius:50%;background:var(--accent);margin-top:6px;flex:0 0 auto}
-  .dot.high{background:var(--red)} .dot.done{background:var(--green)}
-  .t{flex:1;min-width:0}
-  .t .n{display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-  .t .m{font-size:11px;color:var(--dim)}
-  .done .n{text-decoration:line-through;color:var(--dim)}
-  .empty{color:var(--dim);font-style:italic;padding:18px 4px;text-align:center}
-  .foot{margin-top:14px;padding-top:10px;border-top:1px solid var(--line);
-        font-size:10px;color:var(--dim);display:flex;justify-content:space-between}
+  .tm{font-size:11.5px;color:var(--dim);font-variant-numeric:tabular-nums;
+      padding-top:1px;white-space:nowrap;font-weight:500}
+  .tm.allday{font-size:10px;letter-spacing:.04em}
+  .bd{min-width:0}
+  .n{font-size:12.5px;line-height:1.38;overflow-wrap:anywhere;word-break:break-word}
+  .meta{font-size:10.5px;color:var(--dim);margin-top:2px;line-height:1.4;
+        overflow-wrap:anywhere;display:flex;flex-wrap:wrap;gap:4px 8px}
+  .pin{color:var(--dim)}
+  .tag{display:inline-block;font-size:9.5px;padding:0 5px;border-radius:3px;
+       background:var(--hair);color:var(--dim);line-height:15px;white-space:nowrap}
+  .item.mtg{border-left:2px solid var(--accent);padding-left:6px;margin-left:-8px}
+  .item.mtg .n{font-weight:600}
+  .item.done .n{text-decoration:line-through;color:var(--faint)}
+  .item.done .tm{color:var(--faint)}
+  .item.past .n{color:var(--dim)}
+
+  .empty{color:var(--faint);font-style:italic;padding:14px 4px;text-align:center;font-size:11.5px}
+  .foot{margin-top:12px;padding-top:8px;border-top:1px solid var(--line);
+        font-size:9.5px;color:var(--faint);display:flex;justify-content:space-between;gap:8px}
 </style>
 </head>
 <body>
   <div class="head">
-    <div>
-      <div class="date" id="d">—</div>
-      <div class="day" id="w"></div>
-    </div>
+    <div class="date" id="d">—</div>
+    <div class="day" id="w"></div>
   </div>
+
+  <div id="nowbox"></div>
+
   <div class="stats">
     <div class="stat"><b id="s-today">—</b><span>today</span></div>
     <div class="stat"><b id="s-open">—</b><span>open</span></div>
-    <div class="stat over"><b id="s-over">—</b><span>overdue</span></div>
+    <div class="stat over" id="overbox"><b id="s-over">—</b><span>overdue</span></div>
   </div>
-  <div class="list" id="list"></div>
-  <div class="foot"><span id="gen"></span><span>Tasks &amp; Meetings</span></div>
+
+  <div id="body"></div>
+
+  <div class="foot">
+    <span id="gen"></span><span id="src"></span>
+  </div>
 
 <script>
-const F = new Intl.DateTimeFormat('en-US',{month:'long',day:'numeric'});
-const W = new Intl.DateTimeFormat('en-US',{weekday:'long'});
+const DOW=['SUNDAY','MONDAY','TUESDAY','WEDNESDAY','THURSDAY','FRIDAY','SATURDAY'];
+const MON=['January','February','March','April','May','June','July',
+           'August','September','October','November','December'];
+const esc=s=>(s||'').replace(/[<>&]/g,c=>({'<':'&lt;','>':'&gt;','&':'&amp;'}[c]));
 
 function hhmm(iso){
-  if(!iso || iso.length<=10) return 'all day';
-  const d=new Date(iso);
-  return String(d.getHours()).padStart(2,'0')+String(d.getMinutes()).padStart(2,'0');
+  if(!iso || iso.length<16) return null;
+  return iso.slice(11,16).replace(':','');
+}
+function mins(iso){
+  const t=hhmm(iso); if(!t) return null;
+  return (+t.slice(0,2))*60 + (+t.slice(2));
+}
+// A meeting is an appointment: it has a time and you attend it.
+function isMeeting(it){
+  const ty=(it.type||'').toLowerCase();
+  const mt=(it.meeting_type||'').toLowerCase();
+  if(ty==='meeting') return true;
+  if(!it.type && (it.attendees||it.location)) return true;
+  return ['research','draper','military','aeroastro','tpp','marstotable'].includes(mt) && !!hhmm(it.date);
 }
 
-fetch('../data/tasks.json?t='+Date.now())
- .then(r=>r.json())
- .then(d=>{
-   const today = new Date(d.today+'T12:00:00');
-   document.getElementById('d').textContent = F.format(today);
-   document.getElementById('w').textContent = W.format(today);
-   document.getElementById('s-today').textContent =
-     d.counts.today_done+'/'+d.counts.today_total;
-   document.getElementById('s-open').textContent = d.counts.open;
-   document.getElementById('s-over').textContent = d.counts.overdue;
+function itemHTML(it, nowM){
+  const t=hhmm(it.date), t2=hhmm(it.end);
+  const m=mins(it.date);
+  const past = (m!==null && nowM!==null && m<nowM);
+  const cls=[
+    'item',
+    isMeeting(it)?'mtg':'',
+    it.done?'done':'',
+    (past && !it.done)?'past':''
+  ].filter(Boolean).join(' ');
 
-   const list=document.getElementById('list');
-   const items=d.today_items.length?d.today_items:d.upcoming.slice(0,6);
-   if(!items.length){
-     list.innerHTML='<div class="empty">nothing scheduled</div>';
-   } else {
-     list.innerHTML=items.map(t=>{
-       const cls=(t.done?'done ':'')+(t.priority==='High'?'high':'');
-       const meta=[hhmm(t.date), t.meeting_type].filter(Boolean).join(' · ');
-       return `<a class="item ${t.done?'done':''}" href="${t.url}" target="_blank">
-         <span class="dot ${cls}"></span>
-         <span class="t"><span class="n">${t.name||'(untitled)'}</span>
-         <span class="m">${meta}</span></span></a>`;
-     }).join('');
-   }
-   const g=new Date(d.generated);
-   document.getElementById('gen').textContent =
-     'updated '+String(g.getHours()).padStart(2,'0')+String(g.getMinutes()).padStart(2,'0');
- })
- .catch(e=>{
-   document.getElementById('list').innerHTML =
-     '<div class="empty">data not built yet</div>';
- });
+  const time = t ? (t2 ? `${t}<br><span style="opacity:.6">${t2}</span>` : t)
+                 : '<span class="allday">ALL<br>DAY</span>';
+
+  const bits=[];
+  if(it.location) bits.push(`<span class="pin">\u{1F4CD} ${esc(it.location)}</span>`);
+  if(it.attendees) bits.push(`<span>${esc(it.attendees)}</span>`);
+  if(it.meeting_type) bits.push(`<span class="tag">${esc(it.meeting_type)}</span>`);
+  else if(it.type) bits.push(`<span class="tag">${esc(it.type)}</span>`);
+
+  const link = it.url ? ` href="${it.url}" target="_blank"` : '';
+  const tag  = it.url ? 'a' : 'div';
+
+  return `<${tag}${link} class="${cls}">
+    <div class="tm">${time}</div>
+    <div class="bd">
+      <div class="n">${esc(it.name)}</div>
+      ${bits.length?`<div class="meta">${bits.join('')}</div>`:''}
+    </div>
+  </${tag}>`;
+}
+
+fetch('../data/tasks.json?t='+Date.now()).then(r=>r.json()).then(d=>{
+  const now=new Date();
+  const nowM=now.getHours()*60+now.getMinutes();
+  const dt=new Date((d.today||now.toISOString().slice(0,10))+'T12:00:00');
+
+  document.getElementById('d').textContent=`${MON[dt.getMonth()]} ${dt.getDate()}`;
+  document.getElementById('w').textContent=DOW[dt.getDay()];
+
+  const c=d.counts||{};
+  document.getElementById('s-today').textContent=`${c.today_done||0}/${c.today_total||0}`;
+  document.getElementById('s-open').textContent=c.open??'—';
+  document.getElementById('s-over').textContent=c.overdue??'—';
+  if((c.overdue||0)===0) document.getElementById('overbox').classList.add('clear');
+
+  const items=(d.today_items||[]).slice();
+
+  // ---- NOW / NEXT: the single most useful line in the widget
+  const timed=items.filter(x=>hhmm(x.date) && !x.done)
+                   .sort((a,b)=>mins(a.date)-mins(b.date));
+  let cur=null, nxt=null;
+  for(const it of timed){
+    const s=mins(it.date), e=it.end?mins(it.end):s+60;
+    if(nowM>=s && nowM<=e){ cur=it; break; }
+    if(s>nowM){ nxt=it; break; }
+  }
+  const box=document.getElementById('nowbox');
+  const show=cur||nxt;
+  if(show){
+    const s=hhmm(show.date), e=hhmm(show.end);
+    const when = cur ? 'NOW' : 'NEXT';
+    const mins_until = !cur ? Math.round(mins(show.date)-nowM) : 0;
+    const sub=[];
+    sub.push(e?`${s}\u2013${e}`:s);
+    if(show.location) sub.push(`\u{1F4CD} ${esc(show.location)}`);
+    if(!cur && mins_until>0) sub.push(mins_until<60?`in ${mins_until} min`:`in ${(mins_until/60).toFixed(1)} h`);
+    box.innerHTML=`<div class="now">
+      <div class="lbl">${when}</div>
+      <div class="n">${esc(show.name)}</div>
+      <div class="meta">${sub.join(' \u00b7 ')}</div>
+    </div>`;
+  } else {
+    box.innerHTML=`<div class="now none">
+      <div class="lbl">NOW</div>
+      <div class="n">Nothing scheduled</div>
+      <div class="meta">${timed.length?'all timed items done':'no timed items today'}</div>
+    </div>`;
+  }
+
+  // ---- split: meetings/events first, then tasks
+  const meetings=items.filter(isMeeting);
+  const tasks=items.filter(x=>!isMeeting(x));
+  const bySlot=(a,b)=>{
+    const A=mins(a.date), B=mins(b.date);
+    if(A===null&&B===null) return 0;
+    if(A===null) return 1;
+    if(B===null) return -1;
+    return A-B;
+  };
+  meetings.sort(bySlot); tasks.sort(bySlot);
+
+  let h='';
+  if(meetings.length){
+    h+=`<div class="sec">Meetings &amp; events \u00b7 ${meetings.length}</div><div class="list">`;
+    h+=meetings.map(x=>itemHTML(x,nowM)).join(''); h+='</div>';
+  }
+  if(tasks.length){
+    h+=`<div class="sec">Tasks \u00b7 ${tasks.length}</div><div class="list">`;
+    h+=tasks.map(x=>itemHTML(x,nowM)).join(''); h+='</div>';
+  }
+  if(!items.length) h='<div class="empty">nothing scheduled today</div>';
+  document.getElementById('body').innerHTML=h;
+
+  const g=d.generated||'';
+  document.getElementById('gen').textContent = g?('synced '+g.slice(11,16)):'';
+  document.getElementById('src').textContent = (c.past_meetings!=null)
+    ? `${c.past_meetings} past meetings not counted` : '';
+})
+.catch(()=>{document.getElementById('body').innerHTML='<div class="empty">data not built yet</div>';});
 </script>
 </body>
 </html>

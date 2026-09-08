@@ -1,5 +1,5 @@
 {
- "generated": "2026-09-08T16:46:28-04:00",
+ "generated": "2026-09-08T19:04:16-04:00",
  "today": "2026-09-08",
  "monday": "2026-09-07",
  "days": [
@@ -74,18 +74,6 @@
      "url": "https://app.notion.com/p/SCUBA-email-PE-W-re-swim-test-was-due-9-4-waitlist-position-3d5ea74eb77981bea692e41dfc979c06"
     },
     {
-     "name": "Call Hilton + Marriott re: hotel night of 7 Nov",
-     "date": "2026-09-08T10:00:00.000-04:00",
-     "end": "2026-09-08T10:30:00.000-04:00",
-     "done": false,
-     "kind": "Admin",
-     "src": "task",
-     "location": "",
-     "type": "",
-     "meeting_type": "Admin",
-     "url": "https://app.notion.com/p/Call-Hilton-Marriott-re-hotel-night-of-7-Nov-3d3ea74eb77981188812c72df93e6286"
-    },
-    {
      "name": "TPP Mandatory Reorientation",
      "date": "2026-09-08T11:00:00.000-04:00",
      "end": "2026-09-08T12:30:00.000-04:00",
@@ -146,22 +134,10 @@
      "url": "https://app.notion.com/p/Grad-Resource-Fair-3ceea74eb779810cbf75fca7ea8e115f"
     },
     {
-     "name": "Submit petition to Rachael and Barb (after registration)",
-     "date": "2026-09-08T16:00:00.000-04:00",
-     "end": "2026-09-08T16:30:00.000-04:00",
-     "done": false,
-     "kind": "TPP",
-     "src": "task",
-     "location": "",
-     "type": "Task",
-     "meeting_type": "TPP",
-     "url": "https://app.notion.com/p/Submit-petition-to-Rachael-and-Barb-after-registration-3d5ea74eb77981fea210f3384ac44a1f"
-    },
-    {
      "name": "Lobster Roll Outing",
      "date": "2026-09-08T17:00:00.000-04:00",
      "end": "2026-09-08T19:00:00.000-04:00",
-     "done": false,
+     "done": true,
      "kind": "AeroAstro",
      "src": "task",
      "location": "",
@@ -236,6 +212,18 @@
    "is_today": false,
    "items": [
     {
+     "name": "Call Hilton + Marriott re: hotel night of 7 Nov",
+     "date": "2026-09-09T10:00:00.000-04:00",
+     "end": "2026-09-09T10:30:00.000-04:00",
+     "done": true,
+     "kind": "Admin",
+     "src": "task",
+     "location": "",
+     "type": "",
+     "meeting_type": "Admin",
+     "url": "https://app.notion.com/p/Call-Hilton-Marriott-re-hotel-night-of-7-Nov-3d3ea74eb77981188812c72df93e6286"
+    },
+    {
      "name": "14.003 Lecture",
      "date": "2026-09-09T10:30:00.000-04:00",
      "end": "2026-09-09T12:00:00.000-04:00",
@@ -294,6 +282,18 @@
      "type": "",
      "meeting_type": "",
      "url": "https://app.notion.com/p/Ryan-Yong-visiting-3d1ea74eb77981cd8382e163e7dd42e8"
+    },
+    {
+     "name": "Submit petition to Rachael and Barb (after registration)",
+     "date": "2026-09-09T19:45:00.000-04:00",
+     "end": "2026-09-09T20:15:00.000-04:00",
+     "done": false,
+     "kind": "TPP",
+     "src": "task",
+     "location": "",
+     "type": "Task",
+     "meeting_type": "TPP",
+     "url": "https://app.notion.com/p/Submit-petition-to-Rachael-and-Barb-after-registration-3d5ea74eb77981fea210f3384ac44a1f"
     }
    ]
   },
@@ -402,18 +402,6 @@
      "type": "Lecture",
      "meeting_type": "Class",
      "url": "https://app.notion.com/p/16-S896-Lecture-3d3ea74eb77981789645cd0634a83f8b"
-    },
-    {
-     "name": "Claude Campus Ambassador \u2014 submit application (Graduate track)",
-     "date": "2026-09-11T18:00:00.000-04:00",
-     "end": "2026-09-11T19:00:00.000-04:00",
-     "done": false,
-     "kind": "Admin",
-     "src": "task",
-     "location": "",
-     "type": "Task",
-     "meeting_type": "Admin",
-     "url": "https://app.notion.com/p/Claude-Campus-Ambassador-submit-application-Graduate-track-3d5ea74eb779811880b6df011f1ef472"
     },
     {
      "name": "TPP Retreat Weekend (IYR)",
@@ -562,5 +550,5 @@
    ]
   }
  ],
- "total": 43
+ "total": 42
 }

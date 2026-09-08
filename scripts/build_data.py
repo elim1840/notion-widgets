@@ -112,7 +112,33 @@ def main():
                and not t["done"]]
         return sorted(out, key=lambda t: t["date"])
 
-    # 14-day completion history for the streak/chart widget
+    # ---- what counts as "overdue"
+    # Overdue must mean: work you still owe, that you could still do.
+    # Three categories were inflating this number to a meaningless 96:
+    #   1. Past MEETINGS (30) -- a meeting on 15 Jun is not overdue, it happened.
+    #   2. Archived 24.134 Experiential Ethics rows (30) -- class is finished.
+    #   3. Recurring habits ("Login to Draper and Army Email" x17) -- one
+    #      recurring chore is not 17 separate debts; only the latest matters.
+    # What survives is the real backlog, which is small enough to act on.
+    ETHICS = ("24.134", "Experiential Ethics")
+    RECURRING = ("Login to Draper and Army Email", "Prepare for meeting")
+
+    def is_real_overdue(t):
+        d = t["date"][:10]
+        if not d or d >= today.isoformat() or t["done"]:
+            return False
+        if t.get("type") == "Meeting":
+            return False
+        name = t.get("name", "")
+        if any(k in name for k in ETHICS):
+            return False
+        if any(name.strip().endswith(k) or k in name for k in RECURRING):
+            return False
+        return True
+
+    real_overdue = [t for t in tasks if is_real_overdue(t)]
+
+
     hist = []
     for i in range(13, -1, -1):
         d = today - timedelta(days=i)
@@ -132,11 +158,19 @@ def main():
             "done": sum(1 for t in tasks if t["done"]),
             "today_total": len(on(today)),
             "today_done": sum(1 for t in on(today) if t["done"]),
-            "overdue": sum(1 for t in tasks
-                           if t["date"][:10] and t["date"][:10] < today.isoformat()
-                           and not t["done"]),
+            # See is_real_overdue() above: excludes past meetings, archived
+            # 24.134 rows, and recurring chores. 96 -> a number you can act on.
+            "overdue": len(real_overdue),
+            "past_meetings": sum(1 for t in tasks
+                                 if t["date"][:10] and t["date"][:10] < today.isoformat()
+                                 and not t["done"]
+                                 and t.get("type") == "Meeting"),
         },
         "today_items": sorted(on(today), key=lambda t: t["date"]),
+        # The overdue items themselves, not just a count. The red team's finding
+        # was that a scalar nobody can drill into is useless -- you cannot act on
+        # "96", only on a list of names.
+        "overdue_items": sorted(real_overdue, key=lambda t: t["date"])[:40],
         "upcoming": upcoming(7)[:12],
         "history": hist,
     }
