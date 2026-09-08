@@ -22,38 +22,119 @@
     padding:14px 14px 10px; -webkit-font-smoothing:antialiased;
   }
 
-  /* ---------- header ---------- */
-  .head{margin-bottom:12px}
-  .toprow{display:flex;align-items:baseline;justify-content:space-between;gap:8px}
-  .date{font-size:20px;font-weight:600;letter-spacing:-.01em;line-height:1.1}
-  .clock{font-size:19px;font-weight:600;font-variant-numeric:tabular-nums;
-         letter-spacing:-.01em;line-height:1.1;color:var(--ink)}
-  .subrow{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-top:3px}
-  .day{font-size:11px;color:var(--dim);text-transform:uppercase;letter-spacing:.08em}
-  .wx{font-size:11px;color:var(--dim);display:flex;align-items:center;gap:5px;
-      white-space:nowrap}
-  .wx .t{font-weight:600;color:var(--ink);font-variant-numeric:tabular-nums}
-  .wx .hl{font-variant-numeric:tabular-nums}
+  /* ---------- header: instrument panel ----------
+     Three panels (LOCAL / DATE / CAMBRIDGE) split by hairline rules, with a
+     5-day forecast strip welded on underneath. Reads like a gauge cluster,
+     not a card. Every number is tabular so the 1s clock tick never jitters. */
+  .head{margin-bottom:12px;border:1px solid var(--line);border-radius:9px;
+        background:var(--panel);overflow:hidden}
+  .hp{display:grid;grid-template-columns:1fr 1fr 1fr;
+      grid-template-areas:"loc date wx"}
+  .pan{padding:11px 12px 12px;min-width:0;border-left:1px solid var(--hair)}
+  .pan:first-child{border-left:0}
+  .p-loc{grid-area:loc}.p-date{grid-area:date}.p-wx{grid-area:wx}
+
+  .mlbl{font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:var(--faint);
+        line-height:1;overflow-wrap:anywhere}
+  .sublbl{font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:var(--faint);
+          line-height:1;margin-top:7px;overflow-wrap:anywhere}
+
+  .clock{font-size:34px;font-weight:300;line-height:1;margin-top:9px;
+         letter-spacing:-.01em;font-variant-numeric:tabular-nums;
+         display:flex;align-items:baseline;gap:0}
+  /* Dimmed colon, like a station clock -- the digits read as the number, the
+     separator recedes. Slight negative margins keep the glyph optically tight. */
+  .clock .cn{color:var(--faint);font-weight:200;margin:0 1px;
+             position:relative;top:-1px}
+  .clock .sec{font-size:18px;font-weight:300;color:var(--dim);margin-left:7px;
+              font-variant-numeric:tabular-nums}
+
+  .dow{font-size:15px;font-weight:600;text-transform:uppercase;letter-spacing:.03em;
+       line-height:1.05;margin-top:9px;overflow-wrap:anywhere}
+  .dstr{font-size:12px;color:var(--dim);margin-top:6px;line-height:1.1;
+        font-variant-numeric:tabular-nums}
+  .dmeta{font-size:9.5px;color:var(--faint);letter-spacing:.09em;text-transform:uppercase;
+         margin-top:7px;line-height:1.35;font-variant-numeric:tabular-nums;
+         overflow-wrap:anywhere}
+
+  .temp{font-size:26px;font-weight:400;line-height:1;margin-top:9px;
+        font-variant-numeric:tabular-nums;
+        display:flex;align-items:baseline;gap:6px;flex-wrap:wrap}
+  .temp .ic{font-size:15px}
+  .temp .u{font-size:12px;color:var(--dim);font-weight:400}
+  .cond{font-size:11px;color:var(--dim);margin-top:6px;line-height:1.3;
+        overflow-wrap:anywhere}
+  .mstats{display:flex;flex-wrap:wrap;gap:4px 10px;margin-top:8px;font-size:9px;
+          letter-spacing:.08em;text-transform:uppercase;color:var(--faint);
+          line-height:1.4;font-variant-numeric:tabular-nums;overflow-wrap:anywhere}
+  .mstats b{color:var(--ink);font-weight:500;letter-spacing:.02em}
+
+  /* 5-day strip: five equal columns, hairline rules, no wasted padding.
+     Precip is shown only at >=20% -- below that it is noise. */
+  .fc{display:grid;grid-template-columns:repeat(5,1fr);border-top:1px solid var(--hair)}
+  .fcd{padding:6px 2px 7px;text-align:center;min-width:0;
+       border-left:1px solid var(--hair)}
+  .fcd:first-child{border-left:0}
+  .fcd .dy{font-size:9px;letter-spacing:.09em;text-transform:uppercase;
+           color:var(--dim);line-height:1}
+  .fcd.now .dy{color:var(--ink);font-weight:600}
+  .fcd .ic{font-size:12px;line-height:1;margin-top:4px}
+  .fcd .hl{font-size:10.5px;line-height:1;margin-top:4px;color:var(--dim);
+           font-variant-numeric:tabular-nums}
+  .fcd .hl b{color:var(--ink);font-weight:600}
+  .fcd .pp{font-size:9px;line-height:1;margin-top:3px;color:var(--accent);
+           font-variant-numeric:tabular-nums}
+
+  /* Narrow sidebar: 3-across needs ~520px. Below that, LOCAL|DATE stay side by
+     side and the weather panel takes a full-width second row -- laid out
+     HORIZONTALLY (temp left, micro-stats right) so the second row costs ~55px
+     instead of ~120px. Density is the point; nothing is padding for its own sake. */
+  @media (max-width:519px){
+    .hp{grid-template-columns:1fr 1fr;grid-template-areas:"loc date" "wx wx"}
+    .p-wx{border-left:0;border-top:1px solid var(--hair);
+          display:flex;align-items:center;gap:12px;padding:9px 12px 10px}
+    .p-wx .mlbl{display:none}
+    .wxL{flex:0 0 auto;min-width:0}
+    .temp{margin-top:0}
+    .cond{margin-top:3px}
+    .mstats{margin-top:0;flex:1 1 0;min-width:0;gap:3px 10px}
+  }
+  @media (max-width:339px){
+    .pan{padding:10px 10px 11px}
+    .clock{font-size:29px}
+    .clock .sec{font-size:16px}
+    .p-wx{gap:10px;padding:9px 10px 10px}
+    .temp{font-size:23px}
+  }
 
   /* ---------- NOW strip: the one thing you look at ---------- */
   /* NOW on the left, NEXT on the right. Two panels, always both shown, so
      "what am I in" and "what's coming" never hide each other. */
-  .np{display:grid;grid-template-columns:1fr 1fr;gap:7px;margin:10px 0 12px}
-  @media (max-width:340px){ .np{grid-template-columns:1fr} }
-  .now{padding:10px 11px;border-radius:8px;min-width:0;
+  /* Actionable weather line -- what to carry, not what to know. */
+  .wxadv{font-size:10.5px;color:var(--accent);margin-top:7px;line-height:1.35;
+         overflow-wrap:anywhere}
+
+  /* NOW stacked ABOVE NEXT -- flat rows, not two squeezed boxes. Side-by-side
+     halved the width available for names and forced them to wrap badly. */
+  .np{display:flex;flex-direction:column;gap:6px;margin:10px 0 12px}
+  .now{display:grid;grid-template-columns:74px 1fr;gap:11px;align-items:baseline;
+       padding:9px 11px;border-radius:8px;
        background:var(--panel);border:1px solid var(--line);
        border-left:3px solid var(--accent)}
   .now.nx{border-left-color:var(--amber)}
   .now.late{border-left-color:var(--red);background:rgba(224,108,108,.07)}
-  .now .lbl{font-size:9px;letter-spacing:.12em;text-transform:uppercase;color:var(--dim)}
-  /* The countdown is the number he actually reads. It was 10px and unreadable;
-     it is now the largest thing in the panel. */
-  .now .big{font-size:20px;font-weight:650;line-height:1.05;margin-top:5px;
+  /* Left rail: label above the countdown. Right side: name, then time+room. */
+  .now .lft{grid-column:1}
+  .now .rgt{grid-column:2;min-width:0}
+  .now .lbl{font-size:8.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--dim);
+            line-height:1}
+  .now .big{font-size:19px;font-weight:650;line-height:1.05;margin-top:4px;
             font-variant-numeric:tabular-nums;letter-spacing:-.02em}
-  .now .big .u{font-size:12px;font-weight:500;color:var(--dim);letter-spacing:0}
+  .now .big .u{display:block;font-size:9px;font-weight:500;color:var(--dim);
+               letter-spacing:.06em;text-transform:uppercase;margin-top:2px}
   .now.nx .big{color:var(--amber)}
   .now.late .big{color:var(--red)}
-  .now .n{font-size:12px;font-weight:600;margin-top:5px;line-height:1.3;
+  .now .n{font-size:12.5px;font-weight:600;line-height:1.32;
           overflow-wrap:anywhere;word-break:break-word}
   .now .meta{font-size:10.5px;color:var(--dim);margin-top:3px;line-height:1.4;
              overflow-wrap:anywhere}
@@ -124,14 +205,27 @@
 </head>
 <body>
   <div class="head">
-    <div class="toprow">
-      <div class="date" id="d">—</div>
-      <div class="clock" id="clk">--:--</div>
+    <div class="hp">
+      <div class="pan p-loc">
+        <div class="mlbl">Local</div>
+        <div class="clock"><span id="clkh">--</span><span class="cn">:</span><span id="clkm">--</span><span class="sec" id="clks">--</span></div>
+        <div class="sublbl" id="tzl">Cambridge, MA</div>
+      </div>
+      <div class="pan p-date">
+        <div class="mlbl">Date</div>
+        <div class="dow" id="w">&mdash;</div>
+        <div class="dstr" id="d">&mdash;</div>
+        <div class="dmeta" id="dmeta"></div>
+      </div>
+      <div class="pan p-wx">
+        <div class="mlbl">Cambridge, MA</div>
+        <div class="temp" id="wxt"><span class="u">loading</span></div>
+        <div class="cond" id="wxc"></div>
+        <div class="mstats" id="wx"></div>
+        <div class="wxadv" id="wxadv"></div>
+      </div>
     </div>
-    <div class="subrow">
-      <div class="day" id="w"></div>
-      <div class="wx" id="wx"></div>
-    </div>
+    <div class="fc" id="fc"></div>
   </div>
 
   <div id="nowbox"></div>
@@ -221,29 +315,54 @@ fetch('../data/brief.json?t='+Date.now())
   })
   .catch(()=>{});
 
-// ---- live clock, 24h. Ticks every 10s so the NOW strip stays honest.
+// ---- live clock, 24h, ticking every second (the seconds readout demands it).
 function tick(){
   const n=new Date();
   const p=x=>String(x).padStart(2,'0');
-  document.getElementById('clk').textContent=`${p(n.getHours())}${p(n.getMinutes())}`;
+  document.getElementById('clkh').textContent=p(n.getHours());
+  document.getElementById('clkm').textContent=p(n.getMinutes());
+  document.getElementById('clks').textContent=p(n.getSeconds());
 }
-tick(); setInterval(tick, 10000);
+tick(); setInterval(tick, 1000);
 
-// ---- weather: Open-Meteo, no key, Cambridge MA (same source as weather.html)
-// WMO code -> compact glyph. Kept small deliberately; this is a status line,
-// not a forecast widget.
+// ---- date panel. Filled from local time immediately so the header never sits
+// blank waiting on tasks.json; tasks.json may overwrite it later with its own day.
+const MONS=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+function isLeap(y){ return (y%4===0 && y%100!==0) || y%400===0; }
+function paintDate(dt){
+  document.getElementById('w').textContent = DOW[dt.getDay()];
+  document.getElementById('d').textContent =
+    `${String(dt.getDate()).padStart(2,'0')} ${MONS[dt.getMonth()]} ${dt.getFullYear()}`;
+  const y=dt.getFullYear();
+  const start=new Date(y,0,1);
+  const doy=Math.round((new Date(y,dt.getMonth(),dt.getDate())-start)/86400000)+1;
+  const total=isLeap(y)?366:365;
+  const left=total-doy;
+  document.getElementById('dmeta').innerHTML =
+    `T\u2212${left}D EOY \u00b7 DAY ${doy}/${total}`;
+}
+paintDate(new Date());
+
+// ---- weather: Open-Meteo, no key, Cambridge MA. ONE request serves the
+// current conditions, the micro-stats row and the 5-day strip.
 const WMO={0:'\u2600\uFE0F',1:'\u{1F324}\uFE0F',2:'\u26C5',3:'\u2601\uFE0F',
   45:'\u{1F32B}\uFE0F',48:'\u{1F32B}\uFE0F',51:'\u{1F327}\uFE0F',53:'\u{1F327}\uFE0F',
   55:'\u{1F327}\uFE0F',61:'\u{1F327}\uFE0F',63:'\u{1F327}\uFE0F',65:'\u{1F327}\uFE0F',
   71:'\u{1F328}\uFE0F',73:'\u{1F328}\uFE0F',75:'\u{1F328}\uFE0F',
   80:'\u{1F326}\uFE0F',81:'\u{1F326}\uFE0F',82:'\u26C8\uFE0F',
   95:'\u26C8\uFE0F',96:'\u26C8\uFE0F',99:'\u26C8\uFE0F'};
+const WMOT={0:'Clear',1:'Mostly clear',2:'Partly cloudy',3:'Overcast',
+  45:'Fog',48:'Rime fog',51:'Light drizzle',53:'Drizzle',55:'Heavy drizzle',
+  61:'Light rain',63:'Rain',65:'Heavy rain',71:'Light snow',73:'Snow',
+  75:'Heavy snow',80:'Showers',81:'Showers',82:'Violent showers',
+  95:'Thunderstorm',96:'Thunderstorm',99:'Thunderstorm'};
 
 const WX_URL='https://api.open-meteo.com/v1/forecast'
   +'?latitude=42.3736&longitude=-71.1097'
-  +'&current=temperature_2m,weather_code'
-  +'&daily=temperature_2m_max,temperature_2m_min,precipitation_probability_max'
-  +'&temperature_unit=fahrenheit&timezone=America%2FNew_York&forecast_days=1';
+  +'&current=temperature_2m,weather_code,apparent_temperature,wind_speed_10m'
+  +'&daily=weather_code,temperature_2m_max,temperature_2m_min,precipitation_probability_max'
+  +'&temperature_unit=fahrenheit&wind_speed_unit=mph'
+  +'&timezone=America%2FNew_York&forecast_days=5';
 
 fetch(WX_URL,{cache:'no-store'})
   .then(r=>r.ok?r.json():Promise.reject(r.status))
@@ -251,17 +370,72 @@ fetch(WX_URL,{cache:'no-store'})
     const c=w.current, dl=w.daily;
     if(!c || !dl) throw new Error('missing fields');
     const icon=WMO[c.weather_code]||'';
-    const t=Math.round(c.temperature_2m);
-    const hi=Math.round(dl.temperature_2m_max[0]);
-    const lo=Math.round(dl.temperature_2m_min[0]);
+    const r0=x=>(x==null?null:Math.round(x));
+    const t=r0(c.temperature_2m);
+    const hi=r0(dl.temperature_2m_max?.[0]);
+    const lo=r0(dl.temperature_2m_min?.[0]);
     const pop=dl.precipitation_probability_max?.[0];
-    let s=`${icon} <span class="t">${t}\u00b0</span> <span class="hl">${hi}/${lo}</span>`;
-    if(pop!=null && pop>=20) s+=` <span style="color:var(--accent)">${pop}%</span>`;
-    document.getElementById('wx').innerHTML=s;
+    const feels=r0(c.apparent_temperature);
+    const wind=r0(c.wind_speed_10m);
+
+    document.getElementById('wxt').innerHTML =
+      `<span class="ic">${icon}</span>${t!=null?t:'\u2014'}<span class="u">\u00b0F</span>`;
+    document.getElementById('wxc').textContent = WMOT[c.weather_code]||'';
+
+    const st=[];
+    if(feels!=null) st.push(`Feels <b>${feels}\u00b0</b>`);
+    if(hi!=null&&lo!=null) st.push(`<b>${hi}\u00b0</b>/<b>${lo}\u00b0</b>`);
+    if(pop!=null) st.push(`Precip <b>${pop}%</b>`);
+    if(wind!=null) st.push(`Wind <b>${wind}</b> mph`);
+    document.getElementById('wx').innerHTML=st.join('');
+
+    // ---- Actionable line: the point of a weather widget is a DECISION, not
+    // a reading. Umbrella, layers, or nothing. Thresholds are deliberate:
+    // NWS treats >=50% as "likely"; 30-49% is worth a bag umbrella; below 20%
+    // is not worth mentioning at all.
+    const adv=[];
+    if(pop!=null){
+      if(pop>=50) adv.push('\u2602\uFE0F Take an umbrella');
+      else if(pop>=30) adv.push('\u2602\uFE0F Umbrella in the bag');
+      else if(pop>=20) adv.push('Slight chance of rain');
+    }
+    // Cambridge in September swings hard between afternoon and night.
+    if(hi!=null&&lo!=null && (hi-lo)>=22) adv.push('Big swing \u2014 take a layer');
+    else if(lo!=null && lo<=45) adv.push('Cold tonight \u2014 take a layer');
+    if(wind!=null && wind>=20) adv.push('Windy');
+    const code=c.weather_code;
+    if([95,96,99].includes(code)) adv.push('\u26c8\uFE0F Storms');
+    else if([71,73,75].includes(code)) adv.push('\u2744\uFE0F Snow');
+    else if([45,48].includes(code)) adv.push('\u{1F32B}\uFE0F Fog \u2014 allow extra time');
+
+    const advEl=document.getElementById('wxadv');
+    if(advEl){
+      if(adv.length){ advEl.textContent=adv.join(' \u00b7 '); advEl.style.display=''; }
+      else { advEl.textContent='Nothing to carry'; advEl.style.display=''; }
+    }
+
+    // ---- 5-day strip. Index 0 is today. 3-letter day labels so they survive
+    // ~58px columns at a 300px sidebar without ever truncating.
+    const days=(dl.time||[]).slice(0,5).map((iso,i)=>{
+      const dd=new Date(iso+'T12:00:00');
+      const lab = i===0 ? 'TODAY' : DOW[dd.getDay()].slice(0,3);
+      const dh=r0(dl.temperature_2m_max?.[i]);
+      const dlo=r0(dl.temperature_2m_min?.[i]);
+      const dp=dl.precipitation_probability_max?.[i];
+      const di=WMO[dl.weather_code?.[i]]||'';
+      return `<div class="fcd${i===0?' now':''}">
+        <div class="dy">${lab}</div>
+        <div class="ic">${di}</div>
+        <div class="hl"><b>${dh!=null?dh:'\u2014'}</b>/${dlo!=null?dlo:'\u2014'}</div>
+        ${(dp!=null&&dp>=20)?`<div class="pp">${dp}%</div>`:''}
+      </div>`;
+    });
+    document.getElementById('fc').innerHTML=days.join('');
   })
   .catch(()=>{
     // Say it failed rather than showing a blank space that looks intentional.
-    document.getElementById('wx').innerHTML='<span style="opacity:.55">weather unavailable</span>';
+    document.getElementById('wxt').innerHTML='<span class="u">weather unavailable</span>';
+    document.getElementById('fc').innerHTML='';
   });
 
 fetch('../data/tasks.json?t='+Date.now()).then(r=>r.json()).then(d=>{
@@ -269,8 +443,7 @@ fetch('../data/tasks.json?t='+Date.now()).then(r=>r.json()).then(d=>{
   const nowM=now.getHours()*60+now.getMinutes();
   const dt=new Date((d.today||now.toISOString().slice(0,10))+'T12:00:00');
 
-  document.getElementById('d').textContent=`${MON[dt.getMonth()]} ${dt.getDate()}`;
-  document.getElementById('w').textContent=DOW[dt.getDay()];
+  paintDate(dt);
 
   const c=d.counts||{};
 
@@ -302,9 +475,14 @@ fetch('../data/tasks.json?t='+Date.now()).then(r=>r.json()).then(d=>{
   const panel=(it, isNext)=>{
     if(!it){
       return `<div class="now none">
-        <div class="lbl">${isNext?'NEXT':'NOW'}</div>
-        <div class="big">${isNext?'Clear':'Free'}</div>
-        <div class="n">${isNext?'nothing later today':'no timed item right now'}</div>
+        <div class="lft">
+          <div class="lbl">${isNext?'NEXT':'NOW'}</div>
+          <div class="big">${isNext?'\u2014':'\u2014'}</div>
+        </div>
+        <div class="rgt">
+          <div class="n">${isNext?'Nothing later today':'Nothing on right now'}</div>
+          <div class="meta">${isNext?'day is clear from here':'no timed item covering this moment'}</div>
+        </div>
       </div>`;
     }
     const s=hhmm(it.date), e=hhmm(it.end);
@@ -330,13 +508,17 @@ fetch('../data/tasks.json?t='+Date.now()).then(r=>r.json()).then(d=>{
     }
 
     const cls = isNext ? ' nx' : (late ? ' late' : '');
-    const lbl = isNext ? 'NEXT' : (late ? 'RUNNING LATE' : 'NOW');
+    const lbl = isNext ? 'NEXT' : (late ? 'LATE' : 'NOW');
 
     return `<div class="now${cls}">
-      <div class="lbl">${lbl}</div>
-      <div class="big">${big}${unit?` <span class="u">${unit}</span>`:''}</div>
-      <div class="n">${esc(it.name)}</div>
-      <div class="meta">${e?`${s}\u2013${e}`:s}${where?` \u00b7 ${where}`:''}</div>
+      <div class="lft">
+        <div class="lbl">${lbl}</div>
+        <div class="big">${big}${unit?`<span class="u">${unit}</span>`:''}</div>
+      </div>
+      <div class="rgt">
+        <div class="n">${esc(it.name)}</div>
+        <div class="meta">${e?`${s}\u2013${e}`:s}${where?` \u00b7 ${where}`:''}</div>
+      </div>
     </div>`;
   };
 
