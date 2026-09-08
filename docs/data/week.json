@@ -1,11 +1,11 @@
 {
- "generated": "2026-09-07T23:47:34-04:00",
- "today": "2026-09-07",
+ "generated": "2026-09-08T02:57:12-04:00",
+ "today": "2026-09-08",
  "monday": "2026-09-07",
  "days": [
   {
    "date": "2026-09-07",
-   "is_today": true,
+   "is_today": false,
    "items": [
     {
      "name": "SERG25 Group Meeting",
@@ -47,7 +47,7 @@
   },
   {
    "date": "2026-09-08",
-   "is_today": false,
+   "is_today": true,
    "items": [
     {
      "name": "The First Day of Classes breakfast bagel event will actually happen on Wednesday, Sep. 9th from 8am-10am in the large lounge (ground floor) to coincide with MIT's first day of classes! Previ",
@@ -84,6 +84,18 @@
      "type": "",
      "meeting_type": "TPP",
      "url": "https://app.notion.com/p/TPP-Mandatory-Reorientation-3d1ea74eb77981319252d3864a6c8608"
+    },
+    {
+     "name": "Claude Campus Ambassador \u2014 confirm Army + Draper approval BEFORE applying",
+     "date": "2026-09-08T13:00:00.000-04:00",
+     "end": "2026-09-08T13:30:00.000-04:00",
+     "done": false,
+     "kind": "Admin",
+     "src": "task",
+     "location": "",
+     "type": "Task",
+     "meeting_type": "Admin",
+     "url": "https://app.notion.com/p/Claude-Campus-Ambassador-confirm-Army-Draper-approval-BEFORE-applying-3d5ea74eb77981f78144ef6486dbd64a"
     },
     {
      "name": "Registering for Classes -- Barb (TPP Lounge)",
@@ -344,6 +356,18 @@
      "url": "https://app.notion.com/p/16-S896-Lecture-3d3ea74eb77981789645cd0634a83f8b"
     },
     {
+     "name": "Claude Campus Ambassador \u2014 submit application (Graduate track)",
+     "date": "2026-09-11T18:00:00.000-04:00",
+     "end": "2026-09-11T19:00:00.000-04:00",
+     "done": false,
+     "kind": "Admin",
+     "src": "task",
+     "location": "",
+     "type": "Task",
+     "meeting_type": "Admin",
+     "url": "https://app.notion.com/p/Claude-Campus-Ambassador-submit-application-Graduate-track-3d5ea74eb779811880b6df011f1ef472"
+    },
+    {
      "name": "TPP Retreat Weekend (IYR)",
      "date": "2026-09-11",
      "end": "2026-09-13",
@@ -420,6 +444,18 @@
      "type": "",
      "meeting_type": "",
      "url": "https://app.notion.com/p/Housewarming-Party-at-Joce-s-3ceea74eb77981da84a1ce0a76053c62"
+    },
+    {
+     "name": "Claude Campus Ambassador \u2014 HARD DEADLINE 2359 PT",
+     "date": "2026-09-12",
+     "end": "",
+     "done": false,
+     "kind": "Admin",
+     "src": "task",
+     "location": "",
+     "type": "Task",
+     "meeting_type": "Admin",
+     "url": "https://app.notion.com/p/Claude-Campus-Ambassador-HARD-DEADLINE-2359-PT-3d5ea74eb779817881cee0f119bb99ce"
     }
    ]
   },
@@ -454,5 +490,5 @@
    ]
   }
  ],
- "total": 34
+ "total": 37
 }
