@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Day</title>
+<style>
+  :root{
+    --bg:#191919; --panel:#202020; --line:#2f2f2f; --hair:#232323;
+    --ink:#e9e9e7; --dim:#9b9a97; --faint:#6f6e6b;
+    --now:#e06c6c; --blue:#5b93d3; --gold:#c9a227; --green:#5fa87a; --purple:#9a6dd7;
+    --hr:64px;              /* height of one hour row */
+    --gut:54px;             /* left time gutter */
+  }
+  @media (prefers-color-scheme: light){
+    :root{ --bg:#fff; --panel:#f7f7f5; --line:#e6e5e1; --hair:#efeeec;
+           --ink:#37352f; --dim:#787774; --faint:#9b9a97; }
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html,body{height:100%}
+  body{background:var(--bg);color:var(--ink);
+       font:13.5px/1.45 -apple-system,BlinkMacSystemFont,"Segoe UI",Inter,sans-serif;
+       -webkit-font-smoothing:antialiased;display:flex;flex-direction:column;overflow:hidden}
+
+  header{display:flex;align-items:flex-end;justify-content:space-between;
+         padding:14px 18px 11px;border-bottom:1px solid var(--line);flex:0 0 auto}
+  .dnum{font-size:27px;font-weight:600;letter-spacing:-.025em;line-height:1}
+  .dow{font-size:10.5px;color:var(--dim);text-transform:uppercase;
+       letter-spacing:.1em;margin-top:3px}
+  .rt{text-align:right}
+  .clk{font-size:22px;font-weight:600;font-variant-numeric:tabular-nums;line-height:1;
+       letter-spacing:-.01em}
+  .meta{font-size:10.5px;color:var(--faint);margin-top:4px}
+
+  /* all-day strip */
+  .allday{flex:0 0 auto;padding:7px 18px;border-bottom:1px solid var(--line);
+          display:flex;gap:7px;flex-wrap:wrap;align-items:center}
+  .allday .lbl{font-size:9.5px;color:var(--faint);text-transform:uppercase;
+       letter-spacing:.07em;flex:0 0 auto;margin-right:2px}
+  .ad{font-size:11.5px;background:var(--panel);border:1px solid var(--line);
+      border-radius:4px;padding:2px 8px;color:var(--ink);text-decoration:none;
+      display:inline-block;max-width:100%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+  .ad:hover{border-color:var(--blue)}
+  .ad.done{color:var(--faint);text-decoration:line-through}
+
+  /* scrolling grid */
+  .scroll{flex:1;overflow-y:auto;position:relative;min-height:0}
+  .grid{position:relative;padding:0 18px 30px}
+  .hour{position:relative;height:var(--hr);border-top:1px solid var(--hair)}
+  .hour.major{border-top-color:var(--line)}
+  .hour .hl{position:absolute;left:0;top:-8px;width:calc(var(--gut) - 12px);
+       text-align:right;font-size:10.5px;color:var(--faint);
+       font-variant-numeric:tabular-nums;letter-spacing:.02em}
+  .hour.wake .hl{color:var(--dim)}
+  .lane{position:absolute;left:var(--gut);right:0;top:0;bottom:0}
+
+  /* events layer */
+  .layer{position:absolute;left:18px;right:18px;top:0;bottom:0;pointer-events:none}
+  .ev{position:absolute;left:var(--gut);pointer-events:auto;
+      border-radius:5px;padding:5px 9px;text-decoration:none;color:var(--ink);
+      background:var(--panel);border:1px solid var(--line);
+      border-left:3px solid var(--blue);overflow:hidden;
+      display:flex;flex-direction:column;gap:1px}
+  .ev:hover{border-color:var(--blue);z-index:5}
+  .ev.k-class{border-left-color:var(--gold)}
+  .ev.k-res{border-left-color:var(--green)}
+  .ev.k-admin{border-left-color:var(--purple)}
+  .ev.done{opacity:.5}
+  .ev.done .et{text-decoration:line-through}
+  .et{font-size:12.5px;font-weight:500;line-height:1.25;
+      overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+  .em{font-size:10.5px;color:var(--dim);font-variant-numeric:tabular-nums;
+      overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+  .ew{font-size:10.5px;color:var(--faint);overflow:hidden;
+      text-overflow:ellipsis;white-space:nowrap}
+
+  /* now line */
+  .nowline{position:absolute;left:calc(var(--gut) - 6px);right:0;height:0;
+      border-top:1.5px solid var(--now);z-index:8;pointer-events:none}
+  .nowline::before{content:"";position:absolute;left:-4px;top:-4.5px;
+      width:8px;height:8px;border-radius:50%;background:var(--now)}
+  .nowtag{position:absolute;left:0;transform:translateY(-50%);
+      font-size:9.5px;color:var(--now);font-variant-numeric:tabular-nums;
+      font-weight:600;z-index:9;pointer-events:none}
+
+  .empty{color:var(--faint);font-style:italic;padding:24px 18px;font-size:12.5px}
+  footer{flex:0 0 auto;padding:7px 18px;border-top:1px solid var(--line);
+         font-size:10px;color:var(--faint);display:flex;justify-content:space-between}
+</style>
+</head>
+<body>
+<header>
+  <div><div class="dnum" id="dnum">—</div><div class="dow" id="dow"></div></div>
+  <div class="rt"><div class="clk" id="clk">----</div><div class="meta" id="sum"></div></div>
+</header>
+<div class="allday" id="allday" style="display:none"></div>
+<div class="scroll" id="scroll"><div class="grid" id="grid"></div></div>
+<footer><span id="gen"></span><span id="src">Tasks &amp; Meetings</span></footer>
+
+<script>
+const H0 = 5, H1 = 24;            // 0500 -> 2400
+const HR = 64;                    // must match --hr
+const DOW=['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+const MON=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+const esc=s=>(s||'').replace(/[<>&]/g,c=>({'<':'&lt;','>':'&gt;','&':'&amp;'}[c]));
+
+// read wall-clock digits off the ISO string; never new Date() on the value
+const mins = iso => { const m=/T(\d{2}):(\d{2})/.exec(iso||''); return m?(+m[1])*60+(+m[2]):null; };
+const hhmm = iso => { const m=/T(\d{2}):(\d{2})/.exec(iso||''); return m?m[1]+m[2]:''; };
+function durTxt(a,b){
+  const s=mins(a),e=mins(b); if(s==null||e==null||e<=s) return '';
+  const d=e-s; return d>=60 ? (d%60?`${Math.floor(d/60)}h${d%60}`:`${Math.floor(d/60)}h`) : `${d}m`;
+}
+function kindClass(t){
+  const k=((t.meeting_type||'')+' '+(t.type||'')+' '+(t.kind||'')).toLowerCase();
+  if(t.src==='class'||/class|lecture|recitation/.test(k)) return 'k-class';
+  if(/research|serg|thesis|deep/.test(k)) return 'k-res';
+  if(/admin|meeting|travel/.test(k)) return 'k-admin';
+  return '';
+}
+function nowMin(){ const n=new Date(); return n.getHours()*60+n.getMinutes(); }
+function clkTxt(){ const n=new Date();
+  return String(n.getHours()).padStart(2,'0')+String(n.getMinutes()).padStart(2,'0'); }
+
+document.getElementById('clk').textContent = clkTxt();
+
+fetch('../data/tasks.json?t='+Date.now()).then(r=>r.json()).then(d=>{
+  const day = new Date(d.today+'T12:00:00');
+  document.getElementById('dnum').textContent = MON[day.getMonth()]+' '+day.getDate();
+  document.getElementById('dow').textContent  = DOW[day.getDay()];
+  const c=d.counts;
+  document.getElementById('sum').textContent =
+    `${c.today_done}/${c.today_total} done · ${c.open} open · ${c.overdue} overdue`;
+  const g=new Date(d.generated);
+  document.getElementById('gen').textContent =
+    'synced '+String(g.getHours()).padStart(2,'0')+String(g.getMinutes()).padStart(2,'0');
+
+  const items = d.today_items || [];
+  const timed  = items.filter(t=>mins(t.date)!=null);
+  const allday = items.filter(t=>mins(t.date)==null);
+
+  // ---- all-day strip
+  const ad=document.getElementById('allday');
+  if(allday.length){
+    ad.style.display='flex';
+    ad.innerHTML='<span class="lbl">All day</span>'+allday.map(t=>
+      `<a class="ad ${t.done?'done':''}" href="${t.url}" target="_blank">${esc(t.name)||'(untitled)'}</a>`).join('');
+  }
+
+  // ---- hour rows
+  const grid=document.getElementById('grid');
+  let html='';
+  for(let h=H0; h<H1; h++){
+    const wake = h>=7 && h<=22;
+    html += `<div class="hour ${h%2===0?'major':''} ${wake?'wake':''}">
+       <span class="hl">${String(h).padStart(2,'0')}00</span></div>`;
+  }
+  html += `<div class="hour" style="height:0"><span class="hl">2400</span></div>`;
+  html += `<div class="layer" id="layer"></div>`;
+  grid.innerHTML=html;
+
+  // ---- lay out events, side-by-side when they overlap
+  const top = m => ((m - H0*60)/60)*HR;
+  const ev = timed.map(t=>{
+    const s=mins(t.date);
+    let e=mins(t.end); if(e==null||e<=s) e=s+45;      // default 45m block
+    return {t, s, e:Math.min(e, H1*60)};
+  }).sort((a,b)=> a.s-b.s || a.e-b.e);
+
+  // greedy column packing for overlaps
+  const cols=[];
+  ev.forEach(x=>{
+    let placed=false;
+    for(let i=0;i<cols.length;i++){
+      if(cols[i] <= x.s){ cols[i]=x.e; x.col=i; placed=true; break; }
+    }
+    if(!placed){ x.col=cols.length; cols.push(x.e); }
+  });
+  const ncol = Math.max(1, cols.length);
+
+  const layer=document.getElementById('layer');
+  layer.innerHTML = ev.map(x=>{
+    const t=x.t;
+    const h=Math.max(24, ((x.e-x.s)/60)*HR - 3);
+    const wpct = 100/ncol;
+    const style = `top:${top(x.s)}px;height:${h}px;`+
+                  `width:calc((100% - var(--gut)) * ${wpct/100} - 4px);`+
+                  `left:calc(var(--gut) + (100% - var(--gut)) * ${x.col*wpct/100});`;
+    const showMeta = h>=40, showWhere = h>=60 && t.location;
+    return `<a class="ev ${kindClass(t)} ${t.done?'done':''}" style="${style}"
+              href="${t.url}" target="_blank">
+       <span class="et">${esc(t.name)||'(untitled)'}</span>
+       ${showMeta?`<span class="em">${hhmm(t.date)}${t.end?'–'+hhmm(t.end):''}${durTxt(t.date,t.end)?' · '+durTxt(t.date,t.end):''}</span>`:''}
+       ${showWhere?`<span class="ew">${esc(t.location)}</span>`:''}
+     </a>`;
+  }).join('');
+
+  if(!items.length){
+    grid.insertAdjacentHTML('afterbegin','<div class="empty">nothing scheduled today</div>');
+  }
+
+  // ---- now line
+  function drawNow(){
+    document.querySelectorAll('.nowline,.nowtag').forEach(n=>n.remove());
+    const m=nowMin();
+    document.getElementById('clk').textContent = clkTxt();
+    if(m < H0*60 || m > H1*60) return;
+    const y=top(m);
+    grid.insertAdjacentHTML('beforeend',
+      `<div class="nowline" style="top:${y}px"></div>
+       <div class="nowtag" style="top:${y}px">${clkTxt()}</div>`);
+  }
+  drawNow(); setInterval(drawNow, 30000);
+
+  // scroll so the current hour sits near the top third
+  const m=nowMin();
+  const target = Math.max(0, top(m) - 180);
+  document.getElementById('scroll').scrollTop = (m>=H0*60&&m<=H1*60) ? target : Math.max(0, top(8*60)-40);
+})
+.catch(()=>{ document.getElementById('grid').innerHTML =
+  '<div class="empty">data not built yet</div>'; });
+</script>
+</body>
+</html>
