@@ -6,78 +6,103 @@
 <title>Deadline runway</title>
 <style>
   :root{
-    --bg:#191919; --panel:#202020; --line:#2f2f2f; --hair:#252525;
-    --ink:#e9e9e7; --dim:#9b9a97; --faint:#6f6e6b;
-    --blue:#5b93d3; --gold:#c9a227; --red:#e06c6c; --green:#5fa87a; --purple:#9a6dd7;
+    --bg:#191919; --panel:#202020; --line:#2f2f2f; --hair:#262626;
+    --ink:#e9e9e7; --dim:#9b9a97; --faint:#6b6a67;
+    --blue:#5b93d3; --gold:#c9a227; --green:#5fa87a; --red:#e06c6c; --purple:#9a7fd0;
   }
   @media (prefers-color-scheme: light){
     :root{ --bg:#fff; --panel:#f7f7f5; --line:#e6e5e1; --hair:#efeeec;
-           --ink:#37352f; --dim:#787774; --faint:#9b9a97; }
+           --ink:#37352f; --dim:#787774; --faint:#8f8e8b; }
   }
   *{box-sizing:border-box;margin:0;padding:0}
-  body{background:var(--bg);color:var(--ink);padding:9px 12px 10px;
+  body{background:var(--bg);color:var(--ink);padding:8px 12px 9px;
        font:13px/1.4 -apple-system,BlinkMacSystemFont,"Segoe UI",Inter,sans-serif;
        -webkit-font-smoothing:antialiased}
-  .hd{display:flex;align-items:baseline;gap:10px;margin-bottom:5px}
-  .hd .ttl{font-size:10px;color:var(--faint);text-transform:uppercase;
-           letter-spacing:.09em;flex:1}
-  .hd .ct{font-size:10px;color:var(--faint);font-variant-numeric:tabular-nums}
-  .hd .ct b{color:var(--red);font-weight:600}
 
-  svg{display:block;width:100%;overflow:visible}
+  .hd{display:flex;align-items:baseline;gap:9px;margin-bottom:4px;flex-wrap:nowrap}
+  .hd .ttl{font-size:10px;color:var(--faint);text-transform:uppercase;
+           letter-spacing:.09em;white-space:nowrap}
+  .hd .sp{flex:1}
+  .hd .ct{font-size:10px;color:var(--dim);font-variant-numeric:tabular-nums;
+          white-space:nowrap}
+  .hd .ct b{color:var(--ink);font-weight:600}
+  .hd .ct .dr{color:var(--purple);font-weight:600}
+
+  svg{display:block;width:100%;height:auto;overflow:visible}
   text{font:10px -apple-system,BlinkMacSystemFont,"Segoe UI",Inter,sans-serif;
        fill:var(--faint);font-variant-numeric:tabular-nums}
   .lbl{font-size:9.5px;fill:var(--dim)}
   .lbl.hot{fill:var(--red)}
   .lbl.warn{fill:var(--gold)}
   .lbl.ms{fill:var(--ink);font-weight:600}
+  .lbl.drop{fill:var(--purple);font-weight:700}
   .tick{font-size:9px;fill:var(--faint)}
-  .zone{font-size:8.5px;fill:var(--faint);opacity:.7;text-transform:uppercase;
-        letter-spacing:.06em}
+  .zone{font-size:8.5px;fill:var(--faint);text-transform:uppercase;letter-spacing:.07em}
+  .wkn{font-size:8.5px;fill:var(--ink);font-weight:600}
+  .wkc{font-size:8.5px;fill:var(--red);font-weight:600;letter-spacing:.04em}
   g.mk{cursor:default}
   g.mk:hover .lbl{fill:var(--ink)}
 
+  .ft{display:flex;gap:7px;margin-top:5px;flex-wrap:wrap;align-items:stretch}
+  .chip{border:1px solid var(--line);border-radius:5px;padding:4px 8px;
+        background:var(--panel);font-size:10px;color:var(--dim);
+        font-variant-numeric:tabular-nums;white-space:nowrap;overflow:visible}
+  .chip b{color:var(--ink);font-weight:600}
+  .chip .k{color:var(--faint);text-transform:uppercase;letter-spacing:.07em;
+           font-size:8.5px;margin-right:5px}
+  .chip.pk b{color:var(--red)}
+  .chip.dp{border-color:#5c4a86}
+  .chip.dp b{color:var(--purple)}
+
   .tip{position:fixed;pointer-events:none;z-index:9;opacity:0;transition:opacity .1s;
        background:var(--panel);border:1px solid var(--line);border-radius:5px;
-       padding:6px 8px;max-width:260px;box-shadow:0 4px 14px rgba(0,0,0,.4)}
+       padding:6px 8px;max-width:280px;box-shadow:0 4px 14px rgba(0,0,0,.45)}
   .tip b{font-size:11.5px;font-weight:600;display:block;line-height:1.3;
          margin-bottom:3px;color:var(--ink)}
   .tip em{font-style:normal;font-size:10px;color:var(--dim);
-          font-variant-numeric:tabular-nums;display:block}
-  .empty{color:var(--faint);font-size:12px;padding:18px 0;text-align:center}
+          font-variant-numeric:tabular-nums;display:block;line-height:1.45}
+  .empty{color:var(--faint);font-size:12px;padding:20px 0;text-align:center}
 </style>
 </head>
 <body>
 <div class="hd">
-  <span class="ttl">Deadline runway &middot; multi-scale</span>
+  <span class="ttl">90-day runway</span>
+  <span class="sp"></span>
   <span class="ct" id="ct"></span>
 </div>
 <div id="root"><div class="empty">Loading&hellip;</div></div>
+<div class="ft" id="ft"></div>
 <div class="tip" id="tip"></div>
 
 <script>
-/* ------------------------------------------------------------------ *
- * NON-LINEAR deadline runway. One horizontal strip on which "tomorrow"
- * and "+130 days" are both legible.
+/* ==================================================================
+ * NON-LINEAR DEADLINE RUNWAY
  *
- * Scale is PIECEWISE: each band gets a fixed share of the width, so
- * near-term days are stretched and far-term days compressed.
- *   overdue (<0)  12%     0-7d   26%     8-30d  24%
- *   31-90d        23%     91d+   15%
- * Within each band the mapping is linear, so ordering is exact and the
- * band boundaries are drawn as labelled ticks - the compression is
- * visible, not hidden.
+ * The only widget on this dashboard that sees past a 7-day window.
+ * A LINEAR axis would put 15 Jan 2027 as a dot at the far right and
+ * crush everything before it; the scale here is PIECEWISE LINEAR, so
+ * "due Friday" and "due in 129 days" are both legible at once.
+ * Ordering is exact everywhere and every band boundary is drawn and
+ * labelled, so the compression is declared rather than hidden.
  *
- * Dates parsed by REGEX. Date-only maths anchored at T12:00:00.
- * ------------------------------------------------------------------ */
+ * Density is a SECOND channel: a per-week skyline under the axis.
+ * A week with five graded items renders as one tall solid block, not
+ * five evenly spaced dots. Weight is a THIRD channel (mark size).
+ *
+ * Source of truth: ../data/syllabus.json when present; otherwise the
+ * hardcoded Fall 2026 set transcribed from the syllabus PDFs on
+ * 2026-09-08. Never crashes if the file is absent.
+ * ================================================================== */
 
-var W = 1180, H = 216;
-var M = { t:22, r:16, b:30, l:16 };
+var TODAY_FALLBACK = '2026-09-08';
+
+var W = 1180;
+var M = { t:16, r:16, b:24, l:16 };
 var PW = W - M.l - M.r;
-var AXIS_Y = M.t + 86;             /* the runway line */
+var SKY = 46;                 /* max height of the weekly density skyline */
 
 var D_RE = /^(\d{4})-(\d{2})-(\d{2})/;
-var GRADED = { Homework:1, Exam:1, Quiz:1, Presentation:1 };
+var MO = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
 
 function ymd(iso){
   if(!iso || typeof iso !== 'string') return null;
@@ -87,27 +112,38 @@ function ymd(iso){
 function dayDiff(a, b){
   return Math.round((new Date(a+'T12:00:00') - new Date(b+'T12:00:00')) / 86400000);
 }
+function addDays(iso, n){
+  var d = new Date(iso+'T12:00:00');
+  d.setDate(d.getDate() + n);
+  var p = function(v){ return (v<10?'0':'') + v; };
+  return d.getFullYear() + '-' + p(d.getMonth()+1) + '-' + p(d.getDate());
+}
+function dow(iso){ return new Date(iso+'T12:00:00').getDay(); }       /* 0=Sun */
+function monday(iso){ var w = dow(iso); return addDays(iso, w===0 ? -6 : 1-w); }
 function fmtDate(s){
-  var mo = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
   var m = D_RE.exec(s); if(!m) return s;
-  return m[3] + ' ' + mo[parseInt(m[2],10)-1];
+  return m[3].replace(/^0/,'') + ' ' + MO[parseInt(m[2],10)-1];
 }
 function fmtFull(s){
-  var mo = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
   var m = D_RE.exec(s); if(!m) return s;
-  return m[3] + ' ' + mo[parseInt(m[2],10)-1] + ' ' + m[1];
+  return m[3] + ' ' + MO[parseInt(m[2],10)-1] + ' ' + m[1];
 }
 function relTxt(d){
   if(d === 0) return 'today';
   if(d < 0)   return Math.abs(d) + 'd overdue';
   if(d === 1) return 'tomorrow';
-  return 'in ' + d + 'd';
+  return 'in ' + d + ' days';
 }
 function esc(s){
   return String(s==null?'':s).replace(/[&<>"]/g, function(c){
     return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];
   });
 }
+
+/* ---------------- urgency (colour channel) ----------------
+ * <=3d red, <=14d amber, otherwise neutral blue. Milestones and the
+ * drop date override with their own hue so they never read as
+ * "just another deadline". */
 function urgency(d){
   if(d <= 3)  return 'var(--red)';
   if(d <= 14) return 'var(--gold)';
@@ -115,22 +151,33 @@ function urgency(d){
 }
 function urgClass(d){ return d <= 3 ? 'hot' : (d <= 14 ? 'warn' : ''); }
 
-/* ---------------- piecewise non-linear scale ---------------- */
+/* ---------------- weight (size channel) ----------------
+ * Radius is linear in percent-of-grade so a 25% paper is visibly
+ * bigger than a 5% problem set. Unknown weight is drawn as a HOLLOW
+ * ring at a fixed middling size: honestly "not published", never
+ * silently rendered as if it were small. */
+function markR(w){ return (w == null) ? 3.7 : (2.5 + Math.min(w,30) * 0.155); }
+
+/* ================= piecewise non-linear scale =================
+ * Each band owns a fixed share of the width; within a band the
+ * mapping is linear. The 60-95d band is deliberately the widest
+ * because it holds the drop date and BOTH crunch clusters. */
 var BANDS = [
-  { lo:-120, hi:0,   share:0.10 },
-  { lo:0,    hi:7,   share:0.20 },
+  { lo:-45,  hi:0,   share:0.07, tick:'overdue' },
+  { lo:0,    hi:7,   share:0.18 },
   { lo:7,    hi:30,  share:0.18 },
-  { lo:30,   hi:80,  share:0.18 },
-  { lo:80,   hi:105, share:0.22 },   /* end-of-term crunch: deliberately widened */
-  { lo:105,  hi:140, share:0.12 }
+  { lo:30,   hi:60,  share:0.14 },
+  { lo:60,   hi:95,  share:0.26 },   /* drop date + both crunch weeks */
+  { lo:95,   hi:135, share:0.17 }    /* end of term -> 15 Jan thesis   */
 ];
 (function(){
   var acc = 0;
   BANDS.forEach(function(b){ b.x0 = acc; acc += b.share; b.x1 = acc; });
 })();
+var D_MIN = BANDS[0].lo, D_MAX = BANDS[BANDS.length-1].hi;
 
 function pos(days){
-  var d = Math.max(BANDS[0].lo, Math.min(BANDS[BANDS.length-1].hi, days));
+  var d = Math.max(D_MIN, Math.min(D_MAX, days));
   for(var i=0;i<BANDS.length;i++){
     var b = BANDS[i];
     if(d >= b.lo && d <= b.hi){
@@ -141,263 +188,465 @@ function pos(days){
   return M.l + PW;
 }
 
-/* ---------------- label anti-overlap ----------------
- * Stagger into vertical lanes. A label is only drawn if it actually
- * fits in some lane without touching its neighbour; otherwise the
- * marker keeps its dot+stem but drops the text. Nothing overlaps,
- * and nothing is silently invented.
- * ---------------------------------------------------- */
-function assignLanes(marks, minGap, nLanes){
+/* ---------------- label packing: NEVER truncate ----------------
+ * Lanes are added until every label fits without touching a
+ * neighbour. Nothing is ellipsised and nothing is dropped; the
+ * chart grows vertically instead. Returns the lane count used. */
+function assignLanes(marks, minGap){
   var laneEnd = [];
-  for(var i=0;i<nLanes;i++) laneEnd.push(-1e9);
-  marks.sort(function(a,b){ return a.x - b.x; });
+  marks.sort(function(a,b){ return a.x - b.x || a.days - b.days; });
   marks.forEach(function(m){
-    var half = m.wpx / 2;
-    m.noLabel = false;
-    for(var L=0;L<nLanes;L++){
+    var half = m.wpx / 2, L = 0;
+    for(;;L++){
+      if(laneEnd[L] === undefined) laneEnd[L] = -1e9;
       if(m.x - half >= laneEnd[L] + minGap){
-        m.lane = L; laneEnd[L] = m.x + half; return;
+        m.lane = L; laneEnd[L] = m.x + half; break;
       }
+      if(L > 24){ m.lane = 0; break; }   /* pathological guard only */
     }
-    /* nowhere it can fit without collision -> keep the mark, drop the text */
-    m.lane = 0;
-    m.noLabel = true;
   });
-  return marks;
+  return Math.max(1, laneEnd.length);
 }
 
 var TIP = document.getElementById('tip');
 function showTip(e, m){
+  var extra = '';
+  if(m.weight != null) extra += '<em>' + m.weight + '% of the grade</em>';
+  else if(m.kind === 'grade') extra += '<em>weight not published</em>';
+  if(m.note) extra += '<em>' + esc(m.note) + '</em>';
   TIP.innerHTML = '<b>' + esc(m.full) + '</b>' +
     '<em>' + fmtFull(m.ymd) + ' &middot; ' + relTxt(m.days) + '</em>' +
-    '<em>' + esc(m.kindTxt) + '</em>';
+    '<em>' + esc(m.kindTxt) + '</em>' + extra;
   TIP.style.opacity = 1;
   var x = e.clientX + 13, y = e.clientY + 13;
-  if(x + 270 > window.innerWidth)  x = e.clientX - 270;
-  if(y + 70  > window.innerHeight) y = e.clientY - 70;
+  if(x + 290 > window.innerWidth)  x = Math.max(4, e.clientX - 290);
+  if(y + 96  > window.innerHeight) y = Math.max(4, e.clientY - 96);
   TIP.style.left = x + 'px'; TIP.style.top = y + 'px';
 }
 function hideTip(){ TIP.style.opacity = 0; }
 
-function shorten(s, n){
-  s = s.replace(/\s+/g, ' ').trim();
-  return s.length > n ? s.slice(0, n-1) + '\u2026' : s;
+/* ================= data assembly ================= */
+
+/* Verified off the Fall 2026 syllabus PDFs on 2026-09-08. Used only
+ * when ../data/syllabus.json is unavailable. */
+var FALLBACK_GRADED = [
+  ['2026-09-24','14.003','PS1',null],   ['2026-10-07','14.003','PS2',null],
+  ['2026-10-09','16.S896','A1',5],      ['2026-10-13','14.003','Exam 1',null],
+  ['2026-10-23','16.S896','A2',5],      ['2026-10-26','IDS.412','Paper 1',20],
+  ['2026-10-29','14.003','PS3',null],   ['2026-11-04','IDS.412','Midterm',20],
+  ['2026-11-06','16.S896','A3',5],      ['2026-11-06','16.S896','Concept review',15],
+  ['2026-11-12','14.003','PS4',null],   ['2026-11-13','16.S896','A4',5],
+  ['2026-11-16','14.003','Exam 2',null],['2026-11-20','16.S896','Draft proposal',20],
+  ['2026-11-30','IDS.412','Final presentations I',null],
+  ['2026-12-02','IDS.412','Final presentations II',null],
+  ['2026-12-03','14.003','PS5',null],   ['2026-12-04','16.S896','A5',5],
+  ['2026-12-04','16.S896','Final presentation',20],
+  ['2026-12-09','IDS.412','Paper 2',25]
+];
+var FALLBACK_ADMIN = [
+  ['2026-10-09','Add Date','admin'], ['2026-11-18','DROP DATE','admin'],
+  ['2026-12-04','No assignments after','term'], ['2026-12-10','Classes end','term'],
+  ['2026-12-12','Thesis title due','admin'], ['2026-12-14','Finals begin','term'],
+  ['2026-12-18','Finals end','term']
+];
+
+var EXAM_KIND = { exam:1 };
+function kindLabel(k){
+  return ({ pset:'problem set', exam:'exam', paper:'paper', review:'review',
+            presentation:'presentation', milestone:'milestone',
+            admin:'registrar', term:'term boundary' })[k] || k;
 }
 
-function render(spokes, today){
-  var marks = [];
+function buildMarks(syl, today){
+  var marks = [], undated = [], src;
+  var dropDate = '2026-11-18', titleDue = '2026-12-12';
 
-  /* --- graded class deadlines --- */
-  (spokes.classes || []).forEach(function(c){
-    if(!GRADED[c.type]) return;
-    var y = ymd(c.date); if(!y) return;
-    var d = dayDiff(y, today);
-    marks.push({
-      ymd:y, days:d, kind:'class',
-      full: c.name,
-      short: shorten((c.code ? c.code + ' ' : '') + c.type, 22),
-      kindTxt: (c.code || 'class') + ' \u00b7 ' + c.type,
-      url: c.url || ''
+  if(syl && syl.events && syl.events.length){
+    src = 'syllabus.json';
+    if(syl.term){
+      dropDate = syl.term.drop_date || dropDate;
+      titleDue = syl.term.thesis_title_due || titleDue;
+    }
+    syl.events.forEach(function(e){
+      var y = ymd(e.date);
+      if(e.graded){
+        if(!y){ undated.push((e.code?e.code+' ':'') + (e.name||'event')); return; }
+        marks.push({
+          ymd:y, days:dayDiff(y, today), kind:'grade', ekind:e.kind || 'work',
+          code:e.code || '', weight:(typeof e.weight === 'number' ? e.weight : null),
+          full:(e.code?e.code+' \u00b7 ':'') + (e.name||'Graded work'),
+          text:(e.code?e.code+' ':'') + String(e.name||'Graded work').replace(/\s+due$/i,''),
+          kindTxt:kindLabel(e.kind||'work'), note:e.note || ''
+        });
+      } else if(e.kind === 'admin'){
+        if(!y) return;
+        marks.push({
+          ymd:y, days:dayDiff(y, today),
+          kind:(y === dropDate ? 'drop' : 'admin'), ekind:'admin', code:'',
+          weight:null, full:e.name || 'Registrar date',
+          text:e.name || 'Registrar date', kindTxt:'MIT registrar', note:e.note || ''
+        });
+      }
     });
-  });
-
-  /* --- thesis + degree milestones (fixed, known dates) ---
-     12 Dec is the MIT registrar's published date for submitting or changing an
-     advanced degree thesis title for a February degree ($85 late fee after).
-     An earlier note said 11 Dec; the registrar calendar says Friday 12 Dec. */
-  [ ['2026-09-11', 'Degree application'],
-    ['2026-12-12', 'Thesis title due'],
-    ['2027-01-15', 'THESIS DUE'],
-    ['2027-05-07', 'June degree list'] ].forEach(function(m){
-    marks.push({ ymd:m[0], days:dayDiff(m[0], today), kind:'thesis',
-                 full:m[1], short:shorten(m[1], 22), kindTxt:'Thesis milestone', url:'' });
-  });
-
-  /* --- graded events, read from the Fall 2026 syllabi (verified 08 Sep) ---
-     These are NOT in Notion yet, so no data feed can supply them. Hardcoded
-     here deliberately: a deadline widget that cannot see three exams and two
-     papers is worse than useless, it is falsely reassuring. */
-  [ ['2026-09-24', '14.003 PS1'],
-    ['2026-10-07', '14.003 PS2'],
-    ['2026-10-13', '14.003 EXAM 1'],
-    ['2026-10-26', 'IDS.412 Paper 1'],
-    ['2026-10-29', '14.003 PS3'],
-    ['2026-11-04', 'IDS.412 MIDTERM'],
-    ['2026-11-06', '16.S896 concept review'],
-    ['2026-11-12', '14.003 PS4'],
-    ['2026-11-16', '14.003 EXAM 2'],
-    ['2026-11-20', '16.S896 draft proposal'],
-    ['2026-12-03', '14.003 PS5'],
-    ['2026-12-04', '16.S896 FINAL'],
-    ['2026-12-09', 'IDS.412 Paper 2'] ].forEach(function(m){
-    marks.push({ ymd:m[0], days:dayDiff(m[0], today), kind:'class',
-                 full:m[1], short:shorten(m[1], 22), kindTxt:'graded \u00b7 syllabus', url:'' });
-  });
-
-  /* --- term boundaries --- */
-  [ ['2026-12-04', 'No assignments after'],
-    ['2026-12-10', 'Classes end'],
-    ['2026-12-14', 'Finals begin'],
-    ['2026-12-18', 'Finals end'] ].forEach(function(m){
-    marks.push({ ymd:m[0], days:dayDiff(m[0], today), kind:'term',
-                 full:m[1], short:shorten(m[1], 22), kindTxt:'Term boundary', url:'' });
-  });
-
-  var root = document.getElementById('root');
-  if(!marks.length){ root.innerHTML = '<div class="empty">No deadlines found.</div>'; return; }
-
-  var overdue = marks.filter(function(m){ return m.days < 0; }).length;
-  var hot     = marks.filter(function(m){ return m.days >= 0 && m.days <= 3; }).length;
-  document.getElementById('ct').innerHTML =
-    marks.length + ' markers' + (overdue ? ' \u00b7 <b>' + overdue + ' overdue</b>' : '') +
-    (hot ? ' \u00b7 ' + hot + ' within 3d' : '');
-
-  marks.forEach(function(m, i){
-    m.idx  = i;
-    m.x    = pos(m.days);
-    m.wpx  = (m.short.length + 7) * 4.9 + 10;
-    m.col  = urgency(m.days);
-    m.cls  = urgClass(m.days);
-  });
-
-  /* The overdue band is a dense backlog (many identical 24.134 rows).
-     Individually labelled they are illegible, so collapse them into one
-     honest aggregate marker; the individual stems still render. */
-  var odue = marks.filter(function(m){ return m.days < 0; });
-  var live = marks.filter(function(m){ return m.days >= 0; });
-  if(odue.length > 3){
-    odue.forEach(function(m){ m.agg = true; });
-    var oldest = odue.reduce(function(a,b){ return a.days < b.days ? a : b; });
-    marks.push({
-      idx: marks.length, ymd: oldest.ymd, days: oldest.days, kind:'agg',
-      full: odue.length + ' overdue graded items',
-      short: odue.length + ' overdue',
-      kindTxt: 'oldest ' + Math.abs(oldest.days) + 'd back \u00b7 mostly 24.134',
-      url: '', x: Math.max(M.l + 34, pos(Math.round(odue.reduce(function(s,m){return s+m.days;},0)/odue.length))),
-      col: 'var(--red)', cls: 'hot', agg: false
+    if(syl.term && syl.term.no_assignments_after){
+      marks.push({ ymd:syl.term.no_assignments_after,
+        days:dayDiff(syl.term.no_assignments_after, today), kind:'admin',
+        ekind:'admin', code:'', weight:null, full:'No assignments due after this date',
+        text:'No assignments after', kindTxt:'term boundary', note:'' });
+    }
+  } else {
+    src = 'built-in (syllabus.json absent)';
+    FALLBACK_GRADED.forEach(function(r){
+      marks.push({ ymd:r[0], days:dayDiff(r[0], today), kind:'grade',
+        ekind:/Exam|Midterm/i.test(r[2]) ? 'exam' : 'work', code:r[1], weight:r[3],
+        full:r[1] + ' \u00b7 ' + r[2], text:r[1] + ' ' + r[2],
+        kindTxt:'graded \u00b7 syllabus PDF', note:'' });
     });
-    marks[marks.length-1].wpx = (marks[marks.length-1].short.length + 7) * 4.9 + 10;
+    FALLBACK_ADMIN.forEach(function(r){
+      marks.push({ ymd:r[0], days:dayDiff(r[0], today),
+        kind:(r[0] === dropDate ? 'drop' : 'admin'), ekind:'admin', code:'',
+        weight:null, full:r[1], text:r[1],
+        kindTxt:(r[2]==='admin'?'MIT registrar':'term boundary'), note:'' });
+    });
+    undated.push('14.003 Exam 3 (date not published)');
   }
 
-  /* thesis/term markers go above the line, coursework below */
-  var above = marks.filter(function(m){ return m.kind !== 'class' && m.kind !== 'agg'; });
-  var below = marks.filter(function(m){ return m.kind === 'class' && !m.agg; });
-  var aggM  = marks.filter(function(m){ return m.kind === 'agg'; });
-  assignLanes(above, 10, 4);
-  assignLanes(below, 10, 3);
-  aggM.forEach(function(m){ m.lane = 0; m.noLabel = false; });
+  /* Thesis + degree spine. Always present: these are the reason the
+   * scale is non-linear in the first place. */
+  [ ['2026-09-11','Degree application','Apply for the Feb 2027 degree list'],
+    [titleDue,'Thesis title due','$85 late fee after this date'],
+    ['2027-01-15','THESIS DUE','Master\u2019s thesis, Feb 2027 degree'] ]
+  .forEach(function(r){
+    if(marks.some(function(m){ return m.ymd === r[0] && /title/i.test(m.text); })
+       && /title/i.test(r[1])) {
+      marks = marks.filter(function(m){ return !(m.ymd === r[0] && /title/i.test(m.text)); });
+    }
+    marks.push({ ymd:r[0], days:dayDiff(r[0], today), kind:'thesis', ekind:'thesis',
+      code:'', weight:null, full:r[1], text:r[1], kindTxt:'thesis milestone',
+      note:r[2] });
+  });
 
-  var s = '<svg viewBox="0 0 ' + W + ' ' + H + '" height="' + H + '" ' +
+  return { marks:marks, undated:undated, src:src, dropDate:dropDate };
+}
+
+/* ================= render ================= */
+function render(syl, tasks, today){
+  var root = document.getElementById('root');
+  var built = buildMarks(syl, today);
+  var marks = built.marks;
+  if(!marks.length){ root.innerHTML = '<div class="empty">No deadlines found.</div>'; return; }
+
+  marks.forEach(function(m, i){
+    m.idx = i;
+    m.x   = pos(m.days);
+    m.col = (m.kind === 'drop')   ? 'var(--purple)'
+          : (m.kind === 'thesis') ? (m.days <= 14 ? 'var(--red)' : 'var(--gold)')
+          : (m.kind === 'admin')  ? 'var(--dim)'
+          : urgency(m.days);
+    m.cls = (m.kind === 'drop') ? 'drop'
+          : (m.kind === 'thesis') ? ('ms ' + urgClass(m.days)) : urgClass(m.days);
+    /* label = full text + optional weight + date. Nothing is clipped. */
+    m.wtxt = (m.weight != null) ? (' ' + m.weight + '%') : '';
+    m.dtxt = fmtDate(m.ymd);
+    m.wpx  = (m.text.length + m.wtxt.length) * 5.15 + m.dtxt.length * 4.5 + 16;
+  });
+
+  /* ---- weekly graded-density skyline (the clustering channel) ---- */
+  var byWeek = {};
+  marks.filter(function(m){ return m.kind === 'grade' && m.days >= -7 && m.days <= D_MAX; })
+       .forEach(function(m){
+    var k = monday(m.ymd);
+    if(!byWeek[k]) byWeek[k] = { mon:k, n:0, w:0, kw:0, minDays:1e9, items:[] };
+    var b = byWeek[k];
+    b.n++; b.items.push(m);
+    if(m.weight != null){ b.w += m.weight; b.kw++; }
+    if(m.days < b.minDays) b.minDays = m.days;
+  });
+  var weeks = Object.keys(byWeek).map(function(k){ return byWeek[k]; })
+                    .sort(function(a,b){ return a.mon < b.mon ? -1 : 1; });
+  var maxN = weeks.reduce(function(a,b){ return Math.max(a, b.n); }, 1);
+  var maxW = weeks.reduce(function(a,b){ return Math.max(a, b.w); }, 1);
+
+  /* Load is COUNT and WEIGHT together. Five 5% items and three items
+   * worth 40% are both bad weeks, in different ways, and a pure count
+   * would hide the second. Height uses whichever reads worse; the peak
+   * flag needs >=3 items AND either a 5-item pile-up or >=25% of a
+   * grade landing inside one week. */
+  weeks.forEach(function(w){
+    w.load  = Math.max(w.n / maxN, w.w / maxW);
+    w.score = w.n + w.w / 10;
+    /* tightest gap between two heavy (>=15%) items in the week */
+    var heavy = w.items.filter(function(m){ return (m.weight || 0) >= 15; })
+                       .map(function(m){ return m.ymd; })
+                       .filter(function(v,i,a){ return a.indexOf(v) === i; }).sort();
+    w.tight = null;
+    for(var i=1;i<heavy.length;i++){
+      var g = dayDiff(heavy[i], heavy[i-1]);
+      if(w.tight === null || g < w.tight) w.tight = g;
+    }
+  });
+  var ranked = weeks.slice().sort(function(a,b){ return b.score - a.score; });
+  ranked.forEach(function(w){ w.peak = (w.n >= 3 && (w.n >= 5 || w.w >= 25)); });
+
+  /* ---- layout: lanes decide the height, so nothing is squeezed ---- */
+  var above = marks.filter(function(m){ return m.kind !== 'grade'; });
+  var below = marks.filter(function(m){ return m.kind === 'grade'; });
+  var nA = assignLanes(above, 12);
+  var nB = assignLanes(below, 11);
+
+  var AB_STEM = 15, AB_STEP = 20, BL_STEM = 15, BL_STEP = 21;
+  var AXIS_Y = M.t + 12 + AB_STEM + (nA - 1) * AB_STEP;
+  var SKY_BOT = AXIS_Y + SKY;
+  var BL_TOP  = SKY_BOT + 4;
+  var H = BL_TOP + BL_STEM + (nB - 1) * BL_STEP + 14 + M.b;
+
+  var s = '<svg viewBox="0 0 ' + W + ' ' + H.toFixed(0) + '" ' +
           'preserveAspectRatio="xMidYMid meet" role="img" ' +
-          'aria-label="Non-linear deadline runway">';
+          'aria-label="Non-linear 90-day deadline runway with weekly density">';
 
-  /* band shading + boundary ticks (makes the compression explicit) */
+  /* band shading + boundaries: the compression is declared, not hidden */
   BANDS.forEach(function(b, i){
     var x0 = M.l + b.x0 * PW, x1 = M.l + b.x1 * PW;
     if(i % 2 === 1){
-      s += '<rect x="' + x0.toFixed(1) + '" y="' + (M.t) + '" width="' + (x1-x0).toFixed(1) +
-           '" height="' + (AXIS_Y + 72 - M.t) + '" fill="var(--panel)" opacity="0.5"/>';
+      s += '<rect x="' + x0.toFixed(1) + '" y="' + M.t + '" width="' + (x1-x0).toFixed(1) +
+           '" height="' + (H - M.t - M.b + 6).toFixed(1) + '" fill="var(--panel)" opacity="0.55"/>';
     }
     if(i > 0){
-      s += '<line x1="' + x0.toFixed(1) + '" y1="' + (M.t) + '" x2="' + x0.toFixed(1) +
-           '" y2="' + (AXIS_Y + 72) + '" stroke="var(--hair)"/>';
+      s += '<line x1="' + x0.toFixed(1) + '" y1="' + M.t + '" x2="' + x0.toFixed(1) +
+           '" y2="' + (H - M.b + 6).toFixed(1) + '" stroke="var(--hair)"/>';
     }
   });
 
-  /* the runway line */
+  /* ---- decision window: today -> drop date, shaded at the floor ---- */
+  var dropM = marks.filter(function(m){ return m.kind === 'drop'; })[0];
+  if(dropM && dropM.days > 0){
+    var dx0 = pos(0), dx1 = pos(dropM.days);
+    s += '<rect x="' + dx0.toFixed(1) + '" y="' + (H - M.b - 2).toFixed(1) +
+         '" width="' + (dx1 - dx0).toFixed(1) + '" height="3" fill="var(--purple)" opacity="0.30"/>';
+    s += '<text class="zone" x="' + ((dx0+dx1)/2).toFixed(1) + '" y="' + (H - 4).toFixed(1) +
+         '" text-anchor="middle" fill="var(--purple)" opacity="0.95">' +
+         'decision window \u00b7 ' + dropM.days + ' days to drop a subject</text>';
+  }
+
+  /* ---- weekly density skyline ---- */
+  weeks.forEach(function(wk){
+    var d0 = dayDiff(wk.mon, today), d1 = dayDiff(addDays(wk.mon, 6), today);
+    if(d1 < D_MIN || d0 > D_MAX) return;
+    var x0 = pos(d0), x1 = pos(d1);
+    if(x1 - x0 < 7){ var c=(x0+x1)/2; x0 = c - 3.5; x1 = c + 3.5; }
+    var h  = 9 + wk.load * (SKY - 15);
+    var hot = wk.minDays <= 14;
+    var fill = wk.peak ? 'var(--red)' : (hot ? 'var(--gold)' : 'var(--blue)');
+    var op = 0.14 + 0.13 * Math.min(wk.n, 5);
+    s += '<rect x="' + x0.toFixed(1) + '" y="' + AXIS_Y.toFixed(1) +
+         '" width="' + (x1-x0).toFixed(1) + '" height="' + h.toFixed(1) +
+         '" fill="' + fill + '" opacity="' + op.toFixed(2) + '"/>';
+    if(wk.peak){
+      s += '<rect x="' + x0.toFixed(1) + '" y="' + AXIS_Y.toFixed(1) +
+           '" width="' + (x1-x0).toFixed(1) + '" height="' + h.toFixed(1) +
+           '" fill="none" stroke="var(--red)" stroke-width="1.1" opacity="0.85"/>';
+    }
+    if(wk.n >= 2){
+      s += '<text class="' + (wk.peak ? 'wkc' : 'wkn') + '" x="' + ((x0+x1)/2).toFixed(1) +
+           '" y="' + (AXIS_Y + h - 3.5).toFixed(1) + '" text-anchor="middle">' +
+           wk.n + '</text>';
+    }
+  });
+  s += '<text class="zone" x="' + (M.l + 3) + '" y="' + (SKY_BOT - 2).toFixed(1) +
+       '">graded items per week</text>';
+
+  /* ---- the runway line ---- */
   s += '<line x1="' + M.l + '" y1="' + AXIS_Y + '" x2="' + (M.l + PW) +
        '" y2="' + AXIS_Y + '" stroke="var(--line)" stroke-width="1.5"/>';
 
-  /* axis ticks at band edges */
-  [ [-90,'-90d'], [-30,'-30d'], [0,'today'], [3,'+3d'], [7,'+7d'],
-    [14,'+14d'], [30,'+30d'], [60,'+60d'], [90,'+90d'], [105,'+105d'], [130,'+130d'] ]
+  /* ---- axis ticks at band edges ---- */
+  [ [-30,'\u221230d'], [0,'today'], [7,'+7d'], [14,'+14d'], [30,'+30d'],
+    [45,'+45d'], [60,'+60d'], [71,''], [80,'+80d'], [95,'+95d'],
+    [110,'+110d'], [129,''], [135,'+135d'] ]
   .forEach(function(t){
-    var x = pos(t[0]);
-    var isNow = (t[0] === 0);
+    if(!t[1]) return;
+    var x = pos(t[0]), isNow = (t[0] === 0);
     s += '<line x1="' + x.toFixed(1) + '" y1="' + (AXIS_Y-4) + '" x2="' + x.toFixed(1) +
-         '" y2="' + (AXIS_Y+4) + '" stroke="' + (isNow?'var(--ink)':'var(--faint)') +
-         '" stroke-width="' + (isNow?'1.5':'1') + '"/>';
-    s += '<text class="tick" x="' + x.toFixed(1) + '" y="' + (H - 16) +
+         '" y2="' + (AXIS_Y+3) + '" stroke="' + (isNow?'var(--ink)':'var(--faint)') +
+         '" stroke-width="' + (isNow?'1.5':'1') + '" opacity="' + (isNow?'1':'0.7') + '"/>';
+    s += '<text class="tick" x="' + x.toFixed(1) + '" y="' + (AXIS_Y - 7) +
          '" text-anchor="middle"' + (isNow?' fill="var(--ink)" font-weight="600"':'') +
          '>' + t[1] + '</text>';
   });
 
-  /* zone captions */
-  s += '<text class="zone" x="' + (M.l + 3) + '" y="' + (H - 4) + '">overdue</text>';
-  s += '<text class="zone" x="' + (M.l + PW - 3) + '" y="' + (H - 4) +
-       '" text-anchor="end">compressed &rarr;</text>';
-
-  /* TODAY origin marker */
+  /* ---- TODAY origin ---- */
   var tx = pos(0);
   s += '<line x1="' + tx.toFixed(1) + '" y1="' + (M.t) + '" x2="' + tx.toFixed(1) +
-       '" y2="' + (AXIS_Y + 72) + '" stroke="var(--ink)" stroke-width="1" ' +
-       'stroke-dasharray="2,3" opacity="0.55"/>';
-  s += '<circle cx="' + tx.toFixed(1) + '" cy="' + AXIS_Y + '" r="4" fill="var(--ink)"/>';
+       '" y2="' + (H - M.b + 2).toFixed(1) + '" stroke="var(--ink)" stroke-width="1" ' +
+       'stroke-dasharray="2,3" opacity="0.5"/>';
+  s += '<circle cx="' + tx.toFixed(1) + '" cy="' + AXIS_Y + '" r="3.6" fill="var(--ink)"/>';
 
-  /* markers */
-  function drawMark(m, dir){
-    var stemLen = 14 + m.lane * 19;
-    var y2 = AXIS_Y + dir * stemLen;
-    var ty = y2 + (dir < 0 ? -6 : 11);
-    s += '<g class="mk" data-i="' + m.idx + '">';
-    s += '<line x1="' + m.x.toFixed(1) + '" y1="' + AXIS_Y + '" x2="' + m.x.toFixed(1) +
-         '" y2="' + y2.toFixed(1) + '" stroke="' + m.col + '" stroke-width="1" opacity="0.65"/>';
+  /* ---- DROP DATE: a full-height purple gate, not a dot ---- */
+  if(dropM){
+    var px = pos(dropM.days);
+    s += '<rect x="' + (px-4).toFixed(1) + '" y="' + M.t + '" width="8" height="' +
+         (H - M.t - M.b + 4).toFixed(1) + '" fill="var(--purple)" opacity="0.13"/>';
+    s += '<line x1="' + px.toFixed(1) + '" y1="' + M.t + '" x2="' + px.toFixed(1) +
+         '" y2="' + (H - M.b + 4).toFixed(1) + '" stroke="var(--purple)" stroke-width="1.8"/>';
+  }
+
+  /* ---- markers ---- */
+  function glyph(m, x, y){
+    var r = markR(m.weight);
     if(m.kind === 'thesis'){
-      s += '<rect x="' + (m.x-3.5).toFixed(1) + '" y="' + (y2-3.5).toFixed(1) +
-           '" width="7" height="7" fill="' + m.col + '" transform="rotate(45 ' +
-           m.x.toFixed(1) + ' ' + y2.toFixed(1) + ')"/>';
-    } else if(m.kind === 'term'){
-      s += '<rect x="' + (m.x-3).toFixed(1) + '" y="' + (y2-3).toFixed(1) +
-           '" width="6" height="6" fill="none" stroke="' + m.col + '" stroke-width="1.4"/>';
-    } else if(m.kind === 'agg'){
-      s += '<circle cx="' + m.x.toFixed(1) + '" cy="' + y2.toFixed(1) +
-           '" r="5" fill="' + m.col + '"/>';
-    } else {
-      s += '<circle cx="' + m.x.toFixed(1) + '" cy="' + y2.toFixed(1) +
-           '" r="3.2" fill="' + m.col + '"/>';
+      return '<rect x="' + (x-4.4).toFixed(1) + '" y="' + (y-4.4).toFixed(1) +
+             '" width="8.8" height="8.8" fill="' + m.col + '" transform="rotate(45 ' +
+             x.toFixed(1) + ' ' + y.toFixed(1) + ')"/>';
     }
-    if(!m.noLabel){
-      var extra = (m.kind === 'thesis' || m.kind === 'agg') ? ' ms' : '';
-      s += '<text class="lbl ' + m.cls + extra + '" x="' + m.x.toFixed(1) +
-           '" y="' + ty.toFixed(1) + '" text-anchor="middle">' + esc(m.short) +
-           '<tspan opacity="0.6" font-size="8.5">  ' + fmtDate(m.ymd) + '</tspan></text>';
+    if(m.kind === 'drop'){
+      return '<path d="M' + x.toFixed(1) + ' ' + (y-6.5).toFixed(1) + ' L' +
+             (x+6.5).toFixed(1) + ' ' + y.toFixed(1) + ' L' + x.toFixed(1) + ' ' +
+             (y+6.5).toFixed(1) + ' L' + (x-6.5).toFixed(1) + ' ' + y.toFixed(1) +
+             ' Z" fill="var(--purple)" stroke="var(--bg)" stroke-width="1"/>';
     }
+    if(m.kind === 'admin'){
+      return '<rect x="' + (x-3.2).toFixed(1) + '" y="' + (y-3.2).toFixed(1) +
+             '" width="6.4" height="6.4" fill="none" stroke="' + m.col + '" stroke-width="1.3"/>';
+    }
+    if(EXAM_KIND[m.ekind]){   /* exams: diamond, sized by weight */
+      var e = r + 1.2;
+      return '<path d="M' + x.toFixed(1) + ' ' + (y-e).toFixed(1) + ' L' + (x+e).toFixed(1) +
+             ' ' + y.toFixed(1) + ' L' + x.toFixed(1) + ' ' + (y+e).toFixed(1) + ' L' +
+             (x-e).toFixed(1) + ' ' + y.toFixed(1) + ' Z" fill="' + m.col + '"/>';
+    }
+    if(m.weight == null){     /* weight not published -> hollow ring */
+      return '<circle cx="' + x.toFixed(1) + '" cy="' + y.toFixed(1) + '" r="' + r.toFixed(1) +
+             '" fill="none" stroke="' + m.col + '" stroke-width="1.35"/>';
+    }
+    return '<circle cx="' + x.toFixed(1) + '" cy="' + y.toFixed(1) + '" r="' + r.toFixed(1) +
+           '" fill="' + m.col + '"/>';
+  }
+
+  function drawMark(m, dir, top, stem, step){
+    var y2 = dir < 0 ? (AXIS_Y - stem - m.lane * step)
+                     : (top + stem + m.lane * step);
+    var ty = y2 + (dir < 0 ? -8 : 12);
+    var y1 = dir < 0 ? AXIS_Y : SKY_BOT;
+    s += '<g class="mk" data-i="' + m.idx + '">';
+    s += '<line x1="' + m.x.toFixed(1) + '" y1="' + y1.toFixed(1) + '" x2="' + m.x.toFixed(1) +
+         '" y2="' + y2.toFixed(1) + '" stroke="' + m.col + '" stroke-width="1" opacity="0.5"/>';
+    s += glyph(m, m.x, y2);
+    s += '<text class="lbl ' + m.cls + '" x="' + m.x.toFixed(1) + '" y="' + ty.toFixed(1) +
+         '" text-anchor="middle">' + esc(m.text) +
+         (m.wtxt ? '<tspan fill="var(--ink)" font-weight="600">' + esc(m.wtxt) + '</tspan>' : '') +
+         '<tspan opacity="0.62" font-size="8.5">  ' + m.dtxt + '</tspan></text>';
     s += '</g>';
   }
-  /* faint stems for the collapsed overdue backlog */
-  odue.forEach(function(m){
-    s += '<line x1="' + m.x.toFixed(1) + '" y1="' + (AXIS_Y-7) + '" x2="' + m.x.toFixed(1) +
-         '" y2="' + (AXIS_Y+7) + '" stroke="var(--red)" stroke-width="1" opacity="0.30"/>';
-  });
-  aggM.forEach(function(m){ drawMark(m, -1); });
-  above.forEach(function(m){ drawMark(m, -1); });
-  below.forEach(function(m){ drawMark(m,  1); });
+  above.forEach(function(m){ drawMark(m, -1, 0,      AB_STEM, AB_STEP); });
+  below.forEach(function(m){ drawMark(m,  1, BL_TOP, BL_STEM, BL_STEP); });
 
   s += '</svg>';
   root.innerHTML = s;
 
+  /* ---- header counts ---- */
+  var graded90 = below.filter(function(m){ return m.days >= 0 && m.days <= 90; }).length;
+  var thesis   = marks.filter(function(m){ return /THESIS DUE/.test(m.text); })[0];
+  document.getElementById('ct').innerHTML =
+    '<b>' + graded90 + '</b> graded in 90d' +
+    (dropM ? ' \u00b7 <span class="dr">drop in ' + dropM.days + 'd</span>' : '') +
+    (thesis ? ' \u00b7 thesis in <b>' + thesis.days + 'd</b>' : '');
+
+  /* ---- footer chips: the two peak weeks, stated in words ---- */
+  var peaks = ranked.filter(function(w){ return w.peak; })
+                    .sort(function(a,b){ return a.mon < b.mon ? -1 : 1; }).slice(0,3);
+  var ft = [];
+  peaks.forEach(function(wk){
+    var days = wk.items.map(function(m){ return m.ymd; })
+                       .filter(function(v,i,a){ return a.indexOf(v) === i; }).sort();
+    var span = fmtDate(days[0]) + (days.length > 1 ? '\u2013' + fmtDate(days[days.length-1]) : '');
+    var names = wk.items.sort(function(a,b){ return a.ymd < b.ymd ? -1 : 1; })
+                        .map(function(m){ return m.text + (m.weight != null ? ' ' + m.weight + '%' : ''); })
+                        .join(', ');
+    /* the sentence that actually matters: how close the heavy items sit */
+    var tight = (wk.tight != null && wk.tight <= 3)
+      ? ' \u00b7 <b>' + (wk.tight * 24) + 'h apart</b>' : '';
+    ft.push('<div class="chip pk"><span class="k">peak</span>' + esc(span) +
+            ' \u00b7 <b>' + wk.n + ' graded</b>' +
+            (wk.w ? ' \u00b7 <b>' + wk.w + '% of grade</b>' : '') + tight +
+            ' \u00b7 ' + esc(names) + '</div>');
+  });
+  if(dropM){
+    ft.push('<div class="chip dp"><span class="k">drop</span><b>' + fmtFull(dropM.ymd) +
+            '</b> \u00b7 in ' + dropM.days + 'd \u00b7 last chance to drop a subject</div>');
+  }
+  if(built.undated.length){
+    ft.push('<div class="chip"><span class="k">undated</span>' +
+            esc(built.undated.join(' \u00b7 ')) + '</div>');
+  }
+  ft.push('<div class="chip"><span class="k">beyond</span>7 May 2027 \u00b7 June degree list ' +
+          '\u00b7 in ' + dayDiff('2027-05-07', today) + 'd \u00b7 off-scale</div>');
+  ft.push('<div class="chip"><span class="k">src</span>' + esc(built.src) +
+          ' \u00b7 size = % of grade \u00b7 ring = weight not published</div>');
+  document.getElementById('ft').innerHTML = ft.join('');
+
+  /* ---- tooltips ---- */
   var byIdx = {};
   marks.forEach(function(m){ byIdx[m.idx] = m; });
   Array.prototype.forEach.call(root.querySelectorAll('g.mk'), function(el){
     var m = byIdx[el.getAttribute('data-i')];
+    if(!m) return;
     el.addEventListener('mousemove', function(e){ showTip(e, m); });
     el.addEventListener('mouseleave', hideTip);
-    if(m.url){
-      el.style.cursor = 'pointer';
-      el.addEventListener('click', function(){ window.open(m.url, '_blank'); });
-    }
   });
+
+  /* ---- self-check: real rendered geometry ----
+   * SVG text does not clip, so the failure mode is OVERLAP, not
+   * truncation. Measure every label's actual box and report any
+   * collision within a lane or any label escaping the viewBox. The
+   * result is exposed on <body data-runway> so it can be read from a
+   * plain DOM dump without a debugger attached. */
+  var labels = root.querySelectorAll('text.lbl');
+  var boxes = [], overflow = 0;
+  Array.prototype.forEach.call(labels, function(t){
+    var b;
+    try { b = t.getBBox(); } catch(e){ return; }
+    boxes.push({ x0:b.x, x1:b.x + b.width, y:Math.round(b.y), txt:t.textContent });
+    if(b.x < -0.5 || b.x + b.width > W + 0.5) overflow++;
+  });
+  var collisions = 0, minGap = 1e9;
+  boxes.slice().sort(function(a,b){ return a.y - b.y || a.x0 - b.x0; })
+       .forEach(function(b, i, arr){
+    if(i === 0 || arr[i-1].y !== b.y) return;
+    var g = b.x0 - arr[i-1].x1;
+    if(g < minGap) minGap = g;
+    if(g < 0) collisions++;
+  });
+  var diag = { marks:marks.length, above:above.length, below:below.length,
+               labels:boxes.length, lanesAbove:nA, lanesBelow:nB,
+               weeks:weeks.length, maxWeek:maxN,
+               peaks:peaks.map(function(w){ return w.mon + ':n' + w.n + ':w' + w.w +
+                                                   ':tight' + w.tight; }),
+               allWeeks:weeks.map(function(w){ return w.mon + ':n' + w.n + ':w' + w.w; }),
+               collisions:collisions, overflow:overflow,
+               minGapPx:(minGap === 1e9 ? null : +minGap.toFixed(1)),
+               src:built.src, viewBoxH:Math.round(H),
+               pxH:Math.round(document.body.getBoundingClientRect().height),
+               today:today,
+               first3:boxes.slice().sort(function(a,b){ return a.x0 - b.x0; })
+                          .slice(0,3).map(function(b){ return b.txt; }) };
+  window.__runway = diag;
+  document.body.setAttribute('data-runway', JSON.stringify(diag));
 }
 
-Promise.all([
-  fetch('../data/spokes.json').then(function(r){ return r.json(); }),
-  fetch('../data/tasks.json').then(function(r){ return r.json(); })
-]).then(function(a){
-  var today = a[1].today || '2026-09-07';
-  render(a[0], today);
-}).catch(function(){
+/* ---- load: syllabus.json preferred, absent is fine ---- */
+function getJSON(u){
+  return fetch(u).then(function(r){ return r.ok ? r.json() : null; })
+                 .catch(function(){ return null; });
+}
+Promise.all([ getJSON('../data/syllabus.json'), getJSON('../data/tasks.json') ])
+.then(function(a){
+  var tasks = a[1] || {};
+  var today = ymd(tasks.today) || ymd(tasks.generated) || TODAY_FALLBACK;
+  render(a[0], tasks, today);
+})
+.catch(function(err){
   document.getElementById('root').innerHTML =
-    '<div class="empty">spokes.json unavailable.</div>';
+    '<div class="empty">Runway unavailable \u2014 ' + esc(err && err.message) + '</div>';
 });
 </script>
 </body>

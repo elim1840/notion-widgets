@@ -186,8 +186,7 @@
      display:flex;align-items:baseline;gap:10px;flex-wrap:wrap}
   .agtop .sc{font-size:11px;font-weight:600;letter-spacing:.09em;text-transform:uppercase;
      color:var(--blue)}
-  .agtop .rg{font-size:11.5px;color:var(--dim);font-variant-numeric:tabular-nums}
-  .agtop .st{margin-left:auto;font-size:10.5px;color:var(--faint);
+  .agtop .st{margin-left:auto;font-size:10.5px;color:var(--dim);
      font-variant-numeric:tabular-nums;letter-spacing:.02em}
   .agtop .st b{color:var(--ink);font-weight:600}
 
@@ -222,7 +221,7 @@
        color:var(--faint);font-variant-numeric:normal}
   .agi .n2{display:block;line-height:1.35;overflow-wrap:anywhere;
        white-space:normal;overflow:visible;text-overflow:clip}
-  .agi .w{display:block;margin-top:2px;font-size:10.5px;color:var(--faint);
+  .agi .w{display:block;margin-top:2px;font-size:10.5px;color:var(--dim);
        line-height:1.3;overflow-wrap:anywhere;white-space:normal;
        overflow:visible;text-overflow:clip}
   .agi .w::before{content:"\1F4CD\00a0";opacity:.75;font-size:9.5px}
@@ -535,6 +534,8 @@ function paint(){
     : `${MON[a.getMonth()]} ${a.getDate()} \u2013 ${MON[b.getMonth()]} ${b.getDate()}`;
   let n=0; days.forEach(x=>n+=x.items.length);
   document.getElementById('tot').textContent = n+' events';
+  // agenda prints its own richer count strip; hide the duplicate up here.
+  document.getElementById('tot').style.display = MODE==='agenda' ? 'none' : '';
 
   const now=new Date(), nowM=now.getHours()*60+now.getMinutes();
   NOWTS=now.getTime();
@@ -686,27 +687,75 @@ function paint(){
     }).join('') + `</div>`;
   }
 
-  // ---------------- AGENDA (continuous stream) ----------------
+  // ---------------- AGENDA (printed itinerary) ----------------
+  // The mode he lives in. Every day in scope gets a header — including days
+  // with nothing, which say so instead of vanishing. Titles wrap; times are
+  // only ever ranges when the feed actually carries `end`.
   else if(MODE==='agenda'){
-    body.innerHTML = `<div class="ag">` + days.map(day=>{
-      if(!day.items.length) return '';
-      const dt=new Date(day.date+'T12:00:00');
-      const items=[...day.items].sort((x,y)=>{
-        const a=mins(x.date), b=mins(y.date);
-        if(a==null&&b==null) return 0; if(a==null) return 1; if(b==null) return -1; return a-b;});
-      return `<div data-today="${day.is_today?1:0}" class="agd ${day.is_today?'today':''}">
-          <span class="n">${DOW[dt.getDay()]} ${dt.getDate()}</span>
-          <span class="s">${MON[dt.getMonth()]} &middot; ${day.items.length} item${day.items.length>1?'s':''}</span>
-        </div>` +
-        items.map(e=>{
+    const DOWL=['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+    const SLBL={today:'Today',week:'This week',next:'Rest of week'};
+
+    // headline counts for the scope strip
+    let nDone=0, nAhead=0, nOver=0;
+    days.forEach(dy=>dy.items.forEach(e=>{
+      const s=state(e,NOWTS);
+      if(s==='done') nDone++; else if(s==='overdue') nOver++; else if(s==='') nAhead++;
+    }));
+    const stat=[`<b>${n}</b> item${n===1?'':'s'}`,
+                `<b>${nAhead}</b> ahead`,
+                nOver?`<b style="color:var(--now)">${nOver}</b> overdue`:'',
+                nDone?`${nDone} done`:''].filter(Boolean).join(' \u00b7 ');
+
+    const nowRule = `<div class="agnow"><span class="t">${
+        String(now.getHours()).padStart(2,'0')+String(now.getMinutes()).padStart(2,'0')
+      }</span><span class="ln2"></span></div>`;
+
+    body.innerHTML = `<div class="ag">
+      <div class="agtop"><span class="sc">${SLBL[SCOPE]||'This week'}</span>
+        <span class="st">${stat}</span></div>` +
+      days.map(day=>{
+        const dt=new Date(day.date+'T12:00:00');
+        const wknd=[0,6].includes(dt.getDay());
+        // All-day items lead the day, the way a printed itinerary does — and it
+        // keeps them from landing below the live 'now' rule, which would read
+        // as "still to come at 2359".
+        const items=[...day.items].sort((x,y)=>{
+          const a2=mins(x.date), b2=mins(y.date);
+          if(a2==null&&b2==null) return 0; if(a2==null) return -1; if(b2==null) return 1;
+          return a2-b2;});
+
+        // where the live 'now' rule belongs inside today's list
+        let nowAt=-1;
+        if(day.is_today){
+          nowAt=items.findIndex(e=>{const s0=mins(e.date); return s0!=null && s0>nowM;});
+          if(nowAt<0){
+            const lastTimed=items.reduce((k,e,i)=>mins(e.date)!=null?i:k,-1);
+            nowAt = lastTimed>=0 ? lastTimed+1 : -1;
+          }
+        }
+
+        const rows = items.length ? items.map((e,i)=>{
           const s0=mins(e.date);
-          const t = s0==null ? '\u2014'
-                  : (e.end && mins(e.end)>s0 ? hhmm(e.date)+'\u2013'+hhmm(e.end) : hhmm(e.date));
-          return `<a class="agi ${kind(e)}${sc(e,NOWTS)}" href="${e.url}" target="_blank">
-          <span class="t">${t}</span>
-          <span class="n2">${esc(e.name)||'(untitled)'}</span>
-          ${e.location?`<span class="w">${esc(e.location)}</span>`:''}</a>`;}).join('');
-    }).join('') + `</div>`;
+          // NEVER invent an end time. Range only when the feed really has one.
+          const hasEnd = s0!=null && e.end && mins(e.end)!=null && mins(e.end)>s0;
+          const t = s0==null ? '<span class="t allday">all day</span>'
+                  : `<span class="t">${hasEnd?hhmm(e.date)+'\u2013'+hhmm(e.end):hhmm(e.date)}</span>`;
+          const row = `<a class="agi ${kind(e)}${sc(e,NOWTS)}" href="${e.url}" target="_blank">
+            ${t}<span><span class="n2">${esc(e.name)||'(untitled)'}</span>${
+              e.location?`<span class="w">${esc(e.location)}</span>`:''}</span></a>`;
+          return (i===nowAt ? nowRule : '') + row;
+        }).join('') + (nowAt===items.length ? nowRule : '')
+          : `<div class="agnone">Nothing scheduled.</div>`;
+
+        return `<section data-today="${day.is_today?1:0}"
+            class="agday ${day.is_today?'today':''} ${wknd?'wknd':''}">
+          <div class="agd">
+            <span class="n">${DOWL[dt.getDay()]}</span>
+            <span class="dd">${String(dt.getDate()).padStart(2,'0')} ${MON[dt.getMonth()]}</span>
+            ${day.is_today?'<span class="tag">today</span>':''}
+            <span class="s">${day.items.length?day.items.length+' item'+(day.items.length>1?'s':''):'clear'}</span>
+          </div>${rows}</section>`;
+      }).join('') + `</div>`;
   }
 
   // ---------------- BY TYPE ----------------
@@ -835,8 +884,15 @@ document.querySelectorAll('#scopegrp button').forEach(b=>{
 // Scroll the current day to the top of the scroll area.
 function scrollToToday(){
   const body=document.getElementById('body');
-  const el=body.querySelector('[data-today="1"]');
-  if(el && body){ body.scrollTop = Math.max(0, el.offsetTop - 2); }
+  const el=body?body.querySelector('[data-today="1"]'):null;
+  if(!el) return;
+  // offsetTop is measured against the nearest POSITIONED ancestor, which is the
+  // page <body>, not the scroll box — it silently includes the header height.
+  // Use rects instead, and clear the sticky agenda strip if there is one.
+  const stick=body.querySelector('.agtop');
+  const off=stick?stick.offsetHeight:0;
+  const delta=el.getBoundingClientRect().top - body.getBoundingClientRect().top;
+  body.scrollTop = Math.max(0, body.scrollTop + delta - off - 2);
 }
 
 fetch('../data/week.json?t='+Date.now()).then(r=>r.json()).then(d=>{

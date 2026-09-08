@@ -9,7 +9,6 @@
     --bg:#191919; --panel:#202020; --line:#2f2f2f; --hair:#232323;
     --ink:#e9e9e7; --dim:#9b9a97; --faint:#6f6e6b;
     --now:#e06c6c; --blue:#5b93d3; --gold:#c9a227; --green:#5fa87a; --purple:#9a6dd7;
-    --hr:52px;              /* height of one hour row */
     --gut:54px;             /* left time gutter */
   }
   @media (prefers-color-scheme: light){
@@ -30,7 +29,7 @@
   .rt{text-align:right}
   .clk{font-size:22px;font-weight:600;font-variant-numeric:tabular-nums;line-height:1;
        letter-spacing:-.01em}
-  .meta{font-size:10.5px;color:var(--faint);margin-top:4px}
+  .meta{font-size:10.5px;color:var(--faint);margin-top:4px;font-variant-numeric:tabular-nums}
 
   /* day navigation */
   .nav{display:flex;align-items:center;gap:6px;flex:0 0 auto;padding-bottom:2px}
@@ -40,9 +39,10 @@
       font-family:inherit;padding:0}
   .nb:hover{border-color:var(--blue)}
   .nb:disabled{opacity:.3;cursor:default}
-  .nb.today{width:auto;padding:0 8px;font-size:9.5px;text-transform:uppercase;
-      letter-spacing:.09em;color:var(--dim)}
+  .nb.wide{width:auto;padding:0 8px;font-size:9.5px;text-transform:uppercase;
+      letter-spacing:.09em;color:var(--dim);font-variant-numeric:tabular-nums}
   .nb.today.on{color:var(--now);border-color:var(--now)}
+  .nb.fit.on{color:var(--blue);border-color:var(--blue)}
   .dots{display:flex;gap:3px;margin:0 2px}
   .dot{width:20px;height:22px;border-radius:4px;border:1px solid transparent;
       background:transparent;cursor:pointer;color:var(--faint);font-family:inherit;
@@ -51,16 +51,16 @@
   .dot:hover{color:var(--ink);border-color:var(--line)}
   .dot.sel{background:var(--panel);border-color:var(--line);color:var(--ink);font-weight:600}
   .dot.isnow{color:var(--now)}
-  .dot.busy::after{content:"";position:absolute}
 
   /* all-day strip */
   .allday{flex:0 0 auto;padding:7px 18px;border-bottom:1px solid var(--line);
           display:flex;gap:7px;flex-wrap:wrap;align-items:center}
   .allday .lbl{font-size:9.5px;color:var(--faint);text-transform:uppercase;
        letter-spacing:.07em;flex:0 0 auto;margin-right:2px}
+  /* names wrap; never truncated */
   .ad{font-size:11.5px;background:var(--panel);border:1px solid var(--line);
       border-radius:4px;padding:2px 8px;color:var(--ink);text-decoration:none;
-      display:inline-block;max-width:100%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+      display:inline-block;max-width:100%;white-space:normal;overflow-wrap:break-word}
   .ad:hover{border-color:var(--blue)}
   /* completed: struck through but still legible (not faded into the background) */
   .ad.done{color:var(--dim);text-decoration:line-through;
@@ -76,31 +76,38 @@
   /* scrolling grid */
   .scroll{flex:1;overflow-y:auto;position:relative;min-height:0}
   .scroll.fits{overflow-y:hidden}
-  .grid{position:relative;padding:0 18px 30px}
-  .hour{position:relative;height:var(--hr);border-top:1px solid var(--hair)}
+  .grid{position:relative;padding:0 18px 22px}
+  .hour{position:relative;border-top:1px solid var(--hair)}
   .hour.major{border-top-color:var(--line)}
   .hour.night{background:linear-gradient(90deg,transparent,rgba(120,120,140,.035) 12%)}
   .hour.core{background:linear-gradient(90deg,transparent,rgba(91,147,211,.045) 12%)}
   .hour.dpstart{border-top:1px solid var(--line)}
-  .hour .dp{position:absolute;right:4px;top:3px;z-index:3;font-size:8.5px;color:var(--faint);
+  /* a compressed (event-free) hour: still present, still labelled, just thin */
+  .hour.thin{background-image:none}
+  .hour.thin .hl{font-size:9px;opacity:.5}
+  .hour .dp{position:absolute;right:4px;top:2px;z-index:3;font-size:8.5px;color:var(--faint);
        letter-spacing:.12em;text-transform:uppercase;opacity:.55}
-  .hour .hl{position:absolute;left:0;top:-8px;width:calc(var(--gut) - 12px);
+  .hour .hl{position:absolute;left:0;top:-7px;width:calc(var(--gut) - 12px);
        text-align:right;font-size:10.5px;color:var(--faint);
        font-variant-numeric:tabular-nums;letter-spacing:.02em}
   .hour.wake .hl{color:var(--dim)}
-  .lane{position:absolute;left:var(--gut);right:0;top:0;bottom:0}
 
   /* events layer */
   .layer{position:absolute;left:18px;right:18px;top:0;bottom:0;pointer-events:none}
   .ev{position:absolute;left:var(--gut);pointer-events:auto;
-      border-radius:5px;padding:5px 9px;text-decoration:none;color:var(--ink);
+      border-radius:5px;padding:4px 8px;text-decoration:none;color:var(--ink);
       background:var(--panel);border:1px solid var(--line);
-      border-left:3px solid var(--blue);overflow:hidden;
+      border-left:3px solid var(--blue);overflow:visible;
       display:flex;flex-direction:column;gap:1px}
-  .ev:hover{border-color:var(--blue);z-index:5}
+  .ev:hover{border-color:var(--blue);z-index:40}
   .ev.k-class{border-left-color:var(--gold)}
   .ev.k-res{border-left-color:var(--green)}
   .ev.k-admin{border-left-color:var(--purple)}
+  /* a block taller than its own time span (grown so the name fits) */
+  .ev.grown{border-bottom-style:dashed}
+  /* pushed below its true start because the track was too narrow for
+     another lane; the time on the block is still its real start time */
+  .ev.stacked{border-top-style:dashed}
 
   /* ---- state layer -------------------------------------------------
      done    completed -> struck through, STILL READABLE (opacity .85)
@@ -108,39 +115,47 @@
      ended   an undone MEETING whose time has passed -> it happened, dim
      -------------------------------------------------------------------*/
   .ev.done{opacity:.85;border-left-color:var(--green)}
-  .ev.done .et,.ev.done .em,.ev.done .ew{text-decoration:line-through;
+  .ev.done .et,.ev.done .em{text-decoration:line-through;
       text-decoration-color:var(--green);text-decoration-thickness:1.5px;
       color:var(--dim)}
   .ev.overdue{border-left-color:var(--now);border-color:var(--now);
-      background:linear-gradient(90deg,rgba(224,108,108,.10),transparent 60%)}
+      background:linear-gradient(90deg,rgba(224,108,108,.10),var(--panel) 60%)}
   .ev.overdue .et{color:var(--now)}
   .ev.ended{opacity:.62;border-left-style:dashed}
-  .ev .flag{position:absolute;top:3px;right:5px;font-size:8px;line-height:1;
-      letter-spacing:.08em;text-transform:uppercase;font-weight:600;
-      text-decoration:none;pointer-events:none}
+  .ev .flag{font-size:8px;line-height:1.3;letter-spacing:.08em;text-transform:uppercase;
+      font-weight:600;text-decoration:none;display:inline-block;flex:0 0 auto;
+      white-space:nowrap;color:var(--faint)}
   .ev.done .flag{color:var(--green)}
   .ev.overdue .flag{color:var(--now)}
   .ev.ended .flag{color:var(--faint);font-weight:500}
-  .ev.hasflag .et{padding-right:46px}
-  .et{font-size:12.5px;font-weight:500;line-height:1.25;
-      overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
-  .em{font-size:10.5px;color:var(--dim);font-variant-numeric:tabular-nums;
-      overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
-  .ew{font-size:10.5px;color:var(--faint);overflow:hidden;
-      text-overflow:ellipsis;white-space:nowrap}
+  /* NAME: wraps, never clipped, never ellipsised. flex:0 0 auto so a
+     fixed-height block can never compress the text lines. */
+  .et{font-size:12.5px;font-weight:500;line-height:1.22;
+      white-space:normal;overflow-wrap:break-word;word-break:normal;
+      flex:0 0 auto}
+  .erow{display:flex;align-items:baseline;justify-content:space-between;gap:7px;
+      margin-top:1px;flex:0 0 auto}
+  .em{font-size:10px;color:var(--dim);font-variant-numeric:tabular-nums;
+      white-space:normal;overflow-wrap:break-word;min-width:0}
+  .ev.pt{border-left-style:solid}
+  .ev.pt .em::before{content:"\25C6 ";font-size:7px;vertical-align:1px}
 
-  /* now line */
-  .nowline{position:absolute;left:calc(var(--gut) - 6px);right:0;height:0;
-      border-top:1.5px solid var(--now);z-index:8;pointer-events:none}
-  .nowline::before{content:"";position:absolute;left:-4px;top:-4.5px;
+  /* now line - unmistakable, labelled in 24h */
+  .nowline{position:absolute;left:calc(var(--gut) - 2px);right:0;height:0;
+      border-top:2px solid var(--now);z-index:30;pointer-events:none;
+      box-shadow:0 0 0 2px rgba(224,108,108,.14)}
+  .nowline::before{content:"";position:absolute;left:-4px;top:-4px;
       width:8px;height:8px;border-radius:50%;background:var(--now)}
-  .nowtag{position:absolute;left:0;transform:translateY(-50%);
-      font-size:9.5px;color:var(--now);font-variant-numeric:tabular-nums;
-      font-weight:600;z-index:9;pointer-events:none}
+  .nowtag{position:absolute;left:0;transform:translateY(-50%);z-index:31;
+      width:calc(var(--gut) - 8px);text-align:center;pointer-events:none;
+      font-size:10px;font-weight:700;font-variant-numeric:tabular-nums;
+      letter-spacing:.02em;color:#fff;background:var(--now);
+      border-radius:3px;padding:1px 0 2px}
 
   .empty{color:var(--faint);font-style:italic;padding:24px 18px;font-size:12.5px}
   footer{flex:0 0 auto;padding:7px 18px;border-top:1px solid var(--line);
-         font-size:10px;color:var(--faint);display:flex;justify-content:space-between}
+         font-size:10px;color:var(--faint);display:flex;justify-content:space-between;
+         gap:10px;font-variant-numeric:tabular-nums}
 </style>
 </head>
 <body>
@@ -150,17 +165,22 @@
     <button class="nb" id="prev" title="Previous day (←)">&#9664;</button>
     <div class="dots" id="dots"></div>
     <button class="nb" id="next" title="Next day (→)">&#9654;</button>
-    <button class="nb today" id="tbtn" title="Jump to today (T)">Today</button>
+    <button class="nb wide today" id="tbtn" title="Jump to today (T)">Today</button>
+    <button class="nb wide fit" id="fitbtn"
+      title="Compress event-free hours so the busy part of the day gets the space (F)">Fit</button>
   </div>
   <div class="rt"><div class="clk" id="clk">----</div><div class="meta" id="sum"></div></div>
 </header>
 <div class="allday" id="allday" style="display:none"></div>
 <div class="scroll" id="scroll"><div class="grid" id="grid"></div></div>
-<footer><span id="gen"></span><span id="src">Tasks &amp; Meetings</span></footer>
+<footer><span id="gen"></span><span id="note"></span><span id="src">Tasks &amp; Meetings</span></footer>
 
 <script>
 const H0 = 6, H1 = 24;            // 0600 -> 2400
-let HR = 52;                      // recomputed on each render to fit the viewport
+const NH = H1 - H0;               // 18 hour rows
+const THIN = 15;                  // px height of a compressed, event-free hour
+let HH = [], OFF = [];            // per-hour heights and cumulative offsets (px)
+let COMPRESS = true;              // "Fit" mode: event-free hours are compressed
 const DOW=['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
 const DOW3=['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
 const MON=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
@@ -268,14 +288,24 @@ function wireNav(){
   document.getElementById('prev').addEventListener('click',()=>{ if(IDX>0){IDX--;render();} });
   document.getElementById('next').addEventListener('click',()=>{ if(IDX<DAYS.length-1){IDX++;render();} });
   document.getElementById('tbtn').addEventListener('click',()=>{ IDX=TODAY_IDX; render(); });
+  document.getElementById('fitbtn').addEventListener('click',()=>{ COMPRESS=!COMPRESS; render(); });
   document.addEventListener('keydown',e=>{
     if(e.key==='ArrowLeft'  && IDX>0){ IDX--; render(); }
     else if(e.key==='ArrowRight' && IDX<DAYS.length-1){ IDX++; render(); }
     else if(e.key==='t' || e.key==='T'){ IDX=TODAY_IDX; render(); }
+    else if(e.key==='f' || e.key==='F'){ COMPRESS=!COMPRESS; render(); }
     else return;
     e.preventDefault();
   });
   window.addEventListener('resize', ()=>render());
+}
+
+// px y-position of a wall-clock minute, honouring per-hour heights
+function yOf(m){
+  if(m <= H0*60) return 0;
+  if(m >= H1*60) return OFF[NH];
+  const h = Math.floor(m/60) - H0;
+  return OFF[h] + ((m - (h+H0)*60)/60) * HH[h];
 }
 
 function render(){
@@ -306,6 +336,9 @@ function render(){
   document.getElementById('prev').disabled = IDX===0;
   document.getElementById('next').disabled = IDX===DAYS.length-1;
   document.getElementById('tbtn').classList.toggle('on', isToday);
+  const fb=document.getElementById('fitbtn');
+  fb.classList.toggle('on', COMPRESS);
+  fb.textContent = COMPRESS ? 'Fit' : 'Full';
   document.querySelectorAll('.dot').forEach(b=>
     b.classList.toggle('sel', +b.dataset.i===IDX));
 
@@ -322,27 +355,62 @@ function render(){
     }).join('');
   } else { ad.style.display='none'; ad.innerHTML=''; }
 
-  // ---- fit the whole 0600-2400 span into the available height (no scroll)
+  /* ---- event geometry -------------------------------------------------
+     `end` is empty or equal to `start` for a lot of rows. We do NOT invent
+     a duration for those: they are point-in-time items (hasSpan=false),
+     drawn as a small marked block at their instant, sized by their text.
+     ------------------------------------------------------------------- */
+  const ev = timed.map(t=>{
+    const s=mins(t.date); let e=mins(t.end);
+    const hasSpan = (e!=null && e>s);
+    return {t, s, e: hasSpan ? Math.min(e, H1*60) : s, hasSpan};
+  }).sort((a,b)=> a.s-b.s || a.e-b.e);
+
+  /* ---- 1. DEAD SPACE: compress hours that contain no event ------------
+     Every hour 0600-2400 is still rendered and still labelled - nothing is
+     hidden - but an hour with nothing in it collapses to THIN px so the
+     busy part of the day gets the height. "Full" restores uniform rows. */
+  const occ = new Array(NH).fill(false);
+  ev.forEach(x=>{
+    const a=x.s, b=x.hasSpan ? x.e : x.s+1;
+    for(let h=0;h<NH;h++){
+      const lo=(h+H0)*60, hi=lo+60;
+      if(a < hi && b > lo) occ[h]=true;
+    }
+  });
+  if(isToday){                                   // never squash the live hour
+    const nh = Math.floor(nowMin()/60) - H0;
+    if(nh>=0 && nh<NH) occ[nh]=true;
+  }
+  const nThin = COMPRESS ? occ.filter(o=>!o).length : 0;
+  const nFull = NH - nThin;
+
   const shell=document.getElementById('scroll');
   shell.classList.remove('fits');
-  (function fit(){
-    const avail=shell.clientHeight - 30;              // bottom padding
-    const need =(H1-H0);
-    const px   = Math.floor(avail/need);
-    HR = Math.max(26, Math.min(64, px));              // floor 26px keeps text legible
-    document.documentElement.style.setProperty('--hr', HR+'px');
-  })();
+  const avail = shell.clientHeight - 24;         // grid bottom padding
+  let hr = Math.floor((avail - nThin*THIN) / Math.max(1,nFull));
+  hr = Math.max(30, Math.min(104, hr));          // floor 30px keeps text legible
+  HH = occ.map(o => (COMPRESS && !o) ? THIN : hr);
+  OFF = [0];
+  for(let h=0;h<NH;h++) OFF.push(OFF[h]+HH[h]);
+
+  document.getElementById('note').textContent = COMPRESS && nThin
+    ? `${nThin} empty hour${nThin===1?'':'s'} compressed · F for full scale`
+    : (COMPRESS ? 'full scale' : 'full scale · F to fit');
 
   // ---- hour rows
   const grid=document.getElementById('grid');
   let html='';
   const PART = h => h<12 ? 'MORNING' : h<17 ? 'AFTERNOON' : h<21 ? 'EVENING' : 'NIGHT';
   for(let h=H0; h<H1; h++){
+    const i=h-H0;
     const wake = h>=7 && h<=22;
     const core = h>=9 && h<18;
     const night= h>=21;
     const newPart = h===H0 || PART(h)!==PART(h-1);
-    html += `<div class="hour ${h%2===0?'major':''} ${wake?'wake':''} ${core?'core':''} ${night?'night':''} ${newPart?'dpstart':''}">
+    const thin = HH[i]===THIN && COMPRESS && !occ[i];
+    html += `<div class="hour ${h%2===0?'major':''} ${wake?'wake':''} ${core?'core':''} ${night?'night':''} ${newPart?'dpstart':''} ${thin?'thin':''}"
+       data-h="${h}" style="height:${HH[i]}px">
        <span class="hl">${String(h).padStart(2,'0')}00</span>
        ${newPart?`<span class="dp">${PART(h)}</span>`:''}</div>`;
   }
@@ -350,44 +418,173 @@ function render(){
   html += `<div class="layer" id="layer"></div>`;
   grid.innerHTML=html;
 
-  // ---- lay out events, side-by-side when they overlap
-  const top = m => ((m - H0*60)/60)*HR;
-  const ev = timed.map(t=>{
-    const s=mins(t.date);
-    let e=mins(t.end); if(e==null||e<=s) e=s+45;      // default 45m block
-    return {t, s, e:Math.min(e, H1*60)};
-  }).sort((a,b)=> a.s-b.s || a.e-b.e);
+  /* ---- 2 + 3. NO TRUNCATION, NO OVERLAP -------------------------------
+     Two coupled problems, solved by one converging loop.
 
-  // greedy column packing for overlaps
-  const cols=[];
-  ev.forEach(x=>{
-    let placed=false;
-    for(let i=0;i<cols.length;i++){
-      if(cols[i] <= x.s){ cols[i]=x.e; x.col=i; placed=true; break; }
-    }
-    if(!placed){ x.col=cols.length; cols.push(x.e); }
-  });
-  const ncol = Math.max(1, cols.length);
+     (a) The old code packed overlap columns ONCE, globally: a single
+         overlapping pair halved the width of every block in the day,
+         which is what was chopping the names. Packing must be per
+         cluster, so only events that actually collide share the width.
 
+     (b) A block whose name needs more lines than its time span allows
+         must GROW downward - the alternative is clipping the name, and
+         that is exactly what he complained about. But a grown block then
+         collides with whatever is below it, which the first version of
+         this fix did (3 overlapping boxes at 820x760).
+
+     So: pack lanes in PIXEL space using each block's REAL rendered
+     height (time span or wrapped text, whichever is taller), measure,
+     re-pack, and repeat until the heights stop changing. Converges in
+     2-3 passes because widths only ever shrink.
+     ------------------------------------------------------------------ */
   const layer=document.getElementById('layer');
-  layer.innerHTML = ev.map(x=>{
-    const t=x.t;
-    const h=Math.max(24, ((x.e-x.s)/60)*HR - 3);
-    const wpct = 100/ncol;
-    const style = `top:${top(x.s)}px;height:${h}px;`+
-                  `width:calc((100% - var(--gut)) * ${wpct/100} - 4px);`+
-                  `left:calc(var(--gut) + (100% - var(--gut)) * ${x.col*wpct/100});`;
-    const showMeta = h>=34, showWhere = h>=56 && t.location;
-    const st = statusOf(t, day.date, isToday);
-    const flag = st ? `<span class="flag">${FLAG[st]}</span>` : '';
-    return `<a class="ev ${kindClass(t)} ${st} ${st?'hasflag':''}" data-status="${st||'open'}"
-              style="${style}" href="${t.url}" target="_blank">
-       ${flag}
+  const st_  = ev.map(x=>statusOf(x.t, day.date, isToday));
+
+  ev.forEach((x,i)=>{
+    x.top0 = yOf(x.s);
+    x.minH = x.hasSpan ? Math.max(26, yOf(x.e) - x.top0 - 3) : 26;
+    x.top  = x.top0;
+    x.h    = x.minH;                             // provisional; measured below
+    x.col  = 0; x.lanes = 1;
+  });
+
+  /* Two independent dimensions, handled separately - this is what the
+     earlier attempts got wrong by mixing them:
+
+     TIME decides the LANES. Classic interval packing on the real time
+     spans, so genuinely concurrent items (the two 1310 rows) are always
+     side by side and can never cover each other. Width depends only on
+     time, so there is no width<->height feedback loop.
+
+     PIXELS decide the VERTICAL NUDGE. A block whose name needs more
+     lines than its time span allows must grow downward (the alternative
+     is clipping the name). If that makes it run into the next block in
+     its own lane, the next block is pushed down and marked .stacked -
+     its real start time is still printed on the block.
+
+     Very narrow tracks: a lane thinner than MINLANE cannot hold a name,
+     so such a cluster falls back to fewer, wider lanes and stacks the
+     surplus vertically instead of shredding every lane. */
+  const MINLANE = 132;
+  const track = Math.max(120, layer.clientWidth - 54);
+
+  function packPx(){
+    ev.forEach(x=>{ x.top = x.top0; x.stacked=false; });
+
+    // ---- 1. time clusters + time lanes
+    const clusters=[]; let ci=-1, tEnd=-1;
+    ev.forEach(x=>{
+      const xEnd = x.hasSpan ? x.e : x.s+1;
+      if(x.s >= tEnd){ ci++; clusters[ci]={ends:[], items:[]}; tEnd=-1; }
+      x.ci=ci;
+      const C=clusters[ci];
+      let placed=false;
+      for(let i=0;i<C.ends.length;i++){
+        if(C.ends[i] <= x.s){ C.ends[i]=xEnd; x.tlane=i; placed=true; break; }
+      }
+      if(!placed){ x.tlane=C.ends.length; C.ends.push(xEnd); }
+      C.items.push(x);
+      tEnd = Math.max(tEnd, xEnd);
+    });
+
+    // ---- 2. lane count per cluster, floored by readable width
+    clusters.forEach(C=>{
+      const want = Math.max(1, C.ends.length);
+      const fits = Math.max(1, Math.floor(track / MINLANE));
+      C.n = Math.min(want, Math.max(1, fits));
+      C.items.forEach(x=>{ x.lanes=C.n; x.col=Math.min(x.tlane, C.n-1); });
+    });
+
+    /* ---- 3. pixel pass. A block that grew taller than its time span can
+       run into ANY later block it horizontally overlaps - including a
+       full-width block belonging to the next time cluster, which is what
+       an earlier same-lane-only check missed (3 overlapping boxes at
+       820x760). So compute each block's real px x-extent and push a
+       block down past every earlier block it would otherwise cover. */
+    const GUT=54, GAP=3;
+    ev.forEach(x=>{
+      x.px_w = track / x.lanes - 5;
+      x.px_l = GUT + track * (x.col / x.lanes);
+    });
+    const done=[];
+    ev.forEach(x=>{
+      for(let pass=0; pass<ev.length+2; pass++){
+        let moved=false;
+        for(const p of done){
+          const xo = x.px_l < p.px_l + p.px_w - 1 && p.px_l < x.px_l + x.px_w - 1;
+          if(!xo) continue;
+          if(x.top < p.top + p.h + GAP - 0.5 && p.top < x.top + x.h - 0.5){
+            x.top = p.top + p.h + GAP; x.stacked=true; moved=true;
+          }
+        }
+        if(!moved) break;
+      }
+      done.push(x);
+    });
+  }
+
+  function paint(){
+    layer.innerHTML = ev.map((x,i)=>{
+      const t=x.t, n=x.lanes, wpct=100/n;
+      const style = `top:${x.top}px;min-height:${x.minH}px;z-index:${10+i};`+
+                    `width:calc((100% - var(--gut)) * ${wpct/100} - 5px);`+
+                    `left:calc(var(--gut) + (100% - var(--gut)) * ${x.col*wpct/100});`;
+      const range = hhmm(t.date) + (x.hasSpan ? '–'+hhmm(t.end) : '');
+      const dur   = x.hasSpan ? durTxt(t.date,t.end) : '';
+      const meta  = [range, dur, t.location||''].filter(Boolean).join(' · ');
+      const st    = st_[i];
+      const flag  = st ? `<span class="flag">${FLAG[st]}</span>` : '';
+      return `<a class="ev ${kindClass(t)} ${st} ${x.hasSpan?'':'pt'}" data-status="${st||'open'}"
+              data-min="${x.minH}" data-lane="${x.col}" data-lanes="${n}" data-start="${range}"
+              style="${style}" href="${t.url}" target="_blank" title="${esc(t.name)}">
        <span class="et">${esc(t.name)||'(untitled)'}</span>
-       ${showMeta?`<span class="em">${hhmm(t.date)}${t.end?'–'+hhmm(t.end):''}${durTxt(t.date,t.end)?' · '+durTxt(t.date,t.end):''}</span>`:''}
-       ${showWhere?`<span class="ew">${esc(t.location)}</span>`:''}
+       <span class="erow"><span class="em">${meta}</span>${flag}</span>
      </a>`;
-  }).join('');
+    }).join('');
+    return [...layer.querySelectorAll('.ev')];
+  }
+
+  let blocks=[];
+  /* Measure the height the wrapped text ACTUALLY needs. Note: .ev is
+     overflow:visible (clipping is what we are trying to eliminate), and
+     an overflow:visible box does not report spilled children in
+     scrollHeight - so scrollHeight would silently under-report and the
+     text would draw outside the block. Measure the real content bottom
+     from the last child's rect instead. */
+  function needH(b){
+    const box=b.getBoundingClientRect();
+    const kids=[...b.children];
+    let bot=box.top;
+    kids.forEach(k=>{ const r=k.getBoundingClientRect(); if(r.bottom>bot) bot=r.bottom; });
+    const cs=getComputedStyle(b);
+    return Math.ceil(bot - box.top + parseFloat(cs.paddingBottom) + 2*parseFloat(cs.borderTopWidth));
+  }
+  for(let pass=0; pass<6; pass++){
+    packPx();
+    blocks = paint();
+    let changed=false;
+    blocks.forEach((b,i)=>{
+      const h = Math.max(ev[i].minH, needH(b));
+      if(Math.abs(h - ev[i].h) > 0.5){ ev[i].h = h; changed=true; }
+    });
+    if(!changed) break;
+  }
+  // pin the converged heights and mark blocks that outgrew their time span
+  blocks.forEach((b,i)=>{
+    b.style.height = ev[i].h+'px';
+    const grew = ev[i].h > ev[i].minH + 1;
+    b.classList.toggle('grown', grew);
+    b.dataset.grew = grew ? '1' : '0';
+    // only call it "stacked" if it moved meaningfully off its true time;
+    // a couple of px of nudge is not worth a visual marker
+    const moved = ev[i].top - ev[i].top0 > 6;
+    b.classList.toggle('stacked', moved);
+    b.dataset.stacked = moved ? '1' : '0';
+    b.dataset.shift = Math.round(ev[i].top - ev[i].top0);
+  });
+  // make sure a block that grew past 2400 is still reachable, not clipped
+  const maxBot = ev.length ? Math.max(...ev.map(x=>x.top+x.h)) : 0;
+  grid.style.paddingBottom = Math.max(22, Math.ceil(maxBot - OFF[NH]) + 14)+'px';
 
   if(!items.length){
     grid.insertAdjacentHTML('afterbegin',
@@ -402,7 +599,7 @@ function render(){
     if(!isToday) return;
     const m=nowMin();
     if(m < H0*60 || m > H1*60) return;
-    const y=top(m);
+    const y=yOf(m);
     grid.insertAdjacentHTML('beforeend',
       `<div class="nowline" style="top:${y}px"></div>
        <div class="nowtag" style="top:${y}px">${clkTxt()}</div>`);
@@ -411,7 +608,7 @@ function render(){
 
   // whole day is visible when it fits; otherwise centre on now (today) or top
   if(shell.scrollHeight <= shell.clientHeight+4){ shell.classList.add('fits'); shell.scrollTop=0; }
-  else if(isToday){ const m=nowMin(); shell.scrollTop = (m>=H0*60&&m<=H1*60) ? Math.max(0, top(m)-180) : 0; }
+  else if(isToday){ const m=nowMin(); shell.scrollTop = (m>=H0*60&&m<=H1*60) ? Math.max(0, yOf(m)-180) : 0; }
   else { shell.scrollTop = 0; }
 }
 </script>
