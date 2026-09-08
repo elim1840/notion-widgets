@@ -109,14 +109,22 @@ body{
 .railend.l{left:23px} .railend.r{right:8px}
 
 .err{padding:16px 22px; color:var(--red); font-size:13px}
-@media (max-width:900px){ .c-tally{display:none} }
+@media (max-width:1040px){ .c-tally{display:none} }
 @media (max-width:760px){
-  .clock{font-size:36px}
+  .clock{font-size:34px}
+  .cell{padding:11px 14px 18px}
   .c-clock{padding-left:20px}
   .name{font-size:18px} .name.sm{font-size:16px} .name.xs{font-size:14px}
   .c-next{min-width:150px; flex-basis:34%}
   .cd{font-size:25px}
   .nname{font-size:12px}
+}
+@media (max-width:580px){
+  .clock{font-size:30px}
+  .name{font-size:16px} .name.sm{font-size:15px} .name.xs{font-size:13.5px}
+  .meta{font-size:11.5px}
+  .c-next{min-width:126px; flex-basis:30%}
+  .cd{font-size:22px}
 }
 </style>
 </head>
@@ -226,7 +234,8 @@ function compute(now, sched){
   } else if(late && (!cur || late.end.getTime()>=cur.start.getTime())){
     st={state:"LATE",accent:"var(--red)",chip:"Running late",ev:late,
         headline:late.name,
-        meta:[{k:"ended",v:hhmm(late.end)},{k:"over",v:dur(t-late.end.getTime())}],
+        meta:[{k:"ended",v:"should have ended "+hhmm(late.end)},
+              {k:"over",v:dur(t-late.end.getTime())+" over"}],
         room:late.room};
   } else if(cur){
     st={state:"NOW",accent:"var(--blue)",chip:"You are here",ev:cur,
@@ -237,7 +246,7 @@ function compute(now, sched){
   } else if(pt){
     st={state:"DUE",accent:"var(--amber)",chip:"Due now",ev:pt,
         headline:pt.name,
-        meta:[{k:"at",v:hhmm(pt.start)}],
+        meta:[{k:"at",v:"due at "+hhmm(pt.start)},{k:"over",v:dur(t-pt.start.getTime())+" ago"}],
         room:pt.room};
   } else if(next && !sched.some(function(e){return e.start.getTime()<=t;})){
     st={state:"BEFORE",accent:"var(--green)",chip:"Day not started",
@@ -246,7 +255,7 @@ function compute(now, sched){
   } else if(next){
     st={state:"GAP",accent:"var(--green)",chip:"Clear right now",
         headline:"Free until "+hhmm(next.start),
-        meta:[{k:"gap",v:dur(next.start.getTime()-t)+" of gap"}]};
+        meta:[{k:"gap",v:dur(next.start.getTime()-t)+" free"}]};
   } else {
     st={state:"AFTER",accent:"var(--faint)",chip:"Day is clear from here",
         headline:"Nothing left today",
@@ -301,7 +310,12 @@ function render(){
     if(x.k==="left"||x.k==="over"||x.k==="in"||x.k==="gap") m.push('<span class="left">'+esc(x.v)+'</span>');
     else m.push('<b>'+esc(x.v)+'</b>');
   });
-  var head=clampName(st.headline,110);
+  /* Text budget scales with the strip's width so the bar never grows taller
+     than a strip. Measured, not guessed — see verification notes. */
+  var W=document.documentElement.clientWidth||1280;
+  var headMax = W>=1180?104 : (W>=1040?86 : (W>=820?76 : (W>=640?60 : 46)));
+  var nextMax = W>=1180?58  : (W>=1040?50 : (W>=820?44 : (W>=640?38 : 30)));
+  var head=clampName(st.headline,headMax);
   h.push('<div class="cell c-state"><div class="chip"><span class="dot"></span>'+esc(st.chip)+'</div>'+
     '<div class="'+nameCls(head)+'">'+esc(head)+'</div>'+
     (m.length?'<div class="meta">'+m.join("")+'</div>':'')+'</div>');
@@ -312,7 +326,7 @@ function render(){
     var rng=hhmm(st.next.start)+(st.next.hasEnd?"\u2013"+hhmm(st.next.end):"");
     h.push('<div class="cell c-next"><div class="lab">Next</div>'+
       '<div class="cd'+(gap<15*60000?" warn":"")+'">in '+dur(gap)+'</div>'+
-      '<div class="nname">'+esc(clampName(st.next.name,64))+'</div>'+
+      '<div class="nname">'+esc(clampName(st.next.name,nextMax))+'</div>'+
       '<div class="nmeta">'+rng+(st.next.room?' \u00b7 <span class="rm">'+esc(st.next.room)+'</span>':"")+'</div></div>');
   } else {
     h.push('<div class="cell c-next"><div class="lab">Next</div>'+
