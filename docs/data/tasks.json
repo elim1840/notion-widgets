@@ -1,11 +1,11 @@
 {
- "generated": "2026-09-08T08:03:42-04:00",
+ "generated": "2026-09-08T13:05:04-04:00",
  "today": "2026-09-08",
  "counts": {
-  "total": 153,
-  "open": 150,
+  "total": 166,
+  "open": 163,
   "done": 3,
-  "today_total": 13,
+  "today_total": 14,
   "today_done": 1,
   "overdue": 96
  },
@@ -94,6 +94,23 @@
    "link": "",
    "notes": "Captured from Discord #calendar. https://discord.com/channels/@me/1544494500607696906/1545380228296347658",
    "url": "https://app.notion.com/p/The-First-Day-of-Classes-breakfast-bagel-event-will-actually-happen-on-Wednesday-Sep-9th-from-8am--3d1ea74eb779814a980cffd6b746aeb7"
+  },
+  {
+   "name": "SCUBA \u2014 email PE&W re: swim test (was due 9/4) + waitlist position",
+   "date": "2026-09-08T09:00:00.000-04:00",
+   "end": "2026-09-08T09:15:00.000-04:00",
+   "done": false,
+   "status": "Not Started",
+   "type": "Task",
+   "meeting_type": "Admin",
+   "priority": "High",
+   "energy": "Errand",
+   "location": "",
+   "attendees": "",
+   "agenda": "You are 1st on the waitlist. Two questions in one email: (1) the PE&W swim test was due 9/4 \u2014 can it still be taken if a spot opens? (2) if a spot opens after 9/14, does the forms deadline move? PE.0201 Aquatics - SCUBA, Q1 2026, Thursday track. Ask before the forms deadline, not after.",
+   "link": "",
+   "notes": "",
+   "url": "https://app.notion.com/p/SCUBA-email-PE-W-re-swim-test-was-due-9-4-waitlist-position-3d5ea74eb77981bea692e41dfc979c06"
   },
   {
    "name": "Call Hilton + Marriott re: hotel night of 7 Nov",
@@ -302,6 +319,23 @@
    "url": "https://app.notion.com/p/The-First-Day-of-Classes-breakfast-bagel-event-will-actually-happen-on-Wednesday-Sep-9th-from-8am--3d1ea74eb779814a980cffd6b746aeb7"
   },
   {
+   "name": "SCUBA \u2014 email PE&W re: swim test (was due 9/4) + waitlist position",
+   "date": "2026-09-08T09:00:00.000-04:00",
+   "end": "2026-09-08T09:15:00.000-04:00",
+   "done": false,
+   "status": "Not Started",
+   "type": "Task",
+   "meeting_type": "Admin",
+   "priority": "High",
+   "energy": "Errand",
+   "location": "",
+   "attendees": "",
+   "agenda": "You are 1st on the waitlist. Two questions in one email: (1) the PE&W swim test was due 9/4 \u2014 can it still be taken if a spot opens? (2) if a spot opens after 9/14, does the forms deadline move? PE.0201 Aquatics - SCUBA, Q1 2026, Thursday track. Ask before the forms deadline, not after.",
+   "link": "",
+   "notes": "",
+   "url": "https://app.notion.com/p/SCUBA-email-PE-W-re-swim-test-was-due-9-4-waitlist-position-3d5ea74eb77981bea692e41dfc979c06"
+  },
+  {
    "name": "Call Hilton + Marriott re: hotel night of 7 Nov",
    "date": "2026-09-08T10:00:00.000-04:00",
    "end": "2026-09-08T10:30:00.000-04:00",
@@ -419,23 +453,6 @@
    "link": "",
    "notes": "Contact: Carly Fridlin. RSVP REQUIRED.",
    "url": "https://app.notion.com/p/Lobster-Roll-Outing-3ceea74eb77981f18fefd5b0b6e25479"
-  },
-  {
-   "name": "Work on Diffraqtion White Paper w/ Charlie - DUE tonight to send",
-   "date": "2026-09-08T21:00:00.000-04:00",
-   "end": "",
-   "done": false,
-   "status": "Not Started",
-   "type": "",
-   "meeting_type": "",
-   "priority": "",
-   "energy": "",
-   "location": "",
-   "attendees": "",
-   "agenda": "",
-   "link": "",
-   "notes": "Collaborate with Charlie on white paper for Diffraqtion. Work throughout Monday Sept 8; must send to Charlie by Monday night.",
-   "url": "https://app.notion.com/p/Work-on-Diffraqtion-White-Paper-w-Charlie-DUE-tonight-to-send-3d2ea74eb779815289aedbbc7c9b40fe"
   }
  ],
  "history": [
@@ -506,7 +523,7 @@
   },
   {
    "date": "2026-09-08",
-   "total": 13,
+   "total": 14,
    "done": 1
   }
  ]

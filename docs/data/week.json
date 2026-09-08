@@ -1,5 +1,5 @@
 {
- "generated": "2026-09-08T08:03:42-04:00",
+ "generated": "2026-09-08T13:05:04-04:00",
  "today": "2026-09-08",
  "monday": "2026-09-07",
  "days": [
@@ -60,6 +60,18 @@
      "type": "",
      "meeting_type": "",
      "url": "https://app.notion.com/p/The-First-Day-of-Classes-breakfast-bagel-event-will-actually-happen-on-Wednesday-Sep-9th-from-8am--3d1ea74eb779814a980cffd6b746aeb7"
+    },
+    {
+     "name": "SCUBA \u2014 email PE&W re: swim test (was due 9/4) + waitlist position",
+     "date": "2026-09-08T09:00:00.000-04:00",
+     "end": "2026-09-08T09:15:00.000-04:00",
+     "done": false,
+     "kind": "Admin",
+     "src": "task",
+     "location": "",
+     "type": "Task",
+     "meeting_type": "Admin",
+     "url": "https://app.notion.com/p/SCUBA-email-PE-W-re-swim-test-was-due-9-4-waitlist-position-3d5ea74eb77981bea692e41dfc979c06"
     },
     {
      "name": "Call Hilton + Marriott re: hotel night of 7 Nov",
@@ -278,6 +290,30 @@
    "is_today": false,
    "items": [
     {
+     "name": "Thesis guidelines check \u2014 TPP + Institute-wide (before Overleaf)",
+     "date": "2026-09-10T09:30:00.000-04:00",
+     "end": "2026-09-10T11:00:00.000-04:00",
+     "done": false,
+     "kind": "Admin",
+     "src": "task",
+     "location": "",
+     "type": "Task",
+     "meeting_type": "Admin",
+     "url": "https://app.notion.com/p/Thesis-guidelines-check-TPP-Institute-wide-before-Overleaf-3d5ea74eb7798166967fd41b5132e7d3"
+    },
+    {
+     "name": "Dual degree petition \u2014 ASK Barb + Rachael what it requires",
+     "date": "2026-09-10T13:00:00.000-04:00",
+     "end": "2026-09-10T13:30:00.000-04:00",
+     "done": false,
+     "kind": "Admin",
+     "src": "task",
+     "location": "",
+     "type": "Task",
+     "meeting_type": "Admin",
+     "url": "https://app.notion.com/p/Dual-degree-petition-ASK-Barb-Rachael-what-it-requires-3d5ea74eb77981bcae7de8c0203cbdb5"
+    },
+    {
      "name": "IYR dinner shopping run (Costco + H Mart)",
      "date": "2026-09-10T14:00:00.000-04:00",
      "end": "2026-09-10T16:00:00.000-04:00",
@@ -476,6 +512,30 @@
      "url": "https://app.notion.com/p/Coffee-Thrift-Crawl-3ceea74eb779812ea8d7e381c0e2cfcb"
     },
     {
+     "name": "Upload thesis template to Overleaf + compile",
+     "date": "2026-09-13T14:00:00.000-04:00",
+     "end": "2026-09-13T15:00:00.000-04:00",
+     "done": false,
+     "kind": "Research",
+     "src": "task",
+     "location": "",
+     "type": "Task",
+     "meeting_type": "Research",
+     "url": "https://app.notion.com/p/Upload-thesis-template-to-Overleaf-compile-3d5ea74eb779815ebde5ead418bd2854"
+    },
+    {
+     "name": "Create thesis Overleaf document from official MIT template",
+     "date": "2026-09-13T14:00:00.000-04:00",
+     "end": "2026-09-13T15:30:00.000-04:00",
+     "done": false,
+     "kind": "Research",
+     "src": "task",
+     "location": "",
+     "type": "Task",
+     "meeting_type": "Research",
+     "url": "https://app.notion.com/p/Create-thesis-Overleaf-document-from-official-MIT-template-3d5ea74eb7798139abb7d34f72f0e1fa"
+    },
+    {
      "name": "Submit Scholar biography (docx) + headshot (jpeg) survey",
      "date": "2026-09-13T23:59:00.000-04:00",
      "end": "2026-09-14T00:14:00.000-04:00",
@@ -490,5 +550,5 @@
    ]
   }
  ],
- "total": 37
+ "total": 42
 }
