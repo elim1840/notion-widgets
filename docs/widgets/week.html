@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>This Week</title>
+<style>
+  :root{
+    --bg:#191919; --panel:#202020; --line:#2f2f2f; --hair:#262626;
+    --ink:#e9e9e7; --dim:#9b9a97; --faint:#6f6e6b;
+    --today:#5b93d3; --class:#c9a227; --done:#5fa87a;
+  }
+  @media (prefers-color-scheme: light){
+    :root{ --bg:#fff; --panel:#f7f7f5; --line:#e6e5e1; --hair:#efeeec;
+           --ink:#37352f; --dim:#787774; --faint:#9b9a97; }
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--bg);color:var(--ink);padding:14px 16px;
+       font:13px/1.4 -apple-system,BlinkMacSystemFont,"Segoe UI",Inter,sans-serif;
+       -webkit-font-smoothing:antialiased}
+  header{display:flex;align-items:baseline;justify-content:space-between;
+         margin-bottom:12px}
+  h1{font-size:11px;color:var(--dim);text-transform:uppercase;
+     letter-spacing:.09em;font-weight:600}
+  .range{font-size:11px;color:var(--faint)}
+
+  .day{display:grid;grid-template-columns:52px 1fr;gap:12px;
+       padding:9px 0;border-top:1px solid var(--hair)}
+  .day:first-of-type{border-top:0}
+  .day.today .dnum{color:var(--today)}
+  .day.today .dow{color:var(--today)}
+  .day.empty{opacity:.4}
+
+  .dcol{text-align:right;padding-top:1px}
+  .dow{font-size:10px;color:var(--dim);text-transform:uppercase;
+       letter-spacing:.07em;display:block}
+  .dnum{font-size:19px;font-weight:600;line-height:1.05;letter-spacing:-.02em}
+
+  .items{display:flex;flex-direction:column;gap:2px;min-width:0}
+  .ev{display:grid;grid-template-columns:46px 1fr;gap:9px;align-items:baseline;
+      padding:3px 6px;margin-left:-6px;border-radius:5px;
+      text-decoration:none;color:inherit}
+  .ev:hover{background:var(--panel)}
+  .tm{font-size:11px;color:var(--dim);font-variant-numeric:tabular-nums;
+      white-space:nowrap}
+  .nm{min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .tag{display:inline-block;font-size:9px;letter-spacing:.04em;
+       color:var(--faint);border:1px solid var(--line);border-radius:3px;
+       padding:0 4px;margin-right:5px;vertical-align:1px}
+  .cls .tag{color:var(--class);border-color:var(--class)}
+  .ev.done .nm{text-decoration:line-through;color:var(--faint)}
+  .none{font-size:11px;color:var(--faint);font-style:italic;padding:3px 0}
+
+  footer{margin-top:12px;padding-top:9px;border-top:1px solid var(--line);
+         font-size:10px;color:var(--faint);display:flex;justify-content:space-between}
+</style>
+</head>
+<body>
+<header><h1>This Week</h1><span class="range" id="range"></span></header>
+<div id="week"></div>
+<footer><span id="gen"></span><span id="cnt"></span></footer>
+
+<script>
+const DOW=['Mon','Tue','Wed','Thu','Fri','Sat','Sun'];
+const MON=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+
+function hhmm(iso){
+  if(!iso || iso.length<=10) return '';
+  const d=new Date(iso);
+  return String(d.getHours()).padStart(2,'0')+String(d.getMinutes()).padStart(2,'0');
+}
+function esc(s){return (s||'').replace(/[<>&]/g,c=>({'<':'&lt;','>':'&gt;','&':'&amp;'}[c]));}
+
+fetch('../data/week.json?t='+Date.now())
+ .then(r=>r.json())
+ .then(w=>{
+   const m=new Date(w.monday+'T12:00:00');
+   const s=new Date(w.days[6].date+'T12:00:00');
+   document.getElementById('range').textContent =
+     `${MON[m.getMonth()]} ${m.getDate()} – ${MON[s.getMonth()]} ${s.getDate()}`;
+
+   document.getElementById('week').innerHTML = w.days.map((d,i)=>{
+     const dt=new Date(d.date+'T12:00:00');
+     const cls=['day', d.is_today?'today':'', d.items.length?'':'empty'].join(' ');
+     const body = d.items.length
+       ? d.items.map(e=>{
+           const t=hhmm(e.date);
+           return `<a class="ev ${e.src==='class'?'cls':''} ${e.done?'done':''}"
+                      href="${e.url}" target="_blank">
+             <span class="tm">${t||'—'}</span>
+             <span class="nm"><span class="tag">${esc(e.kind)}</span>${esc(e.name)}</span>
+           </a>`;
+         }).join('')
+       : '<div class="none">clear</div>';
+     return `<div class="${cls}">
+       <div class="dcol"><span class="dow">${DOW[i]}</span>
+       <span class="dnum">${dt.getDate()}</span></div>
+       <div class="items">${body}</div></div>`;
+   }).join('');
+
+   const g=new Date(w.generated);
+   document.getElementById('gen').textContent =
+     'updated '+String(g.getHours()).padStart(2,'0')+String(g.getMinutes()).padStart(2,'0');
+   document.getElementById('cnt').textContent = w.total+' events';
+ })
+ .catch(()=>{
+   document.getElementById('week').innerHTML =
+     '<div class="none">data not built yet</div>';
+ });
+</script>
+</body>
+</html>

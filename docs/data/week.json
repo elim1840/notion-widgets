@@ -1,0 +1,322 @@
+{
+ "generated": "2026-09-07T21:17:17-04:00",
+ "today": "2026-09-07",
+ "monday": "2026-09-07",
+ "days": [
+  {
+   "date": "2026-09-07",
+   "is_today": true,
+   "items": [
+    {
+     "name": "SERG25 Group Meeting",
+     "date": "2026-09-07T11:00:00.000-04:00",
+     "done": false,
+     "kind": "Research",
+     "src": "task",
+     "url": "https://app.notion.com/p/SERG25-Group-Meeting-3d0ea74eb7798162bcebe255456d142c"
+    },
+    {
+     "name": "Check Merch Store Progress",
+     "date": "2026-09-07T12:00:00.000-04:00",
+     "done": false,
+     "kind": "Admin",
+     "src": "task",
+     "url": "https://app.notion.com/p/Check-Merch-Store-Progress-3d0ea74eb77981ed9118e5c11ce45533"
+    },
+    {
+     "name": "Sign up for MIT makerspace (M1T) training to 3D print",
+     "date": "2026-09-07",
+     "done": false,
+     "kind": "Admin",
+     "src": "task",
+     "url": "https://app.notion.com/p/Sign-up-for-MIT-makerspace-M1T-training-to-3D-print-3ceea74eb779814fb850c1aa9f739ce1"
+    }
+   ]
+  },
+  {
+   "date": "2026-09-08",
+   "is_today": false,
+   "items": [
+    {
+     "name": "The First Day of Classes breakfast bagel event will actually happen on Wednesday, Sep. 9th from 8am-10am in the large lounge (ground floor) to coincide with MIT's first day of classes! Previ",
+     "date": "2026-09-08T08:00:00.000-04:00",
+     "done": false,
+     "kind": "Meeting",
+     "src": "task",
+     "url": "https://app.notion.com/p/The-First-Day-of-Classes-breakfast-bagel-event-will-actually-happen-on-Wednesday-Sep-9th-from-8am--3d1ea74eb779814a980cffd6b746aeb7"
+    },
+    {
+     "name": "Call Hilton + Marriott re: hotel night of 7 Nov",
+     "date": "2026-09-08T10:00:00.000-04:00",
+     "done": false,
+     "kind": "Admin",
+     "src": "task",
+     "url": "https://app.notion.com/p/Call-Hilton-Marriott-re-hotel-night-of-7-Nov-3d3ea74eb77981188812c72df93e6286"
+    },
+    {
+     "name": "TPP Mandatory Reorientation",
+     "date": "2026-09-08T11:00:00.000-04:00",
+     "done": false,
+     "kind": "TPP",
+     "src": "task",
+     "url": "https://app.notion.com/p/TPP-Mandatory-Reorientation-3d1ea74eb77981319252d3864a6c8608"
+    },
+    {
+     "name": "Registering for Classes -- Barb (TPP Lounge)",
+     "date": "2026-09-08T13:10:00.000-04:00",
+     "done": false,
+     "kind": "TPP",
+     "src": "task",
+     "url": "https://app.notion.com/p/Registering-for-Classes-Barb-TPP-Lounge-3cdea74eb77981a98e8deb4108dd5559"
+    },
+    {
+     "name": "Grad Resource Fair",
+     "date": "2026-09-08T14:00:00.000-04:00",
+     "done": false,
+     "kind": "AeroAstro",
+     "src": "task",
+     "url": "https://app.notion.com/p/Grad-Resource-Fair-3ceea74eb779810cbf75fca7ea8e115f"
+    },
+    {
+     "name": "Submit petition to Rachael and Barb (after registration)",
+     "date": "2026-09-08T16:00:00.000-04:00",
+     "done": false,
+     "kind": "TPP",
+     "src": "task",
+     "url": "https://app.notion.com/p/Submit-petition-to-Rachael-and-Barb-after-registration-3d5ea74eb77981fea210f3384ac44a1f"
+    },
+    {
+     "name": "Lobster Roll Outing",
+     "date": "2026-09-08T17:00:00.000-04:00",
+     "done": false,
+     "kind": "AeroAstro",
+     "src": "task",
+     "url": "https://app.notion.com/p/Lobster-Roll-Outing-3ceea74eb77981f18fefd5b0b6e25479"
+    },
+    {
+     "name": "Work on Diffraqtion White Paper w/ Charlie - DUE tonight to send",
+     "date": "2026-09-08T21:00:00.000-04:00",
+     "done": false,
+     "kind": "Meeting",
+     "src": "task",
+     "url": "https://app.notion.com/p/Work-on-Diffraqtion-White-Paper-w-Charlie-DUE-tonight-to-send-3d2ea74eb779815289aedbbc7c9b40fe"
+    },
+    {
+     "name": "Offer to start introduction with Dr. Eric Evans",
+     "date": "2026-09-08",
+     "done": true,
+     "kind": "Dr. Eric Evans (MIT)",
+     "src": "task",
+     "url": "https://app.notion.com/p/Offer-to-start-introduction-with-Dr-Eric-Evans-3d2ea74eb779813b9f47c556fffb4b1a"
+    },
+    {
+     "name": "Reach out to Dr. Tran re: Projects Day",
+     "date": "2026-09-08",
+     "done": false,
+     "kind": "Research",
+     "src": "task",
+     "url": "https://app.notion.com/p/Reach-out-to-Dr-Tran-re-Projects-Day-3d2ea74eb779818983d8e1355b7d09f1"
+    },
+    {
+     "name": "Reach out to LTC Koban re: SOCOM Ignite",
+     "date": "2026-09-08",
+     "done": false,
+     "kind": "Military",
+     "src": "task",
+     "url": "https://app.notion.com/p/Reach-out-to-LTC-Koban-re-SOCOM-Ignite-3d2ea74eb77981b480abeaceefb10133"
+    },
+    {
+     "name": "Reach out to MAJ Dulce re: ASEM",
+     "date": "2026-09-08",
+     "done": false,
+     "kind": "Military",
+     "src": "task",
+     "url": "https://app.notion.com/p/Reach-out-to-MAJ-Dulce-re-ASEM-3d2ea74eb77981949160fe855c5f4bd9"
+    }
+   ]
+  },
+  {
+   "date": "2026-09-09",
+   "is_today": false,
+   "items": [
+    {
+     "name": "14.003 Lecture",
+     "date": "2026-09-09T10:30:00.000-04:00",
+     "done": false,
+     "kind": "14.003",
+     "src": "class",
+     "url": "https://app.notion.com/p/14-003-Lecture-3d3ea74eb7798132902de5f43016933e"
+    },
+    {
+     "name": "AeroAstro Welcome Back Picnic",
+     "date": "2026-09-09T12:00:00.000-04:00",
+     "done": false,
+     "kind": "AeroAstro",
+     "src": "task",
+     "url": "https://app.notion.com/p/AeroAstro-Welcome-Back-Picnic-3ceea74eb7798191b66ad74cbfb1d4a9"
+    },
+    {
+     "name": "IDS.412 Lecture",
+     "date": "2026-09-09T13:00:00.000-04:00",
+     "done": false,
+     "kind": "IDS.412",
+     "src": "class",
+     "url": "https://app.notion.com/p/IDS-412-Lecture-3d3ea74eb779814ba901c446cf3cf72b"
+    },
+    {
+     "name": "16.990 Lecture",
+     "date": "2026-09-09T14:30:00.000-04:00",
+     "done": false,
+     "kind": "16.990",
+     "src": "class",
+     "url": "https://app.notion.com/p/16-990-Lecture-3d3ea74eb77981a1bd1fd73f769992b7"
+    },
+    {
+     "name": "Ryan Yong visiting",
+     "date": "2026-09-09T16:00:00.000-04:00",
+     "done": false,
+     "kind": "Meeting",
+     "src": "task",
+     "url": "https://app.notion.com/p/Ryan-Yong-visiting-3d1ea74eb77981cd8382e163e7dd42e8"
+    }
+   ]
+  },
+  {
+   "date": "2026-09-10",
+   "is_today": false,
+   "items": [
+    {
+     "name": "IYR dinner shopping run (Costco + H Mart)",
+     "date": "2026-09-10T14:00:00.000-04:00",
+     "done": false,
+     "kind": "Admin",
+     "src": "task",
+     "url": "https://app.notion.com/p/IYR-dinner-shopping-run-Costco-H-Mart-3d3ea74eb77981bd9fe3c1440d06b22c"
+    },
+    {
+     "name": "Muddy Charles Pub w/ Dinner",
+     "date": "2026-09-10T18:00:00.000-04:00",
+     "done": false,
+     "kind": "AeroAstro",
+     "src": "task",
+     "url": "https://app.notion.com/p/Muddy-Charles-Pub-w-Dinner-3ceea74eb7798193ac66ea9854b26817"
+    },
+    {
+     "name": "Fix all Outlook rules based on sender",
+     "date": "2026-09-10T19:00:00.000-04:00",
+     "done": false,
+     "kind": "Admin",
+     "src": "task",
+     "url": "https://app.notion.com/p/Fix-all-Outlook-rules-based-on-sender-3d2ea74eb77981329bbbe979480c3329"
+    }
+   ]
+  },
+  {
+   "date": "2026-09-11",
+   "is_today": false,
+   "items": [
+    {
+     "name": "14.003 Recitation",
+     "date": "2026-09-11T09:00:00.000-04:00",
+     "done": false,
+     "kind": "14.003",
+     "src": "class",
+     "url": "https://app.notion.com/p/14-003-Recitation-3d3ea74eb77981118fd8da259e02e85c"
+    },
+    {
+     "name": "Mug Making",
+     "date": "2026-09-11T13:00:00.000-04:00",
+     "done": false,
+     "kind": "AeroAstro",
+     "src": "task",
+     "url": "https://app.notion.com/p/Mug-Making-3ceea74eb77981feb004f67f59bfc5f1"
+    },
+    {
+     "name": "16.S896 Lecture",
+     "date": "2026-09-11T15:00:00.000-04:00",
+     "done": false,
+     "kind": "16.S896",
+     "src": "class",
+     "url": "https://app.notion.com/p/16-S896-Lecture-3d3ea74eb77981789645cd0634a83f8b"
+    },
+    {
+     "name": "TPP Retreat Weekend (IYR)",
+     "date": "2026-09-11",
+     "done": false,
+     "kind": "TPP",
+     "src": "task",
+     "url": "https://app.notion.com/p/TPP-Retreat-Weekend-IYR-3d3ea74eb77981ae8253dd92b9a15f9f"
+    },
+    {
+     "name": "Apply to Trust Center Startup Pass",
+     "date": "2026-09-11",
+     "done": false,
+     "kind": "Task",
+     "src": "task",
+     "url": "https://app.notion.com/p/Apply-to-Trust-Center-Startup-Pass-3d2ea74eb7798194a1bbce679356d733"
+    },
+    {
+     "name": "Meet with MAJ Gramlich",
+     "date": "2026-09-11",
+     "done": false,
+     "kind": "Military",
+     "src": "task",
+     "url": "https://app.notion.com/p/Meet-with-MAJ-Gramlich-3d2ea74eb77981b4af91e1be0efcf6be"
+    },
+    {
+     "name": "Brainstorm: GitHub for Lab Management (continuity + security)",
+     "date": "2026-09-11",
+     "done": false,
+     "kind": "Research",
+     "src": "task",
+     "url": "https://app.notion.com/p/Brainstorm-GitHub-for-Lab-Management-continuity-security-3d2ea74eb77981b2bf66d5d99740d40e"
+    }
+   ]
+  },
+  {
+   "date": "2026-09-12",
+   "is_today": false,
+   "items": [
+    {
+     "name": "If no makerspace training spot: cancel digital training signup",
+     "date": "2026-09-12T10:00:00.000-04:00",
+     "done": false,
+     "kind": "Admin",
+     "src": "task",
+     "url": "https://app.notion.com/p/If-no-makerspace-training-spot-cancel-digital-training-signup-3d5ea74eb7798177b623c621d79f8b3f"
+    },
+    {
+     "name": "Housewarming Party at Joce's",
+     "date": "2026-09-12T17:30:00.000-04:00",
+     "done": false,
+     "kind": "Meeting",
+     "src": "task",
+     "url": "https://app.notion.com/p/Housewarming-Party-at-Joce-s-3ceea74eb77981da84a1ce0a76053c62"
+    }
+   ]
+  },
+  {
+   "date": "2026-09-13",
+   "is_today": false,
+   "items": [
+    {
+     "name": "Coffee & Thrift Crawl",
+     "date": "2026-09-13T12:00:00.000-04:00",
+     "done": false,
+     "kind": "AeroAstro",
+     "src": "task",
+     "url": "https://app.notion.com/p/Coffee-Thrift-Crawl-3ceea74eb779812ea8d7e381c0e2cfcb"
+    },
+    {
+     "name": "Submit Scholar biography (docx) + headshot (jpeg) survey",
+     "date": "2026-09-13T23:59:00.000-04:00",
+     "done": false,
+     "kind": "Research",
+     "src": "task",
+     "url": "https://app.notion.com/p/Submit-Scholar-biography-docx-headshot-jpeg-survey-3cdea74eb7798140a03dc41b763c0c20"
+    }
+   ]
+  }
+ ],
+ "total": 34
+}

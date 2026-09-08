@@ -21,6 +21,7 @@ VERSION = "2025-09-03"
 OUT = os.path.join(os.path.dirname(__file__), "..", "docs", "data")
 
 TASKS_DS = "cd1ad116-e9e2-4719-954d-e75189cf3ce3"   # Tasks & Meetings
+CLASS_DS = "beb6c6ee-20b1-4c1d-a8c3-93b13fae040c"   # Class Database
 ET = timezone(timedelta(hours=-4))                   # EDT; -5 in winter
 
 
@@ -137,6 +138,69 @@ def main():
     print(f"wrote tasks.json — {payload['counts']['total']} tasks, "
           f"{payload['counts']['open']} open, "
           f"{payload['counts']['overdue']} overdue")
+
+    # ---------------- week agenda ----------------
+    # Monday-anchored week containing today, merging Tasks & Meetings with
+    # the Class Database so classes and commitments share one column.
+    monday = today - timedelta(days=today.weekday())
+    sunday = monday + timedelta(days=6)
+
+    def in_week(iso):
+        return bool(iso) and monday.isoformat() <= iso[:10] <= sunday.isoformat()
+
+    events = []
+    for t in tasks:
+        if in_week(t["date"]) and t["type"] != "Task":
+            events.append({
+                "name": t["name"], "date": t["date"], "done": t["done"],
+                "kind": t["meeting_type"] or "Meeting", "src": "task",
+                "url": t["url"],
+            })
+        elif in_week(t["date"]) and t["type"] == "Task":
+            events.append({
+                "name": t["name"], "date": t["date"], "done": t["done"],
+                "kind": t["meeting_type"] or "Task", "src": "task",
+                "url": t["url"],
+            })
+
+    for r in query_all(CLASS_DS):
+        p = r["properties"]
+        d = txt(p.get("Date"))
+        if in_week(d):
+            events.append({
+                "name": txt(p.get("Class Item")),
+                "date": d,
+                "done": False,
+                "kind": txt(p.get("Class Code")) or "Class",
+                "src": "class",
+                "url": r.get("url", ""),
+            })
+
+    days = []
+    for i in range(7):
+        d = monday + timedelta(days=i)
+        items = sorted(
+            (e for e in events if e["date"][:10] == d.isoformat()),
+            key=lambda e: (len(e["date"]) <= 10, e["date"]),
+        )
+        days.append({
+            "date": d.isoformat(),
+            "is_today": d == today,
+            "items": items,
+        })
+
+    week = {
+        "generated": now.isoformat(timespec="seconds"),
+        "today": today.isoformat(),
+        "monday": monday.isoformat(),
+        "days": days,
+        "total": len(events),
+    }
+    with open(os.path.join(OUT, "week.json"), "w") as f:
+        json.dump(week, f, indent=1)
+
+    print(f"wrote week.json — {len(events)} events "
+          f"{monday.isoformat()}..{sunday.isoformat()}")
 
 
 if __name__ == "__main__":
