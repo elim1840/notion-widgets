@@ -82,14 +82,22 @@ def main():
     for r in rows:
         p = r["properties"]
         start = txt(p.get("Meeting Date"))
+        d = p.get("Meeting Date", {}).get("date") or {}
         tasks.append({
             "name": txt(p.get("Name")),
             "date": start,
+            "end": d.get("end") or "",
             "done": bool(txt(p.get("Done"))),
             "status": txt(p.get("Status")),
             "type": txt(p.get("Type")),
             "meeting_type": txt(p.get("Meeting Type")),
             "priority": txt(p.get("Priority")),
+            "energy": txt(p.get("Energy")),
+            "location": txt(p.get("Location")),
+            "attendees": txt(p.get("Attendees")),
+            "agenda": txt(p.get("Agenda")),
+            "link": (p.get("Meeting Link") or {}).get("url") or "",
+            "notes": txt(p.get("Notes")),
             "url": r.get("url", ""),
         })
 

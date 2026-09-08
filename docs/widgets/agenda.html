@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Agenda</title>
+<style>
+  :root{
+    --bg:#191919; --panel:#202020; --line:#2f2f2f; --hair:#242424;
+    --ink:#e9e9e7; --dim:#9b9a97; --faint:#6f6e6b;
+    --now:#e06c6c; --accent:#5b93d3; --class:#c9a227; --done:#5fa87a;
+  }
+  @media (prefers-color-scheme: light){
+    :root{ --bg:#fff; --panel:#f7f7f5; --line:#e6e5e1; --hair:#efeeec;
+           --ink:#37352f; --dim:#787774; --faint:#9b9a97; }
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--bg);color:var(--ink);padding:16px 18px;
+       font:13.5px/1.45 -apple-system,BlinkMacSystemFont,"Segoe UI",Inter,sans-serif;
+       -webkit-font-smoothing:antialiased}
+
+  header{display:flex;align-items:flex-end;justify-content:space-between;
+         padding-bottom:12px;margin-bottom:4px;border-bottom:1px solid var(--line)}
+  .dnum{font-size:30px;font-weight:600;letter-spacing:-.025em;line-height:1}
+  .dow{font-size:11px;color:var(--dim);text-transform:uppercase;
+       letter-spacing:.1em;margin-top:3px}
+  .clock{text-align:right}
+  .now{font-size:24px;font-weight:600;font-variant-numeric:tabular-nums;
+       letter-spacing:-.01em;line-height:1}
+  .meta{font-size:10.5px;color:var(--faint);margin-top:4px}
+
+  .row{display:grid;grid-template-columns:58px 1fr;gap:14px;
+       padding:11px 0;border-bottom:1px solid var(--hair);position:relative}
+  .row:last-child{border-bottom:0}
+  .row.past{opacity:.42}
+  .row.current::before{content:"";position:absolute;left:-18px;top:0;bottom:0;
+       width:3px;background:var(--now);border-radius:0 2px 2px 0}
+
+  .tcol{text-align:right;padding-top:1px}
+  .t1{font-size:15px;font-weight:600;font-variant-numeric:tabular-nums;
+      letter-spacing:-.01em;line-height:1.15}
+  .t2{font-size:10.5px;color:var(--faint);font-variant-numeric:tabular-nums;
+      margin-top:2px}
+  .allday{font-size:9.5px;color:var(--faint);text-transform:uppercase;
+          letter-spacing:.07em;padding-top:3px}
+
+  .body{min-width:0}
+  .nm{font-size:14px;font-weight:500;display:block;text-decoration:none;color:inherit}
+  .nm:hover{text-decoration:underline}
+  .row.done .nm{text-decoration:line-through;color:var(--faint)}
+  .tags{margin-top:4px;display:flex;flex-wrap:wrap;gap:5px;align-items:center}
+  .tag{font-size:9.5px;letter-spacing:.04em;color:var(--faint);
+       border:1px solid var(--line);border-radius:3px;padding:1px 5px}
+  .tag.cls{color:var(--class);border-color:var(--class)}
+  .tag.hi{color:var(--now);border-color:var(--now)}
+  .det{margin-top:5px;font-size:11.5px;color:var(--dim);
+       display:flex;flex-direction:column;gap:2px}
+  .det div{display:flex;gap:6px}
+  .det b{color:var(--faint);font-weight:500;flex:0 0 52px;font-size:10.5px;
+         text-transform:uppercase;letter-spacing:.05em;padding-top:1px}
+  .det a{color:var(--accent);text-decoration:none}
+  .det a:hover{text-decoration:underline}
+  .gap{font-size:10px;color:var(--faint);text-align:center;
+       padding:4px 0;font-style:italic}
+  .none{color:var(--faint);font-style:italic;padding:26px 0;text-align:center}
+  footer{margin-top:12px;padding-top:9px;border-top:1px solid var(--line);
+         font-size:10px;color:var(--faint);display:flex;justify-content:space-between}
+</style>
+</head>
+<body>
+<header>
+  <div><div class="dnum" id="dnum">—</div><div class="dow" id="dow"></div></div>
+  <div class="clock"><div class="now" id="clk">----</div><div class="meta" id="sum"></div></div>
+</header>
+<div id="list"></div>
+<footer><span id="gen"></span><span>Tasks &amp; Meetings</span></footer>
+
+<script>
+const DOW=['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+const MON=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+const esc=s=>(s||'').replace(/[<>&]/g,c=>({'<':'&lt;','>':'&gt;','&':'&amp;'}[c]));
+
+// read wall-clock digits straight off the ISO string; never new Date()
+function mins(iso){
+  const m=/T(\d{2}):(\d{2})/.exec(iso||'');
+  return m ? (+m[1])*60 + (+m[2]) : null;
+}
+function hhmm(iso){
+  const m=/T(\d{2}):(\d{2})/.exec(iso||'');
+  return m ? m[1]+m[2] : '';
+}
+function dur(a,b){
+  const s=mins(a), e=mins(b);
+  if(s==null||e==null||e<=s) return '';
+  const d=e-s;
+  return d>=60 ? (d%60 ? `${Math.floor(d/60)}h${d%60}` : `${Math.floor(d/60)}h`) : `${d}m`;
+}
+function tick(){
+  const n=new Date();
+  document.getElementById('clk').textContent =
+    String(n.getHours()).padStart(2,'0')+String(n.getMinutes()).padStart(2,'0');
+}
+tick(); setInterval(tick,20000);
+
+fetch('../data/tasks.json?t='+Date.now())
+ .then(r=>r.json())
+ .then(d=>{
+   const day=new Date(d.today+'T12:00:00');
+   document.getElementById('dnum').textContent = MON[day.getMonth()]+' '+day.getDate();
+   document.getElementById('dow').textContent  = DOW[day.getDay()];
+
+   let items=d.today_items;
+   let heading='';
+   if(!items.length){ items=d.upcoming.slice(0,7); heading='nothing today — what is next'; }
+
+   const c=d.counts;
+   document.getElementById('sum').textContent =
+     `${c.today_done}/${c.today_total} done · ${c.open} open · ${c.overdue} overdue`;
+
+   const nowM=new Date().getHours()*60+new Date().getMinutes();
+   const L=document.getElementById('list');
+
+   if(!items.length){ L.innerHTML='<div class="none">nothing scheduled</div>'; return; }
+
+   let html = heading?`<div class="gap">${heading}</div>`:'';
+   let prevEnd=null;
+
+   items.forEach(t=>{
+     const s=mins(t.date), e=mins(t.end);
+     const allday = s===null;
+
+     // free-gap marker between consecutive timed items
+     if(!allday && prevEnd!=null && s-prevEnd>=45){
+       const g=s-prevEnd;
+       const txt = g>=60 ? `${Math.floor(g/60)}h${g%60?' '+(g%60)+'m':''} free` : `${g}m free`;
+       html += `<div class="gap">${txt}</div>`;
+     }
+     if(!allday) prevEnd = e!=null?e:s+60;
+
+     const past = !allday && e!=null ? e<nowM : (!allday && s+60<nowM);
+     const cur  = !allday && s!=null && s<=nowM && (e!=null?nowM<e:nowM<s+60);
+
+     const tcol = allday
+       ? `<div class="allday">All day</div>`
+       : `<div class="t1">${hhmm(t.date)}</div>`+
+         (t.end?`<div class="t2">${hhmm(t.end)} · ${dur(t.date,t.end)}</div>`:'');
+
+     const tags=[];
+     if(t.meeting_type) tags.push(`<span class="tag">${esc(t.meeting_type)}</span>`);
+     if(t.priority==='High') tags.push(`<span class="tag hi">High</span>`);
+     if(t.energy) tags.push(`<span class="tag">${esc(t.energy)}</span>`);
+
+     const det=[];
+     if(t.location)  det.push(`<div><b>Where</b><span>${esc(t.location)}</span></div>`);
+     if(t.attendees) det.push(`<div><b>Who</b><span>${esc(t.attendees)}</span></div>`);
+     if(t.agenda)    det.push(`<div><b>Agenda</b><span>${esc(t.agenda)}</span></div>`);
+     if(t.link)      det.push(`<div><b>Join</b><a href="${t.link}" target="_blank">${esc(t.link.replace(/^https?:\/\//,'').slice(0,44))}</a></div>`);
+
+     html += `<div class="row ${past?'past':''} ${cur?'current':''} ${t.done?'done':''}">
+       <div class="tcol">${tcol}</div>
+       <div class="body">
+         <a class="nm" href="${t.url}" target="_blank">${esc(t.name)||'(untitled)'}</a>
+         ${tags.length?`<div class="tags">${tags.join('')}</div>`:''}
+         ${det.length?`<div class="det">${det.join('')}</div>`:''}
+       </div></div>`;
+   });
+   L.innerHTML=html;
+
+   const g=new Date(d.generated);
+   document.getElementById('gen').textContent =
+     'synced '+String(g.getHours()).padStart(2,'0')+String(g.getMinutes()).padStart(2,'0');
+ })
+ .catch(()=>{ document.getElementById('list').innerHTML =
+   '<div class="none">data not built yet</div>'; });
+</script>
+</body>
+</html>
