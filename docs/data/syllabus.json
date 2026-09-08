@@ -1,0 +1,1115 @@
+{
+ "generated": "2026-09-08T19:25:45-04:00",
+ "source": "Fall 2026 syllabus PDFs, transcribed 2026-09-08",
+ "term": {
+  "term": "Fall 2026",
+  "classes_end": "2026-12-10",
+  "finals_start": "2026-12-14",
+  "finals_end": "2026-12-18",
+  "add_date": "2026-10-09",
+  "drop_date": "2026-11-18",
+  "no_assignments_after": "2026-12-04",
+  "thesis_title_due": "2026-12-12",
+  "thesis_title_note": "Advanced degree thesis title due; $85 late fee after."
+ },
+ "kinds": [
+  "admin",
+  "exam",
+  "lecture",
+  "milestone",
+  "paper",
+  "presentation",
+  "pset",
+  "recitation",
+  "review"
+ ],
+ "courses": [
+  {
+   "code": "14.003",
+   "title": "Microeconomic Theory and Public Policy",
+   "units": 12,
+   "meets": "Mon+Wed lectures, Fri recitation",
+   "room": "",
+   "instructor": "",
+   "has_syllabus": true,
+   "source": "14_03_Fall_2026_Syllabus.pdf",
+   "grading": [],
+   "note": "Syllabus does not publish a percentage breakdown; weights left null."
+  },
+  {
+   "code": "IDS.412",
+   "alt_code": "17.310",
+   "title": "Science, Technology and Public Policy",
+   "units": 12,
+   "meets": "Mon+Wed 1300-1430",
+   "room": "66-168",
+   "instructor": "Prof. Noelle Selin",
+   "has_syllabus": true,
+   "source": "Syllabus_20260906b.pdf (Version 2026-09-26)",
+   "grading": [
+    {
+     "component": "Paper 1 (15% written + 5% conference)",
+     "weight": 20
+    },
+    {
+     "component": "Midterm",
+     "weight": 20
+    },
+    {
+     "component": "Final project presentation",
+     "weight": 25
+    },
+    {
+     "component": "Paper 2 (15% written + 5% conference)",
+     "weight": 25
+    },
+    {
+     "component": "Participation",
+     "weight": 10
+    }
+   ],
+   "note": ""
+  },
+  {
+   "code": "16.S896",
+   "title": "Planetary Surface Technology Development",
+   "units": 12,
+   "meets": "Fri 1500-1700",
+   "room": "9-354",
+   "instructor": "Dr. George Lordos",
+   "has_syllabus": true,
+   "source": "16.S896 syllabus (Version 9, 2026-09-04)",
+   "grading": [
+    {
+     "component": "A1-A5 assignments (5% each)",
+     "weight": 25
+    },
+    {
+     "component": "Concept review (internal panel)",
+     "weight": 15
+    },
+    {
+     "component": "Draft proposal (5-7 pages)",
+     "weight": 20
+    },
+    {
+     "component": "Final presentation (external NASA/industry judges)",
+     "weight": 20
+    }
+   ],
+   "note": "Listed components total 80%; the remaining 20% is not itemised in the syllabus."
+  },
+  {
+   "code": "16.842",
+   "title": null,
+   "units": null,
+   "meets": "",
+   "room": "",
+   "instructor": "",
+   "has_syllabus": false,
+   "source": null,
+   "grading": [],
+   "note": "No syllabus available \u2014 not in Canvas at all. Title not transcribed. Notion holds 19 items for this subject including an oral exam and a final presentation, but none of them are dated here. Treat as UNKNOWN, not as empty."
+  },
+  {
+   "code": "16.987",
+   "title": null,
+   "units": null,
+   "meets": "",
+   "room": "",
+   "instructor": "",
+   "has_syllabus": false,
+   "source": null,
+   "grading": [],
+   "note": "No syllabus available; title not transcribed. Graded work, if any, is unknown."
+  },
+  {
+   "code": "16.990",
+   "title": null,
+   "units": null,
+   "meets": "",
+   "room": "",
+   "instructor": "",
+   "has_syllabus": false,
+   "source": null,
+   "grading": [],
+   "note": "No syllabus available; title not transcribed. Graded work, if any, is unknown."
+  },
+  {
+   "code": "24.134",
+   "title": "Experiential Ethics",
+   "units": null,
+   "meets": "",
+   "room": "",
+   "instructor": "",
+   "has_syllabus": false,
+   "source": null,
+   "grading": [],
+   "note": "Archived/finished. No syllabus data; no outstanding graded work."
+  }
+ ],
+ "events": [
+  {
+   "code": "IDS.412",
+   "name": "Lecture",
+   "date": "2026-09-09",
+   "time": "1300-1430",
+   "kind": "lecture",
+   "weight": null,
+   "graded": false,
+   "note": "",
+   "location": "66-168"
+  },
+  {
+   "code": "14.003",
+   "name": "Recitation",
+   "date": "2026-09-11",
+   "time": null,
+   "kind": "recitation",
+   "weight": null,
+   "graded": false,
+   "note": "",
+   "location": ""
+  },
+  {
+   "code": "16.S896",
+   "name": "Class",
+   "date": "2026-09-11",
+   "time": "1500-1700",
+   "kind": "lecture",
+   "weight": null,
+   "graded": false,
+   "note": "",
+   "location": "9-354"
+  },
+  {
+   "code": "16.S896",
+   "name": "NASA Challenges info session",
+   "date": "2026-09-14",
+   "time": "1700-1830",
+   "kind": "milestone",
+   "weight": null,
+   "graded": false,
+   "note": "Monday special session, outside the normal Friday slot.",
+   "location": "35-225"
+  },
+  {
+   "code": "IDS.412",
+   "name": "Lecture",
+   "date": "2026-09-14",
+   "time": "1300-1430",
+   "kind": "lecture",
+   "weight": null,
+   "graded": false,
+   "note": "",
+   "location": "66-168"
+  },
+  {
+   "code": "IDS.412",
+   "name": "Lecture",
+   "date": "2026-09-16",
+   "time": "1300-1430",
+   "kind": "lecture",
+   "weight": null,
+   "graded": false,
+   "note": "",
+   "location": "66-168"
+  },
+  {
+   "code": "14.003",
+   "name": "Recitation",
+   "date": "2026-09-18",
+   "time": null,
+   "kind": "recitation",
+   "weight": null,
+   "graded": false,
+   "note": "",
+   "location": ""
+  },
+  {
+   "code": "16.S896",
+   "name": "Class",
+   "date": "2026-09-18",
+   "time": "1500-1700",
+   "kind": "lecture",
+   "weight": null,
+   "graded": false,
+   "note": "",
+   "location": "9-354"
+  },
+  {
+   "code": "16.S896",
+   "name": "Skills survey due",
+   "date": "2026-09-18",
+   "time": null,
+   "kind": "milestone",
+   "weight": null,
+   "graded": false,
+   "note": "Gates team assignment.",
+   "location": ""
+  },
+  {
+   "code": "IDS.412",
+   "name": "Lecture",
+   "date": "2026-09-21",
+   "time": "1300-1430",
+   "kind": "lecture",
+   "weight": null,
+   "graded": false,
+   "note": "",
+   "location": "66-168"
+  },
+  {
+   "code": "16.S896",
+   "name": "Team assignments finalized",
+   "date": "2026-09-22",
+   "time": null,
+   "kind": "milestone",
+   "weight": null,
+   "graded": false,
+   "note": "",
+   "location": ""
+  },
+  {
+   "code": "IDS.412",
+   "name": "Lecture",
+   "date": "2026-09-23",
+   "time": "1300-1430",
+   "kind": "lecture",
+   "weight": null,
+   "graded": false,
+   "note": "",
+   "location": "66-168"
+  },
+  {
+   "code": "14.003",
+   "name": "PS1 due",
+   "date": "2026-09-24",
+   "time": "2359",
+   "kind": "pset",
+   "weight": null,
+   "graded": true,
+   "note": "",
+   "location": ""
+  },
+  {
+   "code": "14.003",
+   "name": "Recitation",
+   "date": "2026-09-25",
+   "time": null,
+   "kind": "recitation",
+   "weight": null,
+   "graded": false,
+   "note": "",
+   "location": ""
+  },
+  {
+   "code": "16.S896",
+   "name": "Class",
+   "date": "2026-09-25",
+   "time": "1500-1700",
+   "kind": "lecture",
+   "weight": null,
+   "graded": false,
+   "note": "",
+   "location": "9-354"
+  },
+  {
+   "code": "IDS.412",
+   "name": "Lecture",
+   "date": "2026-09-28",
+   "time": "1300-1430",
+   "kind": "lecture",
+   "weight": null,
+   "graded": false,
+   "note": "",
+   "location": "66-168"
+  },
+  {
+   "code": "IDS.412",
+   "name": "Lecture",
+   "date": "2026-09-30",
+   "time": "1300-1430",
+   "kind": "lecture",
+   "weight": null,
+   "graded": false,
+   "note": "",
+   "location": "66-168"
+  },
+  {
+   "code": "14.003",
+   "name": "Recitation",
+   "date": "2026-10-02",
+   "time": null,
+   "kind": "recitation",
+   "weight": null,
+   "graded": false,
+   "note": "",
+   "location": ""
+  },
+  {
+   "code": "16.S896",
+   "name": "Class",
+   "date": "2026-10-02",
+   "time": "1500-1700",
+   "kind": "lecture",
+   "weight": null,
+   "graded": false,
+   "note": "",
+   "location": "9-354"
+  },
+  {
+   "code": "IDS.412",
+   "name": "Lecture",
+   "date": "2026-10-05",
+   "time": "1300-1430",
+   "kind": "lecture",
+   "weight": null,
+   "graded": false,
+   "note": "",
+   "location": "66-168"
+  },
+  {
+   "code": "14.003",
+   "name": "PS2 due",
+   "date": "2026-10-07",
+   "time": "2359",
+   "kind": "pset",
+   "weight": null,
+   "graded": true,
+   "note": "",
+   "location": ""
+  },
+  {
+   "code": "IDS.412",
+   "name": "Lecture",
+   "date": "2026-10-07",
+   "time": "1300-1430",
+   "kind": "lecture",
+   "weight": null,
+   "graded": false,
+   "note": "",
+   "location": "66-168"
+  },
+  {
+   "code": null,
+   "name": "Add Date",
+   "date": "2026-10-09",
+   "time": null,
+   "kind": "admin",
+   "weight": null,
+   "graded": false,
+   "note": "MIT Registrar.",
+   "location": ""
+  },
+  {
+   "code": "14.003",
+   "name": "Recitation",
+   "date": "2026-10-09",
+   "time": null,
+   "kind": "recitation",
+   "weight": null,
+   "graded": false,
+   "note": "",
+   "location": ""
+  },
+  {
+   "code": "16.S896",
+   "name": "A1 due",
+   "date": "2026-10-09",
+   "time": null,
+   "kind": "pset",
+   "weight": 5,
+   "graded": true,
+   "note": "",
+   "location": ""
+  },
+  {
+   "code": "16.S896",
+   "name": "Class",
+   "date": "2026-10-09",
+   "time": "1500-1700",
+   "kind": "lecture",
+   "weight": null,
+   "graded": false,
+   "note": "",
+   "location": "9-354"
+  },
+  {
+   "code": "16.S896",
+   "name": "WORMS hardware selections final, orders placed",
+   "date": "2026-10-09",
+   "time": null,
+   "kind": "milestone",
+   "weight": null,
+   "graded": false,
+   "note": "",
+   "location": ""
+  },
+  {
+   "code": "14.003",
+   "name": "Exam 1",
+   "date": "2026-10-13",
+   "time": null,
+   "kind": "exam",
+   "weight": null,
+   "graded": true,
+   "note": "Tuesday running on a Monday schedule.",
+   "location": ""
+  },
+  {
+   "code": "16.S896",
+   "name": "RASC-AL Notice of Intent due",
+   "date": "2026-10-13",
+   "time": null,
+   "kind": "milestone",
+   "weight": null,
+   "graded": false,
+   "note": "Optional and non-binding.",
+   "location": ""
+  },
+  {
+   "code": "IDS.412",
+   "name": "Lecture",
+   "date": "2026-10-13",
+   "time": "1300-1430",
+   "kind": "lecture",
+   "weight": null,
+   "graded": false,
+   "note": "Tuesday on a Monday schedule.",
+   "location": "66-168"
+  },
+  {
+   "code": "IDS.412",
+   "name": "Lecture",
+   "date": "2026-10-14",
+   "time": "1300-1430",
+   "kind": "lecture",
+   "weight": null,
+   "graded": false,
+   "note": "",
+   "location": "66-168"
+  },
+  {
+   "code": "14.003",
+   "name": "Recitation",
+   "date": "2026-10-16",
+   "time": null,
+   "kind": "recitation",
+   "weight": null,
+   "graded": false,
+   "note": "",
+   "location": ""
+  },
+  {
+   "code": "16.S896",
+   "name": "Class",
+   "date": "2026-10-16",
+   "time": "1500-1700",
+   "kind": "lecture",
+   "weight": null,
+   "graded": false,
+   "note": "",
+   "location": "9-354"
+  },
+  {
+   "code": "16.S896",
+   "name": "Questions for NASA due",
+   "date": "2026-10-18",
+   "time": null,
+   "kind": "milestone",
+   "weight": null,
+   "graded": false,
+   "note": "",
+   "location": ""
+  },
+  {
+   "code": "IDS.412",
+   "name": "Lecture",
+   "date": "2026-10-19",
+   "time": "1300-1430",
+   "kind": "lecture",
+   "weight": null,
+   "graded": false,
+   "note": "",
+   "location": "66-168"
+  },
+  {
+   "code": "IDS.412",
+   "name": "Paper 1 conferences (week of)",
+   "date": "2026-10-19",
+   "time": null,
+   "kind": "milestone",
+   "weight": null,
+   "graded": false,
+   "note": "Conferences run through the week beginning 2026-10-19.",
+   "location": ""
+  },
+  {
+   "code": "IDS.412",
+   "name": "Lecture",
+   "date": "2026-10-21",
+   "time": "1300-1430",
+   "kind": "lecture",
+   "weight": null,
+   "graded": false,
+   "note": "",
+   "location": "66-168"
+  },
+  {
+   "code": "14.003",
+   "name": "Recitation",
+   "date": "2026-10-23",
+   "time": null,
+   "kind": "recitation",
+   "weight": null,
+   "graded": false,
+   "note": "",
+   "location": ""
+  },
+  {
+   "code": "16.S896",
+   "name": "A2 due",
+   "date": "2026-10-23",
+   "time": null,
+   "kind": "pset",
+   "weight": 5,
+   "graded": true,
+   "note": "",
+   "location": ""
+  },
+  {
+   "code": "16.S896",
+   "name": "Class",
+   "date": "2026-10-23",
+   "time": "1500-1700",
+   "kind": "lecture",
+   "weight": null,
+   "graded": false,
+   "note": "",
+   "location": "9-354"
+  },
+  {
+   "code": "IDS.412",
+   "name": "Lecture",
+   "date": "2026-10-26",
+   "time": "1300-1430",
+   "kind": "lecture",
+   "weight": null,
+   "graded": false,
+   "note": "",
+   "location": "66-168"
+  },
+  {
+   "code": "IDS.412",
+   "name": "Paper 1 due",
+   "date": "2026-10-26",
+   "time": null,
+   "kind": "paper",
+   "weight": 20,
+   "graded": true,
+   "note": "20% = 15% written + 5% conference.",
+   "location": ""
+  },
+  {
+   "code": "16.S896",
+   "name": "Q&A with NASA subject matter experts",
+   "date": "2026-10-27",
+   "time": null,
+   "kind": "milestone",
+   "weight": null,
+   "graded": false,
+   "note": "",
+   "location": ""
+  },
+  {
+   "code": "IDS.412",
+   "name": "Lecture",
+   "date": "2026-10-28",
+   "time": "1300-1430",
+   "kind": "lecture",
+   "weight": null,
+   "graded": false,
+   "note": "",
+   "location": "66-168"
+  },
+  {
+   "code": "14.003",
+   "name": "PS3 due",
+   "date": "2026-10-29",
+   "time": "2359",
+   "kind": "pset",
+   "weight": null,
+   "graded": true,
+   "note": "",
+   "location": ""
+  },
+  {
+   "code": "14.003",
+   "name": "Recitation",
+   "date": "2026-10-30",
+   "time": null,
+   "kind": "recitation",
+   "weight": null,
+   "graded": false,
+   "note": "",
+   "location": ""
+  },
+  {
+   "code": "16.S896",
+   "name": "Class",
+   "date": "2026-10-30",
+   "time": "1500-1700",
+   "kind": "lecture",
+   "weight": null,
+   "graded": false,
+   "note": "",
+   "location": "9-354"
+  },
+  {
+   "code": "IDS.412",
+   "name": "Lecture",
+   "date": "2026-11-02",
+   "time": "1300-1430",
+   "kind": "lecture",
+   "weight": null,
+   "graded": false,
+   "note": "",
+   "location": "66-168"
+  },
+  {
+   "code": "IDS.412",
+   "name": "Lecture",
+   "date": "2026-11-04",
+   "time": "1300-1430",
+   "kind": "lecture",
+   "weight": null,
+   "graded": false,
+   "note": "",
+   "location": "66-168"
+  },
+  {
+   "code": "IDS.412",
+   "name": "Midterm (in class)",
+   "date": "2026-11-04",
+   "time": null,
+   "kind": "exam",
+   "weight": 20,
+   "graded": true,
+   "note": "Closed book; one 8.5x11 sheet, both sides.",
+   "location": "66-168"
+  },
+  {
+   "code": "14.003",
+   "name": "Recitation",
+   "date": "2026-11-06",
+   "time": null,
+   "kind": "recitation",
+   "weight": null,
+   "graded": false,
+   "note": "",
+   "location": ""
+  },
+  {
+   "code": "16.S896",
+   "name": "A3 due",
+   "date": "2026-11-06",
+   "time": null,
+   "kind": "pset",
+   "weight": 5,
+   "graded": true,
+   "note": "",
+   "location": ""
+  },
+  {
+   "code": "16.S896",
+   "name": "Class",
+   "date": "2026-11-06",
+   "time": "1500-1700",
+   "kind": "lecture",
+   "weight": null,
+   "graded": false,
+   "note": "",
+   "location": "9-354"
+  },
+  {
+   "code": "16.S896",
+   "name": "Concept review",
+   "date": "2026-11-06",
+   "time": null,
+   "kind": "review",
+   "weight": 15,
+   "graded": true,
+   "note": "Internal panel.",
+   "location": ""
+  },
+  {
+   "code": "IDS.412",
+   "name": "Paper 2 conferences (week of)",
+   "date": "2026-11-09",
+   "time": null,
+   "kind": "milestone",
+   "weight": null,
+   "graded": false,
+   "note": "Conferences run through the week beginning 2026-11-09; no lecture that week.",
+   "location": ""
+  },
+  {
+   "code": "14.003",
+   "name": "PS4 due",
+   "date": "2026-11-12",
+   "time": "2359",
+   "kind": "pset",
+   "weight": null,
+   "graded": true,
+   "note": "",
+   "location": ""
+  },
+  {
+   "code": "14.003",
+   "name": "Recitation",
+   "date": "2026-11-13",
+   "time": null,
+   "kind": "recitation",
+   "weight": null,
+   "graded": false,
+   "note": "",
+   "location": ""
+  },
+  {
+   "code": "16.S896",
+   "name": "A4 due",
+   "date": "2026-11-13",
+   "time": null,
+   "kind": "pset",
+   "weight": 5,
+   "graded": true,
+   "note": "",
+   "location": ""
+  },
+  {
+   "code": "16.S896",
+   "name": "Class",
+   "date": "2026-11-13",
+   "time": "1500-1700",
+   "kind": "lecture",
+   "weight": null,
+   "graded": false,
+   "note": "",
+   "location": "9-354"
+  },
+  {
+   "code": "14.003",
+   "name": "Exam 2",
+   "date": "2026-11-16",
+   "time": null,
+   "kind": "exam",
+   "weight": null,
+   "graded": true,
+   "note": "",
+   "location": ""
+  },
+  {
+   "code": "IDS.412",
+   "name": "Lecture",
+   "date": "2026-11-16",
+   "time": "1300-1430",
+   "kind": "lecture",
+   "weight": null,
+   "graded": false,
+   "note": "",
+   "location": "66-168"
+  },
+  {
+   "code": null,
+   "name": "DROP DATE",
+   "date": "2026-11-18",
+   "time": null,
+   "kind": "admin",
+   "weight": null,
+   "graded": false,
+   "note": "MIT Registrar.",
+   "location": ""
+  },
+  {
+   "code": "IDS.412",
+   "name": "Lecture",
+   "date": "2026-11-18",
+   "time": "1300-1430",
+   "kind": "lecture",
+   "weight": null,
+   "graded": false,
+   "note": "",
+   "location": "66-168"
+  },
+  {
+   "code": "16.S896",
+   "name": "Class",
+   "date": "2026-11-20",
+   "time": "1500-1700",
+   "kind": "lecture",
+   "weight": null,
+   "graded": false,
+   "note": "",
+   "location": "9-354"
+  },
+  {
+   "code": "16.S896",
+   "name": "Draft proposal",
+   "date": "2026-11-20",
+   "time": null,
+   "kind": "review",
+   "weight": 20,
+   "graded": true,
+   "note": "5-7 pages.",
+   "location": ""
+  },
+  {
+   "code": "IDS.412",
+   "name": "Final presentations I",
+   "date": "2026-11-30",
+   "time": null,
+   "kind": "presentation",
+   "weight": null,
+   "graded": true,
+   "note": "Weight null on purpose: the 25% final-presentation grade is shared with the 2026-12-02 session; see course grading breakdown.",
+   "location": "66-168"
+  },
+  {
+   "code": "IDS.412",
+   "name": "Lecture",
+   "date": "2026-11-30",
+   "time": "1300-1430",
+   "kind": "lecture",
+   "weight": null,
+   "graded": false,
+   "note": "",
+   "location": "66-168"
+  },
+  {
+   "code": "IDS.412",
+   "name": "Final presentations II",
+   "date": "2026-12-02",
+   "time": null,
+   "kind": "presentation",
+   "weight": null,
+   "graded": true,
+   "note": "Weight null on purpose: shares the 25% with 2026-11-30.",
+   "location": "66-168"
+  },
+  {
+   "code": "IDS.412",
+   "name": "Lecture",
+   "date": "2026-12-02",
+   "time": "1300-1430",
+   "kind": "lecture",
+   "weight": null,
+   "graded": false,
+   "note": "",
+   "location": "66-168"
+  },
+  {
+   "code": "14.003",
+   "name": "PS5 due",
+   "date": "2026-12-03",
+   "time": "2359",
+   "kind": "pset",
+   "weight": null,
+   "graded": true,
+   "note": "",
+   "location": ""
+  },
+  {
+   "code": "14.003",
+   "name": "Recitation",
+   "date": "2026-12-04",
+   "time": null,
+   "kind": "recitation",
+   "weight": null,
+   "graded": false,
+   "note": "",
+   "location": ""
+  },
+  {
+   "code": "16.S896",
+   "name": "A5 due",
+   "date": "2026-12-04",
+   "time": null,
+   "kind": "pset",
+   "weight": 5,
+   "graded": true,
+   "note": "",
+   "location": ""
+  },
+  {
+   "code": "16.S896",
+   "name": "Class",
+   "date": "2026-12-04",
+   "time": "1500-1700",
+   "kind": "lecture",
+   "weight": null,
+   "graded": false,
+   "note": "",
+   "location": "9-354"
+  },
+  {
+   "code": "16.S896",
+   "name": "Final presentation",
+   "date": "2026-12-04",
+   "time": null,
+   "kind": "presentation",
+   "weight": 20,
+   "graded": true,
+   "note": "External NASA/industry judges.",
+   "location": ""
+  },
+  {
+   "code": "IDS.412",
+   "name": "Lecture",
+   "date": "2026-12-07",
+   "time": "1300-1430",
+   "kind": "lecture",
+   "weight": null,
+   "graded": false,
+   "note": "",
+   "location": "66-168"
+  },
+  {
+   "code": "IDS.412",
+   "name": "Lecture",
+   "date": "2026-12-09",
+   "time": "1300-1430",
+   "kind": "lecture",
+   "weight": null,
+   "graded": false,
+   "note": "",
+   "location": "66-168"
+  },
+  {
+   "code": "IDS.412",
+   "name": "Paper 2 due",
+   "date": "2026-12-09",
+   "time": null,
+   "kind": "paper",
+   "weight": 25,
+   "graded": true,
+   "note": "25% = 15% written + 5% conference.",
+   "location": ""
+  },
+  {
+   "code": null,
+   "name": "Classes end",
+   "date": "2026-12-10",
+   "time": null,
+   "kind": "admin",
+   "weight": null,
+   "graded": false,
+   "note": "",
+   "location": ""
+  },
+  {
+   "code": null,
+   "name": "Advanced degree thesis title due",
+   "date": "2026-12-12",
+   "time": null,
+   "kind": "admin",
+   "weight": null,
+   "graded": false,
+   "note": "MIT Registrar; $85 late fee after this date.",
+   "location": ""
+  },
+  {
+   "code": null,
+   "name": "Final exam period begins",
+   "date": "2026-12-14",
+   "time": null,
+   "kind": "admin",
+   "weight": null,
+   "graded": false,
+   "note": "",
+   "location": ""
+  },
+  {
+   "code": null,
+   "name": "Final exam period ends",
+   "date": "2026-12-18",
+   "time": null,
+   "kind": "admin",
+   "weight": null,
+   "graded": false,
+   "note": "",
+   "location": ""
+  },
+  {
+   "code": "14.003",
+   "name": "Exam 3",
+   "date": null,
+   "time": null,
+   "kind": "exam",
+   "weight": null,
+   "graded": true,
+   "note": "DATE NOT PUBLISHED. The syllabus references Exam 3 (\"tested on Exam #3 not Exam #2\") but never dates it. No date has been invented \u2014 confirm with the instructor.",
+   "location": ""
+  }
+ ],
+ "no_class": [
+  {
+   "date": "2026-10-12",
+   "reason": "Indigenous Peoples' Day",
+   "code": null
+  },
+  {
+   "date": "2026-11-11",
+   "reason": "Veterans Day",
+   "code": null
+  },
+  {
+   "date": "2026-11-23",
+   "reason": "Thanksgiving",
+   "code": null
+  },
+  {
+   "date": "2026-11-25",
+   "reason": "Thanksgiving",
+   "code": null
+  },
+  {
+   "date": "2026-11-09",
+   "reason": "Project conference week \u2014 no class",
+   "code": "IDS.412"
+  },
+  {
+   "date": "2026-11-27",
+   "reason": "No recitation",
+   "code": "14.003"
+  },
+  {
+   "date": "2026-11-27",
+   "reason": "No class",
+   "code": "16.S896"
+  }
+ ],
+ "counts": {
+  "courses": 7,
+  "courses_with_syllabus": 3,
+  "courses_without_syllabus": 4,
+  "events": 82,
+  "graded_events": 21,
+  "ungraded_events": 61,
+  "dated_events": 81,
+  "undated_events": 1,
+  "exams": 4,
+  "by_kind": {
+   "admin": 6,
+   "exam": 4,
+   "lecture": 35,
+   "milestone": 9,
+   "paper": 2,
+   "presentation": 3,
+   "pset": 10,
+   "recitation": 11,
+   "review": 2
+  },
+  "no_class": 7
+ }
+}

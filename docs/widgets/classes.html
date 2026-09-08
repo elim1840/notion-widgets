@@ -3,287 +3,276 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Class Schedule</title>
+<title>Course Load</title>
 <style>
   :root{
-    --bg:#191919; --panel:#202020; --line:#2f2f2f; --hair:#252525;
-    --ink:#e9e9e7; --dim:#9b9a97; --faint:#6f6e6b;
-    --blue:#5b93d3; --gold:#c9a227; --red:#e06c6c; --green:#5fa87a; --purple:#9a6dd7;
+    --bg:#191919; --panel:#202020; --line:#2f2f2f; --hair:#262626;
+    --ink:#e9e9e7; --dim:#9b9a97; --faint:#6b6a67;
+    --blue:#5b93d3; --gold:#c9a227; --green:#5fa87a; --red:#e06c6c; --purple:#9a7fd0;
   }
   @media (prefers-color-scheme: light){
     :root{ --bg:#fff; --panel:#f7f7f5; --line:#e6e5e1; --hair:#efeeec;
            --ink:#37352f; --dim:#787774; --faint:#9b9a97; }
   }
   *{box-sizing:border-box;margin:0;padding:0}
-  body{background:var(--bg);color:var(--ink);padding:12px 14px;
+  body{background:var(--bg);color:var(--ink);padding:9px 12px 8px;
        font:13px/1.4 -apple-system,BlinkMacSystemFont,"Segoe UI",Inter,sans-serif;
        -webkit-font-smoothing:antialiased}
   .num{font-variant-numeric:tabular-nums;font-feature-settings:"tnum" 1}
 
   .hd{font-size:10px;color:var(--faint);text-transform:uppercase;letter-spacing:.09em;
       display:flex;justify-content:space-between;align-items:baseline;gap:8px;
-      padding-bottom:7px;border-bottom:1px solid var(--line)}
-  .hd .r{color:var(--dim);letter-spacing:.04em;text-transform:none;font-size:10.5px;
-         font-variant-numeric:tabular-nums}
+      padding-bottom:6px;border-bottom:1px solid var(--line)}
+  .hd .r{color:var(--dim);letter-spacing:.03em;text-transform:none;font-size:10.5px;
+         font-variant-numeric:tabular-nums;text-align:right}
 
-  /* Hero: the single soonest deadline. Deliberately the only large type on the
-     page so the eye lands on it before the per-class grid. */
-  .hero{margin-top:10px;background:var(--panel);border:1px solid var(--line);
-        border-left:3px solid var(--red);border-radius:7px;padding:9px 11px;
-        display:flex;gap:12px;align-items:center;flex-wrap:wrap}
-  .hero.soft{border-left-color:var(--blue)}
-  .hero .lb{font-size:9.5px;text-transform:uppercase;letter-spacing:.08em;
-            color:var(--faint);width:100%}
-  .hero .big{font-size:22px;font-weight:600;line-height:1;letter-spacing:-.01em;
-             font-variant-numeric:tabular-nums;color:var(--red)}
-  .hero.soft .big{color:var(--blue)}
-  .hero .big small{font-size:11px;font-weight:500;color:var(--dim);letter-spacing:0;
-                   margin-left:3px}
-  .hero .who{min-width:0;flex:1 1 160px}
-  .hero .who .nm{font-size:13px;font-weight:600;display:block;line-height:1.3;
-                 overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
-  .hero .who .sub{font-size:11px;color:var(--dim);margin-top:2px;display:block;
-                  font-variant-numeric:tabular-nums}
+  /* ---- compact term progress strip ---- */
+  .term{margin:6px 0 6px}
+  .term .tl{display:flex;justify-content:space-between;font-size:10px;color:var(--faint);
+            font-variant-numeric:tabular-nums;margin-bottom:3px}
+  .term .tl b{color:var(--dim);font-weight:500}
+  .track{position:relative;height:6px;border-radius:3px;background:var(--hair);
+         border:1px solid var(--line);overflow:hidden}
+  .track .fin{position:absolute;top:0;bottom:0;background:rgba(224,108,108,.28)}
+  .track .fill{position:absolute;left:0;top:0;bottom:0;background:var(--blue);opacity:.6}
+  .track .now{position:absolute;top:0;bottom:0;width:2px;margin-left:-1px;background:var(--gold)}
 
-  .board{display:grid;gap:10px;margin-top:10px;
-         grid-template-columns:repeat(auto-fit,minmax(190px,1fr))}
-  .col{background:var(--panel);border:1px solid var(--line);border-radius:7px;
-       padding:8px 9px;min-width:0}
-  .ct{display:flex;align-items:center;gap:6px;margin-bottom:5px}
-  .ct b{font-size:11.5px;font-weight:600;letter-spacing:.01em;
-        font-variant-numeric:tabular-nums}
-  .ct .n{font-size:9.5px;color:var(--faint);margin-left:auto;
-         font-variant-numeric:tabular-nums;white-space:nowrap}
-  .dot{width:6px;height:6px;border-radius:50%;flex:0 0 auto;background:var(--blue)}
-  .col.due .dot{background:var(--red)}
-  .col.due b{color:var(--red)}
-  /* winding-down class: kept visible but pushed back visually */
-  .col.wd{opacity:.5;background:transparent}
-  .col.wd .dot{background:var(--faint)}
-  .col.wd b{color:var(--dim)}
+  /* ---- course rows ---- */
+  .rows{display:flex;flex-direction:column;gap:3px}
+  .row{display:grid;grid-template-columns:74px minmax(0,1fr) auto;gap:9px;
+       align-items:center;background:var(--panel);border:1px solid var(--line);
+       border-left:3px solid var(--faint);border-radius:6px;padding:4px 8px;min-width:0}
+  .row .code{font-size:12px;font-weight:600;display:block;line-height:1.25;
+             overflow-wrap:anywhere;font-variant-numeric:tabular-nums}
+  .row .u{font-size:9.5px;color:var(--faint);font-variant-numeric:tabular-nums}
+  .mid{min-width:0}
+  .task{font-size:12.5px;line-height:1.3;display:block;overflow-wrap:anywhere;
+        word-break:normal;color:var(--ink)}
+  .sub{font-size:10.5px;line-height:1.3;color:var(--dim);display:block;margin-top:1px;
+       overflow-wrap:anywhere;font-variant-numeric:tabular-nums}
+  .sub em{font-style:normal;color:var(--faint)}
+  .right{display:flex;flex-direction:column;align-items:flex-end;gap:3px;flex:0 0 auto}
+  .d{font-size:15px;font-weight:600;line-height:1;letter-spacing:-.01em;
+     font-variant-numeric:tabular-nums;white-space:nowrap}
+  .d small{font-size:9.5px;font-weight:500;color:var(--dim);margin-left:2px;letter-spacing:0}
+  .w{font-size:10px;padding:1px 6px;border-radius:3px;line-height:1.4;white-space:nowrap;
+     font-variant-numeric:tabular-nums;background:rgba(155,154,151,.14);color:var(--dim)}
 
-  .it{display:block;padding:5px 0;border-bottom:1px solid var(--hair);min-width:0}
-  .it:last-child{border-bottom:0}
-  .it .nm{font-size:12px;line-height:1.3;display:block;
-          overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:var(--dim)}
-  .it.next .nm{color:var(--ink)}
-  .it.g .nm{font-weight:600}
-  .it .mt{display:flex;gap:4px;align-items:center;margin-top:3px;flex-wrap:wrap}
-  .chip{font-size:11px;padding:1px 7px;border-radius:3px;line-height:1.35;
-        white-space:nowrap;font-variant-numeric:tabular-nums}
-  .c-when{background:rgba(91,147,211,.16);color:var(--blue)}
-  .c-soon{background:rgba(224,108,108,.18);color:var(--red)}
-  .c-grad{background:rgba(224,108,108,.18);color:var(--red)}
-  .c-due {background:rgba(201,162,39,.18);color:var(--gold)}
-  .c-sess{background:rgba(155,154,151,.14);color:var(--faint)}
-  .c-cnt {background:rgba(95,168,122,.18);color:var(--green)}
-  .more{font-size:10.5px;color:var(--faint);padding-top:5px;display:block}
+  .k-red{border-left-color:var(--red)}      .k-red .d{color:var(--red)}
+  .k-red .w{background:rgba(224,108,108,.18);color:var(--red)}
+  .k-amber{border-left-color:var(--gold)}   .k-amber .d{color:var(--gold)}
+  .k-amber .w{background:rgba(201,162,39,.18);color:var(--gold)}
+  .k-calm{border-left-color:var(--blue)}    .k-calm .d{color:var(--dim)}
+  .k-unk{border-left-color:var(--purple);border-style:dashed;background:transparent}
+  .k-unk .d{color:var(--purple);font-size:13px}
+  .k-unk .task{color:var(--dim)}
+  .k-unk .w{background:rgba(154,127,208,.16);color:var(--purple)}
+  .k-none{border-left-color:var(--faint);border-style:dashed;background:transparent}
+  .k-none{padding-top:3px;padding-bottom:3px}
+  .k-none .code{color:var(--dim)} .k-none .task{color:var(--faint);font-style:italic;font-size:11.5px}
+  .k-none .sub{font-size:10px}
+  .k-none .d{color:var(--faint);font-size:12px;font-weight:500}
 
-  .ft{margin-top:10px;padding-top:7px;border-top:1px solid var(--line);
-      display:flex;gap:8px;align-items:center;flex-wrap:wrap;
-      font-size:10.5px;color:var(--faint)}
-  .ft .arch{background:rgba(155,154,151,.14);color:var(--dim);
-            padding:1px 7px;border-radius:3px;font-size:11px;
-            font-variant-numeric:tabular-nums}
-  .msg{color:var(--faint);font-style:italic;font-size:12px;padding:16px 0}
+  .sechd{font-size:9.5px;text-transform:uppercase;letter-spacing:.08em;color:var(--faint);
+         margin:7px 0 3px}
+
+  .ft{margin-top:6px;padding-top:5px;border-top:1px solid var(--line);
+      display:flex;gap:4px 9px;align-items:baseline;flex-wrap:wrap;
+      font-size:9.5px;color:var(--faint);line-height:1.4}
+  .ft .tag{background:rgba(155,154,151,.14);color:var(--dim);padding:1px 6px;
+           border-radius:3px;font-size:10px;font-variant-numeric:tabular-nums}
+  .ft .note{overflow-wrap:anywhere;flex:1 1 100%}
 </style>
 </head>
 <body>
-<div class="hd"><span>Class Schedule</span><span class="r num" id="hr"></span></div>
-<div id="out"><div class="msg">loading…</div></div>
+<div class="hd"><span>Course Load · Fall 2026</span><span class="r" id="hr"></span></div>
+<div class="term" id="term"></div>
+<div id="out"></div>
 
 <script>
 (function(){
   var esc=function(s){return String(s==null?'':s).replace(/[<>&"]/g,function(c){
     return {'<':'&lt;','>':'&gt;','&':'&amp;','"':'&quot;'}[c];});};
 
-  /* ---- date handling ------------------------------------------------------
-     Notion emits either "2026-09-09T10:30:00.000-04:00" or bare "2026-06-10".
-     new Date() on the first form shifts the calendar day for anyone west of
-     the offset, so the Y-M-D and H:M are pulled straight off the string by
-     regex and day-maths is done on a noon-anchored local Date (immune to DST).
-  -------------------------------------------------------------------------- */
-  var ISO=/^(\d{4})-(\d{2})-(\d{2})(?:[T ](\d{2}):(\d{2}))?/;
-  function parse(s){
-    var m=ISO.exec(String(s||'').trim());
-    if(!m) return null;
-    return {ymd:m[1]+'-'+m[2]+'-'+m[3],
-            hm:(m[4]!=null? m[4]+m[5] : null),      // "1030" — 24h, zero-padded
-            d:new Date(m[1]+'-'+m[2]+'-'+m[3]+'T12:00:00')};
-  }
-  function todayNoon(){                              // browser clock, not hardcoded
-    var n=new Date();
-    return new Date(n.getFullYear(),n.getMonth(),n.getDate(),12,0,0,0);
-  }
-  var DAY=864e5;
-  function daysFrom(a,b){ return Math.round((b-a)/DAY); }
+  /* ---- dates: noon-anchored local Date so no timezone can shift the day ---- */
+  var ISO=/^(\d{4})-(\d{2})-(\d{2})/;
+  function D(s){var m=ISO.exec(String(s||''));return m?new Date(m[1]+'-'+m[2]+'-'+m[3]+'T12:00:00'):null;}
+  function todayNoon(){var n=new Date();
+    return new Date(n.getFullYear(),n.getMonth(),n.getDate(),12,0,0,0);}
+  var DAY=864e5, dd=function(a,b){return Math.round((b-a)/DAY);};
   var MON=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
   var WD=['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
-  function fmt(p){ return WD[p.d.getDay()]+' '+String(p.d.getDate())+' '+MON[p.d.getMonth()]; }
-  function rel(n){
-    if(n===0) return 'today';
-    if(n===1) return 'tomorrow';
-    if(n<0)   return Math.abs(n)+'d overdue';
-    return 'in '+n+'d';
+  function fmt(d){return WD[d.getDay()]+' '+String(d.getDate()).padStart(2,'0')+' '+MON[d.getMonth()];}
+
+  /* =====================================================================
+     GRADED EVENTS — transcribed by hand from the actual Fall 2026 syllabus
+     PDFs on 2026-09-08. These do NOT exist in Notion and no data feed
+     supplies them, so they are hardcoded here on purpose. Times are 24h.
+     Anything the syllabus does not state is left null and rendered as
+     unknown — never guessed.
+     ===================================================================== */
+  var COURSES=[
+    {code:'14.003', units:12, title:'Microeconomic Theory and Public Policy',
+     src:'syllabus', wnote:'syllabus states no percentage breakdown',
+     ev:[
+       {d:'2026-09-24', hm:'2359', t:'PS1 due'},
+       {d:'2026-10-07', hm:'2359', t:'PS2 due'},
+       {d:'2026-10-13', t:'Exam 1', note:'Tue running a Monday schedule'},
+       {d:'2026-10-29', hm:'2359', t:'PS3 due'},
+       {d:'2026-11-12', hm:'2359', t:'PS4 due'},
+       {d:'2026-11-16', t:'Exam 2'},
+       {d:'2026-12-03', hm:'2359', t:'PS5 due'},
+       {d:null, t:'Exam 3', note:'syllabus names it but gives NO date; finals period is 14\u201318 Dec'}
+     ]},
+    {code:'IDS.412', units:12, title:'Science, Technology and Public Policy (17.310)',
+     src:'syllabus', meta:'Mon+Wed 1300\u20131430 \u00b7 66-168 \u00b7 Selin',
+     wnote:'participation 10% \u00b7 P1 20% \u00b7 midterm 20% \u00b7 P2 25% \u00b7 final pres 25%',
+     ev:[
+       {d:'2026-10-26', t:'Paper 1 due', w:'20%'},
+       {d:'2026-11-04', t:'Midterm, in class', w:'20%', note:'closed book, one 8.5\u00d711 sheet both sides'},
+       {d:'2026-11-30', t:'Final presentations (day 1)', w:'25%'},
+       {d:'2026-12-02', t:'Final presentations (day 2)', note:'same 25% as day 1'},
+       {d:'2026-12-09', t:'Paper 2 due', w:'25%'}
+     ]},
+    {code:'16.S896', units:12, title:'Advanced Special Subject in Aerospace Systems',
+     src:'syllabus', meta:'Fri 1500\u20131700 \u00b7 9-354 \u00b7 Lordos',
+     wnote:'milestones 60% \u00b7 framework assignments 25% (5% ea) \u00b7 notebook + participation 15%',
+     ev:[
+       {d:'2026-09-18', t:'Skills survey due', note:'gates team assignment (teams final 22 Sep)'},
+       {d:'2026-10-09', t:'A1 due', w:'5%'},
+       {d:'2026-10-23', t:'A2 due', w:'5%'},
+       {d:'2026-11-06', t:'A3 due + Concept review (internal panel)', w:'15%'},
+       {d:'2026-11-13', t:'A4 due', w:'5%'},
+       {d:'2026-11-20', t:'Draft proposal, 5\u20137 pages', w:'20%'},
+       {d:'2026-12-04', t:'A5 due + FINAL presentation (external NASA/industry judges)', w:'20%'}
+     ]},
+    {code:'IDS.THG', units:24, title:'Graduate Thesis',
+     src:'known', wnote:'degree requirement',
+     ev:[{d:'2027-01-15', t:'Thesis due', w:'degree'}]},
+    /* No syllabus exists on Canvas for these three. Rendered honestly as
+       unknown rather than as calm/on-track. Where Notion holds scheduled
+       items (16.842 has 19), the next one is shown but clearly labelled as
+       a Notion calendar item, not a graded syllabus deadline. */
+    {code:'16.842', units:6, title:'Fundamentals of Systems Engineering', src:'none',
+     nonote:'not in Canvas at all \u00b7 Notion has 19 items (10 sessions, 6 assignments, oral exam, final pres) with no dates or weights'},
+    {code:'16.990', units:9, title:'Leading Creative Teams', src:'none',
+     nonote:'nothing on Canvas \u00b7 graded work, if any, is unknown'},
+    {code:'16.987', units:2, title:'First-Year Graduate Student Seminar', src:'none',
+     nonote:'nothing on Canvas \u00b7 graded work, if any, is unknown'}
+  ];
+  var ARCHIVED={code:'24.134', units:6, title:'Experiential Ethics', note:'finished'};
+
+  var t0=todayNoon();
+  var TOTAL_UNITS=COURSES.reduce(function(a,c){return a+c.units;},0)+ARCHIVED.units;
+
+  /* ---- term progress: classes 09 Sep -> 10 Dec, finals 14-18 Dec ---- */
+  (function(){
+    var A=D('2026-09-09'), CE=D('2026-12-10'), FA=D('2026-12-14'), FB=D('2026-12-18');
+    var span=dd(A,FB); var el=dd(A,t0);
+    var pc=function(d){return Math.max(0,Math.min(100,dd(A,d)/span*100));};
+    var prog=Math.max(0,Math.min(100,el/span*100));
+    var lbl;
+    if(el<0)      lbl='term starts in <b>'+(-el)+'</b> d';
+    else if(t0>FB)lbl='term complete';
+    else          lbl='day <b>'+(el+1)+'</b> of '+(span+1)+' \u00b7 <b>'+prog.toFixed(0)+'%</b>'+
+                      ' \u00b7 <b>'+dd(t0,CE)+'</b> d to classes end';
+    document.getElementById('term').innerHTML=
+      '<div class="tl"><span>'+lbl+'</span><span>09 Sep \u2192 finals 14\u201318 Dec</span></div>'+
+      '<div class="track">'+
+        '<div class="fin" style="left:'+pc(FA)+'%;right:'+(100-pc(FB))+'%"></div>'+
+        '<div class="fill" style="width:'+pc(t0)+'%"></div>'+
+        '<div class="now" style="left:'+pc(t0)+'%"></div>'+
+      '</div>';
+  })();
+
+  /* ---- pick each course's next graded thing ---- */
+  COURSES.forEach(function(c){
+    c.next=null; c.after=null; c.state='none';
+    if(!c.ev) return;
+    var dated=c.ev.filter(function(e){return e.d;}).map(function(e){
+      var o={}; for(var k in e) o[k]=e[k];
+      o.dt=D(e.d); o.days=dd(t0,o.dt); return o;});
+    dated.sort(function(a,b){return a.dt-b.dt;});
+    var ahead=dated.filter(function(e){return e.days>=0;});
+    var undated=c.ev.filter(function(e){return !e.d;});
+    c.past=dated.length-ahead.length;
+    c.remaining=ahead.length+undated.length;
+    if(ahead.length){ c.next=ahead[0]; c.after=ahead[1]||undated[0]||null; c.state='dated'; }
+    else if(undated.length){ c.next=undated[0]; c.state='undated'; }
+    else { c.state='done'; }
+  });
+
+  /* Sort by urgency, not alphabetically: soonest dated graded event first.
+     Courses whose only remaining item has no date sit after the dated ones;
+     courses with no syllabus at all go into a separate flagged block last. */
+  var known=COURSES.filter(function(c){return c.src!=='none';});
+  var unknown=COURSES.filter(function(c){return c.src==='none';});
+  known.sort(function(a,b){
+    var ka=a.state==='dated'?a.next.days:(a.state==='undated'?9e5:9e6);
+    var kb=b.state==='dated'?b.next.days:(b.state==='undated'?9e5:9e6);
+    return ka-kb;
+  });
+
+  function urgencyClass(c){
+    if(c.state==='undated') return 'k-unk';
+    if(c.state!=='dated')   return 'k-none';
+    if(c.next.days<=3)  return 'k-red';
+    if(c.next.days<=10) return 'k-amber';
+    return 'k-calm';
+  }
+  function daysCell(c){
+    if(c.state==='undated') return '<span class="d">?<small>date unknown</small></span>';
+    if(c.state!=='dated')   return '<span class="d">\u2014</span>';
+    var n=c.next.days;
+    if(n===0) return '<span class="d">TODAY</span>';
+    return '<span class="d num">'+n+'<small>'+(n===1?'day':'days')+'</small></span>';
   }
 
-  /* ---- item classification ------------------------------------------------
-     `type` is the authoritative field but is empty for every row in the current
-     export, so the name is the fallback. Three kinds, visually distinct:
-       graded   — Homework/Exam/Quiz/Presentation/Pset  (red, bold)
-       due      — a non-graded hard deadline (form, submission)  (gold)
-       session  — routine lecture/recitation/seminar  (faint)
-  -------------------------------------------------------------------------- */
-  var RE_GRADED=/(\[hw\]|homework|exam|quiz|midterm|p-?set|problem set|presentation|assignment|essay|paper due|project proposal|case study)/i;
-  var RE_DUE   =/(\bdue\b|submit|sign ?up|deadline|form\b)/i;
-  var RE_SESS  =/(lecture|recitation|seminar|section|lab\b|office hours|workshop|showcase|week \d)/i;
-  function kind(r){
-    var t=(r.type||'')+' '+(r.name||'');
-    if(RE_GRADED.test(t)) return 'graded';
-    if(RE_SESS.test(t) && !RE_DUE.test(t)) return 'session';
-    if(RE_DUE.test(t)) return 'due';
-    return 'session';
-  }
-  var KIND_CHIP={graded:['c-grad','graded'],due:['c-due','due'],session:['c-sess','class']};
-
-  function row(r,isNext){
-    var k=KIND_CHIP[r.kind];
-    var when=fmt(r.p)+(r.p.hm?' '+r.p.hm:'');
-    var mt='<span class="chip '+(r.days<=1?'c-soon':'c-when')+'">'+esc(when)+
-           ' · '+rel(r.days)+'</span>'+
-           '<span class="chip '+k[0]+'">'+k[1]+'</span>';
-    return '<div class="it'+(isNext?' next':'')+(r.kind==='graded'?' g':'')+'">'+
-           '<span class="nm" title="'+esc(r.name)+'">'+esc(r.name)+'</span>'+
-           '<span class="mt">'+mt+'</span></div>';
-  }
-
-  function render(rows){
-    var out=document.getElementById('out');
-    if(!rows.length){
-      document.getElementById('hr').textContent='0 rows';
-      out.innerHTML='<div class="msg">No class rows in spokes.json.</div>';return;}
-
-    var t0=todayNoon(), undated=0;
-    rows.forEach(function(r){
-      r.p=parse(r.date);
-      r.days=r.p? daysFrom(t0,r.p.d) : null;
-      r.kind=kind(r);
-      if(!r.p) undated++;
-    });
-
-    // Group by code, sorted chronologically inside each group.
-    var byCode={}, order=[];
-    rows.forEach(function(r){
-      var c=r.code||'(no code)';
-      if(!byCode[c]){byCode[c]=[];order.push(c);}
-      byCode[c].push(r);
-    });
-    order.sort();
-
-    // A class is "finished" when nothing in it is still ahead of today, and
-    // "winding down" when it is overwhelmingly in the past with only a stray
-    // row left (24.134 today: 28 past, 1 future showcase). Both states are
-    // derived from the data, so no course number is hardcoded and any class
-    // demotes itself the same way when it ends.
-    var live=[], wind=[], done=[], totalAhead=0, totalGraded=0;
-    order.forEach(function(c){
-      var g=byCode[c];
-      g.sort(function(a,b){
-        if(!a.p) return 1; if(!b.p) return -1; return a.p.d-b.p.d;});
-      var ahead=g.filter(function(r){return r.p && r.days>=0;});
-      var over =g.filter(function(r){return r.p && r.days<0;});
-      var dated=ahead.length+over.length;
-      var rec={code:c,all:g,ahead:ahead,over:over.length,und:g.length-dated};
-      if(!ahead.length){ done.push(rec); return; }
-      // >=75% of dated rows already past AND <=2 rows left => winding down
-      if(dated>=4 && over.length/dated>=0.75 && ahead.length<=2){ wind.push(rec); return; }
-      totalAhead+=ahead.length;
-      totalGraded+=ahead.filter(function(r){return r.kind==='graded';}).length;
-      live.push(rec);
-    });
-    live.sort(function(a,b){ return a.ahead[0].p.d-b.ahead[0].p.d; });
-    wind.sort(function(a,b){ return a.ahead[0].p.d-b.ahead[0].p.d; });
-
-    document.getElementById('hr').textContent=
-      rows.length+' rows · '+live.length+' active class'+(live.length===1?'':'es')+
-      ' · '+totalAhead+' ahead'+
-      ((done.length+wind.length)?' · '+(done.length+wind.length)+' finished':'');
-
-    var html='';
-
-    /* Hero — soonest hard deadline (graded first, then any dated item). */
-    var pool=[];
-    live.forEach(function(rec){ pool=pool.concat(rec.ahead); });
-    pool.sort(function(a,b){return a.p.d-b.p.d;});
-    var hard=pool.filter(function(r){return r.kind!=='session';});
-    var hero=hard[0]||pool[0];
-    if(hero){
-      var soft=!hard[0];
-      html+='<div class="hero'+(soft?' soft':'')+'">'+
-            '<span class="lb">'+(soft?'Next item up (no graded work scheduled)':'Soonest deadline')+'</span>'+
-            '<span class="big num">'+(hero.days===0?'TODAY':hero.days===1?'1<small>day</small>':
-                hero.days+'<small>days</small>')+'</span>'+
-            '<span class="who"><span class="nm" title="'+esc(hero.name)+'">'+esc(hero.name)+'</span>'+
-            '<span class="sub num">'+esc(hero.code)+' · '+fmt(hero.p)+
-              (hero.p.hm?' · '+hero.p.hm:'')+'</span></span>'+
-            '</div>';
-    }
-
-    /* Per-class columns. Winding-down classes render last and dimmed. */
-    if(!live.length && !wind.length){
-      html+='<div class="msg">Nothing upcoming — every class row is in the past.</div>';
+  function rowHTML(c){
+    var k=urgencyClass(c), mid;
+    if(c.state==='dated'){
+      var e=c.next;
+      var und=(c.ev||[]).filter(function(x){return !x.d;});
+      mid='<span class="task">'+esc(e.t)+'</span>'+
+          '<span class="sub num">'+fmt(e.dt)+(e.hm?' '+e.hm:'')+
+            (e.note?' \u00b7 <em>'+esc(e.note)+'</em>':'')+
+            (c.after&&c.after.d?' \u00b7 then '+esc(c.after.t)+' '+String(D(c.after.d).getDate()).padStart(2,'0')+' '+MON[D(c.after.d).getMonth()]:'')+
+            (und.length?' \u00b7 <em>'+esc(und[0].t)+': no date in syllabus</em>':'')+
+          '</span>';
+    }else if(c.state==='undated'){
+      mid='<span class="task">'+esc(c.next.t)+'</span>'+
+          '<span class="sub"><em>'+esc(c.next.note||'no date given in the syllabus')+'</em></span>';
     }else{
-      html+='<div class="board">';
-      live.concat(wind).forEach(function(rec){
-        var down=wind.indexOf(rec)>=0;
-        var nx=rec.ahead[0], urgent=!down && nx.days<=1 && nx.kind!=='session';
-        var g=rec.ahead.filter(function(r){return r.kind==='graded';}).length;
-        html+='<div class="col'+(urgent?' due':'')+(down?' wd':'')+'">'+
-              '<div class="ct"><i class="dot"></i><b class="num">'+esc(rec.code)+'</b>'+
-              '<span class="n">'+(down?'wrapping up · ':'')+rec.ahead.length+' left'+
-                (g?' · '+g+' graded':'')+'</span></div>';
-        rec.ahead.slice(0,3).forEach(function(r,i){ html+=row(r,i===0 && !down); });
-        var extra=rec.ahead.length-3;
-        var tail=[];
-        if(extra>0) tail.push('+'+extra+' more');
-        if(rec.over) tail.push(rec.over+' past');
-        if(rec.und)  tail.push(rec.und+' undated');
-        if(tail.length) html+='<span class="more">'+tail.join(' · ')+'</span>';
-        html+='</div>';
-      });
-      html+='</div>';
+      mid='<span class="task">'+esc(c.title)+' \u2014 no syllabus posted</span>'+
+          '<span class="sub"><em>'+esc(c.nonote||'')+'</em></span>';
     }
-
-    /* Finished classes are a de-emphasised footer count, never a column. */
-    html+='<div class="ft">';
-    if(done.length){
-      done.forEach(function(rec){
-        html+='<span class="arch">'+esc(rec.code)+' finished · '+rec.all.length+' rows</span>';
-      });
-    }
-    html+='<span class="num">'+totalGraded+' graded item'+(totalGraded===1?'':'s')+' ahead</span>';
-    if(undated) html+='<span class="num">'+undated+' row'+(undated===1?'':'s')+' with no date</span>';
-    html+='</div>';
-
-    out.innerHTML=html;
+    var w = (c.state==='dated'&&c.next.w) ? c.next.w
+          : (c.state==='dated') ? 'weight n/s'
+          : (c.state==='undated') ? 'weight n/s' : 'unknown';
+    return '<div class="row '+k+'">'+
+      '<div><b class="code num">'+esc(c.code)+'</b><span class="u">'+c.units+'u'+
+        (c.remaining?' \u00b7 '+c.remaining+' left':'')+'</span></div>'+
+      '<div class="mid">'+mid+'</div>'+
+      '<div class="right">'+daysCell(c)+'<span class="w">'+esc(w)+'</span></div>'+
+    '</div>';
   }
 
-  fetch('../data/spokes.json',{cache:'no-store'})
-    .then(function(r){ if(!r.ok) throw new Error('HTTP '+r.status); return r.json(); })
-    .then(function(d){
-      var rows=((d&&d.classes)||[])
-        .filter(function(r){return r&&r.name&&String(r.name).trim();})
-        .map(function(r){
-          return {name:String(r.name).trim(), code:(r.code||'').trim(),
-                  date:(r.date||'').trim(),   due:(r.due||'').trim(),
-                  status:(r.status||'').trim(), type:(r.type||'').trim()};
-        });
-      render(rows);
-    })
-    .catch(function(e){
-      document.getElementById('out').innerHTML=
-        '<div class="msg">Could not load spokes.json — '+esc(e.message)+'</div>';
-    });
+  var html='<div class="rows">'+known.map(rowHTML).join('')+'</div>';
+  html+='<div class="sechd">No syllabus \u2014 workload genuinely unknown, not zero</div>'+
+        '<div class="rows">'+unknown.map(rowHTML).join('')+'</div>';
+
+  var urgent=known.filter(function(c){return c.state==='dated'&&c.next.days<=10;}).length;
+  document.getElementById('hr').innerHTML=
+    COURSES.length+' active \u00b7 '+TOTAL_UNITS+'u \u00b7 '+urgent+' inside 10 days';
+
+  html+='<div class="ft">'+
+    '<span class="tag">'+esc(ARCHIVED.code)+' '+esc(ARCHIVED.title)+' \u00b7 finished</span>'+
+    '<span class="tag num">'+unknown.length+'/7 have no syllabus</span>'+
+    '<span class="note">From the syllabus PDFs (08 Sep 2026), not Notion. No class 12 Oct \u00b7 9 Nov (IDS.412) \u00b7 '+
+    '11 Nov \u00b7 23+25 Nov \u00b7 27 Nov (16.S896). Thursdays free all term.</span>'+
+  '</div>';
+
+  document.getElementById('out').innerHTML=html;
 })();
 </script>
 </body>

@@ -1,129 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Now Bar</title>
-<style>
-:root{
-  --bg:#191919; --panel:#202020; --line:#2f2f2f; --hair:#262626;
-  --ink:#e9e9e7; --dim:#9b9a97; --faint:#6b6a67;
-  --blue:#5b93d3; --gold:#c9a227; --green:#5fa87a; --red:#e06c6c; --amber:#c9a227;
-}
-@media (prefers-color-scheme: light){
-  :root{
-    --bg:#fff; --panel:#f7f7f5; --line:#e6e5e1; --hair:#ecebe7;
-    --ink:#37352f; --dim:#787774; --faint:#9b9a97;
-  }
-}
-*{box-sizing:border-box;margin:0;padding:0}
-html,body{width:100%}
-body{
-  background:var(--bg); color:var(--ink);
-  font:13px/1.35 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Inter,sans-serif;
-  font-variant-numeric:tabular-nums;
-  -webkit-font-smoothing:antialiased;
-  padding:0;
-}
-.bar{
-  position:relative;
-  display:flex; align-items:stretch;
-  background:var(--panel);
-  border:1px solid var(--line); border-radius:4px;
-  min-height:126px;
-  overflow:hidden;
-}
-/* left accent: the state colour, readable from across the room */
-.bar::before{
-  content:""; position:absolute; left:0; top:0; bottom:0; width:5px;
-  background:var(--accent,var(--faint));
-}
-.cell{
-  display:flex; flex-direction:column; justify-content:center;
-  padding:13px 18px 20px; min-width:0;
-  border-right:1px solid var(--hair);
-}
-.cell:last-child{border-right:0}
-.lab{
-  font-size:9px; letter-spacing:.16em; text-transform:uppercase;
-  color:var(--faint); font-weight:600; margin-bottom:6px;
-}
-
-/* --- clock --- */
-.c-clock{flex:0 0 auto; padding-left:23px; align-items:flex-start}
-.clock{
-  font-size:46px; line-height:1; font-weight:300;
-  font-variant-numeric:tabular-nums; letter-spacing:.01em;
-  display:flex; align-items:baseline;
-}
-.clock .sec{font-size:18px; font-weight:400; color:var(--dim); margin-left:7px}
-.dateline{font-size:10px; letter-spacing:.14em; color:var(--faint); margin-top:8px; text-transform:uppercase}
-
-/* --- state (hero) --- */
-.c-state{flex:1 1 58%; gap:0}
-.chip{
-  display:inline-flex; align-items:center; gap:7px;
-  font-size:10px; font-weight:700; letter-spacing:.16em; text-transform:uppercase;
-  color:var(--accent,var(--dim)); margin-bottom:7px;
-}
-.dot{width:8px;height:8px;border-radius:50%;background:var(--accent,var(--dim));flex:0 0 auto}
-.name{
-  font-size:21px; line-height:1.22; font-weight:500; color:var(--ink);
-  overflow-wrap:break-word;
-}
-.name.sm{font-size:17px}
-.name.xs{font-size:15px; line-height:1.28}
-.meta{
-  margin-top:7px; font-size:12.5px; color:var(--dim);
-  display:flex; flex-wrap:wrap; align-items:baseline; gap:6px 10px;
-}
-.meta b{color:var(--ink); font-weight:600}
-.meta .rm{color:var(--gold); font-weight:600}
-.left{font-weight:700; color:var(--accent,var(--ink))}
-
-/* --- next --- */
-.c-next{flex:0 1 30%; min-width:190px}
-.cd{font-size:30px; line-height:1; font-weight:400; color:var(--ink); font-variant-numeric:tabular-nums}
-.cd.warn{color:var(--amber)}
-.nname{margin-top:8px; font-size:13px; line-height:1.3; color:var(--dim); overflow-wrap:break-word}
-.nmeta{margin-top:5px; font-size:11.5px; color:var(--faint)}
-.nmeta .rm{color:var(--gold)}
-
-/* --- tally --- */
-.c-tally{flex:0 0 auto; align-items:flex-start; gap:9px; padding-right:20px}
-.tally{display:flex; flex-direction:column; gap:8px}
-.trow{display:flex; align-items:baseline; gap:8px; font-size:11px; letter-spacing:.06em; color:var(--faint); text-transform:uppercase}
-.tnum{font-size:19px; line-height:1; font-weight:600; color:var(--ink); font-variant-numeric:tabular-nums; min-width:22px; text-align:right}
-.tnum.red{color:var(--red)}
-.tnum.green{color:var(--green)}
-
-/* --- day rail --- */
-.rail{position:absolute; left:0; right:0; bottom:0; height:14px; background:transparent}
-.railtrack{position:absolute; left:0; right:0; bottom:0; height:3px; background:var(--hair)}
-.railfill{position:absolute; left:0; bottom:0; height:3px; background:var(--line)}
-.tick{position:absolute; bottom:0; width:2px; height:8px; background:var(--faint); border-radius:1px; transform:translateX(-1px)}
-.tick.done{background:var(--green); opacity:.55}
-.tick.miss{background:var(--red)}
-.now{position:absolute; bottom:0; width:2px; height:14px; background:var(--accent,var(--blue)); transform:translateX(-1px)}
-.railend{position:absolute; bottom:4px; font-size:8.5px; letter-spacing:.12em; color:var(--faint)}
-.railend.l{left:23px} .railend.r{right:8px}
-
-.err{padding:16px 22px; color:var(--red); font-size:13px}
-@media (max-width:900px){ .c-tally{display:none} }
-@media (max-width:760px){
-  .clock{font-size:36px}
-  .c-clock{padding-left:20px}
-  .name{font-size:18px} .name.sm{font-size:16px} .name.xs{font-size:14px}
-  .c-next{min-width:150px; flex-basis:34%}
-  .cd{font-size:25px}
-  .nname{font-size:12px}
-}
-</style>
-</head>
-<body>
-<div class="bar" id="bar"><div class="cell c-clock"><div class="clock" id="clock">--:--</div></div></div>
-
-<script>
 "use strict";
 var DATA=null, LONG=["SUN","MON","TUE","WED","THU","FRI","SAT"],
     MON=["JAN","FEB","MAR","APR","MAY","JUN","JUL","AUG","SEP","OCT","NOV","DEC"];
@@ -260,20 +134,7 @@ function compute(now, sched){
 
 /* ---------- render ---------- */
 function esc(s){return String(s).replace(/[&<>]/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;"}[c];});}
-/* Some Notion titles are whole pasted paragraphs (200+ chars). A strip cannot
-   show those. Cut at a sentence break if there is one, else at a WORD boundary
-   — never mid-word, never a CSS one-line ellipsis. Remainder marked with an
-   ellipsis character so it is obvious there is more, and it still wraps. */
-function clampName(s,max){
-  s=String(s).replace(/\s+/g," ").trim();
-  if(s.length<=max) return s;
-  var stop=s.slice(0,max+1).search(/[.!?](\s|$)/);
-  if(stop>=Math.floor(max*0.45)) return s.slice(0,stop+1);
-  var cut=s.lastIndexOf(" ",max);
-  if(cut<Math.floor(max*0.5)) cut=max;
-  return s.slice(0,cut).replace(/[,;:\-\u2014]$/,"")+"\u2026";
-}
-function nameCls(s){var n=s.length; return n>78?"name xs":(n>44?"name sm":"name");}
+function nameCls(s){var n=s.length; return n>110?"name xs":(n>46?"name sm":"name");}
 
 var RAIL_A=6, RAIL_B=24; /* 0600 -> 2400 */
 function railPct(d){
@@ -286,6 +147,7 @@ function render(){
   if(!DATA){return;}
   var now=new Date();
   var sched=buildTimed(DATA.today_items||[]);
+  var allday=(DATA.today_items||[]).filter(function(i){return !parseLocal(i.date);});
   var st=compute(now,sched);
 
   var h=[];
@@ -301,9 +163,8 @@ function render(){
     if(x.k==="left"||x.k==="over"||x.k==="in"||x.k==="gap") m.push('<span class="left">'+esc(x.v)+'</span>');
     else m.push('<b>'+esc(x.v)+'</b>');
   });
-  var head=clampName(st.headline,110);
   h.push('<div class="cell c-state"><div class="chip"><span class="dot"></span>'+esc(st.chip)+'</div>'+
-    '<div class="'+nameCls(head)+'">'+esc(head)+'</div>'+
+    '<div class="'+nameCls(st.headline)+'">'+esc(st.headline)+'</div>'+
     (m.length?'<div class="meta">'+m.join("")+'</div>':'')+'</div>');
 
   /* next */
@@ -312,7 +173,7 @@ function render(){
     var rng=hhmm(st.next.start)+(st.next.hasEnd?"\u2013"+hhmm(st.next.end):"");
     h.push('<div class="cell c-next"><div class="lab">Next</div>'+
       '<div class="cd'+(gap<15*60000?" warn":"")+'">in '+dur(gap)+'</div>'+
-      '<div class="nname">'+esc(clampName(st.next.name,64))+'</div>'+
+      '<div class="nname">'+esc(st.next.name)+'</div>'+
       '<div class="nmeta">'+rng+(st.next.room?' \u00b7 <span class="rm">'+esc(st.next.room)+'</span>':"")+'</div></div>');
   } else {
     h.push('<div class="cell c-next"><div class="lab">Next</div>'+
@@ -321,12 +182,11 @@ function render(){
   }
 
   /* tally */
-  var all=DATA.today_items||[];
-  var doneN=all.filter(function(i){return i.done;}).length;
-  var openN=all.length-doneN;
+  var doneN=(DATA.today_items||[]).filter(function(i){return i.done;}).length;
   h.push('<div class="cell c-tally"><div class="tally">'+
-    '<div class="trow"><span class="tnum">'+openN+'</span>open today</div>'+
-    '<div class="trow"><span class="tnum green">'+doneN+'</span>done of '+all.length+'</div>'+
+    '<div class="trow"><span class="tnum'+(st.missed?" red":"")+'">'+st.missed+'</span>past due</div>'+
+    '<div class="trow"><span class="tnum green">'+doneN+'</span>done of '+(DATA.today_items||[]).length+'</div>'+
+    (allday.length?'<div class="trow"><span class="tnum">'+allday.length+'</span>all-day</div>':'')+
     '</div></div>');
 
   /* rail */
@@ -362,6 +222,3 @@ fetch("../data/tasks.json",{cache:"no-store"})
   .catch(function(e){
     document.getElementById("bar").innerHTML='<div class="err">Data unavailable \u2014 '+esc(e.message)+'</div>';
   });
-</script>
-</body>
-</html>

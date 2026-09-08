@@ -6,9 +6,9 @@
 <title>Triage</title>
 <style>
   :root{
-    --bg:#191919; --panel:#202020; --line:#2f2f2f; --hair:#252525;
-    --ink:#e9e9e7; --dim:#9b9a97; --faint:#6f6e6b;
-    --blue:#5b93d3; --gold:#c9a227; --red:#e06c6c; --green:#5fa87a; --purple:#9a6dd7;
+    --bg:#191919; --panel:#202020; --line:#2f2f2f; --hair:#262626;
+    --ink:#e9e9e7; --dim:#9b9a97; --faint:#6b6a67;
+    --blue:#5b93d3; --gold:#c9a227; --green:#5fa87a; --red:#e06c6c;
   }
   @media (prefers-color-scheme: light){
     :root{ --bg:#fff; --panel:#f7f7f5; --line:#e6e5e1; --hair:#efeeec;
@@ -23,72 +23,71 @@
 
   .hd{display:flex;align-items:baseline;justify-content:space-between;
       font-size:10px;color:var(--faint);text-transform:uppercase;letter-spacing:.09em;
-      padding-bottom:7px;border-bottom:1px solid var(--line);flex:0 0 auto}
+      padding-bottom:6px;border-bottom:1px solid var(--line);flex:0 0 auto}
   .hd b{font-size:10px;font-weight:600;color:var(--dim);letter-spacing:.09em}
 
-  .tiles{display:grid;grid-template-columns:repeat(3,1fr);gap:7px;flex:0 0 auto}
-  .tile{background:var(--panel);border:1px solid var(--line);border-radius:7px;
-        padding:7px 8px 6px;min-width:0;overflow:hidden}
-  .tile .n{font-size:24px;font-weight:600;letter-spacing:-.035em;line-height:1;
-           font-variant-numeric:tabular-nums}
-  .tile .n small{font-size:13px;font-weight:500;color:var(--faint);letter-spacing:-.01em}
-  .tile .k{font-size:9px;color:var(--faint);text-transform:uppercase;letter-spacing:.07em;
-           margin-top:4px;display:block;white-space:nowrap;overflow:hidden;
-           text-overflow:ellipsis}
-  .tile .s{font-size:10px;color:var(--dim);margin-top:1px;display:block;
-           white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-  .red .n{color:var(--red)} .green .n{color:var(--green)} .gold .n{color:var(--gold)}
-
-  .barwrap{flex:0 0 auto}
-  .bar{height:8px;border-radius:4px;overflow:hidden;display:flex;background:var(--hair)}
-  .bar i{display:block;height:100%;min-width:3px}
-  .lg{display:flex;flex-wrap:wrap;gap:10px;margin-top:6px;
-      font-size:10px;color:var(--dim)}
-  .lg span{display:inline-flex;align-items:center;gap:4px;white-space:nowrap}
-  .sw{width:7px;height:7px;border-radius:2px;flex:0 0 auto}
+  /* ---- headline: the count, then immediately what the count is made of ---- */
+  .top{display:flex;align-items:flex-start;gap:12px;flex:0 0 auto}
+  .big{font-size:30px;font-weight:600;line-height:.95;letter-spacing:-.035em;
+       color:var(--red);font-variant-numeric:tabular-nums}
+  .big small{font-size:12px;font-weight:500;color:var(--faint);letter-spacing:-.01em}
+  .biglab{font-size:9px;color:var(--faint);text-transform:uppercase;
+          letter-spacing:.07em;margin-top:5px}
+  .split{flex:1 1 auto;min-width:0;display:flex;flex-direction:column;gap:3px;
+         font-size:11px;color:var(--dim);line-height:1.35}
+  .split div{display:flex;gap:6px;align-items:baseline}
+  .split b{font-weight:600;font-variant-numeric:tabular-nums;min-width:20px;
+           text-align:right;flex:0 0 auto}
+  .split span{overflow-wrap:anywhere}
+  .w-owed b{color:var(--red)} .w-stale b{color:var(--dim)} .w-ref b{color:var(--dim)}
+  .w-meet b{color:var(--faint)}
 
   .call{background:var(--panel);border:1px solid var(--line);
         border-left:2px solid var(--red);border-radius:0 6px 6px 0;
-        padding:6px 9px;font-size:11.5px;line-height:1.38;color:var(--dim);flex:0 0 auto}
+        padding:6px 9px;font-size:11px;line-height:1.4;color:var(--dim);
+        flex:0 0 auto;overflow-wrap:anywhere}
   .call b{color:var(--ink);font-weight:600}
 
+  /* ---- compact 14d trend: fixed 22px, can never push the list down ---- */
+  .trend{flex:0 0 auto;display:flex;align-items:flex-end;gap:2px;height:22px}
+  .trend i{flex:1 1 0;background:var(--hair);border-radius:1px;position:relative;
+           display:block;min-height:2px}
+  .trend i em{position:absolute;left:0;right:0;bottom:0;display:block;
+              background:var(--green);border-radius:1px}
+  .trendlab{flex:0 0 auto;display:flex;justify-content:space-between;
+            font-size:9px;color:var(--faint);margin-top:-3px}
+
   .sec{font-size:9.5px;color:var(--faint);text-transform:uppercase;letter-spacing:.08em;
-       display:flex;justify-content:space-between;align-items:baseline;
-       padding-top:2px;padding-bottom:5px;border-bottom:1px solid var(--hair);flex:0 0 auto}
-  .sec em{font-style:normal;color:var(--faint);text-transform:none;letter-spacing:0;font-size:10px}
+       display:flex;justify-content:space-between;align-items:baseline;gap:8px;
+       padding-bottom:4px;border-bottom:1px solid var(--hair);flex:0 0 auto}
+  .sec em{font-style:normal;text-transform:none;letter-spacing:0;font-size:10px}
 
   .list{flex:1 1 auto;overflow-y:auto;min-height:0}
-  .row{display:grid;grid-template-columns:46px 1fr auto;gap:9px;align-items:center;
+  .grp{font-size:9px;color:var(--faint);text-transform:uppercase;letter-spacing:.07em;
+       padding:9px 2px 3px;border-bottom:1px solid var(--hair);
+       display:flex;justify-content:space-between;gap:8px}
+  .grp:first-child{padding-top:2px}
+  .grp em{font-style:normal;text-transform:none;letter-spacing:0}
+  .row{display:grid;grid-template-columns:34px 1fr;gap:9px;align-items:baseline;
        padding:6px 2px;border-bottom:1px solid var(--hair);
        text-decoration:none;color:inherit}
-  .row:last-child{border-bottom:0}
   .row:hover{background:var(--panel)}
-  .tm{font-size:11px;color:var(--faint);font-variant-numeric:tabular-nums;text-align:right}
-  .tm.od{color:var(--red)}
-  .nm{min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-size:12.5px}
-  .tag{font-size:9px;color:var(--faint);text-transform:uppercase;letter-spacing:.06em;
-       border:1px solid var(--line);border-radius:3px;padding:1px 4px;white-space:nowrap}
-  .dgrp{font-size:9.5px;color:var(--faint);text-transform:uppercase;letter-spacing:.07em;
-        padding:7px 2px 3px}
-  .none{color:var(--faint);font-style:italic;font-size:11.5px;padding:12px 2px}
+  .slip{font-size:11px;color:var(--red);text-align:right;font-variant-numeric:tabular-nums}
+  .row.mute .slip{color:var(--faint)}
+  .nm{min-width:0;overflow-wrap:anywhere;font-size:12.5px;line-height:1.3}
+  .row.mute .nm{color:var(--dim)}
+  .meta{display:block;font-size:9.5px;color:var(--faint);margin-top:2px;
+        overflow-wrap:anywhere}
+  .none{color:var(--faint);font-size:11.5px;padding:10px 2px}
 
   .ft{flex:0 0 auto;border-top:1px solid var(--line);padding-top:5px;
-      font-size:9.5px;color:var(--faint);line-height:1.4}
+      font-size:9px;color:var(--faint);line-height:1.45;overflow-wrap:anywhere}
   .ft b{color:var(--dim);font-weight:600}
 
-  /* Short embeds: the hero counts and the provenance footer must never be
-     clipped, so the itemised list is the first thing to go. */
-  @media (max-height:330px){
+  @media (max-height:340px){
     body{gap:6px;padding:10px 12px}
-    .tile .n{font-size:21px}
-    .tile .s{display:none}
-    .lg{display:none}
-    .sec,.list{display:none}
-    .call{font-size:11px}
-    .ft{font-size:9px}
-  }
-  @media (max-height:270px){
-    .tile .k{font-size:8.5px}
+    .big{font-size:24px}
+    .trend,.trendlab{display:none}
   }
 </style>
 </head>
@@ -96,23 +95,20 @@
 
 <div class="hd"><b>Triage</b><span id="stamp">—</span></div>
 
-<div class="tiles">
-  <div class="tile red"><div class="n" id="t-over">—</div>
-    <span class="k">Overdue</span><span class="s" id="t-over-s">&nbsp;</span></div>
-  <div class="tile gold"><div class="n" id="t-done">—</div>
-    <span class="k">Ever completed</span><span class="s" id="t-done-s">&nbsp;</span></div>
-  <div class="tile"><div class="n" id="t-rate">—</div>
-    <span class="k">Closed / 14 days</span><span class="s" id="t-rate-s">&nbsp;</span></div>
-</div>
-
-<div class="barwrap">
-  <div class="bar" id="bar"></div>
-  <div class="lg" id="legend"></div>
+<div class="top">
+  <div>
+    <div class="big" id="big">—</div>
+    <div class="biglab">overdue</div>
+  </div>
+  <div class="split" id="split"></div>
 </div>
 
 <div class="call" id="call">&nbsp;</div>
 
-<div class="sec"><span id="sec-t">Actionable</span><em id="sec-n"></em></div>
+<div class="trend" id="trend"></div>
+<div class="trendlab" id="trendlab"></div>
+
+<div class="sec"><span id="sec-t">Oldest first</span><em id="sec-n"></em></div>
 <div class="list" id="list"><div class="none">loading…</div></div>
 
 <div class="ft" id="ft"></div>
@@ -124,25 +120,36 @@
   function esc(s){return String(s==null?'':s).replace(/[<>&"]/g,function(c){
     return {'<':'&lt;','>':'&gt;','&':'&amp;','"':'&quot;'}[c];});}
 
-  /* --- regex-only date handling: never new Date() on a raw offset ISO --- */
+  /* regex-only date handling: never new Date() on a raw offset ISO */
   function ymd(v){ var m=/^(\d{4})-(\d{2})-(\d{2})/.exec(v||''); return m?m[0]:''; }
-  function hhmm(v){
-    var m=/^\d{4}-\d{2}-\d{2}T(\d{2}):(\d{2})/.exec(v||'');
-    return m ? m[1]+m[2] : null;              /* null => all-day */
-  }
-  /* build a Date from a bare Y-M-D only, at local noon: safe for weekday math */
+  function hhmm(v){ var m=/^\d{4}-\d{2}-\d{2}T(\d{2}):(\d{2})/.exec(v||'');
+    return m ? m[1]+m[2] : null; }
   function noon(d){ var m=/^(\d{4})-(\d{2})-(\d{2})$/.exec(d);
     return m ? new Date(+m[1], +m[2]-1, +m[3], 12, 0, 0) : null; }
   function dayDiff(a,b){ var A=noon(a),B=noon(b);
     return (A&&B) ? Math.round((A-B)/86400000) : 0; }
-  function label(d,today){
-    var n=dayDiff(d,today);
-    if(n===0) return 'Today';
-    if(n===1) return 'Tomorrow';
-    var dt=noon(d); if(!dt) return d;
-    return DOW[dt.getDay()]+' '+String(dt.getDate()).padStart(2,'0')+' '+MON[dt.getMonth()];
+  function dlabel(k){ var dt=noon(k); if(!dt) return k;
+    return DOW[dt.getDay()]+' '+String(dt.getDate()).padStart(2,'0')+' '+MON[dt.getMonth()]; }
+
+  /* ---- classification, by name pattern only ------------------------------
+     The export has no field that separates "an event that already happened"
+     from "work still owed", so this is a name-pattern guess, stated as such
+     in the footer. It is cheap and it is honest about being a guess.       */
+  function bucket(it){
+    var n = String(it.name||'');
+    if(/^\s*(flight|land)\b/i.test(n) || /flight\s+work\s*:/i.test(n)) return 'gone';
+    if(/^\s*(talk|seminar|colloquium|lecture)\b/i.test(n)) return 'gone';
+    if(/\borientation\b/i.test(n) || /\bmeeting\b/i.test(n) ||
+       /\bworking group\b/i.test(n)) return 'gone';
+    if(/\b\d{4}\s*-\s*\d{4}\b/.test(n)) return 'gone';   /* "…Tue Sep 1 2100-2300" */
+    if(/^\s*class overview\b/i.test(n)) return 'ref';
+    return 'owed';
   }
-  function pct(n,d){ return d>0 ? Math.round(n*1000/d)/10 : 0; }
+  var GRP = {
+    owed:{t:'Work still owed',      s:'past its date and nobody did it'},
+    gone:{t:'Already happened',     s:'flights taken, meetings attended — not work'},
+    ref :{t:'Reference rows',       s:'class notes filed with a date, never tasks'}
+  };
 
   fetch('../data/tasks.json?t='+Date.now())
     .then(function(r){ if(!r.ok) throw new Error('HTTP '+r.status); return r.json(); })
@@ -153,122 +160,101 @@
     });
 
   function render(d){
-    var c      = d.counts || {};
-    var today  = ymd(d.today) || '';
-    var total  = +c.total   || 0;
-    var open   = +c.open    || 0;
-    var done   = +c.done    || 0;
-    var over   = +c.overdue || 0;
-    var onTrack= Math.max(0, total - done - over);   /* open, not yet late */
+    var c     = d.counts || {};
+    var today = ymd(d.today) || '';
+    var total = +c.total   || 0;
+    var open  = +c.open    || 0;
+    var done  = +c.done    || 0;
+    var over  = +c.overdue || 0;
+    var past  = +c.past_meetings || 0;
 
-    /* header stamp */
-    var g = ymd(d.generated), gt = hhmm(d.generated);
-    var gd = noon(g);
+    var g = ymd(d.generated), gt = hhmm(d.generated), gd = noon(g);
     document.getElementById('stamp').textContent =
-      (gd ? String(gd.getDate()).padStart(2,'0')+' '+MON[gd.getMonth()]+' '+gd.getFullYear() : '')
+      (gd ? String(gd.getDate()).padStart(2,'0')+' '+MON[gd.getMonth()] : '')
       + (gt ? ' · '+gt : '');
 
-    /* ---------- tiles (all three are backed by counts/history) ---------- */
-    document.getElementById('t-over').innerHTML =
-      over + ' <small>/ '+open+'</small>';
-    document.getElementById('t-over-s').textContent =
-      pct(over, open)+'% of all open';
-
-    document.getElementById('t-done').innerHTML =
-      done + ' <small>/ '+total+'</small>';
-    document.getElementById('t-done-s').textContent =
-      pct(done, total)+'% of all rows';
-
-    /* completion over the history window (daily aggregates) */
-    var hist = Array.isArray(d.history) ? d.history : [];
-    var hDone=0, hTot=0;
-    hist.forEach(function(h){ hDone += (+h.done||0); hTot += (+h.total||0); });
-    var el=document.getElementById('t-rate');
-    el.innerHTML = hDone + ' <small>/ '+hTot+'</small>';
-    el.parentNode.className = 'tile ' + (hDone===0 ? 'red' : 'green');
-    document.getElementById('t-rate-s').textContent =
-      hist.length ? ('came due, last '+hist.length+'d') : 'no history';
-
-    /* ---------- composition bar: done + overdue + on-track = total ---------- */
-    var segs=[
-      {k:'Overdue',            v:over,    c:'var(--red)'},
-      {k:'Open, not yet late', v:onTrack, c:'var(--blue)'},
-      {k:'Done',               v:done,    c:'var(--green)'}
-    ].filter(function(s){ return s.v>0; });
-    document.getElementById('bar').innerHTML = segs.map(function(s){
-      return '<i style="flex:'+s.v+' 1 0;background:'+s.c+'"></i>'; }).join('');
-    document.getElementById('legend').innerHTML = segs.map(function(s){
-      return '<span><i class="sw" style="background:'+s.c+'"></i>'+
-             s.k+' <b style="color:var(--ink);font-weight:600">'+s.v+'</b></span>'; }).join('')
-      + '<span style="color:var(--faint)">'+total+' rows total</span>';
-
-    /* ---------- the honest headline ---------- */
-    var call;
-    if(hDone===0 && hTot>0){
-      call = '<b>Nothing closed in '+hist.length+' days.</b> '+hTot+' items came due, '+
-             hDone+' completed — the '+over+'-item overdue pile is not draining at all.';
-    } else if(hDone>0){
-      var perDay = hDone/hist.length;
-      var days   = Math.ceil(over/perDay);
-      call = '<b>At the last '+hist.length+'d pace ('+hDone+' closed), the '+over+
-             ' overdue items need ~'+days+' days to clear</b> — before anything new lands.';
-    } else {
-      call = '<b>'+over+' of '+open+' open items are past their date.</b> '+
-             'No completion history is available to estimate a drain rate.';
-    }
-    document.getElementById('call').innerHTML = call;
-
-    /* ---------- what we can actually itemise ---------- */
-    var seen={}, feed=[];
-    (d.today_items||[]).concat(d.upcoming||[]).forEach(function(it){
-      var key=(it.url||'')+'|'+(it.name||'')+'|'+(it.date||'');
-      if(seen[key]) return; seen[key]=1; feed.push(it);
+    /* ---- items, oldest first ---- */
+    var items = (d.overdue_items||[]).slice().sort(function(a,b){
+      var A=ymd(a.date), B=ymd(b.date);
+      if(A!==B) return A<B ? -1 : 1;
+      return String(a.date).localeCompare(String(b.date));
     });
+    var by = {owed:[], gone:[], ref:[]};
+    items.forEach(function(it){ by[bucket(it)].push(it); });
 
-    var late = feed.filter(function(it){
-      var k=ymd(it.date); return k && today && k<today && !it.done; });
-    var live = feed.filter(function(it){ return late.indexOf(it)<0; });
+    document.getElementById('big').innerHTML = over + ' <small>/ '+open+' open</small>';
 
-    /* honest section title: never imply the full overdue set is listed */
-    document.getElementById('sec-t').textContent =
-      late.length ? ('Overdue in feed · '+late.length+' of '+over) : 'Next up';
+    document.getElementById('split').innerHTML =
+      '<div class="w-owed"><b>'+by.owed.length+'</b><span>look like work still owed</span></div>'+
+      '<div class="w-stale"><b>'+by.gone.length+'</b><span>already happened (flights, meetings)</span></div>'+
+      (by.ref.length ? '<div class="w-ref"><b>'+by.ref.length+'</b><span>reference rows, not tasks</span></div>' : '')+
+      '<div class="w-meet"><b>'+past+'</b><span>past meetings — counted separately, not overdue</span></div>';
+
+    /* ---- verdict from history: zero-close days, and the lifetime rate ---- */
+    var hist = Array.isArray(d.history) ? d.history : [];
+    var zero=0, hDone=0, hTot=0;
+    hist.forEach(function(h){
+      hDone += (+h.done||0); hTot += (+h.total||0);
+      if((+h.done||0)===0) zero++;
+    });
+    document.getElementById('call').innerHTML =
+      '<b>'+zero+' of the last '+hist.length+' days closed nothing.</b> '+
+      hTot+' items came due in that window, '+hDone+' were completed. '+
+      'Lifetime: <b>'+done+' of '+total+'</b> rows have ever been marked done.';
+
+    /* ---- 14d trend: total came due (grey) with done (green) inside ---- */
+    var mx = 1; hist.forEach(function(h){ mx = Math.max(mx, +h.total||0); });
+    document.getElementById('trend').innerHTML = hist.map(function(h){
+      var t=+h.total||0, dn=+h.done||0;
+      var hpx = t ? Math.max(3, Math.round(t/mx*22)) : 2;
+      var dpx = t ? Math.round(dn/t*hpx) : 0;
+      return '<i title="'+esc(h.date)+': '+dn+'/'+t+' done" style="height:'+hpx+'px">'+
+             (dpx>0 ? '<em style="height:'+dpx+'px"></em>' : '')+'</i>';
+    }).join('');
+    document.getElementById('trendlab').innerHTML =
+      '<span>'+(hist.length?esc(dlabel(hist[0].date)):'')+'</span>'+
+      '<span>came due / done · '+hist.length+'d</span>'+
+      '<span>'+(hist.length?esc(dlabel(hist[hist.length-1].date)):'')+'</span>';
+
+    /* ---- the payload: names, dates, days slipped ---- */
+    document.getElementById('sec-t').textContent = 'Oldest first';
     document.getElementById('sec-n').textContent =
-      feed.length+' of '+total+' rows in feed';
+      items.length ? (items.length+' of '+over+' listed') : 'nothing listed';
 
-    var rows = late.concat(live);
-    var html='', lastKey=null;
-    if(!rows.length){
-      html = '<div class="none">No individual rows in the feed.</div>';
-    } else {
-      rows.forEach(function(it){
-        var k = ymd(it.date), isLate = late.indexOf(it)>=0;
-        if(k!==lastKey){
-          lastKey=k;
-          var n = dayDiff(k, today);
-          var suffix = isLate ? ' · '+Math.abs(n)+'d late' : '';
-          html += '<div class="dgrp">'+esc(label(k,today))+esc(suffix)+'</div>';
-        }
-        var t = hhmm(it.date);
-        var tag = it.meeting_type || it.type || '';
-        html += '<a class="row" '+(it.url?'href="'+esc(it.url)+'" target="_blank" rel="noopener"':'')+'>'
-             +  '<span class="tm'+(isLate?' od':'')+'">'+(t?esc(t):'&mdash;')+'</span>'
-             +  '<span class="nm">'+esc(it.name||'Untitled')+'</span>'
-             +  (tag?'<span class="tag">'+esc(tag)+'</span>':'<span></span>')
-             +  '</a>';
+    var html='';
+    ['owed','gone','ref'].forEach(function(k){
+      var arr = by[k]; if(!arr.length) return;
+      html += '<div class="grp"><span>'+esc(GRP[k].t)+' · '+arr.length+'</span>'+
+              '<em>'+esc(GRP[k].s)+'</em></div>';
+      arr.forEach(function(it){
+        var key  = ymd(it.date);
+        var slip = key && today ? Math.abs(dayDiff(key, today)) : 0;
+        var t    = hhmm(it.date);
+        var meta = dlabel(key) + (t ? ' · '+t : '') +
+                   (it.meeting_type ? ' · '+it.meeting_type
+                                    : (it.type ? ' · '+it.type : ''));
+        html += '<a class="row'+(k==='owed'?'':' mute')+'" '+
+                (it.url?'href="'+esc(it.url)+'" target="_blank" rel="noopener"':'')+'>'+
+                '<span class="slip">'+slip+'d</span>'+
+                '<span class="nm">'+esc(it.name||'Untitled')+
+                '<span class="meta">'+esc(meta)+'</span></span></a>';
       });
+    });
+    if(!items.length){
+      html = '<div class="none">overdue_items is empty in this export — the '+over+
+             ' count above cannot be broken down. That is a data problem, not a clean slate.</div>';
     }
     document.getElementById('list').innerHTML = html;
 
-    /* ---------- provenance: state plainly what is and is not here ---------- */
-    var missing = over - late.length;
+    /* ---- provenance ---- */
+    var shown = items.length;
     document.getElementById('ft').innerHTML =
-      '<b>Counts cover all '+total+' rows; only '+feed.length+' rows are itemised</b> '+
-      '(today + upcoming). '+
-      (missing>0
-        ? missing+' of the '+over+' overdue items are counted but <b>not listed</b> — the export '+
-          'carries no past-dated rows. Triage them in Notion. '
-        : 'All '+over+' overdue items are listed. ') +
-      'History is daily totals, not rows.';
+      '<b>Overdue = open, past-dated, non-recurring, non-archived.</b> '+
+      'Past meetings ('+past+') and archived-class rows are excluded from the '+over+
+      ' — that is why this is not 96. ' +
+      (shown < over ? ('Only '+shown+' of '+over+' are itemised here. ') : '') +
+      'The three groups above are split by <b>name pattern in this widget</b>, not by any '+
+      'field in the export — treat them as a guess, not a taxonomy.';
   }
 })();
 </script>

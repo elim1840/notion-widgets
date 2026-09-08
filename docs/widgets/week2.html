@@ -171,24 +171,72 @@
   .cc .cn{display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;
       overflow:hidden;overflow-wrap:anywhere}
 
-  /* AGENDA mode — one continuous stream */
-  .ag{padding:4px 14px 14px}
-  .agd{display:flex;align-items:baseline;gap:9px;padding:11px 0 5px;
-       border-bottom:1px solid var(--line);margin-bottom:5px}
-  .agd .n{font-size:14px;font-weight:600}
-  .agd .s{font-size:10px;color:var(--faint);text-transform:uppercase;letter-spacing:.07em}
-  .agd.today .n{color:var(--blue)}
-  .agi{display:flex;gap:10px;align-items:baseline;padding:4px 0 4px 8px;font-size:12.5px;
-       text-decoration:none;color:inherit;border-left:2.5px solid transparent}
+  /* ---------- AGENDA mode — a printed itinerary ------------------------
+     The mode he actually lives in. Rules it obeys:
+       · every day in scope gets a header, INCLUDING empty ones (an empty
+         Saturday is information; silently omitting it is not).
+       · titles WRAP. No nowrap, no ellipsis, anywhere in this mode.
+       · a time range is only ever printed when the feed really has `end`.
+         No end -> the start time alone. Never a fabricated duration.
+       · location carries a 📍 pin and wraps too.
+       · today's list is split by a live "now" rule.                    */
+  .ag{padding:0 0 18px}
+  .agtop{position:sticky;top:0;z-index:5;background:var(--bg);
+     border-bottom:1px solid var(--line);padding:8px 16px 7px;
+     display:flex;align-items:baseline;gap:10px;flex-wrap:wrap}
+  .agtop .sc{font-size:11px;font-weight:600;letter-spacing:.09em;text-transform:uppercase;
+     color:var(--blue)}
+  .agtop .rg{font-size:11.5px;color:var(--dim);font-variant-numeric:tabular-nums}
+  .agtop .st{margin-left:auto;font-size:10.5px;color:var(--faint);
+     font-variant-numeric:tabular-nums;letter-spacing:.02em}
+  .agtop .st b{color:var(--ink);font-weight:600}
+
+  .agday{padding:0 16px}
+  .agday+.agday{margin-top:2px}
+  .agd{display:flex;align-items:baseline;gap:9px;padding:13px 0 6px;
+       border-bottom:1px solid var(--line);margin-bottom:4px}
+  .agd .n{font-size:13.5px;font-weight:600;letter-spacing:-.01em}
+  .agd .dd{font-size:13.5px;font-weight:400;color:var(--dim);
+       font-variant-numeric:tabular-nums}
+  .agd .s{margin-left:auto;font-size:10px;color:var(--faint);text-transform:uppercase;
+       letter-spacing:.08em;font-variant-numeric:tabular-nums}
+  .agd .tag{font-size:9px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;
+       color:#fff;background:var(--blue);border-radius:3px;padding:1px 5px}
+  .agday.today .agd{border-bottom-color:var(--blue)}
+  .agday.today .agd .n{color:var(--blue)}
+  .agday.wknd .agd .n{color:var(--dim)}
+
+  /* time | body — body is min-width:0 so it wraps instead of overflowing */
+  .agi{display:grid;grid-template-columns:78px minmax(0,1fr);gap:11px;
+       align-items:start;padding:5px 0 5px 9px;font-size:12.5px;
+       text-decoration:none;color:inherit;border-left:2.5px solid var(--line);
+       border-radius:0 3px 3px 0}
   .agi:hover{background:var(--panel)}
   .agi.k-class{border-left-color:var(--gold)}
   .agi.k-res{border-left-color:var(--green)}
   .agi.k-admin{border-left-color:var(--purple)}
   .agi.k-mil{border-left-color:var(--now)}
-  .agi .t{font-variant-numeric:tabular-nums;color:var(--dim);flex:0 0 84px;font-size:11.5px}
-  .agi .n2{flex:1;min-width:0}
-  .agi.done .n2{text-decoration:line-through;color:var(--faint)}
-  .agi .w{font-size:10.5px;color:var(--faint)}
+  .agi .t{font-variant-numeric:tabular-nums;color:var(--dim);font-size:11.5px;
+       line-height:1.45;padding-top:.5px;letter-spacing:.01em;white-space:nowrap}
+  .agi .t.allday{font-size:9.5px;letter-spacing:.09em;text-transform:uppercase;
+       color:var(--faint);font-variant-numeric:normal}
+  .agi .n2{display:block;line-height:1.35;overflow-wrap:anywhere;
+       white-space:normal;overflow:visible;text-overflow:clip}
+  .agi .w{display:block;margin-top:2px;font-size:10.5px;color:var(--faint);
+       line-height:1.3;overflow-wrap:anywhere;white-space:normal;
+       overflow:visible;text-overflow:clip}
+  .agi .w::before{content:"\1F4CD\00a0";opacity:.75;font-size:9.5px}
+  .agi.done .n2{text-decoration:line-through}
+
+  /* live rule inside today's list */
+  .agnow{display:grid;grid-template-columns:78px minmax(0,1fr);gap:11px;
+       align-items:center;padding:3px 0 3px 9px;border-left:2.5px solid transparent}
+  .agnow .t{font-size:10px;font-weight:700;color:var(--now);
+       font-variant-numeric:tabular-nums;letter-spacing:.05em}
+  .agnow .ln2{height:1px;background:var(--now);opacity:.55}
+
+  .agnone{font-size:11.5px;color:var(--faint);font-style:italic;
+       padding:5px 0 5px 11px}
 
   /* BY TYPE */
   .catsec{padding:9px 14px 4px}

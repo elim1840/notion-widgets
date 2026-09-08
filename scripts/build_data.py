@@ -13,6 +13,8 @@ import sys
 import urllib.request
 from datetime import datetime, timedelta, timezone
 
+import syllabus_fall2026
+
 TOKEN = os.environ.get("NOTION_API_KEY", "").strip()
 if not TOKEN:
     sys.exit("NOTION_API_KEY not set")
@@ -76,6 +78,13 @@ def main():
     os.makedirs(OUT, exist_ok=True)
     now = datetime.now(ET)
     today = now.date()
+
+    # ---- syllabus.json FIRST, before any network call.
+    # The graded events (3 exams, 5 psets, 2 papers, 2 design reviews) exist
+    # only in syllabus PDFs, not in Notion. Widgets were hardcoding them.
+    # This is static data: no vault, no network, no credential, so it is
+    # written even if Notion is down, and it works unchanged in the Action.
+    syllabus_fall2026.write(OUT, now=now)
 
     rows = query_all(TASKS_DS)
 
