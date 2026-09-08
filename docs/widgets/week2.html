@@ -108,6 +108,77 @@
       overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
   .lnone{font-size:11px;color:var(--faint);font-style:italic;padding:3px 0 3px 8px}
 
+  /* COLUMNS mode */
+  .cols7{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));height:100%}
+  .c7{border-right:1px solid var(--hair);display:flex;flex-direction:column;min-width:0}
+  .c7:last-child{border-right:0}
+  .c7.today{background:rgba(91,147,211,.05)}
+  .c7h{padding:6px 7px 5px;border-bottom:1px solid var(--line);text-align:center}
+  .c7h .dn{font-size:9px;letter-spacing:.09em;color:var(--dim);font-weight:600}
+  .c7h .dd{font-size:15px;font-weight:600;line-height:1.15}
+  .c7.today .dd{color:var(--blue)}
+  .c7b{flex:1;overflow-y:auto;padding:5px 5px 8px;display:flex;flex-direction:column;gap:4px}
+  .cc{background:var(--panel);border:1px solid var(--line);border-left:2.5px solid var(--blue);
+      border-radius:4px;padding:4px 6px;font-size:10.5px;line-height:1.3;
+      text-decoration:none;color:inherit;display:block}
+  .cc:hover{border-color:var(--blue)}
+  .cc.k-class{border-left-color:var(--gold)}
+  .cc.k-res{border-left-color:var(--green)}
+  .cc.k-admin{border-left-color:var(--purple)}
+  .cc.k-mil{border-left-color:var(--now)}
+  .cc.done{opacity:.45}
+  .cc .ct{font-variant-numeric:tabular-nums;color:var(--dim);font-size:9.5px;display:block}
+  .cc .cn{display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;
+      overflow:hidden;overflow-wrap:anywhere}
+
+  /* AGENDA mode — one continuous stream */
+  .ag{padding:4px 14px 14px}
+  .agd{display:flex;align-items:baseline;gap:9px;padding:11px 0 5px;
+       border-bottom:1px solid var(--line);margin-bottom:5px}
+  .agd .n{font-size:14px;font-weight:600}
+  .agd .s{font-size:10px;color:var(--faint);text-transform:uppercase;letter-spacing:.07em}
+  .agd.today .n{color:var(--blue)}
+  .agi{display:flex;gap:10px;align-items:baseline;padding:4px 0 4px 8px;font-size:12.5px;
+       text-decoration:none;color:inherit;border-left:2.5px solid transparent}
+  .agi:hover{background:var(--panel)}
+  .agi.k-class{border-left-color:var(--gold)}
+  .agi.k-res{border-left-color:var(--green)}
+  .agi.k-admin{border-left-color:var(--purple)}
+  .agi.k-mil{border-left-color:var(--now)}
+  .agi .t{font-variant-numeric:tabular-nums;color:var(--dim);flex:0 0 46px;font-size:11.5px}
+  .agi .n2{flex:1;min-width:0}
+  .agi.done .n2{text-decoration:line-through;color:var(--faint)}
+  .agi .w{font-size:10.5px;color:var(--faint)}
+
+  /* BY TYPE */
+  .catsec{padding:9px 14px 4px}
+  .cath{display:flex;align-items:center;gap:8px;font-size:11px;font-weight:600;
+     letter-spacing:.06em;text-transform:uppercase;color:var(--dim);
+     padding-bottom:5px;border-bottom:1px solid var(--line);margin-bottom:5px}
+  .cath .dot{width:8px;height:8px;border-radius:2px}
+  .cath .k{margin-left:auto;color:var(--faint);font-weight:400;letter-spacing:0}
+  .cati{display:grid;grid-template-columns:44px 46px 1fr;gap:9px;align-items:baseline;
+     padding:3px 0;font-size:12.5px;text-decoration:none;color:inherit}
+  .cati:hover{background:var(--panel)}
+  .cati .d{font-size:10.5px;color:var(--faint);text-transform:uppercase;letter-spacing:.05em}
+  .cati .t{font-variant-numeric:tabular-nums;color:var(--dim);font-size:11.5px}
+  .cati .n{min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+  .cati.done .n{text-decoration:line-through;color:var(--faint)}
+
+  /* FREE TIME */
+  .frow{display:grid;grid-template-columns:var(--gut) 1fr;border-bottom:1px solid var(--hair);
+        min-height:46px}
+  .frow:last-child{border-bottom:0}
+  .frow.today{background:rgba(91,147,211,.05)}
+  .fbar{position:relative;margin:12px 10px 12px 0;height:20px;border-radius:3px;
+        background:rgba(224,108,108,.13);overflow:hidden}
+  .fseg{position:absolute;top:0;bottom:0;background:rgba(95,168,122,.30);
+        border-left:1px solid rgba(95,168,122,.6)}
+  .fseg span{position:absolute;left:4px;top:2px;font-size:9.5px;color:var(--ink);
+        white-space:nowrap;opacity:.85}
+  .ftot{position:absolute;right:6px;top:3px;font-size:10px;color:var(--dim);
+        font-variant-numeric:tabular-nums}
+
   /* LOAD mode */
   .ldrow{display:grid;grid-template-columns:var(--gut) 1fr 46px;align-items:center;
       border-bottom:1px solid var(--hair);min-height:44px}
@@ -134,6 +205,10 @@
     <span class="grp" id="modegrp">
       <button data-m="time">Timeline</button>
       <button data-m="list">List</button>
+      <button data-m="cols">Columns</button>
+      <button data-m="agenda">Agenda</button>
+      <button data-m="cat">By type</button>
+      <button data-m="free">Free time</button>
       <button data-m="load">Load</button>
     </span>
   </span>
@@ -197,16 +272,19 @@ function render(){
   document.getElementById('tot').textContent = n+' events';
 
   const now=new Date(), nowM=now.getHours()*60+now.getMinutes();
-  ruler.style.display = MODE==='time' ? '' : 'none';
+  ruler.style.display = (MODE==='time'||MODE==='free') ? '' : 'none';
   document.querySelector('footer').style.display = MODE==='load' ? 'none' : '';
 
   // ---------------- TIMELINE ----------------
-  if(MODE==='time'){
+  if(MODE==='time'||MODE==='free'){
     let tk=''; const step=(H1-H0)>10?2:1;
     for(let h=H0; h<=H1; h+=step)
       tk += `<span style="left:${pct(h*60)}%">${String(h).padStart(2,'0')}00</span>`;
     document.getElementById('ticks').innerHTML=tk;
+  }
 
+  if(MODE==='time'){
+    const step=(H1-H0)>10?2:1;
     body.innerHTML = days.map(day=>{
       const dt=new Date(day.date+'T12:00:00');
       const wknd=[0,6].includes(dt.getDay());
@@ -263,6 +341,101 @@ function render(){
           <div class="dnum">${dt.getDate()}</div>
           ${day.items.length?`<div class="cnt">${day.items.length}</div>`:''}</div>
         <div class="litems">${rows}</div></div>`;
+    }).join('');
+  }
+
+  // ---------------- COLUMNS ----------------
+  else if(MODE==='cols'){
+    body.innerHTML = `<div class="cols7">` + days.map(day=>{
+      const dt=new Date(day.date+'T12:00:00');
+      const items=[...day.items].sort((x,y)=>{
+        const a=mins(x.date), b=mins(y.date);
+        if(a==null&&b==null) return 0; if(a==null) return 1; if(b==null) return -1; return a-b;});
+      const cards = items.length ? items.map(e=>
+        `<a class="cc ${kind(e)} ${e.done?'done':''}" href="${e.url}" target="_blank">
+           <span class="ct">${mins(e.date)==null?'ALL DAY':hhmm(e.date)}</span>
+           <span class="cn">${esc(e.name)||'(untitled)'}</span></a>`).join('')
+        : `<div class="lnone">—</div>`;
+      return `<div class="c7 ${day.is_today?'today':''}">
+        <div class="c7h"><div class="dn">${DOW[dt.getDay()]}</div>
+          <div class="dd">${dt.getDate()}</div></div>
+        <div class="c7b">${cards}</div></div>`;
+    }).join('') + `</div>`;
+  }
+
+  // ---------------- AGENDA (continuous stream) ----------------
+  else if(MODE==='agenda'){
+    body.innerHTML = `<div class="ag">` + days.map(day=>{
+      if(!day.items.length) return '';
+      const dt=new Date(day.date+'T12:00:00');
+      const items=[...day.items].sort((x,y)=>{
+        const a=mins(x.date), b=mins(y.date);
+        if(a==null&&b==null) return 0; if(a==null) return 1; if(b==null) return -1; return a-b;});
+      return `<div class="agd ${day.is_today?'today':''}">
+          <span class="n">${DOW[dt.getDay()]} ${dt.getDate()}</span>
+          <span class="s">${MON[dt.getMonth()]} &middot; ${day.items.length} item${day.items.length>1?'s':''}</span>
+        </div>` +
+        items.map(e=>`<a class="agi ${kind(e)} ${e.done?'done':''}" href="${e.url}" target="_blank">
+          <span class="t">${mins(e.date)==null?'—':hhmm(e.date)}</span>
+          <span class="n2">${esc(e.name)||'(untitled)'}</span>
+          ${e.location?`<span class="w">${esc(e.location)}</span>`:''}</a>`).join('');
+    }).join('') + `</div>`;
+  }
+
+  // ---------------- BY TYPE ----------------
+  else if(MODE==='cat'){
+    const LBL={'k-class':'Class','k-res':'Research','k-admin':'Admin','k-mil':'Military','':'Other'};
+    const buckets={};
+    days.forEach(day=>{
+      const dt=new Date(day.date+'T12:00:00');
+      day.items.forEach(e=>{
+        const k=kind(e); (buckets[k]=buckets[k]||[]).push({e,dt,d:day});
+      });
+    });
+    const order=['k-class','k-res','k-admin','k-mil',''];
+    body.innerHTML = order.filter(k=>buckets[k]).map(k=>{
+      const rows=buckets[k].sort((a,b)=>
+        a.d.date.localeCompare(b.d.date) || ((mins(a.e.date)??1e9)-(mins(b.e.date)??1e9)));
+      return `<div class="catsec">
+        <div class="cath"><span class="dot" style="background:${KCOL[k]}"></span>
+          ${LBL[k]}<span class="k">${rows.length}</span></div>` +
+        rows.map(({e,dt})=>`<a class="cati ${e.done?'done':''}" href="${e.url}" target="_blank">
+          <span class="d">${DOW[dt.getDay()]} ${dt.getDate()}</span>
+          <span class="t">${mins(e.date)==null?'—':hhmm(e.date)}</span>
+          <span class="n">${esc(e.name)||'(untitled)'}</span></a>`).join('') + `</div>`;
+    }).join('');
+  }
+
+  // ---------------- FREE TIME ----------------
+  else if(MODE==='free'){
+    const DAY_S=H0*60, DAY_E=H1*60, MINGAP=60;
+    body.innerHTML = days.map(day=>{
+      const dt=new Date(day.date+'T12:00:00');
+      const busy=day.items.filter(e=>mins(e.date)!=null).map(e=>{
+        const s=mins(e.date); let en=mins(e.end); if(en==null||en<=s) en=s+50;
+        return [Math.max(s,DAY_S), Math.min(en,DAY_E)];
+      }).filter(([a,b])=>b>a).sort((a,b)=>a[0]-b[0]);
+      const merged=[];
+      busy.forEach(b=>{
+        if(merged.length && b[0]<=merged[merged.length-1][1])
+          merged[merged.length-1][1]=Math.max(merged[merged.length-1][1], b[1]);
+        else merged.push([...b]);
+      });
+      const gaps=[]; let cur=DAY_S;
+      merged.forEach(([a,b])=>{ if(a-cur>=MINGAP) gaps.push([cur,a]); cur=Math.max(cur,b); });
+      if(DAY_E-cur>=MINGAP) gaps.push([cur,DAY_E]);
+      const total=gaps.reduce((t,[a,b])=>t+(b-a),0);
+      const segs=gaps.map(([a,b])=>{
+        const l=((a-DAY_S)/(DAY_E-DAY_S))*100, w=((b-a)/(DAY_E-DAY_S))*100;
+        const hrs=(b-a)/60;
+        return `<span class="fseg" style="left:${l}%;width:${w}%">${
+          w>13?`<span>${String(Math.floor(a/60)).padStart(2,'0')}00 · ${hrs>=1?hrs.toFixed(hrs%1?1:0)+'h':''}</span>`:''}</span>`;
+      }).join('');
+      return `<div class="frow ${day.is_today?'today':''}">
+        <div class="dcol"><div class="dname">${DOW[dt.getDay()]}</div>
+          <div class="dnum">${dt.getDate()}</div></div>
+        <div style="position:relative"><div class="fbar">${segs}</div>
+          <span class="ftot">${(total/60).toFixed(total%60?1:0)}h free</span></div></div>`;
     }).join('');
   }
 
