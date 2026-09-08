@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>This week</title>
+<style>
+  :root{
+    --bg:#191919; --panel:#202020; --line:#2f2f2f; --hair:#252525;
+    --ink:#e9e9e7; --dim:#9b9a97; --faint:#6f6e6b;
+    --now:#e06c6c; --blue:#5b93d3; --gold:#c9a227; --green:#5fa87a; --purple:#9a6dd7;
+    --gut:52px;
+  }
+  @media (prefers-color-scheme: light){
+    :root{ --bg:#fff; --panel:#f7f7f5; --line:#e6e5e1; --hair:#efeeec;
+           --ink:#37352f; --dim:#787774; --faint:#9b9a97; }
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html,body{height:100%}
+  body{background:var(--bg);color:var(--ink);
+       font:13px/1.4 -apple-system,BlinkMacSystemFont,"Segoe UI",Inter,sans-serif;
+       -webkit-font-smoothing:antialiased;display:flex;flex-direction:column;overflow:hidden}
+
+  header{display:flex;align-items:baseline;justify-content:space-between;
+         padding:11px 16px 9px;border-bottom:1px solid var(--line);flex:0 0 auto}
+  .rng{font-size:15px;font-weight:600;letter-spacing:-.015em}
+  .hint{font-size:10px;color:var(--faint);letter-spacing:.05em;text-transform:uppercase}
+
+  /* time ruler */
+  .ruler{display:grid;grid-template-columns:var(--gut) 1fr;flex:0 0 auto;
+         border-bottom:1px solid var(--line);background:var(--bg)}
+  .ruler .sp{border-right:1px solid var(--line)}
+  .ticks{position:relative;height:17px}
+  .ticks span{position:absolute;top:3px;font-size:9px;color:var(--faint);
+       transform:translateX(-50%);font-variant-numeric:tabular-nums;letter-spacing:.02em}
+
+  .body{flex:1;overflow-y:auto;min-height:0}
+  .row{display:grid;grid-template-columns:var(--gut) 1fr;
+       border-bottom:1px solid var(--hair);min-height:54px}
+  .row:last-child{border-bottom:0}
+  .row.today{background:rgba(91,147,211,.05)}
+  .row.wknd .dname{color:var(--faint)}
+
+  .dcol{border-right:1px solid var(--line);padding:7px 8px 5px;text-align:right}
+  .dname{font-size:9.5px;text-transform:uppercase;letter-spacing:.09em;color:var(--dim);
+         font-weight:600}
+  .dnum{font-size:17px;font-weight:600;letter-spacing:-.02em;line-height:1.1;
+        font-variant-numeric:tabular-nums}
+  .row.today .dnum{color:var(--blue)}
+  .cnt{font-size:9px;color:var(--faint);margin-top:1px}
+
+  .lane{position:relative;padding:5px 8px 5px 0}
+  .lane .gl{position:absolute;top:0;bottom:0;width:1px;background:var(--hair)}
+  .lane .noww{position:absolute;top:0;bottom:0;width:1.5px;background:var(--now);z-index:4}
+
+  .ev{position:absolute;height:22px;border-radius:3px;padding:0 7px;
+      font-size:11.5px;line-height:22px;white-space:nowrap;overflow:hidden;
+      text-overflow:ellipsis;text-decoration:none;
+      background:var(--panel);border:1px solid var(--line);
+      border-left:2.5px solid var(--blue);color:var(--ink);z-index:2}
+  .ev:hover{z-index:9;border-color:var(--blue);overflow:visible;width:auto !important;
+      box-shadow:0 2px 10px rgba(0,0,0,.4)}
+  .ev.k-class{border-left-color:var(--gold)}
+  .ev.k-res  {border-left-color:var(--green)}
+  .ev.k-admin{border-left-color:var(--purple)}
+  .ev.k-mil  {border-left-color:var(--now)}
+  .ev.done{opacity:.45;text-decoration:line-through}
+
+  /* all-day chips sit in a right-hand tray */
+  .tray{display:flex;gap:4px;flex-wrap:wrap;padding:4px 0 0;margin-left:2px}
+  .ad{font-size:10px;background:var(--panel);border:1px solid var(--line);
+      border-radius:3px;padding:1px 6px;color:var(--dim);text-decoration:none;
+      max-width:230px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+  .ad:hover{border-color:var(--blue);color:var(--ink)}
+  .ad.done{text-decoration:line-through;opacity:.55}
+
+  footer{flex:0 0 auto;display:flex;gap:12px;align-items:center;flex-wrap:wrap;
+         padding:6px 16px;border-top:1px solid var(--line);font-size:9.5px;color:var(--faint)}
+  .key{display:inline-flex;align-items:center;gap:4px}
+  .sw{width:8px;height:8px;border-radius:2px;display:inline-block}
+  .empty{color:var(--faint);font-style:italic;padding:20px 16px;font-size:12px}
+</style>
+</head>
+<body>
+<header><span class="rng" id="rng">—</span><span class="hint" id="tot"></span></header>
+<div class="ruler"><div class="sp"></div><div class="ticks" id="ticks"></div></div>
+<div class="body" id="body"></div>
+<footer>
+  <span class="key"><i class="sw" style="background:var(--gold)"></i>Class</span>
+  <span class="key"><i class="sw" style="background:var(--green)"></i>Research</span>
+  <span class="key"><i class="sw" style="background:var(--purple)"></i>Admin</span>
+  <span class="key"><i class="sw" style="background:var(--now)"></i>Military</span>
+  <span class="key"><i class="sw" style="background:var(--blue)"></i>Other</span>
+  <span style="flex:1"></span><span id="gen"></span>
+</footer>
+
+<script>
+const H0=6, H1=24;                       // 0600 -> 2400 across the width
+const DOW=['SUN','MON','TUE','WED','THU','FRI','SAT'];
+const MON=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+const esc=s=>(s||'').replace(/[<>&]/g,c=>({'<':'&lt;','>':'&gt;','&':'&amp;'}[c]));
+const mins=iso=>{const m=/T(\d{2}):(\d{2})/.exec(iso||''); return m?(+m[1])*60+(+m[2]):null;};
+const hhmm=iso=>{const m=/T(\d{2}):(\d{2})/.exec(iso||''); return m?m[1]+m[2]:'';};
+const pct=m=>((m-H0*60)/((H1-H0)*60))*100;
+
+function kind(e){
+  const k=((e.kind||'')+' '+(e.type||'')+' '+(e.meeting_type||'')).toLowerCase();
+  if(e.src==='class'||/class|lecture|recitation/.test(k)) return 'k-class';
+  if(/research|serg|aeroastro|thesis|marstotable|draper/.test(k)) return 'k-res';
+  if(/admin|tpp|meeting/.test(k)) return 'k-admin';
+  if(/military|army/.test(k)) return 'k-mil';
+  return '';
+}
+
+fetch('../data/week.json?t='+Date.now()).then(r=>r.json()).then(d=>{
+  const days=d.days||[];
+  if(!days.length){ document.getElementById('body').innerHTML='<div class="empty">no week data</div>'; return; }
+
+  const a=new Date(days[0].date+'T12:00:00'), b=new Date(days[6].date+'T12:00:00');
+  document.getElementById('rng').textContent =
+    `${MON[a.getMonth()]} ${a.getDate()} – ${MON[b.getMonth()]} ${b.getDate()}`;
+  let n=0; days.forEach(x=>n+=x.items.length);
+  document.getElementById('tot').textContent = n+' events';
+
+  // ruler
+  let tk='';
+  for(let h=H0; h<=H1; h+=2)
+    tk += `<span style="left:${pct(h*60)}%">${String(h).padStart(2,'0')}00</span>`;
+  document.getElementById('ticks').innerHTML=tk;
+
+  const now=new Date(), nowM=now.getHours()*60+now.getMinutes();
+
+  document.getElementById('body').innerHTML = days.map(day=>{
+    const dt=new Date(day.date+'T12:00:00');
+    const wknd=[0,6].includes(dt.getDay());
+    const timed=day.items.filter(e=>mins(e.date)!=null);
+    const allday=day.items.filter(e=>mins(e.date)==null);
+
+    // gridlines every 2h
+    let gl=''; for(let h=H0+2; h<H1; h+=2) gl+=`<span class="gl" style="left:${pct(h*60)}%"></span>`;
+
+    // lay events out; stack rows when they overlap
+    const rows=[];
+    const placed=timed.sort((x,y)=>mins(x.date)-mins(y.date)).map(e=>{
+      const s=mins(e.date); let en=mins(e.end); if(en==null||en<=s) en=s+50;
+      let r=0; while(rows[r]!=null && rows[r]>s) r++;
+      rows[r]=en;
+      return {e,s,en,r};
+    });
+    const depth=Math.max(1, rows.length);
+
+    const evs=placed.map(({e,s,en,r})=>{
+      const l=pct(s);
+      const natural = pct(en)-pct(s);
+      const w = Math.max(11, natural);           // ~11% floor = readable label
+      const label = natural>=7 ? hhmm(e.date)+'  '+(e.name||'') : (e.name||'');
+      return `<a class="ev ${kind(e)} ${e.done?'done':''}"
+         style="left:${l}%;width:${w}%;top:${5+r*25}px"
+         href="${e.url}" target="_blank" title="${esc(e.name)}">${esc(label)}</a>`;
+    }).join('');
+
+    const nowline = day.is_today && nowM>=H0*60 && nowM<=H1*60
+      ? `<span class="noww" style="left:${pct(nowM)}%"></span>` : '';
+
+    const tray = allday.length
+      ? `<div class="tray" style="margin-top:${depth*25}px">`+
+        allday.map(e=>`<a class="ad ${e.done?'done':''}" href="${e.url}" target="_blank">${esc(e.name)}</a>`).join('')+
+        `</div>` : '';
+
+    const h = Math.max(56, 10 + depth*25 + (allday.length?26:0));
+
+    return `<div class="row ${day.is_today?'today':''} ${wknd?'wknd':''}" style="min-height:${h}px">
+      <div class="dcol">
+        <div class="dname">${DOW[dt.getDay()]}</div>
+        <div class="dnum">${dt.getDate()}</div>
+        ${day.items.length?`<div class="cnt">${day.items.length}</div>`:''}
+      </div>
+      <div class="lane">${gl}${nowline}${evs}${tray}</div>
+    </div>`;
+  }).join('');
+
+  const g=new Date(d.generated);
+  document.getElementById('gen').textContent =
+    'synced '+String(g.getHours()).padStart(2,'0')+String(g.getMinutes()).padStart(2,'0');
+})
+.catch(()=>{document.getElementById('body').innerHTML='<div class="empty">data not built yet</div>';});
+</script>
+</body>
+</html>

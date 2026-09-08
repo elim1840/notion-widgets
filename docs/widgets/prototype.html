@@ -76,6 +76,9 @@
   /* the A split: main + rail, collapses under 1000px */
   .cols{display:grid;gap:26px;margin-top:4px;
         grid-template-columns:var(--main) var(--rail);align-items:start}
+  body.flip .cols{grid-template-columns:var(--rail) var(--main)}
+  body.flip .cols > div:first-child{order:2}
+  body.flip .cols > div:last-child{order:1}
   @media (max-width:1000px){ .cols{grid-template-columns:1fr;gap:18px} }
 
   h2.sec{font-size:18.5px;font-weight:600;letter-spacing:-.01em;margin:22px 0 8px;
@@ -163,7 +166,7 @@
 </head>
 <body>
 
-<div id="ctl"><button id="th">Light</button><button id="nar">Narrow</button></div>
+<div id="ctl"><button id="flip">Today left</button><button id="th">Light</button><button id="nar">Narrow</button></div>
 
 <aside>
   <div class="ws"><span class="av">Y</span> Yohan's 2nd Brain</div>
@@ -192,13 +195,9 @@
 
     <div class="cols">
       <div>
-        <h2 class="sec">Today</h2>
-        <div class="embed"><div class="elab">embed &middot; day.html</div>
-          <iframe src="day.html" height="440" loading="lazy"></iframe></div>
-
         <h2 class="sec">This week <span class="cnt">34 events</span></h2>
-        <div class="embed"><div class="elab">embed &middot; grid-b.html</div>
-          <iframe src="grid-b.html" height="330" loading="lazy"></iframe></div>
+        <div class="embed"><div class="elab">embed &middot; week2.html</div>
+          <iframe src="week2.html" height="470" loading="lazy"></iframe></div>
 
         <h2 class="sec">Active projects <span class="cnt">Board &middot; by Phase</span></h2>
         <div class="sub">From Projects. Drag a card between columns to change its phase.</div>
@@ -221,9 +220,9 @@
       </div>
 
       <div>
-        <h3 class="r">Runway</h3>
-        <div class="embed"><div class="elab">embed &middot; runway.html</div>
-          <iframe src="runway.html" height="330" loading="lazy"></iframe></div>
+        <h3 class="r">Today</h3>
+        <div class="embed"><div class="elab">embed &middot; day.html</div>
+          <iframe src="day.html" height="620" loading="lazy"></iframe></div>
 
         <h3 class="r">This week at a glance</h3>
         <div class="rbox">
@@ -650,6 +649,11 @@ document.querySelectorAll('.vbar[data-vg]').forEach(bar=>{
   });
 });
 
+document.getElementById('flip').onclick=function(){
+  const on=document.body.classList.toggle('flip');
+  this.textContent = on ? 'Today right' : 'Today left';
+  this.classList.toggle('on', on);
+};
 document.getElementById('th').onclick=function(){
   const l=document.body.classList.toggle('light'); this.textContent=l?'Dark':'Light';
 };
