@@ -89,19 +89,41 @@
     ]
   }
 
-  Populate it with a cron job (arXiv asks for >=3 s between requests):
-    curl -sL --compressed \
-      "https://export.arxiv.org/api/query?search_query=cat%3Aastro-ph.IM+OR+cat%3Aeess.SP&sortBy=submittedDate&sortOrder=descending&max_results=8" \
-      | python3 -c 'import sys,json,xml.etree.ElementTree as ET; \
-        ns={"a":"http://www.w3.org/2005/Atom"}; r=ET.parse(sys.stdin).getroot(); \
-        print(json.dumps({"generated":__import__("datetime").datetime.utcnow().isoformat()+"Z", \
-        "query":"cat:astro-ph.IM OR cat:eess.SP", \
-        "entries":[{"id":e.find("a:id",ns).text.strip(), \
-        "title":" ".join(e.find("a:title",ns).text.split()), \
-        "authors":[a.find("a:name",ns).text for a in e.findall("a:author",ns)], \
-        "published":e.find("a:published",ns).text, \
-        "primary_category":e.find("{http://arxiv.org/schemas/atom}primary_category").get("term")} \
-        for e in r.findall("a:entry",ns)]}))' > docs/data/arxiv.json
+  Populate it with a scheduled job. A bare category query (cat:astro-ph.IM OR
+  cat:eess.SP) is mostly noise for SDA work — it returns emotion recognition
+  and gravitational-wave papers. The query below adds an abstract filter and
+  was validated 2026-09-07 against the live API; it returned collision-
+  environment modelling, satellite gravimetry, orbital-debris evolution and
+  ground-station papers. arXiv asks for >= 3 s between requests.
+
+    python3 - <<'PY' > docs/data/arxiv.json
+    import urllib.request, urllib.parse, xml.etree.ElementTree as ET, json, datetime
+    Q = ('(cat:astro-ph.IM OR cat:eess.SP OR cat:astro-ph.EP) AND '
+         '(abs:"space domain awareness" OR abs:"space situational awareness" '
+         'OR abs:"orbit determination" OR abs:"maneuver detection" '
+         'OR abs:"astrodynamics" OR abs:"geostationary" '
+         'OR abs:"orbital debris" OR abs:"satellite tracking")')
+    url = 'https://export.arxiv.org/api/query?' + urllib.parse.urlencode(
+        {'search_query': Q, 'sortBy': 'submittedDate',
+         'sortOrder': 'descending', 'max_results': 8})
+    raw = urllib.request.urlopen(
+        urllib.request.Request(url, headers={'User-Agent': 'notion-widgets/1.0'}),
+        timeout=60).read()
+    ns = {'a': 'http://www.w3.org/2005/Atom'}
+    root = ET.fromstring(raw)
+    entries = [{
+        'id': e.find('a:id', ns).text.strip(),
+        'title': ' '.join(e.find('a:title', ns).text.split()),
+        'authors': [a.find('a:name', ns).text for a in e.findall('a:author', ns)],
+        'published': e.find('a:published', ns).text,
+        'primary_category': e.find(
+            '{http://arxiv.org/schemas/atom}primary_category').get('term'),
+    } for e in root.findall('a:entry', ns)]
+    print(json.dumps({
+        'generated': datetime.datetime.now(datetime.timezone.utc)
+                     .strftime('%Y-%m-%dT%H:%M:%SZ'),
+        'query': 'SDA / astrodynamics', 'entries': entries}))
+    PY
   ===================================================================
 -->
 
@@ -113,7 +135,7 @@
 
 <script>
 var SRC       = '../data/arxiv.json';
-var MAX_SHOW  = 8;
+var MAX_SHOW  = 6;
 var STALE_HRS = 36;
 
 function pad(n,w){ n = String(Math.floor(n)); while(n.length < w) n = '0' + n; return n; }
@@ -129,7 +151,7 @@ function shortDate(iso){
 function syncStamp(iso){
   var d = new Date(iso);
   if(isNaN(d)) return 'synced \u2014';
-  return 'synced ' + pad(d.getUTCDate(),2) + MON[d.getUTCMonth()] + ' '
+  return 'synced ' + pad(d.getUTCDate(),2) + ' ' + MON[d.getUTCMonth()] + ' '
        + pad(d.getUTCHours(),2) + pad(d.getUTCMinutes(),2) + 'Z';
 }
 function authorLine(a){

@@ -42,6 +42,8 @@
   .z .lab{font-size:9px;letter-spacing:.13em;text-transform:uppercase;color:var(--faint);
           white-space:nowrap}
   .z b{display:block;font-size:19px;font-weight:500;line-height:1.15;margin-top:2px}
+  .z b s{text-decoration:none;color:var(--dim);font-size:13px;font-weight:400}
+  .z.zulu b s{color:var(--gold);opacity:.65}
   .z .off{font-size:9px;color:var(--faint);white-space:nowrap}
   .z.zulu .lab{color:var(--gold)}
   .z.zulu b{color:var(--gold)}
@@ -73,17 +75,17 @@
   <div class="zones">
     <div class="z zulu">
       <div class="lab">Zulu &middot; UTC</div>
-      <b id="z-utc">0000:00</b>
+      <b id="z-utc">0000<s>:00</s></b>
       <div class="off" id="z-utc-d">&mdash;</div>
     </div>
     <div class="z">
       <div class="lab">Colorado Springs</div>
-      <b id="z-den">0000:00</b>
+      <b id="z-den">0000<s>:00</s></b>
       <div class="off" id="z-den-d">USSPACECOM</div>
     </div>
     <div class="z">
       <div class="lab">Los Angeles</div>
-      <b id="z-lax">0000:00</b>
+      <b id="z-lax">0000<s>:00</s></b>
       <div class="off" id="z-lax-d">&mdash;</div>
     </div>
   </div>
@@ -144,15 +146,15 @@ function tick(){
 
   /* ---- secondary zones ---- */
   var Z = zoneParts(now, 'UTC');
-  document.getElementById('z-utc').textContent = hhmm(Z) + '\u2009' + Z.s;
+  document.getElementById('z-utc').innerHTML = hhmm(Z) + '<s>:' + Z.s + '</s>';
   document.getElementById('z-utc-d').textContent = 'Z \u00b7 satellite reference';
 
   var D = zoneParts(now, 'America/Denver');
-  document.getElementById('z-den').textContent = hhmm(D) + '\u2009' + D.s;
+  document.getElementById('z-den').innerHTML = hhmm(D) + '<s>:' + D.s + '</s>';
   document.getElementById('z-den-d').textContent = 'USSPACECOM \u00b7 ' + zoneOffset(now, 'America/Denver');
 
   var X = zoneParts(now, 'America/Los_Angeles');
-  document.getElementById('z-lax').textContent = hhmm(X) + '\u2009' + X.s;
+  document.getElementById('z-lax').innerHTML = hhmm(X) + '<s>:' + X.s + '</s>';
   document.getElementById('z-lax-d').textContent = zoneOffset(now, 'America/Los_Angeles');
 
   /* ---- date (local civil date) ---- */
@@ -163,7 +165,7 @@ function tick(){
   }).formatToParts(now).forEach(function(p){ dparts[p.type] = p.value; });
   document.getElementById('m-date').textContent =
     dparts.weekday.toUpperCase() + ' ' + dparts.day + ' ' +
-    dparts.month.toUpperCase() + ' ' + dparts.year;
+    dparts.month.toUpperCase().replace('.','').slice(0,3) + ' ' + dparts.year;
 
   /* ---- day-of-year (local civil date, 1-based) ---- */
   var ymd = {};

@@ -108,7 +108,7 @@
 
   <div class="sec">
     <div class="lab"><span>Next 12 hours</span><span id="hrange">&mdash;</span></div>
-    <svg class="spark" id="spark" viewBox="0 0 480 52" preserveAspectRatio="none"
+    <svg class="spark" id="spark" viewBox="0 0 480 52"
          xmlns="http://www.w3.org/2000/svg" aria-label="Hourly temperature and precipitation"></svg>
     <div class="hlabels" id="hlabels"></div>
   </div>
@@ -130,9 +130,9 @@ var URL_ = 'https://api.open-meteo.com/v1/forecast'
 /* WMO 4677/weather_code -> short label + glyph */
 var WMO = {
   0:['Clear','\u2600'],       1:['Mostly clear','\u25d4'],  2:['Partly cloudy','\u26c5'],
-  3:['Overcast','\u2601'],    45:['Fog','\u2592'],          48:['Rime fog','\u2592'],
-  51:['Light drizzle','\u2591'], 53:['Drizzle','\u2591'],   55:['Heavy drizzle','\u2593'],
-  56:['Frz drizzle','\u2591'], 57:['Frz drizzle','\u2593'],
+  3:['Overcast','\u2601'],    45:['Fog','\u2261'],          48:['Rime fog','\u2261'],
+  51:['Light drizzle','\u2234'], 53:['Drizzle','\u2234'],  55:['Heavy drizzle','\u2237'],
+  56:['Frz drizzle','\u2234'], 57:['Frz drizzle','\u2237'],
   61:['Light rain','\u2614'], 63:['Rain','\u2614'],         65:['Heavy rain','\u2614'],
   66:['Frz rain','\u2614'],   67:['Frz rain','\u2614'],
   71:['Light snow','\u2744'], 73:['Snow','\u2744'],         75:['Heavy snow','\u2744'],
@@ -141,7 +141,12 @@ var WMO = {
   85:['Snow showers','\u2744'], 86:['Snow showers','\u2744'],
   95:['Thunderstorm','\u26a1'], 96:['Storm + hail','\u26a1'], 99:['Storm + hail','\u26a1']
 };
-function wmo(c){ return WMO[c] || ['Code ' + c, '\u25cb']; }
+/* U+FE0E = variation selector-15: force TEXT (monochrome) presentation so the
+   glyphs render as line art, not colour emoji, in both Chrome and Safari. */
+function wmo(c){
+  var e = WMO[c] || ['Code ' + c, '\u25cb'];
+  return [e[0], e[1] + '\ufe0e'];
+}
 
 function pad(n,w){ n = String(Math.floor(n)); while(n.length < w) n = '0' + n; return n; }
 function r0(x){ return Math.round(x); }
@@ -171,6 +176,12 @@ function render(d){
   if(!d || !d.current || !d.daily){ return fail('Open-Meteo replied but the payload was missing the expected fields.', 'api.open-meteo.com'); }
   var cur = d.current, dl = d.daily, hr = d.hourly || {};
 
+  /* Reveal before drawing: the sparkline measures its own pixel width, and a
+     hidden element reports clientWidth 0. */
+  document.getElementById('loading').hidden = true;
+  document.getElementById('err').hidden = true;
+  document.getElementById('wrap').hidden = false;
+
   var cw = wmo(cur.weather_code);
   document.getElementById('c-temp').textContent  = r0(cur.temperature_2m);
   document.getElementById('c-feels').textContent = r0(cur.apparent_temperature);
@@ -197,7 +208,10 @@ function render(d){
     var temps = idx.map(function(i){ return hr.temperature_2m[i]; });
     var pops  = idx.map(function(i){ return (hr.precipitation_probability || [])[i] || 0; });
 
-    var W = 480, H = 52, PAD = 8, BASE = 40;        // line occupies y 4..BASE, bars below
+    var svgEl = document.getElementById('spark');
+    var W = Math.max(240, Math.round(svgEl.clientWidth || 480));
+    var H = 52, PAD = 10, BASE = 40;                // line occupies y 4..BASE, bars below
+    svgEl.setAttribute('viewBox', '0 0 ' + W + ' ' + H);
     var lo = Math.min.apply(null, temps), hi = Math.max.apply(null, temps);
     if(hi - lo < 1){ hi = lo + 1; }
     var step = idx.length > 1 ? (W - PAD * 2) / (idx.length - 1) : 0;
@@ -227,12 +241,16 @@ function render(d){
          + '" r="2.2" fill="var(--gold)"/>';
     /* min / max annotations */
     var iHi = temps.indexOf(hi), iLo = temps.indexOf(lo);
-    svg += '<text x="' + X(iHi).toFixed(1) + '" y="' + (Y(hi) - 4).toFixed(1)
-         + '" font-size="9" fill="var(--dim)" text-anchor="middle">' + r0(hi) + '</text>';
-    if(iLo !== iHi){
-      svg += '<text x="' + X(iLo).toFixed(1) + '" y="' + (Y(lo) + 9).toFixed(1)
-           + '" font-size="9" fill="var(--dim)" text-anchor="middle">' + r0(lo) + '</text>';
-    }
+    /* Anchor the label inward near either edge so it never clips. */
+    var lbl = function(i, v, dy){
+      var x = X(i), a = 'middle';
+      if(x < 14){ x = 1;     a = 'start'; }
+      if(x > W - 14){ x = W - 1; a = 'end'; }
+      return '<text x="' + x.toFixed(1) + '" y="' + dy.toFixed(1)
+           + '" font-size="9" fill="var(--dim)" text-anchor="' + a + '">' + r0(v) + '</text>';
+    };
+    svg += lbl(iHi, hi, Y(hi) - 4);
+    if(iLo !== iHi){ svg += lbl(iLo, lo, Y(lo) + 9); }
     document.getElementById('spark').innerHTML = svg;
 
     var lb = document.getElementById('hlabels');
@@ -261,13 +279,14 @@ function render(d){
   document.getElementById('wrap').hidden = false;
 }
 
+var LAST = null;
 function load(){
   fetch(URL_, { cache: 'no-store' })
     .then(function(r){
       if(!r.ok) throw new Error('HTTP ' + r.status);
       return r.json();
     })
-    .then(render)
+    .then(function(d){ LAST = d; render(d); })
     .catch(function(e){
       fail('Could not reach the Open-Meteo API (no key required, so this is a network or DNS problem, not an auth one). '
          + 'Error: ' + e.message + '. Retrying automatically every 15 minutes.',
@@ -277,6 +296,13 @@ function load(){
 
 load();
 setInterval(load, 15 * 60 * 1000);   // refresh every 15 min
+
+/* Redraw the sparkline at the new pixel width when the iframe is resized. */
+var rzT;
+window.addEventListener('resize', function(){
+  clearTimeout(rzT);
+  rzT = setTimeout(function(){ if(LAST) render(LAST); }, 180);
+});
 </script>
 </body>
 </html>
