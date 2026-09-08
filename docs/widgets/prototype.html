@@ -62,8 +62,8 @@
   .callout.warn{border-color:var(--gold);background:rgba(201,162,39,.07)}
 
   /* quick-links strip: on every page, right under the callout */
-  .nav{display:grid;grid-template-columns:repeat(auto-fit,minmax(132px,1fr));
-       gap:7px;margin:12px 0 4px}
+  .nav{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));
+       gap:8px;margin:16px 0 6px}
   .nav a{display:flex;align-items:center;gap:8px;text-decoration:none;color:inherit;
      background:var(--panel);border:1px solid var(--line);border-radius:6px;padding:8px 10px;
      cursor:pointer}
@@ -169,12 +169,11 @@
   <div class="ws"><span class="av">Y</span> Yohan's 2nd Brain</div>
   <div class="snav">&#128269; Search</div>
   <div class="sect">Favourites</div>
-  <div class="snav cur" data-p="deck">&#128760;&#65039; Flight Deck</div>
+  <div class="snav cur" data-p="deck">&#128760;&#65039; Home</div>
   <div class="sect">Spokes</div>
   <div class="snav" data-p="acad">&#127891; Academics</div>
-  <div class="snav" data-p="res">&#128300; Research &amp; Thesis</div>
-  <div class="snav" data-p="com">&#128206; Commitments</div>
-  <div class="snav" data-p="body">&#127947;&#65039; Body</div>
+  <div class="snav" data-p="res">&#128300; Research</div>
+  <div class="snav" data-p="pers">&#127968; Personal</div>
   <div class="sect">Databases</div>
   <div class="snav">&#128203; Tasks &amp; Meetings</div>
   <div class="snav">&#127891; Class Database</div>
@@ -188,9 +187,7 @@
   <div class="cover cv-deck"></div>
   <div class="wrap">
     <div class="icon">&#128760;&#65039;</div>
-    <h1 class="title">Flight Deck</h1>
-    <div class="callout"><span>&#128197;</span><span>Fall term, week 1. Classes start Wed 09 Sep.
-      Thesis scoping is the one thing that matters this month.</span></div>
+    <h1 class="title">Home</h1>
     <div class="nav" data-nav></div>
 
     <div class="cols">
@@ -248,11 +245,9 @@
 <section data-page="acad" class="hide">
   <div class="cover cv-acad"></div>
   <div class="wrap">
-    <div class="crumb" data-home>Flight Deck / Academics</div>
+    <div class="crumb" data-home>Home / Academics</div>
     <div class="icon">&#127891;</div>
     <h1 class="title">Academics</h1>
-    <div class="callout"><span>&#127891;</span><span>Six classes this term.
-      Classes end 10 Dec &middot; no assignments after 4 Dec &middot; finals 14&ndash;18 Dec.</span></div>
     <div class="nav" data-nav></div>
 
     <div class="cols">
@@ -376,12 +371,9 @@
 <section data-page="res" class="hide">
   <div class="cover cv-res"></div>
   <div class="wrap">
-    <div class="crumb" data-home>Flight Deck / Research &amp; Thesis</div>
+    <div class="crumb" data-home>Home / Research</div>
     <div class="icon">&#128300;</div>
-    <h1 class="title">Research &amp; Thesis</h1>
-    <div class="callout"><span>&#127919;</span><span><b>Thesis, Feb 2027.</b>
-      Degree application 11 Sep 26 &middot; title due 11 Dec &middot; thesis due 15 Jan 27.
-      Scope is the blocker.</span></div>
+    <h1 class="title">Research</h1>
     <div class="nav" data-nav></div>
 
     <div class="cols">
@@ -476,14 +468,12 @@
 </section>
 
 <!-- ==================== COMMITMENTS ==================== -->
-<section data-page="com" class="hide">
+<section data-page="pers" class="hide">
   <div class="cover cv-com"></div>
   <div class="wrap">
-    <div class="crumb" data-home>Flight Deck / Commitments</div>
-    <div class="icon">&#128206;</div>
-    <h1 class="title">Commitments</h1>
-    <div class="callout warn"><span>&#9888;&#65039;</span><span>External deadlines with no reminder.
-      The goal for the tripwire section is to be <b>empty</b>.</span></div>
+    <div class="crumb" data-home>Home / Personal</div>
+    <div class="icon">&#127968;</div>
+    <h1 class="title">Personal</h1>
     <div class="nav" data-nav></div>
 
     <div class="cols">
@@ -567,15 +557,7 @@
 </section>
 
 <!-- ==================== BODY ==================== -->
-<section data-page="body" class="hide">
-  <div class="cover cv-body"></div>
-  <div class="wrap">
-    <div class="crumb" data-home>Flight Deck / Body</div>
-    <div class="icon">&#127947;&#65039;</div>
-    <h1 class="title">Body</h1>
-    <div class="callout warn"><span>&#9888;&#65039;</span><span><b>No data behind this page yet.</b>
-      Workouts has 0 rows and Meal Log has no date property, so every view below would render
-      empty today. This is what it becomes once seeded.</span></div>
+    <h2 class="sec" style="margin-top:34px">Body</h2>
     <div class="nav" data-nav></div>
 
     <div class="cols">
@@ -633,11 +615,10 @@
 
 <script>
 const NAV=[
-  ['deck','&#128760;&#65039;','Flight Deck','home'],
+  ['deck','&#128760;&#65039;','Home','today &middot; this week'],
   ['acad','&#127891;','Academics','6 classes'],
   ['res','&#128300;','Research','thesis &middot; SERG'],
-  ['com','&#128206;','Commitments','deadlines'],
-  ['body','&#127947;&#65039;','Body','train &middot; eat'],
+  ['pers','&#127968;','Personal','commitments &middot; body'],
 ];
 document.querySelectorAll('[data-nav]').forEach(n=>{
   n.innerHTML = NAV.map(([k,ic,t,s])=>
