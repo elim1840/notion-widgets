@@ -1,0 +1,591 @@
+{
+ "classes": [
+  {
+   "name": "14.003 Recitation",
+   "code": "14.003",
+   "date": "2026-09-11T09:00:00.000-04:00",
+   "due": "3 days",
+   "status": "",
+   "type": ""
+  },
+  {
+   "name": "14.003 Lecture",
+   "code": "14.003",
+   "date": "2026-09-14T10:30:00.000-04:00",
+   "due": "6 days",
+   "status": "",
+   "type": ""
+  },
+  {
+   "name": "14.003 Lecture",
+   "code": "14.003",
+   "date": "2026-09-09T10:30:00.000-04:00",
+   "due": "1 day",
+   "status": "",
+   "type": ""
+  },
+  {
+   "name": "14.003 Lecture",
+   "code": "14.003",
+   "date": "2026-09-16T10:30:00.000-04:00",
+   "due": "8 days",
+   "status": "",
+   "type": ""
+  },
+  {
+   "name": "6.9270 Lecture",
+   "code": "6.9270",
+   "date": "2026-09-14T16:00:00.000-04:00",
+   "due": "6 days",
+   "status": "",
+   "type": ""
+  },
+  {
+   "name": "IDS.412 Lecture",
+   "code": "IDS.412",
+   "date": "2026-09-09T13:00:00.000-04:00",
+   "due": "1 day",
+   "status": "",
+   "type": ""
+  },
+  {
+   "name": "16.987 Seminar",
+   "code": "16.987",
+   "date": "2026-09-14T11:30:00.000-04:00",
+   "due": "6 days",
+   "status": "",
+   "type": ""
+  },
+  {
+   "name": "IDS.412 Lecture",
+   "code": "IDS.412",
+   "date": "2026-09-16T13:00:00.000-04:00",
+   "due": "8 days",
+   "status": "",
+   "type": ""
+  },
+  {
+   "name": "16.990 Lecture",
+   "code": "16.990",
+   "date": "2026-09-16T14:30:00.000-04:00",
+   "due": "8 days",
+   "status": "",
+   "type": ""
+  },
+  {
+   "name": "16.S896 Lecture",
+   "code": "16.S896",
+   "date": "2026-09-11T15:00:00.000-04:00",
+   "due": "3 days",
+   "status": "",
+   "type": ""
+  },
+  {
+   "name": "16.990 Lecture",
+   "code": "16.990",
+   "date": "2026-09-09T14:30:00.000-04:00",
+   "due": "1 day",
+   "status": "",
+   "type": ""
+  },
+  {
+   "name": "16.S896 Lecture",
+   "code": "16.S896",
+   "date": "2026-09-18T15:00:00.000-04:00",
+   "due": "10 days",
+   "status": "",
+   "type": ""
+  },
+  {
+   "name": "14.003 Recitation",
+   "code": "14.003",
+   "date": "2026-09-18T09:00:00.000-04:00",
+   "due": "10 days",
+   "status": "",
+   "type": ""
+  },
+  {
+   "name": "IDS.412 Lecture",
+   "code": "IDS.412",
+   "date": "2026-09-14T13:00:00.000-04:00",
+   "due": "6 days",
+   "status": "",
+   "type": ""
+  },
+  {
+   "name": "16.990 Lecture",
+   "code": "16.990",
+   "date": "2026-09-14T14:30:00.000-04:00",
+   "due": "6 days",
+   "status": "",
+   "type": ""
+  },
+  {
+   "name": "Template Page",
+   "code": "24.134",
+   "date": "2026-08-18",
+   "due": "Overdue by 21 days",
+   "status": "",
+   "type": ""
+  },
+  {
+   "name": "[HW] 24.134 \u2014 Complete pre-reading + assignments (before Week 10)",
+   "code": "24.134",
+   "date": "2026-08-09",
+   "due": "Overdue by 30 days",
+   "status": "Not started",
+   "type": ""
+  },
+  {
+   "name": "[HW] 24.134 \u2014 Complete pre-reading + assignments (before Week 9)",
+   "code": "24.134",
+   "date": "2026-08-02",
+   "due": "Overdue by 37 days",
+   "status": "Not started",
+   "type": ""
+  },
+  {
+   "name": "[HW] 24.134 \u2014 Complete pre-reading + assignments (before Week 8)",
+   "code": "24.134",
+   "date": "2026-07-26",
+   "due": "Overdue by 44 days",
+   "status": "Not started",
+   "type": ""
+  },
+  {
+   "name": "[HW] 24.134 \u2014 Complete pre-reading + assignments (before Week 7)",
+   "code": "24.134",
+   "date": "2026-07-19",
+   "due": "Overdue by 51 days",
+   "status": "Not started",
+   "type": ""
+  },
+  {
+   "name": "[HW] 24.134 \u2014 Complete pre-reading + assignments (before Week 5)",
+   "code": "24.134",
+   "date": "2026-07-05",
+   "due": "Overdue by 65 days",
+   "status": "Not started",
+   "type": ""
+  },
+  {
+   "name": "[HW] 24.134 \u2014 Complete pre-reading + assignments (before Week 6)",
+   "code": "24.134",
+   "date": "2026-07-12",
+   "due": "Overdue by 58 days",
+   "status": "Not started",
+   "type": ""
+  },
+  {
+   "name": "[HW] 24.134 \u2014 Complete pre-reading + assignments (before Week 4)",
+   "code": "24.134",
+   "date": "2026-06-28",
+   "due": "Overdue by 72 days",
+   "status": "Not started",
+   "type": ""
+  },
+  {
+   "name": "[HW] 24.134 \u2014 Complete pre-reading + assignments (before Week 2)",
+   "code": "24.134",
+   "date": "2026-06-14",
+   "due": "Overdue by 86 days",
+   "status": "Not started",
+   "type": ""
+  },
+  {
+   "name": "[HW] 24.134 \u2014 Complete pre-reading + assignments (before Week 3)",
+   "code": "24.134",
+   "date": "2026-06-21",
+   "due": "Overdue by 79 days",
+   "status": "Not started",
+   "type": ""
+  },
+  {
+   "name": "24.134 \u2014 Showcase signup form due",
+   "code": "24.134",
+   "date": "2026-08-15",
+   "due": "Overdue by 24 days",
+   "status": "Not started",
+   "type": ""
+  },
+  {
+   "name": "24.134 \u2014 Meet TF to discuss project idea",
+   "code": "24.134",
+   "date": "2026-07-07",
+   "due": "Overdue by 63 days",
+   "status": "Not started",
+   "type": ""
+  },
+  {
+   "name": "24.134 \u2014 Ethical Case Study assignment due",
+   "code": "24.134",
+   "date": "2026-06-30T12:30:00.000-04:00",
+   "due": "Overdue by 69 days",
+   "status": "Not started",
+   "type": ""
+  },
+  {
+   "name": "24.134 \u2014 Complete Midterm Evaluation Form",
+   "code": "24.134",
+   "date": "2026-07-07",
+   "due": "Overdue by 63 days",
+   "status": "Not started",
+   "type": ""
+  },
+  {
+   "name": "24.134 \u2014 Advocacy Conversation due",
+   "code": "24.134",
+   "date": "2026-07-21",
+   "due": "Overdue by 49 days",
+   "status": "Not started",
+   "type": ""
+  },
+  {
+   "name": "24.134 \u2014 Workshop project + submit shareable component draft",
+   "code": "24.134",
+   "date": "2026-07-28",
+   "due": "Overdue by 42 days",
+   "status": "Not started",
+   "type": ""
+  },
+  {
+   "name": "24.134 \u2014 Fall Showcase",
+   "code": "24.134",
+   "date": "2026-09-16",
+   "due": "8 days",
+   "status": "Not started",
+   "type": ""
+  },
+  {
+   "name": "24.134 \u2014 Project Proposal due",
+   "code": "24.134",
+   "date": "2026-07-14",
+   "due": "Overdue by 56 days",
+   "status": "Not started",
+   "type": ""
+  },
+  {
+   "name": "24.134 \u2014 Submit project to TF + upload shareable component",
+   "code": "24.134",
+   "date": "2026-08-21",
+   "due": "Overdue by 18 days",
+   "status": "Not started",
+   "type": ""
+  },
+  {
+   "name": "24.134 \u2014 Week 10: Living in Light of Your Values (Wrap-Up)",
+   "code": "24.134",
+   "date": "2026-08-12",
+   "due": "Overdue by 27 days",
+   "status": "Not started",
+   "type": ""
+  },
+  {
+   "name": "24.134 \u2014 Week 9: Ethics at MIT",
+   "code": "24.134",
+   "date": "2026-08-05",
+   "due": "Overdue by 34 days",
+   "status": "Not started",
+   "type": ""
+  },
+  {
+   "name": "24.134 \u2014 Week 8: Project Workshop",
+   "code": "24.134",
+   "date": "2026-07-29",
+   "due": "Overdue by 41 days",
+   "status": "Not started",
+   "type": ""
+  },
+  {
+   "name": "24.134 \u2014 Week 7: Responsibility and Social Roles",
+   "code": "24.134",
+   "date": "2026-07-22",
+   "due": "Overdue by 48 days",
+   "status": "Not started",
+   "type": ""
+  },
+  {
+   "name": "24.134 \u2014 Week 6: Social Structures and Structural Injustice",
+   "code": "24.134",
+   "date": "2026-07-15",
+   "due": "Overdue by 55 days",
+   "status": "Not started",
+   "type": ""
+  },
+  {
+   "name": "24.134 \u2014 Week 5: Technology and Justice",
+   "code": "24.134",
+   "date": "2026-07-08",
+   "due": "Overdue by 62 days",
+   "status": "Not started",
+   "type": ""
+  },
+  {
+   "name": "24.134 \u2014 Week 3: Decision-Making With Stakeholders in Mind (Ethics Protocol)",
+   "code": "24.134",
+   "date": "2026-06-24",
+   "due": "Overdue by 76 days",
+   "status": "Not started",
+   "type": ""
+  },
+  {
+   "name": "24.134 \u2014 Week 4: Values in Science and Technology",
+   "code": "24.134",
+   "date": "2026-07-01",
+   "due": "Overdue by 69 days",
+   "status": "Not started",
+   "type": ""
+  },
+  {
+   "name": "24.134 \u2014 Week 1: Introduction \u2014 Ethics of Science and Technology",
+   "code": "24.134",
+   "date": "2026-06-10",
+   "due": "Overdue by 90 days",
+   "status": "Not started",
+   "type": ""
+  },
+  {
+   "name": "24.134 \u2014 Week 2: Effective Altruism",
+   "code": "24.134",
+   "date": "2026-06-17",
+   "due": "Overdue by 83 days",
+   "status": "Not started",
+   "type": ""
+  },
+  {
+   "name": "24.134 Experiential Ethics",
+   "code": "24.134",
+   "date": "",
+   "due": "No date set",
+   "status": "Not started",
+   "type": ""
+  }
+ ],
+ "projects": [
+  {
+   "name": "AI-Lab-Bridge \u2014 Multi-Machine Agent Pipeline",
+   "phase": "Research",
+   "pri": "",
+   "blocker": "",
+   "next": "",
+   "status": "Active"
+  },
+  {
+   "name": "Career + Certifications",
+   "phase": "Planning",
+   "pri": "Medium",
+   "blocker": "",
+   "next": "",
+   "status": "Active"
+  },
+  {
+   "name": "AI + Automation Workshop with Yohan 2nd Version",
+   "phase": "",
+   "pri": "",
+   "blocker": "",
+   "next": "",
+   "status": ""
+  },
+  {
+   "name": "Personal Investing System",
+   "phase": "Research",
+   "pri": "High",
+   "blocker": "",
+   "next": "",
+   "status": "Active"
+  },
+  {
+   "name": "New Page Template",
+   "phase": "",
+   "pri": "",
+   "blocker": "",
+   "next": "",
+   "status": ""
+  },
+  {
+   "name": "\ud83d\udcca Portfolio Terminal \u2014 MVP Foundation",
+   "phase": "Planning",
+   "pri": "High",
+   "blocker": "",
+   "next": "",
+   "status": "Active"
+  },
+  {
+   "name": "\ud83d\udcc8 Claude/Codex \u2194 TradingView + Real-Time Trading Stack",
+   "phase": "Planning",
+   "pri": "Medium",
+   "blocker": "",
+   "next": "",
+   "status": "Active"
+  },
+  {
+   "name": "\ud83d\uddfa\ufe0f OutTheChat \u2014 Travel App + Marketing Site",
+   "phase": "Planning",
+   "pri": "Medium",
+   "blocker": "",
+   "next": "",
+   "status": "Active"
+  },
+  {
+   "name": "Adventures + Personal Travel Log",
+   "phase": "Planning",
+   "pri": "Medium",
+   "blocker": "",
+   "next": "",
+   "status": "Active"
+  },
+  {
+   "name": "Send Patrick the Mass Estimates of each of the components",
+   "phase": "Archive",
+   "pri": "",
+   "blocker": "",
+   "next": "",
+   "status": ""
+  },
+  {
+   "name": "Fitness",
+   "phase": "Planning",
+   "pri": "High",
+   "blocker": "",
+   "next": "2026-06-09",
+   "status": "Active"
+  },
+  {
+   "name": "AeroSpace Class Task",
+   "phase": "",
+   "pri": "",
+   "blocker": "",
+   "next": "",
+   "status": ""
+  },
+  {
+   "name": "Startups",
+   "phase": "Planning",
+   "pri": "Medium",
+   "blocker": "",
+   "next": "",
+   "status": "Active"
+  },
+  {
+   "name": "Supervised Machine Learning Methods",
+   "phase": "Research",
+   "pri": "",
+   "blocker": "",
+   "next": "",
+   "status": "Active"
+  },
+  {
+   "name": "Reports & Summaries",
+   "phase": "Research",
+   "pri": "Medium",
+   "blocker": "",
+   "next": "",
+   "status": "Active"
+  },
+  {
+   "name": "AI + Research Workflows Study",
+   "phase": "Research",
+   "pri": "High",
+   "blocker": "",
+   "next": "",
+   "status": "Active"
+  },
+  {
+   "name": "Notion + AI Power User",
+   "phase": "Research",
+   "pri": "High",
+   "blocker": "",
+   "next": "",
+   "status": "Active"
+  },
+  {
+   "name": "Vibe Coding MVP Workflow",
+   "phase": "Research",
+   "pri": "High",
+   "blocker": "",
+   "next": "",
+   "status": "Active"
+  },
+  {
+   "name": "AI Agents Mastery",
+   "phase": "Research",
+   "pri": "High",
+   "blocker": "",
+   "next": "",
+   "status": "Active"
+  },
+  {
+   "name": "Personal Portfolio",
+   "phase": "Planning",
+   "pri": "Medium",
+   "blocker": "",
+   "next": "",
+   "status": "Active"
+  },
+  {
+   "name": "AI Skill Stack REPO",
+   "phase": "Research",
+   "pri": "Medium",
+   "blocker": "",
+   "next": "",
+   "status": "Active"
+  },
+  {
+   "name": "RASCAL",
+   "phase": "",
+   "pri": "",
+   "blocker": "",
+   "next": "2026-05-12",
+   "status": ""
+  },
+  {
+   "name": "AI + Automation Workshop with Yohan",
+   "phase": "",
+   "pri": "",
+   "blocker": "",
+   "next": "",
+   "status": ""
+  },
+  {
+   "name": "AI Certifications",
+   "phase": "",
+   "pri": "",
+   "blocker": "",
+   "next": "",
+   "status": ""
+  },
+  {
+   "name": "MarsToTable",
+   "phase": "",
+   "pri": "",
+   "blocker": "",
+   "next": "",
+   "status": ""
+  },
+  {
+   "name": "MITRE ",
+   "phase": "",
+   "pri": "",
+   "blocker": "",
+   "next": "",
+   "status": ""
+  },
+  {
+   "name": "Publication",
+   "phase": "",
+   "pri": "",
+   "blocker": "",
+   "next": "",
+   "status": ""
+  },
+  {
+   "name": "TPP/AERO Thesis",
+   "phase": "",
+   "pri": "",
+   "blocker": "",
+   "next": "",
+   "status": ""
+  }
+ ],
+ "lit": []
+}
