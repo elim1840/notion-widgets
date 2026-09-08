@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Nav</title>
+<style>
+  :root{
+    --bg:#191919; --panel:#202020; --line:#2f2f2f;
+    --ink:#e9e9e7; --dim:#9b9a97; --faint:#6f6e6b;
+    --blue:#5b93d3; --purple:#9a6dd7; --amber:#c9a227; --red:#e06c6c; --green:#5fa87a;
+  }
+  @media (prefers-color-scheme: light){
+    :root{ --bg:#fff; --panel:#f7f7f5; --line:#e6e5e1;
+           --ink:#37352f; --dim:#787774; --faint:#9b9a97; }
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--bg);color:var(--ink);padding:10px 12px;
+       font:13px/1.35 -apple-system,BlinkMacSystemFont,"Segoe UI",Inter,sans-serif;
+       -webkit-font-smoothing:antialiased}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:8px}
+  a.t{display:flex;align-items:center;gap:9px;text-decoration:none;color:inherit;
+      background:var(--panel);border:1px solid var(--line);border-radius:7px;
+      padding:10px 12px;transition:border-color .12s,transform .12s}
+  a.t:hover{transform:translateY(-1px)}
+  a.t .ic{font-size:17px;line-height:1;flex:0 0 auto}
+  a.t b{font-size:13px;font-weight:500;display:block;line-height:1.25}
+  a.t span{font-size:10px;color:var(--faint);display:block;margin-top:2px;
+     letter-spacing:.02em}
+  a.acad:hover{border-color:var(--purple)}
+  a.res:hover {border-color:var(--green)}
+  a.com:hover {border-color:var(--amber)}
+  a.body:hover{border-color:var(--red)}
+  a.deck:hover{border-color:var(--blue)}
+</style>
+</head>
+<body>
+<div class="grid">
+  <a class="t deck" href="https://app.notion.com/p/Flight-Deck-3d5ea74eb77981a8bf4dda3df5d6dbef" target="_blank">
+    <span class="ic">&#128760;&#65039;</span><span><b>Flight Deck</b><span>home</span></span></a>
+  <a class="t acad" id="acad" href="#" target="_blank">
+    <span class="ic">&#127891;</span><span><b>Academics</b><span>6 classes</span></span></a>
+  <a class="t res" id="res" href="#" target="_blank">
+    <span class="ic">&#128300;</span><span><b>Research</b><span>thesis &middot; SERG</span></span></a>
+  <a class="t com" id="com" href="#" target="_blank">
+    <span class="ic">&#128206;</span><span><b>Commitments</b><span>deadlines</span></span></a>
+  <a class="t body" id="body" href="#" target="_blank">
+    <span class="ic">&#127947;&#65039;</span><span><b>Body</b><span>train &middot; eat</span></span></a>
+</div>
+<script>
+// spoke page ids are injected at build time into data/nav.json
+fetch('../data/nav.json?t='+Date.now()).then(r=>r.json()).then(n=>{
+  for(const k of ['acad','res','com','body']){
+    if(n[k]) document.getElementById(k).href=n[k];
+  }
+}).catch(()=>{});
+</script>
+</body>
+</html>

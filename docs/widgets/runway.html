@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Runway</title>
+<style>
+  :root{
+    --bg:#191919; --panel:#202020; --line:#2f2f2f; --hair:#242424;
+    --ink:#e9e9e7; --dim:#9b9a97; --faint:#6f6e6b;
+    --red:#e06c6c; --amber:#c9a227; --blue:#5b93d3; --green:#5fa87a;
+  }
+  @media (prefers-color-scheme: light){
+    :root{ --bg:#fff; --panel:#f7f7f5; --line:#e6e5e1; --hair:#efeeec;
+           --ink:#37352f; --dim:#787774; --faint:#9b9a97; }
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--bg);color:var(--ink);padding:14px 16px;
+       font:13px/1.4 -apple-system,BlinkMacSystemFont,"Segoe UI",Inter,sans-serif;
+       -webkit-font-smoothing:antialiased}
+  .hd{font-size:10px;color:var(--faint);text-transform:uppercase;letter-spacing:.09em;
+      padding-bottom:8px;margin-bottom:2px;border-bottom:1px solid var(--line);
+      display:flex;justify-content:space-between}
+
+  .row{display:grid;grid-template-columns:52px 1fr;gap:12px;align-items:center;
+       padding:9px 0;border-bottom:1px solid var(--hair);text-decoration:none;color:inherit}
+  .row:last-child{border-bottom:0}
+  .row:hover{background:var(--panel)}
+  .nbox{text-align:right}
+  .n{font-size:21px;font-weight:600;letter-spacing:-.03em;line-height:1;
+     font-variant-numeric:tabular-nums}
+  .n.red{color:var(--red)} .n.amb{color:var(--amber)} .n.dim{color:var(--faint)}
+  .u{font-size:9px;color:var(--faint);text-transform:uppercase;letter-spacing:.06em;
+     display:block;margin-top:2px}
+  .lab b{font-size:13px;font-weight:500;display:block;line-height:1.3}
+  .lab span{font-size:10.5px;color:var(--dim);display:block;margin-top:2px}
+  .bar{height:3px;background:var(--hair);border-radius:2px;margin-top:5px;overflow:hidden}
+  .bar i{display:block;height:100%;border-radius:2px}
+  .sec{font-size:9.5px;color:var(--faint);text-transform:uppercase;letter-spacing:.08em;
+       padding:12px 0 4px;border-bottom:1px solid var(--hair);margin-bottom:2px}
+  .none{color:var(--faint);font-style:italic;font-size:12px;padding:14px 0}
+</style>
+</head>
+<body>
+<div class="hd"><span>Runway</span><span id="todayl"></span></div>
+<div id="out"><div class="none">loading…</div></div>
+
+<script>
+// Hard academic + thesis dates. Edit here.
+const FIXED = [
+  {name:"Degree application",      date:"2026-09-11", note:"Feb 2027 degree list"},
+  {name:"Classes start",           date:"2026-09-09", note:"Fall term"},
+  {name:"Thesis title due",        date:"2026-12-11", note:"registrar"},
+  {name:"Last day for assignments",date:"2026-12-04", note:"no work after this"},
+  {name:"Classes end",             date:"2026-12-10", note:""},
+  {name:"Finals begin",            date:"2026-12-14", note:"through 18 Dec"},
+  {name:"Thesis due",              date:"2027-01-15", note:"hard deadline"},
+];
+const MON=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+const esc=s=>(s||'').replace(/[<>&]/g,c=>({'<':'&lt;','>':'&gt;','&':'&amp;'}[c]));
+const dayOf = iso => iso.slice(0,10);
+function daysBetween(a,b){
+  return Math.round((new Date(b+'T12:00:00') - new Date(a+'T12:00:00'))/864e5);
+}
+function fmt(iso){
+  const d=new Date(iso+'T12:00:00');
+  return d.getDate()+' '+MON[d.getMonth()];
+}
+function row(name, note, days, href, total){
+  const cls = days<0 ? 'dim' : days<=3 ? 'red' : days<=14 ? 'amb' : '';
+  const val = days<0 ? '—' : days;
+  const unit= days<0 ? 'past' : days===0 ? 'today' : days===1 ? 'day' : 'days';
+  let bar='';
+  if(total && days>=0 && days<=total){
+    const pct = Math.max(2, Math.min(100, ((total-days)/total)*100));
+    const col = days<=14?'var(--red)':days<=45?'var(--amber)':'var(--blue)';
+    bar = `<div class="bar"><i style="width:${pct}%;background:${col}"></i></div>`;
+  }
+  const tag = href?'a':'div';
+  const at  = href?`href="${href}" target="_blank"`:'';
+  return `<${tag} class="row" ${at}>
+     <div class="nbox"><div class="n ${cls}">${val}</div><span class="u">${unit}</span></div>
+     <div class="lab"><b>${esc(name)}</b><span>${esc(note)}</span>${bar}</div>
+   </${tag}>`;
+}
+
+fetch('../data/tasks.json?t='+Date.now()).then(r=>r.json()).then(d=>{
+  const today = d.today;
+  document.getElementById('todayl').textContent = fmt(today);
+
+  // --- next 4 real commitments from Notion (not done, dated, future)
+  const live = (d.upcoming||[])
+    .filter(t=>t.date && !t.done)
+    .map(t=>({name:t.name, day:dayOf(t.date), url:t.url,
+              note:[t.meeting_type, t.location].filter(Boolean).join(' · ')}))
+    .filter(t=>daysBetween(today,t.day)>=0)
+    .sort((a,b)=>a.day.localeCompare(b.day))
+    .slice(0,4);
+
+  // --- fixed milestones still ahead
+  const fixed = FIXED
+    .map(f=>({...f, days:daysBetween(today,f.date)}))
+    .filter(f=>f.days>=0)
+    .sort((a,b)=>a.days-b.days)
+    .slice(0,5);
+
+  let html='';
+  if(live.length){
+    html += `<div class="sec">Next up</div>`;
+    html += live.map(t=>row(t.name, t.note||fmt(t.day), daysBetween(today,t.day), t.url)).join('');
+  }
+  if(fixed.length){
+    const horizon = fixed[fixed.length-1].days || 1;
+    html += `<div class="sec">Term &amp; thesis</div>`;
+    html += fixed.map(f=>row(f.name, f.note||fmt(f.date), f.days, null, horizon)).join('');
+  }
+  document.getElementById('out').innerHTML = html || '<div class="none">nothing ahead</div>';
+})
+.catch(()=>{ document.getElementById('out').innerHTML='<div class="none">data not built yet</div>'; });
+</script>
+</body>
+</html>

@@ -207,27 +207,96 @@
     </div>
 
     <h2 class="sec">By class <span class="cnt">grouped</span></h2>
-    <div class="vbar"><span class="vtab on">Table</span><span class="vtab">Board</span>
-      <span class="vtab">Calendar</span><span class="vtab">Timeline</span>
+    <div class="vbar" data-vg="acad">
+      <span class="vtab on" data-v="table">Table</span><span class="vtab" data-v="board">Board</span>
+      <span class="vtab" data-v="cal">Calendar</span><span class="vtab" data-v="tl">Timeline</span>
       <span class="vspacer"></span><span class="vbtn">Filter: not Done</span>
       <span class="vbtn">Sort: Date</span><span class="vbtn">Group: Class Code</span></div>
 
-    <div class="gt"><span class="chip b">14.003</span> Microeconomic Theory &mdash; 5 items</div>
-    <table>
-      <tr><th style="width:30px"></th><th>Item</th><th>Type</th><th>Date</th><th>Due in</th></tr>
-      <tr><td><span class="cb"></span></td><td>14.003 Lecture</td><td><span class="chip">Lecture</span></td><td>Wed 09 Sep</td><td><span class="chip r">1 day</span></td></tr>
-      <tr><td><span class="cb"></span></td><td>14.003 Recitation</td><td><span class="chip">Recitation</span></td><td>Fri 11 Sep</td><td>3 days</td></tr>
-      <tr><td><span class="cb"></span></td><td>14.003 Lecture</td><td><span class="chip">Lecture</span></td><td>Mon 14 Sep</td><td>6 days</td></tr>
-    </table>
+    <!-- TABLE -->
+    <div data-view="acad-table">
+      <div class="gt"><span class="chip b">14.003</span> Microeconomic Theory &mdash; 5 items</div>
+      <table>
+        <tr><th style="width:30px"></th><th>Item</th><th>Type</th><th>Date</th><th>Due in</th></tr>
+        <tr><td><span class="cb"></span></td><td>14.003 Lecture</td><td><span class="chip">Lecture</span></td><td>Wed 09 Sep</td><td><span class="chip r">1 day</span></td></tr>
+        <tr><td><span class="cb"></span></td><td>14.003 Recitation</td><td><span class="chip">Recitation</span></td><td>Fri 11 Sep</td><td>3 days</td></tr>
+        <tr><td><span class="cb"></span></td><td>14.003 Lecture</td><td><span class="chip">Lecture</span></td><td>Mon 14 Sep</td><td>6 days</td></tr>
+      </table>
+      <div class="gt"><span class="chip g">IDS.412</span> &mdash; 3 items</div>
+      <table>
+        <tr><td style="width:30px"><span class="cb"></span></td><td>IDS.412 Lecture</td><td><span class="chip">Lecture</span></td><td>Wed 09 Sep</td><td><span class="chip r">1 day</span></td></tr>
+        <tr><td><span class="cb"></span></td><td>IDS.412 Lecture</td><td><span class="chip">Lecture</span></td><td>Mon 14 Sep</td><td>6 days</td></tr>
+      </table>
+      <div class="gt"><span class="chip p">16.990</span> &mdash; 3 items &nbsp;
+        <span class="chip">16.987</span> <span class="chip">16.S896</span> <span class="chip">6.9270</span></div>
+    </div>
 
-    <div class="gt"><span class="chip g">IDS.412</span> &mdash; 3 items</div>
-    <table>
-      <tr><td style="width:30px"><span class="cb"></span></td><td>IDS.412 Lecture</td><td><span class="chip">Lecture</span></td><td>Wed 09 Sep</td><td><span class="chip r">1 day</span></td></tr>
-      <tr><td><span class="cb"></span></td><td>IDS.412 Lecture</td><td><span class="chip">Lecture</span></td><td>Mon 14 Sep</td><td>6 days</td></tr>
-    </table>
+    <!-- BOARD -->
+    <div data-view="acad-board" class="hide">
+      <div class="board" style="grid-template-columns:repeat(4,minmax(0,1fr))">
+        <div class="bcol"><div class="bhead"><span>14.003</span><span>5</span></div>
+          <div class="card">Lecture<div class="cm"><span class="chip r">1 day</span></div></div>
+          <div class="card">Recitation<div class="cm"><span class="chip">3 days</span></div></div>
+          <div class="card">Lecture<div class="cm"><span class="chip">6 days</span></div></div>
+        </div>
+        <div class="bcol"><div class="bhead"><span>IDS.412</span><span>3</span></div>
+          <div class="card">Lecture<div class="cm"><span class="chip r">1 day</span></div></div>
+          <div class="card">Lecture<div class="cm"><span class="chip">6 days</span></div></div>
+        </div>
+        <div class="bcol"><div class="bhead"><span>16.990</span><span>3</span></div>
+          <div class="card">Lecture<div class="cm"><span class="chip">6 days</span></div></div>
+        </div>
+        <div class="bcol"><div class="bhead"><span>Other</span><span>4</span></div>
+          <div class="card">16.987 &middot; 16.S896 &middot; 6.9270<div class="cm"><span class="chip">later</span></div></div>
+        </div>
+      </div>
+      <div class="note">Board grouped by Class Code &mdash; drag a card to reassign its class.</div>
+    </div>
 
-    <div class="gt"><span class="chip p">16.990</span> &mdash; 3 items &nbsp;
-      <span class="chip">16.987</span> <span class="chip">16.S896</span> <span class="chip">6.9270</span></div>
+    <!-- CALENDAR -->
+    <div data-view="acad-cal" class="hide">
+      <table style="table-layout:fixed">
+        <tr><th>Mon</th><th>Tue</th><th>Wed</th><th>Thu</th><th>Fri</th><th>Sat</th><th>Sun</th></tr>
+        <tr style="height:78px;vertical-align:top">
+          <td><div style="font-size:11px;color:var(--faint)">7</div></td>
+          <td><div style="font-size:11px;color:var(--faint)">8</div>
+              <div class="chip" style="margin-top:3px">Reorientation</div></td>
+          <td style="background:var(--panel)"><div style="font-size:11px;font-weight:600">9</div>
+              <div class="chip b" style="margin-top:3px">14.003</div>
+              <div class="chip g" style="margin-top:3px">IDS.412</div></td>
+          <td><div style="font-size:11px;color:var(--faint)">10</div></td>
+          <td><div style="font-size:11px;color:var(--faint)">11</div>
+              <div class="chip b" style="margin-top:3px">14.003 Rec</div></td>
+          <td><div style="font-size:11px;color:var(--faint)">12</div></td>
+          <td><div style="font-size:11px;color:var(--faint)">13</div></td>
+        </tr>
+        <tr style="height:78px;vertical-align:top">
+          <td><div style="font-size:11px;color:var(--faint)">14</div>
+              <div class="chip b" style="margin-top:3px">14.003</div>
+              <div class="chip p" style="margin-top:3px">6.9270</div></td>
+          <td><div style="font-size:11px;color:var(--faint)">15</div></td>
+          <td><div style="font-size:11px;color:var(--faint)">16</div>
+              <div class="chip g" style="margin-top:3px">IDS.412</div></td>
+          <td><div style="font-size:11px;color:var(--faint)">17</div></td>
+          <td><div style="font-size:11px;color:var(--faint)">18</div></td>
+          <td><div style="font-size:11px;color:var(--faint)">19</div></td>
+          <td><div style="font-size:11px;color:var(--faint)">20</div></td>
+        </tr>
+      </table>
+      <div class="note">Calendar view of the same rows &mdash; best for spotting collision weeks.</div>
+    </div>
+
+    <!-- TIMELINE -->
+    <div data-view="acad-tl" class="hide">
+      <table>
+        <tr><th style="width:90px">Class</th><th>Sep</th><th>Oct</th><th>Nov</th><th>Dec</th></tr>
+        <tr><td><span class="chip b">14.003</span></td><td colspan="4"><div class="prog"><i style="width:96%"></i></div></td></tr>
+        <tr><td><span class="chip g">IDS.412</span></td><td colspan="4"><div class="prog"><i style="width:96%;background:var(--gold)"></i></div></td></tr>
+        <tr><td><span class="chip p">16.990</span></td><td colspan="4"><div class="prog"><i style="width:96%;background:var(--purple)"></i></div></td></tr>
+        <tr><td><span class="chip">16.987</span></td><td colspan="4"><div class="prog"><i style="width:62%;background:var(--green)"></i></div></td></tr>
+      </table>
+      <div class="note">Timeline &mdash; one bar per class across the term. Needs a start and end date on each row.</div>
+    </div>
 
     <div class="warn"><b>Gap:</b> Task Status is empty on all 45 rows, so "not Done" cannot filter anything yet.
       Fill it on graded items only &mdash; lectures do not need a status.</div>
@@ -407,6 +476,21 @@ document.querySelectorAll('.snav[data-p]').forEach(n=>n.onclick=()=>go(n.dataset
 document.querySelectorAll('[data-go]').forEach(b=>b.onclick=()=>go(b.dataset.go));
 document.querySelectorAll('.crumb').forEach(c=>{c.style.cursor='pointer';c.onclick=()=>go('deck');});
 if(location.hash) go(location.hash.slice(1));
+
+// database view tabs — actually switch the rendered view
+document.querySelectorAll('.vbar[data-vg]').forEach(bar=>{
+  const grp=bar.dataset.vg;
+  bar.querySelectorAll('.vtab[data-v]').forEach(tab=>{
+    tab.onclick=()=>{
+      bar.querySelectorAll('.vtab').forEach(t=>t.classList.remove('on'));
+      tab.classList.add('on');
+      document.querySelectorAll(`[data-view^="${grp}-"]`).forEach(v=>{
+        v.classList.toggle('hide', v.dataset.view!==`${grp}-${tab.dataset.v}`);
+      });
+    };
+  });
+});
+
 const th=document.getElementById('th');
 th.onclick=()=>{const l=document.body.classList.toggle('light');th.textContent=l?'Dark':'Light';};
 </script>
