@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Term Progress</title>
+<style>
+  :root{
+    --bg:#191919; --panel:#202020; --line:#2f2f2f; --hair:#252525;
+    --ink:#e9e9e7; --dim:#9b9a97; --faint:#6f6e6b;
+    --blue:#5b93d3; --gold:#c9a227; --red:#e06c6c; --green:#5fa87a; --purple:#9a6dd7;
+  }
+  @media (prefers-color-scheme: light){
+    :root{ --bg:#fff; --panel:#f7f7f5; --line:#e6e5e1; --hair:#efeeec;
+           --ink:#37352f; --dim:#787774; --faint:#9b9a97; }
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--bg);color:var(--ink);padding:9px 14px;
+       font:13px/1.4 -apple-system,BlinkMacSystemFont,"Segoe UI",Inter,sans-serif;
+       -webkit-font-smoothing:antialiased}
+  .num{font-variant-numeric:tabular-nums;font-feature-settings:"tnum" 1}
+
+  .hd{font-size:10px;color:var(--faint);text-transform:uppercase;letter-spacing:.09em;
+      display:flex;justify-content:space-between;align-items:baseline;gap:10px}
+  .hd .r{text-transform:none;letter-spacing:.02em;font-size:11px;color:var(--dim);
+         font-variant-numeric:tabular-nums;white-space:nowrap}
+  .hd .r b{color:var(--ink);font-weight:600}
+
+  /* ---- the strip ---- */
+  .wrap{position:relative;margin-top:15px;height:47px}
+  .track{position:absolute;left:0;right:0;top:12px;height:10px;border-radius:5px;
+         background:var(--hair);border:1px solid var(--line);overflow:hidden}
+  .seg{position:absolute;top:0;bottom:0}
+  .s-term  {background:rgba(91,147,211,.20)}
+  .s-final {background:rgba(224,108,108,.24)}
+  .s-break {background:rgba(155,154,151,.10)}
+  .fill{position:absolute;left:0;top:0;bottom:0;background:var(--blue);opacity:.55}
+
+  /* milestone ticks sit on the bar; numbered badges hang below it */
+  .tk{position:absolute;top:8px;height:18px;width:2px;margin-left:-1px;
+      background:var(--ink);opacity:.55}
+  .tk.past{opacity:.28}
+  .bdg{position:absolute;top:27px;transform:translateX(-50%);z-index:2;
+       font-size:9px;line-height:12px;height:12px;min-width:12px;text-align:center;
+       border-radius:6px;padding:0 3px;background:var(--panel);
+       border:1px solid var(--line);color:var(--dim);
+       font-variant-numeric:tabular-nums}
+  .bdg.alt{top:40px}
+
+  /* you-are-here */
+  .now{position:absolute;top:4px;bottom:0;width:2px;margin-left:-1px;background:var(--gold)}
+  .now:after{content:"";position:absolute;left:-3px;top:-4px;width:0;height:0;
+             border-left:4px solid transparent;border-right:4px solid transparent;
+             border-top:5px solid var(--gold)}
+  .nowlb{position:absolute;top:-13px;transform:translateX(-50%);white-space:nowrap;
+         font-size:9.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--gold);
+         font-variant-numeric:tabular-nums}
+
+  .ends{display:flex;justify-content:space-between;font-size:10px;color:var(--faint);
+        margin-top:12px;font-variant-numeric:tabular-nums}
+
+  .leg{display:flex;flex-wrap:wrap;gap:3px 9px;margin-top:6px;
+       padding-top:6px;border-top:1px solid var(--line)}
+  .m{display:flex;align-items:center;gap:4px;font-size:10.5px;white-space:nowrap;
+     line-height:15px;font-variant-numeric:tabular-nums}
+  .m i{font-style:normal;font-size:9px;line-height:12px;height:12px;min-width:12px;
+       text-align:center;border-radius:6px;padding:0 3px;background:var(--hair);
+       color:var(--dim);border:1px solid var(--line)}
+  .m .d{color:var(--dim)}
+  .m .t{color:var(--ink)}
+  .m .c{font-size:10.5px;padding:0 6px;border-radius:3px;line-height:15px}
+  .m.past{opacity:.42}
+  .m.past .t{color:var(--dim)}
+  .k-blue  .c{background:rgba(91,147,211,.16);color:var(--blue)}
+  .k-red   .c{background:rgba(224,108,108,.18);color:var(--red)}
+  .k-gold  .c{background:rgba(201,162,39,.18);color:var(--gold)}
+  .k-purple .c{background:rgba(154,109,215,.18);color:var(--purple)}
+  .k-green .c{background:rgba(95,168,122,.18);color:var(--green)}
+  .k-dim   .c{background:rgba(155,154,151,.14);color:var(--faint)}
+</style>
+</head>
+<body>
+<div class="hd"><span>Fall 2026 · Term Progress</span><span class="r" id="hr"></span></div>
+<div class="wrap" id="wrap"></div>
+<div class="ends"><span id="e0"></span><span id="e1"></span></div>
+<div class="leg" id="leg"></div>
+
+<script>
+(function(){
+  /* Dates are parsed by regex into a noon-anchored local Date so no timezone
+     offset can shift the calendar day. "Today" always comes from the browser
+     clock — nothing about the current date is hardcoded. */
+  var ISO=/^(\d{4})-(\d{2})-(\d{2})/;
+  function D(s){ var m=ISO.exec(s); return new Date(m[1]+'-'+m[2]+'-'+m[3]+'T12:00:00'); }
+  function today(){ var n=new Date();
+    return new Date(n.getFullYear(),n.getMonth(),n.getDate(),12,0,0,0); }
+  var DAY=864e5, d2=function(a,b){return Math.round((b-a)/DAY);};
+  var MON=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+  function fmt(d){ return String(d.getDate()).padStart(2,'0')+' '+MON[d.getMonth()]; }
+  function fmtY(d){ return fmt(d)+' '+d.getFullYear(); }
+
+  /* Fixed Fall 2026 / thesis calendar. k = colour key. */
+  var M=[
+    {d:'2026-09-09', t:'Classes start',    k:'blue'},
+    {d:'2026-09-11', t:'Degree application',s:'Degree app',k:'purple'},
+    {d:'2026-12-04', t:'Last assignment',  s:'Last assign',k:'red'},
+    {d:'2026-12-10', t:'Classes end',      k:'blue'},
+    {d:'2026-12-11', t:'Thesis title due', s:'Thesis title',k:'purple'},
+    {d:'2026-12-14', t:'Finals start',     k:'red'},
+    {d:'2026-12-18', t:'Finals end',       k:'red'},
+    {d:'2027-01-15', t:'Thesis due',       k:'gold'}
+  ];
+  M.forEach(function(m){ m.dt=D(m.d); });
+
+  var CLS_START=M[0].dt, LAST_ASG=M[2].dt, CLS_END=M[3].dt,
+      FIN_A=M[5].dt, FIN_B=M[6].dt, THESIS=M[7].dt;
+
+  var t0=today();
+  // Axis runs from term start to thesis submission so every milestone fits on
+  // one strip. If today is still before the term, the axis stretches back to
+  // today so the "you are here" marker stays truthful rather than pinned at 0.
+  var A=new Date(Math.min(t0.getTime(),CLS_START.getTime()));
+  var B=THESIS, span=B-A;
+  function pct(d){ return Math.max(0,Math.min(100,(d-A)/span*100)); }
+
+  // Headline progress is measured over the academic term itself
+  // (classes start -> finals end), not the thesis tail.
+  var termSpan=d2(CLS_START,FIN_B), elapsed=d2(CLS_START,t0);
+  var prog=Math.max(0,Math.min(100,elapsed/termSpan*100));
+  var dayN=Math.max(0,Math.min(termSpan,elapsed))+ (elapsed>=0?1:0);
+
+  var hr=document.getElementById('hr');
+  if(elapsed<0){
+    hr.innerHTML='term starts in <b>'+(-elapsed)+'</b> d · <b>'+d2(t0,THESIS)+
+                 '</b> d to thesis';
+  }else if(t0>FIN_B){
+    hr.innerHTML='term complete · <b>'+Math.max(0,d2(t0,THESIS))+'</b> d to thesis';
+  }else{
+    hr.innerHTML='day <b>'+dayN+'</b> of '+(termSpan+1)+' · <b>'+prog.toFixed(0)+
+                 '%</b> · <b>'+d2(t0,CLS_END)+'</b> d to classes end';
+  }
+
+  var w=document.getElementById('wrap');
+  var h='<div class="track">'+
+        '<div class="seg s-term"  style="left:'+pct(CLS_START)+'%;right:'+(100-pct(CLS_END))+'%"></div>'+
+        '<div class="seg s-break" style="left:'+pct(CLS_END)+'%;right:'+(100-pct(THESIS))+'%"></div>'+
+        '<div class="seg s-final" style="left:'+pct(FIN_A)+'%;right:'+(100-pct(FIN_B))+'%"></div>'+
+        '<div class="fill" style="width:'+pct(t0)+'%"></div>'+
+        '</div>';
+  M.forEach(function(m,i){
+    var p=pct(m.dt), past=m.dt<t0;
+    // Badges within ~2% of the previous one would overlap, so they alternate
+    // onto a second row instead of colliding (10/11 Dec, 14/18 Dec).
+    var near = i>0 && (p-pct(M[i-1].dt))<2.2 && !M[i-1].alt;
+    m.alt=near;
+    h+='<div class="tk'+(past?' past':'')+'" style="left:'+p+'%"></div>'+
+       '<div class="bdg'+(near?' alt':'')+'" style="left:'+p+'%" title="'+
+         m.t+' — '+fmtY(m.dt)+'">'+(i+1)+'</div>';
+  });
+  var np=pct(t0);
+  h+='<div class="now" style="left:'+np+'%"></div>'+
+     '<div class="nowlb" style="left:'+np+'%;'+
+       (np<8?'transform:translateX(-8%)':np>92?'transform:translateX(-92%)':'')+
+       '">today '+fmt(t0)+'</div>';
+  w.innerHTML=h;
+
+  document.getElementById('e0').textContent=fmtY(A);
+  document.getElementById('e1').textContent=fmtY(B);
+
+  document.getElementById('leg').innerHTML=M.map(function(m,i){
+    var n=d2(t0,m.dt), past=n<0;
+    var rel = n===0?'today' : past ? Math.abs(n)+'d ago' : n+'d';
+    return '<span class="m k-'+m.k+(past?' past':'')+'"><i>'+(i+1)+'</i>'+
+           '<span class="d">'+fmt(m.dt)+'</span>'+
+           '<span class="t" title="'+m.t+'">'+(m.s||m.t)+'</span>'+
+           '<span class="c">'+rel+'</span></span>';
+  }).join('');
+})();
+</script>
+</body>
+</html>

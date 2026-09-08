@@ -139,7 +139,7 @@
   .li.k-admin{border-left-color:var(--purple)}
   .li.k-mil{border-left-color:var(--now)}
   .li .lt{font-variant-numeric:tabular-nums;color:var(--dim);font-size:11px;
-      flex:0 0 42px;font-weight:500}
+      flex:0 0 82px;font-weight:500}
   .li .ln{flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
   .li.done .ln{text-decoration:line-through;color:var(--faint)}
   .li .lw{font-size:10px;color:var(--faint);flex:0 0 auto;max-width:120px;
@@ -165,7 +165,11 @@
   .cc.k-admin{border-left-color:var(--purple)}
   .cc.k-mil{border-left-color:var(--now)}
   .cc.done{opacity:.45}
-  .cc .ct{font-variant-numeric:tabular-nums;color:var(--dim);font-size:9.5px;display:block}
+  .cc .ct{font-variant-numeric:tabular-nums;color:var(--dim);font-size:9.5px;display:block;
+      letter-spacing:.01em}
+  .cc .cl{display:block;margin-top:3px;font-size:9.5px;color:var(--faint);
+      overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+  .cc .cl::before{content:"\1F4CD  ";opacity:.6;font-size:8.5px}
   .cc .cn{display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;
       overflow:hidden;overflow-wrap:anywhere}
 
@@ -183,7 +187,7 @@
   .agi.k-res{border-left-color:var(--green)}
   .agi.k-admin{border-left-color:var(--purple)}
   .agi.k-mil{border-left-color:var(--now)}
-  .agi .t{font-variant-numeric:tabular-nums;color:var(--dim);flex:0 0 46px;font-size:11.5px}
+  .agi .t{font-variant-numeric:tabular-nums;color:var(--dim);flex:0 0 84px;font-size:11.5px}
   .agi .n2{flex:1;min-width:0}
   .agi.done .n2{text-decoration:line-through;color:var(--faint)}
   .agi .w{font-size:10.5px;color:var(--faint)}
@@ -452,7 +456,9 @@ function paint(){
         return a-b;
       });
       const rows = items.length ? items.map(e=>{
-        const t=mins(e.date)==null?'—':hhmm(e.date);
+        const s0=mins(e.date);
+        const t = s0==null ? '\u2014'
+                : (e.end && mins(e.end)>s0 ? hhmm(e.date)+'\u2013'+hhmm(e.end) : hhmm(e.date));
         return `<a class="li ${kind(e)} ${e.done?'done':''}" href="${e.url}" target="_blank">
           <span class="lt">${t}</span><span class="ln">${esc(e.name)||'(untitled)'}</span>
           ${e.location?`<span class="lw">${esc(e.location)}</span>`:''}</a>`;
@@ -472,11 +478,16 @@ function paint(){
       const items=[...day.items].sort((x,y)=>{
         const a=mins(x.date), b=mins(y.date);
         if(a==null&&b==null) return 0; if(a==null) return 1; if(b==null) return -1; return a-b;});
-      const cards = items.length ? items.map(e=>
-        `<a class="cc ${kind(e)} ${e.done?'done':''}" href="${e.url}" target="_blank">
-           <span class="ct">${mins(e.date)==null?'ALL DAY':hhmm(e.date)}</span>
-           <span class="cn">${esc(e.name)||'(untitled)'}</span></a>`).join('')
-        : `<div class="lnone">—</div>`;
+      const cards = items.length ? items.map(e=>{
+        const s0=mins(e.date);
+        const t = s0==null ? 'ALL DAY'
+                : (e.end && mins(e.end)>s0 ? hhmm(e.date)+'\u2013'+hhmm(e.end) : hhmm(e.date));
+        return `<a class="cc ${kind(e)} ${e.done?'done':''}" href="${e.url}" target="_blank"
+             title="${esc(t)} ${esc(e.name)}${e.location?' \u00b7 '+esc(e.location):''}">
+           <span class="ct">${t}</span>
+           <span class="cn">${esc(e.name)||'(untitled)'}</span>
+           ${e.location?`<span class="cl">${esc(e.location)}</span>`:''}</a>`;
+      }).join('') : `<div class="lnone">—</div>`;
       return `<div class="c7 ${day.is_today?'today':''}">
         <div class="c7h"><div class="dn">${DOW[dt.getDay()]}</div>
           <div class="dd">${dt.getDate()}</div></div>
@@ -496,10 +507,14 @@ function paint(){
           <span class="n">${DOW[dt.getDay()]} ${dt.getDate()}</span>
           <span class="s">${MON[dt.getMonth()]} &middot; ${day.items.length} item${day.items.length>1?'s':''}</span>
         </div>` +
-        items.map(e=>`<a class="agi ${kind(e)} ${e.done?'done':''}" href="${e.url}" target="_blank">
-          <span class="t">${mins(e.date)==null?'—':hhmm(e.date)}</span>
+        items.map(e=>{
+          const s0=mins(e.date);
+          const t = s0==null ? '\u2014'
+                  : (e.end && mins(e.end)>s0 ? hhmm(e.date)+'\u2013'+hhmm(e.end) : hhmm(e.date));
+          return `<a class="agi ${kind(e)} ${e.done?'done':''}" href="${e.url}" target="_blank">
+          <span class="t">${t}</span>
           <span class="n2">${esc(e.name)||'(untitled)'}</span>
-          ${e.location?`<span class="w">${esc(e.location)}</span>`:''}</a>`).join('');
+          ${e.location?`<span class="w">${esc(e.location)}</span>`:''}</a>`;}).join('');
     }).join('') + `</div>`;
   }
 

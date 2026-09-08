@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Daily Focus</title>
+<style>
+:root{
+  --bg:#191919; --panel:#202020; --line:#2f2f2f; --hair:#252525;
+  --ink:#e9e9e7; --dim:#9b9a97; --faint:#6f6e6b;
+  --blue:#5b93d3; --gold:#c9a227; --red:#e06c6c; --green:#5fa87a; --purple:#9a6dd7;
+}
+@media (prefers-color-scheme: light){
+  :root{
+    --bg:#fff; --panel:#f7f7f5; --line:#e6e5e1; --hair:#efeeec;
+    --ink:#37352f; --dim:#787774; --faint:#9b9a97;
+  }
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%}
+body{
+  background:var(--bg); color:var(--ink);
+  font:13px/1.4 -apple-system,BlinkMacSystemFont,"Segoe UI",Inter,sans-serif;
+  font-variant-numeric:tabular-nums;
+  -webkit-font-smoothing:antialiased;
+  padding:0; overflow:hidden;
+}
+.card{
+  height:100%; display:flex; flex-direction:column;
+  background:var(--panel); border:1px solid var(--line); border-radius:4px;
+  overflow:hidden;
+}
+
+/* header */
+.hd{
+  display:flex; align-items:center; gap:12px;
+  padding:12px 16px 11px; border-bottom:1px solid var(--hair);
+}
+.hd h1{
+  font-size:10px; letter-spacing:.16em; text-transform:uppercase;
+  font-weight:700; color:var(--ink); margin:0;
+}
+.hd .sub{font-size:10px; color:var(--faint); letter-spacing:.06em}
+.spacer{flex:1}
+
+/* completion ring */
+.ring{width:34px; height:34px; flex:0 0 34px; display:block}
+.ring .trk{stroke:var(--line)}
+.ring .arc{stroke:var(--green); transition:stroke-dasharray .3s ease}
+.ringtxt{
+  font-size:10px; font-weight:700; fill:var(--dim);
+  font-variant-numeric:tabular-nums;
+}
+
+/* list */
+.list{flex:1; overflow-y:auto; padding:4px 0}
+.row{
+  display:flex; align-items:flex-start; gap:11px;
+  padding:11px 16px; border-bottom:1px solid var(--hair);
+}
+.row:last-child{border-bottom:0}
+.box{
+  width:17px; height:17px; flex:0 0 17px; margin-top:1px;
+  border:1.5px solid var(--faint); border-radius:3px;
+  background:transparent; cursor:pointer; padding:0;
+  display:flex; align-items:center; justify-content:center;
+  transition:border-color .12s, background .12s;
+}
+.box:hover{border-color:var(--green)}
+.box svg{width:11px; height:11px; opacity:0; transition:opacity .12s}
+.box[aria-checked="true"]{background:var(--green); border-color:var(--green)}
+.box[aria-checked="true"] svg{opacity:1}
+.body{flex:1; min-width:0}
+.nm{font-size:13px; line-height:1.35; color:var(--ink); text-decoration:none; display:block}
+a.nm:hover{color:var(--blue); text-decoration:underline; text-underline-offset:2px}
+.row[data-done="1"] .nm{color:var(--faint); text-decoration:line-through}
+.meta{
+  display:flex; align-items:center; gap:8px; flex-wrap:wrap;
+  margin-top:5px; font-size:10px; color:var(--faint); letter-spacing:.04em;
+}
+.t{color:var(--blue); font-weight:600; font-size:11px}
+.t.allday{color:var(--faint); font-weight:600; letter-spacing:.08em}
+.tag{border:1px solid var(--line); border-radius:2px; padding:1px 5px; color:var(--dim)}
+.tag.hi{border-color:var(--red); color:var(--red)}
+.rank{
+  font-size:10px; font-weight:700; color:var(--faint);
+  flex:0 0 auto; width:12px; margin-top:2px;
+}
+
+/* footer disclaimer */
+.ft{
+  padding:9px 16px 10px; border-top:1px solid var(--hair);
+  display:flex; align-items:center; gap:8px;
+  font-size:10px; line-height:1.4; color:var(--faint);
+}
+.ft b{color:var(--dim); font-weight:600}
+.dot{
+  width:5px; height:5px; border-radius:50%; background:var(--gold);
+  flex:0 0 5px;
+}
+.ft .reset{
+  margin-left:auto; flex:0 0 auto; background:none; border:1px solid var(--line);
+  color:var(--faint); font:inherit; font-size:9.5px; letter-spacing:.08em;
+  padding:2px 7px; border-radius:2px; cursor:pointer; text-transform:uppercase;
+}
+.ft .reset:hover{color:var(--ink); border-color:var(--dim)}
+
+.banner{
+  padding:7px 16px; font-size:10px; letter-spacing:.1em; text-transform:uppercase;
+  color:var(--gold); border-bottom:1px solid var(--hair); font-weight:600;
+}
+.msg{padding:22px 16px; font-size:12px; color:var(--faint); font-style:italic}
+</style>
+</head>
+<body>
+<div class="card">
+
+  <div class="hd">
+    <div>
+      <h1>Daily Focus</h1>
+      <div class="sub" id="sub">&mdash;</div>
+    </div>
+    <div class="spacer"></div>
+    <svg class="ring" viewBox="0 0 36 36" aria-hidden="true">
+      <circle class="trk" cx="18" cy="18" r="15" fill="none" stroke-width="3"/>
+      <circle class="arc" id="arc" cx="18" cy="18" r="15" fill="none" stroke-width="3"
+              stroke-linecap="round" stroke-dasharray="0 94.25"
+              transform="rotate(-90 18 18)"/>
+      <text class="ringtxt" id="ringtxt" x="18" y="21.5" text-anchor="middle">0/0</text>
+    </svg>
+  </div>
+
+  <div id="banner"></div>
+  <div class="list" id="list"><div class="msg">Loading&hellip;</div></div>
+
+  <div class="ft">
+    <span class="dot"></span>
+    <span><b>Local scratchpad only.</b> Checkmarks live in this browser &mdash; they do <b>not</b> write to Notion. Click a task name to tick the real box.</span>
+    <button class="reset" id="reset" title="Clear today's local checkmarks">Clear</button>
+  </div>
+
+</div>
+
+<script>
+(function(){
+  "use strict";
+
+  var MON=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+  var DOW=['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+  var CIRC=2*Math.PI*15; // 94.2478
+
+  function p2(n){ return (n<10?'0':'')+n; }
+  function esc(s){ return String(s).replace(/[&<>"]/g,function(c){
+    return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]; }); }
+
+  // REGEX time parse — never new Date() on a raw event value
+  function hhmm(iso){ var m=/T(\d{2}):(\d{2})/.exec(iso||''); return m?m[1]+m[2]:null; }
+  function ymd(iso){ var m=/^(\d{4})-(\d{2})-(\d{2})/.exec(iso||''); return m?m[1]+m[2]+m[3]:null; }
+
+  /* ---- localStorage: keyed by date + item name ---- */
+  var LS_PREFIX='focus:v1:';
+  var dayKey='';
+  function storeKey(){ return LS_PREFIX+dayKey; }
+  function loadChecks(){
+    try{ return JSON.parse(localStorage.getItem(storeKey())||'{}')||{}; }
+    catch(e){ return {}; }
+  }
+  function saveChecks(o){
+    try{ localStorage.setItem(storeKey(),JSON.stringify(o)); }catch(e){}
+  }
+
+  var checks={}, items=[];
+
+  function paintRing(){
+    var done=0;
+    for(var i=0;i<items.length;i++){ if(checks[items[i].name]) done++; }
+    var n=items.length;
+    var frac=n?done/n:0;
+    document.getElementById('arc').setAttribute(
+      'stroke-dasharray',(frac*CIRC).toFixed(2)+' '+CIRC.toFixed(2));
+    document.getElementById('ringtxt').textContent=done+'/'+n;
+  }
+
+  function toggle(name,btn,row){
+    checks[name]=!checks[name];
+    if(!checks[name]) delete checks[name];
+    saveChecks(checks);
+    btn.setAttribute('aria-checked',checks[name]?'true':'false');
+    row.setAttribute('data-done',checks[name]?'1':'0');
+    paintRing();
+  }
+
+  var TICK='<svg viewBox="0 0 24 24" fill="none" stroke="#191919" stroke-width="3.4" '+
+           'stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5l5.5 5.5L20 6"/></svg>';
+
+  function render(list,bannerText){
+    items=list;
+    checks=loadChecks();
+
+    var b=document.getElementById('banner');
+    b.innerHTML = bannerText ? '<div class="banner">'+esc(bannerText)+'</div>' : '';
+
+    var el=document.getElementById('list');
+    if(!list.length){
+      el.innerHTML='<div class="msg">Nothing on the board. Enjoy it.</div>';
+      paintRing();
+      return;
+    }
+
+    el.innerHTML='';
+    list.forEach(function(it,idx){
+      var done=!!checks[it.name];
+      var row=document.createElement('div');
+      row.className='row';
+      row.setAttribute('data-done',done?'1':'0');
+
+      var t=hhmm(it.date);
+      var dk=ymd(it.date);
+      var meta='';
+      meta += t ? '<span class="t">'+t+'</span>'
+                : '<span class="t allday">ALL DAY</span>';
+      if(it._showDate&&dk){
+        meta+='<span class="tag">'+dk.slice(6,8)+' '+MON[+dk.slice(4,6)-1].toUpperCase()+'</span>';
+      }
+      if(it.priority==='High') meta+='<span class="tag hi">HIGH</span>';
+      else if(it.priority) meta+='<span class="tag">'+esc(it.priority).toUpperCase()+'</span>';
+      if(it.meeting_type) meta+='<span class="tag">'+esc(it.meeting_type)+'</span>';
+      if(it.location) meta+='<span>'+esc(it.location)+'</span>';
+
+      var nm=esc(it.name||'Untitled');
+      if(nm.length>110) nm=nm.slice(0,108)+'\u2026';
+      var nameHtml = it.url
+        ? '<a class="nm" href="'+esc(it.url)+'" target="_blank" rel="noopener" '+
+          'title="Open in Notion to check the real box">'+nm+'</a>'
+        : '<span class="nm">'+nm+'</span>';
+
+      row.innerHTML =
+        '<span class="rank">'+(idx+1)+'</span>'+
+        '<button class="box" role="checkbox" aria-checked="'+(done?'true':'false')+'" '+
+          'aria-label="Mark locally complete">'+TICK+'</button>'+
+        '<div class="body">'+nameHtml+'<div class="meta">'+meta+'</div></div>';
+
+      var btn=row.querySelector('.box');
+      btn.addEventListener('click',function(){ toggle(it.name,btn,row); });
+      el.appendChild(row);
+    });
+
+    paintRing();
+  }
+
+  document.getElementById('reset').addEventListener('click',function(){
+    checks={}; saveChecks(checks);
+    var rows=document.querySelectorAll('.row');
+    for(var i=0;i<rows.length;i++){
+      rows[i].setAttribute('data-done','0');
+      rows[i].querySelector('.box').setAttribute('aria-checked','false');
+    }
+    paintRing();
+  });
+
+  /* ---- selection: at most three ---- */
+  var PRI={High:0,Medium:1,Low:2,'':3};
+  function rank(it){ return (it.priority in PRI)?PRI[it.priority]:3; }
+
+  function pickThree(arr){
+    var seen={},out=[];
+    for(var i=0;i<arr.length;i++){
+      var it=arr[i];
+      if(!it||it.done) continue;
+      if(seen[it.name]) continue; seen[it.name]=1;
+      out.push(it);
+    }
+    out.sort(function(a,b){
+      var r=rank(a)-rank(b); if(r) return r;
+      var ta=(ymd(a.date)||'99999999')+(hhmm(a.date)||'2359');
+      var tb=(ymd(b.date)||'99999999')+(hhmm(b.date)||'2359');
+      return ta<tb?-1:ta>tb?1:0;
+    });
+    return out.slice(0,3);
+  }
+
+  fetch('../data/tasks.json',{cache:'no-store'})
+    .then(function(r){ if(!r.ok) throw 0; return r.json(); })
+    .then(function(data){
+      var todayKey=ymd(data.today)||'';
+      dayKey=todayKey;
+
+      // header subtitle
+      var sub='\u2014';
+      if(todayKey){
+        var y=+todayKey.slice(0,4),m=+todayKey.slice(4,6),d=+todayKey.slice(6,8);
+        var dt=new Date(y,m-1,d);
+        sub=DOW[dt.getDay()]+' '+p2(d)+' '+MON[m-1]+' '+y;
+      }
+
+      var todays=(data.today_items||[]).filter(function(i){ return i && !i.done; });
+      var picks, banner='';
+
+      if(todays.length){
+        picks=pickThree(todays);
+        var extra=todays.length-picks.length;
+        sub += extra>0 ? '  \u00b7  3 of '+todays.length+' today' : '  \u00b7  '+picks.length+' today';
+      }else{
+        // fall back to next 3 upcoming, clearly labelled
+        var up=(data.upcoming||[]).filter(function(i){
+          if(!i||i.done) return false;
+          var dk=ymd(i.date); return dk && (!todayKey || dk>todayKey);
+        });
+        picks=pickThree(up);
+        picks.forEach(function(p){ p._showDate=true; });
+        banner='Nothing due today \u2014 next '+picks.length+' upcoming';
+        dayKey=todayKey+':upcoming';
+      }
+
+      document.getElementById('sub').textContent=sub;
+      render(picks,banner);
+    })
+    .catch(function(){
+      document.getElementById('list').innerHTML=
+        '<div class="msg">Could not load ../data/tasks.json</div>';
+    });
+
+})();
+</script>
+</body>
+</html>

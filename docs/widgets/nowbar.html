@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Now Bar</title>
+<style>
+:root{
+  --bg:#191919; --panel:#202020; --line:#2f2f2f; --hair:#252525;
+  --ink:#e9e9e7; --dim:#9b9a97; --faint:#6f6e6b;
+  --blue:#5b93d3; --gold:#c9a227; --red:#e06c6c; --green:#5fa87a; --purple:#9a6dd7;
+}
+@media (prefers-color-scheme: light){
+  :root{
+    --bg:#fff; --panel:#f7f7f5; --line:#e6e5e1; --hair:#efeeec;
+    --ink:#37352f; --dim:#787774; --faint:#9b9a97;
+  }
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%}
+body{
+  background:var(--bg); color:var(--ink);
+  font:13px/1.35 -apple-system,BlinkMacSystemFont,"Segoe UI",Inter,sans-serif;
+  font-variant-numeric:tabular-nums;
+  -webkit-font-smoothing:antialiased;
+  display:flex; align-items:stretch;
+  overflow:hidden;
+}
+.bar{
+  flex:1; display:flex; align-items:stretch;
+  background:var(--panel);
+  border:1px solid var(--line); border-radius:4px;
+  min-height:108px; max-height:150px;
+  overflow:hidden;
+}
+.cell{
+  display:flex; flex-direction:column; justify-content:center;
+  padding:14px 18px; min-width:0;
+  border-right:1px solid var(--hair);
+}
+.cell:last-child{border-right:0}
+.lab{
+  font-size:9px; letter-spacing:.14em; text-transform:uppercase;
+  color:var(--faint); font-weight:600; margin-bottom:5px;
+  white-space:nowrap;
+}
+
+/* --- clock (hero) --- */
+.c-clock{flex:0 0 auto; padding-right:22px}
+.clock{
+  font-size:52px; line-height:1; font-weight:250;
+  letter-spacing:.005em; font-variant-numeric:tabular-nums;
+  display:flex; align-items:baseline; gap:2px;
+}
+.clock .sec{
+  font-size:20px; font-weight:300; color:var(--dim);
+  margin-left:6px; letter-spacing:0;
+}
+.clock .colon{color:var(--faint); font-weight:200}
+.zone{font-size:10px; color:var(--faint); letter-spacing:.1em; margin-top:6px}
+
+/* --- date --- */
+.c-date{flex:0 0 auto; min-width:132px}
+.dow{font-size:16px; font-weight:600; letter-spacing:.02em}
+.dstamp{font-size:12px; color:var(--dim); margin-top:3px}
+.dmeta{font-size:10.5px; color:var(--faint); margin-top:5px; letter-spacing:.03em}
+
+/* --- weather --- */
+.c-wx{flex:0 0 auto; min-width:0}
+.wxrow{display:flex; align-items:center; gap:12px}
+.glyph{
+  width:30px; height:30px; flex:0 0 30px;
+  color:var(--gold); display:block;
+}
+.wxmain{display:flex; align-items:baseline; gap:8px; min-width:0}
+.temp{font-size:28px; font-weight:300; line-height:1}
+.temp sup{font-size:13px; font-weight:400; color:var(--dim); top:-.6em}
+.wxlabel{
+  font-size:11.5px; color:var(--dim);
+  overflow:hidden; text-overflow:ellipsis; white-space:nowrap;
+}
+.wxsub{
+  display:flex; gap:14px; margin-top:7px; flex-wrap:wrap;
+  font-size:10.5px; color:var(--faint);
+}
+.wxsub b{font-weight:600; color:var(--dim)}
+.hi{color:var(--red)} .lo{color:var(--blue)}
+.wxfail{font-size:11px; color:var(--faint); font-style:italic}
+
+/* --- next event --- */
+.c-next{flex:1 1 auto; min-width:0}
+.nextrow{display:flex; align-items:baseline; gap:10px; min-width:0}
+.ntime{
+  font-size:22px; font-weight:400; line-height:1;
+  color:var(--blue); flex:0 0 auto;
+}
+.ntime.allday{font-size:12px; color:var(--faint); letter-spacing:.08em; font-weight:600}
+.nname{
+  font-size:12.5px; line-height:1.3; min-width:0;
+  display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical;
+  overflow:hidden;
+}
+a.nname{color:inherit; text-decoration:none}
+a.nname:hover{color:var(--blue)}
+.nmeta{font-size:10px; color:var(--faint); margin-top:6px; letter-spacing:.03em}
+.nmeta .tag{
+  border:1px solid var(--line); border-radius:2px;
+  padding:1px 5px; margin-right:6px; color:var(--dim);
+}
+.empty{font-size:11.5px; color:var(--faint); font-style:italic}
+
+@media (max-width:760px){
+  .c-next{display:none}
+  .clock{font-size:42px}
+}
+</style>
+</head>
+<body>
+<div class="bar">
+
+  <div class="cell c-clock">
+    <div class="lab">Local</div>
+    <div class="clock" id="clock"><span id="hh">--</span><span class="colon">:</span><span id="mm">--</span><span class="sec" id="ss">--</span></div>
+    <div class="zone" id="zone">EASTERN</div>
+  </div>
+
+  <div class="cell c-date">
+    <div class="lab">Date</div>
+    <div class="dow" id="dow">&mdash;</div>
+    <div class="dstamp" id="dstamp">&mdash;</div>
+    <div class="dmeta" id="dmeta">&mdash;</div>
+  </div>
+
+  <div class="cell c-wx">
+    <div class="lab">Cambridge, MA</div>
+    <div id="wx"><div class="wxfail">Loading weather&hellip;</div></div>
+  </div>
+
+  <div class="cell c-next">
+    <div class="lab">Next up</div>
+    <div id="next"><div class="empty">Loading&hellip;</div></div>
+  </div>
+
+</div>
+
+<script>
+(function(){
+  "use strict";
+
+  /* ============ 1. CLOCK — never depends on network ============ */
+  var hh=document.getElementById('hh'),
+      mm=document.getElementById('mm'),
+      ss=document.getElementById('ss');
+
+  function p2(n){ return (n<10?'0':'')+n; }
+
+  var DOW=['SUNDAY','MONDAY','TUESDAY','WEDNESDAY','THURSDAY','FRIDAY','SATURDAY'];
+  var MON=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+
+  // MIT Fall 2026 term start (first day of classes)
+  var TERM_START = new Date(2026,8,9); // 2026-09-09, local
+
+  var lastDay=-1;
+  function tick(){
+    var d=new Date();
+    hh.textContent=p2(d.getHours());
+    mm.textContent=p2(d.getMinutes());
+    ss.textContent=p2(d.getSeconds());
+    if(d.getDate()!==lastDay){ lastDay=d.getDate(); paintDate(d); }
+  }
+
+  function paintDate(d){
+    document.getElementById('dow').textContent = DOW[d.getDay()];
+    document.getElementById('dstamp').textContent =
+      p2(d.getDate())+' '+MON[d.getMonth()]+' '+d.getFullYear();
+
+    // day of year
+    var start=new Date(d.getFullYear(),0,0);
+    var doy=Math.floor((d-start)/86400000);
+
+    // week of term
+    var today0=new Date(d.getFullYear(),d.getMonth(),d.getDate());
+    var diffDays=Math.floor((today0-TERM_START)/86400000);
+    var termTxt;
+    if(diffDays<0){
+      termTxt='T\u2212'+Math.abs(diffDays)+'D';
+    }else{
+      termTxt='WEEK '+(Math.floor(diffDays/7)+1);
+    }
+    document.getElementById('dmeta').textContent = termTxt+'  \u00b7  DAY '+doy+'/365';
+  }
+
+  tick();
+  setInterval(tick,1000);
+
+  try{
+    var tz=Intl.DateTimeFormat().resolvedOptions().timeZone||'';
+    if(tz) document.getElementById('zone').textContent=tz.split('/').pop().replace(/_/g,' ').toUpperCase();
+  }catch(e){}
+
+  /* ============ 2. WEATHER — Open-Meteo, no key ============ */
+  var WMO={
+    0:['Clear','sun'],1:['Mostly clear','sun'],2:['Partly cloudy','pcloud'],3:['Overcast','cloud'],
+    45:['Fog','fog'],48:['Rime fog','fog'],
+    51:['Light drizzle','rain'],53:['Drizzle','rain'],55:['Heavy drizzle','rain'],
+    56:['Freezing drizzle','rain'],57:['Freezing drizzle','rain'],
+    61:['Light rain','rain'],63:['Rain','rain'],65:['Heavy rain','rain'],
+    66:['Freezing rain','rain'],67:['Freezing rain','rain'],
+    71:['Light snow','snow'],73:['Snow','snow'],75:['Heavy snow','snow'],77:['Snow grains','snow'],
+    80:['Rain showers','rain'],81:['Rain showers','rain'],82:['Violent showers','rain'],
+    85:['Snow showers','snow'],86:['Snow showers','snow'],
+    95:['Thunderstorm','storm'],96:['Thunderstorm + hail','storm'],99:['Thunderstorm + hail','storm']
+  };
+
+  var SVG={
+    sun:'<circle cx="12" cy="12" r="4.2"/><g stroke-linecap="round"><path d="M12 1.6v2.6M12 19.8v2.6M22.4 12h-2.6M4.2 12H1.6M19.4 4.6l-1.9 1.9M6.5 17.5l-1.9 1.9M19.4 19.4l-1.9-1.9M6.5 6.5L4.6 4.6"/></g>',
+    pcloud:'<circle cx="8.5" cy="8" r="3.2"/><path d="M8.5 1.9v1.9M2.4 8h1.9M4.2 3.7l1.3 1.3M12.8 3.7l-1.3 1.3"/><path d="M17.5 20.5H8.2a3.7 3.7 0 0 1-.3-7.4 5.2 5.2 0 0 1 9.9 1.2 3.1 3.1 0 0 1-.3 6.2z"/>',
+    cloud:'<path d="M17.5 19.5H7.6a4 4 0 0 1-.3-8 5.6 5.6 0 0 1 10.6 1.3 3.35 3.35 0 0 1-.4 6.7z"/>',
+    fog:'<path d="M17 13.5H7.4a3.7 3.7 0 0 1-.3-7.4 5.2 5.2 0 0 1 9.9 1.2 3.1 3.1 0 0 1 0 6.2z"/><g stroke-linecap="round"><path d="M4 17.5h16M6.5 21h11"/></g>',
+    rain:'<path d="M17 13.5H7.4a3.7 3.7 0 0 1-.3-7.4 5.2 5.2 0 0 1 9.9 1.2 3.1 3.1 0 0 1 0 6.2z"/><g stroke-linecap="round"><path d="M9 17l-1.2 4M13 17l-1.2 4M17 17l-1.2 4"/></g>',
+    snow:'<path d="M17 13.5H7.4a3.7 3.7 0 0 1-.3-7.4 5.2 5.2 0 0 1 9.9 1.2 3.1 3.1 0 0 1 0 6.2z"/><g stroke-linecap="round"><path d="M8.5 18h0M12 20h0M15.5 18h0M12 17h0"/></g>',
+    storm:'<path d="M17 12.5H7.4a3.7 3.7 0 0 1-.3-7.4 5.2 5.2 0 0 1 9.9 1.2 3.1 3.1 0 0 1 0 6.2z"/><path d="M13 15l-3.2 4.5h3l-1.4 3.3"/>'
+  };
+
+  function icon(kind,color){
+    return '<svg class="glyph" viewBox="0 0 24 24" fill="none" stroke="'+color+'" '+
+           'stroke-width="1.5" stroke-linejoin="round">'+(SVG[kind]||SVG.cloud)+'</svg>';
+  }
+
+  var WX_URL='https://api.open-meteo.com/v1/forecast?latitude=42.3736&longitude=-71.1097'+
+    '&current=temperature_2m,apparent_temperature,precipitation,weather_code,wind_speed_10m'+
+    '&daily=temperature_2m_max,temperature_2m_min,precipitation_probability_max,weather_code'+
+    '&temperature_unit=fahrenheit&wind_speed_unit=mph&timezone=America/New_York&forecast_days=1';
+
+  function esc(s){ return String(s).replace(/[&<>"]/g,function(c){
+    return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]; }); }
+
+  function paintWeather(j){
+    var cur=j.current||{}, day=(j.daily||{});
+    var code=cur.weather_code;
+    var w=WMO[code]||['Code '+code,'cloud'];
+    var kind=w[1];
+    var color = (kind==='sun'||kind==='pcloud') ? 'var(--gold)'
+              : (kind==='rain'||kind==='snow'||kind==='fog') ? 'var(--blue)'
+              : (kind==='storm') ? 'var(--purple)' : 'var(--dim)';
+
+    var t=Math.round(cur.temperature_2m), fl=Math.round(cur.apparent_temperature);
+    var hi=day.temperature_2m_max?Math.round(day.temperature_2m_max[0]):null;
+    var lo=day.temperature_2m_min?Math.round(day.temperature_2m_min[0]):null;
+    var pop=day.precipitation_probability_max?day.precipitation_probability_max[0]:null;
+    var wind=Math.round(cur.wind_speed_10m);
+
+    var sub='';
+    sub+='<span>FEELS <b>'+fl+'\u00b0</b></span>';
+    if(hi!==null&&lo!==null) sub+='<span><b class="hi">'+hi+'\u00b0</b> / <b class="lo">'+lo+'\u00b0</b></span>';
+    if(pop!==null) sub+='<span>PRECIP <b>'+pop+'%</b></span>';
+    sub+='<span>WIND <b>'+wind+'</b> mph</span>';
+
+    document.getElementById('wx').innerHTML =
+      '<div class="wxrow">'+icon(kind,color)+
+        '<div class="wxmain">'+
+          '<div class="temp">'+t+'<sup>\u00b0F</sup></div>'+
+          '<div class="wxlabel">'+esc(w[0])+'</div>'+
+        '</div>'+
+      '</div>'+
+      '<div class="wxsub">'+sub+'</div>';
+  }
+
+  function wxFail(){
+    document.getElementById('wx').innerHTML='<div class="wxfail">Weather unavailable &mdash; offline</div>';
+  }
+
+  function loadWeather(){
+    fetch(WX_URL,{cache:'no-store'})
+      .then(function(r){ if(!r.ok) throw 0; return r.json(); })
+      .then(paintWeather)
+      .catch(wxFail);
+  }
+  loadWeather();
+  setInterval(loadWeather,600000); // refresh every 10 min
+
+  /* ============ 3. NEXT EVENT from tasks.json ============ */
+  // Times parsed by REGEX off the ISO string — never new Date() on a raw value.
+  function hhmm(iso){
+    var m=/T(\d{2}):(\d{2})/.exec(iso||'');
+    return m ? m[1]+m[2] : null;
+  }
+  function ymd(iso){
+    var m=/^(\d{4})-(\d{2})-(\d{2})/.exec(iso||'');
+    return m ? m[1]+m[2]+m[3] : null;
+  }
+
+  function paintNext(data){
+    var todayKey=ymd(data.today)||'';
+    var pool=[].concat(data.today_items||[],data.upcoming||[]);
+
+    var d=new Date();
+    var nowKey=''+d.getFullYear()+p2(d.getMonth()+1)+p2(d.getDate());
+    var nowMin=d.getHours()*60+d.getMinutes();
+
+    var seen={},cands=[];
+    for(var i=0;i<pool.length;i++){
+      var it=pool[i];
+      if(!it||it.done) continue;
+      var k=(it.name||'')+'|'+(it.date||'');
+      if(seen[k]) continue; seen[k]=1;
+
+      var dk=ymd(it.date); if(!dk) continue;
+      if(dk<nowKey) continue;
+
+      var t=hhmm(it.date);
+      if(dk===nowKey && t){
+        var mins=parseInt(t.slice(0,2),10)*60+parseInt(t.slice(2),10);
+        if(mins<nowMin) continue;            // already passed today
+        cands.push({it:it,sort:dk+t,t:t});
+      }else{
+        // all-day: sort to the very start of its day
+        cands.push({it:it,sort:dk+(t||'0000'),t:t});
+      }
+    }
+    cands.sort(function(a,b){ return a.sort<b.sort?-1:a.sort>b.sort?1:0; });
+
+    var el=document.getElementById('next');
+    if(!cands.length){
+      el.innerHTML='<div class="empty">Nothing scheduled ahead</div>';
+      return;
+    }
+    var c=cands[0], it=c.it;
+    var dk=ymd(it.date);
+    var when = c.t ? '<div class="ntime">'+c.t+'</div>'
+                   : '<div class="ntime allday">ALL DAY</div>';
+
+    var name=esc(it.name||'Untitled');
+    var nameEl = it.url
+      ? '<a class="nname" href="'+esc(it.url)+'" target="_blank" rel="noopener">'+name+'</a>'
+      : '<div class="nname">'+name+'</div>';
+
+    var meta='';
+    if(dk!==nowKey){
+      var yy=dk.slice(0,4),mo=+dk.slice(4,6),dd=dk.slice(6,8);
+      meta+='<span class="tag">'+dd+' '+MON[mo-1].toUpperCase()+'</span>';
+    }else{
+      meta+='<span class="tag">TODAY</span>';
+    }
+    if(it.meeting_type) meta+='<span class="tag">'+esc(it.meeting_type)+'</span>';
+    if(it.location) meta+=esc(it.location);
+
+    el.innerHTML='<div class="nextrow">'+when+nameEl+'</div><div class="nmeta">'+meta+'</div>';
+  }
+
+  fetch('../data/tasks.json',{cache:'no-store'})
+    .then(function(r){ if(!r.ok) throw 0; return r.json(); })
+    .then(paintNext)
+    .catch(function(){
+      document.getElementById('next').innerHTML='<div class="empty">Schedule unavailable</div>';
+    });
+
+})();
+</script>
+</body>
+</html>

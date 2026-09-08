@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Class Schedule</title>
+<style>
+  :root{
+    --bg:#191919; --panel:#202020; --line:#2f2f2f; --hair:#252525;
+    --ink:#e9e9e7; --dim:#9b9a97; --faint:#6f6e6b;
+    --blue:#5b93d3; --gold:#c9a227; --red:#e06c6c; --green:#5fa87a; --purple:#9a6dd7;
+  }
+  @media (prefers-color-scheme: light){
+    :root{ --bg:#fff; --panel:#f7f7f5; --line:#e6e5e1; --hair:#efeeec;
+           --ink:#37352f; --dim:#787774; --faint:#9b9a97; }
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--bg);color:var(--ink);padding:12px 14px;
+       font:13px/1.4 -apple-system,BlinkMacSystemFont,"Segoe UI",Inter,sans-serif;
+       -webkit-font-smoothing:antialiased}
+  .num{font-variant-numeric:tabular-nums;font-feature-settings:"tnum" 1}
+
+  .hd{font-size:10px;color:var(--faint);text-transform:uppercase;letter-spacing:.09em;
+      display:flex;justify-content:space-between;align-items:baseline;gap:8px;
+      padding-bottom:7px;border-bottom:1px solid var(--line)}
+  .hd .r{color:var(--dim);letter-spacing:.04em;text-transform:none;font-size:10.5px;
+         font-variant-numeric:tabular-nums}
+
+  /* Hero: the single soonest deadline. Deliberately the only large type on the
+     page so the eye lands on it before the per-class grid. */
+  .hero{margin-top:10px;background:var(--panel);border:1px solid var(--line);
+        border-left:3px solid var(--red);border-radius:7px;padding:9px 11px;
+        display:flex;gap:12px;align-items:center;flex-wrap:wrap}
+  .hero.soft{border-left-color:var(--blue)}
+  .hero .lb{font-size:9.5px;text-transform:uppercase;letter-spacing:.08em;
+            color:var(--faint);width:100%}
+  .hero .big{font-size:22px;font-weight:600;line-height:1;letter-spacing:-.01em;
+             font-variant-numeric:tabular-nums;color:var(--red)}
+  .hero.soft .big{color:var(--blue)}
+  .hero .big small{font-size:11px;font-weight:500;color:var(--dim);letter-spacing:0;
+                   margin-left:3px}
+  .hero .who{min-width:0;flex:1 1 160px}
+  .hero .who .nm{font-size:13px;font-weight:600;display:block;line-height:1.3;
+                 overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+  .hero .who .sub{font-size:11px;color:var(--dim);margin-top:2px;display:block;
+                  font-variant-numeric:tabular-nums}
+
+  .board{display:grid;gap:10px;margin-top:10px;
+         grid-template-columns:repeat(auto-fit,minmax(190px,1fr))}
+  .col{background:var(--panel);border:1px solid var(--line);border-radius:7px;
+       padding:8px 9px;min-width:0}
+  .ct{display:flex;align-items:center;gap:6px;margin-bottom:5px}
+  .ct b{font-size:11.5px;font-weight:600;letter-spacing:.01em;
+        font-variant-numeric:tabular-nums}
+  .ct .n{font-size:9.5px;color:var(--faint);margin-left:auto;
+         font-variant-numeric:tabular-nums;white-space:nowrap}
+  .dot{width:6px;height:6px;border-radius:50%;flex:0 0 auto;background:var(--blue)}
+  .col.due .dot{background:var(--red)}
+  .col.due b{color:var(--red)}
+  /* winding-down class: kept visible but pushed back visually */
+  .col.wd{opacity:.5;background:transparent}
+  .col.wd .dot{background:var(--faint)}
+  .col.wd b{color:var(--dim)}
+
+  .it{display:block;padding:5px 0;border-bottom:1px solid var(--hair);min-width:0}
+  .it:last-child{border-bottom:0}
+  .it .nm{font-size:12px;line-height:1.3;display:block;
+          overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:var(--dim)}
+  .it.next .nm{color:var(--ink)}
+  .it.g .nm{font-weight:600}
+  .it .mt{display:flex;gap:4px;align-items:center;margin-top:3px;flex-wrap:wrap}
+  .chip{font-size:11px;padding:1px 7px;border-radius:3px;line-height:1.35;
+        white-space:nowrap;font-variant-numeric:tabular-nums}
+  .c-when{background:rgba(91,147,211,.16);color:var(--blue)}
+  .c-soon{background:rgba(224,108,108,.18);color:var(--red)}
+  .c-grad{background:rgba(224,108,108,.18);color:var(--red)}
+  .c-due {background:rgba(201,162,39,.18);color:var(--gold)}
+  .c-sess{background:rgba(155,154,151,.14);color:var(--faint)}
+  .c-cnt {background:rgba(95,168,122,.18);color:var(--green)}
+  .more{font-size:10.5px;color:var(--faint);padding-top:5px;display:block}
+
+  .ft{margin-top:10px;padding-top:7px;border-top:1px solid var(--line);
+      display:flex;gap:8px;align-items:center;flex-wrap:wrap;
+      font-size:10.5px;color:var(--faint)}
+  .ft .arch{background:rgba(155,154,151,.14);color:var(--dim);
+            padding:1px 7px;border-radius:3px;font-size:11px;
+            font-variant-numeric:tabular-nums}
+  .msg{color:var(--faint);font-style:italic;font-size:12px;padding:16px 0}
+</style>
+</head>
+<body>
+<div class="hd"><span>Class Schedule</span><span class="r num" id="hr"></span></div>
+<div id="out"><div class="msg">loading…</div></div>
+
+<script>
+(function(){
+  var esc=function(s){return String(s==null?'':s).replace(/[<>&"]/g,function(c){
+    return {'<':'&lt;','>':'&gt;','&':'&amp;','"':'&quot;'}[c];});};
+
+  /* ---- date handling ------------------------------------------------------
+     Notion emits either "2026-09-09T10:30:00.000-04:00" or bare "2026-06-10".
+     new Date() on the first form shifts the calendar day for anyone west of
+     the offset, so the Y-M-D and H:M are pulled straight off the string by
+     regex and day-maths is done on a noon-anchored local Date (immune to DST).
+  -------------------------------------------------------------------------- */
+  var ISO=/^(\d{4})-(\d{2})-(\d{2})(?:[T ](\d{2}):(\d{2}))?/;
+  function parse(s){
+    var m=ISO.exec(String(s||'').trim());
+    if(!m) return null;
+    return {ymd:m[1]+'-'+m[2]+'-'+m[3],
+            hm:(m[4]!=null? m[4]+m[5] : null),      // "1030" — 24h, zero-padded
+            d:new Date(m[1]+'-'+m[2]+'-'+m[3]+'T12:00:00')};
+  }
+  function todayNoon(){                              // browser clock, not hardcoded
+    var n=new Date();
+    return new Date(n.getFullYear(),n.getMonth(),n.getDate(),12,0,0,0);
+  }
+  var DAY=864e5;
+  function daysFrom(a,b){ return Math.round((b-a)/DAY); }
+  var MON=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+  var WD=['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
+  function fmt(p){ return WD[p.d.getDay()]+' '+String(p.d.getDate())+' '+MON[p.d.getMonth()]; }
+  function rel(n){
+    if(n===0) return 'today';
+    if(n===1) return 'tomorrow';
+    if(n<0)   return Math.abs(n)+'d overdue';
+    return 'in '+n+'d';
+  }
+
+  /* ---- item classification ------------------------------------------------
+     `type` is the authoritative field but is empty for every row in the current
+     export, so the name is the fallback. Three kinds, visually distinct:
+       graded   — Homework/Exam/Quiz/Presentation/Pset  (red, bold)
+       due      — a non-graded hard deadline (form, submission)  (gold)
+       session  — routine lecture/recitation/seminar  (faint)
+  -------------------------------------------------------------------------- */
+  var RE_GRADED=/(\[hw\]|homework|exam|quiz|midterm|p-?set|problem set|presentation|assignment|essay|paper due|project proposal|case study)/i;
+  var RE_DUE   =/(\bdue\b|submit|sign ?up|deadline|form\b)/i;
+  var RE_SESS  =/(lecture|recitation|seminar|section|lab\b|office hours|workshop|showcase|week \d)/i;
+  function kind(r){
+    var t=(r.type||'')+' '+(r.name||'');
+    if(RE_GRADED.test(t)) return 'graded';
+    if(RE_SESS.test(t) && !RE_DUE.test(t)) return 'session';
+    if(RE_DUE.test(t)) return 'due';
+    return 'session';
+  }
+  var KIND_CHIP={graded:['c-grad','graded'],due:['c-due','due'],session:['c-sess','class']};
+
+  function row(r,isNext){
+    var k=KIND_CHIP[r.kind];
+    var when=fmt(r.p)+(r.p.hm?' '+r.p.hm:'');
+    var mt='<span class="chip '+(r.days<=1?'c-soon':'c-when')+'">'+esc(when)+
+           ' · '+rel(r.days)+'</span>'+
+           '<span class="chip '+k[0]+'">'+k[1]+'</span>';
+    return '<div class="it'+(isNext?' next':'')+(r.kind==='graded'?' g':'')+'">'+
+           '<span class="nm" title="'+esc(r.name)+'">'+esc(r.name)+'</span>'+
+           '<span class="mt">'+mt+'</span></div>';
+  }
+
+  function render(rows){
+    var out=document.getElementById('out');
+    if(!rows.length){
+      document.getElementById('hr').textContent='0 rows';
+      out.innerHTML='<div class="msg">No class rows in spokes.json.</div>';return;}
+
+    var t0=todayNoon(), undated=0;
+    rows.forEach(function(r){
+      r.p=parse(r.date);
+      r.days=r.p? daysFrom(t0,r.p.d) : null;
+      r.kind=kind(r);
+      if(!r.p) undated++;
+    });
+
+    // Group by code, sorted chronologically inside each group.
+    var byCode={}, order=[];
+    rows.forEach(function(r){
+      var c=r.code||'(no code)';
+      if(!byCode[c]){byCode[c]=[];order.push(c);}
+      byCode[c].push(r);
+    });
+    order.sort();
+
+    // A class is "finished" when nothing in it is still ahead of today, and
+    // "winding down" when it is overwhelmingly in the past with only a stray
+    // row left (24.134 today: 28 past, 1 future showcase). Both states are
+    // derived from the data, so no course number is hardcoded and any class
+    // demotes itself the same way when it ends.
+    var live=[], wind=[], done=[], totalAhead=0, totalGraded=0;
+    order.forEach(function(c){
+      var g=byCode[c];
+      g.sort(function(a,b){
+        if(!a.p) return 1; if(!b.p) return -1; return a.p.d-b.p.d;});
+      var ahead=g.filter(function(r){return r.p && r.days>=0;});
+      var over =g.filter(function(r){return r.p && r.days<0;});
+      var dated=ahead.length+over.length;
+      var rec={code:c,all:g,ahead:ahead,over:over.length,und:g.length-dated};
+      if(!ahead.length){ done.push(rec); return; }
+      // >=75% of dated rows already past AND <=2 rows left => winding down
+      if(dated>=4 && over.length/dated>=0.75 && ahead.length<=2){ wind.push(rec); return; }
+      totalAhead+=ahead.length;
+      totalGraded+=ahead.filter(function(r){return r.kind==='graded';}).length;
+      live.push(rec);
+    });
+    live.sort(function(a,b){ return a.ahead[0].p.d-b.ahead[0].p.d; });
+    wind.sort(function(a,b){ return a.ahead[0].p.d-b.ahead[0].p.d; });
+
+    document.getElementById('hr').textContent=
+      rows.length+' rows · '+live.length+' active class'+(live.length===1?'':'es')+
+      ' · '+totalAhead+' ahead'+
+      ((done.length+wind.length)?' · '+(done.length+wind.length)+' finished':'');
+
+    var html='';
+
+    /* Hero — soonest hard deadline (graded first, then any dated item). */
+    var pool=[];
+    live.forEach(function(rec){ pool=pool.concat(rec.ahead); });
+    pool.sort(function(a,b){return a.p.d-b.p.d;});
+    var hard=pool.filter(function(r){return r.kind!=='session';});
+    var hero=hard[0]||pool[0];
+    if(hero){
+      var soft=!hard[0];
+      html+='<div class="hero'+(soft?' soft':'')+'">'+
+            '<span class="lb">'+(soft?'Next item up (no graded work scheduled)':'Soonest deadline')+'</span>'+
+            '<span class="big num">'+(hero.days===0?'TODAY':hero.days===1?'1<small>day</small>':
+                hero.days+'<small>days</small>')+'</span>'+
+            '<span class="who"><span class="nm" title="'+esc(hero.name)+'">'+esc(hero.name)+'</span>'+
+            '<span class="sub num">'+esc(hero.code)+' · '+fmt(hero.p)+
+              (hero.p.hm?' · '+hero.p.hm:'')+'</span></span>'+
+            '</div>';
+    }
+
+    /* Per-class columns. Winding-down classes render last and dimmed. */
+    if(!live.length && !wind.length){
+      html+='<div class="msg">Nothing upcoming — every class row is in the past.</div>';
+    }else{
+      html+='<div class="board">';
+      live.concat(wind).forEach(function(rec){
+        var down=wind.indexOf(rec)>=0;
+        var nx=rec.ahead[0], urgent=!down && nx.days<=1 && nx.kind!=='session';
+        var g=rec.ahead.filter(function(r){return r.kind==='graded';}).length;
+        html+='<div class="col'+(urgent?' due':'')+(down?' wd':'')+'">'+
+              '<div class="ct"><i class="dot"></i><b class="num">'+esc(rec.code)+'</b>'+
+              '<span class="n">'+(down?'wrapping up · ':'')+rec.ahead.length+' left'+
+                (g?' · '+g+' graded':'')+'</span></div>';
+        rec.ahead.slice(0,3).forEach(function(r,i){ html+=row(r,i===0 && !down); });
+        var extra=rec.ahead.length-3;
+        var tail=[];
+        if(extra>0) tail.push('+'+extra+' more');
+        if(rec.over) tail.push(rec.over+' past');
+        if(rec.und)  tail.push(rec.und+' undated');
+        if(tail.length) html+='<span class="more">'+tail.join(' · ')+'</span>';
+        html+='</div>';
+      });
+      html+='</div>';
+    }
+
+    /* Finished classes are a de-emphasised footer count, never a column. */
+    html+='<div class="ft">';
+    if(done.length){
+      done.forEach(function(rec){
+        html+='<span class="arch">'+esc(rec.code)+' finished · '+rec.all.length+' rows</span>';
+      });
+    }
+    html+='<span class="num">'+totalGraded+' graded item'+(totalGraded===1?'':'s')+' ahead</span>';
+    if(undated) html+='<span class="num">'+undated+' row'+(undated===1?'':'s')+' with no date</span>';
+    html+='</div>';
+
+    out.innerHTML=html;
+  }
+
+  fetch('../data/spokes.json',{cache:'no-store'})
+    .then(function(r){ if(!r.ok) throw new Error('HTTP '+r.status); return r.json(); })
+    .then(function(d){
+      var rows=((d&&d.classes)||[])
+        .filter(function(r){return r&&r.name&&String(r.name).trim();})
+        .map(function(r){
+          return {name:String(r.name).trim(), code:(r.code||'').trim(),
+                  date:(r.date||'').trim(),   due:(r.due||'').trim(),
+                  status:(r.status||'').trim(), type:(r.type||'').trim()};
+        });
+      render(rows);
+    })
+    .catch(function(e){
+      document.getElementById('out').innerHTML=
+        '<div class="msg">Could not load spokes.json — '+esc(e.message)+'</div>';
+    });
+})();
+</script>
+</body>
+</html>
