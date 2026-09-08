@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Week Board</title>
+<style>
+  :root{
+    --bg:#ffffff;
+    --text:#37352f;
+    --muted:#8a8780;
+    --border:#e6e5e1;
+    --card:#ffffff;
+    --card-hover:#f7f6f3;
+    --today-bg:#f6f4ef;
+    --today-head:#eeebe3;
+    --accent:#c1440e;
+    --class-bg:#eef3fb;
+    --class-border:#b9cded;
+    --class-text:#1f4d8f;
+    --shadow:0 1px 2px rgba(15,15,15,.06);
+    --head-h:34px;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{
+      --bg:#191919;
+      --text:#e9e9e7;
+      --muted:#8f8f8c;
+      --border:#2f2f2f;
+      --card:#202020;
+      --card-hover:#2a2a2a;
+      --today-bg:#212020;
+      --today-head:#2b2926;
+      --accent:#ff7a45;
+      --class-bg:#1c2634;
+      --class-border:#31445e;
+      --class-text:#8ab4f0;
+      --shadow:none;
+    }
+  }
+
+  *{box-sizing:border-box;}
+  html,body{height:100%;}
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--text);
+    font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Inter,sans-serif;
+    font-size:13px;
+    line-height:1.35;
+    -webkit-font-smoothing:antialiased;
+    display:flex;
+    flex-direction:column;
+    overflow:hidden;
+  }
+
+  /* ---------- top bar ---------- */
+  .bar{
+    flex:0 0 auto;
+    display:flex;
+    align-items:baseline;
+    gap:8px;
+    padding:8px 10px 6px;
+    border-bottom:1px solid var(--border);
+  }
+  .bar h1{
+    margin:0;
+    font-size:13px;
+    font-weight:650;
+    letter-spacing:.01em;
+  }
+  .bar .meta{
+    font-size:11px;
+    color:var(--muted);
+    font-variant-numeric:tabular-nums;
+  }
+  .bar .spacer{flex:1 1 auto;}
+
+  /* ---------- board ---------- */
+  .board{
+    flex:1 1 auto;
+    min-height:0;                 /* lets children scroll instead of growing body */
+    display:grid;
+    grid-template-columns:repeat(7,minmax(0,1fr));   /* 7 EQUAL columns */
+    gap:0;
+  }
+  .col{
+    min-width:0;                  /* required so long titles wrap, not overflow */
+    min-height:0;
+    display:flex;
+    flex-direction:column;
+    border-right:1px solid var(--border);
+  }
+  .col:last-child{border-right:none;}
+  .col.today{background:var(--today-bg);}
+
+  .colhead{
+    flex:0 0 auto;
+    position:sticky;
+    top:0;
+    z-index:2;
+    height:var(--head-h);
+    display:flex;
+    align-items:center;
+    gap:5px;
+    padding:0 8px;
+    border-bottom:1px solid var(--border);
+    background:var(--bg);
+  }
+  .col.today .colhead{
+    background:var(--today-head);
+    box-shadow:inset 0 2px 0 var(--accent);
+  }
+  .dow{
+    font-size:11px;
+    font-weight:700;
+    letter-spacing:.06em;
+    text-transform:uppercase;
+  }
+  .col.today .dow{color:var(--accent);}
+  .dnum{
+    font-size:11px;
+    color:var(--muted);
+    font-variant-numeric:tabular-nums;
+  }
+  .cnt{
+    margin-left:auto;
+    font-size:10px;
+    color:var(--muted);
+    font-variant-numeric:tabular-nums;
+  }
+
+  .stack{
+    flex:1 1 auto;
+    min-height:0;
+    overflow-y:auto;              /* each column scrolls independently */
+    overflow-x:hidden;
+    padding:6px 6px 14px;
+    display:flex;
+    flex-direction:column;
+    gap:5px;
+    scrollbar-width:thin;
+  }
+  .stack::-webkit-scrollbar{width:6px;}
+  .stack::-webkit-scrollbar-thumb{background:var(--border);border-radius:3px;}
+  .stack::-webkit-scrollbar-track{background:transparent;}
+
+  /* ---------- cards ---------- */
+  a.card{
+    display:block;
+    text-decoration:none;
+    color:inherit;
+    background:var(--card);
+    border:1px solid var(--border);
+    border-radius:5px;
+    padding:5px 6px 6px;
+    box-shadow:var(--shadow);
+    overflow-wrap:anywhere;       /* long unbroken words can't blow out the column */
+    word-break:break-word;
+  }
+  a.card:hover{background:var(--card-hover);}
+  a.card:focus-visible{outline:2px solid var(--accent);outline-offset:1px;}
+
+  .row1{
+    display:flex;
+    align-items:center;
+    gap:5px;
+    margin-bottom:2px;
+  }
+  .time{
+    font-size:10.5px;
+    font-weight:700;
+    letter-spacing:.04em;
+    font-variant-numeric:tabular-nums;
+    color:var(--muted);
+    flex:0 0 auto;
+  }
+  .card.timed .time{color:var(--text);}
+  .allday{
+    font-size:9.5px;
+    font-weight:700;
+    letter-spacing:.07em;
+    text-transform:uppercase;
+    color:var(--muted);
+  }
+  .title{
+    font-size:12px;
+    font-weight:500;
+    display:-webkit-box;
+    -webkit-line-clamp:3;         /* cap runaway titles at 3 lines */
+    -webkit-box-orient:vertical;
+    overflow:hidden;
+  }
+  .kind{
+    display:inline-block;
+    margin-top:3px;
+    font-size:9.5px;
+    font-weight:600;
+    letter-spacing:.03em;
+    color:var(--muted);
+    max-width:100%;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    white-space:nowrap;
+    vertical-align:bottom;
+  }
+
+  /* class items: filled tint + left rule + monospace course code */
+  a.card.isclass{
+    background:var(--class-bg);
+    border-color:var(--class-border);
+    border-left:3px solid var(--class-text);
+    padding-left:6px;
+  }
+  a.card.isclass .kind{
+    color:var(--class-text);
+    font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+    font-size:10px;
+    letter-spacing:0;
+  }
+  a.card.isclass .time{color:var(--class-text);}
+  a.card.isclass .title{font-weight:600;}
+
+  a.card.done{opacity:.5;}
+  a.card.done .title{text-decoration:line-through;}
+
+  .empty{
+    font-size:11px;
+    color:var(--muted);
+    text-align:center;
+    padding:10px 4px;
+    opacity:.6;
+  }
+
+  /* ---------- fallback ---------- */
+  #err{
+    display:none;
+    padding:16px;
+    font-size:12.5px;
+    color:var(--muted);
+  }
+  #err b{color:var(--text);display:block;margin-bottom:4px;font-size:13px;}
+  body.failed .board,body.failed .bar .meta{display:none;}
+  body.failed #err{display:block;}
+
+  /* narrow embeds: keep 7 columns but shrink chrome */
+  @media (max-width:820px){
+    .title{font-size:11px;-webkit-line-clamp:4;}
+    .stack{padding:4px 4px 12px;gap:4px;}
+    .colhead{padding:0 5px;gap:3px;}
+    .dnum{display:none;}
+    .cnt{display:none;}
+    a.card{padding:4px 5px 5px;}
+  }
+</style>
+</head>
+<body>
+  <div class="bar">
+    <h1 id="range">Week</h1>
+    <span class="meta" id="meta"></span>
+    <span class="spacer"></span>
+    <span class="meta" id="stamp"></span>
+  </div>
+
+  <div class="board" id="board"></div>
+
+  <div id="err">
+    <b>Week data unavailable</b>
+    Could not load <code>../data/week.json</code>. The board will fill in once the
+    sync writes that file.
+  </div>
+
+<script>
+(function(){
+  var DOW = ['MON','TUE','WED','THU','FRI','SAT','SUN'];
+  var MON = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+
+  function esc(s){
+    return String(s == null ? '' : s)
+      .replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;')
+      .replace(/"/g,'&quot;').replace(/'/g,'&#39;');
+  }
+
+  // 'YYYY-MM-DD' -> parts, avoiding UTC-shift from new Date('YYYY-MM-DD')
+  function ymd(dateStr){
+    var m = /^(\d{4})-(\d{2})-(\d{2})/.exec(String(dateStr || ''));
+    if(!m) return null;
+    return {y:+m[1], mo:+m[2], d:+m[3]};
+  }
+
+  // Timed items carry 'YYYY-MM-DDTHH:MM:SS...' ; all-day items are bare dates.
+  // Read the wall-clock HH:MM straight off the string so we never re-zone it.
+  function timeOf(dateStr){
+    var m = /^\d{4}-\d{2}-\d{2}[T ](\d{2}):(\d{2})/.exec(String(dateStr || ''));
+    return m ? (m[1] + m[2]) : null;   // '1100' — 24h, always 4 digits
+  }
+
+  function sortKey(it){
+    var t = timeOf(it.date);
+    // all-day sinks to the bottom of its column; timed sort chronologically
+    return t === null ? 9999 : parseInt(t, 10);
+  }
+
+  function card(it){
+    var t = timeOf(it.date);
+    var isClass = String(it.src || '').toLowerCase() === 'class';
+    var cls = 'card' + (isClass ? ' isclass' : '') + (t ? ' timed' : '') + (it.done ? ' done' : '');
+    var href = it.url ? ' href="' + esc(it.url) + '" target="_blank" rel="noopener"' : '';
+    var head = t
+      ? '<span class="time">' + t + '</span>'
+      : '<span class="allday">All-day</span>';
+    var kind = it.kind ? '<span class="kind">' + esc(it.kind) + '</span>' : '';
+    return '<a class="' + cls + '"' + href + ' title="' + esc(it.name) + '">' +
+             '<div class="row1">' + head + '</div>' +
+             '<div class="title">' + esc(it.name) + '</div>' +
+             kind +
+           '</a>';
+  }
+
+  function column(day){
+    var p = ymd(day.date) || {mo:0, d:0};
+    var items = (day.items || []).slice().sort(function(a,b){
+      var d = sortKey(a) - sortKey(b);
+      if(d) return d;
+      return String(a.name || '').localeCompare(String(b.name || ''));
+    });
+    var idx = -1;
+    // derive weekday label from the date itself rather than trusting array order
+    var dt = ymd(day.date);
+    if(dt){
+      var js = new Date(dt.y, dt.mo - 1, dt.d).getDay(); // 0=Sun
+      idx = (js + 6) % 7;                                // 0=Mon
+    }
+    var label = idx >= 0 ? DOW[idx] : '';
+    var body = items.length
+      ? items.map(card).join('')
+      : '<div class="empty">&ndash;</div>';
+    return '<div class="col' + (day.is_today ? ' today' : '') + '">' +
+             '<div class="colhead">' +
+               '<span class="dow">' + label + '</span>' +
+               '<span class="dnum">' + p.d + '</span>' +
+               '<span class="cnt">' + (items.length || '') + '</span>' +
+             '</div>' +
+             '<div class="stack">' + body + '</div>' +
+           '</div>';
+  }
+
+  function render(data){
+    var days = (data && data.days) || [];
+    if(!days.length) throw new Error('no days');
+
+    document.getElementById('board').innerHTML = days.map(column).join('');
+
+    var a = ymd(days[0].date), b = ymd(days[days.length - 1].date);
+    if(a && b){
+      document.getElementById('range').textContent =
+        MON[a.mo - 1] + ' ' + a.d + ' \u2013 ' +
+        (a.mo === b.mo ? '' : MON[b.mo - 1] + ' ') + b.d;
+    }
+    var total = (typeof data.total === 'number')
+      ? data.total
+      : days.reduce(function(n, d){ return n + ((d.items || []).length); }, 0);
+    document.getElementById('meta').textContent = total + ' item' + (total === 1 ? '' : 's');
+
+    var g = timeOf(data.generated);
+    if(g) document.getElementById('stamp').textContent = 'sync ' + g;
+  }
+
+  fetch('../data/week.json', {cache:'no-store'})
+    .then(function(r){ if(!r.ok) throw new Error(r.status); return r.json(); })
+    .then(render)
+    .catch(function(){ document.body.classList.add('failed'); });
+})();
+</script>
+</body>
+</html>

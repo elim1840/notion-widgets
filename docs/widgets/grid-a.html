@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Week Grid</title>
+<style>
+  :root{
+    --bg:#ffffff;
+    --fg:#37352f;
+    --muted:#8d8b85;
+    --faint:#b4b2ac;
+    --line:#e6e5e1;
+    --line-soft:#f0efec;
+    --today-bg:#f7f5ff;
+    --today-fg:#5b45c4;
+    --chip-bg:#f4f3f0;
+    --chip-fg:#37352f;
+    --chip-bd:#dcdad4;
+    --class-bg:#eef2ff;
+    --class-fg:#3b3799;
+    --class-bd:#c3c9f5;
+    --class-bar:#5b58d6;
+    --task-bar:#9b9892;
+    --now:#e0483d;
+    --hr:56px;      /* pixels per hour */
+    --gut:46px;     /* time gutter width */
+  }
+  @media (prefers-color-scheme: dark){
+    :root{
+      --bg:#191919;
+      --fg:#e9e9e7;
+      --muted:#8f8f8c;
+      --faint:#6b6b68;
+      --line:#2f2f2f;
+      --line-soft:#252525;
+      --today-bg:#20203099;
+      --today-fg:#a89cf5;
+      --chip-bg:#242424;
+      --chip-fg:#e9e9e7;
+      --chip-bd:#383838;
+      --class-bg:#20213a;
+      --class-fg:#c3c0ff;
+      --class-bd:#3b3d66;
+      --class-bar:#7d79f0;
+      --task-bar:#6e6e6b;
+      --now:#f2695e;
+    }
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0;height:100%}
+  body{
+    background:var(--bg);
+    color:var(--fg);
+    font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Inter,sans-serif;
+    font-size:12px;
+    -webkit-font-smoothing:antialiased;
+    overflow:hidden;
+  }
+  #app{display:flex;flex-direction:column;height:100%;width:100%}
+
+  /* ---------- top bar ---------- */
+  .bar{
+    display:flex;align-items:baseline;gap:10px;
+    padding:8px 12px 6px 12px;
+    border-bottom:1px solid var(--line);
+    flex:0 0 auto;
+  }
+  .bar h1{font-size:12px;font-weight:600;margin:0;letter-spacing:.02em}
+  .bar .sub{font-size:11px;color:var(--muted);margin-left:auto;font-variant-numeric:tabular-nums}
+
+  /* ---------- shared 8-column geometry ---------- */
+  .row8{
+    display:grid;
+    grid-template-columns:var(--gut) repeat(7,minmax(0,1fr));
+  }
+
+  /* ---------- day header ---------- */
+  .head{flex:0 0 auto;border-bottom:1px solid var(--line);background:var(--bg)}
+  .head .cell{
+    padding:6px 4px;
+    text-align:center;
+    border-left:1px solid var(--line-soft);
+    min-width:0;
+  }
+  .head .cell:first-child{border-left:0}
+  .head .dow{font-size:10px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+  .head .dnum{font-size:15px;font-weight:600;line-height:1.25;font-variant-numeric:tabular-nums}
+  .head .cell.today .dow{color:var(--today-fg)}
+  .head .cell.today .dnum{
+    color:#fff;background:var(--today-fg);
+    display:inline-block;min-width:24px;height:24px;line-height:24px;
+    border-radius:12px;padding:0 5px;
+  }
+
+  /* ---------- all-day strip ---------- */
+  .allday{flex:0 0 auto;border-bottom:1px solid var(--line);max-height:96px;overflow-y:auto}
+  .allday .lbl{
+    font-size:9px;color:var(--faint);text-align:right;
+    padding:5px 5px 0 0;letter-spacing:.05em;text-transform:uppercase;
+    line-height:1.2;
+  }
+  .allday .col{
+    border-left:1px solid var(--line-soft);
+    padding:3px 3px 4px 3px;
+    display:flex;flex-direction:column;gap:2px;
+    min-width:0;
+  }
+  .allday .col.today{background:var(--today-bg)}
+
+  /* ---------- scrolling time body ---------- */
+  .body{flex:1 1 auto;overflow-y:auto;overflow-x:hidden;position:relative}
+  .body .gutter{position:relative}
+  .body .gutter .hl{
+    position:absolute;right:6px;
+    font-size:10px;color:var(--faint);
+    font-variant-numeric:tabular-nums;
+    transform:translateY(-50%);
+    white-space:nowrap;
+  }
+  .daycol{
+    position:relative;
+    border-left:1px solid var(--line-soft);
+    min-width:0;
+    background-image:repeating-linear-gradient(
+      to bottom,
+      var(--line) 0, var(--line) 1px,
+      transparent 1px, transparent var(--hr)
+    );
+  }
+  .daycol.today{background-color:var(--today-bg)}
+
+  /* ---------- events ---------- */
+  .ev{
+    position:absolute;
+    overflow:hidden;
+    border-radius:4px;
+    border:1px solid var(--chip-bd);
+    background:var(--chip-bg);
+    color:var(--chip-fg);
+    text-decoration:none;
+    padding:2px 4px 2px 6px;
+    line-height:1.2;
+    display:block;
+    box-shadow:0 1px 1px rgba(0,0,0,.05);
+  }
+  .ev:before{
+    content:"";position:absolute;left:0;top:0;bottom:0;width:3px;
+    background:var(--task-bar);
+  }
+  .ev:hover{filter:brightness(1.04);z-index:60}
+  .ev .t{font-size:9px;color:var(--muted);font-variant-numeric:tabular-nums;letter-spacing:.02em}
+  .ev .n{font-size:11px;font-weight:500;display:block;overflow:hidden}
+  .ev.cls{background:var(--class-bg);color:var(--class-fg);border-color:var(--class-bd)}
+  .ev.cls:before{background:var(--class-bar)}
+  .ev.cls .t{color:var(--class-fg);opacity:.8;font-weight:600}
+  .ev.done{opacity:.45}
+  .ev.done .n{text-decoration:line-through}
+  .ev.sm{padding:1px 4px 1px 6px}
+  .ev.sm .n{font-size:10px}
+
+  /* all-day chips */
+  .chip{
+    display:block;text-decoration:none;
+    font-size:10px;line-height:1.25;
+    padding:2px 5px;border-radius:4px;
+    border:1px solid var(--chip-bd);
+    background:var(--chip-bg);color:var(--chip-fg);
+    overflow:hidden;text-overflow:ellipsis;white-space:nowrap;
+    border-left-width:3px;border-left-color:var(--task-bar);
+  }
+  .chip.cls{background:var(--class-bg);color:var(--class-fg);border-color:var(--class-bd);border-left-color:var(--class-bar)}
+  .chip.done{opacity:.45;text-decoration:line-through}
+
+  /* now line */
+  .now{position:absolute;left:0;right:0;height:0;border-top:1.5px solid var(--now);z-index:50;pointer-events:none}
+  .now:before{content:"";position:absolute;left:-3px;top:-3.5px;width:6px;height:6px;border-radius:50%;background:var(--now)}
+
+  .msg{padding:24px 16px;color:var(--muted);font-size:12px;text-align:center}
+</style>
+</head>
+<body>
+<div id="app"><div class="msg" id="boot">Loading week…</div></div>
+
+<script>
+(function(){
+  "use strict";
+
+  var HR = 56;            // px per hour, must match --hr
+  var GUT = 46;           // must match --gut
+  var DEFAULT_MIN = 8;    // fallback window start hour
+  var DEFAULT_MAX = 20;   // fallback window end hour
+  var DUR_MIN = 60;       // assumed event duration, minutes
+  var DOW = ['MON','TUE','WED','THU','FRI','SAT','SUN'];
+
+  var app = document.getElementById('app');
+
+  function el(tag, cls, txt){
+    var n = document.createElement(tag);
+    if (cls) n.className = cls;
+    if (txt !== undefined && txt !== null) n.textContent = txt;
+    return n;
+  }
+  function pad2(n){ return (n < 10 ? '0' : '') + n; }
+  function hhmm(h, m){ return pad2(h) + ':' + pad2(m); }
+
+  function quiet(text){
+    app.innerHTML = '';
+    app.appendChild(el('div','msg',text));
+  }
+
+  /* Parse item.date. Returns {allDay:bool, h:int, m:int} or null if unparseable. */
+  function parseWhen(s){
+    if (typeof s !== 'string') return null;
+    var m = s.match(/^(\d{4})-(\d{2})-(\d{2})(?:[T ](\d{2}):(\d{2}))?/);
+    if (!m) return null;
+    if (m[4] === undefined) return { allDay:true, h:0, mi:0 };
+    return { allDay:false, h:parseInt(m[4],10), mi:parseInt(m[5],10) };
+  }
+
+  /* Greedy side-by-side layout for a day's timed events.
+     Mutates each event with .col and .ncol. */
+  function layout(evs){
+    evs.sort(function(a,b){
+      return (a.start - b.start) || (a.end - b.end);
+    });
+    var i = 0;
+    while (i < evs.length){
+      // grow a cluster of transitively-overlapping events
+      var j = i + 1, clusterEnd = evs[i].end;
+      while (j < evs.length && evs[j].start < clusterEnd){
+        if (evs[j].end > clusterEnd) clusterEnd = evs[j].end;
+        j++;
+      }
+      var cluster = evs.slice(i, j);
+      var colEnds = [];   // last end time per column
+      for (var k = 0; k < cluster.length; k++){
+        var placed = -1;
+        for (var c = 0; c < colEnds.length; c++){
+          if (colEnds[c] <= cluster[k].start){ placed = c; break; }
+        }
+        if (placed < 0){ placed = colEnds.length; colEnds.push(0); }
+        colEnds[placed] = cluster[k].end;
+        cluster[k].col = placed;
+      }
+      var n = colEnds.length;
+      for (var q = 0; q < cluster.length; q++) cluster[q].ncol = n;
+      i = j;
+    }
+  }
+
+  function render(data){
+    var days = (data && Array.isArray(data.days)) ? data.days.slice(0,7) : [];
+    while (days.length < 7) days.push({ date:'', is_today:false, items:[] });
+
+    // ---- split timed vs all-day, compute hour window ----
+    var timed = [], allday = [], minH = 24, maxH = 0, anyTimed = false;
+    for (var d = 0; d < 7; d++){
+      timed[d] = []; allday[d] = [];
+      var items = (days[d] && Array.isArray(days[d].items)) ? days[d].items : [];
+      for (var i = 0; i < items.length; i++){
+        var it = items[i] || {};
+        var w = parseWhen(it.date);
+        if (!w || w.allDay){ allday[d].push(it); continue; }
+        var start = w.h * 60 + w.mi;
+        var e = {
+          item: it,
+          start: start,
+          end: start + DUR_MIN,
+          h: w.h, mi: w.mi,
+          col: 0, ncol: 1
+        };
+        timed[d].push(e);
+        anyTimed = true;
+        if (w.h < minH) minH = w.h;
+        var endH = Math.ceil((start + DUR_MIN) / 60);
+        if (endH > maxH) maxH = endH;
+      }
+    }
+    var H0, H1;
+    if (!anyTimed){ H0 = DEFAULT_MIN; H1 = DEFAULT_MAX; }
+    else {
+      H0 = Math.max(0, Math.min(minH, DEFAULT_MIN));
+      H1 = Math.min(24, Math.max(maxH, DEFAULT_MAX));
+      if (H1 - H0 < 4) H1 = Math.min(24, H0 + 4);
+    }
+    var span = H1 - H0;                 // hours shown
+    var bodyH = span * HR;              // px
+
+    for (var d2 = 0; d2 < 7; d2++) layout(timed[d2]);
+
+    // ---- build DOM ----
+    app.innerHTML = '';
+
+    var todayIdx = -1;
+    for (var t = 0; t < 7; t++){ if (days[t] && days[t].is_today) todayIdx = t; }
+
+    // top bar
+    var bar = el('div','bar');
+    var h1 = el('h1','', 'WEEK');
+    bar.appendChild(h1);
+    var count = 0;
+    for (var cd = 0; cd < 7; cd++) count += timed[cd].length + allday[cd].length;
+    var sub = el('div','sub');
+    var rangeTxt = '';
+    if (days[0].date && days[6].date) rangeTxt = days[0].date + ' → ' + days[6].date + '  ·  ';
+    sub.textContent = rangeTxt + count + ' items';
+    bar.appendChild(sub);
+    app.appendChild(bar);
+
+    // day header
+    var head = el('div','head row8');
+    head.appendChild(el('div','cell'));  // gutter spacer
+    for (var hd = 0; hd < 7; hd++){
+      var cell = el('div','cell' + (days[hd].is_today ? ' today' : ''));
+      cell.appendChild(el('div','dow', DOW[hd]));
+      var dnum = '';
+      if (days[hd].date){
+        var pm = days[hd].date.match(/^(\d{4})-(\d{2})-(\d{2})/);
+        if (pm) dnum = String(parseInt(pm[3],10));
+      }
+      cell.appendChild(el('div','dnum', dnum));
+      head.appendChild(cell);
+    }
+    app.appendChild(head);
+
+    // all-day strip (only if something is there)
+    var hasAllDay = false;
+    for (var ad = 0; ad < 7; ad++) if (allday[ad].length) hasAllDay = true;
+    if (hasAllDay){
+      var strip = el('div','allday row8');
+      strip.appendChild(el('div','lbl','all\u2011day'));
+      for (var a = 0; a < 7; a++){
+        var col = el('div','col' + (days[a].is_today ? ' today' : ''));
+        for (var ai = 0; ai < allday[a].length; ai++){
+          col.appendChild(chipNode(allday[a][ai]));
+        }
+        strip.appendChild(col);
+      }
+      app.appendChild(strip);
+    }
+
+    // scrolling body
+    var body = el('div','body');
+    var gridInner = el('div','row8');
+    gridInner.style.height = (bodyH + 24) + 'px';   /* +pad so a late event isn't clipped */
+
+    var gutter = el('div','gutter');
+    for (var hh = H0; hh <= H1; hh++){
+      var lab = el('div','hl', hhmm(hh === 24 ? 0 : hh, 0));
+      lab.style.top = ((hh - H0) * HR) + 'px';
+      if (hh === H0) lab.style.transform = 'translateY(0)';
+      if (hh === H1) lab.style.transform = 'translateY(-100%)';
+      gutter.appendChild(lab);
+    }
+    gridInner.appendChild(gutter);
+
+    var todayColNode = null;
+    for (var dc = 0; dc < 7; dc++){
+      var dcol = el('div','daycol' + (days[dc].is_today ? ' today' : ''));
+      if (days[dc].is_today) todayColNode = dcol;
+      for (var ei = 0; ei < timed[dc].length; ei++){
+        dcol.appendChild(eventNode(timed[dc][ei], H0, span));
+      }
+      gridInner.appendChild(dcol);
+    }
+    body.appendChild(gridInner);
+    app.appendChild(body);
+
+    // current-time indicator on today's column
+    if (todayColNode){
+      var now = new Date();
+      var mins = now.getHours() * 60 + now.getMinutes();
+      if (mins >= H0 * 60 && mins <= H1 * 60){
+        var line = el('div','now');
+        line.style.top = (((mins - H0 * 60) / 60) * HR) + 'px';
+        todayColNode.appendChild(line);
+      }
+    }
+
+    // scroll so the first event (or 08:00) sits near the top
+    var firstMin = null;
+    for (var sd = 0; sd < 7; sd++){
+      if (timed[sd].length){
+        var s0 = timed[sd][0].start;
+        if (firstMin === null || s0 < firstMin) firstMin = s0;
+      }
+    }
+    if (firstMin === null) firstMin = DEFAULT_MIN * 60;
+    body.scrollTop = Math.max(0, ((firstMin - H0 * 60) / 60) * HR - 12);
+  }
+
+  function isClass(it){ return it && it.src === 'class'; }
+
+  function chipNode(it){
+    var a = el('a','chip' + (isClass(it) ? ' cls' : '') + (it.done ? ' done' : ''));
+    a.textContent = (isClass(it) && it.kind ? it.kind + ' · ' : '') + (it.name || 'Untitled');
+    a.title = (it.name || '') + (it.kind ? '  [' + it.kind + ']' : '');
+    if (it.url){ a.href = it.url; a.target = '_blank'; a.rel = 'noopener noreferrer'; }
+    return a;
+  }
+
+  function eventNode(e, H0, span){
+    var it = e.item;
+    var cls = isClass(it);
+    var a = el('a','ev' + (cls ? ' cls' : '') + (it.done ? ' done' : ''));
+
+    var topMin = e.start - H0 * 60;
+    var hPx = (DUR_MIN / 60) * HR;
+    a.style.top = ((topMin / 60) * HR) + 'px';
+    a.style.height = Math.max(16, hPx - 2) + 'px';
+    if (hPx - 2 < 34) a.className += ' sm';
+
+    var w = 100 / e.ncol;
+    a.style.left = 'calc(' + (e.col * w) + '% + 1px)';
+    a.style.width = 'calc(' + w + '% - 3px)';
+    a.style.zIndex = String(10 + e.col);
+
+    var tline = el('div','t', hhmm(e.h, e.mi) + (cls && it.kind ? '  ' + it.kind : ''));
+    a.appendChild(tline);
+    a.appendChild(el('span','n', it.name || 'Untitled'));
+    a.title = hhmm(e.h, e.mi) + '  ' + (it.name || '') + (it.kind ? '\n' + it.kind : '');
+    if (it.url){ a.href = it.url; a.target = '_blank'; a.rel = 'noopener noreferrer'; }
+    return a;
+  }
+
+  fetch('../data/week.json', { cache: 'no-store' })
+    .then(function(r){
+      if (!r.ok) throw new Error('HTTP ' + r.status);
+      return r.json();
+    })
+    .then(function(data){
+      try { render(data); }
+      catch (err){ quiet('Could not render the week grid.'); }
+    })
+    .catch(function(){
+      quiet('Week data unavailable.');
+    });
+})();
+</script>
+</body>
+</html>

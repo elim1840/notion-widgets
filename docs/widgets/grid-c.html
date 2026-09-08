@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Week Density</title>
+<style>
+  :root{
+    --bg:#fff; --fg:#37352f; --muted:#787774; --border:#e6e5e1;
+    --cell:#fbfbfa; --today:#2383e2; --todaybg:rgba(35,131,226,.07);
+    --class:#8b5cf6; --classbg:rgba(139,92,246,.11);
+    --chip:#f1f1ef; --chiphover:#e8e8e6;
+    --h0:transparent; --h1:rgba(35,131,226,.07); --h2:rgba(35,131,226,.15);
+    --h3:rgba(35,131,226,.26); --h4:rgba(35,131,226,.38);
+    --bar:#2383e2; --bartrack:#ebebe9;
+  }
+  @media (prefers-color-scheme:dark){
+    :root{
+      --bg:#191919; --fg:#e9e9e7; --muted:#9b9b98; --border:#2f2f2f;
+      --cell:#1e1e1e; --today:#5b9df0; --todaybg:rgba(91,157,240,.10);
+      --class:#a78bfa; --classbg:rgba(167,139,250,.16);
+      --chip:#262626; --chiphover:#323232;
+      --h0:transparent; --h1:rgba(91,157,240,.10); --h2:rgba(91,157,240,.19);
+      --h3:rgba(91,157,240,.30); --h4:rgba(91,157,240,.44);
+      --bar:#5b9df0; --bartrack:#2f2f2f;
+    }
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0;background:var(--bg);color:var(--fg);
+    font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Inter,sans-serif;
+    -webkit-font-smoothing:antialiased;font-size:13px}
+  #root{padding:10px 12px 12px}
+
+  .top{display:flex;align-items:baseline;gap:10px;margin:0 0 8px}
+  .top h1{font-size:12px;font-weight:600;letter-spacing:.04em;text-transform:uppercase;margin:0}
+  .top .sub{font-size:11px;color:var(--muted);font-variant-numeric:tabular-nums}
+  .top .spacer{flex:1}
+
+  .grid{display:grid;grid-template-columns:58px repeat(7,minmax(0,1fr));gap:3px}
+
+  /* ---- day headers ---- */
+  .dh{padding:4px 6px 5px;border-radius:5px;border:1px solid transparent;min-width:0}
+  .dh.today{border-color:var(--today);background:var(--todaybg)}
+  .dh .dow{font-size:10px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:var(--muted)}
+  .dh.today .dow{color:var(--today)}
+  .dh .dnum{font-size:15px;font-weight:600;line-height:1.15;font-variant-numeric:tabular-nums}
+  .dh .cnt{float:right;font-size:10px;color:var(--muted);font-variant-numeric:tabular-nums;
+    padding-top:3px;font-weight:600}
+  .dh.free .dnum{color:var(--muted);opacity:.55}
+  .bar{height:3px;border-radius:2px;background:var(--bartrack);margin-top:4px;overflow:hidden}
+  .bar i{display:block;height:100%;background:var(--bar);border-radius:2px}
+
+  /* ---- band label column ---- */
+  .bl{display:flex;flex-direction:column;justify-content:center;align-items:flex-end;
+    padding:5px 5px 5px 0;text-align:right}
+  .bl b{font-size:9px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;
+    color:var(--muted);white-space:nowrap}
+  .bl span{font-size:8.5px;color:var(--muted);opacity:.6;font-variant-numeric:tabular-nums;white-space:nowrap}
+
+  /* ---- cells ---- */
+  .cell{border:1px solid var(--border);border-radius:5px;padding:3px;min-height:34px;
+    display:flex;flex-direction:column;gap:2px;min-width:0;overflow:hidden}
+  .cell.tcol{border-color:var(--today)}
+  .cell.l0{background:var(--h0)} .cell.l1{background:var(--h1)}
+  .cell.l2{background:var(--h2)} .cell.l3{background:var(--h3)} .cell.l4{background:var(--h4)}
+
+  a.ev{display:block;text-decoration:none;color:var(--fg);background:var(--chip);
+    border-radius:3px;padding:2px 4px;font-size:10.5px;line-height:1.25;
+    white-space:nowrap;overflow:hidden;text-overflow:ellipsis;
+    border-left:2px solid transparent}
+  a.ev:hover{background:var(--chiphover)}
+  a.ev .t{font-variant-numeric:tabular-nums;font-weight:700;color:var(--muted);margin-right:3px}
+  a.ev.cls{background:var(--classbg);border-left-color:var(--class)}
+  a.ev.cls .t{color:var(--class)}
+  a.ev.done{opacity:.45;text-decoration:line-through}
+  a.ev.hid{display:none}
+  .cell.open{overflow:visible}
+  .cell.open a.ev.hid{display:block}
+  .more{font-size:9.5px;color:var(--muted);padding:0 4px;cursor:pointer;user-select:none}
+  .more:hover{color:var(--fg)}
+  .empty{flex:1}
+
+  .legend{display:flex;align-items:center;gap:8px;margin-top:9px;
+    font-size:10px;color:var(--muted);flex-wrap:wrap}
+  .legend .sw{display:inline-block;width:13px;height:9px;border-radius:2px;border:1px solid var(--border);
+    vertical-align:-1px;margin-right:2px}
+  .legend .k{display:flex;align-items:center;gap:3px}
+  .legend .clsdot{display:inline-block;width:8px;height:8px;border-radius:2px;background:var(--class)}
+  .err{padding:14px;border:1px dashed var(--border);border-radius:6px;color:var(--muted);font-size:12px}
+
+  @media (max-width:620px){
+    .grid{grid-template-columns:46px repeat(7,minmax(0,1fr))}
+    .bl span{display:none}
+    a.ev{font-size:9.5px}
+    .dh .dnum{font-size:13px}
+  }
+</style>
+</head>
+<body>
+<div id="root"><div class="err">Loading week…</div></div>
+<script>
+(function(){
+  var BANDS = [
+    {key:'allday', label:'All&#8209;day', range:'no time'},
+    {key:'am',     label:'Morning',     range:'0600&#8209;1200'},
+    {key:'pm',     label:'Aftrn',       range:'1200&#8209;1800'},
+    {key:'eve',    label:'Evening',     range:'1800&#8209;2400'}
+  ];
+  var DOW = ['Mon','Tue','Wed','Thu','Fri','Sat','Sun'];
+  var MAX_CHIPS = 3;
+
+  function esc(s){return String(s==null?'':s).replace(/[&<>"']/g,function(c){
+    return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];});}
+
+  // Parse item.date -> {hour, hhmm} or null when all-day ('YYYY-MM-DD')
+  function timeOf(raw){
+    if(typeof raw!=='string') return null;
+    var m = raw.match(/^\d{4}-\d{2}-\d{2}T(\d{2}):(\d{2})/);
+    if(!m) return null;                       // bare date = all-day
+    var h = parseInt(m[1],10), mi = m[2];
+    if(isNaN(h)) return null;
+    return {h:h, hhmm:m[1]+mi};
+  }
+  function bandFor(t){
+    if(!t) return 'allday';
+    if(t.h < 12) return 'am';                 // pre-0600 folds into morning
+    if(t.h < 18) return 'pm';
+    return 'eve';
+  }
+  function heat(n){ return n<=0?0 : n===1?1 : n===2?2 : n===3?3 : 4; }
+  var MON = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+  function dayNum(iso){ return String(parseInt(iso.split('-')[2],10)); }
+  function dayLong(iso){
+    var p = iso.split('-');
+    return (MON[parseInt(p[1],10)-1] || p[1]) + ' ' + parseInt(p[2],10);
+  }
+
+  function render(data){
+    var days = (data && data.days) || [];
+    if(!days.length){ fail('No days in week.json.'); return; }
+
+    // bucket
+    var buckets = days.map(function(d){
+      var b = {allday:[],am:[],pm:[],eve:[]};
+      (d.items||[]).forEach(function(it){
+        var t = timeOf(it.date);
+        b[bandFor(t)].push({it:it, t:t});
+      });
+      // sort timed bands chronologically
+      ['am','pm','eve'].forEach(function(k){
+        b[k].sort(function(a,z){return (a.t?a.t.hhmm:'') < (z.t?z.t.hhmm:'') ? -1 : 1;});
+      });
+      return b;
+    });
+
+    var counts = days.map(function(d){return (d.items||[]).length;});
+    var maxCount = Math.max.apply(null, counts.concat([1]));
+    var total = (typeof data.total === 'number') ? data.total
+              : counts.reduce(function(a,b){return a+b;},0);
+
+    var h = [];
+    var wk = days[0] ? dayLong(days[0].date) : '';
+    var wkEnd = days[days.length-1] ? dayLong(days[days.length-1].date) : '';
+    h.push('<div class="top"><h1>Week Load</h1>'
+      + '<div class="sub">'+esc(wk)+' – '+esc(wkEnd)+'</div>'
+      + '<div class="spacer"></div>'
+      + '<div class="sub">'+total+' items</div></div>');
+
+    h.push('<div class="grid">');
+    // corner
+    h.push('<div></div>');
+    // day headers
+    days.forEach(function(d,i){
+      var c = counts[i];
+      var pct = Math.round(c/maxCount*100);
+      h.push('<div class="dh'+(d.is_today?' today':'')+(c===0?' free':'')+'">'
+        + '<span class="cnt">'+c+'</span>'
+        + '<div class="dow">'+DOW[i%7]+'</div>'
+        + '<div class="dnum">'+esc(dayNum(d.date))+'</div>'
+        + '<div class="bar"><i style="width:'+pct+'%"></i></div>'
+        + '</div>');
+    });
+
+    // band rows
+    BANDS.forEach(function(band){
+      h.push('<div class="bl"><b>'+band.label+'</b><span>'+band.range+'</span></div>');
+      days.forEach(function(d,i){
+        var list = buckets[i][band.key];
+        h.push('<div class="cell l'+heat(list.length)+(d.is_today?' tcol':'')+'">');
+        list.forEach(function(e,idx){
+          var it = e.it;
+          var isClass = it.src === 'class';
+          var lbl = isClass ? (it.kind || it.name) : it.name;
+          var tm = e.t ? '<span class="t">'+e.t.hhmm+'</span>' : '';
+          var title = (e.t ? e.t.hhmm+' · ' : '') + (it.name||'')
+                    + (it.kind ? '  ['+it.kind+']' : '');
+          var cls = 'ev' + (isClass?' cls':'') + (it.done?' done':'');
+          var url = (typeof it.url === 'string' && /^https?:/.test(it.url)) ? it.url : null;
+          var inner = tm + esc(lbl);
+          if(idx >= MAX_CHIPS) cls += ' hid';
+          h.push(url
+            ? '<a class="'+cls+'" href="'+esc(url)+'" target="_blank" rel="noopener" title="'+esc(title)+'">'+inner+'</a>'
+            : '<a class="'+cls+'" title="'+esc(title)+'">'+inner+'</a>');
+        });
+        if(list.length > MAX_CHIPS){
+          h.push('<div class="more" role="button" tabindex="0">+'+(list.length-MAX_CHIPS)+' more</div>');
+        }
+        if(!list.length) h.push('<div class="empty"></div>');
+        h.push('</div>');
+      });
+    });
+    h.push('</div>');
+
+    h.push('<div class="legend">'
+      + '<span>Load</span>'
+      + '<span class="k"><i class="sw" style="background:var(--h0)"></i>0</span>'
+      + '<span class="k"><i class="sw" style="background:var(--h1)"></i>1</span>'
+      + '<span class="k"><i class="sw" style="background:var(--h2)"></i>2</span>'
+      + '<span class="k"><i class="sw" style="background:var(--h3)"></i>3</span>'
+      + '<span class="k"><i class="sw" style="background:var(--h4)"></i>4+</span>'
+      + '<span style="opacity:.4">|</span>'
+      + '<span class="k"><i class="clsdot"></i>class</span>'
+      + '<span style="opacity:.4">|</span>'
+      + '<span>times 24h · pre-0600 shown in Morning</span>'
+      + '</div>');
+
+    var root = document.getElementById('root');
+    root.innerHTML = h.join('');
+
+    // "+N more" expands/collapses its own cell
+    root.addEventListener('click', function(ev){
+      var b = ev.target.closest && ev.target.closest('.more');
+      if(!b) return;
+      var cell = b.parentNode, open = cell.classList.toggle('open');
+      var hidden = cell.querySelectorAll('a.ev.hid').length;
+      b.textContent = open ? '– less' : '+' + hidden + ' more';
+    });
+    root.addEventListener('keydown', function(ev){
+      if((ev.key === 'Enter' || ev.key === ' ') && ev.target.classList
+         && ev.target.classList.contains('more')){ ev.preventDefault(); ev.target.click(); }
+    });
+  }
+
+  function fail(msg){
+    document.getElementById('root').innerHTML =
+      '<div class="err"><strong>Week data unavailable.</strong><br>'+esc(msg)+'</div>';
+  }
+
+  fetch('../data/week.json', {cache:'no-store'})
+    .then(function(r){ if(!r.ok) throw new Error('HTTP '+r.status); return r.json(); })
+    .then(render)
+    .catch(function(e){ fail(e && e.message ? e.message : 'Could not load ../data/week.json'); });
+})();
+</script>
+</body>
+</html>
