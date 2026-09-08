@@ -21,8 +21,16 @@
        font:13px/1.4 -apple-system,BlinkMacSystemFont,"Segoe UI",Inter,sans-serif;
        -webkit-font-smoothing:antialiased;display:flex;flex-direction:column;overflow:hidden}
 
-  header{display:flex;align-items:baseline;justify-content:space-between;
-         padding:11px 16px 9px;border-bottom:1px solid var(--line);flex:0 0 auto}
+  header{display:flex;align-items:center;justify-content:space-between;gap:10px;
+         padding:9px 14px 8px;border-bottom:1px solid var(--line);flex:0 0 auto;flex-wrap:wrap}
+  .tools{display:flex;gap:3px;align-items:center;flex-wrap:wrap}
+  .tools .grp{display:flex;gap:2px;background:var(--panel);border:1px solid var(--line);
+       border-radius:5px;padding:2px}
+  .tools button{font:inherit;font-size:10px;letter-spacing:.03em;padding:3px 7px;
+       border:0;border-radius:3.5px;background:transparent;color:var(--dim);cursor:pointer;
+       font-variant-numeric:tabular-nums}
+  .tools button:hover{background:var(--hair);color:var(--ink)}
+  .tools button.on{background:var(--blue);color:#fff}
   .rng{font-size:15px;font-weight:600;letter-spacing:-.015em}
   .hint{font-size:10px;color:var(--faint);letter-spacing:.05em;text-transform:uppercase}
 
@@ -79,10 +87,58 @@
   .key{display:inline-flex;align-items:center;gap:4px}
   .sw{width:8px;height:8px;border-radius:2px;display:inline-block}
   .empty{color:var(--faint);font-style:italic;padding:20px 16px;font-size:12px}
+
+  /* LIST mode */
+  .lrow{display:grid;grid-template-columns:var(--gut) 1fr;border-bottom:1px solid var(--hair)}
+  .lrow:last-child{border-bottom:0}
+  .lrow.today{background:rgba(91,147,211,.05)}
+  .litems{padding:6px 10px 8px 0;display:flex;flex-direction:column;gap:3px}
+  .li{display:flex;gap:9px;align-items:baseline;font-size:12px;text-decoration:none;
+      color:inherit;padding:2px 0;border-left:2.5px solid transparent;padding-left:8px}
+  .li:hover{background:var(--panel)}
+  .li.k-class{border-left-color:var(--gold)}
+  .li.k-res{border-left-color:var(--green)}
+  .li.k-admin{border-left-color:var(--purple)}
+  .li.k-mil{border-left-color:var(--now)}
+  .li .lt{font-variant-numeric:tabular-nums;color:var(--dim);font-size:11px;
+      flex:0 0 42px;font-weight:500}
+  .li .ln{flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+  .li.done .ln{text-decoration:line-through;color:var(--faint)}
+  .li .lw{font-size:10px;color:var(--faint);flex:0 0 auto;max-width:120px;
+      overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+  .lnone{font-size:11px;color:var(--faint);font-style:italic;padding:3px 0 3px 8px}
+
+  /* LOAD mode */
+  .ldrow{display:grid;grid-template-columns:var(--gut) 1fr 46px;align-items:center;
+      border-bottom:1px solid var(--hair);min-height:44px}
+  .ldrow:last-child{border-bottom:0}
+  .ldrow.today{background:rgba(91,147,211,.05)}
+  .bars{display:flex;gap:2px;height:22px;align-items:flex-end;padding:0 10px 0 0}
+  .bseg{height:100%;border-radius:2px;min-width:3px}
+  .ldn{text-align:right;padding-right:12px;font-size:15px;font-weight:600;
+      font-variant-numeric:tabular-nums}
+  .ldn.zero{color:var(--faint);font-weight:400}
 </style>
 </head>
 <body>
-<header><span class="rng" id="rng">—</span><span class="hint" id="tot"></span></header>
+<header>
+  <span class="rng" id="rng">—</span>
+  <span class="tools">
+    <span class="grp" id="rangegrp">
+      <button data-r="6,24">0600-2400</button>
+      <button data-r="7,22">0700-2200</button>
+      <button data-r="8,20">0800-2000</button>
+      <button data-r="9,18">0900-1800</button>
+      <button data-r="auto">Fit</button>
+    </span>
+    <span class="grp" id="modegrp">
+      <button data-m="time">Timeline</button>
+      <button data-m="list">List</button>
+      <button data-m="load">Load</button>
+    </span>
+  </span>
+  <span class="hint" id="tot"></span>
+</header>
 <div class="ruler"><div class="sp"></div><div class="ticks" id="ticks"></div></div>
 <div class="body" id="body"></div>
 <footer>
@@ -95,7 +151,8 @@
 </footer>
 
 <script>
-const H0=6, H1=24;                       // 0600 -> 2400 across the width
+let H0=6, H1=24;                         // adjustable time window
+let MODE='time';
 const DOW=['SUN','MON','TUE','WED','THU','FRI','SAT'];
 const MON=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
 const esc=s=>(s||'').replace(/[<>&]/g,c=>({'<':'&lt;','>':'&gt;','&':'&amp;'}[c]));
@@ -111,77 +168,158 @@ function kind(e){
   if(/military|army/.test(k)) return 'k-mil';
   return '';
 }
+const KCOL={'k-class':'var(--gold)','k-res':'var(--green)','k-admin':'var(--purple)',
+            'k-mil':'var(--now)','':'var(--blue)'};
 
-fetch('../data/week.json?t='+Date.now()).then(r=>r.json()).then(d=>{
-  const days=d.days||[];
-  if(!days.length){ document.getElementById('body').innerHTML='<div class="empty">no week data</div>'; return; }
+let DATA=null;
+
+function autoRange(days){
+  let lo=24*60, hi=0, any=false;
+  days.forEach(d=>d.items.forEach(e=>{
+    const s=mins(e.date); if(s==null) return;
+    any=true; let en=mins(e.end); if(en==null||en<=s) en=s+50;
+    lo=Math.min(lo,s); hi=Math.max(hi,en);
+  }));
+  if(!any) return [8,20];
+  return [Math.max(0,Math.floor(lo/60)-1), Math.min(24,Math.ceil(hi/60)+1)];
+}
+
+function render(){
+  const d=DATA, days=d.days||[];
+  const body=document.getElementById('body');
+  const ruler=document.querySelector('.ruler');
+  if(!days.length){ body.innerHTML='<div class="empty">no week data</div>'; return; }
 
   const a=new Date(days[0].date+'T12:00:00'), b=new Date(days[6].date+'T12:00:00');
   document.getElementById('rng').textContent =
-    `${MON[a.getMonth()]} ${a.getDate()} – ${MON[b.getMonth()]} ${b.getDate()}`;
+    `${MON[a.getMonth()]} ${a.getDate()} \u2013 ${MON[b.getMonth()]} ${b.getDate()}`;
   let n=0; days.forEach(x=>n+=x.items.length);
   document.getElementById('tot').textContent = n+' events';
 
-  // ruler
-  let tk='';
-  for(let h=H0; h<=H1; h+=2)
-    tk += `<span style="left:${pct(h*60)}%">${String(h).padStart(2,'0')}00</span>`;
-  document.getElementById('ticks').innerHTML=tk;
-
   const now=new Date(), nowM=now.getHours()*60+now.getMinutes();
+  ruler.style.display = MODE==='time' ? '' : 'none';
+  document.querySelector('footer').style.display = MODE==='load' ? 'none' : '';
 
-  document.getElementById('body').innerHTML = days.map(day=>{
-    const dt=new Date(day.date+'T12:00:00');
-    const wknd=[0,6].includes(dt.getDay());
-    const timed=day.items.filter(e=>mins(e.date)!=null);
-    const allday=day.items.filter(e=>mins(e.date)==null);
+  // ---------------- TIMELINE ----------------
+  if(MODE==='time'){
+    let tk=''; const step=(H1-H0)>10?2:1;
+    for(let h=H0; h<=H1; h+=step)
+      tk += `<span style="left:${pct(h*60)}%">${String(h).padStart(2,'0')}00</span>`;
+    document.getElementById('ticks').innerHTML=tk;
 
-    // gridlines every 2h
-    let gl=''; for(let h=H0+2; h<H1; h+=2) gl+=`<span class="gl" style="left:${pct(h*60)}%"></span>`;
-
-    // lay events out; stack rows when they overlap
-    const rows=[];
-    const placed=timed.sort((x,y)=>mins(x.date)-mins(y.date)).map(e=>{
-      const s=mins(e.date); let en=mins(e.end); if(en==null||en<=s) en=s+50;
-      let r=0; while(rows[r]!=null && rows[r]>s) r++;
-      rows[r]=en;
-      return {e,s,en,r};
-    });
-    const depth=Math.max(1, rows.length);
-
-    const evs=placed.map(({e,s,en,r})=>{
-      const l=pct(s);
-      const natural = pct(en)-pct(s);
-      const w = Math.max(11, natural);           // ~11% floor = readable label
-      const label = natural>=7 ? hhmm(e.date)+'  '+(e.name||'') : (e.name||'');
-      return `<a class="ev ${kind(e)} ${e.done?'done':''}"
-         style="left:${l}%;width:${w}%;top:${5+r*25}px"
-         href="${e.url}" target="_blank" title="${esc(e.name)}">${esc(label)}</a>`;
+    body.innerHTML = days.map(day=>{
+      const dt=new Date(day.date+'T12:00:00');
+      const wknd=[0,6].includes(dt.getDay());
+      const timed=day.items.filter(e=>mins(e.date)!=null);
+      const allday=day.items.filter(e=>mins(e.date)==null);
+      let gl=''; for(let h=H0+step; h<H1; h+=step) gl+=`<span class="gl" style="left:${pct(h*60)}%"></span>`;
+      const rows=[];
+      const placed=timed.sort((x,y)=>mins(x.date)-mins(y.date)).map(e=>{
+        const s=mins(e.date); let en=mins(e.end); if(en==null||en<=s) en=s+50;
+        let r=0; while(rows[r]!=null && rows[r]>s) r++;
+        rows[r]=en; return {e,s,en,r};
+      });
+      const depth=Math.max(1, rows.length);
+      const evs=placed.map(({e,s,en,r})=>{
+        const l=pct(s), natural=pct(en)-pct(s);
+        const w=Math.max(11, natural);
+        const label = natural>=7 ? hhmm(e.date)+'  '+(e.name||'') : (e.name||'');
+        if(l>100||l+w<0) return '';
+        return `<a class="ev ${kind(e)} ${e.done?'done':''}"
+           style="left:${l}%;width:${w}%;top:${5+r*25}px"
+           href="${e.url}" target="_blank" title="${esc(hhmm(e.date))} ${esc(e.name)}">${esc(label)}</a>`;
+      }).join('');
+      const nowline = day.is_today && nowM>=H0*60 && nowM<=H1*60
+        ? `<span class="noww" style="left:${pct(nowM)}%"></span>` : '';
+      const tray = allday.length
+        ? `<div class="tray" style="margin-top:${depth*25}px">`+
+          allday.map(e=>`<a class="ad ${e.done?'done':''}" href="${e.url}" target="_blank">${esc(e.name)}</a>`).join('')+`</div>` : '';
+      const h = Math.max(56, 10 + depth*25 + (allday.length?26:0));
+      return `<div class="row ${day.is_today?'today':''} ${wknd?'wknd':''}" style="min-height:${h}px">
+        <div class="dcol"><div class="dname">${DOW[dt.getDay()]}</div>
+          <div class="dnum">${dt.getDate()}</div>
+          ${day.items.length?`<div class="cnt">${day.items.length}</div>`:''}</div>
+        <div class="lane">${gl}${nowline}${evs}${tray}</div></div>`;
     }).join('');
+  }
 
-    const nowline = day.is_today && nowM>=H0*60 && nowM<=H1*60
-      ? `<span class="noww" style="left:${pct(nowM)}%"></span>` : '';
+  // ---------------- LIST ----------------
+  else if(MODE==='list'){
+    body.innerHTML = days.map(day=>{
+      const dt=new Date(day.date+'T12:00:00');
+      const items=[...day.items].sort((x,y)=>{
+        const a=mins(x.date), b=mins(y.date);
+        if(a==null&&b==null) return 0; if(a==null) return 1; if(b==null) return -1;
+        return a-b;
+      });
+      const rows = items.length ? items.map(e=>{
+        const t=mins(e.date)==null?'—':hhmm(e.date);
+        return `<a class="li ${kind(e)} ${e.done?'done':''}" href="${e.url}" target="_blank">
+          <span class="lt">${t}</span><span class="ln">${esc(e.name)||'(untitled)'}</span>
+          ${e.location?`<span class="lw">${esc(e.location)}</span>`:''}</a>`;
+      }).join('') : '<div class="lnone">clear</div>';
+      return `<div class="lrow ${day.is_today?'today':''}">
+        <div class="dcol"><div class="dname">${DOW[dt.getDay()]}</div>
+          <div class="dnum">${dt.getDate()}</div>
+          ${day.items.length?`<div class="cnt">${day.items.length}</div>`:''}</div>
+        <div class="litems">${rows}</div></div>`;
+    }).join('');
+  }
 
-    const tray = allday.length
-      ? `<div class="tray" style="margin-top:${depth*25}px">`+
-        allday.map(e=>`<a class="ad ${e.done?'done':''}" href="${e.url}" target="_blank">${esc(e.name)}</a>`).join('')+
-        `</div>` : '';
-
-    const h = Math.max(56, 10 + depth*25 + (allday.length?26:0));
-
-    return `<div class="row ${day.is_today?'today':''} ${wknd?'wknd':''}" style="min-height:${h}px">
-      <div class="dcol">
-        <div class="dname">${DOW[dt.getDay()]}</div>
-        <div class="dnum">${dt.getDate()}</div>
-        ${day.items.length?`<div class="cnt">${day.items.length}</div>`:''}
-      </div>
-      <div class="lane">${gl}${nowline}${evs}${tray}</div>
-    </div>`;
-  }).join('');
+  // ---------------- LOAD ----------------
+  else {
+    const max=Math.max(1,...days.map(d=>d.items.length));
+    body.innerHTML = days.map(day=>{
+      const dt=new Date(day.date+'T12:00:00');
+      const byk={};
+      day.items.forEach(e=>{const k=kind(e); byk[k]=(byk[k]||0)+1;});
+      const segs=Object.entries(byk).map(([k,v])=>
+        `<span class="bseg" style="background:${KCOL[k]};flex:${v}"></span>`).join('');
+      const w=(day.items.length/max)*100;
+      return `<div class="ldrow ${day.is_today?'today':''}">
+        <div class="dcol"><div class="dname">${DOW[dt.getDay()]}</div>
+          <div class="dnum">${dt.getDate()}</div></div>
+        <div class="bars" style="width:${Math.max(4,w)}%">${segs}</div>
+        <div class="ldn ${day.items.length?'':'zero'}">${day.items.length||'—'}</div></div>`;
+    }).join('');
+  }
 
   const g=new Date(d.generated);
   document.getElementById('gen').textContent =
     'synced '+String(g.getHours()).padStart(2,'0')+String(g.getMinutes()).padStart(2,'0');
+}
+
+// ---- controls
+document.querySelectorAll('#rangegrp button').forEach(b=>{
+  b.onclick=()=>{
+    document.querySelectorAll('#rangegrp button').forEach(x=>x.classList.remove('on'));
+    b.classList.add('on');
+    if(b.dataset.r==='auto'){ const [lo,hi]=autoRange(DATA.days); H0=lo; H1=hi; }
+    else { const [lo,hi]=b.dataset.r.split(',').map(Number); H0=lo; H1=hi; }
+    localStorage.setItem('wk_range', b.dataset.r);
+    render();
+  };
+});
+document.querySelectorAll('#modegrp button').forEach(b=>{
+  b.onclick=()=>{
+    document.querySelectorAll('#modegrp button').forEach(x=>x.classList.remove('on'));
+    b.classList.add('on'); MODE=b.dataset.m;
+    localStorage.setItem('wk_mode', MODE);
+    render();
+  };
+});
+
+fetch('../data/week.json?t='+Date.now()).then(r=>r.json()).then(d=>{
+  DATA=d;
+  const savedR=localStorage.getItem('wk_range')||'6,24';
+  const savedM=localStorage.getItem('wk_mode')||'time';
+  const rb=document.querySelector(`#rangegrp button[data-r="${savedR}"]`)||document.querySelector('#rangegrp button');
+  rb.classList.add('on');
+  if(savedR==='auto'){const [lo,hi]=autoRange(d.days); H0=lo; H1=hi;}
+  else {const [lo,hi]=savedR.split(',').map(Number); H0=lo; H1=hi;}
+  const mb=document.querySelector(`#modegrp button[data-m="${savedM}"]`)||document.querySelector('#modegrp button');
+  mb.classList.add('on'); MODE=savedM;
+  render();
 })
 .catch(()=>{document.getElementById('body').innerHTML='<div class="empty">data not built yet</div>';});
 </script>
