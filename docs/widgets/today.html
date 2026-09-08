@@ -24,8 +24,16 @@
 
   /* ---------- header ---------- */
   .head{margin-bottom:12px}
+  .toprow{display:flex;align-items:baseline;justify-content:space-between;gap:8px}
   .date{font-size:20px;font-weight:600;letter-spacing:-.01em;line-height:1.1}
-  .day{font-size:11px;color:var(--dim);text-transform:uppercase;letter-spacing:.08em;margin-top:2px}
+  .clock{font-size:19px;font-weight:600;font-variant-numeric:tabular-nums;
+         letter-spacing:-.01em;line-height:1.1;color:var(--ink)}
+  .subrow{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-top:3px}
+  .day{font-size:11px;color:var(--dim);text-transform:uppercase;letter-spacing:.08em}
+  .wx{font-size:11px;color:var(--dim);display:flex;align-items:center;gap:5px;
+      white-space:nowrap}
+  .wx .t{font-weight:600;color:var(--ink);font-variant-numeric:tabular-nums}
+  .wx .hl{font-variant-numeric:tabular-nums}
 
   /* ---------- NOW strip: the one thing you look at ---------- */
   .now{margin:10px 0 12px;padding:10px 11px;border-radius:8px;
@@ -84,8 +92,14 @@
 </head>
 <body>
   <div class="head">
-    <div class="date" id="d">—</div>
-    <div class="day" id="w"></div>
+    <div class="toprow">
+      <div class="date" id="d">—</div>
+      <div class="clock" id="clk">--:--</div>
+    </div>
+    <div class="subrow">
+      <div class="day" id="w"></div>
+      <div class="wx" id="wx"></div>
+    </div>
   </div>
 
   <div id="nowbox"></div>
@@ -156,6 +170,49 @@ function itemHTML(it, nowM){
     </div>
   </${tag}>`;
 }
+
+// ---- live clock, 24h. Ticks every 10s so the NOW strip stays honest.
+function tick(){
+  const n=new Date();
+  const p=x=>String(x).padStart(2,'0');
+  document.getElementById('clk').textContent=`${p(n.getHours())}${p(n.getMinutes())}`;
+}
+tick(); setInterval(tick, 10000);
+
+// ---- weather: Open-Meteo, no key, Cambridge MA (same source as weather.html)
+// WMO code -> compact glyph. Kept small deliberately; this is a status line,
+// not a forecast widget.
+const WMO={0:'\u2600\uFE0F',1:'\u{1F324}\uFE0F',2:'\u26C5',3:'\u2601\uFE0F',
+  45:'\u{1F32B}\uFE0F',48:'\u{1F32B}\uFE0F',51:'\u{1F327}\uFE0F',53:'\u{1F327}\uFE0F',
+  55:'\u{1F327}\uFE0F',61:'\u{1F327}\uFE0F',63:'\u{1F327}\uFE0F',65:'\u{1F327}\uFE0F',
+  71:'\u{1F328}\uFE0F',73:'\u{1F328}\uFE0F',75:'\u{1F328}\uFE0F',
+  80:'\u{1F326}\uFE0F',81:'\u{1F326}\uFE0F',82:'\u26C8\uFE0F',
+  95:'\u26C8\uFE0F',96:'\u26C8\uFE0F',99:'\u26C8\uFE0F'};
+
+const WX_URL='https://api.open-meteo.com/v1/forecast'
+  +'?latitude=42.3736&longitude=-71.1097'
+  +'&current=temperature_2m,weather_code'
+  +'&daily=temperature_2m_max,temperature_2m_min,precipitation_probability_max'
+  +'&temperature_unit=fahrenheit&timezone=America%2FNew_York&forecast_days=1';
+
+fetch(WX_URL,{cache:'no-store'})
+  .then(r=>r.ok?r.json():Promise.reject(r.status))
+  .then(w=>{
+    const c=w.current, dl=w.daily;
+    if(!c || !dl) throw new Error('missing fields');
+    const icon=WMO[c.weather_code]||'';
+    const t=Math.round(c.temperature_2m);
+    const hi=Math.round(dl.temperature_2m_max[0]);
+    const lo=Math.round(dl.temperature_2m_min[0]);
+    const pop=dl.precipitation_probability_max?.[0];
+    let s=`${icon} <span class="t">${t}\u00b0</span> <span class="hl">${hi}/${lo}</span>`;
+    if(pop!=null && pop>=20) s+=` <span style="color:var(--accent)">${pop}%</span>`;
+    document.getElementById('wx').innerHTML=s;
+  })
+  .catch(()=>{
+    // Say it failed rather than showing a blank space that looks intentional.
+    document.getElementById('wx').innerHTML='<span style="opacity:.55">weather unavailable</span>';
+  });
 
 fetch('../data/tasks.json?t='+Date.now()).then(r=>r.json()).then(d=>{
   const now=new Date();
