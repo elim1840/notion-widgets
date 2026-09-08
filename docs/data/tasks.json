@@ -1,0 +1,238 @@
+{
+ "generated": "2026-09-07T21:02:10-04:00",
+ "today": "2026-09-07",
+ "counts": {
+  "total": 176,
+  "open": 173,
+  "done": 3,
+  "today_total": 3,
+  "today_done": 0,
+  "overdue": 94
+ },
+ "today_items": [
+  {
+   "name": "Sign up for MIT makerspace (M1T) training to 3D print",
+   "date": "2026-09-07",
+   "done": false,
+   "status": "Not Started",
+   "type": "",
+   "meeting_type": "Admin",
+   "priority": "",
+   "url": "https://app.notion.com/p/Sign-up-for-MIT-makerspace-M1T-training-to-3D-print-3ceea74eb779814fb850c1aa9f739ce1"
+  },
+  {
+   "name": "SERG25 Group Meeting",
+   "date": "2026-09-07T11:00:00.000-04:00",
+   "done": false,
+   "status": "Not Started",
+   "type": "Meeting",
+   "meeting_type": "Research",
+   "priority": "Medium",
+   "url": "https://app.notion.com/p/SERG25-Group-Meeting-3d0ea74eb7798162bcebe255456d142c"
+  },
+  {
+   "name": "Check Merch Store Progress",
+   "date": "2026-09-07T12:00:00.000-04:00",
+   "done": false,
+   "status": "Not Started",
+   "type": "",
+   "meeting_type": "Admin",
+   "priority": "",
+   "url": "https://app.notion.com/p/Check-Merch-Store-Progress-3d0ea74eb77981ed9118e5c11ce45533"
+  }
+ ],
+ "upcoming": [
+  {
+   "name": "Sign up for MIT makerspace (M1T) training to 3D print",
+   "date": "2026-09-07",
+   "done": false,
+   "status": "Not Started",
+   "type": "",
+   "meeting_type": "Admin",
+   "priority": "",
+   "url": "https://app.notion.com/p/Sign-up-for-MIT-makerspace-M1T-training-to-3D-print-3ceea74eb779814fb850c1aa9f739ce1"
+  },
+  {
+   "name": "SERG25 Group Meeting",
+   "date": "2026-09-07T11:00:00.000-04:00",
+   "done": false,
+   "status": "Not Started",
+   "type": "Meeting",
+   "meeting_type": "Research",
+   "priority": "Medium",
+   "url": "https://app.notion.com/p/SERG25-Group-Meeting-3d0ea74eb7798162bcebe255456d142c"
+  },
+  {
+   "name": "Check Merch Store Progress",
+   "date": "2026-09-07T12:00:00.000-04:00",
+   "done": false,
+   "status": "Not Started",
+   "type": "",
+   "meeting_type": "Admin",
+   "priority": "",
+   "url": "https://app.notion.com/p/Check-Merch-Store-Progress-3d0ea74eb77981ed9118e5c11ce45533"
+  },
+  {
+   "name": "Reach out to Dr. Tran re: Projects Day",
+   "date": "2026-09-08",
+   "done": false,
+   "status": "Not Started",
+   "type": "",
+   "meeting_type": "Research",
+   "priority": "",
+   "url": "https://app.notion.com/p/Reach-out-to-Dr-Tran-re-Projects-Day-3d2ea74eb779818983d8e1355b7d09f1"
+  },
+  {
+   "name": "Reach out to LTC Koban re: SOCOM Ignite",
+   "date": "2026-09-08",
+   "done": false,
+   "status": "Not Started",
+   "type": "",
+   "meeting_type": "Military",
+   "priority": "",
+   "url": "https://app.notion.com/p/Reach-out-to-LTC-Koban-re-SOCOM-Ignite-3d2ea74eb77981b480abeaceefb10133"
+  },
+  {
+   "name": "Reach out to MAJ Dulce re: ASEM",
+   "date": "2026-09-08",
+   "done": false,
+   "status": "Not Started",
+   "type": "",
+   "meeting_type": "Military",
+   "priority": "",
+   "url": "https://app.notion.com/p/Reach-out-to-MAJ-Dulce-re-ASEM-3d2ea74eb77981949160fe855c5f4bd9"
+  },
+  {
+   "name": "The First Day of Classes breakfast bagel event will actually happen on Wednesday, Sep. 9th from 8am-10am in the large lounge (ground floor) to coincide with MIT's first day of classes! Previ",
+   "date": "2026-09-08T08:00:00.000-04:00",
+   "done": false,
+   "status": "Not Started",
+   "type": "",
+   "meeting_type": "",
+   "priority": "",
+   "url": "https://app.notion.com/p/The-First-Day-of-Classes-breakfast-bagel-event-will-actually-happen-on-Wednesday-Sep-9th-from-8am--3d1ea74eb779814a980cffd6b746aeb7"
+  },
+  {
+   "name": "Call Hilton + Marriott re: hotel night of 7 Nov",
+   "date": "2026-09-08T10:00:00.000-04:00",
+   "done": false,
+   "status": "Not Started",
+   "type": "",
+   "meeting_type": "Admin",
+   "priority": "",
+   "url": "https://app.notion.com/p/Call-Hilton-Marriott-re-hotel-night-of-7-Nov-3d3ea74eb77981188812c72df93e6286"
+  },
+  {
+   "name": "TPP Mandatory Reorientation",
+   "date": "2026-09-08T11:00:00.000-04:00",
+   "done": false,
+   "status": "Not Started",
+   "type": "",
+   "meeting_type": "TPP",
+   "priority": "",
+   "url": "https://app.notion.com/p/TPP-Mandatory-Reorientation-3d1ea74eb77981319252d3864a6c8608"
+  },
+  {
+   "name": "Registering for Classes -- Barb (TPP Lounge)",
+   "date": "2026-09-08T13:10:00.000-04:00",
+   "done": false,
+   "status": "Not Started",
+   "type": "Meeting",
+   "meeting_type": "TPP",
+   "priority": "Medium",
+   "url": "https://app.notion.com/p/Registering-for-Classes-Barb-TPP-Lounge-3cdea74eb77981a98e8deb4108dd5559"
+  },
+  {
+   "name": "Grad Resource Fair",
+   "date": "2026-09-08T14:00:00.000-04:00",
+   "done": false,
+   "status": "Not Started",
+   "type": "",
+   "meeting_type": "AeroAstro",
+   "priority": "",
+   "url": "https://app.notion.com/p/Grad-Resource-Fair-3ceea74eb779810cbf75fca7ea8e115f"
+  },
+  {
+   "name": "Submit petition to Rachael and Barb (after registration)",
+   "date": "2026-09-08T16:00:00.000-04:00",
+   "done": false,
+   "status": "Not Started",
+   "type": "Task",
+   "meeting_type": "TPP",
+   "priority": "High",
+   "url": "https://app.notion.com/p/Submit-petition-to-Rachael-and-Barb-after-registration-3d5ea74eb77981fea210f3384ac44a1f"
+  }
+ ],
+ "history": [
+  {
+   "date": "2026-08-25",
+   "total": 0,
+   "done": 0
+  },
+  {
+   "date": "2026-08-26",
+   "total": 0,
+   "done": 0
+  },
+  {
+   "date": "2026-08-27",
+   "total": 0,
+   "done": 0
+  },
+  {
+   "date": "2026-08-28",
+   "total": 0,
+   "done": 0
+  },
+  {
+   "date": "2026-08-29",
+   "total": 0,
+   "done": 0
+  },
+  {
+   "date": "2026-08-30",
+   "total": 0,
+   "done": 0
+  },
+  {
+   "date": "2026-08-31",
+   "total": 1,
+   "done": 0
+  },
+  {
+   "date": "2026-09-01",
+   "total": 5,
+   "done": 0
+  },
+  {
+   "date": "2026-09-02",
+   "total": 1,
+   "done": 0
+  },
+  {
+   "date": "2026-09-03",
+   "total": 2,
+   "done": 0
+  },
+  {
+   "date": "2026-09-04",
+   "total": 7,
+   "done": 0
+  },
+  {
+   "date": "2026-09-05",
+   "total": 0,
+   "done": 0
+  },
+  {
+   "date": "2026-09-06",
+   "total": 6,
+   "done": 0
+  },
+  {
+   "date": "2026-09-07",
+   "total": 3,
+   "done": 0
+  }
+ ]
+}

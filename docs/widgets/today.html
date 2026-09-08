@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Today</title>
+<style>
+  :root{
+    --bg:#191919; --panel:#202020; --line:#2f2f2f;
+    --ink:#e9e9e7; --dim:#9b9a97; --accent:#5b93d3;
+    --red:#e06c6c; --green:#5fa87a; --amber:#c9a227;
+  }
+  @media (prefers-color-scheme: light){
+    :root{ --bg:#fff; --panel:#f7f7f5; --line:#e6e5e1;
+           --ink:#37352f; --dim:#787774; }
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{
+    background:var(--bg); color:var(--ink);
+    font:14px/1.45 -apple-system,BlinkMacSystemFont,"Segoe UI",Inter,sans-serif;
+    padding:16px; -webkit-font-smoothing:antialiased;
+  }
+  .head{display:flex;align-items:baseline;justify-content:space-between;margin-bottom:14px}
+  .date{font-size:22px;font-weight:600;letter-spacing:-.01em}
+  .day{font-size:12px;color:var(--dim);text-transform:uppercase;letter-spacing:.08em}
+  .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:14px}
+  .stat{background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:10px 12px}
+  .stat b{display:block;font-size:20px;font-weight:600;line-height:1.1}
+  .stat span{font-size:11px;color:var(--dim);text-transform:uppercase;letter-spacing:.06em}
+  .over b{color:var(--red)}
+  .list{display:flex;flex-direction:column;gap:1px}
+  .item{display:flex;gap:10px;align-items:flex-start;padding:9px 10px;border-radius:6px;
+        text-decoration:none;color:inherit}
+  .item:hover{background:var(--panel)}
+  .dot{width:7px;height:7px;border-radius:50%;background:var(--accent);margin-top:6px;flex:0 0 auto}
+  .dot.high{background:var(--red)} .dot.done{background:var(--green)}
+  .t{flex:1;min-width:0}
+  .t .n{display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .t .m{font-size:11px;color:var(--dim)}
+  .done .n{text-decoration:line-through;color:var(--dim)}
+  .empty{color:var(--dim);font-style:italic;padding:18px 4px;text-align:center}
+  .foot{margin-top:14px;padding-top:10px;border-top:1px solid var(--line);
+        font-size:10px;color:var(--dim);display:flex;justify-content:space-between}
+</style>
+</head>
+<body>
+  <div class="head">
+    <div>
+      <div class="date" id="d">—</div>
+      <div class="day" id="w"></div>
+    </div>
+  </div>
+  <div class="stats">
+    <div class="stat"><b id="s-today">—</b><span>today</span></div>
+    <div class="stat"><b id="s-open">—</b><span>open</span></div>
+    <div class="stat over"><b id="s-over">—</b><span>overdue</span></div>
+  </div>
+  <div class="list" id="list"></div>
+  <div class="foot"><span id="gen"></span><span>Tasks &amp; Meetings</span></div>
+
+<script>
+const F = new Intl.DateTimeFormat('en-US',{month:'long',day:'numeric'});
+const W = new Intl.DateTimeFormat('en-US',{weekday:'long'});
+
+function hhmm(iso){
+  if(!iso || iso.length<=10) return 'all day';
+  const d=new Date(iso);
+  return String(d.getHours()).padStart(2,'0')+String(d.getMinutes()).padStart(2,'0');
+}
+
+fetch('../data/tasks.json?t='+Date.now())
+ .then(r=>r.json())
+ .then(d=>{
+   const today = new Date(d.today+'T12:00:00');
+   document.getElementById('d').textContent = F.format(today);
+   document.getElementById('w').textContent = W.format(today);
+   document.getElementById('s-today').textContent =
+     d.counts.today_done+'/'+d.counts.today_total;
+   document.getElementById('s-open').textContent = d.counts.open;
+   document.getElementById('s-over').textContent = d.counts.overdue;
+
+   const list=document.getElementById('list');
+   const items=d.today_items.length?d.today_items:d.upcoming.slice(0,6);
+   if(!items.length){
+     list.innerHTML='<div class="empty">nothing scheduled</div>';
+   } else {
+     list.innerHTML=items.map(t=>{
+       const cls=(t.done?'done ':'')+(t.priority==='High'?'high':'');
+       const meta=[hhmm(t.date), t.meeting_type].filter(Boolean).join(' · ');
+       return `<a class="item ${t.done?'done':''}" href="${t.url}" target="_blank">
+         <span class="dot ${cls}"></span>
+         <span class="t"><span class="n">${t.name||'(untitled)'}</span>
+         <span class="m">${meta}</span></span></a>`;
+     }).join('');
+   }
+   const g=new Date(d.generated);
+   document.getElementById('gen').textContent =
+     'updated '+String(g.getHours()).padStart(2,'0')+String(g.getMinutes()).padStart(2,'0');
+ })
+ .catch(e=>{
+   document.getElementById('list').innerHTML =
+     '<div class="empty">data not built yet</div>';
+ });
+</script>
+</body>
+</html>

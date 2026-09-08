@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Countdown</title>
+<style>
+  :root{
+    --bg:#191919; --panel:#202020; --line:#2f2f2f;
+    --ink:#e9e9e7; --dim:#9b9a97; --accent:#5b93d3; --red:#e06c6c;
+  }
+  @media (prefers-color-scheme: light){
+    :root{ --bg:#fff; --panel:#f7f7f5; --line:#e6e5e1; --ink:#37352f; --dim:#787774; }
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--bg);color:var(--ink);padding:16px;
+       font:14px/1.4 -apple-system,BlinkMacSystemFont,"Segoe UI",Inter,sans-serif;
+       -webkit-font-smoothing:antialiased}
+  .row{display:flex;align-items:center;gap:14px;padding:11px 0;border-bottom:1px solid var(--line)}
+  .row:last-child{border-bottom:0}
+  .n{font-variant-numeric:tabular-nums;font-size:28px;font-weight:600;
+     line-height:1;min-width:62px;text-align:right;letter-spacing:-.02em}
+  .n.soon{color:var(--red)}
+  .n.past{color:var(--dim);font-size:18px}
+  .u{font-size:10px;color:var(--dim);text-transform:uppercase;letter-spacing:.08em;
+     display:block;margin-top:3px;text-align:right}
+  .lab{flex:1;min-width:0}
+  .lab b{display:block;font-weight:500;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .lab span{font-size:11px;color:var(--dim)}
+  h1{font-size:11px;color:var(--dim);text-transform:uppercase;letter-spacing:.09em;
+     margin-bottom:10px;font-weight:600}
+</style>
+</head>
+<body>
+<h1>Countdown</h1>
+<div id="rows"></div>
+<script>
+// EDIT THESE — the widget needs no API, it is pure date math.
+const EVENTS = [
+  {name:"Classes begin",         date:"2026-09-09", note:"Fall 2026"},
+  {name:"Thesis title due",      date:"2026-12-11", note:"registrar, Feb degree"},
+  {name:"Last day of classes",   date:"2026-12-10", note:"Fall term"},
+  {name:"Finals end",            date:"2026-12-18", note:""},
+  {name:"Thesis due",            date:"2027-01-15", note:"February 2027 degree"},
+];
+
+const today = new Date(); today.setHours(0,0,0,0);
+document.getElementById('rows').innerHTML = EVENTS
+  .map(e=>{
+    const d=new Date(e.date+'T00:00:00');
+    const days=Math.round((d-today)/86400000);
+    return {...e, days};
+  })
+  .sort((a,b)=>{
+    if(a.days>=0 && b.days<0) return -1;
+    if(a.days<0 && b.days>=0) return 1;
+    return a.days-b.days;
+  })
+  .map(e=>{
+    const past=e.days<0;
+    const cls=past?'past':(e.days<=14?'soon':'');
+    const val=past?'—':Math.abs(e.days);
+    const unit=past?'passed':(e.days===1?'day':'days');
+    return `<div class="row">
+      <div><div class="n ${cls}">${val}</div><span class="u">${unit}</span></div>
+      <div class="lab"><b>${e.name}</b><span>${e.note||e.date}</span></div>
+    </div>`;
+  }).join('');
+</script>
+</body>
+</html>
