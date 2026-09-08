@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Time-block planner</title>
+<style>
+  :root{
+    --bg:#191919; --panel:#202020; --line:#2f2f2f; --hair:#252525;
+    --ink:#e9e9e7; --dim:#9b9a97; --faint:#6f6e6b;
+    --blue:#5b93d3; --gold:#c9a227; --red:#e06c6c; --green:#5fa87a; --purple:#9a6dd7;
+  }
+  @media (prefers-color-scheme: light){
+    :root{ --bg:#fff; --panel:#f7f7f5; --line:#e6e5e1; --hair:#efeeec;
+           --ink:#37352f; --dim:#787774; --faint:#9b9a97; }
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--bg);color:var(--ink);padding:12px 14px 16px;
+       font:13px/1.4 -apple-system,BlinkMacSystemFont,"Segoe UI",Inter,sans-serif;
+       -webkit-font-smoothing:antialiased}
+  .num,.n,time{font-variant-numeric:tabular-nums}
+
+  /* ---- header ---- */
+  .hd{display:flex;align-items:center;gap:8px;padding-bottom:8px;
+      border-bottom:1px solid var(--line)}
+  .hd .ttl{font-size:10px;color:var(--faint);text-transform:uppercase;
+           letter-spacing:.09em;flex:1}
+  .nav{display:flex;gap:4px}
+  .nav button{background:var(--panel);border:1px solid var(--line);color:var(--dim);
+       width:22px;height:22px;border-radius:4px;cursor:pointer;font-size:12px;
+       line-height:1;display:flex;align-items:center;justify-content:center;padding:0}
+  .nav button:hover:not(:disabled){color:var(--ink);border-color:var(--faint)}
+  .nav button:disabled{opacity:.3;cursor:default}
+
+  .daybar{display:flex;align-items:baseline;gap:8px;padding:9px 0 8px}
+  .dow{font-size:15px;font-weight:600;letter-spacing:-.01em}
+  .dt{font-size:11px;color:var(--dim);font-variant-numeric:tabular-nums}
+  .today-pill{font-size:9px;text-transform:uppercase;letter-spacing:.07em;
+      color:var(--blue);border:1px solid var(--blue);border-radius:3px;padding:1px 4px}
+
+  /* ---- summary ---- */
+  .sum{display:flex;gap:14px;padding:8px 10px;background:var(--panel);
+       border:1px solid var(--line);border-radius:5px;margin-bottom:10px}
+  .sum div{flex:1}
+  .sum .k{font-size:9px;color:var(--faint);text-transform:uppercase;letter-spacing:.07em}
+  .sum .v{font-size:16px;font-weight:600;letter-spacing:-.02em;line-height:1.2;
+          font-variant-numeric:tabular-nums;margin-top:1px}
+  .sum .v.free{color:var(--green)} .sum .v.busy{color:var(--blue)}
+  .bar{height:3px;border-radius:2px;background:var(--hair);overflow:hidden;
+       display:flex;margin-top:6px}
+  .bar i{display:block;height:100%}
+
+  /* ---- all-day chips ---- */
+  .allday{margin-bottom:9px}
+  .allday .k{font-size:9px;color:var(--faint);text-transform:uppercase;
+             letter-spacing:.07em;margin-bottom:4px}
+  .chip{display:block;font-size:11.5px;color:var(--dim);padding:3px 7px;margin-bottom:3px;
+        background:var(--panel);border-left:2px solid var(--faint);border-radius:0 3px 3px 0;
+        text-decoration:none;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+  .chip:hover{color:var(--ink)}
+
+  /* ---- the track ---- */
+  .track{position:relative;margin-left:38px;border-left:1px solid var(--line)}
+  .hr{position:absolute;left:-38px;right:0;border-top:1px solid var(--hair);
+      pointer-events:none}
+  .hr span{position:absolute;left:0;top:-6px;font-size:9.5px;color:var(--faint);
+           font-variant-numeric:tabular-nums;background:var(--bg);padding-right:4px}
+
+  .ev{position:absolute;border-radius:4px;padding:3px 6px;overflow:hidden;
+      color:#fff;text-decoration:none;display:block;
+      box-shadow:0 0 0 1px rgba(0,0,0,.18) inset}
+  .ev b{font-size:11.5px;font-weight:600;display:block;line-height:1.25;
+        overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+  .ev em{font-style:normal;font-size:9.5px;opacity:.85;font-variant-numeric:tabular-nums;
+         display:block;line-height:1.3}
+  .ev.tiny{padding:1px 6px;display:flex;align-items:center;gap:5px}
+  .ev.tiny b{font-size:10.5px}
+  .ev.tiny em{display:none}
+
+  .gap{position:absolute;left:0;right:0;border:1px dashed var(--line);
+       border-radius:4px;display:flex;align-items:center;justify-content:center;
+       flex-direction:column;gap:1px;pointer-events:none}
+  .gap .g1{font-size:10.5px;color:var(--dim);font-variant-numeric:tabular-nums;
+           font-weight:500}
+  .gap .g2{font-size:9px;color:var(--faint);text-transform:uppercase;letter-spacing:.06em}
+  .gap.sm .g2{display:none}
+  .gap.sm .g1{font-size:9.5px}
+  .thin{position:absolute;left:0;right:0;height:0;border-top:1px dotted var(--faint);
+        opacity:.5;pointer-events:none}
+
+  .empty{color:var(--faint);font-size:12px;padding:22px 0;text-align:center}
+  .foot{font-size:9.5px;color:var(--faint);margin-top:10px;
+        border-top:1px solid var(--hair);padding-top:7px;
+        font-variant-numeric:tabular-nums}
+</style>
+</head>
+<body>
+<div class="hd">
+  <span class="ttl">Time-block planner</span>
+  <span class="nav">
+    <button id="prev" title="Previous day">&#8249;</button>
+    <button id="next" title="Next day">&#8250;</button>
+  </span>
+</div>
+<div id="root"><div class="empty">Loading&hellip;</div></div>
+
+<script>
+/* ------------------------------------------------------------------ *
+ * Time-block planner with automatic free-gap detection.
+ * Window 0600-2400. All times 24h, zero-padded 4 digits.
+ * Times parsed by REGEX off ISO strings - never new Date(rawValue).
+ * ------------------------------------------------------------------ */
+
+var WIN_START = 6 * 60;    // 0600
+var WIN_END   = 24 * 60;   // 2400
+var SPAN      = WIN_END - WIN_START;   // 1080 min
+var PXMIN     = 0.60;                  // -> 648px track
+var GAP_LABEL_MIN = 30;                // gaps under 30min = thin divider
+var DEFAULT_DUR   = 30;                // event with no end time
+
+var T_RE = /T(\d{2}):(\d{2})/;         // the ONLY way we read a clock time
+
+/* minutes-from-midnight, or null if the value has no clock component */
+function mins(iso){
+  if(!iso || typeof iso !== 'string') return null;
+  var m = T_RE.exec(iso);
+  if(!m) return null;
+  return parseInt(m[1],10) * 60 + parseInt(m[2],10);
+}
+/* 930 -> "1530"  |  1440 -> "2400" */
+function hhmm(v){
+  v = Math.max(0, Math.round(v));
+  var h = Math.floor(v/60), mi = v % 60;
+  return (h<10?'0':'') + h + (mi<10?'0':'') + mi;
+}
+/* 90 -> "1h30" | 60 -> "1h" | 45 -> "45m" */
+function dur(v){
+  v = Math.round(v);
+  var h = Math.floor(v/60), mi = v % 60;
+  if(h === 0) return mi + 'm';
+  if(mi === 0) return h + 'h';
+  return h + 'h' + (mi<10?'0':'') + mi;
+}
+function hoursTxt(v){
+  var h = v/60;
+  return (Math.round(h*10)/10).toFixed(1) + 'h';
+}
+function esc(s){
+  return String(s==null?'':s).replace(/[&<>"]/g, function(c){
+    return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];
+  });
+}
+/* date-only math: append T12:00:00 so no TZ rollover */
+function dayName(ymd){
+  var d = new Date(ymd + 'T12:00:00');
+  return ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'][d.getDay()];
+}
+function dayShort(ymd){
+  var d = new Date(ymd + 'T12:00:00');
+  var mo = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+  return (d.getDate()<10?'0':'') + d.getDate() + ' ' + mo[d.getMonth()];
+}
+
+/* dashboard-wide category colours */
+function colour(it){
+  var s = ((it.kind||'') + ' ' + (it.meeting_type||'') + ' ' + (it.type||'')).toLowerCase();
+  if(it.src === 'class' || /class|lecture|recitation|seminar/.test(s)) return 'var(--gold)';
+  if(/research|serg|aeroastro|thesis/.test(s))                        return 'var(--green)';
+  if(/admin|tpp|meeting/.test(s))                                     return 'var(--purple)';
+  if(/military/.test(s))                                              return 'var(--red)';
+  return 'var(--blue)';
+}
+
+/* ---- merge overlapping busy intervals -> complement is the free gaps ---- */
+function mergeBusy(evs){
+  var iv = evs.map(function(e){ return [e.s, e.e]; })
+              .sort(function(a,b){ return a[0]-b[0]; });
+  var out = [];
+  for(var i=0;i<iv.length;i++){
+    if(out.length && iv[i][0] <= out[out.length-1][1]){
+      out[out.length-1][1] = Math.max(out[out.length-1][1], iv[i][1]);
+    } else out.push([iv[i][0], iv[i][1]]);
+  }
+  return out;
+}
+function findGaps(busy){
+  var gaps = [], cur = WIN_START;
+  for(var i=0;i<busy.length;i++){
+    if(busy[i][0] > cur) gaps.push([cur, busy[i][0]]);
+    cur = Math.max(cur, busy[i][1]);
+  }
+  if(cur < WIN_END) gaps.push([cur, WIN_END]);
+  return gaps;
+}
+
+/* ---- greedy column assignment for mutually overlapping events ---- */
+function layout(evs){
+  evs.sort(function(a,b){ return a.s - b.s || a.e - b.e; });
+  var cluster = [], clusterEnd = -1;
+  function flush(){
+    if(!cluster.length) return;
+    var cols = [];
+    cluster.forEach(function(ev){
+      var placed = false;
+      for(var c=0;c<cols.length;c++){
+        if(cols[c] <= ev.s){ cols[c] = ev.e; ev.col = c; placed = true; break; }
+      }
+      if(!placed){ ev.col = cols.length; cols.push(ev.e); }
+    });
+    cluster.forEach(function(ev){ ev.ncol = cols.length; });
+    cluster = [];
+  }
+  evs.forEach(function(ev){
+    if(cluster.length && ev.s >= clusterEnd){ flush(); clusterEnd = -1; }
+    cluster.push(ev);
+    clusterEnd = Math.max(clusterEnd, ev.e);
+  });
+  flush();
+  return evs;
+}
+
+var DAYS = [], idx = 0;
+
+function render(){
+  var day = DAYS[idx];
+  if(!day){ document.getElementById('root').innerHTML =
+              '<div class="empty">No day data.</div>'; return; }
+
+  var timed = [], allday = [];
+  (day.items||[]).forEach(function(it){
+    var s = mins(it.date);
+    if(s === null){ allday.push(it); return; }
+    var e = mins(it.end);
+    if(e === null || e <= s) e = s + DEFAULT_DUR;
+    // clamp into the visible window
+    if(e <= WIN_START || s >= WIN_END) return;
+    timed.push({ raw:it, s:Math.max(s,WIN_START), e:Math.min(e,WIN_END),
+                 trueS:s, trueE:e });
+  });
+
+  var H = SPAN * PXMIN;
+  var html = '';
+
+  /* header */
+  html += '<div class="daybar"><span class="dow">' + dayName(day.date) + '</span>' +
+          '<span class="dt">' + dayShort(day.date) + '</span>' +
+          (day.is_today ? '<span class="today-pill">today</span>' : '') + '</div>';
+
+  if(!timed.length && !allday.length){
+    html += '<div class="empty">Nothing scheduled.</div>';
+    document.getElementById('root').innerHTML = html;
+    syncNav(); return;
+  }
+
+  /* gaps + summary come from the merged busy set */
+  var busy = mergeBusy(timed);
+  var gaps = findGaps(busy);
+  var committed = busy.reduce(function(a,b){ return a + (b[1]-b[0]); }, 0);
+  var free = SPAN - committed;
+  var bigGaps = gaps.filter(function(g){ return (g[1]-g[0]) >= GAP_LABEL_MIN; });
+
+  html += '<div class="sum">' +
+    '<div><div class="k">Committed</div><div class="v busy">' + hoursTxt(committed) + '</div></div>' +
+    '<div><div class="k">Free</div><div class="v free">' + hoursTxt(free) + '</div></div>' +
+    '<div><div class="k">Open gaps</div><div class="v">' + bigGaps.length + '</div></div>' +
+    '</div>';
+  html += '<div class="bar">' +
+    '<i style="width:' + (committed/SPAN*100).toFixed(2) + '%;background:var(--blue)"></i>' +
+    '<i style="width:' + (free/SPAN*100).toFixed(2) + '%;background:var(--green);opacity:.5"></i>' +
+    '</div>';
+
+  if(allday.length){
+    html += '<div class="allday" style="margin-top:10px"><div class="k">All-day &middot; ' +
+            allday.length + '</div>';
+    allday.forEach(function(it){
+      html += '<a class="chip" style="border-left-color:' + colour(it) + '"' +
+              (it.url ? ' href="' + esc(it.url) + '" target="_blank"' : '') +
+              ' title="' + esc(it.name) + '">' + esc(it.name) + '</a>';
+    });
+    html += '</div>';
+  }
+
+  /* the track */
+  html += '<div class="track" style="height:' + H + 'px">';
+
+  for(var h = 6; h <= 24; h += 2){
+    var y = (h*60 - WIN_START) * PXMIN;
+    html += '<div class="hr" style="top:' + y + 'px"><span>' + hhmm(h*60) + '</span></div>';
+  }
+
+  gaps.forEach(function(g){
+    var len = g[1] - g[0];
+    var top = (g[0] - WIN_START) * PXMIN;
+    var ht  = len * PXMIN;
+    if(len < GAP_LABEL_MIN){
+      html += '<div class="thin" style="top:' + (top + ht/2) + 'px"></div>';
+      return;
+    }
+    var sm = ht < 34 ? ' sm' : '';
+    html += '<div class="gap' + sm + '" style="top:' + (top+1) + 'px;height:' + (ht-2) + 'px">' +
+            '<span class="g1">' + hhmm(g[0]) + '&ndash;' + hhmm(g[1]) +
+            ' &middot; ' + dur(len) + '</span>' +
+            '<span class="g2">free</span></div>';
+  });
+
+  layout(timed).forEach(function(ev){
+    var it = ev.raw;
+    var top = (ev.s - WIN_START) * PXMIN;
+    var ht  = Math.max(18, (ev.e - ev.s) * PXMIN);
+    var n   = ev.ncol || 1, c = ev.col || 0;
+    var w   = (100/n), left = (c * w);
+    var tiny = ht < 30;
+    var timeTxt = hhmm(ev.trueS) + '&ndash;' + hhmm(ev.trueE) +
+                  ' &middot; ' + dur(ev.trueE - ev.trueS);
+    html += '<a class="ev' + (tiny?' tiny':'') + '"' +
+            ' style="top:' + top + 'px;height:' + ht + 'px;' +
+            'left:calc(' + left + '% + 2px);width:calc(' + w + '% - 4px);' +
+            'background:' + colour(it) + (it.done ? ';opacity:.45' : '') + '"' +
+            (it.url ? ' href="' + esc(it.url) + '" target="_blank"' : '') +
+            ' title="' + esc(it.name) + '\u000A' + hhmm(ev.trueS) + '-' + hhmm(ev.trueE) +
+            (it.location ? '\u000A' + esc(it.location) : '') + '">' +
+            '<b>' + esc(it.name) + '</b>' +
+            '<em>' + timeTxt + (it.location ? ' &middot; ' + esc(it.location) : '') + '</em>' +
+            (tiny ? '<em style="display:block;font-size:9px">' + hhmm(ev.trueS) + '</em>' : '') +
+            '</a>';
+  });
+
+  html += '</div>';
+
+  html += '<div class="foot">' + timed.length + ' scheduled &middot; ' +
+          allday.length + ' all-day &middot; window 0600&ndash;2400 &middot; ' +
+          'gaps under ' + GAP_LABEL_MIN + 'm shown as dividers</div>';
+
+  document.getElementById('root').innerHTML = html;
+  syncNav();
+}
+
+function syncNav(){
+  document.getElementById('prev').disabled = (idx <= 0);
+  document.getElementById('next').disabled = (idx >= DAYS.length - 1);
+}
+
+document.getElementById('prev').onclick = function(){ if(idx>0){ idx--; render(); } };
+document.getElementById('next').onclick = function(){ if(idx<DAYS.length-1){ idx++; render(); } };
+
+fetch('../data/week.json')
+  .then(function(r){ return r.json(); })
+  .then(function(j){
+    DAYS = j.days || [];
+    idx = 0;
+    for(var i=0;i<DAYS.length;i++) if(DAYS[i].is_today){ idx = i; break; }
+    render();
+  })
+  .catch(function(){
+    document.getElementById('root').innerHTML =
+      '<div class="empty">week.json unavailable.</div>';
+  });
+</script>
+</body>
+</html>

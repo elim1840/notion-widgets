@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Priority matrix</title>
+<style>
+  :root{
+    --bg:#191919; --panel:#202020; --line:#2f2f2f; --hair:#252525;
+    --ink:#e9e9e7; --dim:#9b9a97; --faint:#6f6e6b;
+    --blue:#5b93d3; --gold:#c9a227; --red:#e06c6c; --green:#5fa87a; --purple:#9a6dd7;
+  }
+  @media (prefers-color-scheme: light){
+    :root{ --bg:#fff; --panel:#f7f7f5; --line:#e6e5e1; --hair:#efeeec;
+           --ink:#37352f; --dim:#787774; --faint:#9b9a97; }
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--bg);color:var(--ink);padding:12px 14px 14px;
+       font:13px/1.4 -apple-system,BlinkMacSystemFont,"Segoe UI",Inter,sans-serif;
+       -webkit-font-smoothing:antialiased}
+  .hd{display:flex;align-items:baseline;gap:10px;padding-bottom:8px;
+      border-bottom:1px solid var(--line);margin-bottom:9px}
+  .hd .ttl{font-size:10px;color:var(--faint);text-transform:uppercase;
+           letter-spacing:.09em;flex:1}
+  .hd .ct{font-size:10px;color:var(--faint);font-variant-numeric:tabular-nums}
+
+  .key{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:8px}
+  .key span{font-size:10px;color:var(--dim);display:flex;align-items:center;gap:4px}
+  .key i{width:7px;height:7px;border-radius:50%;display:block}
+
+  svg{display:block;width:100%;overflow:visible}
+  text{font:10px -apple-system,BlinkMacSystemFont,"Segoe UI",Inter,sans-serif;
+       fill:var(--faint);font-variant-numeric:tabular-nums}
+  .qlab{font-size:9.5px;text-transform:uppercase;letter-spacing:.07em;
+        fill:var(--faint);opacity:.75;font-weight:600}
+  .qn{font-size:9px;fill:var(--faint);opacity:.6;font-variant-numeric:tabular-nums}
+  .axl{font-size:9px;fill:var(--faint);text-transform:uppercase;letter-spacing:.07em}
+  circle.pt{cursor:pointer;stroke:var(--bg);stroke-width:1.1}
+  circle.pt:hover{stroke:var(--ink);stroke-width:1.6}
+
+  .tip{position:fixed;pointer-events:none;z-index:9;opacity:0;transition:opacity .1s;
+       background:var(--panel);border:1px solid var(--line);border-radius:5px;
+       padding:6px 8px;max-width:270px;box-shadow:0 4px 14px rgba(0,0,0,.4)}
+  .tip b{font-size:11.5px;font-weight:600;display:block;line-height:1.3;
+         margin-bottom:3px;color:var(--ink)}
+  .tip em{font-style:normal;font-size:10px;color:var(--dim);
+          font-variant-numeric:tabular-nums;display:block}
+  .empty{color:var(--faint);font-size:12px;padding:26px 0;text-align:center}
+  .foot{font-size:9.5px;color:var(--faint);margin-top:8px;
+        border-top:1px solid var(--hair);padding-top:7px;
+        font-variant-numeric:tabular-nums;line-height:1.5}
+</style>
+</head>
+<body>
+<div class="hd">
+  <span class="ttl">Priority matrix &middot; computed axes</span>
+  <span class="ct" id="ct"></span>
+</div>
+<div class="key" id="key"></div>
+<div id="root"><div class="empty">Loading&hellip;</div></div>
+<div class="tip" id="tip"></div>
+
+<script>
+/* ------------------------------------------------------------------ *
+ * 2-axis scatter matrix. BOTH axes are COMPUTED from data that already
+ * exists in Notion - zero new properties required.
+ *
+ *   X = days until due  (signed log compression, soonest/overdue left)
+ *   Y = weight 0..100 derived from: priority (High/Medium), whether the
+ *       item is graded coursework, its class category (Exam/Presentation
+ *       vs Homework), and how overdue it is.
+ *
+ * Times/dates parsed by REGEX off ISO strings. Date-only math uses
+ * T12:00:00 to avoid TZ rollover. Never new Date() on a raw value.
+ * ------------------------------------------------------------------ */
+
+var W = 780, H = 400;
+var M = { t:14, r:16, b:34, l:40 };
+var PW = W - M.l - M.r, PH = H - M.t - M.b;
+
+var GRADED = { Homework:1, Exam:1, Quiz:1, Presentation:1 };
+var HEAVY  = { Exam:1, Quiz:1, Presentation:1 };   /* higher stakes than homework */
+
+var D_RE = /^(\d{4})-(\d{2})-(\d{2})/;
+
+/* ---- date helpers: regex only ---- */
+function ymd(iso){
+  if(!iso || typeof iso !== 'string') return null;
+  var m = D_RE.exec(iso);
+  return m ? (m[1] + '-' + m[2] + '-' + m[3]) : null;
+}
+/* whole days between two YYYY-MM-DD, via noon anchors (no TZ rollover) */
+function dayDiff(a, b){
+  var A = new Date(a + 'T12:00:00'), B = new Date(b + 'T12:00:00');
+  return Math.round((A - B) / 86400000);
+}
+function fmtDate(s){
+  var mo = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+  var m = D_RE.exec(s); if(!m) return s;
+  return m[3] + ' ' + mo[parseInt(m[2],10)-1] + ' ' + m[1];
+}
+function relTxt(d){
+  if(d === 0) return 'due today';
+  if(d < 0)   return Math.abs(d) + 'd overdue';
+  return 'in ' + d + 'd';
+}
+function esc(s){
+  return String(s==null?'':s).replace(/[&<>"]/g, function(c){
+    return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];
+  });
+}
+
+/* ---- category colour, matching the rest of the dashboard ---- */
+function colour(p){
+  if(p.grp === 'class') return 'var(--gold)';
+  var s = p.cat.toLowerCase();
+  if(/research|serg|aeroastro|thesis/.test(s)) return 'var(--green)';
+  if(/admin|tpp|meeting/.test(s))              return 'var(--purple)';
+  if(/military/.test(s))                       return 'var(--red)';
+  return 'var(--blue)';
+}
+
+/* ================= AXIS MATHS ================= */
+
+/* X: signed log1p compression so -85d .. +130d all stay legible */
+function fx(days){
+  if(days === 0) return 0;
+  return (days < 0 ? -1 : 1) * Math.log1p(Math.abs(days));
+}
+
+/* Y: weight 0..100 built ONLY from properties that already exist */
+function weight(p){
+  var w;
+  if(p.grp === 'class'){
+    w = 46;                                   /* graded coursework baseline */
+    if(HEAVY[p.type]) w += 16;                /* Exam/Quiz/Presentation */
+  } else {
+    w = 26;                                   /* ordinary task baseline */
+    if(p.pri === 'High')   w += 30;
+    else if(p.pri === 'Medium') w += 15;
+    if(p.energy === 'Deep') w += 8;           /* deep-work flag */
+    if(p.isMeeting) w += 6;                   /* fixed commitment */
+  }
+  if(p.days < 0){                             /* overdue escalation, capped */
+    w += Math.min(24, 9 + Math.floor(Math.abs(p.days) / 5));
+  }
+  return Math.max(0, Math.min(100, w));
+}
+
+/* deterministic jitter from the name, so points never stack invisibly */
+function hash(s){
+  var h = 2166136261;
+  for(var i=0;i<s.length;i++){ h ^= s.charCodeAt(i); h = (h * 16777619) >>> 0; }
+  return h;
+}
+function jit(name, salt, amp){
+  var h = hash(name + salt);
+  return (((h % 1000) / 1000) - 0.5) * 2 * amp;
+}
+
+var TIP = document.getElementById('tip');
+function showTip(e, p){
+  TIP.innerHTML = '<b>' + esc(p.name) + '</b>' +
+    '<em>' + fmtDate(p.ymd) + ' &middot; ' + relTxt(p.days) + '</em>' +
+    '<em>' + esc(p.label) + ' &middot; weight ' + p.w + '</em>';
+  TIP.style.opacity = 1;
+  var x = e.clientX + 13, y = e.clientY + 13;
+  if(x + 280 > window.innerWidth)  x = e.clientX - 280;
+  if(y + 70  > window.innerHeight) y = e.clientY - 70;
+  TIP.style.left = x + 'px'; TIP.style.top = y + 'px';
+}
+function hideTip(){ TIP.style.opacity = 0; }
+
+function build(tasks, spokes){
+  var today = tasks.today || ymd(tasks.generated) || '2026-09-07';
+  var pts = [], seen = {};
+
+  /* --- tasks --- */
+  ['today_items','upcoming'].forEach(function(k){
+    (tasks[k] || []).forEach(function(it){
+      if(it.done) return;
+      var y = ymd(it.date); if(!y) return;
+      var key = it.name + '|' + y; if(seen[key]) return; seen[key] = 1;
+      var cat = it.meeting_type || it.type || '';
+      var p = {
+        name: it.name, ymd: y, days: dayDiff(y, today), grp: 'task',
+        cat: cat, pri: it.priority || '', energy: it.energy || '',
+        type: it.type || '', isMeeting: (it.type === 'Meeting'),
+        url: it.url || ''
+      };
+      p.label = (p.pri ? p.pri + ' priority' : 'No priority') + (cat ? ' \u00b7 ' + cat : '');
+      pts.push(p);
+    });
+  });
+
+  /* --- graded class items only (Homework/Exam/Quiz/Presentation) --- */
+  (spokes.classes || []).forEach(function(c){
+    if(!GRADED[c.type]) return;
+    var y = ymd(c.date); if(!y) return;
+    var key = c.name + '|' + y; if(seen[key]) return; seen[key] = 1;
+    var p = {
+      name: c.name, ymd: y, days: dayDiff(y, today), grp: 'class',
+      cat: c.code || 'class', pri: '', energy: '', type: c.type,
+      isMeeting: false, url: c.url || ''
+    };
+    p.label = c.code + ' \u00b7 ' + c.type;
+    pts.push(p);
+  });
+
+  pts.forEach(function(p){ p.w = weight(p); });
+  return { pts: pts, today: today };
+}
+
+function render(data){
+  var pts = data.pts;
+  var root = document.getElementById('root');
+  if(!pts.length){ root.innerHTML = '<div class="empty">No dated items to plot.</div>'; return; }
+
+  document.getElementById('ct').textContent =
+    pts.length + ' items \u00b7 ' + pts.filter(function(p){return p.days<0;}).length + ' overdue';
+
+  /* symmetric-ish X domain from the real data */
+  var xs = pts.map(function(p){ return fx(p.days); });
+  var lo = Math.min.apply(null, xs), hi = Math.max.apply(null, xs);
+  var pad = (hi - lo) * 0.06 || 1;
+  lo -= pad; hi += pad;
+
+  function X(d){ return M.l + (fx(d) - lo) / (hi - lo) * PW; }
+  function Y(w){ return M.t + PH - (w / 100) * PH; }
+
+  /* quadrant split: X at "one week out", Y at weight 50 */
+  var xSplit = X(7), ySplit = Y(50);
+
+  var s = '<svg viewBox="0 0 ' + W + ' ' + H + '" height="' + H + '" ' +
+          'preserveAspectRatio="xMidYMid meet" role="img" ' +
+          'aria-label="Priority matrix: days until due against computed weight">';
+
+  /* quadrant background tint for the urgent+important corner */
+  s += '<rect x="' + M.l + '" y="' + M.t + '" width="' + (xSplit - M.l) +
+       '" height="' + (ySplit - M.t) + '" fill="var(--red)" opacity="0.045"/>';
+
+  /* plot frame */
+  s += '<rect x="' + M.l + '" y="' + M.t + '" width="' + PW + '" height="' + PH +
+       '" fill="none" stroke="var(--hair)"/>';
+
+  /* gridlines at meaningful day offsets */
+  [-30, -7, 0, 7, 30, 90].forEach(function(d){
+    var x = X(d);
+    if(x < M.l - 1 || x > M.l + PW + 1) return;
+    var isNow = (d === 0);
+    s += '<line x1="' + x.toFixed(1) + '" y1="' + M.t + '" x2="' + x.toFixed(1) +
+         '" y2="' + (M.t + PH) + '" stroke="' + (isNow ? 'var(--dim)' : 'var(--hair)') +
+         '"' + (isNow ? ' stroke-dasharray="2,3"' : '') + '/>';
+    s += '<text x="' + x.toFixed(1) + '" y="' + (M.t + PH + 13) +
+         '" text-anchor="middle">' + (isNow ? 'today' : (d > 0 ? '+' + d : d) + 'd') + '</text>';
+  });
+
+  /* y ticks */
+  [0, 50, 100].forEach(function(v){
+    var y = Y(v);
+    s += '<text x="' + (M.l - 7) + '" y="' + (y + 3.2) + '" text-anchor="end">' + v + '</text>';
+  });
+
+  /* quadrant dividers */
+  s += '<line x1="' + xSplit.toFixed(1) + '" y1="' + M.t + '" x2="' + xSplit.toFixed(1) +
+       '" y2="' + (M.t + PH) + '" stroke="var(--line)" stroke-width="1"/>';
+  s += '<line x1="' + M.l + '" y1="' + ySplit.toFixed(1) + '" x2="' + (M.l + PW) +
+       '" y2="' + ySplit.toFixed(1) + '" stroke="var(--line)" stroke-width="1"/>';
+
+  /* quadrant labels + live counts */
+  var q = { dn:0, qw:0, sc:0, bl:0 };
+  pts.forEach(function(p){
+    var soon = p.days <= 7, hiW = p.w >= 50;
+    if(soon && hiW) q.dn++; else if(soon) q.qw++;
+    else if(hiW) q.sc++; else q.bl++;
+  });
+  function qlab(x, y, anch, txt, n){
+    s += '<text class="qlab" x="' + x + '" y="' + y + '" text-anchor="' + anch + '">' +
+         txt + '</text>';
+    s += '<text class="qn" x="' + x + '" y="' + (y + 11) + '" text-anchor="' + anch + '">' +
+         n + '</text>';
+  }
+  qlab(M.l + 7,        M.t + 13,      'start', 'Do now',     q.dn);
+  qlab(M.l + PW - 7,   M.t + 13,      'end',   'Schedule',   q.sc);
+  qlab(M.l + 7,        M.t + PH - 14, 'start', 'Quick wins', q.qw);
+  qlab(M.l + PW - 7,   M.t + PH - 14, 'end',   'Backlog',    q.bl);
+
+  /* axis titles */
+  s += '<text class="axl" x="' + (M.l + PW/2) + '" y="' + (H - 4) +
+       '" text-anchor="middle">days until due &rarr;</text>';
+  s += '<text class="axl" transform="translate(11,' + (M.t + PH/2) +
+       ') rotate(-90)" text-anchor="middle">computed weight &rarr;</text>';
+
+  /* points: draw low weight first so urgent ones sit on top */
+  pts.slice().sort(function(a,b){ return a.w - b.w; }).forEach(function(p, i){
+    var cx = X(p.days) + jit(p.name, 'x', 4.5);
+    var cy = Y(p.w)   + jit(p.name, 'y', 5.5);
+    cx = Math.max(M.l + 3, Math.min(M.l + PW - 3, cx));
+    cy = Math.max(M.t + 3, Math.min(M.t + PH - 3, cy));
+    s += '<circle class="pt" data-i="' + p.idx + '" cx="' + cx.toFixed(1) +
+         '" cy="' + cy.toFixed(1) + '" r="4.2" fill="' + colour(p) +
+         '" opacity="' + (p.days < 0 ? '0.95' : '0.8') + '"/>';
+  });
+
+  s += '</svg>';
+  root.innerHTML = s;
+
+  /* legend */
+  var groups = [
+    ['var(--gold)',   'class'],
+    ['var(--green)',  'research'],
+    ['var(--purple)', 'admin / TPP'],
+    ['var(--red)',    'military'],
+    ['var(--blue)',   'other']
+  ];
+  document.getElementById('key').innerHTML = groups.map(function(g){
+    return '<span><i style="background:' + g[0] + '"></i>' + g[1] + '</span>';
+  }).join('') + '<span style="color:var(--faint)">split: 7 days &middot; weight 50</span>';
+
+  /* tooltips */
+  var byIdx = {};
+  pts.forEach(function(p){ byIdx[p.idx] = p; });
+  Array.prototype.forEach.call(root.querySelectorAll('circle.pt'), function(el){
+    var p = byIdx[el.getAttribute('data-i')];
+    el.addEventListener('mousemove', function(e){ showTip(e, p); });
+    el.addEventListener('mouseleave', hideTip);
+    if(p.url) el.addEventListener('click', function(){ window.open(p.url, '_blank'); });
+  });
+
+  document.querySelector('.foot') && document.querySelector('.foot').remove();
+  var f = document.createElement('div');
+  f.className = 'foot';
+  f.innerHTML = 'X = days until due, signed log scale. ' +
+    'Y = weight from priority, graded category and overdue age. ' +
+    'Both computed &mdash; no new Notion properties.';
+  document.body.appendChild(f);
+}
+
+Promise.all([
+  fetch('../data/tasks.json').then(function(r){ return r.json(); }),
+  fetch('../data/spokes.json').then(function(r){ return r.json(); })
+]).then(function(a){
+  var data = build(a[0], a[1]);
+  data.pts.forEach(function(p, i){ p.idx = i; });
+  render(data);
+}).catch(function(){
+  document.getElementById('root').innerHTML =
+    '<div class="empty">tasks.json / spokes.json unavailable.</div>';
+});
+</script>
+</body>
+</html>

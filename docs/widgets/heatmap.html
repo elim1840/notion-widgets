@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Activity heatmap</title>
+<style>
+  :root{
+    --bg:#191919; --panel:#202020; --line:#2f2f2f; --hair:#252525;
+    --ink:#e9e9e7; --dim:#9b9a97; --faint:#6f6e6b;
+    --blue:#5b93d3; --gold:#c9a227; --red:#e06c6c; --green:#5fa87a; --purple:#9a6dd7;
+    --l0:#242424;
+  }
+  @media (prefers-color-scheme: light){
+    :root{ --bg:#fff; --panel:#f7f7f5; --line:#e6e5e1; --hair:#efeeec;
+           --ink:#37352f; --dim:#787774; --faint:#9b9a97; --l0:#ebeae7; }
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--bg);color:var(--ink);padding:12px 14px;
+       font:13px/1.4 -apple-system,BlinkMacSystemFont,"Segoe UI",Inter,sans-serif;
+       -webkit-font-smoothing:antialiased;font-variant-numeric:tabular-nums}
+  .hd{font-size:10px;color:var(--faint);text-transform:uppercase;letter-spacing:.09em;
+      padding-bottom:7px;margin-bottom:9px;border-bottom:1px solid var(--line);
+      display:flex;justify-content:space-between;gap:10px}
+  .hd b{font-weight:600;color:var(--dim)}
+  .wrap{overflow-x:auto;padding-bottom:2px}
+  svg{display:block}
+  .cell{stroke:var(--bg);stroke-width:1;rx:2}
+  .cell:hover{stroke:var(--ink);stroke-width:1.2}
+  .lbl{font-size:9px;fill:var(--faint);font-family:inherit;letter-spacing:.04em}
+  .foot{display:flex;justify-content:space-between;align-items:center;gap:10px;
+        margin-top:9px;padding-top:8px;border-top:1px solid var(--hair);
+        font-size:9.5px;color:var(--faint)}
+  .lg{display:flex;align-items:center;gap:4px}
+  .lg i{width:10px;height:10px;border-radius:2px;display:block}
+  .src{font-size:9.5px;color:var(--faint);line-height:1.5;margin-top:7px}
+  .src b{color:var(--dim);font-weight:500}
+  #tip{position:fixed;pointer-events:none;opacity:0;transition:opacity .08s;
+       background:var(--panel);border:1px solid var(--line);border-radius:4px;
+       padding:5px 8px;font-size:11px;color:var(--ink);z-index:9;white-space:nowrap;
+       box-shadow:0 3px 12px rgba(0,0,0,.35);font-variant-numeric:tabular-nums}
+  .none{color:var(--faint);font-style:italic;padding:16px 0}
+</style>
+</head>
+<body>
+<div class="hd"><span>Activity heatmap</span><span id="range"></span></div>
+<div class="wrap" id="out"><div class="none">loading…</div></div>
+<div class="foot" id="foot" hidden>
+  <span id="tot"></span>
+  <span class="lg">less
+    <i style="background:var(--l0)"></i>
+    <i style="background:#1d3a5c"></i>
+    <i style="background:#2f5f96"></i>
+    <i style="background:#4a83c4"></i>
+    <i style="background:var(--blue)"></i>
+    more</span>
+</div>
+<div class="src" id="src"></div>
+<div id="tip"></div>
+
+<script>
+const MON=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+const WD =['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
+const ISO=/(\d{4}-\d{2}-\d{2})/;
+const dayOf = v => { const m=ISO.exec(String(v||'')); return m?m[1]:null; };
+const D = iso => new Date(iso+'T12:00:00');            // noon: offset-safe
+const key = d => d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0');
+const shift = (iso,n) => { const d=D(iso); d.setDate(d.getDate()+n); return key(d); };
+const fmtLong = iso => { const d=D(iso); return d.getDate()+' '+MON[d.getMonth()]+' '+d.getFullYear(); };
+const fmtShort = iso => { const d=D(iso); return d.getDate()+' '+MON[d.getMonth()]; };
+
+const CELL=13, GAP=3, STEP=CELL+GAP, PADL=28, PADT=16;
+
+Promise.all([
+  fetch('../data/tasks.json?t='+Date.now()).then(r=>r.json()).catch(()=>null),
+  fetch('../data/week.json?t='+Date.now()).then(r=>r.json()).catch(()=>null),
+  fetch('../data/spokes.json?t='+Date.now()).then(r=>r.json()).catch(()=>null)
+]).then(([T,W,S])=>{
+
+  // ---- collect real dated rows, deduped on date|name so overlapping feeds
+  //      (week.json repeats class + task rows) are never double counted.
+  const seen = new Set();
+  const counts = Object.create(null);
+  const srcDays = {history:new Set(), week:new Set(), classes:new Set(), upcoming:new Set()};
+  function add(iso, name, src){
+    if(!iso) return;
+    const k = iso+'|'+(name||'');
+    if(seen.has(k)) return;
+    seen.add(k);
+    counts[iso] = (counts[iso]||0)+1;
+    srcDays[src].add(iso);
+  }
+
+  // history[] carries an aggregate count, not individual names — add it as a
+  // count directly, and mark those days so we never double-add named rows there.
+  const hist = (T&&Array.isArray(T.history))?T.history:[];
+  const histDays = new Set();
+  hist.forEach(h=>{
+    const iso = dayOf(h.date); if(!iso) return;
+    histDays.add(iso); srcDays.history.add(iso);
+    counts[iso] = Math.max(counts[iso]||0, Number(h.total)||0);
+  });
+
+  (W&&W.days||[]).forEach(d=>{
+    const iso = dayOf(d.date); if(!iso) return;
+    srcDays.week.add(iso);
+    if(histDays.has(iso)) return;                       // already counted above
+    (d.items||[]).forEach(it=> add(iso, it.name, 'week'));
+  });
+  (S&&S.classes||[]).forEach(c=>{
+    const iso = dayOf(c.date);
+    if(iso && !histDays.has(iso)) add(iso, c.name, 'classes');
+    else if(iso) srcDays.classes.add(iso);
+  });
+  (T&&T.upcoming||[]).forEach(it=>{
+    const iso = dayOf(it.date);
+    if(iso && !histDays.has(iso)) add(iso, it.name, 'upcoming');
+    else if(iso) srcDays.upcoming.add(iso);
+  });
+
+  const days = Object.keys(counts).sort();
+  const out = document.getElementById('out');
+  if(!days.length){ out.innerHTML='<div class="none">no dated rows in the feed</div>'; return; }
+
+  // ---- observed window = exactly the span the real data covers. We pad only to
+  //      week boundaries so the grid is rectangular; padding cells are drawn as
+  //      voids (no fill, no tooltip), never as real zeros.
+  const first = days[0], last = days[days.length-1];
+  const gridStart = shift(first, -D(first).getDay());
+  const gridEnd   = shift(last,  6 - D(last).getDay());
+  const nDays = Math.round((D(gridEnd)-D(gridStart))/864e5)+1;
+  const nWeeks = Math.ceil(nDays/7);
+
+  const total = days.reduce((a,k)=>a+counts[k],0);
+  const max = Math.max(...days.map(k=>counts[k]));
+  const active = days.filter(k=>counts[k]>0).length;
+  const spanDays = Math.round((D(last)-D(first))/864e5)+1;
+
+  // 5 honest buckets over the real observed max
+  function fill(n){
+    if(n<=0) return 'var(--l0)';
+    const r=n/max;
+    if(r<=0.25) return '#1d3a5c';
+    if(r<=0.50) return '#2f5f96';
+    if(r<=0.75) return '#4a83c4';
+    return 'var(--blue)';
+  }
+
+  const W_SVG = PADL + nWeeks*STEP + 4;
+  const H_SVG = PADT + 7*STEP + 2;
+  let svg = `<svg width="${W_SVG}" height="${H_SVG}" viewBox="0 0 ${W_SVG} ${H_SVG}">`;
+
+  // weekday labels: Mon / Wed / Fri only
+  [[1,'Mon'],[3,'Wed'],[5,'Fri']].forEach(([r,t])=>{
+    svg += `<text class="lbl" x="0" y="${PADT + r*STEP + CELL-2}">${t}</text>`;
+  });
+
+  // month labels at the first column whose month differs from the previous one
+  let lastMon = -1;
+  for(let w=0; w<nWeeks; w++){
+    const iso = shift(gridStart, w*7);
+    const d = D(iso);
+    if(d.getMonth()!==lastMon){
+      lastMon = d.getMonth();
+      svg += `<text class="lbl" x="${PADL + w*STEP}" y="${PADT-5}">${MON[lastMon]}</text>`;
+    }
+  }
+
+  let voids = 0;
+  for(let i=0; i<nDays; i++){
+    const iso = shift(gridStart, i);
+    const w = Math.floor(i/7), r = D(iso).getDay();
+    const x = PADL + w*STEP, y = PADT + r*STEP;
+    const inWindow = iso>=first && iso<=last;
+    if(!inWindow){
+      voids++;
+      svg += `<rect class="cell" x="${x}" y="${y}" width="${CELL}" height="${CELL}" rx="2"
+               fill="none" stroke="var(--hair)" stroke-width="1"></rect>`;
+      continue;
+    }
+    const n = counts[iso]||0;
+    svg += `<rect class="cell" x="${x}" y="${y}" width="${CELL}" height="${CELL}" rx="2"
+             fill="${fill(n)}" data-d="${iso}" data-n="${n}"></rect>`;
+  }
+  svg += '</svg>';
+  out.innerHTML = svg;
+
+  document.getElementById('range').innerHTML =
+    `<b>${fmtShort(first)} – ${fmtShort(last)} ${D(last).getFullYear()}</b>`;
+  document.getElementById('foot').hidden = false;
+  document.getElementById('tot').textContent =
+    `${total} items · ${active}/${spanDays} days active · peak ${max}/day`;
+
+  document.getElementById('src').innerHTML =
+    `<b>Real data only.</b> ${spanDays} calendar days observed `+
+    `(${fmtLong(first)} → ${fmtLong(last)}), assembled from `+
+    `history ${srcDays.history.size}d · week ${srcDays.week.size}d · `+
+    `classes ${srcDays.classes.size}d · upcoming ${srcDays.upcoming.size}d, `+
+    `deduplicated on date+name. Empty cells inside the window are genuine zeros; `+
+    `hollow cells outside it are grid padding, not data.`;
+
+  // ---- tooltip
+  const tip=document.getElementById('tip');
+  out.addEventListener('mousemove', e=>{
+    const t=e.target;
+    if(t.tagName!=='rect' || !t.dataset.d){ tip.style.opacity=0; return; }
+    const n=+t.dataset.n;
+    tip.innerHTML = `<b>${n}</b> ${n===1?'item':'items'} — ${WD[D(t.dataset.d).getDay()]} ${fmtLong(t.dataset.d)}`;
+    tip.style.opacity=1;
+    tip.style.left = Math.min(e.clientX+12, innerWidth-tip.offsetWidth-6)+'px';
+    tip.style.top  = Math.max(4, e.clientY-30)+'px';
+  });
+  out.addEventListener('mouseleave', ()=>{ tip.style.opacity=0; });
+})
+.catch(e=>{ document.getElementById('out').innerHTML='<div class="none">data unavailable</div>'; });
+</script>
+</body>
+</html>

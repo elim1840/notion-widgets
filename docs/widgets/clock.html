@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Clock</title>
+<style>
+  :root{
+    --bg:#191919; --panel:#202020; --line:#2f2f2f; --hair:#252525;
+    --ink:#e9e9e7; --dim:#9b9a97; --faint:#6f6e6b;
+    --blue:#5b93d3; --gold:#c9a227; --red:#e06c6c; --green:#5fa87a; --purple:#9a6dd7;
+  }
+  @media (prefers-color-scheme: light){
+    :root{ --bg:#fff; --panel:#f7f7f5; --line:#e6e5e1; --hair:#efeeec;
+           --ink:#37352f; --dim:#787774; --faint:#9b9a97; }
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html,body{background:var(--bg)}
+  body{color:var(--ink);padding:12px 14px;
+       font:13px/1.4 -apple-system,BlinkMacSystemFont,"Segoe UI",Inter,sans-serif;
+       -webkit-font-smoothing:antialiased;font-variant-numeric:tabular-nums}
+  .num,.hero b,.z b,.meta b{font-variant-numeric:tabular-nums;letter-spacing:-.01em}
+
+  .strip{display:flex;align-items:stretch;gap:0}
+
+  /* hero — local */
+  .hero{padding-right:18px;border-right:1px solid var(--line);flex:0 0 auto}
+  .hero .lab{font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:var(--faint);
+             display:flex;align-items:center;gap:5px}
+  .hero .lab i{width:4px;height:4px;border-radius:50%;background:var(--blue);
+               display:inline-block;font-style:normal}
+  .hero b{display:block;font-size:40px;font-weight:600;line-height:1.02;margin:2px 0 1px;
+          font-variant-numeric:tabular-nums}
+  .hero .sec{font-size:19px;font-weight:400;color:var(--dim);margin-left:2px}
+  .hero .sub{font-size:10px;color:var(--dim)}
+
+  /* secondary zones */
+  .zones{display:flex;gap:0;flex:1 1 auto;min-width:0}
+  .z{padding:0 16px;border-right:1px solid var(--hair);display:flex;flex-direction:column;
+     justify-content:center;min-width:0}
+  .z:last-child{border-right:0}
+  .z .lab{font-size:9px;letter-spacing:.13em;text-transform:uppercase;color:var(--faint);
+          white-space:nowrap}
+  .z b{display:block;font-size:19px;font-weight:500;line-height:1.15;margin-top:2px}
+  .z .off{font-size:9px;color:var(--faint);white-space:nowrap}
+  .z.zulu .lab{color:var(--gold)}
+  .z.zulu b{color:var(--gold)}
+
+  /* footer meta */
+  .meta{display:flex;flex-wrap:wrap;gap:0 18px;align-items:baseline;
+        margin-top:10px;padding-top:8px;border-top:1px solid var(--hair);
+        font-size:10.5px;color:var(--dim)}
+  .meta span{white-space:nowrap}
+  .meta b{color:var(--ink);font-weight:500}
+  .meta .k{color:var(--faint);text-transform:uppercase;letter-spacing:.09em;font-size:9px}
+  .meta .date{color:var(--ink);font-weight:500}
+
+  @media (max-width:560px){
+    .hero b{font-size:32px}
+    .z{padding:0 11px}
+    .z b{font-size:16px}
+  }
+</style>
+</head>
+<body>
+
+<div class="strip">
+  <div class="hero">
+    <div class="lab"><i></i>Local &middot; Cambridge MA</div>
+    <b><span id="lh">0000</span><span class="sec" id="ls">:00</span></b>
+    <div class="sub" id="lz">America/New_York</div>
+  </div>
+  <div class="zones">
+    <div class="z zulu">
+      <div class="lab">Zulu &middot; UTC</div>
+      <b id="z-utc">0000:00</b>
+      <div class="off" id="z-utc-d">&mdash;</div>
+    </div>
+    <div class="z">
+      <div class="lab">Colorado Springs</div>
+      <b id="z-den">0000:00</b>
+      <div class="off" id="z-den-d">USSPACECOM</div>
+    </div>
+    <div class="z">
+      <div class="lab">Los Angeles</div>
+      <b id="z-lax">0000:00</b>
+      <div class="off" id="z-lax-d">&mdash;</div>
+    </div>
+  </div>
+</div>
+
+<div class="meta">
+  <span class="date" id="m-date">&mdash;</span>
+  <span><span class="k">DOY</span> <b id="m-doy">000</b></span>
+  <span><span class="k">GPS WK</span> <b id="m-gpsw">0000</b></span>
+  <span><span class="k">GPS DOW</span> <b id="m-gpsd">0</b></span>
+  <span><span class="k">SOW</span> <b id="m-sow">000000</b></span>
+  <span><span class="k">MJD</span> <b id="m-mjd">00000</b></span>
+</div>
+
+<script>
+/* ------------------------------------------------------------------
+   Pure-local clock. Zero network dependency by design — Intl + Date
+   only. Nothing here can fail if the iframe is offline.
+   ------------------------------------------------------------------ */
+
+var GPS_EPOCH_MS = Date.UTC(1980, 0, 6, 0, 0, 0);  // 1980-01-06T00:00:00Z
+var GPS_UTC_LEAP = 18;   // GPS-UTC offset in seconds (18 since 2017-01-01)
+
+function pad(n, w){ n = String(Math.floor(n)); while(n.length < w) n = '0' + n; return n; }
+
+/* HH:MM:SS parts for an IANA zone, 24-hour, zero-padded. */
+function zoneParts(d, tz){
+  var f = new Intl.DateTimeFormat('en-GB', {
+    timeZone: tz, hour12: false,
+    hour: '2-digit', minute: '2-digit', second: '2-digit'
+  });
+  var o = {};
+  f.formatToParts(d).forEach(function(p){ o[p.type] = p.value; });
+  // en-GB emits "24" for midnight in some engines — normalise.
+  var h = o.hour === '24' ? '00' : o.hour;
+  return { h: h, m: o.minute, s: o.second };
+}
+
+/* Short UTC offset label, e.g. "UTC-04" */
+function zoneOffset(d, tz){
+  try{
+    var f = new Intl.DateTimeFormat('en-US', { timeZone: tz, timeZoneName: 'longOffset' });
+    var p = f.formatToParts(d).filter(function(x){ return x.type === 'timeZoneName'; })[0];
+    return p ? p.value.replace('GMT', 'UTC') : '';
+  }catch(e){ return ''; }
+}
+
+function hhmm(p){ return p.h + p.m; }
+
+function tick(){
+  var now = new Date();
+
+  /* ---- hero: local ---- */
+  var L = zoneParts(now, 'America/New_York');
+  document.getElementById('lh').textContent = hhmm(L);
+  document.getElementById('ls').textContent = ':' + L.s;
+  document.getElementById('lz').textContent = 'America/New_York \u00b7 ' + zoneOffset(now, 'America/New_York');
+
+  /* ---- secondary zones ---- */
+  var Z = zoneParts(now, 'UTC');
+  document.getElementById('z-utc').textContent = hhmm(Z) + '\u2009' + Z.s;
+  document.getElementById('z-utc-d').textContent = 'Z \u00b7 satellite reference';
+
+  var D = zoneParts(now, 'America/Denver');
+  document.getElementById('z-den').textContent = hhmm(D) + '\u2009' + D.s;
+  document.getElementById('z-den-d').textContent = 'USSPACECOM \u00b7 ' + zoneOffset(now, 'America/Denver');
+
+  var X = zoneParts(now, 'America/Los_Angeles');
+  document.getElementById('z-lax').textContent = hhmm(X) + '\u2009' + X.s;
+  document.getElementById('z-lax-d').textContent = zoneOffset(now, 'America/Los_Angeles');
+
+  /* ---- date (local civil date) ---- */
+  var dparts = {};
+  new Intl.DateTimeFormat('en-GB', {
+    timeZone: 'America/New_York', weekday: 'short',
+    day: '2-digit', month: 'short', year: 'numeric'
+  }).formatToParts(now).forEach(function(p){ dparts[p.type] = p.value; });
+  document.getElementById('m-date').textContent =
+    dparts.weekday.toUpperCase() + ' ' + dparts.day + ' ' +
+    dparts.month.toUpperCase() + ' ' + dparts.year;
+
+  /* ---- day-of-year (local civil date, 1-based) ---- */
+  var ymd = {};
+  new Intl.DateTimeFormat('en-CA', {
+    timeZone: 'America/New_York', year: 'numeric', month: '2-digit', day: '2-digit'
+  }).formatToParts(now).forEach(function(p){ ymd[p.type] = p.value; });
+  var Y = +ymd.year, M = +ymd.month, Dd = +ymd.day;
+  var doy = Math.round((Date.UTC(Y, M - 1, Dd) - Date.UTC(Y, 0, 1)) / 86400000) + 1;
+  document.getElementById('m-doy').textContent = pad(doy, 3);
+
+  /* ---- GPS time ----
+     GPS epoch 1980-01-06T00:00:00 UTC. GPS time runs ahead of UTC by the
+     accumulated leap seconds (18 s since 2017-01-01), so convert first.  */
+  var gpsMs   = now.getTime() + GPS_UTC_LEAP * 1000 - GPS_EPOCH_MS;
+  var gpsSec  = Math.floor(gpsMs / 1000);
+  var week    = Math.floor(gpsSec / 604800);
+  var sow     = gpsSec - week * 604800;          // seconds of week
+  var dow     = Math.floor(sow / 86400);         // 0 = Sunday
+  document.getElementById('m-gpsw').textContent = pad(week, 4);
+  document.getElementById('m-gpsd').textContent = String(dow);
+  document.getElementById('m-sow').textContent  = pad(sow, 6);
+
+  /* ---- Modified Julian Date (UTC, integer day) ---- */
+  var mjd = Math.floor(now.getTime() / 86400000) + 40587;
+  document.getElementById('m-mjd').textContent = String(mjd);
+}
+
+tick();
+/* Align the interval to the next whole second so the display never lags. */
+setTimeout(function(){
+  tick();
+  setInterval(tick, 1000);
+}, 1000 - (Date.now() % 1000));
+</script>
+</body>
+</html>
