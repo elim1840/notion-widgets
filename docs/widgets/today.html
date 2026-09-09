@@ -52,9 +52,10 @@
   .wxline .d2{white-space:nowrap}
   .wxline .d2 b{color:var(--ink);font-weight:600}
   .wxline .adv{color:var(--accent)}
-  /* Equal columns: two days always split the width evenly, never orphan. */
-  .wxfc{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:7px}
-  .fd{display:flex;align-items:baseline;gap:4px;white-space:nowrap;font-size:11px}
+  /* Three equal columns: fills the row width evenly, no orphan. */
+  .wxfc{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;margin-top:7px}
+  .fd{display:flex;align-items:baseline;gap:3px;white-space:nowrap;font-size:11px;
+      min-width:0}
   .fd b{color:var(--ink);font-weight:600}
   .fdl{color:var(--faint);letter-spacing:.06em;font-weight:600;font-size:10px}
   .fdlo{color:var(--faint)}
@@ -468,9 +469,10 @@ fetch(WX_URL,{cache:'no-store'})
     else if([45,48].includes(code)) adv.push('\u{1F32B}\uFE0F Fog');
     if(adv.length) now.push(`<span class="adv">${adv.join(' \u00b7 ')}</span>`);
 
-    // Next two days, evenly divided so they never orphan.
+    // Next three days. Two left a wide gap in the row; three fills the width
+    // evenly and buys another day of lead time.
     const days=[];
-    for(let i=1;i<=2;i++){
+    for(let i=1;i<=3;i++){
       const iso=dl.time?.[i];
       if(!iso) continue;
       const dd=new Date(iso+'T12:00:00');
