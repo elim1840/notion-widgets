@@ -31,19 +31,20 @@
   .hleft{min-width:0}
   .dow{font-size:15px;font-weight:600;text-transform:uppercase;letter-spacing:.035em;
        line-height:1.05;overflow-wrap:anywhere}
-  .dstr{font-size:12px;color:var(--dim);margin-top:3px;line-height:1.1;
+  .dstr{font-size:13px;color:var(--dim);margin-top:3px;line-height:1.1;
         font-variant-numeric:tabular-nums}
-  .clock{font-size:32px;font-weight:300;line-height:.95;letter-spacing:-.015em;
+  .clock{font-size:30px;font-weight:300;line-height:.95;letter-spacing:-.015em;
          font-variant-numeric:tabular-nums;display:flex;align-items:baseline;
          flex:0 0 auto}
   .clock .cn{color:var(--faint);font-weight:200;margin:0 1px;position:relative;top:-2px}
-  .clock .sec{font-size:16px;font-weight:300;color:var(--dim);margin-left:6px;
+  .clock .sec{font-size:15px;font-weight:300;color:var(--dim);margin-left:6px;
               font-variant-numeric:tabular-nums}
 
   /* One weather line: now, then the next two days. Nothing below it. */
-  .wxline{display:flex;align-items:baseline;flex-wrap:wrap;gap:3px 12px;
-          margin-top:9px;padding-top:8px;border-top:1px solid var(--hair);
-          font-size:11px;color:var(--dim);font-variant-numeric:tabular-nums}
+  .wxline{display:flex;align-items:baseline;flex-wrap:wrap;gap:5px 14px;
+          margin-top:10px;padding-top:9px;border-top:1px solid var(--hair);
+          font-size:11px;color:var(--dim);font-variant-numeric:tabular-nums;
+          line-height:1.5}
   .wxline .nowt{color:var(--ink);font-size:15px;font-weight:600;letter-spacing:-.01em}
   .wxline .cond{color:var(--dim)}
   .wxline .d2{white-space:nowrap}
@@ -51,23 +52,23 @@
   .wxline .adv{color:var(--accent)}
 
   @media (max-width:339px){
-    .clock{font-size:27px}
-    .clock .sec{font-size:14px}
-    .wxline{font-size:10.5px;gap:2px 9px}
+    .clock{font-size:30px}
+    .clock .sec{font-size:15px}
+    .wxline{font-size:11px;gap:2px 9px}
   }
 
   /* ---------- NOW strip: the one thing you look at ---------- */
   /* NOW on the left, NEXT on the right. Two panels, always both shown, so
      "what am I in" and "what's coming" never hide each other. */
   /* Actionable weather line -- what to carry, not what to know. */
-  .wxadv{font-size:10.5px;color:var(--accent);margin-top:7px;line-height:1.35;
+  .wxadv{font-size:11px;color:var(--accent);margin-top:7px;line-height:1.35;
          overflow-wrap:anywhere}
 
   /* NOW stacked ABOVE NEXT -- flat rows, not two squeezed boxes. Side-by-side
      halved the width available for names and forced them to wrap badly. */
-  .np{display:flex;flex-direction:column;gap:6px;margin:10px 0 12px}
-  .now{display:grid;grid-template-columns:74px 1fr;gap:11px;align-items:baseline;
-       padding:9px 11px;border-radius:8px;
+  .np{display:flex;flex-direction:column;gap:7px;margin:11px 0 13px}
+  .now{display:grid;grid-template-columns:82px 1fr;gap:13px;align-items:center;
+       padding:11px 12px;border-radius:8px;
        background:var(--panel);border:1px solid var(--line);
        border-left:3px solid var(--accent)}
   .now.nx{border-left-color:var(--amber)}
@@ -75,17 +76,17 @@
   /* Left rail: label above the countdown. Right side: name, then time+room. */
   .now .lft{grid-column:1}
   .now .rgt{grid-column:2;min-width:0}
-  .now .lbl{font-size:8.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--dim);
+  .now .lbl{font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--dim);
             line-height:1}
   .now .big{font-size:19px;font-weight:650;line-height:1.05;margin-top:4px;
             font-variant-numeric:tabular-nums;letter-spacing:-.02em}
-  .now .big .u{display:block;font-size:9px;font-weight:500;color:var(--dim);
+  .now .big .u{display:block;font-size:10px;font-weight:500;color:var(--dim);
                letter-spacing:.06em;text-transform:uppercase;margin-top:2px}
   .now.nx .big{color:var(--amber)}
   .now.late .big{color:var(--red)}
-  .now .n{font-size:12.5px;font-weight:600;line-height:1.32;
+  .now .n{font-size:13px;font-weight:600;line-height:1.32;
           overflow-wrap:anywhere;word-break:break-word}
-  .now .meta{font-size:10.5px;color:var(--dim);margin-top:3px;line-height:1.4;
+  .now .meta{font-size:11px;color:var(--dim);margin-top:3px;line-height:1.4;
              overflow-wrap:anywhere}
   .now.none{border-left-color:var(--faint)}
   .now.none .big{font-size:13px;font-weight:500;color:var(--dim);letter-spacing:0}
@@ -94,41 +95,43 @@
   /* ---------- counters ---------- */
   .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;margin-bottom:12px}
   .stat{background:var(--panel);border:1px solid var(--line);border-radius:7px;padding:8px 9px}
-  .stat b{display:block;font-size:17px;font-weight:600;line-height:1.1;
+  .stat b{display:block;font-size:19px;font-weight:600;line-height:1.1;
           font-variant-numeric:tabular-nums}
-  .stat span{font-size:9.5px;color:var(--dim);text-transform:uppercase;letter-spacing:.06em;
+  .stat span{font-size:10px;color:var(--dim);text-transform:uppercase;letter-spacing:.06em;
              display:block;margin-top:2px}
   .over b{color:var(--red)}
   .over.clear b{color:var(--green)}
 
   /* ---------- section headings ---------- */
-  .sec{font-size:9.5px;letter-spacing:.11em;text-transform:uppercase;color:var(--faint);
+  .sec{font-size:10px;letter-spacing:.11em;text-transform:uppercase;color:var(--faint);
        margin:14px 0 6px;padding-bottom:4px;border-bottom:1px solid var(--hair)}
   .sec:first-of-type{margin-top:0}
 
   /* ---------- agenda as time blocks: WRAP, never truncate ---------- */
-  .list{display:flex;flex-direction:column;gap:3px}
-  /* Each row is a block whose height reflects duration (set inline). The left
-     rail carries start over end, so the day reads as a column of time. */
-  .item{display:grid;grid-template-columns:50px 1fr;gap:10px;align-items:stretch;
-        padding:7px 8px 7px 0;border-radius:6px;text-decoration:none;color:inherit;
+  .list{display:flex;flex-direction:column;gap:4px}
+  /* 58px rail: "1030" and "1200" need room to sit on one line each at 12px.
+     At 50px they were wrapping or crowding the title. */
+  .item{display:grid;grid-template-columns:58px 1fr;gap:12px;align-items:stretch;
+        padding:9px 10px 9px 0;border-radius:6px;text-decoration:none;color:inherit;
         border-left:2px solid var(--hair);position:relative}
   .item:hover{background:var(--panel)}
-  .tm{display:flex;flex-direction:column;font-size:11.5px;color:var(--dim);
-      font-variant-numeric:tabular-nums;font-weight:600;padding-left:8px;
-      white-space:nowrap;line-height:1.25}
+  .tm{display:flex;flex-direction:column;font-size:12px;color:var(--dim);
+      font-variant-numeric:tabular-nums;font-weight:600;padding-left:10px;
+      white-space:nowrap;line-height:1.35}
   .tm .t1{color:var(--ink)}
   .tm .t2{color:var(--faint);font-weight:500}
-  .tm .dur{font-size:9px;color:var(--faint);font-weight:500;letter-spacing:.04em;
-           margin-top:2px}
-  .tm .allday{font-size:9px;letter-spacing:.07em;color:var(--faint);font-weight:600}
+  .tm .dur{font-size:10px;color:var(--faint);font-weight:500;letter-spacing:.03em;
+           margin-top:3px}
+  .tm .allday{font-size:10px;letter-spacing:.06em;color:var(--faint);font-weight:600}
   .bd{min-width:0;display:flex;flex-direction:column;justify-content:center}
-  .n{font-size:12.5px;line-height:1.35;overflow-wrap:anywhere;word-break:break-word}
-  .meta{font-size:10.5px;color:var(--dim);margin-top:3px;line-height:1.4;
-        overflow-wrap:anywhere;display:flex;flex-wrap:wrap;gap:3px 8px}
+  /* 1.45 line-height: titles wrap to 2-3 lines here and 1.35 made them dense. */
+  .n{font-size:13px;line-height:1.45;overflow-wrap:anywhere;word-break:break-word}
+  .meta{font-size:11px;color:var(--dim);margin-top:5px;line-height:1.45;
+        overflow-wrap:anywhere;display:flex;flex-wrap:wrap;gap:4px 9px;
+        align-items:center}
   .pin{color:var(--dim)}
-  .tag{display:inline-block;font-size:9px;padding:0 5px;border-radius:3px;
-       background:var(--hair);color:var(--dim);line-height:15px;white-space:nowrap}
+  .tag{display:inline-block;font-size:10px;padding:1px 6px;border-radius:3px;
+       background:var(--hair);color:var(--dim);line-height:16px;white-space:nowrap}
   /* Category rails: meetings blue, everything else neutral. */
   .item.mtg{border-left-color:var(--accent);background:rgba(91,147,211,.045)}
   .item.mtg .n{font-weight:600}
@@ -140,7 +143,7 @@
   .item.done .tm .t1{color:var(--faint)}
   .item.past{opacity:.62}
 
-  .empty{color:var(--faint);font-style:italic;padding:14px 4px;text-align:center;font-size:11.5px}
+  .empty{color:var(--faint);font-style:italic;padding:14px 4px;text-align:center;font-size:12px}
 
   /* ---------- daily brief ---------- */
   .brief{margin:12px 0 0;border:1px solid var(--line);border-radius:8px;
@@ -148,19 +151,19 @@
   .brief summary{list-style:none;cursor:pointer;padding:9px 11px;
                  display:flex;align-items:center;justify-content:space-between;gap:8px}
   .brief summary::-webkit-details-marker{display:none}
-  .brief .bt{font-size:9.5px;letter-spacing:.11em;text-transform:uppercase;color:var(--dim)}
+  .brief .bt{font-size:10px;letter-spacing:.11em;text-transform:uppercase;color:var(--dim)}
   .brief .bd8{font-size:10px;color:var(--faint);font-variant-numeric:tabular-nums}
   .brief .inner{padding:0 11px 10px}
-  .brief li{font-size:11.5px;line-height:1.5;color:var(--ink);margin:0 0 5px 14px;
+  .brief li{font-size:12px;line-height:1.5;color:var(--ink);margin:0 0 5px 14px;
             overflow-wrap:anywhere}
   .brief li::marker{color:var(--faint)}
-  .brief a.open{display:inline-block;margin-top:4px;font-size:10.5px;color:var(--accent);
+  .brief a.open{display:inline-block;margin-top:4px;font-size:11px;color:var(--accent);
                 text-decoration:none}
   .brief a.open:hover{text-decoration:underline}
   .brief.stale{border-color:var(--amber)}
   .brief .warn{font-size:10px;color:var(--amber);margin-bottom:6px}
   .foot{margin-top:12px;padding-top:8px;border-top:1px solid var(--line);
-        font-size:9.5px;color:var(--faint);display:flex;justify-content:space-between;gap:8px}
+        font-size:10px;color:var(--faint);display:flex;justify-content:space-between;gap:8px}
 </style>
 </head>
 <body>

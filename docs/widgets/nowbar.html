@@ -45,7 +45,7 @@ body{
 }
 .cell:last-child{border-right:0}
 .lab{
-  font-size:9px; letter-spacing:.16em; text-transform:uppercase;
+  font-size:10px; letter-spacing:.16em; text-transform:uppercase;
   color:var(--faint); font-weight:600; margin-bottom:6px;
 }
 
@@ -56,7 +56,7 @@ body{
   font-variant-numeric:tabular-nums; letter-spacing:.01em;
   display:flex; align-items:baseline;
 }
-.clock .sec{font-size:18px; font-weight:400; color:var(--dim); margin-left:7px}
+.clock .sec{font-size:19px; font-weight:400; color:var(--dim); margin-left:7px}
 .dateline{font-size:10px; letter-spacing:.14em; color:var(--faint); margin-top:8px; text-transform:uppercase}
 
 /* --- state (hero) --- */
@@ -68,13 +68,13 @@ body{
 }
 .dot{width:8px;height:8px;border-radius:50%;background:var(--accent,var(--dim));flex:0 0 auto}
 .name{
-  font-size:21px; line-height:1.22; font-weight:500; color:var(--ink);
+  font-size:22px; line-height:1.22; font-weight:500; color:var(--ink);
   overflow-wrap:break-word;
 }
-.name.sm{font-size:17px}
+.name.sm{font-size:19px}
 .name.xs{font-size:15px; line-height:1.28}
 .meta{
-  margin-top:7px; font-size:12.5px; color:var(--dim);
+  margin-top:7px; font-size:13px; color:var(--dim);
   display:flex; flex-wrap:wrap; align-items:baseline; gap:6px 10px;
 }
 .meta b{color:var(--ink); font-weight:600}
@@ -86,7 +86,7 @@ body{
 .cd{font-size:30px; line-height:1; font-weight:400; color:var(--ink); font-variant-numeric:tabular-nums}
 .cd.warn{color:var(--amber)}
 .nname{margin-top:8px; font-size:13px; line-height:1.3; color:var(--dim); overflow-wrap:break-word}
-.nmeta{margin-top:5px; font-size:11.5px; color:var(--faint)}
+.nmeta{margin-top:5px; font-size:12px; color:var(--faint)}
 .nmeta .rm{color:var(--gold)}
 
 /* --- tally --- */
@@ -105,7 +105,7 @@ body{
 .tick.done{background:var(--green); opacity:.55}
 .tick.miss{background:var(--red)}
 .now{position:absolute; bottom:0; width:2px; height:14px; background:var(--accent,var(--blue)); transform:translateX(-1px)}
-.railend{position:absolute; bottom:4px; font-size:8.5px; letter-spacing:.12em; color:var(--faint)}
+.railend{position:absolute; bottom:4px; font-size:10px; letter-spacing:.12em; color:var(--faint)}
 .railend.l{left:23px} .railend.r{right:8px}
 
 .err{padding:16px 22px; color:var(--red); font-size:13px}
@@ -114,15 +114,15 @@ body{
   .clock{font-size:34px}
   .cell{padding:11px 14px 18px}
   .c-clock{padding-left:20px}
-  .name{font-size:18px} .name.sm{font-size:16px} .name.xs{font-size:14px}
+  .name{font-size:19px} .name.sm{font-size:15px} .name.xs{font-size:15px}
   .c-next{min-width:150px; flex-basis:34%}
   .cd{font-size:25px}
-  .nname{font-size:12px}
+  .nname{font-size:13px}
 }
 @media (max-width:580px){
   .clock{font-size:30px}
-  .name{font-size:16px} .name.sm{font-size:15px} .name.xs{font-size:13.5px}
-  .meta{font-size:11.5px}
+  .name{font-size:15px} .name.sm{font-size:15px} .name.xs{font-size:15px}
+  .meta{font-size:12px}
   .c-next{min-width:126px; flex-basis:30%}
   .cd{font-size:22px}
 }

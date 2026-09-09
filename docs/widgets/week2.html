@@ -40,7 +40,7 @@
   .ruler .sp{border-right:1px solid var(--line)}
   .ticks{position:relative;height:17px}
   .ruler .tw{position:relative;height:17px;overflow:hidden}
-  .ticks span{position:absolute;top:3px;font-size:9px;color:var(--faint);
+  .ticks span{position:absolute;top:3px;font-size:10px;color:var(--faint);
        transform:translateX(-50%);font-variant-numeric:tabular-nums;letter-spacing:.02em}
   .ticks span.e0{transform:translateX(0)}
   .ticks span.e1{transform:translateX(-100%)}
@@ -57,12 +57,12 @@
   .row.wknd.today{background:rgba(91,147,211,.06)}
 
   .dcol{border-right:1px solid var(--line);padding:7px 8px 5px;text-align:right}
-  .dname{font-size:9.5px;text-transform:uppercase;letter-spacing:.09em;color:var(--dim);
+  .dname{font-size:10px;text-transform:uppercase;letter-spacing:.09em;color:var(--dim);
          font-weight:600}
-  .dnum{font-size:17px;font-weight:600;letter-spacing:-.02em;line-height:1.1;
+  .dnum{font-size:19px;font-weight:600;letter-spacing:-.02em;line-height:1.1;
         font-variant-numeric:tabular-nums}
   .row.today .dnum{color:var(--blue)}
-  .cnt{font-size:9px;color:var(--faint);margin-top:1px}
+  .cnt{font-size:10px;color:var(--faint);margin-top:1px}
 
   /* lane spans the FULL 1fr column (no padding) so gridlines align with the ruler */
   .lane{position:relative;padding:6px 0 6px;overflow:hidden}
@@ -81,10 +81,10 @@
       overflow:hidden;min-width:3px}
   .ev .lab{display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;
       font-variant-numeric:tabular-nums;line-height:19px}
-  .ev .lab b{font-weight:600;color:var(--dim);margin-right:5px;font-size:10.5px}
+  .ev .lab b{font-weight:600;color:var(--dim);margin-right:5px;font-size:11px}
   /* label does not fit inside -> spill it to the right (or left near the edge) */
   .ev.out,.ev.outl,.ev.half{overflow:visible}
-  .ev.half .tin{display:block;font-weight:600;color:var(--dim);font-size:10.5px;
+  .ev.half .tin{display:block;font-weight:600;color:var(--dim);font-size:11px;
       line-height:19px;font-variant-numeric:tabular-nums}
   .ev.half .lab.nm{position:absolute;left:100%;top:0;margin-left:6px;color:var(--ink);
       text-overflow:clip;pointer-events:none;max-width:none}
@@ -116,21 +116,21 @@
   .ad.k-oth{border-left-color:var(--blue)}
   .ad:hover{border-color:var(--blue);color:var(--ink)}
   .ad.done{text-decoration:line-through}
-  .adl{font-size:9px;color:var(--faint);letter-spacing:.08em;line-height:15px;
+  .adl{font-size:10px;color:var(--faint);letter-spacing:.08em;line-height:15px;
       text-transform:uppercase;padding-right:2px}
 
   footer{flex:0 0 auto;display:flex;gap:12px;align-items:center;flex-wrap:wrap;
-         padding:6px 16px;border-top:1px solid var(--line);font-size:9.5px;color:var(--faint)}
+         padding:6px 16px;border-top:1px solid var(--line);font-size:10px;color:var(--faint)}
   .key{display:inline-flex;align-items:center;gap:4px}
   .sw{width:8px;height:8px;border-radius:2px;display:inline-block}
-  .empty{color:var(--faint);font-style:italic;padding:20px 16px;font-size:12px}
+  .empty{color:var(--faint);font-style:italic;padding:20px 16px;font-size:13px}
 
   /* LIST mode */
   .lrow{display:grid;grid-template-columns:var(--gut) 1fr;border-bottom:1px solid var(--hair)}
   .lrow:last-child{border-bottom:0}
   .lrow.today{background:rgba(91,147,211,.05)}
   .litems{padding:6px 10px 8px 0;display:flex;flex-direction:column;gap:3px}
-  .li{display:flex;gap:9px;align-items:baseline;font-size:12px;text-decoration:none;
+  .li{display:flex;gap:9px;align-items:baseline;font-size:13px;text-decoration:none;
       color:inherit;padding:2px 0;border-left:2.5px solid transparent;padding-left:8px}
   .li:hover{background:var(--panel)}
   .li.k-class{border-left-color:var(--gold)}
@@ -151,23 +151,23 @@
   .c7:last-child{border-right:0}
   .c7.today{background:rgba(91,147,211,.05)}
   .c7h{padding:6px 7px 5px;border-bottom:1px solid var(--line);text-align:center}
-  .c7h .dn{font-size:9px;letter-spacing:.09em;color:var(--dim);font-weight:600}
+  .c7h .dn{font-size:10px;letter-spacing:.09em;color:var(--dim);font-weight:600}
   .c7h .dd{font-size:15px;font-weight:600;line-height:1.15}
   .c7.today .dd{color:var(--blue)}
   .c7b{flex:1;overflow-y:auto;padding:5px 5px 8px;display:flex;flex-direction:column;gap:4px}
   .cc{background:var(--panel);border:1px solid var(--line);border-left:2.5px solid var(--blue);
-      border-radius:4px;padding:4px 6px;font-size:10.5px;line-height:1.3;
+      border-radius:4px;padding:4px 6px;font-size:11px;line-height:1.3;
       text-decoration:none;color:inherit;display:block}
   .cc:hover{border-color:var(--blue)}
   .cc.k-class{border-left-color:var(--gold)}
   .cc.k-res{border-left-color:var(--green)}
   .cc.k-admin{border-left-color:var(--purple)}
   .cc.k-mil{border-left-color:var(--now)}
-  .cc .ct{font-variant-numeric:tabular-nums;color:var(--dim);font-size:9.5px;display:block;
+  .cc .ct{font-variant-numeric:tabular-nums;color:var(--dim);font-size:10px;display:block;
       letter-spacing:.01em}
-  .cc .cl{display:block;margin-top:3px;font-size:9.5px;color:var(--faint);
+  .cc .cl{display:block;margin-top:3px;font-size:10px;color:var(--faint);
       overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
-  .cc .cl::before{content:"\1F4CD  ";opacity:.6;font-size:8.5px}
+  .cc .cl::before{content:"\1F4CD  ";opacity:.6;font-size:10px}
   .cc .cn{display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;
       overflow:hidden;overflow-wrap:anywhere}
 
@@ -186,7 +186,7 @@
      display:flex;align-items:baseline;gap:10px;flex-wrap:wrap}
   .agtop .sc{font-size:11px;font-weight:600;letter-spacing:.09em;text-transform:uppercase;
      color:var(--blue)}
-  .agtop .st{margin-left:auto;font-size:10.5px;color:var(--dim);
+  .agtop .st{margin-left:auto;font-size:11px;color:var(--dim);
      font-variant-numeric:tabular-nums;letter-spacing:.02em}
   .agtop .st b{color:var(--ink);font-weight:600}
 
@@ -194,12 +194,12 @@
   .agday+.agday{margin-top:2px}
   .agd{display:flex;align-items:baseline;gap:9px;padding:13px 0 6px;
        border-bottom:1px solid var(--line);margin-bottom:4px}
-  .agd .n{font-size:13.5px;font-weight:600;letter-spacing:-.01em}
-  .agd .dd{font-size:13.5px;font-weight:400;color:var(--dim);
+  .agd .n{font-size:15px;font-weight:600;letter-spacing:-.01em}
+  .agd .dd{font-size:15px;font-weight:400;color:var(--dim);
        font-variant-numeric:tabular-nums}
   .agd .s{margin-left:auto;font-size:10px;color:var(--faint);text-transform:uppercase;
        letter-spacing:.08em;font-variant-numeric:tabular-nums}
-  .agd .tag{font-size:9px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;
+  .agd .tag{font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;
        color:#fff;background:var(--blue);border-radius:3px;padding:1px 5px}
   .agday.today .agd{border-bottom-color:var(--blue)}
   .agday.today .agd .n{color:var(--blue)}
@@ -207,7 +207,7 @@
 
   /* time | body — body is min-width:0 so it wraps instead of overflowing */
   .agi{display:grid;grid-template-columns:78px minmax(0,1fr);gap:11px;
-       align-items:start;padding:5px 0 5px 9px;font-size:12.5px;
+       align-items:start;padding:5px 0 5px 9px;font-size:13px;
        text-decoration:none;color:inherit;border-left:2.5px solid var(--line);
        border-radius:0 3px 3px 0}
   .agi:hover{background:var(--panel)}
@@ -215,16 +215,16 @@
   .agi.k-res{border-left-color:var(--green)}
   .agi.k-admin{border-left-color:var(--purple)}
   .agi.k-mil{border-left-color:var(--now)}
-  .agi .t{font-variant-numeric:tabular-nums;color:var(--dim);font-size:11.5px;
+  .agi .t{font-variant-numeric:tabular-nums;color:var(--dim);font-size:12px;
        line-height:1.45;padding-top:.5px;letter-spacing:.01em;white-space:nowrap}
-  .agi .t.allday{font-size:9.5px;letter-spacing:.09em;text-transform:uppercase;
+  .agi .t.allday{font-size:10px;letter-spacing:.09em;text-transform:uppercase;
        color:var(--faint);font-variant-numeric:normal}
   .agi .n2{display:block;line-height:1.35;overflow-wrap:anywhere;
        white-space:normal;overflow:visible;text-overflow:clip}
-  .agi .w{display:block;margin-top:2px;font-size:10.5px;color:var(--dim);
+  .agi .w{display:block;margin-top:2px;font-size:11px;color:var(--dim);
        line-height:1.3;overflow-wrap:anywhere;white-space:normal;
        overflow:visible;text-overflow:clip}
-  .agi .w::before{content:"\1F4CD\00a0";opacity:.75;font-size:9.5px}
+  .agi .w::before{content:"\1F4CD\00a0";opacity:.75;font-size:10px}
   .agi.done .n2{text-decoration:line-through}
 
   /* live rule inside today's list */
@@ -234,7 +234,7 @@
        font-variant-numeric:tabular-nums;letter-spacing:.05em}
   .agnow .ln2{height:1px;background:var(--now);opacity:.55}
 
-  .agnone{font-size:11.5px;color:var(--faint);font-style:italic;
+  .agnone{font-size:12px;color:var(--faint);font-style:italic;
        padding:5px 0 5px 11px}
 
   /* BY TYPE */
@@ -245,10 +245,10 @@
   .cath .dot{width:8px;height:8px;border-radius:2px}
   .cath .k{margin-left:auto;color:var(--faint);font-weight:400;letter-spacing:0}
   .cati{display:grid;grid-template-columns:44px 46px 1fr;gap:9px;align-items:baseline;
-     padding:3px 0;font-size:12.5px;text-decoration:none;color:inherit}
+     padding:3px 0;font-size:13px;text-decoration:none;color:inherit}
   .cati:hover{background:var(--panel)}
-  .cati .d{font-size:10.5px;color:var(--faint);text-transform:uppercase;letter-spacing:.05em}
-  .cati .t{font-variant-numeric:tabular-nums;color:var(--dim);font-size:11.5px}
+  .cati .d{font-size:11px;color:var(--faint);text-transform:uppercase;letter-spacing:.05em}
+  .cati .t{font-variant-numeric:tabular-nums;color:var(--dim);font-size:12px}
   .cati .n{min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
   .cati.done .n{text-decoration:line-through;color:var(--faint)}
 
@@ -261,7 +261,7 @@
         background:rgba(224,108,108,.13);overflow:hidden}
   .fseg{position:absolute;top:0;bottom:0;background:rgba(95,168,122,.30);
         border-left:1px solid rgba(95,168,122,.6)}
-  .fseg span{position:absolute;left:4px;top:2px;font-size:9.5px;color:var(--ink);
+  .fseg span{position:absolute;left:4px;top:2px;font-size:10px;color:var(--ink);
         white-space:nowrap;opacity:.85}
   .ftot{position:absolute;right:6px;top:3px;font-size:10px;color:var(--dim);
         font-variant-numeric:tabular-nums}

@@ -23,13 +23,13 @@
 
   header{display:flex;align-items:flex-end;justify-content:space-between;gap:10px;
          padding:14px 18px 11px;border-bottom:1px solid var(--line);flex:0 0 auto}
-  .dnum{font-size:27px;font-weight:600;letter-spacing:-.025em;line-height:1}
-  .dow{font-size:10.5px;color:var(--dim);text-transform:uppercase;
+  .dnum{font-size:30px;font-weight:600;letter-spacing:-.025em;line-height:1}
+  .dow{font-size:11px;color:var(--dim);text-transform:uppercase;
        letter-spacing:.1em;margin-top:3px}
   .rt{text-align:right}
   .clk{font-size:22px;font-weight:600;font-variant-numeric:tabular-nums;line-height:1;
        letter-spacing:-.01em}
-  .meta{font-size:10.5px;color:var(--faint);margin-top:4px;font-variant-numeric:tabular-nums}
+  .meta{font-size:11px;color:var(--faint);margin-top:4px;font-variant-numeric:tabular-nums}
 
   /* day navigation */
   .nav{display:flex;align-items:center;gap:6px;flex:0 0 auto;padding-bottom:2px}
@@ -39,14 +39,14 @@
       font-family:inherit;padding:0}
   .nb:hover{border-color:var(--blue)}
   .nb:disabled{opacity:.3;cursor:default}
-  .nb.wide{width:auto;padding:0 8px;font-size:9.5px;text-transform:uppercase;
+  .nb.wide{width:auto;padding:0 8px;font-size:10px;text-transform:uppercase;
       letter-spacing:.09em;color:var(--dim);font-variant-numeric:tabular-nums}
   .nb.today.on{color:var(--now);border-color:var(--now)}
   .nb.fit.on{color:var(--blue);border-color:var(--blue)}
   .dots{display:flex;gap:3px;margin:0 2px}
   .dot{width:20px;height:22px;border-radius:4px;border:1px solid transparent;
       background:transparent;cursor:pointer;color:var(--faint);font-family:inherit;
-      font-size:9px;letter-spacing:.04em;text-transform:uppercase;padding:0;
+      font-size:10px;letter-spacing:.04em;text-transform:uppercase;padding:0;
       display:flex;align-items:center;justify-content:center}
   .dot:hover{color:var(--ink);border-color:var(--line)}
   .dot.sel{background:var(--panel);border-color:var(--line);color:var(--ink);font-weight:600}
@@ -55,10 +55,10 @@
   /* all-day strip */
   .allday{flex:0 0 auto;padding:7px 18px;border-bottom:1px solid var(--line);
           display:flex;gap:7px;flex-wrap:wrap;align-items:center}
-  .allday .lbl{font-size:9.5px;color:var(--faint);text-transform:uppercase;
+  .allday .lbl{font-size:10px;color:var(--faint);text-transform:uppercase;
        letter-spacing:.07em;flex:0 0 auto;margin-right:2px}
   /* names wrap; never truncated */
-  .ad{font-size:11.5px;background:var(--panel);border:1px solid var(--line);
+  .ad{font-size:12px;background:var(--panel);border:1px solid var(--line);
       border-radius:4px;padding:2px 8px;color:var(--ink);text-decoration:none;
       display:inline-block;max-width:100%;white-space:normal;overflow-wrap:break-word}
   .ad:hover{border-color:var(--blue)}
@@ -84,11 +84,11 @@
   .hour.dpstart{border-top:1px solid var(--line)}
   /* a compressed (event-free) hour: still present, still labelled, just thin */
   .hour.thin{background-image:none}
-  .hour.thin .hl{font-size:9px;opacity:.5}
-  .hour .dp{position:absolute;right:4px;top:2px;z-index:3;font-size:8.5px;color:var(--faint);
+  .hour.thin .hl{font-size:10px;opacity:.5}
+  .hour .dp{position:absolute;right:4px;top:2px;z-index:3;font-size:10px;color:var(--faint);
        letter-spacing:.12em;text-transform:uppercase;opacity:.55}
   .hour .hl{position:absolute;left:0;top:-7px;width:calc(var(--gut) - 12px);
-       text-align:right;font-size:10.5px;color:var(--faint);
+       text-align:right;font-size:11px;color:var(--faint);
        font-variant-numeric:tabular-nums;letter-spacing:.02em}
   .hour.wake .hl{color:var(--dim)}
 
@@ -122,7 +122,7 @@
       background:linear-gradient(90deg,rgba(224,108,108,.10),var(--panel) 60%)}
   .ev.overdue .et{color:var(--now)}
   .ev.ended{opacity:.62;border-left-style:dashed}
-  .ev .flag{font-size:8px;line-height:1.3;letter-spacing:.08em;text-transform:uppercase;
+  .ev .flag{font-size:10px;line-height:1.3;letter-spacing:.08em;text-transform:uppercase;
       font-weight:600;text-decoration:none;display:inline-block;flex:0 0 auto;
       white-space:nowrap;color:var(--faint)}
   .ev.done .flag{color:var(--green)}
@@ -130,7 +130,7 @@
   .ev.ended .flag{color:var(--faint);font-weight:500}
   /* NAME: wraps, never clipped, never ellipsised. flex:0 0 auto so a
      fixed-height block can never compress the text lines. */
-  .et{font-size:12.5px;font-weight:500;line-height:1.22;
+  .et{font-size:13px;font-weight:500;line-height:1.22;
       white-space:normal;overflow-wrap:break-word;word-break:normal;
       flex:0 0 auto}
   .erow{display:flex;align-items:baseline;justify-content:space-between;gap:7px;
@@ -152,7 +152,7 @@
       letter-spacing:.02em;color:#fff;background:var(--now);
       border-radius:3px;padding:1px 0 2px}
 
-  .empty{color:var(--faint);font-style:italic;padding:24px 18px;font-size:12.5px}
+  .empty{color:var(--faint);font-style:italic;padding:24px 18px;font-size:13px}
   footer{flex:0 0 auto;padding:7px 18px;border-top:1px solid var(--line);
          font-size:10px;color:var(--faint);display:flex;justify-content:space-between;
          gap:10px;font-variant-numeric:tabular-nums}
