@@ -1,7 +1,8 @@
 {
- "deck": "https://www.notion.so/3d5ea74eb77981a8bf4dda3df5d6dbef",
- "acad": "https://www.notion.so/3d5ea74eb779812cb1bbf678d3a0e623",
- "res": "https://www.notion.so/3d5ea74eb77981e4ad82cbc41bf462ef",
- "admin": "https://www.notion.so/3d5ea74eb77981d88d75e3e64827d253",
- "pers": "https://www.notion.so/3d5ea74eb77981c19129e71f165acde9"
+ "_comment": "Hub page targets. Rebuilt 2026-09-08 after the old Home/Academics/Research/Admin/Personal pages were archived and replaced with fresh spokes created directly under 'Yohan's 2nd Brain'. deck = the root page itself, which IS home.",
+ "deck": "https://www.notion.so/359ea74eb7798049af26fe24ab51076c",
+ "acad": "https://www.notion.so/3d6ea74eb779816aa807c91ae1046989",
+ "res": "https://www.notion.so/3d6ea74eb77981c9a519e0b5cbcbbf05",
+ "admin": "https://www.notion.so/3d6ea74eb7798195a53ddf23ae63a8b3",
+ "pers": "https://www.notion.so/3d6ea74eb779813496d7c1eb9d9bdad0"
 }
