@@ -514,7 +514,12 @@ fetch('../data/tasks.json?t='+Date.now()).then(r=>r.json()).then(d=>{
   let cur=null, nxt=null;
   const late=false;
   for(const it of timed){
-    const s=mins(it.date), e=it.end?mins(it.end):s+45;
+    const s=mins(it.date);
+    let e=it.end?mins(it.end):null;
+    // A zero-length or missing window is an instant, not a block -- nowM could
+    // never fall inside it, so such items could never become NOW. Give them a
+    // 45-minute working window, same as an item with no end time at all.
+    if(e===null || e<=s) e = s+45;
     if(nowM>=s && nowM<=e && !cur){ cur=it; continue; }
     if(s>nowM && !nxt){ nxt=it; }
   }
