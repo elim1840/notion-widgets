@@ -41,15 +41,24 @@
               font-variant-numeric:tabular-nums}
 
   /* One weather line: now, then the next two days. Nothing below it. */
-  .wxline{display:flex;align-items:baseline;flex-wrap:wrap;gap:5px 14px;
-          margin-top:10px;padding-top:9px;border-top:1px solid var(--hair);
-          font-size:11px;color:var(--dim);font-variant-numeric:tabular-nums;
-          line-height:1.5}
+  /* Weather: two deliberate rows. NOW on top, forecast days below in equal
+     columns. A single wrapping row let THU orphan at random widths. */
+  .wxline{margin-top:10px;padding-top:9px;border-top:1px solid var(--hair);
+          font-size:11px;color:var(--dim);font-variant-numeric:tabular-nums}
+  .wxnow{display:flex;align-items:baseline;flex-wrap:wrap;gap:4px 11px;
+         line-height:1.5}
   .wxline .nowt{color:var(--ink);font-size:15px;font-weight:600;letter-spacing:-.01em}
   .wxline .cond{color:var(--dim)}
   .wxline .d2{white-space:nowrap}
   .wxline .d2 b{color:var(--ink);font-weight:600}
   .wxline .adv{color:var(--accent)}
+  /* Equal columns: two days always split the width evenly, never orphan. */
+  .wxfc{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:7px}
+  .fd{display:flex;align-items:baseline;gap:4px;white-space:nowrap;font-size:11px}
+  .fd b{color:var(--ink);font-weight:600}
+  .fdl{color:var(--faint);letter-spacing:.06em;font-weight:600;font-size:10px}
+  .fdlo{color:var(--faint)}
+  .fdp{color:var(--accent);font-size:10px}
 
   @media (max-width:339px){
     .clock{font-size:30px}
@@ -417,27 +426,16 @@ fetch(WX_URL,{cache:'no-store'})
     const lo=r0(dl.temperature_2m_min?.[0]);
     const pop=dl.precipitation_probability_max?.[0];
 
-    // ONE line: now, today's range, then the next two days. No second row.
-    const parts=[];
-    parts.push(`<span class="nowt">${WMO[c.weather_code]||''} ${t!=null?t:'\u2014'}\u00b0</span>`);
+    // TWO deliberate rows: NOW on top, forecast days on their own row below.
+    // One wrapping flex row let THU orphan onto a second line at random widths,
+    // which read as a layout accident rather than a decision.
+    const now=[];
+    now.push(`<span class="nowt">${WMO[c.weather_code]||''} ${t!=null?t:'\u2014'}\u00b0</span>`);
     const cond=WMOT[c.weather_code]||'';
-    if(cond) parts.push(`<span class="cond">${cond}</span>`);
-    if(hi!=null&&lo!=null) parts.push(`<span class="d2"><b>${hi}\u00b0</b>/${lo}\u00b0</span>`);
+    if(cond) now.push(`<span class="cond">${cond}</span>`);
+    if(hi!=null&&lo!=null) now.push(`<span class="d2 today"><b>${hi}\u00b0</b>/${lo}\u00b0</span>`);
 
-    // Next two days only -- day 3+ is not a decision you make this morning.
-    for(let i=1;i<=2;i++){
-      const iso=dl.time?.[i];
-      if(!iso) continue;
-      const dd=new Date(iso+'T12:00:00');
-      const lab=DOW[dd.getDay()].slice(0,3);
-      const dh=r0(dl.temperature_2m_max?.[i]);
-      const dlo=r0(dl.temperature_2m_min?.[i]);
-      const di=WMO[dl.weather_code?.[i]]||'';
-      const dp=dl.precipitation_probability_max?.[i];
-      parts.push(`<span class="d2">${lab} ${di} <b>${dh!=null?dh:'\u2014'}</b>/${dlo!=null?dlo:'\u2014'}${(dp!=null&&dp>=30)?` ${dp}%`:''}</span>`);
-    }
-
-    // Only say something if there is something to carry or expect.
+    // Advice belongs with NOW -- it is about today, not the forecast.
     const adv=[];
     if(pop!=null){
       if(pop>=50) adv.push('\u2602\uFE0F Umbrella');
@@ -449,9 +447,28 @@ fetch(WX_URL,{cache:'no-store'})
     if([95,96,99].includes(code)) adv.push('\u26c8\uFE0F Storms');
     else if([71,73,75].includes(code)) adv.push('\u2744\uFE0F Snow');
     else if([45,48].includes(code)) adv.push('\u{1F32B}\uFE0F Fog');
-    if(adv.length) parts.push(`<span class="adv">${adv.join(' \u00b7 ')}</span>`);
+    if(adv.length) now.push(`<span class="adv">${adv.join(' \u00b7 ')}</span>`);
 
-    document.getElementById('wxline').innerHTML=parts.join('');
+    // Next two days, evenly divided so they never orphan.
+    const days=[];
+    for(let i=1;i<=2;i++){
+      const iso=dl.time?.[i];
+      if(!iso) continue;
+      const dd=new Date(iso+'T12:00:00');
+      const lab=DOW[dd.getDay()].slice(0,3);
+      const dh=r0(dl.temperature_2m_max?.[i]);
+      const dlo=r0(dl.temperature_2m_min?.[i]);
+      const di=WMO[dl.weather_code?.[i]]||'';
+      const dp=dl.precipitation_probability_max?.[i];
+      days.push(`<span class="fd"><span class="fdl">${lab}</span>`
+        + `<span class="fdi">${di}</span>`
+        + `<b>${dh!=null?dh:'\u2014'}</b><span class="fdlo">/${dlo!=null?dlo:'\u2014'}</span>`
+        + `${(dp!=null&&dp>=30)?`<span class="fdp">${dp}%</span>`:''}</span>`);
+    }
+
+    document.getElementById('wxline').innerHTML =
+      `<div class="wxnow">${now.join('')}</div>`
+      + (days.length?`<div class="wxfc">${days.join('')}</div>`:'');
   })
   .catch(()=>{
     document.getElementById('wxline').innerHTML='<span style="opacity:.55">weather unavailable</span>';
