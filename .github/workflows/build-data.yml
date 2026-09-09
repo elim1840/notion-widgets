@@ -2,7 +2,9 @@ name: build-widget-data
 
 on:
   schedule:
-    - cron: "0 * * * *"        # hourly, on the hour (UTC)
+    # Every 15 minutes. Yohan needs a class that has ended to strike through
+    # within the quarter-hour, not at the top of the next hour.
+    - cron: "*/15 * * * *"
   workflow_dispatch:            # manual "Run workflow" button
   push:
     paths:

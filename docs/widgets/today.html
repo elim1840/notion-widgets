@@ -467,7 +467,7 @@ fetch(WX_URL,{cache:'no-store'})
     if([95,96,99].includes(code)) adv.push('\u26c8\uFE0F Storms');
     else if([71,73,75].includes(code)) adv.push('\u2744\uFE0F Snow');
     else if([45,48].includes(code)) adv.push('\u{1F32B}\uFE0F Fog');
-    if(adv.length) now.push(`<span class="adv">${adv.join(' \u00b7 ')}</span>`);
+    if(adv.length) now.push(`<span class="adv">${adv.join(', ')}</span>`);
 
     // Next three days. Two left a wide gap in the row; three fills the width
     // evenly and buys another day of lead time.
@@ -567,7 +567,7 @@ fetch('../data/tasks.json?t='+Date.now()).then(r=>r.json()).then(d=>{
         <span class="big">${big}${unit?`<span class="u">${unit}</span>`:''}</span>
       </div>
       <div class="n">${esc(it.name)}</div>
-      <div class="meta">${e?`${s}\u2013${e}`:s}${where?` \u00b7 ${where}`:''}</div>
+      <div class="meta">${e?`${s}\u2013${e}`:s}${where?`, ${where}`:''}</div>
     </div>`;
   };
 
@@ -600,7 +600,7 @@ fetch('../data/tasks.json?t='+Date.now()).then(r=>r.json()).then(d=>{
       }).length;
       h+=`<div class="sec"><span>Today</span>`
        + `<span class="secn">${doneN} done`
-       + (missedN?` \u00b7 <span class="mred">${missedN} not done</span>`:'')
+       + (missedN?`, <span class="mred">${missedN} not done</span>`:'')
        + `</span></div>`;
 
       // Walk the day in order, inserting a gap marker wherever >=45 minutes of

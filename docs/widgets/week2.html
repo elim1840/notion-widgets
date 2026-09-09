@@ -704,7 +704,7 @@ function paint(){
         const t = s0==null ? 'ALL DAY'
                 : (e.end && mins(e.end)>s0 ? hhmm(e.date)+'\u2013'+hhmm(e.end) : hhmm(e.date));
         return `<a class="cc ${kind(e)}${sc(e,NOWTS)}" href="${e.url}" target="_blank"
-             title="${esc(t)} ${esc(e.name)}${e.location?' \u00b7 '+esc(e.location):''}">
+             title="${esc(t)} ${esc(e.name)}${e.location?', '+esc(e.location):''}">
            <span class="ct">${t}</span>
            <span class="cn">${esc(e.name)||'(untitled)'}</span>
            ${e.location?`<span class="cl">${esc(e.location)}</span>`:''}</a>`;
@@ -733,7 +733,7 @@ function paint(){
     const stat=[`<b>${n}</b> item${n===1?'':'s'}`,
                 `<b>${nAhead}</b> ahead`,
                 nOver?`<b style="color:var(--now)">${nOver}</b> overdue`:'',
-                nDone?`${nDone} done`:''].filter(Boolean).join(' \u00b7 ');
+                nDone?`${nDone} done`:''].filter(Boolean).join(', ');
 
     const nowRule = `<div class="agnow"><span class="t">${
         String(now.getHours()).padStart(2,'0')+String(now.getMinutes()).padStart(2,'0')

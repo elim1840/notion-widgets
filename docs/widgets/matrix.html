@@ -188,7 +188,7 @@ function build(tasks, spokes){
         type: it.type || '', isMeeting: (it.type === 'Meeting'),
         url: it.url || ''
       };
-      p.label = (p.pri ? p.pri + ' priority' : 'No priority') + (cat ? ' \u00b7 ' + cat : '');
+      p.label = (p.pri ? p.pri + ' priority' : 'No priority') + (cat ? ', ' + cat : '');
       pts.push(p);
     });
   });
@@ -203,7 +203,7 @@ function build(tasks, spokes){
       cat: c.code || 'class', pri: '', energy: '', type: c.type,
       isMeeting: false, url: c.url || ''
     };
-    p.label = c.code + ' \u00b7 ' + c.type;
+    p.label = c.code + ', ' + c.type;
     pts.push(p);
   });
 
