@@ -105,15 +105,37 @@
 
   /* ---------- section headings ---------- */
   .sec{font-size:10px;letter-spacing:.11em;text-transform:uppercase;color:var(--faint);
-       margin:14px 0 6px;padding-bottom:4px;border-bottom:1px solid var(--hair)}
+       margin:14px 0 7px;padding-bottom:5px;border-bottom:1px solid var(--hair);
+       display:flex;justify-content:space-between;align-items:baseline;gap:8px}
   .sec:first-of-type{margin-top:0}
+  .secn{font-variant-numeric:tabular-nums;letter-spacing:.04em}
+
+  /* Gap marker: the empty time between blocks, drawn as a gap rather than
+     described in words. This is what makes the column read as a day instead
+     of a list -- you can see where the room is. */
+  .gap{display:flex;align-items:center;gap:8px;padding:0 2px 0 60px;height:26px}
+  .gap .gl{flex:1;height:1px;background:repeating-linear-gradient(90deg,
+           var(--hair) 0 4px, transparent 4px 8px)}
+  .gap .gt{font-size:10px;color:var(--faint);letter-spacing:.05em;white-space:nowrap;
+           font-variant-numeric:tabular-nums}
+  .gap.was{opacity:.4}
+
+  /* All-day items: collapsed by default. They have no position on a timeline,
+     and four of them expanded is what made the sidebar run long. */
+  .ad{margin-top:12px;border-top:1px solid var(--hair);padding-top:9px}
+  .ad summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;
+              align-items:baseline;gap:8px;font-size:10px;letter-spacing:.11em;
+              text-transform:uppercase;color:var(--faint);padding-bottom:6px}
+  .ad summary::-webkit-details-marker{display:none}
+  .ad summary:hover{color:var(--dim)}
+  .ad[open] summary{color:var(--dim)}
 
   /* ---------- agenda as time blocks: WRAP, never truncate ---------- */
   .list{display:flex;flex-direction:column;gap:4px}
   /* 58px rail: "1030" and "1200" need room to sit on one line each at 12px.
      At 50px they were wrapping or crowding the title. */
   .item{display:grid;grid-template-columns:58px 1fr;gap:12px;align-items:stretch;
-        padding:9px 10px 9px 0;border-radius:6px;text-decoration:none;color:inherit;
+        padding:7px 10px 7px 0;border-radius:6px;text-decoration:none;color:inherit;
         border-left:2px solid var(--hair);position:relative}
   .item:hover{background:var(--panel)}
   .tm{display:flex;flex-direction:column;font-size:12px;color:var(--dim);
@@ -233,7 +255,11 @@ function itemHTML(it, nowM){
   let dur = (m!==null && m2!==null) ? Math.max(0, m2-m) : null;
   let hStyle='';
   if(dur!==null && dur>30){
-    hStyle=` style="min-height:${Math.min(96, 34+Math.round((dur-30)*0.34))}px"`;
+    // Compressed duration curve: sqrt rather than linear, capped at 68px.
+    // Linear scaling made a 2h block 65px of mostly empty padding, which is
+    // what ran the sidebar long. sqrt keeps the ORDER (2h still visibly beats
+    // 15m) while spending far fewer pixels on the difference.
+    hStyle=` style="min-height:${Math.min(56, Math.round(26+Math.sqrt(dur-30)*3.0))}px"`;
   }
 
   const time = t
@@ -451,9 +477,9 @@ fetch('../data/tasks.json?t='+Date.now()).then(r=>r.json()).then(d=>{
   document.getElementById('nowbox').innerHTML =
     `<div class="np">${panel(cur,false)}${panel(nxt,true)}</div>`;
 
-  // ---- ONE agenda, chronological. Meetings and tasks interleaved, because the
-  // day happens in one order -- splitting them made you read two lists and
-  // merge them mentally.
+  // ---- ONE agenda, chronological, with GAPS made visible.
+  // A time-blocked day is not just a list of events -- the empty space between
+  // them is the information. A 3h gap you can see is a 3h gap you can use.
   const bySlot=(a,b)=>{
     const A=mins(a.date), B=mins(b.date);
     if(A===null&&B===null) return 0;
@@ -467,13 +493,42 @@ fetch('../data/tasks.json?t='+Date.now()).then(r=>r.json()).then(d=>{
   if(ordered.length){
     const timedRows=ordered.filter(x=>mins(x.date)!==null);
     const allday=ordered.filter(x=>mins(x.date)===null);
+
     if(timedRows.length){
-      h+=`<div class="sec">Today \u00b7 ${ordered.length} item${ordered.length===1?'':'s'}</div>`;
-      h+=`<div class="list">${timedRows.map(x=>itemHTML(x,nowM)).join('')}</div>`;
+      const doneN=ordered.filter(x=>x.done).length;
+      h+=`<div class="sec"><span>Today</span>`
+       + `<span class="secn">${doneN}/${ordered.length}</span></div>`;
+
+      // Walk the day in order, inserting a gap marker wherever >=45 minutes of
+      // nothing sits between the end of one block and the start of the next.
+      // 45m is the floor at which a gap is usable rather than just transit.
+      let out='', prevEnd=null;
+      timedRows.forEach(it=>{
+        const s=mins(it.date);
+        const e=it.end?mins(it.end):null;
+        if(prevEnd!==null && s!==null && (s-prevEnd)>=45){
+          const g=s-prevEnd;
+          const gh=g>=60?`${Math.floor(g/60)}h${g%60?String(g%60).padStart(2,'0'):''}`:`${g}m`;
+          const passed = nowM!==null && nowM>prevEnd && nowM>=s;
+          out+=`<div class="gap${passed?' was':''}">`
+             + `<span class="gl"></span>`
+             + `<span class="gt">${gh} free</span>`
+             + `<span class="gl"></span></div>`;
+        }
+        out+=itemHTML(it, nowM);
+        if(e!==null) prevEnd = (prevEnd===null? e : Math.max(prevEnd,e));
+        else if(s!==null) prevEnd = (prevEnd===null? s : Math.max(prevEnd,s));
+      });
+      h+=`<div class="list">${out}</div>`;
     }
+
     if(allday.length){
-      h+=`<div class="sec">No set time \u00b7 ${allday.length}</div>`;
-      h+=`<div class="list">${allday.map(x=>itemHTML(x,nowM)).join('')}</div>`;
+      // Collapsed by default: these have no place on a timeline and were the
+      // main reason the sidebar ran so long.
+      h+=`<details class="ad"${allday.length<=2?' open':''}>`
+       + `<summary><span>No set time</span><span class="secn">${allday.length}</span></summary>`
+       + `<div class="list">${allday.map(x=>itemHTML(x,nowM)).join('')}</div>`
+       + `</details>`;
     }
   } else {
     h='<div class="empty">nothing scheduled today</div>';
