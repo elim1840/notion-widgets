@@ -109,6 +109,7 @@
        display:flex;justify-content:space-between;align-items:baseline;gap:8px}
   .sec:first-of-type{margin-top:0}
   .secn{font-variant-numeric:tabular-nums;letter-spacing:.04em}
+  .mred{color:var(--red)}
 
   /* Gap marker: the empty time between blocks, drawn as a gap rather than
      described in words. This is what makes the column read as a day instead
@@ -161,10 +162,41 @@
   /* Happening right now. */
   .item.live{border-left-color:var(--green);background:rgba(95,168,122,.08)}
   .item.live .n{font-weight:600}
-  .item.done{border-left-color:var(--green)}
-  .item.done .n{text-decoration:line-through;color:var(--faint)}
-  .item.done .tm .t1{color:var(--faint)}
-  .item.past{opacity:.62}
+  /* FOUR states. Each gets a marker glyph AND a rail colour, so the meaning
+     survives on a laptop screen and does not rely on distinguishing two
+     shades of grey. Only DONE is struck through -- strike-through means
+     "finished", never "in the past". */
+  .item.st-done{border-left-color:var(--green)}
+  .item.st-done .ntx{text-decoration:line-through;text-decoration-thickness:1px;
+                     color:var(--faint)}
+  .item.st-done .tm .t1{color:var(--faint)}
+  .item.st-done .mk-done{color:var(--green)}
+
+  /* ENDED: a meeting that took place. Dimmed, NOT struck -- nothing is owed,
+     but you did not "complete" it either. */
+  .item.st-ended{border-left-color:var(--hair);opacity:.55}
+  .item.st-ended .mk-ended{color:var(--faint)}
+
+  /* MISSED: a task whose time passed with no tick. This is the one that
+     actually needs your attention, and it used to look identical to ENDED. */
+  .item.st-missed{border-left-color:var(--red);
+                  background:linear-gradient(90deg,rgba(224,108,108,.07),transparent 55%)}
+  .item.st-missed .mk-missed{color:var(--red)}
+  .item.st-missed .tm .t1{color:var(--red)}
+
+  .item.st-open{border-left-color:var(--hair)}
+
+  /* Marker sits in the text flow so wrapped lines indent under the title,
+     not under the glyph. */
+  .mk{display:inline-flex;align-items:center;justify-content:center;
+      width:14px;height:14px;margin-right:6px;border-radius:3px;
+      font-size:10px;font-weight:700;line-height:1;vertical-align:-2px;
+      flex:0 0 auto}
+  .mk-done{background:rgba(95,168,122,.16)}
+  .mk-missed{background:rgba(224,108,108,.14)}
+  .mk-ended{background:var(--hair);font-size:10px}
+  .mk-open{border:1px solid var(--line);background:transparent}
+  .ntx{overflow-wrap:anywhere;word-break:break-word}
 
   .empty{color:var(--faint);font-style:italic;padding:14px 4px;text-align:center;font-size:12px}
 
@@ -243,13 +275,35 @@ function itemHTML(it, nowM){
   const past = (m!==null && nowM!==null && m<nowM);
   const live = (m!==null && m2!==null && nowM>=m && nowM<=m2);
 
-  const cls=[
-    'item',
-    isMeeting(it)?'mtg':'',
-    it.done?'done':'',
-    (past && !it.done)?'past':'',
-    live?'live':''
-  ].filter(Boolean).join(' ');
+  // FOUR states, each with an explicit marker rather than a shade of grey.
+  // The old code faded a meeting that happened and a task you skipped
+  // identically, so "greyed out" carried two opposite meanings.
+  //   done    -- ticked in Notion. Struck through, green check.
+  //   ended   -- a MEETING whose time passed. It happened; nothing is owed.
+  //   missed  -- a TASK whose time passed and was never ticked. Still owed.
+  //   open    -- still ahead of you.
+  // Task vs meeting: trust the explicit `type` field first. isMeeting()'s
+  // fallback treats meeting_type 'Research'/'Military'/'Admin' as a meeting,
+  // but those are just CATEGORY labels that tasks carry too -- which is why
+  // "SCUBA - email PE&W" was rendering as a meeting that ended rather than a
+  // task you still owe.
+  const ty=(it.type||'').toLowerCase();
+  const isTask = ty==='task';
+  const isMtg  = isTask ? false : (ty==='meeting' ? true : isMeeting(it));
+
+  let state = 'open';
+  if(it.done)              state='done';
+  else if(past && isMtg)   state='ended';
+  else if(past && !isMtg)  state='missed';
+
+  const MARK = {
+    done:  '<span class="mk mk-done">\u2713</span>',
+    ended: '<span class="mk mk-ended">\u2022</span>',
+    missed:'<span class="mk mk-missed">!</span>',
+    open:  '<span class="mk mk-open"></span>'
+  }[state];
+
+  const cls=['item','st-'+state, isMtg?'mtg':'', live?'live':''].filter(Boolean).join(' ');
 
   // Duration -> height. 1px per minute past the first 30, clamped to 96px.
   let dur = (m!==null && m2!==null) ? Math.max(0, m2-m) : null;
@@ -281,7 +335,7 @@ function itemHTML(it, nowM){
   return `<${tag}${link} class="${cls}"${hStyle}>
     <div class="tm">${time}${durTxt}</div>
     <div class="bd">
-      <div class="n">${esc(it.name)}</div>
+      <div class="n">${MARK}<span class="ntx">${esc(it.name)}</span></div>
       ${bits.length?`<div class="meta">${bits.join('')}</div>`:''}
     </div>
   </${tag}>`;
@@ -496,8 +550,15 @@ fetch('../data/tasks.json?t='+Date.now()).then(r=>r.json()).then(d=>{
 
     if(timedRows.length){
       const doneN=ordered.filter(x=>x.done).length;
+      const missedN=timedRows.filter(x=>{
+        const ty=(x.type||'').toLowerCase();
+        const mtg = ty==='task' ? false : (ty==='meeting' ? true : isMeeting(x));
+        return !x.done && mins(x.date)<nowM && !mtg;
+      }).length;
       h+=`<div class="sec"><span>Today</span>`
-       + `<span class="secn">${doneN}/${ordered.length}</span></div>`;
+       + `<span class="secn">${doneN} done`
+       + (missedN?` \u00b7 <span class="mred">${missedN} not done</span>`:'')
+       + `</span></div>`;
 
       // Walk the day in order, inserting a gap marker wherever >=45 minutes of
       // nothing sits between the end of one block and the start of the next.
