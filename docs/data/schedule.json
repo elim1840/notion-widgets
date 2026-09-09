@@ -1,0 +1,144 @@
+{
+ "generated": "2026-09-08T21:55:01-04:00",
+ "source": "Hydrant f26.ics export, cross-checked against Canvas syllabus PDFs",
+ "term": {
+  "first_day": "2026-09-09",
+  "last_day": "2026-12-10"
+ },
+ "meetings": [
+  {
+   "code": "14.003",
+   "kind": "lecture",
+   "dow": "Mon",
+   "start": "1030",
+   "end": "1200",
+   "location": "E51-376",
+   "first": "2026-09-14",
+   "until": "2026-12-08",
+   "verified": "syllabus: 'Monday, Wednesday 10:30am - noon, E51-376'",
+   "verified_against_syllabus": true
+  },
+  {
+   "code": "16.987",
+   "kind": "lecture",
+   "dow": "Mon",
+   "start": "1130",
+   "end": "1300",
+   "location": "37-252",
+   "first": "2026-09-14",
+   "until": "2026-12-08",
+   "verified": null,
+   "verified_against_syllabus": false
+  },
+  {
+   "code": "IDS.412",
+   "kind": "lecture",
+   "dow": "Mon",
+   "start": "1300",
+   "end": "1430",
+   "location": "66-168",
+   "first": "2026-09-14",
+   "until": "2026-12-08",
+   "verified": "syllabus: 'Lectures M-W 1:00-2:30 PM in 66-168'",
+   "verified_against_syllabus": true
+  },
+  {
+   "code": "16.990",
+   "kind": "lecture",
+   "dow": "Mon",
+   "start": "1430",
+   "end": "1600",
+   "location": "9-354",
+   "first": "2026-09-14",
+   "until": "2026-12-08",
+   "verified": null,
+   "verified_against_syllabus": false
+  },
+  {
+   "code": "16.842",
+   "kind": "lecture",
+   "dow": "Tue",
+   "start": "1100",
+   "end": "1300",
+   "location": "33-218",
+   "first": "2026-09-15",
+   "until": "2026-12-09",
+   "verified": null,
+   "verified_against_syllabus": false
+  },
+  {
+   "code": "14.003",
+   "kind": "lecture",
+   "dow": "Wed",
+   "start": "1030",
+   "end": "1200",
+   "location": "E51-376",
+   "first": "2026-09-09",
+   "until": "2026-12-10",
+   "verified": "syllabus: 'Monday, Wednesday 10:30am - noon, E51-376'",
+   "verified_against_syllabus": true
+  },
+  {
+   "code": "IDS.412",
+   "kind": "lecture",
+   "dow": "Wed",
+   "start": "1300",
+   "end": "1430",
+   "location": "66-168",
+   "first": "2026-09-09",
+   "until": "2026-12-10",
+   "verified": "syllabus: 'Lectures M-W 1:00-2:30 PM in 66-168'",
+   "verified_against_syllabus": true
+  },
+  {
+   "code": "16.990",
+   "kind": "lecture",
+   "dow": "Wed",
+   "start": "1430",
+   "end": "1600",
+   "location": "9-354",
+   "first": "2026-09-09",
+   "until": "2026-12-10",
+   "verified": null,
+   "verified_against_syllabus": false
+  },
+  {
+   "code": "14.003",
+   "kind": "recitation",
+   "dow": "Fri",
+   "start": "0900",
+   "end": "1000",
+   "location": "E52-164",
+   "first": "2026-09-11",
+   "until": "2026-12-05",
+   "verified": "syllabus: 'Monday, Wednesday 10:30am - noon, E51-376'",
+   "verified_against_syllabus": true
+  },
+  {
+   "code": "16.S896",
+   "kind": "lecture",
+   "dow": "Fri",
+   "start": "1500",
+   "end": "1700",
+   "location": "9-354",
+   "first": "2026-09-11",
+   "until": "2026-12-05",
+   "verified": "syllabus: 'Fridays 3 - 5 pm in 9-354'",
+   "verified_against_syllabus": true
+  }
+ ],
+ "conflicts": [
+  {
+   "dow": "Mon",
+   "a": "14.003 lec 1030-1200 E51-376",
+   "b": "16.987 lec 1130-1300 37-252",
+   "overlap_min": 30,
+   "note": "Registered times collide for 30 minutes every Monday."
+  }
+ ],
+ "counts": {
+  "meetings": 10,
+  "subjects": 6,
+  "verified": 6
+ }
+}
