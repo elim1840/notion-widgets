@@ -67,26 +67,27 @@
   /* NOW stacked ABOVE NEXT -- flat rows, not two squeezed boxes. Side-by-side
      halved the width available for names and forced them to wrap badly. */
   .np{display:flex;flex-direction:column;gap:7px;margin:11px 0 13px}
-  .now{display:grid;grid-template-columns:82px 1fr;gap:13px;align-items:center;
-       padding:11px 12px;border-radius:8px;
-       background:var(--panel);border:1px solid var(--line);
-       border-left:3px solid var(--accent)}
   .now.nx{border-left-color:var(--amber)}
   .now.late{border-left-color:var(--red);background:rgba(224,108,108,.07)}
   /* Left rail: label above the countdown. Right side: name, then time+room. */
-  .now .lft{grid-column:1}
-  .now .rgt{grid-column:2;min-width:0}
-  .now .lbl{font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--dim);
-            line-height:1}
-  .now .big{font-size:19px;font-weight:650;line-height:1.05;margin-top:4px;
-            font-variant-numeric:tabular-nums;letter-spacing:-.02em}
-  .now .big .u{display:block;font-size:10px;font-weight:500;color:var(--dim);
-               letter-spacing:.06em;text-transform:uppercase;margin-top:2px}
+  /* One line, read left to right: "NEXT — in 2h09". Stacking the label above
+     the number and the unit below it made a 3-line tower in an 82px rail, which
+     is why it looked broken. A countdown is a phrase, not a stat block. */
+  .now{display:block;padding:11px 13px;border-radius:8px;
+       background:var(--panel);border:1px solid var(--line);
+       border-left:3px solid var(--accent)}
+  .now .top{display:flex;align-items:baseline;gap:9px;flex-wrap:wrap}
+  .now .lbl{font-size:10px;letter-spacing:.14em;text-transform:uppercase;
+            color:var(--dim);font-weight:600}
+  .now .big{font-size:19px;font-weight:650;line-height:1.15;
+            font-variant-numeric:tabular-nums;letter-spacing:-.01em}
+  .now .big .u{font-size:13px;font-weight:500;color:var(--dim);
+               letter-spacing:0;text-transform:none;margin-left:3px}
   .now.nx .big{color:var(--amber)}
   .now.late .big{color:var(--red)}
-  .now .n{font-size:13px;font-weight:600;line-height:1.32;
+  .now .n{font-size:13px;font-weight:600;line-height:1.42;margin-top:7px;
           overflow-wrap:anywhere;word-break:break-word}
-  .now .meta{font-size:11px;color:var(--dim);margin-top:3px;line-height:1.4;
+  .now .meta{font-size:11px;color:var(--dim);margin-top:4px;line-height:1.45;
              overflow-wrap:anywhere}
   .now.none{border-left-color:var(--faint)}
   .now.none .big{font-size:13px;font-weight:500;color:var(--dim);letter-spacing:0}
@@ -405,33 +406,30 @@ fetch('../data/tasks.json?t='+Date.now()).then(r=>r.json()).then(d=>{
   const panel=(it, isNext)=>{
     if(!it){
       return `<div class="now none">
-        <div class="lft">
-          <div class="lbl">${isNext?'NEXT':'NOW'}</div>
-          <div class="big">${isNext?'\u2014':'\u2014'}</div>
+        <div class="top">
+          <span class="lbl">${isNext?'NEXT':'NOW'}</span>
+          <span class="big">${isNext?'nothing later':'nothing on'}</span>
         </div>
-        <div class="rgt">
-          <div class="n">${isNext?'Nothing later today':'Nothing on right now'}</div>
-          <div class="meta">${isNext?'day is clear from here':'no timed item covering this moment'}</div>
-        </div>
+        <div class="meta">${isNext?'day is clear from here':'no timed item covering this moment'}</div>
       </div>`;
     }
     const s=hhmm(it.date), e=hhmm(it.end);
     const where = it.location ? `\u{1F4CD} ${esc(it.location)}` : '';
 
-    // The countdown is the headline number, not a footnote.
+    // Phrasing, not a stat block. "in 2h09" / "45 min left" read as language.
     let big='', unit='';
     if(isNext){
       const m=Math.round(mins(it.date)-nowM);
       if(m<=0){ big='now'; }
-      else if(m<60){ big=String(m); unit='min'; }
-      else { big=`${Math.floor(m/60)}h${String(m%60).padStart(2,'0')}`; unit='away'; }
+      else if(m<60){ big=`in ${m}`; unit='min'; }
+      else { big=`in ${Math.floor(m/60)}h${String(m%60).padStart(2,'0')}`; }
     } else if(late){
       const m=Math.round(nowM-(it.end?mins(it.end):mins(it.date)+45));
-      big = m<60 ? String(m) : `${Math.floor(m/60)}h${String(m%60).padStart(2,'0')}`;
+      big = m<60 ? `${m}` : `${Math.floor(m/60)}h${String(m%60).padStart(2,'0')}`;
       unit = m<60 ? 'min over' : 'over';
     } else if(e){
       const m=Math.round(mins(it.end)-nowM);
-      big = m<60 ? String(m) : `${Math.floor(m/60)}h${String(m%60).padStart(2,'0')}`;
+      big = m<60 ? `${m}` : `${Math.floor(m/60)}h${String(m%60).padStart(2,'0')}`;
       unit = m<60 ? 'min left' : 'left';
     } else {
       big = s; unit='started';
@@ -441,14 +439,12 @@ fetch('../data/tasks.json?t='+Date.now()).then(r=>r.json()).then(d=>{
     const lbl = isNext ? 'NEXT' : (late ? 'LATE' : 'NOW');
 
     return `<div class="now${cls}">
-      <div class="lft">
-        <div class="lbl">${lbl}</div>
-        <div class="big">${big}${unit?`<span class="u">${unit}</span>`:''}</div>
+      <div class="top">
+        <span class="lbl">${lbl}</span>
+        <span class="big">${big}${unit?`<span class="u">${unit}</span>`:''}</span>
       </div>
-      <div class="rgt">
-        <div class="n">${esc(it.name)}</div>
-        <div class="meta">${e?`${s}\u2013${e}`:s}${where?` \u00b7 ${where}`:''}</div>
-      </div>
+      <div class="n">${esc(it.name)}</div>
+      <div class="meta">${e?`${s}\u2013${e}`:s}${where?` \u00b7 ${where}`:''}</div>
     </div>`;
   };
 
