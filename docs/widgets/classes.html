@@ -3,277 +3,500 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Course Load</title>
+<title>Course load — what needs work</title>
 <style>
   :root{
     --bg:#191919; --panel:#202020; --line:#2f2f2f; --hair:#262626;
     --ink:#e9e9e7; --dim:#9b9a97; --faint:#6b6a67;
-    --blue:#5b93d3; --gold:#c9a227; --green:#5fa87a; --red:#e06c6c; --purple:#9a7fd0; --amber:#c9a227;
+    --blue:#5b93d3; --gold:#c9a227; --green:#5fa87a; --red:#e06c6c; --purple:#9a7fd0;
   }
   @media (prefers-color-scheme: light){
     :root{ --bg:#fff; --panel:#f7f7f5; --line:#e6e5e1; --hair:#efeeec;
-           --ink:#37352f; --dim:#787774; --faint:#9b9a97; }
+           --ink:#37352f; --dim:#787774; --faint:#9b9a97;
+           --green:#3f7f57; --red:#c14b4b; --purple:#6f52a8; --gold:#8f7112; }
   }
   *{box-sizing:border-box;margin:0;padding:0}
-  body{background:var(--bg);color:var(--ink);padding:9px 12px 8px;
-       font:13px/1.4 -apple-system,BlinkMacSystemFont,"Segoe UI",Inter,sans-serif;
+  /* RULE 8 — widget lives between 280 and 900 px wide. */
+  body{background:var(--bg);color:var(--ink);padding:10px 12px;
+       min-width:280px;max-width:900px;margin:0 auto;
+       font:13px/1.45 -apple-system,BlinkMacSystemFont,"Segoe UI",Inter,sans-serif;
        -webkit-font-smoothing:antialiased}
+  /* RULE 1 — type scale is exactly 10 / 11 / 12 / 13 / 15 / 19 / 30 px. No half pixels.
+     RULE 3 — nothing truncates: no `text-overflow`, no `white-space:nowrap` on any
+     course name, event title or note anywhere in this file. */
   .num{font-variant-numeric:tabular-nums;font-feature-settings:"tnum" 1}
 
-  .hd{font-size:10px;color:var(--faint);text-transform:uppercase;letter-spacing:.09em;
-      display:flex;justify-content:space-between;align-items:baseline;gap:8px;
-      padding-bottom:6px;border-bottom:1px solid var(--line)}
-  .hd .r{color:var(--dim);letter-spacing:.03em;text-transform:none;font-size:11px;
-         font-variant-numeric:tabular-nums;text-align:right}
+  .hd{display:flex;justify-content:space-between;align-items:baseline;gap:10px;
+      flex-wrap:wrap;padding-bottom:7px;border-bottom:1px solid var(--line)}
+  .hd .t{font-size:10px;color:var(--faint);text-transform:uppercase;letter-spacing:.09em}
+  .hd .q{font-size:12px;color:var(--dim);flex:1 1 100%;line-height:1.4}
+  .hd .q b{color:var(--ink);font-weight:600}
 
-  /* ---- compact term progress strip ---- */
-  .term{margin:6px 0 6px}
-  .term .tl{display:flex;justify-content:space-between;font-size:10px;color:var(--faint);
-            font-variant-numeric:tabular-nums;margin-bottom:3px}
-  .term .tl b{color:var(--dim);font-weight:500}
+  .term{margin:8px 0}
+  .term .tl{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;
+            font-size:10px;color:var(--faint);margin-bottom:4px}
+  .term .tl b{color:var(--dim);font-weight:600}
   .track{position:relative;height:6px;border-radius:3px;background:var(--hair);
          border:1px solid var(--line);overflow:hidden}
   .track .fin{position:absolute;top:0;bottom:0;background:rgba(224,108,108,.28)}
-  .track .fill{position:absolute;left:0;top:0;bottom:0;background:var(--blue);opacity:.6}
+  .track .fill{position:absolute;left:0;top:0;bottom:0;background:var(--blue);opacity:.55}
+  .track .drop{position:absolute;top:0;bottom:0;width:2px;margin-left:-1px;background:var(--purple)}
   .track .now{position:absolute;top:0;bottom:0;width:2px;margin-left:-1px;background:var(--gold)}
 
-  /* ---- course rows ---- */
-  .rows{display:flex;flex-direction:column;gap:3px}
-  .row{display:grid;grid-template-columns:74px minmax(0,1fr) auto;gap:9px;
-       align-items:center;background:var(--panel);border:1px solid var(--line);
-       border-left:3px solid var(--faint);border-radius:6px;padding:4px 8px;min-width:0}
-  .row .code{font-size:13px;font-weight:600;display:block;line-height:1.25;
-             overflow-wrap:anywhere;font-variant-numeric:tabular-nums}
-  .row .u{font-size:10px;color:var(--faint);font-variant-numeric:tabular-nums}
-  .mid{min-width:0}
-  .task{font-size:13px;line-height:1.3;display:block;overflow-wrap:anywhere;
-        word-break:normal;color:var(--ink)}
-  .sub{font-size:11px;line-height:1.3;color:var(--dim);display:block;margin-top:1px;
-       overflow-wrap:anywhere;font-variant-numeric:tabular-nums}
-  .sub em{font-style:normal;color:var(--faint)}
-  .right{display:flex;flex-direction:column;align-items:flex-end;gap:3px;flex:0 0 auto}
-  .d{font-size:15px;font-weight:600;line-height:1;letter-spacing:-.01em;
-     font-variant-numeric:tabular-nums;white-space:nowrap}
-  .d small{font-size:10px;font-weight:500;color:var(--dim);margin-left:2px;letter-spacing:0}
-  .w{font-size:10px;padding:1px 6px;border-radius:3px;line-height:1.4;white-space:nowrap;
-     font-variant-numeric:tabular-nums;background:rgba(155,154,151,.14);color:var(--dim)}
+  .sechd{font-size:10px;text-transform:uppercase;letter-spacing:.08em;color:var(--faint);
+         margin:11px 0 5px;display:flex;gap:8px;align-items:baseline;flex-wrap:wrap}
+  .sechd .hot{color:var(--red)}
 
-  .k-red{border-left-color:var(--red)}      .k-red .d{color:var(--red)}
+  .rows{display:flex;flex-direction:column;gap:4px}
+  .row{display:grid;grid-template-columns:minmax(86px,auto) minmax(0,1fr) auto;gap:10px;
+       align-items:start;background:var(--panel);border:1px solid var(--line);
+       border-left:3px solid var(--faint);border-radius:6px;padding:6px 9px;min-width:0}
+  @media (max-width:420px){
+    .row{grid-template-columns:minmax(0,1fr) auto}
+    .row .idcell{grid-column:1 / -1}
+  }
+  .code{font-size:15px;font-weight:600;line-height:1.25;display:block;overflow-wrap:anywhere}
+  .meta{font-size:10px;color:var(--faint);display:block;line-height:1.4;overflow-wrap:anywhere}
+  .mid{min-width:0}
+  .task{font-size:13px;line-height:1.35;display:block;overflow-wrap:anywhere;color:var(--ink)}
+  .sub{font-size:11px;line-height:1.4;color:var(--dim);display:block;margin-top:2px;
+       overflow-wrap:anywhere}
+  .sub em{font-style:normal;color:var(--faint)}
+  .right{display:flex;flex-direction:column;align-items:flex-end;gap:4px;flex:0 0 auto}
+  .d{font-size:19px;font-weight:600;line-height:1.1;letter-spacing:-.01em}
+  .d small{font-size:10px;font-weight:500;color:var(--dim);margin-left:3px;letter-spacing:0}
+  .d.word{font-size:13px}
+  .w{font-size:10px;padding:1px 6px;border-radius:3px;line-height:1.5;
+     background:rgba(155,154,151,.14);color:var(--dim)}
+
+  /* RULE 6 — a finished item is an ACHIEVEMENT, not a faded past item:
+     green rail, filled check, struck text that is still readable ink. */
+  .done{display:block;margin-top:4px;padding-left:8px;border-left:2px solid var(--green);
+        font-size:11px;line-height:1.4;color:var(--ink);overflow-wrap:anywhere}
+  .done .ck{color:var(--green);font-weight:700;margin-right:4px}
+  .done s{text-decoration:line-through;text-decoration-color:var(--green);
+          text-decoration-thickness:1px;color:var(--ink);opacity:.92}
+  .done .n{color:var(--dim);text-decoration:none}
+
+  /* RULE 7 — undated work is visibly "not published", never hidden, never guessed. */
+  .unk{display:inline-block;margin-top:4px;font-size:11px;line-height:1.45;
+       color:var(--purple);border:1px dashed var(--purple);border-radius:4px;
+       padding:1px 6px;overflow-wrap:anywhere}
+
+  .ai{display:inline-block;font-size:10px;line-height:1.5;padding:1px 6px;border-radius:3px;
+      margin-top:4px;overflow-wrap:anywhere}
+  .ai.ban{background:rgba(224,108,108,.16);color:var(--red);border:1px solid rgba(224,108,108,.45)}
+  .ai.ok{background:rgba(95,168,122,.15);color:var(--green);border:1px solid rgba(95,168,122,.45)}
+
+  .k-red{border-left-color:var(--red)}    .k-red .d{color:var(--red)}
   .k-red .w{background:rgba(224,108,108,.18);color:var(--red)}
-  .k-amber{border-left-color:var(--gold)}   .k-amber .d{color:var(--gold)}
+  .k-amber{border-left-color:var(--gold)} .k-amber .d{color:var(--gold)}
   .k-amber .w{background:rgba(201,162,39,.18);color:var(--gold)}
-  .k-calm{border-left-color:var(--blue)}    .k-calm .d{color:var(--dim)}
+  .k-calm{border-left-color:var(--blue)}  .k-calm .d{color:var(--dim)}
   .k-unk{border-left-color:var(--purple);border-style:dashed;background:transparent}
   .k-unk .d{color:var(--purple);font-size:13px}
-  .k-unk .task{color:var(--dim)}
-  .k-unk .w{background:rgba(154,127,208,.16);color:var(--purple)}
   .k-none{border-left-color:var(--faint);border-style:dashed;background:transparent}
-  .k-none{padding-top:3px;padding-bottom:3px}
-  .k-none .code{color:var(--dim)} .k-none .task{color:var(--faint);font-style:italic;font-size:12px}
-  .k-none .sub{font-size:10px}
-  .k-none .d{color:var(--faint);font-size:13px;font-weight:500}
+  .k-none .task{color:var(--dim)} .k-none .d{color:var(--faint);font-size:13px;font-weight:500}
 
-  .sechd{font-size:10px;text-transform:uppercase;letter-spacing:.08em;color:var(--faint);
-         margin:7px 0 3px}
-
-  .ft{margin-top:6px;padding-top:5px;border-top:1px solid var(--line);
-      display:flex;gap:4px 9px;align-items:baseline;flex-wrap:wrap;
-      font-size:10px;color:var(--faint);line-height:1.4}
-  .ft .tag{background:rgba(155,154,151,.14);color:var(--dim);padding:1px 6px;
-           border-radius:3px;font-size:10px;font-variant-numeric:tabular-nums}
-  .ft .note{overflow-wrap:anywhere;flex:1 1 100%}
+  .ft{margin-top:10px;padding-top:7px;border-top:1px solid var(--line);
+      display:flex;gap:5px 9px;flex-wrap:wrap;font-size:10px;color:var(--faint);line-height:1.5}
+  .ft .tag{background:rgba(155,154,151,.14);color:var(--dim);padding:1px 6px;border-radius:3px;
+           overflow-wrap:anywhere}
+  .ft .note{flex:1 1 100%;overflow-wrap:anywhere}
+  .err{font-size:13px;color:var(--red);padding:14px 0}
 </style>
 </head>
 <body>
-<div class="hd"><span>Course Load · Fall 2026</span><span class="r" id="hr"></span></div>
+<div class="hd">
+  <span class="t">Course load · Fall 2026</span>
+  <span class="t" id="asof"></span>
+  <span class="q" id="q">Reading syllabus&hellip;</span>
+</div>
 <div class="term" id="term"></div>
 <div id="out"></div>
+<div class="ft" id="ft"></div>
 
 <script>
-(function(){
-  var esc=function(s){return String(s==null?'':s).replace(/[<>&"]/g,function(c){
-    return {'<':'&lt;','>':'&gt;','&':'&amp;','"':'&quot;'}[c];});};
+/* =====================================================================
+ * COURSE LOAD — answers one question: which subject needs work now.
+ *
+ * SOURCE OF TRUTH: ../data/syllabus.json (Fall 2026 syllabus PDFs,
+ * transcribed 2026-09-08). Every date rendered here comes from that
+ * file; nothing is hardcoded and nothing is inferred. If the syllabus
+ * has no date for something (14.003 Exam 3) it renders as
+ * "date not published", never as a guess and never hidden.
+ *
+ * FUTURE FEED SLOT: Yohan's Notion "Class Database" (71 session rows,
+ * recently moved under the Academics hub) is NOT exposed as JSON today.
+ * A mirror of it already lands in ../data/spokes.json -> classes[]
+ * (71 rows, same shape: name/code/date/status/type/room). When a real
+ * feed exists, add its URL to FEEDS below and merge in mergeNotion():
+ * syllabus.json stays authoritative for DATES and WEIGHTS; the Notion
+ * feed may only add status (done/not started) and extra session rows.
+ * Do not let a Notion row overwrite a syllabus date.
+ * ===================================================================== */
 
-  /* ---- dates: noon-anchored local Date so no timezone can shift the day ---- */
-  var ISO=/^(\d{4})-(\d{2})-(\d{2})/;
-  function D(s){var m=ISO.exec(String(s||''));return m?new Date(m[1]+'-'+m[2]+'-'+m[3]+'T12:00:00'):null;}
-  function todayNoon(){var n=new Date();
-    return new Date(n.getFullYear(),n.getMonth(),n.getDate(),12,0,0,0);}
-  var DAY=864e5, dd=function(a,b){return Math.round((b-a)/DAY);};
-  var MON=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
-  var WD=['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
-  function fmt(d){return WD[d.getDay()]+' '+String(d.getDate()).padStart(2,'0')+' '+MON[d.getMonth()];}
+var FEEDS = {
+  syllabus: '../data/syllabus.json',
+  tasks:    '../data/tasks.json',
+  /* notionClasses: null  <- future Class Database feed slots in here */
+  spokes:   '../data/spokes.json'
+};
+var TODAY_FALLBACK = '2026-09-08';
 
-  /* =====================================================================
-     GRADED EVENTS — transcribed by hand from the actual Fall 2026 syllabus
-     PDFs on 2026-09-08. These do NOT exist in Notion and no data feed
-     supplies them, so they are hardcoded here on purpose. Times are 24h.
-     Anything the syllabus does not state is left null and rendered as
-     unknown — never guessed.
-     ===================================================================== */
-  var COURSES=[
-    {code:'14.003', units:12, title:'Microeconomic Theory and Public Policy',
-     src:'syllabus', wnote:'syllabus states no percentage breakdown',
-     ev:[
-       {d:'2026-09-24', hm:'2359', t:'PS1 due'},
-       {d:'2026-10-07', hm:'2359', t:'PS2 due'},
-       {d:'2026-10-13', t:'Exam 1', note:'Tue running a Monday schedule'},
-       {d:'2026-10-29', hm:'2359', t:'PS3 due'},
-       {d:'2026-11-12', hm:'2359', t:'PS4 due'},
-       {d:'2026-11-16', t:'Exam 2'},
-       {d:'2026-12-03', hm:'2359', t:'PS5 due'},
-       {d:null, t:'Exam 3', note:'syllabus names it but gives NO date; finals period is 14\u201318 Dec'}
-     ]},
-    {code:'IDS.412', units:12, title:'Science, Technology and Public Policy (17.310)',
-     src:'syllabus', meta:'Mon+Wed 1300\u20131430 \u00b7 66-168 \u00b7 Selin',
-     wnote:'participation 10% \u00b7 P1 20% \u00b7 midterm 20% \u00b7 P2 25% \u00b7 final pres 25%',
-     ev:[
-       {d:'2026-10-26', t:'Paper 1 due', w:'20%'},
-       {d:'2026-11-04', t:'Midterm, in class', w:'20%', note:'closed book, one 8.5\u00d711 sheet both sides'},
-       {d:'2026-11-30', t:'Final presentations (day 1)', w:'25%'},
-       {d:'2026-12-02', t:'Final presentations (day 2)', note:'same 25% as day 1'},
-       {d:'2026-12-09', t:'Paper 2 due', w:'25%'}
-     ]},
-    {code:'16.S896', units:12, title:'Advanced Special Subject in Aerospace Systems',
-     src:'syllabus', meta:'Fri 1500\u20131700 \u00b7 9-354 \u00b7 Lordos',
-     wnote:'milestones 60% \u00b7 framework assignments 25% (5% ea) \u00b7 notebook + participation 15%',
-     ev:[
-       {d:'2026-09-18', t:'Skills survey due', note:'gates team assignment (teams final 22 Sep)'},
-       {d:'2026-10-09', t:'A1 due', w:'5%'},
-       {d:'2026-10-23', t:'A2 due', w:'5%'},
-       {d:'2026-11-06', t:'A3 due + Concept review (internal panel)', w:'15%'},
-       {d:'2026-11-13', t:'A4 due', w:'5%'},
-       {d:'2026-11-20', t:'Draft proposal, 5\u20137 pages', w:'20%'},
-       {d:'2026-12-04', t:'A5 due + FINAL presentation (external NASA/industry judges)', w:'20%'}
-     ]},
-    {code:'IDS.THG', units:24, title:'Graduate Thesis',
-     src:'known', wnote:'degree requirement',
-     ev:[{d:'2027-01-15', t:'Thesis due', w:'degree'}]},
-    /* No syllabus exists on Canvas for these three. Rendered honestly as
-       unknown rather than as calm/on-track. Where Notion holds scheduled
-       items (16.842 has 19), the next one is shown but clearly labelled as
-       a Notion calendar item, not a graded syllabus deadline. */
-    {code:'16.842', units:6, title:'Fundamentals of Systems Engineering', src:'none',
-     nonote:'not in Canvas at all \u00b7 Notion has 19 items (10 sessions, 6 assignments, oral exam, final pres) with no dates or weights'},
-    {code:'16.990', units:9, title:'Leading Creative Teams', src:'none',
-     nonote:'nothing on Canvas \u00b7 graded work, if any, is unknown'},
-    {code:'16.987', units:2, title:'First-Year Graduate Student Seminar', src:'none',
-     nonote:'nothing on Canvas \u00b7 graded work, if any, is unknown'}
-  ];
-  var ARCHIVED={code:'24.134', units:6, title:'Experiential Ethics', note:'finished'};
+/* Course-level AI policy. This is NOT in syllabus.json (the transcriber
+ * did not capture policy prose), so it is stated here explicitly and
+ * shown ON THE COURSE ROW rather than buried in a footnote: the two
+ * policies are opposites and mixing them up is an honour-code problem. */
+var AI_POLICY = {
+  'IDS.412':  { ok:false, txt:'AI: generative AI BANNED for all coursework' },
+  '16.S896':  { ok:true,  txt:'AI: generative AI allowed, must be disclosed' }
+};
 
-  var t0=todayNoon();
-  var TOTAL_UNITS=COURSES.reduce(function(a,c){return a+c.units;},0)+ARCHIVED.units;
+var D_RE = /^(\d{4})-(\d{2})-(\d{2})/;
+var MO = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+var WD = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
 
-  /* ---- term progress: classes 09 Sep -> 10 Dec, finals 14-18 Dec ---- */
-  (function(){
-    var A=D('2026-09-09'), CE=D('2026-12-10'), FA=D('2026-12-14'), FB=D('2026-12-18');
-    var span=dd(A,FB); var el=dd(A,t0);
-    var pc=function(d){return Math.max(0,Math.min(100,dd(A,d)/span*100));};
-    var prog=Math.max(0,Math.min(100,el/span*100));
-    var lbl;
-    if(el<0)      lbl='term starts in <b>'+(-el)+'</b> d';
-    else if(t0>FB)lbl='term complete';
-    else          lbl='day <b>'+(el+1)+'</b> of '+(span+1)+' \u00b7 <b>'+prog.toFixed(0)+'%</b>'+
-                      ' \u00b7 <b>'+dd(t0,CE)+'</b> d to classes end';
-    document.getElementById('term').innerHTML=
-      '<div class="tl"><span>'+lbl+'</span><span>09 Sep \u2192 finals 14\u201318 Dec</span></div>'+
-      '<div class="track">'+
-        '<div class="fin" style="left:'+pc(FA)+'%;right:'+(100-pc(FB))+'%"></div>'+
-        '<div class="fill" style="width:'+pc(t0)+'%"></div>'+
-        '<div class="now" style="left:'+pc(t0)+'%"></div>'+
-      '</div>';
-  })();
+function ymd(iso){
+  if(!iso || typeof iso !== 'string') return null;
+  var m = D_RE.exec(iso);
+  return m ? (m[1]+'-'+m[2]+'-'+m[3]) : null;
+}
+function dayDiff(a, b){
+  return Math.round((new Date(a+'T12:00:00') - new Date(b+'T12:00:00')) / 86400000);
+}
+function fmtDate(s){
+  var m = D_RE.exec(s); if(!m) return s;
+  var dt = new Date(s+'T12:00:00');
+  return WD[dt.getDay()] + ' ' + m[3] + ' ' + MO[parseInt(m[2],10)-1];
+}
+/* RULE 5 — military time, always. syllabus.json already stores "2359"
+ * and "1300-1430"; this only guards against a stray "11:00 PM". */
+function mil(t){
+  if(!t) return '';
+  var s = String(t).trim();
+  var m = /^(\d{1,2}):?(\d{2})\s*([ap])m?$/i.exec(s);
+  if(m){
+    var h = parseInt(m[1],10) % 12;
+    if(m[3].toLowerCase() === 'p') h += 12;
+    return (h<10?'0':'') + h + m[2];
+  }
+  return s.replace(/:/g,'');
+}
+function esc(s){
+  return String(s==null?'':s).replace(/[&<>"]/g, function(c){
+    return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];
+  });
+}
+function kindLabel(k){
+  return ({ pset:'problem set', exam:'exam', paper:'paper', review:'review',
+            presentation:'presentation', milestone:'milestone', admin:'registrar',
+            lecture:'lecture', recitation:'recitation' })[k] || k;
+}
 
-  /* ---- pick each course's next graded thing ---- */
-  COURSES.forEach(function(c){
-    c.next=null; c.after=null; c.state='none';
-    if(!c.ev) return;
-    var dated=c.ev.filter(function(e){return e.d;}).map(function(e){
-      var o={}; for(var k in e) o[k]=e[k];
-      o.dt=D(e.d); o.days=dd(t0,o.dt); return o;});
-    dated.sort(function(a,b){return a.dt-b.dt;});
-    var ahead=dated.filter(function(e){return e.days>=0;});
-    var undated=c.ev.filter(function(e){return !e.d;});
-    c.past=dated.length-ahead.length;
-    c.remaining=ahead.length+undated.length;
-    if(ahead.length){ c.next=ahead[0]; c.after=ahead[1]||undated[0]||null; c.state='dated'; }
-    else if(undated.length){ c.next=undated[0]; c.state='undated'; }
-    else { c.state='done'; }
+/* WHAT COUNTS AS "WORK" — this is what the urgency sort is built on.
+ * Graded work always counts. An ungraded milestone counts only if it is
+ * something Yohan HANDS IN: syllabus.json gives submissions no clock
+ * time (16.S896 skills survey, 18 Sep, which gates team assignment),
+ * while things he merely ATTENDS carry a time range (the 14 Sep info
+ * session, 1700-1830, in 35-225). Attendance is shown as context but
+ * must never outrank a real deliverable in the sort. */
+function isDeliverable(e){
+  if(e.graded) return true;
+  return e.kind === 'milestone' && !e.time;
+}
+function isAttendance(e){
+  return !e.graded && e.kind === 'milestone' && !!e.time;
+}
+function isWork(e){ return isDeliverable(e) || isAttendance(e); }
+
+/* ================= model =================
+ * Pure: no DOM, no fetch. Exported for node so the numbers in the
+ * report are the numbers the browser renders. */
+function buildModel(syl, today){
+  var out = { today:today, term:(syl && syl.term) || {}, courses:[],
+              archived:[], src:'syllabus.json', undated:[] };
+  if(!syl || !syl.courses || !syl.events) { out.src = 'none'; return out; }
+
+  var evByCode = {};
+  syl.events.forEach(function(e){
+    var c = e.code || '__term__';
+    (evByCode[c] = evByCode[c] || []).push(e);
   });
 
-  /* Sort by urgency, not alphabetically: soonest dated graded event first.
-     Courses whose only remaining item has no date sit after the dated ones;
-     courses with no syllabus at all go into a separate flagged block last. */
-  var known=COURSES.filter(function(c){return c.src!=='none';});
-  var unknown=COURSES.filter(function(c){return c.src==='none';});
-  known.sort(function(a,b){
-    var ka=a.state==='dated'?a.next.days:(a.state==='undated'?9e5:9e6);
-    var kb=b.state==='dated'?b.next.days:(b.state==='undated'?9e5:9e6);
-    return ka-kb;
+  syl.courses.forEach(function(c){
+    var evs = (evByCode[c.code] || []).slice();
+    var work = evs.filter(isWork).map(function(e){
+      var y = ymd(e.date);
+      return { ymd:y, days:(y ? dayDiff(y, today) : null), name:e.name || 'Work',
+               kind:e.kind || 'work', kindTxt:kindLabel(e.kind || 'work'),
+               weight:(typeof e.weight === 'number' ? e.weight : null),
+               graded:!!e.graded, time:mil(e.time), note:e.note || '',
+               where:e.location || '', deliverable:isDeliverable(e) };
+    });
+    var dated   = work.filter(function(e){ return e.ymd; })
+                      .sort(function(a,b){ return a.ymd < b.ymd ? -1 : 1; });
+    var undated = work.filter(function(e){ return !e.ymd; });
+    undated.forEach(function(e){ out.undated.push({ code:c.code, name:e.name, note:e.note }); });
+
+    var ahead    = dated.filter(function(e){ return e.days >= 0 && e.deliverable; });
+    var attend   = dated.filter(function(e){ return e.days >= 0 && !e.deliverable; });
+    var past     = dated.filter(function(e){ return e.days <  0 && e.deliverable; });
+
+    var archived = /archived|finished/i.test(c.note || '');
+    var row = {
+      code:c.code, title:c.title || null, units:(typeof c.units === 'number' ? c.units : null),
+      meets:c.meets || '', room:c.room || '', instructor:c.instructor || '',
+      hasSyllabus:!!c.has_syllabus, note:c.note || '',
+      grading:c.grading || [], ai:AI_POLICY[c.code] || null,
+      next:ahead[0] || null, then:ahead[1] || null,
+      /* nearest thing to show up for, kept out of the urgency key */
+      attend:attend[0] || null,
+      undatedWork:undated, remaining:ahead.length + undated.length,
+      /* RULE 6: the most recent finished item, kept as an achievement. */
+      done:past.length ? past[past.length-1] : null, doneCount:past.length,
+      sessions:evs.length,
+      week:ahead.filter(function(e){ return e.days <= 7; })
+    };
+    row.state = archived ? 'archived'
+              : row.next ? 'dated'
+              : undated.length ? 'undated'
+              : (c.has_syllabus ? 'clear' : 'unknown');
+    if(archived) out.archived.push(row); else out.courses.push(row);
   });
 
-  function urgencyClass(c){
-    if(c.state==='undated') return 'k-unk';
-    if(c.state!=='dated')   return 'k-none';
-    if(c.next.days<=3)  return 'k-red';
-    if(c.next.days<=10) return 'k-amber';
-    return 'k-calm';
-  }
-  function daysCell(c){
-    if(c.state==='undated') return '<span class="d">?<small>date unknown</small></span>';
-    if(c.state!=='dated')   return '<span class="d">\u2014</span>';
-    var n=c.next.days;
-    if(n===0) return '<span class="d">TODAY</span>';
-    return '<span class="d num">'+n+'<small>'+(n===1?'day':'days')+'</small></span>';
-  }
-
-  function rowHTML(c){
-    var k=urgencyClass(c), mid;
-    if(c.state==='dated'){
-      var e=c.next;
-      var und=(c.ev||[]).filter(function(x){return !x.d;});
-      mid='<span class="task">'+esc(e.t)+'</span>'+
-          '<span class="sub num">'+fmt(e.dt)+(e.hm?' '+e.hm:'')+
-            (e.note?' \u00b7 <em>'+esc(e.note)+'</em>':'')+
-            (c.after&&c.after.d?' \u00b7 then '+esc(c.after.t)+' '+String(D(c.after.d).getDate()).padStart(2,'0')+' '+MON[D(c.after.d).getMonth()]:'')+
-            (und.length?' \u00b7 <em>'+esc(und[0].t)+': no date in syllabus</em>':'')+
-          '</span>';
-    }else if(c.state==='undated'){
-      mid='<span class="task">'+esc(c.next.t)+'</span>'+
-          '<span class="sub"><em>'+esc(c.next.note||'no date given in the syllabus')+'</em></span>';
-    }else{
-      mid='<span class="task">'+esc(c.title)+' \u2014 no syllabus posted</span>'+
-          '<span class="sub"><em>'+esc(c.nonote||'')+'</em></span>';
+  /* URGENCY SORT — never alphabetical. Soonest dated piece of graded or
+   * gating work first; ties broken by heavier weight, then by more work
+   * inside the 7-day window. Courses whose only remaining item has no
+   * published date sit after every dated course; courses with no
+   * syllabus at all sit last (unknown load, not zero load). */
+  var rank = { dated:0, undated:1, clear:2, unknown:3 };
+  out.courses.sort(function(a,b){
+    if(rank[a.state] !== rank[b.state]) return rank[a.state] - rank[b.state];
+    if(a.state === 'dated'){
+      var ea = effDays(a), eb = effDays(b);
+      if(ea !== eb) return ea - eb;
+      if(a.next.days !== b.next.days) return a.next.days - b.next.days;
+      var wa = a.next.weight || 0, wb = b.next.weight || 0;
+      if(wa !== wb) return wb - wa;
+      if(a.week.length !== b.week.length) return b.week.length - a.week.length;
     }
-    var w = (c.state==='dated'&&c.next.w) ? c.next.w
-          : (c.state==='dated') ? 'weight n/s'
-          : (c.state==='undated') ? 'weight n/s' : 'unknown';
-    return '<div class="row '+k+'">'+
-      '<div><b class="code num">'+esc(c.code)+'</b><span class="u">'+c.units+'u'+
-        (c.remaining?' \u00b7 '+c.remaining+' left':'')+'</span></div>'+
-      '<div class="mid">'+mid+'</div>'+
-      '<div class="right">'+daysCell(c)+'<span class="w">'+esc(w)+'</span></div>'+
-    '</div>';
+    return 0;
+  });
+  return out;
+}
+
+/* ================= render ================= */
+/* Effective urgency = the soonest thing this course needs from Yohan,
+ * whether that is a hand-in or a session he has to be in the room for.
+ * The rail colour has to agree with the section the row sits in. */
+function effDays(c){
+  var a = (c.state === 'dated') ? c.next.days : null;
+  var b = c.attend ? c.attend.days : null;
+  if(a == null) return (b == null ? 9e5 : b);
+  return (b == null) ? a : Math.min(a, b);
+}
+function urgencyClass(c){
+  if(c.state === 'undated') return 'k-unk';
+  if(c.state !== 'dated')   return 'k-none';
+  var d = effDays(c);
+  if(d <= 3) return 'k-red';
+  if(d <= 7) return 'k-amber';
+  return 'k-calm';
+}
+function daysCell(c){
+  if(c.state === 'undated') return '<span class="d word">not dated</span>';
+  if(c.state === 'clear')   return '<span class="d word">nothing left</span>';
+  if(c.state !== 'dated')   return '<span class="d word">unknown</span>';
+  var n = c.next.days;
+  var e = effDays(c);
+  /* The big number is always the next DELIVERABLE. When something you
+     have to attend lands sooner, it is named underneath, never merged
+     into the same number. */
+  var soonerAttend = (e < n) ? '<span class="w num">' + e + 'd to a session</span>' : '';
+  if(n === 0) return '<span class="d word">today</span>' + soonerAttend;
+  if(n === 1) return '<span class="d word">tomorrow</span>' + soonerAttend;
+  return '<span class="d num">' + n + '<small>days</small></span>' + soonerAttend;
+}
+function whenTxt(e){
+  return fmtDate(e.ymd) + (e.time ? ' ' + e.time : '') + (e.where ? ' · ' + e.where : '');
+}
+function rowHTML(c){
+  var mid = '';
+  if(c.state === 'dated'){
+    var e = c.next;
+    mid += '<span class="task">' + esc(e.name) +
+           (e.graded ? '' : ' <em>· gate, not graded</em>') + '</span>';
+    mid += '<span class="sub num">' + esc(whenTxt(e)) + ' · ' + esc(e.kindTxt) +
+           (e.note ? ' · <em>' + esc(e.note) + '</em>' : '') + '</span>';
+    if(c.then){
+      mid += '<span class="sub num">then ' + esc(c.then.name) + ' · ' +
+             esc(fmtDate(c.then.ymd)) + ' · in ' + c.then.days + ' days</span>';
+    }
+  } else if(c.state === 'undated'){
+    mid += '<span class="task">' + esc(c.undatedWork[0].name) + '</span>';
+    mid += '<span class="sub">Everything else in this subject is finished.</span>';
+  } else if(c.state === 'clear'){
+    mid += '<span class="task">No graded work left on the syllabus.</span>';
+    mid += '<span class="sub">' + esc(c.note || '') + '</span>';
+  } else {
+    mid += '<span class="task">No syllabus posted — workload unknown, not zero.</span>';
+    mid += '<span class="sub">' + esc(c.note || '') +
+           (c.sessions ? ' · ' + c.sessions + ' calendar items carry no dates here.' : '') +
+           '</span>';
+  }
+  /* RULE 7: undated work is always visible, on the course that owns it. */
+  c.undatedWork.forEach(function(u){
+    if(c.state === 'undated' && u === c.undatedWork[0]){
+      mid += '<span class="unk">Date NOT PUBLISHED in the syllabus — ' +
+             esc((u.note || 'confirm with the instructor')
+                   .replace(/^DATE NOT PUBLISHED\.\s*/i, '')) + '</span>';
+      return;
+    }
+    mid += '<span class="unk">' + esc(u.name) + ' · date NOT PUBLISHED in the syllabus</span>';
+  });
+  /* RULE 6: completion as achievement — green rail, filled check, struck
+     but fully readable text. Never the same grey as a merely-past item. */
+  /* Attendance you must show up for, kept visually below the deliverable
+     so it never reads as the thing that is due. */
+  if(c.attend && c.attend.days <= 14){
+    mid += '<span class="sub num">show up: ' + esc(c.attend.name) + ' · ' +
+           esc(whenTxt(c.attend)) +
+           (c.attend.days === 0 ? ' · today' : ' · in ' + c.attend.days + ' days') +
+           (c.attend.note ? ' · <em>' + esc(c.attend.note) + '</em>' : '') + '</span>';
+  }
+  if(c.done){
+    mid += '<span class="done"><span class="ck">&#10003;</span><s>' + esc(c.done.name) +
+           '</s> <span class="n">' + esc(fmtDate(c.done.ymd)) + ' · done</span></span>';
+  }
+  if(c.ai){
+    mid += '<span class="ai ' + (c.ai.ok ? 'ok' : 'ban') + '">' + esc(c.ai.txt) + '</span>';
   }
 
-  var html='<div class="rows">'+known.map(rowHTML).join('')+'</div>';
-  html+='<div class="sechd">No syllabus \u2014 workload genuinely unknown, not zero</div>'+
-        '<div class="rows">'+unknown.map(rowHTML).join('')+'</div>';
+  var w = (c.state === 'dated' && c.next.weight != null) ? c.next.weight + '% of grade'
+        : (c.state === 'dated' && c.next.graded)         ? 'weight not published'
+        : (c.state === 'dated')                          ? 'ungraded gate'
+        : (c.state === 'unknown')                        ? 'weight unknown'
+        : 'weight not published';
 
-  var urgent=known.filter(function(c){return c.state==='dated'&&c.next.days<=10;}).length;
-  document.getElementById('hr').innerHTML=
-    COURSES.length+' active \u00b7 '+TOTAL_UNITS+'u \u00b7 '+urgent+' inside 10 days';
+  var meta = [];
+  if(c.units != null) meta.push(c.units + ' units');
+  if(c.meets)  meta.push(c.meets);
+  if(c.room)   meta.push(c.room);
+  if(c.instructor) meta.push(c.instructor);
 
-  html+='<div class="ft">'+
-    '<span class="tag">'+esc(ARCHIVED.code)+' '+esc(ARCHIVED.title)+' \u00b7 finished</span>'+
-    '<span class="tag num">'+unknown.length+'/7 have no syllabus</span>'+
-    '<span class="note">From the syllabus PDFs (08 Sep 2026), not Notion. No class 12 Oct \u00b7 9 Nov (IDS.412) \u00b7 '+
-    '11 Nov \u00b7 23+25 Nov \u00b7 27 Nov (16.S896). Thursdays free all term.</span>'+
+  return '<div class="row ' + urgencyClass(c) + '">' +
+    '<div class="idcell"><span class="code num">' + esc(c.code) + '</span>' +
+      '<span class="meta">' + esc(c.title || 'title not transcribed') + '</span>' +
+      (meta.length ? '<span class="meta num">' + esc(meta.join(' · ')) + '</span>' : '') +
+    '</div>' +
+    '<div class="mid">' + mid + '</div>' +
+    '<div class="right">' + daysCell(c) + '<span class="w">' + esc(w) + '</span></div>' +
   '</div>';
+}
 
-  document.getElementById('out').innerHTML=html;
-})();
+function renderTerm(m){
+  var t = m.term, el = document.getElementById('term');
+  if(!t || !t.classes_end){ el.innerHTML = ''; return; }
+  var A = '2026-09-09', CE = t.classes_end, FA = t.finals_start || CE, FB = t.finals_end || CE;
+  var span = dayDiff(FB, A) || 1;
+  var pc = function(d){ return Math.max(0, Math.min(100, dayDiff(d, A) / span * 100)); };
+  var toEnd = dayDiff(CE, m.today);
+  var drop = t.drop_date;
+  el.innerHTML =
+    '<div class="tl"><span><b>' + Math.round(pc(m.today)) + '%</b> of term elapsed · <b>' +
+      toEnd + '</b> days to classes end</span>' +
+    '<span>drop date <b>' + esc(fmtDate(drop)) + '</b> · finals ' +
+      esc(fmtDate(FA)) + '–' + esc(fmtDate(FB)) + '</span></div>' +
+    '<div class="track">' +
+      '<div class="fin" style="left:' + pc(FA) + '%;right:' + (100 - pc(FB)) + '%"></div>' +
+      '<div class="fill" style="width:' + pc(m.today) + '%"></div>' +
+      (drop ? '<div class="drop" style="left:' + pc(drop) + '%"></div>' : '') +
+      '<div class="now" style="left:' + pc(m.today) + '%"></div>' +
+    '</div>';
+}
+
+function render(m){
+  var out = document.getElementById('out');
+  if(m.src === 'none'){
+    out.innerHTML = '<div class="err">syllabus.json unavailable — no dates shown ' +
+                    'rather than dates invented.</div>';
+    return;
+  }
+  document.getElementById('asof').textContent = 'as of ' + fmtDate(m.today);
+  renderTerm(m);
+
+  /* The headline sentence: which subject, what, when. No tallies. */
+  var lead = m.courses.filter(function(c){ return c.state === 'dated'; })[0];
+  function rel(n){
+    return n === 0 ? '<b>today</b>' : n === 1 ? '<b>tomorrow</b>' : 'in <b>' + n + '</b> days';
+  }
+  document.getElementById('q').innerHTML = lead
+    ? 'Needs work first: <b>' + esc(lead.code) + '</b> — ' + esc(lead.next.name) +
+      ', ' + esc(whenTxt(lead.next)) +
+      (lead.next.days === 0 ? ' — <b>today</b>' : ', ' + rel(lead.next.days)) +
+      (lead.attend && lead.attend.days < lead.next.days
+        ? '. Before that, be at ' + esc(lead.attend.name) + ', ' +
+          esc(whenTxt(lead.attend)) + ', ' + rel(lead.attend.days) + '.'
+        : '.')
+    : 'No dated graded work ahead in any subject.';
+
+  /* "Next 7 days" = anything the course needs from Yohan inside a week,
+     whether that is a hand-in or a session he has to be in the room for. */
+  function inWeek(c){
+    return (c.state === 'dated' && c.next.days <= 7) ||
+           (c.attend && c.attend.days <= 7);
+  }
+  var soon  = m.courses.filter(inWeek);
+  var later = m.courses.filter(function(c){ return !inWeek(c); });
+
+  var html = '';
+  html += '<div class="sechd"><span class="hot">Next 7 days</span>' +
+          (soon.length ? '' : '<span>nothing due before ' +
+            esc(fmtDate(m.courses[0] && m.courses[0].next ? m.courses[0].next.ymd : m.today)) +
+            '</span>') + '</div>';
+  if(soon.length) html += '<div class="rows">' + soon.map(rowHTML).join('') + '</div>';
+  if(later.length){
+    html += '<div class="sechd"><span>Further out · urgency order, never alphabetical</span></div>';
+    html += '<div class="rows">' + later.map(rowHTML).join('') + '</div>';
+  }
+  out.innerHTML = html;
+
+  var ft = [];
+  ft.push('<span class="tag">IDS.412 bans generative AI · 16.S896 allows it with disclosure — ' +
+          'opposite rules, same week</span>');
+  m.undated.forEach(function(u){
+    ft.push('<span class="tag">' + esc(u.code + ' ' + u.name) + ' has no published date</span>');
+  });
+  m.archived.forEach(function(a){
+    ft.push('<span class="tag">' + esc(a.code + ' ' + (a.title || '')) + ' · finished</span>');
+  });
+  ft.push('<span class="note">Dates from syllabus.json (Fall 2026 syllabus PDFs, ' +
+          'transcribed 08 Sep 2026). Notion\u2019s Class Database is not a feed yet, so ' +
+          'nothing here depends on it. Sorted by days to the next graded or gating item.</span>');
+  document.getElementById('ft').innerHTML = ft.join('');
+}
+
+/* ---- load ---- */
+function getJSON(u){
+  return fetch(u).then(function(r){ return r.ok ? r.json() : null; })
+                 .catch(function(){ return null; });
+}
+function boot(){
+  Promise.all([ getJSON(FEEDS.syllabus), getJSON(FEEDS.tasks) ]).then(function(a){
+    var tasks = a[1] || {};
+    var today = ymd(tasks.today) || ymd(tasks.generated) || TODAY_FALLBACK;
+    render(buildModel(a[0], today));
+  }).catch(function(err){
+    document.getElementById('out').innerHTML =
+      '<div class="err">Course load unavailable — ' + esc(err && err.message) + '</div>';
+  });
+}
+if(typeof document !== 'undefined' && document.getElementById) boot();
+if(typeof module !== 'undefined' && module.exports){
+  module.exports = { buildModel:buildModel, dayDiff:dayDiff, fmtDate:fmtDate, mil:mil,
+                     urgencyClass:urgencyClass, isWork:isWork };
+}
 </script>
 </body>
 </html>

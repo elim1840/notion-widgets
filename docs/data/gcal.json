@@ -1,0 +1,625 @@
+{
+ "generated": "2026-09-08T21:45:30-04:00",
+ "today": "2026-09-08",
+ "range": {
+  "from": "2026-09-08",
+  "to": "2026-09-15"
+ },
+ "calendars": [
+  {
+   "name": "yohanlim1113@gmail.com",
+   "count": 7,
+   "ok": true,
+   "noise": false,
+   "error": ""
+  },
+  {
+   "name": "yohanlim@mit.edu",
+   "count": 3,
+   "ok": true,
+   "noise": false,
+   "error": ""
+  },
+  {
+   "name": "MIT Outlook",
+   "count": 2,
+   "ok": true,
+   "noise": false,
+   "error": ""
+  },
+  {
+   "name": "APT 234",
+   "count": 1,
+   "ok": true,
+   "noise": false,
+   "error": ""
+  },
+  {
+   "name": "Conf.Rm 33-407a ESL",
+   "count": 4,
+   "ok": true,
+   "noise": false,
+   "error": ""
+  },
+  {
+   "name": "Deadlines",
+   "count": 0,
+   "ok": true,
+   "noise": false,
+   "error": ""
+  },
+  {
+   "name": "Hermes Schedule",
+   "count": 0,
+   "ok": true,
+   "noise": false,
+   "error": ""
+  },
+  {
+   "name": "AstroSource Team Calendar",
+   "count": 0,
+   "ok": true,
+   "noise": false,
+   "error": ""
+  },
+  {
+   "name": "GSC Events",
+   "count": 24,
+   "ok": true,
+   "noise": true,
+   "error": ""
+  }
+ ],
+ "errors": [],
+ "days": [
+  {
+   "date": "2026-09-08",
+   "is_today": true,
+   "events": [
+    {
+     "title": "Check or Orientation for Makerspace",
+     "start": "2026-09-08T10:30:00-04:00",
+     "end": "2026-09-08T11:00:00-04:00",
+     "allday": false,
+     "day": "2026-09-08",
+     "location": "",
+     "calendar": "yohanlim1113@gmail.com",
+     "noise": false,
+     "status": "confirmed",
+     "link": "https://www.google.com/calendar/event?eid=MjUwZmFkZjBiOWNmNDIzOTliNGU4OWJmNDk0MDllOWUgeW9oYW5saW0xMTEzQG0"
+    },
+    {
+     "title": "Charlie Committee Meeting",
+     "start": "2026-09-08T10:45:00-04:00",
+     "end": "2026-09-08T12:00:00-04:00",
+     "allday": false,
+     "day": "2026-09-08",
+     "location": "",
+     "calendar": "Conf.Rm 33-407a ESL",
+     "noise": false,
+     "status": "confirmed",
+     "link": "https://www.google.com/calendar/event?eid=NDN1dTJuMDh0b2pkZm43MXY0MzZ2cGJicm4gem9vbTQwN2FAbQ"
+    },
+    {
+     "title": "Carol & Dave",
+     "start": "2026-09-08T12:00:00-04:00",
+     "end": "2026-09-08T13:00:00-04:00",
+     "allday": false,
+     "day": "2026-09-08",
+     "location": "",
+     "calendar": "Conf.Rm 33-407a ESL",
+     "noise": false,
+     "status": "confirmed",
+     "link": "https://www.google.com/calendar/event?eid=NWZldjVkNnJjcTltcjJiN3IyajE3dmxzYXIgem9vbTQwN2FAbQ"
+    },
+    {
+     "title": "Meet Carly at 33 for Lobsta on a Roll",
+     "start": "2026-09-08T16:30:00-04:00",
+     "end": "2026-09-08T18:00:00-04:00",
+     "allday": false,
+     "day": "2026-09-08",
+     "location": "",
+     "calendar": "yohanlim1113@gmail.com",
+     "noise": false,
+     "status": "confirmed",
+     "link": "https://www.google.com/calendar/event?eid=MDNkNDliMDY5MTRjNDRlODk1OTQ2YTAwMDhlNTM5M2QgeW9oYW5saW0xMTEzQG0"
+    },
+    {
+     "title": "MIT Military Affiliated Dinner 6-8pm",
+     "start": "2026-09-08T18:00:00-04:00",
+     "end": "2026-09-08T20:15:00-04:00",
+     "allday": false,
+     "day": "2026-09-08",
+     "location": "",
+     "calendar": "yohanlim1113@gmail.com",
+     "noise": false,
+     "status": "confirmed",
+     "link": "https://www.google.com/calendar/event?eid=ZjY4MGFlMTlhZTZjNDk0MzhjNmQ3ZDQxMjNhMTgyMWUgeW9oYW5saW0xMTEzQG0"
+    },
+    {
+     "title": "Respond to HyeongJung",
+     "start": "2026-09-08T20:15:00-04:00",
+     "end": "2026-09-08T20:45:00-04:00",
+     "allday": false,
+     "day": "2026-09-08",
+     "location": "",
+     "calendar": "yohanlim1113@gmail.com",
+     "noise": false,
+     "status": "confirmed",
+     "link": "https://www.google.com/calendar/event?eid=NmU5MmZmMzQyZWJjNDJhODgzZTYyN2RkODA2YzRhMWQgeW9oYW5saW0xMTEzQG0"
+    },
+    {
+     "title": "Work on Class Schedule",
+     "start": "2026-09-08T20:45:00-04:00",
+     "end": "2026-09-08T22:00:00-04:00",
+     "allday": false,
+     "day": "2026-09-08",
+     "location": "",
+     "calendar": "yohanlim1113@gmail.com",
+     "noise": false,
+     "status": "confirmed",
+     "link": "https://www.google.com/calendar/event?eid=MWNkNDEzZDA3OWVkNDc5ZmExMTY1ODk0ODBjYzA1ZGEgeW9oYW5saW0xMTEzQG0"
+    }
+   ],
+   "campus": [
+    {
+     "title": "Anno-Wellness: INCOMING GRAD STUDENTS REG DAY 3-ISH MILE OR 30 MINUTES RUN/WALK",
+     "start": "2026-09-08T09:00:00-04:00",
+     "end": "2026-09-08T10:00:00-04:00",
+     "allday": false,
+     "day": "2026-09-08",
+     "location": "Z-Center, W35 on the Student Center Plaza Walkway",
+     "calendar": "GSC Events",
+     "noise": true,
+     "status": "confirmed",
+     "link": "https://www.google.com/calendar/event?eid=XzhkOWxjZ3JmZHByNmFzams3NHE2OGUxamM1aGo2ZHIzY3BobThwaGs2ZGdqNmMzNGNrbzY2b3BoNm9xajhwMzM2cGdnIGY5YWFhOTZjMDRkYTU0NmM5NzY5MmY5YWNiZjAwYjY0YjdlNTVmYjU1MTVlNWQxMDEzM2JmODYwODk5NTg5ZjhAZw"
+    },
+    {
+     "title": "Anno-Academic-Professional: Write for the World: The Art of the Blog Post",
+     "start": "2026-09-08T16:00:00-04:00",
+     "end": "2026-09-08T17:00:00-04:00",
+     "allday": false,
+     "day": "2026-09-08",
+     "location": "Information Session is by Zoom; the workshops will be in E17-136",
+     "calendar": "GSC Events",
+     "noise": true,
+     "status": "confirmed",
+     "link": "https://www.google.com/calendar/event?eid=XzhkOWxjZ3JmZHByNmFzams2Y3JtOGRqMjZsaG04ZDM1NnRpbTZlOWpjZ29qOGNwbmNoaWpnZTlwNjVnajBlYjE2a3BnIGY5YWFhOTZjMDRkYTU0NmM5NzY5MmY5YWNiZjAwYjY0YjdlNTVmYjU1MTVlNWQxMDEzM2JmODYwODk5NTg5ZjhAZw"
+    },
+    {
+     "title": "Anno-Academic-Professional: Write for the World: The Art of the Blog Post",
+     "start": "2026-09-08T16:00:00-04:00",
+     "end": "2026-09-08T17:00:00-04:00",
+     "allday": false,
+     "day": "2026-09-08",
+     "location": "Information Session is by Zoom; the workshops will be in E17-136",
+     "calendar": "GSC Events",
+     "noise": true,
+     "status": "confirmed",
+     "link": "https://www.google.com/calendar/event?eid=XzhkOWxjZ3JmZHByNmFzams3MHFtY29iMWM1aGowYzMyYzVpamFkOWdjOHBtMm9wa2Njc2phcDlsY2tvajJlOWk2ZGhnIGY5YWFhOTZjMDRkYTU0NmM5NzY5MmY5YWNiZjAwYjY0YjdlNTVmYjU1MTVlNWQxMDEzM2JmODYwODk5NTg5ZjhAZw"
+    },
+    {
+     "title": "Anno-Miscellaneous: What's at Stake, What's Possible: A Massachusetts Science Town Hall",
+     "start": "2026-09-08T19:00:00-04:00",
+     "end": "2026-09-08T20:00:00-04:00",
+     "allday": false,
+     "day": "2026-09-08",
+     "location": "Robbins Memorial Town Hall, 730 Massachusetts Ave, Arlington, MA 02476",
+     "calendar": "GSC Events",
+     "noise": true,
+     "status": "confirmed",
+     "link": "https://www.google.com/calendar/event?eid=XzhkOWxjZ3JmZHByNmFzamtjY3NtNmQzM2Njc21jcGIzY2NvNjhjaG82MWgzMmM5ZzZsaW0yb2hqNjhwajBwMzNjY3AwIGY5YWFhOTZjMDRkYTU0NmM5NzY5MmY5YWNiZjAwYjY0YjdlNTVmYjU1MTVlNWQxMDEzM2JmODYwODk5NTg5ZjhAZw"
+    },
+    {
+     "title": "Anno-Extracurricular: All-MIT Christian Worship + Free Boba & Chick-fil-A",
+     "start": "2026-09-08T19:30:00-04:00",
+     "end": "2026-09-08T21:30:00-04:00",
+     "allday": false,
+     "day": "2026-09-08",
+     "location": "MIT Chapel (W11)",
+     "calendar": "GSC Events",
+     "noise": true,
+     "status": "confirmed",
+     "link": "https://www.google.com/calendar/event?eid=XzhkOWxjZ3JmZHByNmFzams2ZGg2YWRiMjZncTMycDMyNmNwajhkMWdjOWdtNGUzMTZoaWo2Y2IzNjRxamNjajRjY3AwIGY5YWFhOTZjMDRkYTU0NmM5NzY5MmY5YWNiZjAwYjY0YjdlNTVmYjU1MTVlNWQxMDEzM2JmODYwODk5NTg5ZjhAZw"
+    }
+   ]
+  },
+  {
+   "date": "2026-09-09",
+   "is_today": false,
+   "events": [
+    {
+     "title": "IYR SHOPPING LIST",
+     "start": "2026-09-09T08:00:00-04:00",
+     "end": "2026-09-09T09:00:00-04:00",
+     "allday": false,
+     "day": "2026-09-09",
+     "location": "",
+     "calendar": "yohanlim1113@gmail.com",
+     "noise": false,
+     "status": "confirmed",
+     "link": "https://www.google.com/calendar/event?eid=ODFhMjU0Njk2YWYxNDYyMGExYjZhOGFlMWYwNmZlY2IgeW9oYW5saW0xMTEzQG0"
+    },
+    {
+     "title": "AeroAstro Welcome back Picnic",
+     "start": "2026-09-09T12:00:00-04:00",
+     "end": "2026-09-09T14:00:00-04:00",
+     "allday": false,
+     "day": "2026-09-09",
+     "location": "",
+     "calendar": "yohanlim@mit.edu",
+     "noise": false,
+     "status": "confirmed",
+     "link": "https://www.google.com/calendar/event?eid=NzAzZGNmZGJiNGQ2NDdiMDgyYWNlOGEwNjJkMWI5N2UgeW9oYW5saW1AbWl0LmVkdQ"
+    },
+    {
+     "title": "Edgerton Welcome BBQ",
+     "start": "2026-09-09T17:30:00-04:00",
+     "end": "2026-09-09T18:45:00-04:00",
+     "allday": false,
+     "day": "2026-09-09",
+     "location": "",
+     "calendar": "APT 234",
+     "noise": false,
+     "status": "confirmed",
+     "link": "https://www.google.com/calendar/event?eid=Xzhvc2o4YzluOGwxajBiYTU4Z3EzZ2I5azYxMzQ2YmExOGtzazRiOWs2c3JqYWg5aTc1MWs0ZTlnOGsgMDZiN2M3MmRmZTg2MTNmNzI5YjQyNDMyYjEyMDcwMjI3ZWUxYTlhOGM3Njc1N2EyZDRjNjUxZjIwMTI5NjRjMUBn"
+    }
+   ],
+   "campus": [
+    {
+     "title": "Anno-Extracurricular: MIT Ballroom Dance Camp 2026",
+     "start": "2026-09-09",
+     "end": "2026-09-12",
+     "allday": true,
+     "day": "2026-09-09",
+     "location": "MIT",
+     "calendar": "GSC Events",
+     "noise": true,
+     "status": "confirmed",
+     "link": "https://www.google.com/calendar/event?eid=XzhkOWxjZ3JmZHByNmFzams2a29tYXBoazZzcmpjb2o0NzRwNjhjaHBjOWdtY2NiMTZsajY2ZDMxNmdvMzhkMWc2b3EwIGY5YWFhOTZjMDRkYTU0NmM5NzY5MmY5YWNiZjAwYjY0YjdlNTVmYjU1MTVlNWQxMDEzM2JmODYwODk5NTg5ZjhAZw"
+    },
+    {
+     "title": "Anno-Extracurricular: Join MIT Ballroom Dance Team (No Prior Dance Experience Needed)",
+     "start": "2026-09-09",
+     "end": "2026-09-12",
+     "allday": true,
+     "day": "2026-09-09",
+     "location": "MIT",
+     "calendar": "GSC Events",
+     "noise": true,
+     "status": "confirmed",
+     "link": "https://www.google.com/calendar/event?eid=XzhkOWxjZ3JmZHByNmFzams2c3IzNmNqMTZsZ2o2ZTFpYzloamNjajI3MWgzZ3AxZ2NoajYycGhsNzBwajJwajU2bGdnIGY5YWFhOTZjMDRkYTU0NmM5NzY5MmY5YWNiZjAwYjY0YjdlNTVmYjU1MTVlNWQxMDEzM2JmODYwODk5NTg5ZjhAZw"
+    },
+    {
+     "title": "Anno-Extracurricular: Join MIT Ballroom Dance Team (No Prior Dance Experience Needed)",
+     "start": "2026-09-09",
+     "end": "2026-09-12",
+     "allday": true,
+     "day": "2026-09-09",
+     "location": "MIT",
+     "calendar": "GSC Events",
+     "noise": true,
+     "status": "confirmed",
+     "link": "https://www.google.com/calendar/event?eid=XzhkOWxjZ3JmZHByNmFzamtja28zZW9obzY0cG0yb2I0NzRyajBvcHBjOHAzOHBoazZvcWo4ZDMzNjFoM2VwajI2OWgwIGY5YWFhOTZjMDRkYTU0NmM5NzY5MmY5YWNiZjAwYjY0YjdlNTVmYjU1MTVlNWQxMDEzM2JmODYwODk5NTg5ZjhAZw"
+    },
+    {
+     "title": "Anno-Wellness: Midday Music & Free Bike Tune Ups!",
+     "start": "2026-09-09T12:00:00-04:00",
+     "end": "2026-09-09T14:00:00-04:00",
+     "allday": false,
+     "day": "2026-09-09",
+     "location": "Kendall/MIT Open Space",
+     "calendar": "GSC Events",
+     "noise": true,
+     "status": "confirmed",
+     "link": "https://www.google.com/calendar/event?eid=XzhkOWxjZ3JmZHByNmFzams2MHI2YW9iNTZzcmppYzlpNmhoM2FvaGhja3BqaWRobDZvcjNlY2hwY2dxbThvcjI2NHNnIGY5YWFhOTZjMDRkYTU0NmM5NzY5MmY5YWNiZjAwYjY0YjdlNTVmYjU1MTVlNWQxMDEzM2JmODYwODk5NTg5ZjhAZw"
+    },
+    {
+     "title": "Anno-Social: Lutheran Episcopal Ministry Worship/Dinner",
+     "start": "2026-09-09T17:15:00-04:00",
+     "end": "2026-09-09T18:15:00-04:00",
+     "allday": false,
+     "day": "2026-09-09",
+     "location": "MIT Chapel W15",
+     "calendar": "GSC Events",
+     "noise": true,
+     "status": "confirmed",
+     "link": "https://www.google.com/calendar/event?eid=XzhkOWxjZ3JmZHByNmFzamtjOWdtMmQ5bjcwbzM4b2oxYzloMzRjajQ2NHA2Y2ViMTc1ajNjcGI0Y29yM2VkcGo2OWgwIGY5YWFhOTZjMDRkYTU0NmM5NzY5MmY5YWNiZjAwYjY0YjdlNTVmYjU1MTVlNWQxMDEzM2JmODYwODk5NTg5ZjhAZw"
+    },
+    {
+     "title": "Anno-Extracurricular: 'Refuge' : Dinner, Worship & Bible Study",
+     "start": "2026-09-09T17:30:00-04:00",
+     "end": "2026-09-16T19:00:00-04:00",
+     "allday": false,
+     "day": "2026-09-09",
+     "location": "W11-080",
+     "calendar": "GSC Events",
+     "noise": true,
+     "status": "confirmed",
+     "link": "https://www.google.com/calendar/event?eid=XzhkOWxjZ3JmZHByNmFzams3MWlqNmQ5aTZsaGpnYzFpNjRvajJkajI2a3A2YXBqNDY5aTNlbzlpNmtwM2dwajZjOWlnIGY5YWFhOTZjMDRkYTU0NmM5NzY5MmY5YWNiZjAwYjY0YjdlNTVmYjU1MTVlNWQxMDEzM2JmODYwODk5NTg5ZjhAZw"
+    }
+   ]
+  },
+  {
+   "date": "2026-09-10",
+   "is_today": false,
+   "events": [
+    {
+     "title": "Text Joce about run later that day",
+     "start": "2026-09-10T16:15:00-04:00",
+     "end": "2026-09-10T17:00:00-04:00",
+     "allday": false,
+     "day": "2026-09-10",
+     "location": "",
+     "calendar": "yohanlim1113@gmail.com",
+     "noise": false,
+     "status": "confirmed",
+     "link": "https://www.google.com/calendar/event?eid=NWRmNTIwMGYyNmUwNDFmNWJhNzEwZDRjNTc4N2FkNjAgeW9oYW5saW0xMTEzQG0"
+    },
+    {
+     "title": "Run with Joce",
+     "start": "2026-09-10T19:00:00-04:00",
+     "end": "2026-09-10T20:00:00-04:00",
+     "allday": false,
+     "day": "2026-09-10",
+     "location": "",
+     "calendar": "yohanlim@mit.edu",
+     "noise": false,
+     "status": "confirmed",
+     "link": "https://www.google.com/calendar/event?eid=YmQ5NmI4MzU0YWQ2NDUzYzgzZjE3ZjRmZjZlYTRiZGMgeW9oYW5saW1AbWl0LmVkdQ"
+    }
+   ],
+   "campus": [
+    {
+     "title": "Anno-Extracurricular: MIT Free English Class for international students & spouses",
+     "start": "2026-09-10T13:00:00-04:00",
+     "end": "2026-09-17T14:30:00-04:00",
+     "allday": false,
+     "day": "2026-09-10",
+     "location": "W11-190",
+     "calendar": "GSC Events",
+     "noise": true,
+     "status": "confirmed",
+     "link": "https://www.google.com/calendar/event?eid=XzhkOWxjZ3JmZHByNmFzams2b3NqaXBqNmM0cjNjbzlpY2hnajRwMXBjOWdtNmRwbDY0b204ZHBpNjVpajBvaHA2aGgwIGY5YWFhOTZjMDRkYTU0NmM5NzY5MmY5YWNiZjAwYjY0YjdlNTVmYjU1MTVlNWQxMDEzM2JmODYwODk5NTg5ZjhAZw"
+    },
+    {
+     "title": "Anno-Academic-Professional: WCC\u2019s Public Speaking Certificate Program -- Information Session!",
+     "start": "2026-09-10T16:00:00-04:00",
+     "end": "2026-09-10T17:00:00-04:00",
+     "allday": false,
+     "day": "2026-09-10",
+     "location": "Zoom",
+     "calendar": "GSC Events",
+     "noise": true,
+     "status": "confirmed",
+     "link": "https://www.google.com/calendar/event?eid=XzhkOWxjZ3JmZHByNmFzams2OWg2OHAzNTZnbzY2YzFwNnBnajJwYjU2Y3BqMmRqNDZwZ2o4bzlpNjRybWFjMzQ2Y3IwIGY5YWFhOTZjMDRkYTU0NmM5NzY5MmY5YWNiZjAwYjY0YjdlNTVmYjU1MTVlNWQxMDEzM2JmODYwODk5NTg5ZjhAZw"
+    },
+    {
+     "title": "Anno-Sustainability: Engaging Indigenous Communities in System Design for Ecological Stewardship: a conversation with Sarah Augustine",
+     "start": "2026-09-10T16:00:00-04:00",
+     "end": "2026-09-10T17:00:00-04:00",
+     "allday": false,
+     "day": "2026-09-10",
+     "location": "MIT Welcome Center (E38) 292 Main St, Cambridge, MA 02142",
+     "calendar": "GSC Events",
+     "noise": true,
+     "status": "confirmed",
+     "link": "https://www.google.com/calendar/event?eid=XzhkOWxjZ3JmZHByNmFzams2b3JqZWQ5a2Njcmppb2oxNzBybTZkOWxjb3EzaWViNTZwaDM4b3BsNmtwbTJkMWpjbGlnIGY5YWFhOTZjMDRkYTU0NmM5NzY5MmY5YWNiZjAwYjY0YjdlNTVmYjU1MTVlNWQxMDEzM2JmODYwODk5NTg5ZjhAZw"
+    },
+    {
+     "title": "Anno-Academic-Professional: WCC\u2019s Public Speaking Certificate Program -- Information Session!",
+     "start": "2026-09-10T16:00:00-04:00",
+     "end": "2026-09-10T17:00:00-04:00",
+     "allday": false,
+     "day": "2026-09-10",
+     "location": "Zoom",
+     "calendar": "GSC Events",
+     "noise": true,
+     "status": "confirmed",
+     "link": "https://www.google.com/calendar/event?eid=XzhkOWxjZ3JmZHByNmFzamtjcGgzY2NoaTZoaWo2bzlvNnNxajRjMWo2cGdtNm9wbTZsaTNjZHI2NjhyajJkOWw2b3MwIGY5YWFhOTZjMDRkYTU0NmM5NzY5MmY5YWNiZjAwYjY0YjdlNTVmYjU1MTVlNWQxMDEzM2JmODYwODk5NTg5ZjhAZw"
+    },
+    {
+     "title": "Anno-Social: MITaly Welcome Back event",
+     "start": "2026-09-10T19:00:00-04:00",
+     "end": "2026-09-10T22:30:00-04:00",
+     "allday": false,
+     "day": "2026-09-10",
+     "location": "Lobdell Dining Hall (Room 208, W20 \u2014 MIT Student Center)",
+     "calendar": "GSC Events",
+     "noise": true,
+     "status": "confirmed",
+     "link": "https://www.google.com/calendar/event?eid=XzhkOWxjZ3JmZHByNmFzams2bGlqNG85azYwcW02cGhsY2xoajJjMzZjY282OGNyMzZvb2ppYzFwYzloamNjcGhjNHAwIGY5YWFhOTZjMDRkYTU0NmM5NzY5MmY5YWNiZjAwYjY0YjdlNTVmYjU1MTVlNWQxMDEzM2JmODYwODk5NTg5ZjhAZw"
+    }
+   ]
+  },
+  {
+   "date": "2026-09-11",
+   "is_today": false,
+   "events": [
+    {
+     "title": "PEARL Weekly Meeting",
+     "start": "2026-09-11T14:00:00-04:00",
+     "end": "2026-09-11T15:15:00-04:00",
+     "allday": false,
+     "day": "2026-09-11",
+     "location": "",
+     "calendar": "Conf.Rm 33-407a ESL",
+     "noise": false,
+     "status": "confirmed",
+     "link": "https://www.google.com/calendar/event?eid=NWtjMWNlbHFxaGE4NmpzMGc3ZWFuNWttOGdfMjAyNjA5MTFUMTgwMDAwWiB6b29tNDA3YUBt"
+    }
+   ],
+   "campus": [
+    {
+     "title": "Anno-GSC: Graduate Student Council Open House",
+     "start": "2026-09-11T17:00:00-04:00",
+     "end": "2026-09-11T19:00:00-04:00",
+     "allday": false,
+     "day": "2026-09-11",
+     "location": "Lobdell (W20-208)",
+     "calendar": "GSC Events",
+     "noise": true,
+     "status": "confirmed",
+     "link": "https://www.google.com/calendar/event?eid=XzhkOWxjZ3JmZHByNmFzams3MHAzMmUzNDc0cm04ZTFtNmRoNjRjcjJjOHBtOGMzMzZrbzNlY3I1NzVoM2djYjQ2ZGgwIGY5YWFhOTZjMDRkYTU0NmM5NzY5MmY5YWNiZjAwYjY0YjdlNTVmYjU1MTVlNWQxMDEzM2JmODYwODk5NTg5ZjhAZw"
+    },
+    {
+     "title": "Anno-Extracurricular: Graduate Christian Fellowship (GCF) Welcome Night",
+     "start": "2026-09-11T18:45:00-04:00",
+     "end": "2026-09-11T21:00:00-04:00",
+     "allday": false,
+     "day": "2026-09-11",
+     "location": "W20-301/302",
+     "calendar": "GSC Events",
+     "noise": true,
+     "status": "confirmed",
+     "link": "https://www.google.com/calendar/event?eid=XzhkOWxjZ3JmZHByNmFzams3MG9qNnBiMjcxajZhcDlrY2hoamdlMzZjZ3AzZ2UxcGNncTY4cGo0NnRqNmNkcGdjY3JnIGY5YWFhOTZjMDRkYTU0NmM5NzY5MmY5YWNiZjAwYjY0YjdlNTVmYjU1MTVlNWQxMDEzM2JmODYwODk5NTg5ZjhAZw"
+    },
+    {
+     "title": "Anno-Social: Black Graduate Student Association - First Function",
+     "start": "2026-09-11T19:00:00-04:00",
+     "end": "2026-09-11T22:00:00-04:00",
+     "allday": false,
+     "day": "2026-09-11",
+     "location": "315 Massachusetts Ave, Cambridge, MA",
+     "calendar": "GSC Events",
+     "noise": true,
+     "status": "confirmed",
+     "link": "https://www.google.com/calendar/event?eid=XzhkOWxjZ3JmZHByNmFzams2MHM2OGNwaGNvc202ZTM0NjBwMzZkOW5jY3FtY29yNTY0cTZhcDMxNmtwbTJvajM2Y3MwIGY5YWFhOTZjMDRkYTU0NmM5NzY5MmY5YWNiZjAwYjY0YjdlNTVmYjU1MTVlNWQxMDEzM2JmODYwODk5NTg5ZjhAZw"
+    }
+   ]
+  },
+  {
+   "date": "2026-09-12",
+   "is_today": false,
+   "events": [],
+   "campus": [
+    {
+     "title": "Anno-Orientation: Boston History and Food Tour with ABSK Grad",
+     "start": "2026-09-12T10:10:00-04:00",
+     "end": "2026-09-12T11:10:00-04:00",
+     "allday": false,
+     "day": "2026-09-12",
+     "location": "In front of the MIT Museum (next to the inbound Kendall T stop)",
+     "calendar": "GSC Events",
+     "noise": true,
+     "status": "confirmed",
+     "link": "https://www.google.com/calendar/event?eid=XzhkOWxjZ3JmZHByNmFzams2OWkzZ2QxZzc0c21hcGI0NmdwajJwMWg2Z3BtMnAxazcxaTYyYzlvNmdyNjRjaG42bGdnIGY5YWFhOTZjMDRkYTU0NmM5NzY5MmY5YWNiZjAwYjY0YjdlNTVmYjU1MTVlNWQxMDEzM2JmODYwODk5NTg5ZjhAZw"
+    },
+    {
+     "title": "Anno-Extracurricular: \u201cIs there more to life than ____?\u201d Grad Bible Study and Korean BBQ Dinner",
+     "start": "2026-09-12T19:00:00-04:00",
+     "end": "2026-09-12T20:00:00-04:00",
+     "allday": false,
+     "day": "2026-09-12",
+     "location": "Stata Center, room 155 (32-155)",
+     "calendar": "GSC Events",
+     "noise": true,
+     "status": "confirmed",
+     "link": "https://www.google.com/calendar/event?eid=XzhkOWxjZ3JmZHByNmFzams2c3FqZ2QxaWNnczYyZHBpNzVnajZkajZjY282NmNoaDZrb204ZGhpNmRobWFkcjY2MHNnIGY5YWFhOTZjMDRkYTU0NmM5NzY5MmY5YWNiZjAwYjY0YjdlNTVmYjU1MTVlNWQxMDEzM2JmODYwODk5NTg5ZjhAZw"
+    }
+   ]
+  },
+  {
+   "date": "2026-09-13",
+   "is_today": false,
+   "events": [
+    {
+     "title": "Church Antioch Baptist",
+     "start": "2026-09-13T17:30:00Z",
+     "end": "2026-09-13T19:30:00Z",
+     "allday": false,
+     "day": "2026-09-13",
+     "location": "42.3687397, -71.1798883",
+     "calendar": "MIT Outlook",
+     "noise": false,
+     "status": "confirmed",
+     "link": "https://www.google.com/calendar/event?eid=XzYwcTMwYzFnNjBvMzBlMWk2MG80YWMxZzYwcmo4Z3BsODhyajJjMWg4NHMzNGg5ZzYwczMwYzFnNjBvMzBjMWc3NTEzMGU5bTg1MWphYzIzNjByazhoMWc2NG8zMGMxZzYwbzMwYzFnNjBvMzBjMWc2MG8zMmMxZzYwbzMwYzFnNmQyM2VkaGo4b3NrNmQ5ajhkMTMwZDlrNzUwamljaGg3NHBqOGdpNjhoMGphYzIzNm9xZ18yMDI2MDkxM1QxNzMwMDBaIHBvODgwZnFzcG1ha3EzN2wyZ3M1dGFpMGdlbGE1amV0QGk"
+    },
+    {
+     "title": "MIT/Grad School Discussion",
+     "start": "2026-09-13T18:00:00-04:00",
+     "end": "2026-09-13T18:30:00-04:00",
+     "allday": false,
+     "day": "2026-09-13",
+     "location": "",
+     "calendar": "yohanlim@mit.edu",
+     "noise": false,
+     "status": "confirmed",
+     "link": "https://www.google.com/calendar/event?eid=MTNjM2ZkMmMwZDU4NGZmNmE0ZTI3M2I4MjJmNmViZDkgeW9oYW5saW1AbWl0LmVkdQ"
+    }
+   ],
+   "campus": [
+    {
+     "title": "Anno-GSC: GSC Level99 Natick Outing",
+     "start": "2026-09-13T10:30:00-04:00",
+     "end": "2026-09-13T15:00:00-04:00",
+     "allday": false,
+     "day": "2026-09-13",
+     "location": "Level99, Natick, MA",
+     "calendar": "GSC Events",
+     "noise": true,
+     "status": "confirmed",
+     "link": "https://www.google.com/calendar/event?eid=XzhkOWxjZ3JmZHByNmFzams2c3FqMG9obmM0bzNncGhrY2hpajRkMzRjNHBqaW85aDcwbzNjZGo1NjVpamFjMWhjbGlnIGY5YWFhOTZjMDRkYTU0NmM5NzY5MmY5YWNiZjAwYjY0YjdlNTVmYjU1MTVlNWQxMDEzM2JmODYwODk5NTg5ZjhAZw"
+    }
+   ]
+  },
+  {
+   "date": "2026-09-14",
+   "is_today": false,
+   "events": [
+    {
+     "title": "Menna & Sara",
+     "start": "2026-09-14T10:00:00-04:00",
+     "end": "2026-09-14T11:00:00-04:00",
+     "allday": false,
+     "day": "2026-09-14",
+     "location": "",
+     "calendar": "Conf.Rm 33-407a ESL",
+     "noise": false,
+     "status": "confirmed",
+     "link": "https://www.google.com/calendar/event?eid=MmZnZjQ2Y3A2bXMzamEwa3A0bzdvNzF0NjdfMjAyNjA5MTRUMTQwMDAwWiB6b29tNDA3YUBt"
+    },
+    {
+     "title": "RASCAL(SRW) Into Meeting",
+     "start": "2026-09-14T21:00:00Z",
+     "end": "2026-09-14T22:00:00Z",
+     "allday": false,
+     "day": "2026-09-14",
+     "location": "Microsoft Teams Meeting; 33-218",
+     "calendar": "MIT Outlook",
+     "noise": false,
+     "status": "confirmed",
+     "link": "https://www.google.com/calendar/event?eid=XzYwcTMwYzFnNjBvMzBlMWk2MG80YWMxZzYwcmo4Z3BsODhyajJjMWg4NHMzNGg5ZzYwczMwYzFnNjBvMzBjMWc4OHE0NmNoajhjb2ppZWE2NmQzNDhoMWc2NG8zMGMxZzYwbzMwYzFnNjBvMzBjMWc2MG8zMmMxZzYwbzMwYzFnOG9vM2NncGo2a3FrNGU5bDhrczQyYzFrNzBzNDZjcTE4Y3JqNGNoajZrczNpZzlnNzRzZyBwbzg4MGZxc3BtYWtxMzdsMmdzNXRhaTBnZWxhNWpldEBp"
+    }
+   ],
+   "campus": [
+    {
+     "title": "Anno-Academic-Professional: Application Period for the Fall 2026 Microteaching Track",
+     "start": "2026-09-14",
+     "end": "2026-09-20",
+     "allday": true,
+     "day": "2026-09-14",
+     "location": "",
+     "calendar": "GSC Events",
+     "noise": true,
+     "status": "confirmed",
+     "link": "https://www.google.com/calendar/event?eid=XzhkOWxjZ3JmZHByNmFzamtjOHEzMnAzMjYxaTMwYzM0Nm9vajJwOWo2NHIzaWRyMzY4cjM2ZTFnY2hqM2FvOW82aGhnIGY5YWFhOTZjMDRkYTU0NmM5NzY5MmY5YWNiZjAwYjY0YjdlNTVmYjU1MTVlNWQxMDEzM2JmODYwODk5NTg5ZjhAZw"
+    },
+    {
+     "title": "Anno-Social: Australia and New Zealand Club Meetup",
+     "start": "2026-09-14T17:30:00-04:00",
+     "end": "2026-09-14T19:00:00-04:00",
+     "allday": false,
+     "day": "2026-09-14",
+     "location": "W20-201 (West Lounge, Student Center)",
+     "calendar": "GSC Events",
+     "noise": true,
+     "status": "confirmed",
+     "link": "https://www.google.com/calendar/event?eid=XzhkOWxjZ3JmZHByNmFzams2MHEzNnBobmNjbzM2ZDM2NzVqNjRkaGk2OHFqMm9qM2M0bzZhb3BnYzVpajRlYjM2dGhnIGY5YWFhOTZjMDRkYTU0NmM5NzY5MmY5YWNiZjAwYjY0YjdlNTVmYjU1MTVlNWQxMDEzM2JmODYwODk5NTg5ZjhAZw"
+    }
+   ]
+  }
+ ],
+ "total": 17,
+ "total_campus": 24
+}

@@ -15,16 +15,20 @@
            --ink:#37352f; --dim:#787774; --faint:#9b9a97; }
   }
   *{box-sizing:border-box;margin:0;padding:0}
+  /* RULE 8 — 280..900 px. RULE 1 — type scale is only 10/11/12/13/15/19/30 px.
+     RULE 3 — nothing truncates anywhere: no ellipsis, no nowrap on any
+     course name, event title or note. */
   body{background:var(--bg);color:var(--ink);padding:8px 12px 9px;
+       min-width:280px;max-width:900px;margin:0 auto;
        font:13px/1.4 -apple-system,BlinkMacSystemFont,"Segoe UI",Inter,sans-serif;
        -webkit-font-smoothing:antialiased}
 
-  .hd{display:flex;align-items:baseline;gap:9px;margin-bottom:4px;flex-wrap:nowrap}
+  .hd{display:flex;align-items:baseline;gap:9px;margin-bottom:4px;flex-wrap:wrap}
   .hd .ttl{font-size:10px;color:var(--faint);text-transform:uppercase;
-           letter-spacing:.09em;white-space:nowrap}
+           letter-spacing:.09em}
   .hd .sp{flex:1}
-  .hd .ct{font-size:10px;color:var(--dim);font-variant-numeric:tabular-nums;
-          white-space:nowrap}
+  .hd .ct{font-size:11px;color:var(--dim);font-variant-numeric:tabular-nums;
+          overflow-wrap:anywhere}
   .hd .ct b{color:var(--ink);font-weight:600}
   .hd .ct .dr{color:var(--purple);font-weight:600}
 
@@ -36,6 +40,11 @@
   .lbl.warn{fill:var(--gold)}
   .lbl.ms{fill:var(--ink);font-weight:600}
   .lbl.drop{fill:var(--purple);font-weight:700}
+  /* RULE 6 — a date that is behind you reads as an ACHIEVEMENT: green,
+     struck through, still fully readable ink — never faded to the same
+     grey used for low-priority future items. */
+  .lbl.done{fill:var(--green);text-decoration:line-through;
+            text-decoration-thickness:1px;opacity:1}
   .tick{font-size:10px;fill:var(--faint)}
   .zone{font-size:10px;fill:var(--faint);text-transform:uppercase;letter-spacing:.07em}
   .wkn{font-size:10px;fill:var(--ink);font-weight:600}
@@ -44,13 +53,17 @@
   g.mk:hover .lbl{fill:var(--ink)}
 
   .ft{display:flex;gap:7px;margin-top:5px;flex-wrap:wrap;align-items:stretch}
+  /* RULE 3: chips carry event titles, so they WRAP; they never truncate. */
   .chip{border:1px solid var(--line);border-radius:5px;padding:4px 8px;
-        background:var(--panel);font-size:10px;color:var(--dim);
-        font-variant-numeric:tabular-nums;white-space:nowrap;overflow:visible}
+        background:var(--panel);font-size:11px;color:var(--dim);
+        font-variant-numeric:tabular-nums;overflow-wrap:anywhere;
+        max-width:100%;line-height:1.45}
   .chip b{color:var(--ink);font-weight:600}
   .chip .k{color:var(--faint);text-transform:uppercase;letter-spacing:.07em;
            font-size:10px;margin-right:5px}
   .chip.pk b{color:var(--red)}
+  .chip.un{border-color:var(--purple);border-style:dashed;color:var(--purple)}
+  .chip.un .k{color:var(--purple)}
   .chip.dp{border-color:#5c4a86}
   .chip.dp b{color:var(--purple)}
 
@@ -92,6 +105,14 @@
  * Source of truth: ../data/syllabus.json when present; otherwise the
  * hardcoded Fall 2026 set transcribed from the syllabus PDFs on
  * 2026-09-08. Never crashes if the file is absent.
+ *
+ * FUTURE FEED SLOT: Yohan's Notion "Class Database" (71 session rows,
+ * recently moved under the Academics hub) is NOT exposed as JSON yet.
+ * When it is, fetch it alongside syllabus.json in the Promise.all at
+ * the bottom of this file and merge inside buildMarks(). Rule for that
+ * merge: syllabus.json owns DATES and WEIGHTS; the Notion feed may only
+ * contribute completion status and extra undated session rows. A Notion
+ * row must never supply a date the syllabus does not publish.
  * ================================================================== */
 
 var TODAY_FALLBACK = '2026-09-08';
@@ -145,11 +166,15 @@ function esc(s){
  * drop date override with their own hue so they never read as
  * "just another deadline". */
 function urgency(d){
+  if(d < 0)   return 'var(--green)';   /* RULE 6: behind you = achievement */
   if(d <= 3)  return 'var(--red)';
   if(d <= 14) return 'var(--gold)';
   return 'var(--blue)';
 }
-function urgClass(d){ return d <= 3 ? 'hot' : (d <= 14 ? 'warn' : ''); }
+function urgClass(d){
+  if(d < 0)  return 'done';
+  return d <= 3 ? 'hot' : (d <= 14 ? 'warn' : '');
+}
 
 /* ---------------- weight (size channel) ----------------
  * Radius is linear in percent-of-grade so a 25% paper is visibly
@@ -208,14 +233,18 @@ function assignLanes(marks, minGap){
   return Math.max(1, laneEnd.length);
 }
 
-var TIP = document.getElementById('tip');
+var TIP = (typeof document !== 'undefined' && document.getElementById)
+  ? document.getElementById('tip') : null;
 function showTip(e, m){
+  if(!TIP) return;
   var extra = '';
   if(m.weight != null) extra += '<em>' + m.weight + '% of the grade</em>';
   else if(m.kind === 'grade') extra += '<em>weight not published</em>';
+  else if(m.kind === 'gate')  extra += '<em>not graded, but it gates later work</em>';
   if(m.note) extra += '<em>' + esc(m.note) + '</em>';
   TIP.innerHTML = '<b>' + esc(m.full) + '</b>' +
-    '<em>' + fmtFull(m.ymd) + ' &middot; ' + relTxt(m.days) + '</em>' +
+    '<em>' + fmtFull(m.ymd) + (m.time ? ' ' + esc(m.time) : '') +
+      ' &middot; ' + relTxt(m.days) + '</em>' +
     '<em>' + esc(m.kindTxt) + '</em>' + extra;
   TIP.style.opacity = 1;
   var x = e.clientX + 13, y = e.clientY + 13;
@@ -223,7 +252,7 @@ function showTip(e, m){
   if(y + 96  > window.innerHeight) y = Math.max(4, e.clientY - 96);
   TIP.style.left = x + 'px'; TIP.style.top = y + 'px';
 }
-function hideTip(){ TIP.style.opacity = 0; }
+function hideTip(){ if(TIP) TIP.style.opacity = 0; }
 
 /* ================= data assembly ================= */
 
@@ -274,9 +303,24 @@ function buildMarks(syl, today){
         marks.push({
           ymd:y, days:dayDiff(y, today), kind:'grade', ekind:e.kind || 'work',
           code:e.code || '', weight:(typeof e.weight === 'number' ? e.weight : null),
+          time:e.time || '',   /* RULE 5: syllabus.json stores 24h ("2359") */
           full:(e.code?e.code+' \u00b7 ':'') + (e.name||'Graded work'),
           text:(e.code?e.code+' ':'') + String(e.name||'Graded work').replace(/\s+due$/i,''),
           kindTxt:kindLabel(e.kind||'work'), note:e.note || ''
+        });
+      } else if(e.kind === 'milestone' && !e.time){
+        /* Ungraded but GATING: syllabus.json gives hand-ins no clock time
+         * (16.S896 skills survey, 18 Sep, which gates team assignment),
+         * while sessions you merely attend carry a time range. Missing a
+         * gate costs you as much as missing a graded item, so it belongs
+         * on the runway — drawn hollow because it carries no weight. */
+        if(!y) return;
+        marks.push({
+          ymd:y, days:dayDiff(y, today), kind:'gate', ekind:'milestone',
+          code:e.code || '', weight:null, time:e.time || '',
+          full:(e.code?e.code+' \u00b7 ':'') + (e.name||'Milestone'),
+          text:(e.code?e.code+' ':'') + String(e.name||'Milestone').replace(/\s+due$/i,''),
+          kindTxt:'gate \u00b7 ungraded', note:e.note || ''
         });
       } else if(e.kind === 'admin'){
         if(!y) return;
@@ -340,6 +384,7 @@ function render(syl, tasks, today){
     m.idx = i;
     m.x   = pos(m.days);
     m.col = (m.kind === 'drop')   ? 'var(--purple)'
+          : (m.kind === 'gate')   ? urgency(m.days)
           : (m.kind === 'thesis') ? (m.days <= 14 ? 'var(--red)' : 'var(--gold)')
           : (m.kind === 'admin')  ? 'var(--dim)'
           : urgency(m.days);
@@ -389,8 +434,10 @@ function render(syl, tasks, today){
   ranked.forEach(function(w){ w.peak = (w.n >= 3 && (w.n >= 5 || w.w >= 25)); });
 
   /* ---- layout: lanes decide the height, so nothing is squeezed ---- */
-  var above = marks.filter(function(m){ return m.kind !== 'grade'; });
-  var below = marks.filter(function(m){ return m.kind === 'grade'; });
+  /* Below the axis = things Yohan hands in (graded work + ungraded
+     gates). Above = registrar, term boundaries and thesis spine. */
+  var above = marks.filter(function(m){ return m.kind !== 'grade' && m.kind !== 'gate'; });
+  var below = marks.filter(function(m){ return m.kind === 'grade' || m.kind === 'gate'; });
   var nA = assignLanes(above, 12);
   var nB = assignLanes(below, 11);
 
@@ -488,6 +535,10 @@ function render(syl, tasks, today){
          (H - M.t - M.b + 4).toFixed(1) + '" fill="var(--purple)" opacity="0.13"/>';
     s += '<line x1="' + px.toFixed(1) + '" y1="' + M.t + '" x2="' + px.toFixed(1) +
          '" y2="' + (H - M.b + 4).toFixed(1) + '" stroke="var(--purple)" stroke-width="1.8"/>';
+    /* Named in the chart itself: the drop date is a gate you cannot
+     * mistake for one more deadline dot. */
+    s += '<text class="lbl drop" x="' + (px - 6).toFixed(1) + '" y="' + (M.t + 9) +
+         '" text-anchor="end">DROP DATE ' + fmtDate(dropM.ymd) + '</text>';
   }
 
   /* ---- markers ---- */
@@ -507,6 +558,11 @@ function render(syl, tasks, today){
     if(m.kind === 'admin'){
       return '<rect x="' + (x-3.2).toFixed(1) + '" y="' + (y-3.2).toFixed(1) +
              '" width="6.4" height="6.4" fill="none" stroke="' + m.col + '" stroke-width="1.3"/>';
+    }
+    if(m.kind === 'gate'){   /* ungraded gate: hollow triangle, carries no weight */
+      return '<path d="M' + x.toFixed(1) + ' ' + (y-4.6).toFixed(1) + ' L' + (x+4.6).toFixed(1) +
+             ' ' + (y+3.6).toFixed(1) + ' L' + (x-4.6).toFixed(1) + ' ' + (y+3.6).toFixed(1) +
+             ' Z" fill="none" stroke="' + m.col + '" stroke-width="1.35"/>';
     }
     if(EXAM_KIND[m.ekind]){   /* exams: diamond, sized by weight */
       var e = r + 1.2;
@@ -534,7 +590,7 @@ function render(syl, tasks, today){
     s += '<text class="lbl ' + m.cls + '" x="' + m.x.toFixed(1) + '" y="' + ty.toFixed(1) +
          '" text-anchor="middle">' + esc(m.text) +
          (m.wtxt ? '<tspan fill="var(--ink)" font-weight="600">' + esc(m.wtxt) + '</tspan>' : '') +
-         '<tspan opacity="0.62" font-size="8.5">  ' + m.dtxt + '</tspan></text>';
+         '<tspan opacity="0.62" font-size="10">  ' + m.dtxt + '</tspan></text>';
     s += '</g>';
   }
   above.forEach(function(m){ drawMark(m, -1, 0,      AB_STEM, AB_STEP); });
@@ -543,13 +599,18 @@ function render(syl, tasks, today){
   s += '</svg>';
   root.innerHTML = s;
 
-  /* ---- header counts ---- */
-  var graded90 = below.filter(function(m){ return m.days >= 0 && m.days <= 90; }).length;
-  var thesis   = marks.filter(function(m){ return /THESIS DUE/.test(m.text); })[0];
+  /* ---- header: a sentence, not a scoreboard ----
+   * RULE 4: no vanity counter rows ("N graded in 90d", "N overdue").
+   * The header names the next thing due and the one date that cannot be
+   * missed (drop). Counts live in the skyline, where they mean something. */
+  var nextUp = below.filter(function(m){ return m.days >= 0; })
+                    .sort(function(a,b){ return a.days - b.days; })[0];
   document.getElementById('ct').innerHTML =
-    '<b>' + graded90 + '</b> graded in 90d' +
-    (dropM ? ' \u00b7 <span class="dr">drop in ' + dropM.days + 'd</span>' : '') +
-    (thesis ? ' \u00b7 thesis in <b>' + thesis.days + 'd</b>' : '');
+    (nextUp ? 'next up <b>' + esc(nextUp.full) + '</b> \u00b7 ' + fmtFull(nextUp.ymd) +
+              (nextUp.time ? ' ' + esc(nextUp.time) : '') + ' \u00b7 ' + relTxt(nextUp.days)
+            : 'nothing dated ahead') +
+    (dropM ? ' \u2014 <span class="dr">DROP DATE ' + fmtFull(dropM.ymd) + ', ' +
+             relTxt(dropM.days) + '</span>' : '');
 
   /* ---- footer chips: the two peak weeks, stated in words ---- */
   var peaks = ranked.filter(function(w){ return w.peak; })
@@ -574,9 +635,13 @@ function render(syl, tasks, today){
     ft.push('<div class="chip dp"><span class="k">drop</span><b>' + fmtFull(dropM.ymd) +
             '</b> \u00b7 in ' + dropM.days + 'd \u00b7 last chance to drop a subject</div>');
   }
+  /* RULE 7: never fabricate a date. Anything the syllabus names but does
+   * not date is stated as NOT PUBLISHED, in its own flagged chip, rather
+   * than hidden or dropped onto a guessed position on the axis. */
   if(built.undated.length){
-    ft.push('<div class="chip"><span class="k">undated</span>' +
-            esc(built.undated.join(' \u00b7 ')) + '</div>');
+    ft.push('<div class="chip un"><span class="k">not published</span>' +
+            esc(built.undated.join(' \u00b7 ')) +
+            ' \u00b7 named in the syllabus, no date given \u00b7 not placed on the runway</div>');
   }
   ft.push('<div class="chip"><span class="k">beyond</span>7 May 2027 \u00b7 June degree list ' +
           '\u00b7 in ' + dayDiff('2027-05-07', today) + 'd \u00b7 off-scale</div>');
@@ -638,16 +703,25 @@ function getJSON(u){
   return fetch(u).then(function(r){ return r.ok ? r.json() : null; })
                  .catch(function(){ return null; });
 }
-Promise.all([ getJSON('../data/syllabus.json'), getJSON('../data/tasks.json') ])
-.then(function(a){
-  var tasks = a[1] || {};
-  var today = ymd(tasks.today) || ymd(tasks.generated) || TODAY_FALLBACK;
-  render(a[0], tasks, today);
-})
-.catch(function(err){
-  document.getElementById('root').innerHTML =
-    '<div class="empty">Runway unavailable \u2014 ' + esc(err && err.message) + '</div>';
-});
+/* getJSON('../data/notion-classes.json') slots in here when the feed exists */
+if(typeof document !== 'undefined' && typeof fetch === 'function' &&
+   document.getElementById && document.getElementById('root')){
+  Promise.all([ getJSON('../data/syllabus.json'), getJSON('../data/tasks.json') ])
+  .then(function(a){
+    var tasks = a[1] || {};
+    var today = ymd(tasks.today) || ymd(tasks.generated) || TODAY_FALLBACK;
+    render(a[0], tasks, today);
+  })
+  .catch(function(err){
+    document.getElementById('root').innerHTML =
+      '<div class="empty">Runway unavailable \u2014 ' + esc(err && err.message) + '</div>';
+  });
+}
+
+if(typeof module !== 'undefined' && module.exports){
+  module.exports = { buildMarks:buildMarks, dayDiff:dayDiff, pos:pos, monday:monday,
+                     urgency:urgency, urgClass:urgClass, markR:markR };
+}
 </script>
 </body>
 </html>

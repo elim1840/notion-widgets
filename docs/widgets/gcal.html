@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Google Calendar</title>
+<style>
+  :root{
+    --bg:#191919; --line:#2f2f2f; --hair:#242424;
+    --ink:#e9e9e7; --dim:#9b9a97; --faint:#6f6e6b;
+    --now:#e06c6c; --accent:#5b93d3; --ok:#5fa87a; --warn:#c9a227;
+  }
+  @media (prefers-color-scheme: light){
+    :root{ --bg:#fff; --line:#e6e5e1; --hair:#efeeec;
+           --ink:#37352f; --dim:#787774; --faint:#9b9a97; }
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--bg);color:var(--ink);padding:16px 18px;
+       min-width:280px;max-width:900px;margin:0 auto;
+       font:13px/1.45 -apple-system,BlinkMacSystemFont,"Segoe UI",Inter,sans-serif;
+       -webkit-font-smoothing:antialiased}
+
+  header{display:flex;align-items:flex-end;justify-content:space-between;
+         gap:12px;flex-wrap:wrap;
+         padding-bottom:12px;border-bottom:1px solid var(--line)}
+  .h1{font-size:19px;font-weight:600;letter-spacing:-.02em;line-height:1.1}
+  .h2{font-size:11px;color:var(--dim);text-transform:uppercase;
+      letter-spacing:.1em;margin-top:4px}
+  .clk{font-size:19px;font-weight:600;font-variant-numeric:tabular-nums;
+       line-height:1.1;text-align:right}
+
+  /* Calendar fetch failures are stated on the widget face, never swallowed. */
+  .alert{margin-top:12px;border:1px solid var(--now);border-radius:4px;
+         padding:8px 10px;font-size:12px;color:var(--now)}
+  .alert b{display:block;font-size:11px;text-transform:uppercase;
+           letter-spacing:.08em;margin-bottom:3px}
+
+  .day{margin-top:18px}
+  .dhead{display:flex;align-items:baseline;gap:8px;flex-wrap:wrap;
+         padding-bottom:6px;border-bottom:1px solid var(--line)}
+  .dow{font-size:12px;font-weight:600;text-transform:uppercase;
+       letter-spacing:.1em}
+  .day.today .dow{color:var(--now)}
+  .dat{font-size:11px;color:var(--faint);letter-spacing:.04em}
+
+  .row{display:grid;grid-template-columns:52px 1fr;gap:12px;
+       padding:9px 0;border-bottom:1px solid var(--hair);align-items:start}
+  .row:last-child{border-bottom:0}
+  .row.past{opacity:.55}
+  .t1{font-size:13px;font-weight:600;font-variant-numeric:tabular-nums;
+      letter-spacing:-.01em;line-height:1.3}
+  .t2{font-size:10px;color:var(--faint);font-variant-numeric:tabular-nums;
+      margin-top:1px}
+  .allday{font-size:10px;color:var(--faint);text-transform:uppercase;
+          letter-spacing:.07em;padding-top:2px;line-height:1.3}
+
+  /* Titles WRAP. No nowrap, no ellipsis, ever. */
+  .nm{font-size:13px;font-weight:500;color:inherit;text-decoration:none;
+      display:block;overflow-wrap:anywhere;word-break:break-word;
+      white-space:normal;line-height:1.35}
+  a.nm:hover{text-decoration:underline}
+  .meta{margin-top:3px;display:flex;flex-wrap:wrap;gap:6px;align-items:baseline}
+  .loc{font-size:11px;color:var(--dim);overflow-wrap:anywhere;white-space:normal}
+  .cal{font-size:10px;color:var(--faint);border:1px solid var(--line);
+       border-radius:3px;padding:0 4px;white-space:normal}
+
+  .empty{font-size:12px;color:var(--faint);font-style:italic;padding:8px 0}
+
+  .campus{margin-top:8px}
+  .campus summary{font-size:11px;color:var(--faint);cursor:pointer;
+                  letter-spacing:.04em;padding:4px 0;list-style:none}
+  .campus summary::-webkit-details-marker{display:none}
+  .campus summary::before{content:"▸ ";}
+  .campus[open] summary::before{content:"▾ ";}
+  .campus .row{opacity:.8}
+
+  footer{margin-top:20px;padding-top:9px;border-top:1px solid var(--line);
+         font-size:10px;color:var(--faint);
+         display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap}
+  .srcs{font-size:10px;color:var(--faint);overflow-wrap:anywhere}
+</style>
+</head>
+<body>
+<header>
+  <div><div class="h1" id="h1">Calendar</div><div class="h2" id="h2">google calendar</div></div>
+  <div class="clk" id="clk">----</div>
+</header>
+<div id="alerts"></div>
+<div id="list"></div>
+<footer><span id="gen"></span><span class="srcs" id="srcs"></span></footer>
+
+<script>
+var DOW = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+var MON = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+
+function esc(s){
+  return (s||'').replace(/[<>&"]/g, function(c){
+    return {'<':'&lt;','>':'&gt;','&':'&amp;','"':'&quot;'}[c];
+  });
+}
+
+// Read the wall-clock digits straight off the ISO string. Never new Date()
+// on an event -- that would re-zone Google's already-local times.
+function mins(iso){
+  var m = /T(\d{2}):(\d{2})/.exec(iso||'');
+  return m ? (+m[1])*60 + (+m[2]) : null;
+}
+// MILITARY TIME. 1630, not 4:30pm.
+function hhmm(iso){
+  var m = /T(\d{2}):(\d{2})/.exec(iso||'');
+  return m ? m[1]+m[2] : '';
+}
+function dur(a,b){
+  var s = mins(a), e = mins(b);
+  if(s===null || e===null || e<=s) return '';
+  var d = e-s;
+  if(d < 60) return d+'m';
+  return (d%60) ? Math.floor(d/60)+'h'+(d%60) : Math.floor(d/60)+'h';
+}
+function tick(){
+  var n = new Date();
+  document.getElementById('clk').textContent =
+    String(n.getHours()).padStart(2,'0') + String(n.getMinutes()).padStart(2,'0');
+}
+tick(); setInterval(tick, 20000);
+
+function rowHTML(ev, todayISO, nowM){
+  var allday = ev.allday || mins(ev.start) === null;
+  var s = mins(ev.start), e = mins(ev.end);
+  var past = false;
+  if(ev.day < todayISO) past = true;
+  else if(ev.day === todayISO && !allday){
+    past = (e !== null ? e <= nowM : (s !== null && s + 60 <= nowM));
+  }
+
+  var tcol = allday
+    ? '<div class="allday">All day</div>'
+    : '<div class="t1">' + hhmm(ev.start) + '</div>' +
+      (ev.end ? '<div class="t2">' + hhmm(ev.end) + ' · ' + dur(ev.start, ev.end) + '</div>' : '');
+
+  var meta = [];
+  if(ev.location) meta.push('<span class="loc">' + esc(ev.location) + '</span>');
+  meta.push('<span class="cal">' + esc(ev.calendar) + '</span>');
+
+  var title = esc(ev.title) || '(no title)';
+  var nm = ev.link
+    ? '<a class="nm" href="' + esc(ev.link) + '" target="_blank" rel="noopener">' + title + '</a>'
+    : '<span class="nm">' + title + '</span>';
+
+  return '<div class="row' + (past ? ' past' : '') + '">' +
+           '<div class="tcol">' + tcol + '</div>' +
+           '<div class="body">' + nm +
+             '<div class="meta">' + meta.join('') + '</div>' +
+           '</div>' +
+         '</div>';
+}
+
+function render(d){
+  var todayISO = d.today;
+  var nowM = new Date().getHours()*60 + new Date().getMinutes();
+
+  var t = new Date(todayISO + 'T12:00:00');
+  document.getElementById('h1').textContent = MON[t.getMonth()] + ' ' + t.getDate();
+  document.getElementById('h2').textContent = DOW[t.getDay()] + ' — next 7 days';
+
+  // Rule 7: a calendar that failed to fetch is named on the face.
+  // Zero is never shown as if it were success.
+  var bad = (d.calendars || []).filter(function(c){ return !c.ok; });
+  if(bad.length){
+    document.getElementById('alerts').innerHTML =
+      '<div class="alert"><b>' + bad.length + ' calendar' + (bad.length>1?'s':'') +
+      ' did not load — events below are incomplete</b>' +
+      bad.map(function(c){ return esc(c.name) + ' — ' + esc(c.error || 'unknown error'); }).join('<br>') +
+      '</div>';
+  }
+
+  var out = '';
+  (d.days || []).forEach(function(day){
+    var dt = new Date(day.date + 'T12:00:00');
+    var evs = day.events || [];
+    var campus = day.campus || [];
+    if(!evs.length && !campus.length && !day.is_today) return;
+
+    out += '<div class="day' + (day.is_today ? ' today' : '') + '">' +
+             '<div class="dhead"><span class="dow">' + DOW[dt.getDay()] + '</span>' +
+             '<span class="dat">' + MON[dt.getMonth()] + ' ' + dt.getDate() + '</span></div>';
+
+    if(evs.length){
+      out += evs.map(function(ev){ return rowHTML(ev, todayISO, nowM); }).join('');
+    } else {
+      out += '<div class="empty">nothing scheduled</div>';
+    }
+
+    // GSC Events is ~16 generic campus listings a day. Kept, but folded
+    // away by default so it cannot drown the real calendar.
+    if(campus.length){
+      out += '<details class="campus"><summary>' + campus.length +
+             ' campus event' + (campus.length>1?'s':'') + ' (GSC)</summary>' +
+             campus.map(function(ev){ return rowHTML(ev, todayISO, nowM); }).join('') +
+             '</details>';
+    }
+    out += '</div>';
+  });
+
+  document.getElementById('list').innerHTML =
+    out || '<div class="empty">no events in the next 7 days</div>';
+
+  var live = (d.calendars || []).filter(function(c){ return c.ok && !c.noise && c.count; })
+                                .map(function(c){ return c.name; });
+  document.getElementById('srcs').textContent = live.join(' · ');
+
+  var g = new Date(d.generated);
+  document.getElementById('gen').textContent =
+    'synced ' + String(g.getHours()).padStart(2,'0') + String(g.getMinutes()).padStart(2,'0');
+}
+
+fetch('../data/gcal.json?t=' + Date.now())
+  .then(function(r){
+    if(!r.ok) throw new Error('HTTP ' + r.status);
+    return r.json();
+  })
+  .then(render)
+  .catch(function(err){
+    // Never silently show zero: say the feed itself is down.
+    document.getElementById('alerts').innerHTML =
+      '<div class="alert"><b>Google Calendar feed unavailable</b>' +
+      'gcal.json could not be loaded (' + esc(String(err && err.message)) + '). ' +
+      'This is NOT an empty schedule — run scripts/fetch_gcal.py.</div>';
+  });
+</script>
+</body>
+</html>
