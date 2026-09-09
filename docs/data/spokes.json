@@ -1,6 +1,106 @@
 {
  "classes": [
   {
+   "name": "TSK IDS.412: Read the IDS.412 syllabus before class",
+   "code": "IDS.412",
+   "date": "2026-09-09",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "",
+   "url": "https://app.notion.com/p/TSK-IDS-412-Read-the-IDS-412-syllabus-before-class-3d6ea74eb779810899f7ed1e2e7a1634"
+  },
+  {
+   "name": "TSK 24.133: Print the 24x36 poster before the showcase",
+   "code": "24.133",
+   "date": "2026-09-11",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "",
+   "url": "https://app.notion.com/p/TSK-24-133-Print-the-24x36-poster-before-the-showcase-3d6ea74eb779813885bcd51401eecee1"
+  },
+  {
+   "name": "TSK 24.133: Confirm showcase location and the shareable component upload deadline",
+   "code": "24.133",
+   "date": "2026-09-09",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "",
+   "url": "https://app.notion.com/p/TSK-24-133-Confirm-showcase-location-and-the-shareable-component-upload-deadline-3d6ea74eb77981a69b58f940429d7eae"
+  },
+  {
+   "name": "MTG 24.133 Experiential Ethics: Fall Showcase, poster presentation",
+   "code": "24.133",
+   "date": "2026-09-15",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "",
+   "url": "https://app.notion.com/p/MTG-24-133-Experiential-Ethics-Fall-Showcase-poster-presentation-3d6ea74eb779810ba842fd4d2aaa342b"
+  },
+  {
+   "name": "TSK 16.990: Read the 16.990 Spring 2026 syllabus, prior term, confirm Fall rules in class",
+   "code": "16.990",
+   "date": "2026-09-09",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "",
+   "url": "https://app.notion.com/p/TSK-16-990-Read-the-16-990-Spring-2026-syllabus-prior-term-confirm-Fall-rules-in-class-3d6ea74eb779812e91cecc2e00b50dfd"
+  },
+  {
+   "name": "TSK 16.842: Class overview: 2027 NASA RASC-AL: reference material hosted by 16.842",
+   "code": "16.842",
+   "date": "2026-09-01",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "",
+   "url": "https://app.notion.com/p/TSK-16-842-Class-overview-2027-NASA-RASC-AL-reference-material-hosted-by-16-842-3d6ea74eb77981f99d76c6d243b6eb71"
+  },
+  {
+   "name": "TSK 16.842: Class overview: 16.842: Generative AI (GAI) Policy",
+   "code": "16.842",
+   "date": "2026-09-01",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "",
+   "url": "https://app.notion.com/p/TSK-16-842-Class-overview-16-842-Generative-AI-GAI-Policy-3d6ea74eb779816e901cef782dda92c6"
+  },
+  {
+   "name": "TSK 16.842: Class overview: 16.842 Textbooks & References",
+   "code": "16.842",
+   "date": "2026-09-01",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "",
+   "url": "https://app.notion.com/p/TSK-16-842-Class-overview-16-842-Textbooks-References-3d6ea74eb7798164a5d9d64105747000"
+  },
+  {
+   "name": "TSK 16.842 Fundamentals of Systems Engineering: Syllabus At A Glance",
+   "code": "16.842",
+   "date": "2026-09-15",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "",
+   "url": "https://app.notion.com/p/TSK-16-842-Fundamentals-of-Systems-Engineering-Syllabus-At-A-Glance-3d6ea74eb779811d87a1df5c679c5b92"
+  },
+  {
+   "name": "TSK 14.003: Read the 14.003 syllabus and Class Overview before class",
+   "code": "14.003",
+   "date": "2026-09-09",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "",
+   "url": "https://app.notion.com/p/TSK-14-003-Read-the-14-003-syllabus-and-Class-Overview-before-class-3d6ea74eb77981a98873fe416b077dcb"
+  },
+  {
    "name": "14.003 Microecon & Policy: Exam 03: Lectures 18 to 23, date not yet published",
    "code": "14.003",
    "date": "",
@@ -149,16 +249,6 @@
    "type": "",
    "room": "not published in Canvas; syllabus PDF: 66-168",
    "url": "https://app.notion.com/p/IDS-412-Tech-Policy-Lecture-10-Concepts-Information-asymmetries-and-adverse-selection-3d6ea74eb77981aab0dfc343455f24f4"
-  },
-  {
-   "name": "Template Page",
-   "code": "",
-   "date": "",
-   "due": "",
-   "status": "",
-   "type": "",
-   "room": "",
-   "url": "https://app.notion.com/p/Template-Page-3d6ea74eb77980f2bb8eea40e7a3e8d3"
   },
   {
    "name": "16.842 Systems Eng: Quiz 02: Pre-Readings (handbooks) Week 1 (mandatory) DUE",
