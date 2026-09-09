@@ -1,33 +1,16 @@
 {
- "generated": "2026-09-09T08:57:26-04:00",
+ "generated": "2026-09-09T13:03:37-04:00",
  "today": "2026-09-09",
  "counts": {
   "total": 131,
   "open": 123,
   "done": 8,
-  "today_total": 3,
-  "today_done": 1,
+  "today_total": 2,
+  "today_done": 0,
   "overdue": 20,
   "past_meetings": 34
  },
  "today_items": [
-  {
-   "name": "TSK Call Hilton + Marriott re: hotel night of 7 Nov",
-   "date": "2026-09-09T10:00:00.000-04:00",
-   "end": "2026-09-09T10:30:00.000-04:00",
-   "done": true,
-   "status": "Not Started",
-   "type": "Task",
-   "meeting_type": "Admin",
-   "priority": "",
-   "energy": "",
-   "location": "",
-   "attendees": "",
-   "agenda": "",
-   "link": "",
-   "notes": "Need one night, 7 Nov 2026. Call Hilton and Marriott directly (military/government rate + MIT student rate \u2014 ask for both, they are not always shown online). Location TBD \u2014 confirm which city before calling.",
-   "url": "https://app.notion.com/p/TSK-Call-Hilton-Marriott-re-hotel-night-of-7-Nov-3d3ea74eb77981188812c72df93e6286"
-  },
   {
    "name": "MTG AeroAstro Welcome Back Picnic",
    "date": "2026-09-09T12:00:00.000-04:00",
@@ -441,6 +424,23 @@
    "url": "https://app.notion.com/p/TSK-Submit-petition-to-Rachael-and-Barb-after-registration-3d5ea74eb77981fea210f3384ac44a1f"
   },
   {
+   "name": "MTG IYR dinner shopping run (Costco + H Mart)",
+   "date": "2026-09-10",
+   "end": "",
+   "done": false,
+   "status": "",
+   "type": "Meeting",
+   "meeting_type": "Admin",
+   "priority": "",
+   "energy": "",
+   "location": "Costco \u2192 H Mart",
+   "attendees": "",
+   "agenda": "",
+   "link": "",
+   "notes": "",
+   "url": "https://app.notion.com/p/MTG-IYR-dinner-shopping-run-Costco-H-Mart-3d3ea74eb77981bd9fe3c1440d06b22c"
+  },
+  {
    "name": "TSK Thesis guidelines check: TPP + Institute-wide (before Overleaf)",
    "date": "2026-09-10T09:30:00.000-04:00",
    "end": "2026-09-10T11:00:00.000-04:00",
@@ -473,23 +473,6 @@
    "link": "",
    "notes": "",
    "url": "https://app.notion.com/p/TSK-Dual-degree-petition-ASK-Barb-Rachael-what-it-requires-3d5ea74eb77981bcae7de8c0203cbdb5"
-  },
-  {
-   "name": "MTG IYR dinner shopping run (Costco + H Mart)",
-   "date": "2026-09-10T14:00:00.000-04:00",
-   "end": "2026-09-10T16:00:00.000-04:00",
-   "done": false,
-   "status": "",
-   "type": "Meeting",
-   "meeting_type": "Admin",
-   "priority": "",
-   "energy": "",
-   "location": "Costco \u2192 H Mart",
-   "attendees": "",
-   "agenda": "",
-   "link": "",
-   "notes": "",
-   "url": "https://app.notion.com/p/MTG-IYR-dinner-shopping-run-Costco-H-Mart-3d3ea74eb77981bd9fe3c1440d06b22c"
   },
   {
    "name": "MTG Muddy Charles Pub w/ Dinner",
@@ -679,8 +662,8 @@
   },
   {
    "date": "2026-09-09",
-   "total": 3,
-   "done": 1
+   "total": 2,
+   "done": 0
   }
  ]
 }

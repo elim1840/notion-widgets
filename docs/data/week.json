@@ -1,5 +1,5 @@
 {
- "generated": "2026-09-09T08:57:26-04:00",
+ "generated": "2026-09-09T13:03:37-04:00",
  "today": "2026-09-09",
  "monday": "2026-09-07",
  "days": [
@@ -212,18 +212,6 @@
    "is_today": true,
    "items": [
     {
-     "name": "TSK Call Hilton + Marriott re: hotel night of 7 Nov",
-     "date": "2026-09-09T10:00:00.000-04:00",
-     "end": "2026-09-09T10:30:00.000-04:00",
-     "done": true,
-     "kind": "Admin",
-     "src": "task",
-     "location": "",
-     "type": "Task",
-     "meeting_type": "Admin",
-     "url": "https://app.notion.com/p/TSK-Call-Hilton-Marriott-re-hotel-night-of-7-Nov-3d3ea74eb77981188812c72df93e6286"
-    },
-    {
      "name": "14.003 Microecon & Policy: Lecture 01: Application: Impacts of minimum wage laws on jobs & earnings",
      "date": "2026-09-09T10:30:00.000-04:00",
      "end": "2026-09-09T12:00:00.000-04:00",
@@ -338,6 +326,18 @@
    "is_today": false,
    "items": [
     {
+     "name": "TSK Call Hilton + Marriott re: hotel night of 7 Nov",
+     "date": "2026-09-10T09:00:00.000-04:00",
+     "end": "2026-09-10T09:30:00.000-04:00",
+     "done": true,
+     "kind": "Admin",
+     "src": "task",
+     "location": "",
+     "type": "Task",
+     "meeting_type": "Admin",
+     "url": "https://app.notion.com/p/TSK-Call-Hilton-Marriott-re-hotel-night-of-7-Nov-3d3ea74eb77981188812c72df93e6286"
+    },
+    {
      "name": "TSK Thesis guidelines check: TPP + Institute-wide (before Overleaf)",
      "date": "2026-09-10T09:30:00.000-04:00",
      "end": "2026-09-10T11:00:00.000-04:00",
@@ -362,18 +362,6 @@
      "url": "https://app.notion.com/p/TSK-Dual-degree-petition-ASK-Barb-Rachael-what-it-requires-3d5ea74eb77981bcae7de8c0203cbdb5"
     },
     {
-     "name": "MTG IYR dinner shopping run (Costco + H Mart)",
-     "date": "2026-09-10T14:00:00.000-04:00",
-     "end": "2026-09-10T16:00:00.000-04:00",
-     "done": false,
-     "kind": "Admin",
-     "src": "task",
-     "location": "Costco \u2192 H Mart",
-     "type": "Meeting",
-     "meeting_type": "Admin",
-     "url": "https://app.notion.com/p/MTG-IYR-dinner-shopping-run-Costco-H-Mart-3d3ea74eb77981bd9fe3c1440d06b22c"
-    },
-    {
      "name": "MTG Muddy Charles Pub w/ Dinner",
      "date": "2026-09-10T18:00:00.000-04:00",
      "end": "2026-09-10T19:00:00.000-04:00",
@@ -396,6 +384,18 @@
      "type": "Task",
      "meeting_type": "Admin",
      "url": "https://app.notion.com/p/TSK-Fix-all-Outlook-rules-based-on-sender-3d2ea74eb77981329bbbe979480c3329"
+    },
+    {
+     "name": "MTG IYR dinner shopping run (Costco + H Mart)",
+     "date": "2026-09-10",
+     "end": "",
+     "done": false,
+     "kind": "Admin",
+     "src": "task",
+     "location": "Costco \u2192 H Mart",
+     "type": "Meeting",
+     "meeting_type": "Admin",
+     "url": "https://app.notion.com/p/MTG-IYR-dinner-shopping-run-Costco-H-Mart-3d3ea74eb77981bd9fe3c1440d06b22c"
     }
    ]
   },
