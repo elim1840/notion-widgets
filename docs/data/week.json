@@ -1,6 +1,6 @@
 {
- "generated": "2026-09-08T23:03:00-04:00",
- "today": "2026-09-08",
+ "generated": "2026-09-09T04:06:58-04:00",
+ "today": "2026-09-09",
  "monday": "2026-09-07",
  "days": [
   {
@@ -8,7 +8,7 @@
    "is_today": false,
    "items": [
     {
-     "name": "SERG25 Group Meeting",
+     "name": "MTG SERG25 Group Meeting",
      "date": "2026-09-07T11:00:00.000-04:00",
      "end": "2026-09-07T12:00:00.000-04:00",
      "done": false,
@@ -17,52 +17,52 @@
      "location": "MIT ESL",
      "type": "Meeting",
      "meeting_type": "Research",
-     "url": "https://app.notion.com/p/SERG25-Group-Meeting-3d0ea74eb7798162bcebe255456d142c"
+     "url": "https://app.notion.com/p/MTG-SERG25-Group-Meeting-3d0ea74eb7798162bcebe255456d142c"
     },
     {
-     "name": "Check Merch Store Progress",
+     "name": "TSK Check Merch Store Progress",
      "date": "2026-09-07T12:00:00.000-04:00",
      "end": "2026-09-07T12:15:00.000-04:00",
      "done": false,
      "kind": "Admin",
      "src": "task",
      "location": "",
-     "type": "",
+     "type": "Task",
      "meeting_type": "Admin",
-     "url": "https://app.notion.com/p/Check-Merch-Store-Progress-3d0ea74eb77981ed9118e5c11ce45533"
+     "url": "https://app.notion.com/p/TSK-Check-Merch-Store-Progress-3d0ea74eb77981ed9118e5c11ce45533"
     },
     {
-     "name": "Sign up for MIT makerspace (M1T) training to 3D print",
+     "name": "TSK Sign up for MIT makerspace (M1T) training to 3D print",
      "date": "2026-09-07",
      "end": "",
      "done": false,
      "kind": "Admin",
      "src": "task",
      "location": "",
-     "type": "",
+     "type": "Task",
      "meeting_type": "Admin",
-     "url": "https://app.notion.com/p/Sign-up-for-MIT-makerspace-M1T-training-to-3D-print-3ceea74eb779814fb850c1aa9f739ce1"
+     "url": "https://app.notion.com/p/TSK-Sign-up-for-MIT-makerspace-M1T-training-to-3D-print-3ceea74eb779814fb850c1aa9f739ce1"
     }
    ]
   },
   {
    "date": "2026-09-08",
-   "is_today": true,
+   "is_today": false,
    "items": [
     {
-     "name": "The First Day of Classes breakfast bagel event will actually happen on Wednesday, Sep. 9th from 8am-10am in the large lounge (ground floor) to coincide with MIT's first day of classes! Previ",
+     "name": "MTG The First Day of Classes breakfast bagel event will actually happen on Wednesday, Sep. 9th from 8am-10am in the large lounge (ground floor) to coincide with MIT's first day of classes! Previ",
      "date": "2026-09-08T08:00:00.000-04:00",
      "end": "2026-09-08T10:00:00.000-04:00",
      "done": true,
      "kind": "Meeting",
      "src": "task",
      "location": "",
-     "type": "",
+     "type": "Meeting",
      "meeting_type": "",
-     "url": "https://app.notion.com/p/The-First-Day-of-Classes-breakfast-bagel-event-will-actually-happen-on-Wednesday-Sep-9th-from-8am--3d1ea74eb779814a980cffd6b746aeb7"
+     "url": "https://app.notion.com/p/MTG-The-First-Day-of-Classes-breakfast-bagel-event-will-actually-happen-on-Wednesday-Sep-9th-from--3d1ea74eb779814a980cffd6b746aeb7"
     },
     {
-     "name": "SCUBA \u2014 email PE&W re: swim test (was due 9/4) + waitlist position",
+     "name": "TSK SCUBA: email PE&W re: swim test (was due 9/4) + waitlist position",
      "date": "2026-09-08T09:00:00.000-04:00",
      "end": "2026-09-08T09:15:00.000-04:00",
      "done": false,
@@ -71,22 +71,22 @@
      "location": "",
      "type": "Task",
      "meeting_type": "Admin",
-     "url": "https://app.notion.com/p/SCUBA-email-PE-W-re-swim-test-was-due-9-4-waitlist-position-3d5ea74eb77981bea692e41dfc979c06"
+     "url": "https://app.notion.com/p/TSK-SCUBA-email-PE-W-re-swim-test-was-due-9-4-waitlist-position-3d5ea74eb77981bea692e41dfc979c06"
     },
     {
-     "name": "TPP Mandatory Reorientation",
+     "name": "MTG TPP Mandatory Reorientation",
      "date": "2026-09-08T11:00:00.000-04:00",
      "end": "2026-09-08T12:30:00.000-04:00",
      "done": false,
      "kind": "TPP",
      "src": "task",
      "location": "E18-304",
-     "type": "",
+     "type": "Meeting",
      "meeting_type": "TPP",
-     "url": "https://app.notion.com/p/TPP-Mandatory-Reorientation-3d1ea74eb77981319252d3864a6c8608"
+     "url": "https://app.notion.com/p/MTG-TPP-Mandatory-Reorientation-3d1ea74eb77981319252d3864a6c8608"
     },
     {
-     "name": "Claude Campus Ambassador \u2014 confirm Army + Draper approval BEFORE applying",
+     "name": "TSK Claude Campus Ambassador: confirm Army + Draper approval BEFORE applying",
      "date": "2026-09-08T13:00:00.000-04:00",
      "end": "2026-09-08T13:30:00.000-04:00",
      "done": true,
@@ -95,10 +95,10 @@
      "location": "",
      "type": "Task",
      "meeting_type": "Admin",
-     "url": "https://app.notion.com/p/Claude-Campus-Ambassador-confirm-Army-Draper-approval-BEFORE-applying-3d5ea74eb77981f78144ef6486dbd64a"
+     "url": "https://app.notion.com/p/TSK-Claude-Campus-Ambassador-confirm-Army-Draper-approval-BEFORE-applying-3d5ea74eb77981f78144ef6486dbd64a"
     },
     {
-     "name": "ASK BARB TODAY: when is the TPP thesis proposal due?",
+     "name": "TSK ASK BARB TODAY: when is the TPP thesis proposal due?",
      "date": "2026-09-08T13:10:00.000-04:00",
      "end": "2026-09-08T13:25:00.000-04:00",
      "done": true,
@@ -107,10 +107,10 @@
      "location": "",
      "type": "Task",
      "meeting_type": "Admin",
-     "url": "https://app.notion.com/p/ASK-BARB-TODAY-when-is-the-TPP-thesis-proposal-due-3d5ea74eb77981efa22de5adea2a16bb"
+     "url": "https://app.notion.com/p/TSK-ASK-BARB-TODAY-when-is-the-TPP-thesis-proposal-due-3d5ea74eb77981efa22de5adea2a16bb"
     },
     {
-     "name": "Registering for Classes -- Barb (TPP Lounge)",
+     "name": "MTG Registering for Classes -- Barb (TPP Lounge)",
      "date": "2026-09-08T13:10:00.000-04:00",
      "end": "2026-09-08T13:30:00.000-04:00",
      "done": false,
@@ -119,112 +119,160 @@
      "location": "TPP Lounge",
      "type": "Meeting",
      "meeting_type": "TPP",
-     "url": "https://app.notion.com/p/Registering-for-Classes-Barb-TPP-Lounge-3cdea74eb77981a98e8deb4108dd5559"
+     "url": "https://app.notion.com/p/MTG-Registering-for-Classes-Barb-TPP-Lounge-3cdea74eb77981a98e8deb4108dd5559"
     },
     {
-     "name": "Grad Resource Fair",
+     "name": "MTG Grad Resource Fair",
      "date": "2026-09-08T14:00:00.000-04:00",
      "end": "2026-09-08T15:00:00.000-04:00",
      "done": false,
      "kind": "AeroAstro",
      "src": "task",
      "location": "",
-     "type": "",
+     "type": "Meeting",
      "meeting_type": "AeroAstro",
-     "url": "https://app.notion.com/p/Grad-Resource-Fair-3ceea74eb779810cbf75fca7ea8e115f"
+     "url": "https://app.notion.com/p/MTG-Grad-Resource-Fair-3ceea74eb779810cbf75fca7ea8e115f"
     },
     {
-     "name": "Lobster Roll Outing",
+     "name": "TSK Lobster Roll Outing",
      "date": "2026-09-08T17:00:00.000-04:00",
      "end": "2026-09-08T19:00:00.000-04:00",
      "done": true,
      "kind": "AeroAstro",
      "src": "task",
      "location": "",
-     "type": "",
+     "type": "Task",
      "meeting_type": "AeroAstro",
-     "url": "https://app.notion.com/p/Lobster-Roll-Outing-3ceea74eb77981f18fefd5b0b6e25479"
+     "url": "https://app.notion.com/p/TSK-Lobster-Roll-Outing-3ceea74eb77981f18fefd5b0b6e25479"
     },
     {
-     "name": "Work on Diffraqtion White Paper w/ Charlie - DUE tonight to send",
+     "name": "TSK Work on Diffraqtion White Paper w/ Charlie - DUE tonight to send",
      "date": "2026-09-08T22:00:00.000-04:00",
      "end": "2026-09-08T22:00:00.000-04:00",
      "done": false,
-     "kind": "Meeting",
+     "kind": "Task",
      "src": "task",
      "location": "",
-     "type": "",
+     "type": "Task",
      "meeting_type": "",
-     "url": "https://app.notion.com/p/Work-on-Diffraqtion-White-Paper-w-Charlie-DUE-tonight-to-send-3d2ea74eb779815289aedbbc7c9b40fe"
+     "url": "https://app.notion.com/p/TSK-Work-on-Diffraqtion-White-Paper-w-Charlie-DUE-tonight-to-send-3d2ea74eb779815289aedbbc7c9b40fe"
     },
     {
-     "name": "Offer to start introduction with Dr. Eric Evans",
+     "name": "TSK Offer to start introduction with Dr. Eric Evans",
      "date": "2026-09-08",
      "end": "",
      "done": true,
      "kind": "Dr. Eric Evans (MIT)",
      "src": "task",
      "location": "",
-     "type": "",
+     "type": "Task",
      "meeting_type": "Dr. Eric Evans (MIT)",
-     "url": "https://app.notion.com/p/Offer-to-start-introduction-with-Dr-Eric-Evans-3d2ea74eb779813b9f47c556fffb4b1a"
+     "url": "https://app.notion.com/p/TSK-Offer-to-start-introduction-with-Dr-Eric-Evans-3d2ea74eb779813b9f47c556fffb4b1a"
     },
     {
-     "name": "Reach out to Dr. Tran re: Projects Day",
+     "name": "TSK Reach out to Dr. Tran re: Projects Day",
      "date": "2026-09-08",
      "end": "",
      "done": false,
      "kind": "Research",
      "src": "task",
      "location": "",
-     "type": "",
+     "type": "Task",
      "meeting_type": "Research",
-     "url": "https://app.notion.com/p/Reach-out-to-Dr-Tran-re-Projects-Day-3d2ea74eb779818983d8e1355b7d09f1"
+     "url": "https://app.notion.com/p/TSK-Reach-out-to-Dr-Tran-re-Projects-Day-3d2ea74eb779818983d8e1355b7d09f1"
     },
     {
-     "name": "Reach out to LTC Koban re: SOCOM Ignite",
+     "name": "TSK Reach out to LTC Koban re: SOCOM Ignite",
      "date": "2026-09-08",
      "end": "",
      "done": false,
      "kind": "Military",
      "src": "task",
      "location": "",
-     "type": "",
+     "type": "Task",
      "meeting_type": "Military",
-     "url": "https://app.notion.com/p/Reach-out-to-LTC-Koban-re-SOCOM-Ignite-3d2ea74eb77981b480abeaceefb10133"
+     "url": "https://app.notion.com/p/TSK-Reach-out-to-LTC-Koban-re-SOCOM-Ignite-3d2ea74eb77981b480abeaceefb10133"
     },
     {
-     "name": "Reach out to MAJ Dulce re: ASEM",
+     "name": "TSK Reach out to MAJ Dulce re: ASEM",
      "date": "2026-09-08",
      "end": "",
      "done": false,
      "kind": "Military",
      "src": "task",
      "location": "",
-     "type": "",
+     "type": "Task",
      "meeting_type": "Military",
-     "url": "https://app.notion.com/p/Reach-out-to-MAJ-Dulce-re-ASEM-3d2ea74eb77981949160fe855c5f4bd9"
+     "url": "https://app.notion.com/p/TSK-Reach-out-to-MAJ-Dulce-re-ASEM-3d2ea74eb77981949160fe855c5f4bd9"
     }
    ]
   },
   {
    "date": "2026-09-09",
-   "is_today": false,
+   "is_today": true,
    "items": [
     {
-     "name": "Call Hilton + Marriott re: hotel night of 7 Nov",
+     "name": "TSK Read the 14.003 syllabus and Class Overview before class",
+     "date": "2026-09-09T07:00:00.000-04:00",
+     "end": "2026-09-09T07:45:00.000-04:00",
+     "done": false,
+     "kind": "Task",
+     "src": "task",
+     "location": "",
+     "type": "Task",
+     "meeting_type": "",
+     "url": "https://app.notion.com/p/TSK-Read-the-14-003-syllabus-and-Class-Overview-before-class-3d6ea74eb779815f8bb3e0521607e1e4"
+    },
+    {
+     "name": "TSK Read the IDS.412 syllabus before class",
+     "date": "2026-09-09T07:45:00.000-04:00",
+     "end": "2026-09-09T08:15:00.000-04:00",
+     "done": false,
+     "kind": "Task",
+     "src": "task",
+     "location": "",
+     "type": "Task",
+     "meeting_type": "",
+     "url": "https://app.notion.com/p/TSK-Read-the-IDS-412-syllabus-before-class-3d6ea74eb779815b9790ed1551ffdf58"
+    },
+    {
+     "name": "TSK Read the 16.990 Spring 2026 syllabus, prior term, confirm Fall rules in class",
+     "date": "2026-09-09T08:15:00.000-04:00",
+     "end": "2026-09-09T08:35:00.000-04:00",
+     "done": false,
+     "kind": "Task",
+     "src": "task",
+     "location": "",
+     "type": "Task",
+     "meeting_type": "",
+     "url": "https://app.notion.com/p/TSK-Read-the-16-990-Spring-2026-syllabus-prior-term-confirm-Fall-rules-in-class-3d6ea74eb7798153ba1dde852e6563f3"
+    },
+    {
+     "name": "TSK 24.133: Confirm showcase location and the shareable component upload deadline",
+     "date": "2026-09-09T09:00:00.000-04:00",
+     "end": "2026-09-09T09:15:00.000-04:00",
+     "done": false,
+     "kind": "Task",
+     "src": "task",
+     "location": "",
+     "type": "Task",
+     "meeting_type": "",
+     "url": "https://app.notion.com/p/TSK-24-133-Confirm-showcase-location-and-the-shareable-component-upload-deadline-3d6ea74eb7798105bfc8e32ae1a99edf"
+    },
+    {
+     "name": "TSK Call Hilton + Marriott re: hotel night of 7 Nov",
      "date": "2026-09-09T10:00:00.000-04:00",
      "end": "2026-09-09T10:30:00.000-04:00",
      "done": true,
      "kind": "Admin",
      "src": "task",
      "location": "",
-     "type": "",
+     "type": "Task",
      "meeting_type": "Admin",
-     "url": "https://app.notion.com/p/Call-Hilton-Marriott-re-hotel-night-of-7-Nov-3d3ea74eb77981188812c72df93e6286"
+     "url": "https://app.notion.com/p/TSK-Call-Hilton-Marriott-re-hotel-night-of-7-Nov-3d3ea74eb77981188812c72df93e6286"
     },
     {
-     "name": "14.003 Microecon & Policy: Lecture 01: Minimum wage laws on jobs & earnings",
+     "name": "14.003 Microecon & Policy: Lecture 01: Application: Impacts of minimum wage laws on jobs & earnings",
      "date": "2026-09-09T10:30:00.000-04:00",
      "end": "2026-09-09T12:00:00.000-04:00",
      "done": false,
@@ -233,22 +281,22 @@
      "location": "E51-376",
      "type": "Lecture",
      "meeting_type": "Class",
-     "url": "https://app.notion.com/p/14-003-Microecon-Policy-Lecture-01-Minimum-wage-laws-on-jobs-earnings-3d3ea74eb7798132902de5f43016933e"
+     "url": "https://app.notion.com/p/14-003-Microecon-Policy-Lecture-01-Application-Impacts-of-minimum-wage-laws-on-jobs-earnings-3d3ea74eb7798132902de5f43016933e"
     },
     {
-     "name": "AeroAstro Welcome Back Picnic",
+     "name": "MTG AeroAstro Welcome Back Picnic",
      "date": "2026-09-09T12:00:00.000-04:00",
      "end": "2026-09-09T14:00:00.000-04:00",
      "done": false,
      "kind": "AeroAstro",
      "src": "task",
      "location": "",
-     "type": "",
+     "type": "Meeting",
      "meeting_type": "AeroAstro",
-     "url": "https://app.notion.com/p/AeroAstro-Welcome-Back-Picnic-3ceea74eb7798191b66ad74cbfb1d4a9"
+     "url": "https://app.notion.com/p/MTG-AeroAstro-Welcome-Back-Picnic-3ceea74eb7798191b66ad74cbfb1d4a9"
     },
     {
-     "name": "IDS.412 Tech & Policy: Lecture 01: Introduction & semester overview",
+     "name": "IDS.412 Tech & Policy: Lecture 01: Introduction: Why Science, Technology, & Public Policy?",
      "date": "2026-09-09T13:00:00.000-04:00",
      "end": "2026-09-09T14:30:00.000-04:00",
      "done": false,
@@ -257,7 +305,7 @@
      "location": "66-168",
      "type": "Lecture",
      "meeting_type": "Class",
-     "url": "https://app.notion.com/p/IDS-412-Tech-Policy-Lecture-01-Introduction-semester-overview-3d3ea74eb779814ba901c446cf3cf72b"
+     "url": "https://app.notion.com/p/IDS-412-Tech-Policy-Lecture-01-Introduction-Why-Science-Technology-Public-Policy-3d3ea74eb779814ba901c446cf3cf72b"
     },
     {
      "name": "16.990 Creative Teams: Lecture 01",
@@ -272,7 +320,7 @@
      "url": "https://app.notion.com/p/16-990-Creative-Teams-Lecture-01-3d3ea74eb77981a1bd1fd73f769992b7"
     },
     {
-     "name": "Submit petition to Rachael and Barb (after registration)",
+     "name": "TSK Submit petition to Rachael and Barb (after registration)",
      "date": "2026-09-09T19:45:00.000-04:00",
      "end": "2026-09-09T20:15:00.000-04:00",
      "done": false,
@@ -281,7 +329,7 @@
      "location": "",
      "type": "Task",
      "meeting_type": "TPP",
-     "url": "https://app.notion.com/p/Submit-petition-to-Rachael-and-Barb-after-registration-3d5ea74eb77981fea210f3384ac44a1f"
+     "url": "https://app.notion.com/p/TSK-Submit-petition-to-Rachael-and-Barb-after-registration-3d5ea74eb77981fea210f3384ac44a1f"
     }
    ]
   },
@@ -290,7 +338,7 @@
    "is_today": false,
    "items": [
     {
-     "name": "Thesis guidelines check \u2014 TPP + Institute-wide (before Overleaf)",
+     "name": "TSK Thesis guidelines check: TPP + Institute-wide (before Overleaf)",
      "date": "2026-09-10T09:30:00.000-04:00",
      "end": "2026-09-10T11:00:00.000-04:00",
      "done": false,
@@ -299,10 +347,10 @@
      "location": "",
      "type": "Task",
      "meeting_type": "Admin",
-     "url": "https://app.notion.com/p/Thesis-guidelines-check-TPP-Institute-wide-before-Overleaf-3d5ea74eb7798166967fd41b5132e7d3"
+     "url": "https://app.notion.com/p/TSK-Thesis-guidelines-check-TPP-Institute-wide-before-Overleaf-3d5ea74eb7798166967fd41b5132e7d3"
     },
     {
-     "name": "Dual degree petition \u2014 ASK Barb + Rachael what it requires",
+     "name": "TSK Dual degree petition: ASK Barb + Rachael what it requires",
      "date": "2026-09-10T13:00:00.000-04:00",
      "end": "2026-09-10T13:30:00.000-04:00",
      "done": false,
@@ -311,10 +359,10 @@
      "location": "",
      "type": "Task",
      "meeting_type": "Admin",
-     "url": "https://app.notion.com/p/Dual-degree-petition-ASK-Barb-Rachael-what-it-requires-3d5ea74eb77981bcae7de8c0203cbdb5"
+     "url": "https://app.notion.com/p/TSK-Dual-degree-petition-ASK-Barb-Rachael-what-it-requires-3d5ea74eb77981bcae7de8c0203cbdb5"
     },
     {
-     "name": "IYR dinner shopping run (Costco + H Mart)",
+     "name": "MTG IYR dinner shopping run (Costco + H Mart)",
      "date": "2026-09-10T14:00:00.000-04:00",
      "end": "2026-09-10T16:00:00.000-04:00",
      "done": false,
@@ -323,31 +371,31 @@
      "location": "Costco \u2192 H Mart",
      "type": "Meeting",
      "meeting_type": "Admin",
-     "url": "https://app.notion.com/p/IYR-dinner-shopping-run-Costco-H-Mart-3d3ea74eb77981bd9fe3c1440d06b22c"
+     "url": "https://app.notion.com/p/MTG-IYR-dinner-shopping-run-Costco-H-Mart-3d3ea74eb77981bd9fe3c1440d06b22c"
     },
     {
-     "name": "Muddy Charles Pub w/ Dinner",
+     "name": "MTG Muddy Charles Pub w/ Dinner",
      "date": "2026-09-10T18:00:00.000-04:00",
      "end": "2026-09-10T19:00:00.000-04:00",
      "done": false,
      "kind": "AeroAstro",
      "src": "task",
      "location": "Muddy Charles Pub",
-     "type": "",
+     "type": "Meeting",
      "meeting_type": "AeroAstro",
-     "url": "https://app.notion.com/p/Muddy-Charles-Pub-w-Dinner-3ceea74eb7798193ac66ea9854b26817"
+     "url": "https://app.notion.com/p/MTG-Muddy-Charles-Pub-w-Dinner-3ceea74eb7798193ac66ea9854b26817"
     },
     {
-     "name": "Fix all Outlook rules based on sender",
+     "name": "TSK Fix all Outlook rules based on sender",
      "date": "2026-09-10T19:00:00.000-04:00",
      "end": "2026-09-10T20:00:00.000-04:00",
      "done": false,
      "kind": "Admin",
      "src": "task",
      "location": "",
-     "type": "",
+     "type": "Task",
      "meeting_type": "Admin",
-     "url": "https://app.notion.com/p/Fix-all-Outlook-rules-based-on-sender-3d2ea74eb77981329bbbe979480c3329"
+     "url": "https://app.notion.com/p/TSK-Fix-all-Outlook-rules-based-on-sender-3d2ea74eb77981329bbbe979480c3329"
     }
    ]
   },
@@ -362,22 +410,34 @@
      "done": false,
      "kind": "14.003",
      "src": "class",
-     "location": "E52-164",
+     "location": "E52-164 at 0900, or E51-057 at 1000",
      "type": "Seminar",
      "meeting_type": "Class",
      "url": "https://app.notion.com/p/14-003-Microecon-Policy-Recitation-01-3d3ea74eb77981118fd8da259e02e85c"
     },
     {
-     "name": "Mug Making",
+     "name": "TSK 24.133: Print the 24x36 poster before the showcase",
+     "date": "2026-09-11T10:00:00.000-04:00",
+     "end": "2026-09-11T11:00:00.000-04:00",
+     "done": false,
+     "kind": "Task",
+     "src": "task",
+     "location": "",
+     "type": "Task",
+     "meeting_type": "",
+     "url": "https://app.notion.com/p/TSK-24-133-Print-the-24x36-poster-before-the-showcase-3d6ea74eb779811a9d3fdec57ccd9819"
+    },
+    {
+     "name": "TSK Mug Making",
      "date": "2026-09-11T13:00:00.000-04:00",
      "end": "2026-09-11T14:30:00.000-04:00",
      "done": false,
      "kind": "AeroAstro",
      "src": "task",
      "location": "",
-     "type": "",
+     "type": "Task",
      "meeting_type": "AeroAstro",
-     "url": "https://app.notion.com/p/Mug-Making-3ceea74eb77981feb004f67f59bfc5f1"
+     "url": "https://app.notion.com/p/TSK-Mug-Making-3ceea74eb77981feb004f67f59bfc5f1"
     },
     {
      "name": "16.S896 RASCAL: Lecture 01",
@@ -386,13 +446,13 @@
      "done": false,
      "kind": "16.S896",
      "src": "class",
-     "location": "35-225",
+     "location": "9-354, breakout 33-218",
      "type": "Lecture",
      "meeting_type": "Class",
      "url": "https://app.notion.com/p/16-S896-RASCAL-Lecture-01-3d3ea74eb77981789645cd0634a83f8b"
     },
     {
-     "name": "TPP Retreat Weekend (IYR)",
+     "name": "MTG TPP Retreat Weekend (IYR)",
      "date": "2026-09-11",
      "end": "2026-09-13",
      "done": false,
@@ -401,10 +461,10 @@
      "location": "Camp location TBD (TPP retreat)",
      "type": "Meeting",
      "meeting_type": "TPP",
-     "url": "https://app.notion.com/p/TPP-Retreat-Weekend-IYR-3d3ea74eb77981ae8253dd92b9a15f9f"
+     "url": "https://app.notion.com/p/MTG-TPP-Retreat-Weekend-IYR-3d3ea74eb77981ae8253dd92b9a15f9f"
     },
     {
-     "name": "Apply to Trust Center Startup Pass",
+     "name": "TSK Apply to Trust Center Startup Pass",
      "date": "2026-09-11",
      "end": "",
      "done": false,
@@ -413,31 +473,31 @@
      "location": "",
      "type": "Task",
      "meeting_type": "",
-     "url": "https://app.notion.com/p/Apply-to-Trust-Center-Startup-Pass-3d2ea74eb7798194a1bbce679356d733"
+     "url": "https://app.notion.com/p/TSK-Apply-to-Trust-Center-Startup-Pass-3d2ea74eb7798194a1bbce679356d733"
     },
     {
-     "name": "Meet with MAJ Gramlich",
+     "name": "MTG Meet with MAJ Gramlich",
      "date": "2026-09-11",
      "end": "",
      "done": false,
      "kind": "Military",
      "src": "task",
      "location": "",
-     "type": "",
+     "type": "Meeting",
      "meeting_type": "Military",
-     "url": "https://app.notion.com/p/Meet-with-MAJ-Gramlich-3d2ea74eb77981b4af91e1be0efcf6be"
+     "url": "https://app.notion.com/p/MTG-Meet-with-MAJ-Gramlich-3d2ea74eb77981b4af91e1be0efcf6be"
     },
     {
-     "name": "Brainstorm: GitHub for Lab Management (continuity + security)",
+     "name": "TSK Brainstorm: GitHub for Lab Management (continuity + security)",
      "date": "2026-09-11",
      "end": "",
      "done": false,
      "kind": "Research",
      "src": "task",
      "location": "",
-     "type": "",
+     "type": "Task",
      "meeting_type": "Research",
-     "url": "https://app.notion.com/p/Brainstorm-GitHub-for-Lab-Management-continuity-security-3d2ea74eb77981b2bf66d5d99740d40e"
+     "url": "https://app.notion.com/p/TSK-Brainstorm-GitHub-for-Lab-Management-continuity-security-3d2ea74eb77981b2bf66d5d99740d40e"
     }
    ]
   },
@@ -446,7 +506,7 @@
    "is_today": false,
    "items": [
     {
-     "name": "If no makerspace training spot: cancel digital training signup",
+     "name": "TSK If no makerspace training spot: cancel digital training signup",
      "date": "2026-09-12T10:00:00.000-04:00",
      "end": "2026-09-12T10:15:00.000-04:00",
      "done": false,
@@ -455,22 +515,22 @@
      "location": "",
      "type": "Task",
      "meeting_type": "Admin",
-     "url": "https://app.notion.com/p/If-no-makerspace-training-spot-cancel-digital-training-signup-3d5ea74eb7798177b623c621d79f8b3f"
+     "url": "https://app.notion.com/p/TSK-If-no-makerspace-training-spot-cancel-digital-training-signup-3d5ea74eb7798177b623c621d79f8b3f"
     },
     {
-     "name": "Housewarming Party at Joce's",
+     "name": "MTG Housewarming Party at Joce's",
      "date": "2026-09-12T17:30:00.000-04:00",
      "end": "2026-09-12T19:30:00.000-04:00",
      "done": false,
      "kind": "Meeting",
      "src": "task",
      "location": "Joce's",
-     "type": "",
+     "type": "Meeting",
      "meeting_type": "",
-     "url": "https://app.notion.com/p/Housewarming-Party-at-Joce-s-3ceea74eb77981da84a1ce0a76053c62"
+     "url": "https://app.notion.com/p/MTG-Housewarming-Party-at-Joce-s-3ceea74eb77981da84a1ce0a76053c62"
     },
     {
-     "name": "Claude Campus Ambassador \u2014 HARD DEADLINE 2359 PT",
+     "name": "TSK Claude Campus Ambassador: HARD DEADLINE 2359 PT",
      "date": "2026-09-12",
      "end": "",
      "done": false,
@@ -479,7 +539,7 @@
      "location": "",
      "type": "Task",
      "meeting_type": "Admin",
-     "url": "https://app.notion.com/p/Claude-Campus-Ambassador-HARD-DEADLINE-2359-PT-3d5ea74eb779817881cee0f119bb99ce"
+     "url": "https://app.notion.com/p/TSK-Claude-Campus-Ambassador-HARD-DEADLINE-2359-PT-3d5ea74eb779817881cee0f119bb99ce"
     }
    ]
   },
@@ -488,19 +548,19 @@
    "is_today": false,
    "items": [
     {
-     "name": "Coffee & Thrift Crawl",
+     "name": "MTG Coffee & Thrift Crawl",
      "date": "2026-09-13T12:00:00.000-04:00",
      "end": "2026-09-13T13:00:00.000-04:00",
      "done": false,
      "kind": "AeroAstro",
      "src": "task",
      "location": "",
-     "type": "",
+     "type": "Meeting",
      "meeting_type": "AeroAstro",
-     "url": "https://app.notion.com/p/Coffee-Thrift-Crawl-3ceea74eb779812ea8d7e381c0e2cfcb"
+     "url": "https://app.notion.com/p/MTG-Coffee-Thrift-Crawl-3ceea74eb779812ea8d7e381c0e2cfcb"
     },
     {
-     "name": "Upload thesis template to Overleaf + compile",
+     "name": "TSK Upload thesis template to Overleaf + compile",
      "date": "2026-09-13T14:00:00.000-04:00",
      "end": "2026-09-13T15:00:00.000-04:00",
      "done": false,
@@ -509,10 +569,10 @@
      "location": "",
      "type": "Task",
      "meeting_type": "Research",
-     "url": "https://app.notion.com/p/Upload-thesis-template-to-Overleaf-compile-3d5ea74eb779815ebde5ead418bd2854"
+     "url": "https://app.notion.com/p/TSK-Upload-thesis-template-to-Overleaf-compile-3d5ea74eb779815ebde5ead418bd2854"
     },
     {
-     "name": "Create thesis Overleaf document from official MIT template",
+     "name": "TSK Create thesis Overleaf document from official MIT template",
      "date": "2026-09-13T14:00:00.000-04:00",
      "end": "2026-09-13T15:30:00.000-04:00",
      "done": false,
@@ -521,10 +581,10 @@
      "location": "",
      "type": "Task",
      "meeting_type": "Research",
-     "url": "https://app.notion.com/p/Create-thesis-Overleaf-document-from-official-MIT-template-3d5ea74eb7798139abb7d34f72f0e1fa"
+     "url": "https://app.notion.com/p/TSK-Create-thesis-Overleaf-document-from-official-MIT-template-3d5ea74eb7798139abb7d34f72f0e1fa"
     },
     {
-     "name": "Submit Scholar biography (docx) + headshot (jpeg) survey",
+     "name": "TSK Submit Scholar biography (docx) + headshot (jpeg) survey",
      "date": "2026-09-13T23:59:00.000-04:00",
      "end": "2026-09-14T00:14:00.000-04:00",
      "done": false,
@@ -533,10 +593,10 @@
      "location": "",
      "type": "Task",
      "meeting_type": "Research",
-     "url": "https://app.notion.com/p/Submit-Scholar-biography-docx-headshot-jpeg-survey-3cdea74eb7798140a03dc41b763c0c20"
+     "url": "https://app.notion.com/p/TSK-Submit-Scholar-biography-docx-headshot-jpeg-survey-3cdea74eb7798140a03dc41b763c0c20"
     }
    ]
   }
  ],
- "total": 41
+ "total": 46
 }
