@@ -175,15 +175,27 @@
      survives on a laptop screen and does not rely on distinguishing two
      shades of grey. Only DONE is struck through -- strike-through means
      "finished", never "in the past". */
-  .item.st-done{border-left-color:var(--green)}
+  /* DONE is a RESULT, not a faded leftover. It gets the strongest treatment
+     on the row -- solid green rail, filled check, green tint, readable text --
+     because completion is the one state you want to see from across the room,
+     regardless of what time it happened. Previously it faded to the same grey
+     as an ended meeting, so finishing something looked like it decaying. */
+  .item.st-done{border-left-color:var(--green);border-left-width:3px;
+                background:rgba(95,168,122,.09)}
+  /* Struck, but in READABLE ink -- you should still be able to read what you
+     finished. A 40%-grey strike-through is illegible and reads as discarded. */
   .item.st-done .ntx{text-decoration:line-through;text-decoration-thickness:1px;
-                     color:var(--faint)}
-  .item.st-done .tm .t1{color:var(--faint)}
-  .item.st-done .mk-done{color:var(--green)}
+                     text-decoration-color:rgba(95,168,122,.75);
+                     color:var(--dim)}
+  .item.st-done .tm .t1{color:var(--green)}
+  .item.st-done .tm .t2,.item.st-done .tm .dur{color:var(--green);opacity:.7}
+  /* Filled check: solid green block, white tick. Unmistakable at a glance. */
+  .item.st-done .mk-done{background:var(--green);color:#fff}
+  .item.st-done .dchip{display:inline-flex}
 
   /* ENDED: a meeting that took place. Dimmed, NOT struck -- nothing is owed,
      but you did not "complete" it either. */
-  .item.st-ended{border-left-color:var(--hair);opacity:.55}
+  .item.st-ended{border-left-color:var(--hair);opacity:.5}
   .item.st-ended .mk-ended{color:var(--faint)}
 
   /* MISSED: a task whose time passed with no tick. This is the one that
@@ -194,6 +206,13 @@
   .item.st-missed .tm .t1{color:var(--red)}
 
   .item.st-open{border-left-color:var(--hair)}
+
+  /* "DONE" word chip -- shown only on completed rows. Colour alone is not
+     enough if you are tired or the screen is dim; the word removes all doubt. */
+  .dchip{display:none;align-items:center;font-size:10px;font-weight:700;
+         letter-spacing:.09em;color:var(--green);background:rgba(95,168,122,.16);
+         border-radius:3px;padding:1px 5px;line-height:15px;margin-left:7px;
+         vertical-align:1px;white-space:nowrap}
 
   /* Marker sits in the text flow so wrapped lines indent under the title,
      not under the glyph. */
@@ -344,7 +363,7 @@ function itemHTML(it, nowM){
   return `<${tag}${link} class="${cls}"${hStyle}>
     <div class="tm">${time}${durTxt}</div>
     <div class="bd">
-      <div class="n">${MARK}<span class="ntx">${esc(it.name)}</span></div>
+      <div class="n">${MARK}<span class="ntx">${esc(it.name)}</span><span class="dchip">DONE</span></div>
       ${bits.length?`<div class="meta">${bits.join('')}</div>`:''}
     </div>
   </${tag}>`;

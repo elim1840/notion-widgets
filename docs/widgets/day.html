@@ -156,6 +156,26 @@
   footer{flex:0 0 auto;padding:7px 18px;border-top:1px solid var(--line);
          font-size:10px;color:var(--faint);display:flex;justify-content:space-between;
          gap:10px;font-variant-numeric:tabular-nums}
+
+  /* ---- DONE = RESULT, not decay (matches today.html) ----
+     Completion gets green ink, a readable strike, and a solid rail, so a task
+     finished at 0900 still reads as finished at 2100. Faded grey made
+     completed work look the same as work that merely aged. */
+  .done, .ev.done, .li.done, .agi.done, .cati.done, .ad.done{
+    --doneg:#5fa87a;
+  }
+  .ev.done .lab, .li.done .ln, .agi.done .n2, .cati.done .n, .ad.done{
+    color:#3f7a58 !important;
+    text-decoration-color:rgba(95,168,122,.8) !important;
+    text-decoration-thickness:1px !important;
+  }
+  .ev.done, .li.done, .agi.done, .cati.done{
+    background:rgba(95,168,122,.10) !important;
+    opacity:1 !important;
+  }
+  .li.done, .agi.done, .cati.done{
+    border-left:3px solid #5fa87a !important;
+  }
 </style>
 </head>
 <body>
