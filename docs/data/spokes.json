@@ -1,714 +1,394 @@
 {
  "classes": [
   {
-   "name": "24.134 Experiential Ethics final due",
-   "code": "24.134",
-   "date": "2026-09-04T23:59:00.000-04:00",
-   "due": "",
-   "status": "Not started",
-   "type": "Homework",
-   "room": "",
-   "url": "https://app.notion.com/p/24-134-Experiential-Ethics-final-due-3d5ea74eb7798157bbeddf48ecc792bc"
-  },
-  {
-   "name": "16.842 \u00b7 Session 01 SE Overview & Stakeholders",
+   "name": "16.842 Systems Eng: Lecture 01: SE Overview & Stakeholders",
    "code": "16.842",
    "date": "2026-09-15T11:00:00.000-04:00",
    "due": "",
    "status": "Not started",
    "type": "Lecture",
    "room": "",
-   "url": "https://app.notion.com/p/16-842-Session-01-SE-Overview-Stakeholders-3d5ea74eb77981f4a439f7df80618056"
+   "url": "https://app.notion.com/p/16-842-Systems-Eng-Lecture-01-SE-Overview-Stakeholders-3d5ea74eb77981f4a439f7df80618056"
   },
   {
-   "name": "16.842 \u00b7 Session 02 Requirements & Margins",
+   "name": "16.842 Systems Eng: Lecture 02: Requirements & Margins",
    "code": "16.842",
    "date": "2026-09-22T11:00:00.000-04:00",
    "due": "",
    "status": "Not started",
    "type": "Lecture",
    "room": "",
-   "url": "https://app.notion.com/p/16-842-Session-02-Requirements-Margins-3d5ea74eb77981a48d71fb409da4838b"
+   "url": "https://app.notion.com/p/16-842-Systems-Eng-Lecture-02-Requirements-Margins-3d5ea74eb77981a48d71fb409da4838b"
   },
   {
-   "name": "16.842 \u00b7 Session 03 System Thinking",
+   "name": "16.842 Systems Eng: Lecture 03: System Thinking",
    "code": "16.842",
    "date": "2026-09-29T11:00:00.000-04:00",
    "due": "",
    "status": "Not started",
    "type": "Lecture",
    "room": "",
-   "url": "https://app.notion.com/p/16-842-Session-03-System-Thinking-3d5ea74eb7798194bb20f2f90b0aad55"
+   "url": "https://app.notion.com/p/16-842-Systems-Eng-Lecture-03-System-Thinking-3d5ea74eb7798194bb20f2f90b0aad55"
   },
   {
-   "name": "16.842 \u00b7 Session 04 Concept & Architecture",
+   "name": "16.842 Systems Eng: Lecture 04: Concept & Architecture",
    "code": "16.842",
    "date": "2026-10-06T11:00:00.000-04:00",
    "due": "",
    "status": "Not started",
    "type": "Lecture",
    "room": "",
-   "url": "https://app.notion.com/p/16-842-Session-04-Concept-Architecture-3d5ea74eb779815aaf0ac81e31721838"
+   "url": "https://app.notion.com/p/16-842-Systems-Eng-Lecture-04-Concept-Architecture-3d5ea74eb779815aaf0ac81e31721838"
   },
   {
-   "name": "16.842 \u00b7 Session 05 Modeling, DSM & Trade Space Analysis",
+   "name": "16.842 Systems Eng: Lecture 05: Modeling, DSM & Trade Space Analysis",
    "code": "16.842",
    "date": "2026-10-20T11:00:00.000-04:00",
    "due": "",
    "status": "Not started",
    "type": "Lecture",
    "room": "",
-   "url": "https://app.notion.com/p/16-842-Session-05-Modeling-DSM-Trade-Space-Analysis-3d5ea74eb779816bb3a7da3054862824"
+   "url": "https://app.notion.com/p/16-842-Systems-Eng-Lecture-05-Modeling-DSM-Trade-Space-Analysis-3d5ea74eb779816bb3a7da3054862824"
   },
   {
-   "name": "16.842 \u00b7 Session 06 MDO",
+   "name": "16.842 Systems Eng: Lecture 06: MDO",
    "code": "16.842",
    "date": "2026-10-27T11:00:00.000-04:00",
    "due": "",
    "status": "Not started",
    "type": "Lecture",
    "room": "",
-   "url": "https://app.notion.com/p/16-842-Session-06-MDO-3d5ea74eb779811a9519ec374af5c757"
+   "url": "https://app.notion.com/p/16-842-Systems-Eng-Lecture-06-MDO-3d5ea74eb779811a9519ec374af5c757"
   },
   {
-   "name": "16.842 \u00b7 Session 07 Finance, Budgets & Cost Estimation",
+   "name": "16.842 Systems Eng: Lecture 07: Finance, Budgets & Cost Estimation",
    "code": "16.842",
    "date": "2026-11-03T11:00:00.000-05:00",
    "due": "",
    "status": "Not started",
    "type": "Lecture",
    "room": "",
-   "url": "https://app.notion.com/p/16-842-Session-07-Finance-Budgets-Cost-Estimation-3d5ea74eb779810cb018c43d4a8b743a"
+   "url": "https://app.notion.com/p/16-842-Systems-Eng-Lecture-07-Finance-Budgets-Cost-Estimation-3d5ea74eb779810cb018c43d4a8b743a"
   },
   {
-   "name": "16.842 \u00b7 Session 08 Safety",
+   "name": "16.842 Systems Eng: Lecture 08: Safety",
    "code": "16.842",
    "date": "2026-11-10T11:00:00.000-05:00",
    "due": "",
    "status": "Not started",
    "type": "Lecture",
    "room": "",
-   "url": "https://app.notion.com/p/16-842-Session-08-Safety-3d5ea74eb779817480acc4c484816d1e"
+   "url": "https://app.notion.com/p/16-842-Systems-Eng-Lecture-08-Safety-3d5ea74eb779817480acc4c484816d1e"
   },
   {
-   "name": "16.842 \u00b7 Session 09 Verification, Validation & Risk",
+   "name": "16.842 Systems Eng: Lecture 09: Verification, Validation & Risk",
    "code": "16.842",
    "date": "2026-11-17T11:00:00.000-05:00",
    "due": "",
    "status": "Not started",
    "type": "Lecture",
    "room": "",
-   "url": "https://app.notion.com/p/16-842-Session-09-Verification-Validation-Risk-3d5ea74eb77981fabdbcf97aa927857c"
+   "url": "https://app.notion.com/p/16-842-Systems-Eng-Lecture-09-Verification-Validation-Risk-3d5ea74eb77981fabdbcf97aa927857c"
   },
   {
-   "name": "16.842 \u00b7 Session 10 Integration & Operations",
+   "name": "16.842 Systems Eng: Lecture 10: Integration & Operations",
    "code": "16.842",
    "date": "2026-11-24T11:00:00.000-05:00",
    "due": "",
    "status": "Not started",
    "type": "Lecture",
    "room": "",
-   "url": "https://app.notion.com/p/16-842-Session-10-Integration-Operations-3d5ea74eb77981daa038d458c7e3fdad"
+   "url": "https://app.notion.com/p/16-842-Systems-Eng-Lecture-10-Integration-Operations-3d5ea74eb77981daa038d458c7e3fdad"
   },
   {
-   "name": "16.842 \u00b7 No Class \u2014 MIT Monday Schedule",
+   "name": "16.842 Systems Eng: Session 01: No Class: MIT Monday Schedule",
    "code": "16.842",
    "date": "2026-10-13",
    "due": "",
    "status": "Not started",
    "type": "Project",
    "room": "",
-   "url": "https://app.notion.com/p/16-842-No-Class-MIT-Monday-Schedule-3d5ea74eb77981728f13e402b96fed20"
+   "url": "https://app.notion.com/p/16-842-Systems-Eng-Session-01-No-Class-MIT-Monday-Schedule-3d5ea74eb77981728f13e402b96fed20"
   },
   {
-   "name": "16.842 \u00b7 A1 Team Formation, Stakeholders, ConOps DUE",
+   "name": "16.842 Systems Eng: Assignment 01: A1 Team Formation, Stakeholders, ConOps DUE",
    "code": "16.842",
    "date": "2026-09-28",
    "due": "",
    "status": "Not started",
    "type": "Homework",
    "room": "",
-   "url": "https://app.notion.com/p/16-842-A1-Team-Formation-Stakeholders-ConOps-DUE-3d5ea74eb779817898e2c3426e6ffd5e"
+   "url": "https://app.notion.com/p/16-842-Systems-Eng-Assignment-01-A1-Team-Formation-Stakeholders-ConOps-DUE-3d5ea74eb779817898e2c3426e6ffd5e"
   },
   {
-   "name": "16.842 \u00b7 A2 Requirements Definition & Margins Allocation DUE",
+   "name": "16.842 Systems Eng: Assignment 02: A2 Requirements Definition & Margins Allocation DUE",
    "code": "16.842",
    "date": "2026-10-12",
    "due": "",
    "status": "Not started",
    "type": "Homework",
    "room": "",
-   "url": "https://app.notion.com/p/16-842-A2-Requirements-Definition-Margins-Allocation-DUE-3d5ea74eb77981928598c5541bd55532"
+   "url": "https://app.notion.com/p/16-842-Systems-Eng-Assignment-02-A2-Requirements-Definition-Margins-Allocation-DUE-3d5ea74eb77981928598c5541bd55532"
   },
   {
-   "name": "16.842 \u00b7 A3 System Architecture & Concept Generation DUE",
+   "name": "16.842 Systems Eng: Assignment 03: A3 System Architecture & Concept Generation DUE",
    "code": "16.842",
    "date": "2026-10-26",
    "due": "",
    "status": "Not started",
    "type": "Homework",
    "room": "",
-   "url": "https://app.notion.com/p/16-842-A3-System-Architecture-Concept-Generation-DUE-3d5ea74eb77981f1b413e4eb1ed842ae"
+   "url": "https://app.notion.com/p/16-842-Systems-Eng-Assignment-03-A3-System-Architecture-Concept-Generation-DUE-3d5ea74eb77981f1b413e4eb1ed842ae"
   },
   {
-   "name": "16.842 \u00b7 A4 Trade Space Exploration & Concept Selection DUE",
+   "name": "16.842 Systems Eng: Assignment 04: A4 Trade Space Exploration & Concept Selection DUE",
    "code": "16.842",
    "date": "2026-11-09",
    "due": "",
    "status": "Not started",
    "type": "Homework",
    "room": "",
-   "url": "https://app.notion.com/p/16-842-A4-Trade-Space-Exploration-Concept-Selection-DUE-3d5ea74eb77981eb8a0bd191d27a1e77"
+   "url": "https://app.notion.com/p/16-842-Systems-Eng-Assignment-04-A4-Trade-Space-Exploration-Concept-Selection-DUE-3d5ea74eb77981eb8a0bd191d27a1e77"
   },
   {
-   "name": "16.842 \u00b7 A6 Written Reflective Memo (individual) DUE",
+   "name": "16.842 Systems Eng: Assignment 05: A6 Written Reflective Memo (individual) DUE",
    "code": "16.842",
    "date": "2026-11-16",
    "due": "",
    "status": "Not started",
    "type": "Homework",
    "room": "",
-   "url": "https://app.notion.com/p/16-842-A6-Written-Reflective-Memo-individual-DUE-3d5ea74eb779815d9a25d49f453d942f"
+   "url": "https://app.notion.com/p/16-842-Systems-Eng-Assignment-05-A6-Written-Reflective-Memo-individual-DUE-3d5ea74eb779815d9a25d49f453d942f"
   },
   {
-   "name": "16.842 \u00b7 A5 Final Project Presentation Materials DUE",
+   "name": "16.842 Systems Eng: Presentation 01: A5 Final Project Presentation Materials DUE",
    "code": "16.842",
    "date": "2026-12-07",
    "due": "",
    "status": "Not started",
    "type": "Presentation",
    "room": "",
-   "url": "https://app.notion.com/p/16-842-A5-Final-Project-Presentation-Materials-DUE-3d5ea74eb7798193b3a8cb40ccf07446"
+   "url": "https://app.notion.com/p/16-842-Systems-Eng-Presentation-01-A5-Final-Project-Presentation-Materials-DUE-3d5ea74eb7798193b3a8cb40ccf07446"
   },
   {
-   "name": "16.842 \u00b7 Individual Oral Exam",
+   "name": "16.842 Systems Eng: Exam 01: Individual Oral Exam",
    "code": "16.842",
    "date": "2026-12-01T11:00:00.000-05:00",
    "due": "",
    "status": "Not started",
    "type": "Exam",
    "room": "",
-   "url": "https://app.notion.com/p/16-842-Individual-Oral-Exam-3d5ea74eb779817fa452f3b7379ba5ca"
+   "url": "https://app.notion.com/p/16-842-Systems-Eng-Exam-01-Individual-Oral-Exam-3d5ea74eb779817fa452f3b7379ba5ca"
   },
   {
-   "name": "16.842 \u00b7 Final Team Presentation (30 min)",
+   "name": "16.842 Systems Eng: Presentation 02: Final Team Presentation (30 min)",
    "code": "16.842",
    "date": "2026-12-08T11:00:00.000-05:00",
    "due": "",
    "status": "Not started",
    "type": "Presentation",
    "room": "",
-   "url": "https://app.notion.com/p/16-842-Final-Team-Presentation-30-min-3d5ea74eb77981a9b6bddc00e3609d11"
+   "url": "https://app.notion.com/p/16-842-Systems-Eng-Presentation-02-Final-Team-Presentation-30-min-3d5ea74eb77981a9b6bddc00e3609d11"
   },
   {
-   "name": "16.S896 Competition Info Session (special Mon session)",
+   "name": "16.S896 RASCAL: Lecture 02: Competition Info Session (special Mon session)",
    "code": "16.S896",
    "date": "2026-09-14T17:00:00.000-04:00",
    "due": "",
    "status": "Not started",
    "type": "Lecture",
    "room": "",
-   "url": "https://app.notion.com/p/16-S896-Competition-Info-Session-special-Mon-session-3d5ea74eb7798197a5ffc5497475ca30"
+   "url": "https://app.notion.com/p/16-S896-RASCAL-Lecture-02-Competition-Info-Session-special-Mon-session-3d5ea74eb7798197a5ffc5497475ca30"
   },
   {
-   "name": "16.S896 Skills Survey + Team Pitches Due",
+   "name": "16.S896 RASCAL: Presentation 01: Skills Survey + Team Pitches Due",
    "code": "16.S896",
    "date": "2026-09-18",
    "due": "",
    "status": "Not started",
    "type": "Presentation",
    "room": "",
-   "url": "https://app.notion.com/p/16-S896-Skills-Survey-Team-Pitches-Due-3d5ea74eb77981668e68ecad205e5417"
+   "url": "https://app.notion.com/p/16-S896-RASCAL-Presentation-01-Skills-Survey-Team-Pitches-Due-3d5ea74eb77981668e68ecad205e5417"
   },
   {
-   "name": "16.S896 RASC-AL Notice of Intent Due (optional)",
+   "name": "16.S896 RASCAL: Assignment 01: RASC-AL Notice of Intent Due (optional)",
    "code": "16.S896",
    "date": "2026-10-13",
    "due": "",
    "status": "Not started",
    "type": "Homework",
    "room": "",
-   "url": "https://app.notion.com/p/16-S896-RASC-AL-Notice-of-Intent-Due-optional-3d5ea74eb77981c79bddf15157f21120"
+   "url": "https://app.notion.com/p/16-S896-RASCAL-Assignment-01-RASC-AL-Notice-of-Intent-Due-optional-3d5ea74eb77981c79bddf15157f21120"
   },
   {
-   "name": "16.S896 Concept Review (midterm, 15%)",
+   "name": "16.S896 RASCAL: Presentation 02: Concept Review (midterm, 15%)",
    "code": "16.S896",
    "date": "2026-11-06T15:00:00.000-05:00",
    "due": "",
    "status": "Not started",
    "type": "Presentation",
    "room": "",
-   "url": "https://app.notion.com/p/16-S896-Concept-Review-midterm-15-3d5ea74eb779817d9edff57ab65768a5"
+   "url": "https://app.notion.com/p/16-S896-RASCAL-Presentation-02-Concept-Review-midterm-15-3d5ea74eb779817d9edff57ab65768a5"
   },
   {
-   "name": "16.S896 Draft Proposal/Paper Due (20%)",
+   "name": "16.S896 RASCAL: Assignment 02: Draft Proposal/Paper Due (20%)",
    "code": "16.S896",
    "date": "2026-11-20",
    "due": "",
    "status": "Not started",
    "type": "Homework",
    "room": "",
-   "url": "https://app.notion.com/p/16-S896-Draft-Proposal-Paper-Due-20-3d5ea74eb7798186b383dee4283336db"
+   "url": "https://app.notion.com/p/16-S896-RASCAL-Assignment-02-Draft-Proposal-Paper-Due-20-3d5ea74eb7798186b383dee4283336db"
   },
   {
-   "name": "16.S896 Final Concept Review (external judges, 20%)",
+   "name": "16.S896 RASCAL: Presentation 03: Final Concept Review (external judges, 20%)",
    "code": "16.S896",
    "date": "2026-12-04T15:00:00.000-05:00",
    "due": "",
    "status": "Not started",
    "type": "Presentation",
    "room": "",
-   "url": "https://app.notion.com/p/16-S896-Final-Concept-Review-external-judges-20-3d5ea74eb779811d9e42ce0e0a09fc28"
+   "url": "https://app.notion.com/p/16-S896-RASCAL-Presentation-03-Final-Concept-Review-external-judges-20-3d5ea74eb779811d9e42ce0e0a09fc28"
   },
   {
-   "name": "14.003 Recitation",
+   "name": "14.003 Microecon & Policy: Recitation 01",
    "code": "14.003",
    "date": "2026-09-11T09:00:00.000-04:00",
    "due": "",
    "status": "",
    "type": "Seminar",
    "room": "E52-164",
-   "url": "https://app.notion.com/p/14-003-Recitation-3d3ea74eb77981118fd8da259e02e85c"
+   "url": "https://app.notion.com/p/14-003-Microecon-Policy-Recitation-01-3d3ea74eb77981118fd8da259e02e85c"
   },
   {
-   "name": "14.003 Lecture",
+   "name": "14.003 Microecon & Policy: Lecture 02: Testing theory: the fundamental problem of causal inference",
    "code": "14.003",
    "date": "2026-09-14T10:30:00.000-04:00",
    "due": "",
    "status": "",
    "type": "Lecture",
    "room": "E51-376",
-   "url": "https://app.notion.com/p/14-003-Lecture-3d3ea74eb7798126bf40fb82b778bf4e"
+   "url": "https://app.notion.com/p/14-003-Microecon-Policy-Lecture-02-Testing-theory-the-fundamental-problem-of-causal-inference-3d3ea74eb7798126bf40fb82b778bf4e"
   },
   {
-   "name": "14.003 Lecture",
+   "name": "14.003 Microecon & Policy: Lecture 01: Minimum wage laws on jobs & earnings",
    "code": "14.003",
    "date": "2026-09-09T10:30:00.000-04:00",
    "due": "",
    "status": "",
    "type": "Lecture",
    "room": "E51-376",
-   "url": "https://app.notion.com/p/14-003-Lecture-3d3ea74eb7798132902de5f43016933e"
+   "url": "https://app.notion.com/p/14-003-Microecon-Policy-Lecture-01-Minimum-wage-laws-on-jobs-earnings-3d3ea74eb7798132902de5f43016933e"
   },
   {
-   "name": "14.003 Lecture",
+   "name": "14.003 Microecon & Policy: Lecture 03: Introducing consumer theory",
    "code": "14.003",
    "date": "2026-09-16T10:30:00.000-04:00",
    "due": "",
    "status": "",
    "type": "Lecture",
    "room": "E51-376",
-   "url": "https://app.notion.com/p/14-003-Lecture-3d3ea74eb779813d900dc288693e91d4"
+   "url": "https://app.notion.com/p/14-003-Microecon-Policy-Lecture-03-Introducing-consumer-theory-3d3ea74eb779813d900dc288693e91d4"
   },
   {
-   "name": "6.9270 Lecture",
-   "code": "6.9270",
-   "date": "2026-09-14T16:00:00.000-04:00",
-   "due": "",
-   "status": "",
-   "type": "Lecture",
-   "room": "56-114",
-   "url": "https://app.notion.com/p/6-9270-Lecture-3d3ea74eb779813f8b01ee415d5602b7"
-  },
-  {
-   "name": "IDS.412 Lecture",
+   "name": "IDS.412 Tech & Policy: Lecture 01: Introduction & semester overview",
    "code": "IDS.412",
    "date": "2026-09-09T13:00:00.000-04:00",
    "due": "",
    "status": "",
    "type": "Lecture",
    "room": "66-168",
-   "url": "https://app.notion.com/p/IDS-412-Lecture-3d3ea74eb779814ba901c446cf3cf72b"
+   "url": "https://app.notion.com/p/IDS-412-Tech-Policy-Lecture-01-Introduction-semester-overview-3d3ea74eb779814ba901c446cf3cf72b"
   },
   {
-   "name": "16.987 Seminar",
+   "name": "16.987 Grad Seminar: Seminar 01",
    "code": "16.987",
    "date": "2026-09-14T11:30:00.000-04:00",
    "due": "",
    "status": "",
    "type": "Seminar",
    "room": "37-252",
-   "url": "https://app.notion.com/p/16-987-Seminar-3d3ea74eb77981558a66d8e03fbcb5c5"
+   "url": "https://app.notion.com/p/16-987-Grad-Seminar-Seminar-01-3d3ea74eb77981558a66d8e03fbcb5c5"
   },
   {
-   "name": "IDS.412 Lecture",
+   "name": "IDS.412 Tech & Policy: Lecture 03: Knowledge generation (science & technology policy)",
    "code": "IDS.412",
    "date": "2026-09-16T13:00:00.000-04:00",
    "due": "",
    "status": "",
    "type": "Lecture",
    "room": "66-168",
-   "url": "https://app.notion.com/p/IDS-412-Lecture-3d3ea74eb779815f8390cbf673fa5389"
+   "url": "https://app.notion.com/p/IDS-412-Tech-Policy-Lecture-03-Knowledge-generation-science-technology-policy-3d3ea74eb779815f8390cbf673fa5389"
   },
   {
-   "name": "16.990 Lecture",
+   "name": "16.990 Creative Teams: Lecture 03",
    "code": "16.990",
    "date": "2026-09-16T14:30:00.000-04:00",
    "due": "",
    "status": "",
    "type": "Lecture",
    "room": "9-354",
-   "url": "https://app.notion.com/p/16-990-Lecture-3d3ea74eb77981739594f7c7157aea3a"
+   "url": "https://app.notion.com/p/16-990-Creative-Teams-Lecture-03-3d3ea74eb77981739594f7c7157aea3a"
   },
   {
-   "name": "16.S896 Lecture",
+   "name": "16.S896 RASCAL: Lecture 01",
    "code": "16.S896",
    "date": "2026-09-11T15:00:00.000-04:00",
    "due": "",
    "status": "",
    "type": "Lecture",
    "room": "35-225",
-   "url": "https://app.notion.com/p/16-S896-Lecture-3d3ea74eb77981789645cd0634a83f8b"
+   "url": "https://app.notion.com/p/16-S896-RASCAL-Lecture-01-3d3ea74eb77981789645cd0634a83f8b"
   },
   {
-   "name": "16.990 Lecture",
+   "name": "16.990 Creative Teams: Lecture 01",
    "code": "16.990",
    "date": "2026-09-09T14:30:00.000-04:00",
    "due": "",
    "status": "",
    "type": "Lecture",
    "room": "9-354",
-   "url": "https://app.notion.com/p/16-990-Lecture-3d3ea74eb77981a1bd1fd73f769992b7"
+   "url": "https://app.notion.com/p/16-990-Creative-Teams-Lecture-01-3d3ea74eb77981a1bd1fd73f769992b7"
   },
   {
-   "name": "16.S896 Lecture",
+   "name": "16.S896 RASCAL: Lecture 03",
    "code": "16.S896",
    "date": "2026-09-18T15:00:00.000-04:00",
    "due": "",
    "status": "",
    "type": "Lecture",
    "room": "35-225",
-   "url": "https://app.notion.com/p/16-S896-Lecture-3d3ea74eb77981b29ed3c7fa60b49f11"
+   "url": "https://app.notion.com/p/16-S896-RASCAL-Lecture-03-3d3ea74eb77981b29ed3c7fa60b49f11"
   },
   {
-   "name": "14.003 Recitation",
+   "name": "14.003 Microecon & Policy: Recitation 02",
    "code": "14.003",
    "date": "2026-09-18T09:00:00.000-04:00",
    "due": "",
    "status": "",
    "type": "Seminar",
    "room": "E52-164",
-   "url": "https://app.notion.com/p/14-003-Recitation-3d3ea74eb77981bb82d9d670e305e3d0"
+   "url": "https://app.notion.com/p/14-003-Microecon-Policy-Recitation-02-3d3ea74eb77981bb82d9d670e305e3d0"
   },
   {
-   "name": "IDS.412 Lecture",
+   "name": "IDS.412 Tech & Policy: Lecture 02: Framing: policies, institutions, and markets",
    "code": "IDS.412",
    "date": "2026-09-14T13:00:00.000-04:00",
    "due": "",
    "status": "",
    "type": "Lecture",
    "room": "66-168",
-   "url": "https://app.notion.com/p/IDS-412-Lecture-3d3ea74eb77981d69d4ac5e486eba982"
+   "url": "https://app.notion.com/p/IDS-412-Tech-Policy-Lecture-02-Framing-policies-institutions-and-markets-3d3ea74eb77981d69d4ac5e486eba982"
   },
   {
-   "name": "16.990 Lecture",
+   "name": "16.990 Creative Teams: Lecture 02",
    "code": "16.990",
    "date": "2026-09-14T14:30:00.000-04:00",
    "due": "",
    "status": "",
    "type": "Lecture",
    "room": "9-354",
-   "url": "https://app.notion.com/p/16-990-Lecture-3d3ea74eb77981f5b253e0ac0282c890"
-  },
-  {
-   "name": "Template Page",
-   "code": "24.134",
-   "date": "2026-08-18",
-   "due": "",
-   "status": "",
-   "type": "",
-   "room": "",
-   "url": "https://app.notion.com/p/Template-Page-3c0ea74eb77980e8a94eeabc91e9fdc5"
-  },
-  {
-   "name": "[HW] 24.134 \u2014 Complete pre-reading + assignments (before Week 10)",
-   "code": "24.134",
-   "date": "2026-08-09",
-   "due": "",
-   "status": "Not started",
-   "type": "Homework",
-   "room": "",
-   "url": "https://app.notion.com/p/HW-24-134-Complete-pre-reading-assignments-before-Week-10-49789eb8592640b38b40838499820c17"
-  },
-  {
-   "name": "[HW] 24.134 \u2014 Complete pre-reading + assignments (before Week 9)",
-   "code": "24.134",
-   "date": "2026-08-02",
-   "due": "",
-   "status": "Not started",
-   "type": "Homework",
-   "room": "",
-   "url": "https://app.notion.com/p/HW-24-134-Complete-pre-reading-assignments-before-Week-9-8204f614e8094d95886f096883d057fb"
-  },
-  {
-   "name": "[HW] 24.134 \u2014 Complete pre-reading + assignments (before Week 8)",
-   "code": "24.134",
-   "date": "2026-07-26",
-   "due": "",
-   "status": "Not started",
-   "type": "Homework",
-   "room": "",
-   "url": "https://app.notion.com/p/HW-24-134-Complete-pre-reading-assignments-before-Week-8-2cdf60119e1f4bd5af501961c3c702f2"
-  },
-  {
-   "name": "[HW] 24.134 \u2014 Complete pre-reading + assignments (before Week 7)",
-   "code": "24.134",
-   "date": "2026-07-19",
-   "due": "",
-   "status": "Not started",
-   "type": "Homework",
-   "room": "",
-   "url": "https://app.notion.com/p/HW-24-134-Complete-pre-reading-assignments-before-Week-7-bd484f8bc6b34af2bacaa9e951ea946f"
-  },
-  {
-   "name": "[HW] 24.134 \u2014 Complete pre-reading + assignments (before Week 5)",
-   "code": "24.134",
-   "date": "2026-07-05",
-   "due": "",
-   "status": "Not started",
-   "type": "Homework",
-   "room": "",
-   "url": "https://app.notion.com/p/HW-24-134-Complete-pre-reading-assignments-before-Week-5-4d452ba54695450fbffdccf375ae2c21"
-  },
-  {
-   "name": "[HW] 24.134 \u2014 Complete pre-reading + assignments (before Week 6)",
-   "code": "24.134",
-   "date": "2026-07-12",
-   "due": "",
-   "status": "Not started",
-   "type": "Homework",
-   "room": "",
-   "url": "https://app.notion.com/p/HW-24-134-Complete-pre-reading-assignments-before-Week-6-b72639a7611f4d8d932dd34337eb5269"
-  },
-  {
-   "name": "[HW] 24.134 \u2014 Complete pre-reading + assignments (before Week 4)",
-   "code": "24.134",
-   "date": "2026-06-28",
-   "due": "",
-   "status": "Not started",
-   "type": "Homework",
-   "room": "",
-   "url": "https://app.notion.com/p/HW-24-134-Complete-pre-reading-assignments-before-Week-4-f4277ae492954c1780a36e21d3b12c6e"
-  },
-  {
-   "name": "[HW] 24.134 \u2014 Complete pre-reading + assignments (before Week 2)",
-   "code": "24.134",
-   "date": "2026-06-14",
-   "due": "",
-   "status": "Not started",
-   "type": "Homework",
-   "room": "",
-   "url": "https://app.notion.com/p/HW-24-134-Complete-pre-reading-assignments-before-Week-2-5bcdd49b22e34739a653a471b1286c1f"
-  },
-  {
-   "name": "[HW] 24.134 \u2014 Complete pre-reading + assignments (before Week 3)",
-   "code": "24.134",
-   "date": "2026-06-21",
-   "due": "",
-   "status": "Not started",
-   "type": "Homework",
-   "room": "",
-   "url": "https://app.notion.com/p/HW-24-134-Complete-pre-reading-assignments-before-Week-3-fb747407c2084cb7b087d9e5b9e48b1a"
-  },
-  {
-   "name": "24.134 \u2014 Showcase signup form due",
-   "code": "24.134",
-   "date": "2026-08-15",
-   "due": "",
-   "status": "Not started",
-   "type": "Homework",
-   "room": "",
-   "url": "https://app.notion.com/p/24-134-Showcase-signup-form-due-aa6260dcacc04d488ce7ccacbe34e22b"
-  },
-  {
-   "name": "24.134 \u2014 Meet TF to discuss project idea",
-   "code": "24.134",
-   "date": "2026-07-07",
-   "due": "",
-   "status": "Not started",
-   "type": "Project",
-   "room": "",
-   "url": "https://app.notion.com/p/24-134-Meet-TF-to-discuss-project-idea-36f2bb40626e4ba589beaf79345d2a9a"
-  },
-  {
-   "name": "24.134 \u2014 Ethical Case Study assignment due",
-   "code": "24.134",
-   "date": "2026-06-30T12:30:00.000-04:00",
-   "due": "",
-   "status": "Not started",
-   "type": "Homework",
-   "room": "",
-   "url": "https://app.notion.com/p/24-134-Ethical-Case-Study-assignment-due-1a85798a36c84c63b0d79aa973ce5ca4"
-  },
-  {
-   "name": "24.134 \u2014 Complete Midterm Evaluation Form",
-   "code": "24.134",
-   "date": "2026-07-07",
-   "due": "",
-   "status": "Not started",
-   "type": "Homework",
-   "room": "",
-   "url": "https://app.notion.com/p/24-134-Complete-Midterm-Evaluation-Form-f1ed039186784172a5d32c7a4903ea4e"
-  },
-  {
-   "name": "24.134 \u2014 Advocacy Conversation due",
-   "code": "24.134",
-   "date": "2026-07-21",
-   "due": "",
-   "status": "Not started",
-   "type": "Homework",
-   "room": "",
-   "url": "https://app.notion.com/p/24-134-Advocacy-Conversation-due-ffa210ac625b44f2b2cd8a7010980c51"
-  },
-  {
-   "name": "24.134 \u2014 Workshop project + submit shareable component draft",
-   "code": "24.134",
-   "date": "2026-07-28",
-   "due": "",
-   "status": "Not started",
-   "type": "",
-   "room": "",
-   "url": "https://app.notion.com/p/24-134-Workshop-project-submit-shareable-component-draft-88b822766cb644e5a630854ad7614d10"
-  },
-  {
-   "name": "24.134 \u2014 Fall Showcase",
-   "code": "24.134",
-   "date": "2026-09-16",
-   "due": "",
-   "status": "Not started",
-   "type": "",
-   "room": "",
-   "url": "https://app.notion.com/p/24-134-Fall-Showcase-cf80d7e18d8a433d8d8610269d50e49c"
-  },
-  {
-   "name": "24.134 \u2014 Project Proposal due",
-   "code": "24.134",
-   "date": "2026-07-14",
-   "due": "",
-   "status": "Not started",
-   "type": "Project",
-   "room": "",
-   "url": "https://app.notion.com/p/24-134-Project-Proposal-due-ed06272acd2540a0ba9fa50b45cb9d9c"
-  },
-  {
-   "name": "24.134 \u2014 Submit project to TF + upload shareable component",
-   "code": "24.134",
-   "date": "2026-08-21",
-   "due": "",
-   "status": "Not started",
-   "type": "",
-   "room": "",
-   "url": "https://app.notion.com/p/24-134-Submit-project-to-TF-upload-shareable-component-9b7706085a7b4e94b073b5ecfa4f0317"
-  },
-  {
-   "name": "24.134 \u2014 Week 10: Living in Light of Your Values (Wrap-Up)",
-   "code": "24.134",
-   "date": "2026-08-12",
-   "due": "",
-   "status": "Not started",
-   "type": "Lecture",
-   "room": "",
-   "url": "https://app.notion.com/p/24-134-Week-10-Living-in-Light-of-Your-Values-Wrap-Up-0e188bd001a6431da6cac7b7e8a7a238"
-  },
-  {
-   "name": "24.134 \u2014 Week 9: Ethics at MIT",
-   "code": "24.134",
-   "date": "2026-08-05",
-   "due": "",
-   "status": "Not started",
-   "type": "Lecture",
-   "room": "",
-   "url": "https://app.notion.com/p/24-134-Week-9-Ethics-at-MIT-7e6e1a6c2faf47a5b74e0afb08986530"
-  },
-  {
-   "name": "24.134 \u2014 Week 8: Project Workshop",
-   "code": "24.134",
-   "date": "2026-07-29",
-   "due": "",
-   "status": "Not started",
-   "type": "Lecture",
-   "room": "",
-   "url": "https://app.notion.com/p/24-134-Week-8-Project-Workshop-a3615205c9a648bca4f5f516fade88f5"
-  },
-  {
-   "name": "24.134 \u2014 Week 7: Responsibility and Social Roles",
-   "code": "24.134",
-   "date": "2026-07-22",
-   "due": "",
-   "status": "Not started",
-   "type": "Lecture",
-   "room": "",
-   "url": "https://app.notion.com/p/24-134-Week-7-Responsibility-and-Social-Roles-ab048536cd2d499d9e0957085805b5db"
-  },
-  {
-   "name": "24.134 \u2014 Week 6: Social Structures and Structural Injustice",
-   "code": "24.134",
-   "date": "2026-07-15",
-   "due": "",
-   "status": "Not started",
-   "type": "Lecture",
-   "room": "",
-   "url": "https://app.notion.com/p/24-134-Week-6-Social-Structures-and-Structural-Injustice-e9a95b08e13b4e15856b8596af1edcb3"
-  },
-  {
-   "name": "24.134 \u2014 Week 5: Technology and Justice",
-   "code": "24.134",
-   "date": "2026-07-08",
-   "due": "",
-   "status": "Not started",
-   "type": "Lecture",
-   "room": "",
-   "url": "https://app.notion.com/p/24-134-Week-5-Technology-and-Justice-a1baef8257dc42088f42ff34e9a91188"
-  },
-  {
-   "name": "24.134 \u2014 Week 3: Decision-Making With Stakeholders in Mind (Ethics Protocol)",
-   "code": "24.134",
-   "date": "2026-06-24",
-   "due": "",
-   "status": "Not started",
-   "type": "Lecture",
-   "room": "",
-   "url": "https://app.notion.com/p/24-134-Week-3-Decision-Making-With-Stakeholders-in-Mind-Ethics-Protocol-dd6f3a375d734c25a397aacfe5c48ee0"
-  },
-  {
-   "name": "24.134 \u2014 Week 4: Values in Science and Technology",
-   "code": "24.134",
-   "date": "2026-07-01",
-   "due": "",
-   "status": "Not started",
-   "type": "Lecture",
-   "room": "",
-   "url": "https://app.notion.com/p/24-134-Week-4-Values-in-Science-and-Technology-81679a655d4e4a0295901c7f9acf7f23"
-  },
-  {
-   "name": "24.134 \u2014 Week 1: Introduction \u2014 Ethics of Science and Technology",
-   "code": "24.134",
-   "date": "2026-06-10",
-   "due": "",
-   "status": "Not started",
-   "type": "Lecture",
-   "room": "",
-   "url": "https://app.notion.com/p/24-134-Week-1-Introduction-Ethics-of-Science-and-Technology-de4f1eb6968a43a8b65e6ffa564c7885"
-  },
-  {
-   "name": "24.134 \u2014 Week 2: Effective Altruism",
-   "code": "24.134",
-   "date": "2026-06-17",
-   "due": "",
-   "status": "Not started",
-   "type": "Lecture",
-   "room": "",
-   "url": "https://app.notion.com/p/24-134-Week-2-Effective-Altruism-dd70a677bd7b4bbe889eb37a2623c4ea"
-  },
-  {
-   "name": "24.134 Experiential Ethics",
-   "code": "24.134",
-   "date": "",
-   "due": "",
-   "status": "Not started",
-   "type": "Lecture",
-   "room": "",
-   "url": "https://app.notion.com/p/24-134-Experiential-Ethics-696e9f9a7a8445b787740c028911cf4c"
+   "url": "https://app.notion.com/p/16-990-Creative-Teams-Lecture-02-3d3ea74eb77981f5b253e0ac0282c890"
   }
  ],
  "projects": [

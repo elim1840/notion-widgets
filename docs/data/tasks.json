@@ -1,12 +1,12 @@
 {
- "generated": "2026-09-08T19:30:42-04:00",
+ "generated": "2026-09-08T23:03:00-04:00",
  "today": "2026-09-08",
  "counts": {
-  "total": 166,
-  "open": 160,
-  "done": 6,
+  "total": 165,
+  "open": 157,
+  "done": 8,
   "today_total": 13,
-  "today_done": 3,
+  "today_done": 5,
   "overdue": 19,
   "past_meetings": 30
  },
@@ -83,7 +83,7 @@
    "name": "The First Day of Classes breakfast bagel event will actually happen on Wednesday, Sep. 9th from 8am-10am in the large lounge (ground floor) to coincide with MIT's first day of classes! Previ",
    "date": "2026-09-08T08:00:00.000-04:00",
    "end": "2026-09-08T10:00:00.000-04:00",
-   "done": false,
+   "done": true,
    "status": "Not Started",
    "type": "",
    "meeting_type": "",
@@ -151,7 +151,7 @@
    "name": "ASK BARB TODAY: when is the TPP thesis proposal due?",
    "date": "2026-09-08T13:10:00.000-04:00",
    "end": "2026-09-08T13:25:00.000-04:00",
-   "done": false,
+   "done": true,
    "status": "Not Started",
    "type": "Task",
    "meeting_type": "Admin",
@@ -611,23 +611,6 @@
    "url": "https://app.notion.com/p/Reach-out-to-MAJ-Dulce-re-ASEM-3d2ea74eb77981949160fe855c5f4bd9"
   },
   {
-   "name": "The First Day of Classes breakfast bagel event will actually happen on Wednesday, Sep. 9th from 8am-10am in the large lounge (ground floor) to coincide with MIT's first day of classes! Previ",
-   "date": "2026-09-08T08:00:00.000-04:00",
-   "end": "2026-09-08T10:00:00.000-04:00",
-   "done": false,
-   "status": "Not Started",
-   "type": "",
-   "meeting_type": "",
-   "priority": "",
-   "energy": "",
-   "location": "",
-   "attendees": "",
-   "agenda": "",
-   "link": "",
-   "notes": "Captured from Discord #calendar. https://discord.com/channels/@me/1544494500607696906/1545380228296347658",
-   "url": "https://app.notion.com/p/The-First-Day-of-Classes-breakfast-bagel-event-will-actually-happen-on-Wednesday-Sep-9th-from-8am--3d1ea74eb779814a980cffd6b746aeb7"
-  },
-  {
    "name": "SCUBA \u2014 email PE&W re: swim test (was due 9/4) + waitlist position",
    "date": "2026-09-08T09:00:00.000-04:00",
    "end": "2026-09-08T09:15:00.000-04:00",
@@ -660,23 +643,6 @@
    "link": "",
    "notes": "Mandatory for all returning TPPers. Light lunch served. You are responsible for all information covered.",
    "url": "https://app.notion.com/p/TPP-Mandatory-Reorientation-3d1ea74eb77981319252d3864a6c8608"
-  },
-  {
-   "name": "ASK BARB TODAY: when is the TPP thesis proposal due?",
-   "date": "2026-09-08T13:10:00.000-04:00",
-   "end": "2026-09-08T13:25:00.000-04:00",
-   "done": false,
-   "status": "Not Started",
-   "type": "Task",
-   "meeting_type": "Admin",
-   "priority": "High",
-   "energy": "Errand",
-   "location": "",
-   "attendees": "",
-   "agenda": "You are already meeting Barb at 1310 today for registration. Add this one question - it is time-sensitive in a way the others are not.\n\nTHE QUESTION:\n  'TPP says the thesis proposal goes to the Thesis Committee no later than the start of my final semester. If I'm targeting a February 2027 degree, was that deadline the start of this term? And if I move to June 2027, when would it be?'\n\nWHY IT MATTERS: tpp.mit.edu states the proposal is submitted for review by the TPP Thesis Committee 'no later than the start of the student's final semester at MIT.' If February 2027 is the target, the final semester is Fall 2026, which began 09 Sep - so that deadline may already have passed. If June 2027, the final semester is Spring 2027 and there is comfortable room.\n\nThis one answer determines whether you are behind schedule or fine, and it may force the Feb-vs-June decision earlier than the 29 Sep block.\n\nWHILE YOU HAVE HER, if there is time:\n  - Is there a proposal template or required format?\n  - Does one thesis satisfy both TPP and AeroAstro, or is separate work needed?\n  - What does the dual degree petition actually require - form or memo?\n\nFull checklist: the 'TPP thesis - everything owed, and to whom' page on Home.",
-   "link": "",
-   "notes": "",
-   "url": "https://app.notion.com/p/ASK-BARB-TODAY-when-is-the-TPP-thesis-proposal-due-3d5ea74eb77981efa22de5adea2a16bb"
   },
   {
    "name": "Registering for Classes -- Barb (TPP Lounge)",
@@ -747,21 +713,55 @@
    "url": "https://app.notion.com/p/AeroAstro-Welcome-Back-Picnic-3ceea74eb7798191b66ad74cbfb1d4a9"
   },
   {
-   "name": "Ryan Yong visiting",
-   "date": "2026-09-09T16:00:00.000-04:00",
-   "end": "2026-09-09T20:00:00.000-04:00",
+   "name": "Submit petition to Rachael and Barb (after registration)",
+   "date": "2026-09-09T19:45:00.000-04:00",
+   "end": "2026-09-09T20:15:00.000-04:00",
    "done": false,
    "status": "Not Started",
-   "type": "",
-   "meeting_type": "",
-   "priority": "",
-   "energy": "",
+   "type": "Task",
+   "meeting_type": "TPP",
+   "priority": "High",
+   "energy": "Errand",
    "location": "",
    "attendees": "",
    "agenda": "",
    "link": "",
-   "notes": "Childhood friend visiting.",
-   "url": "https://app.notion.com/p/Ryan-Yong-visiting-3d1ea74eb77981cd8382e163e7dd42e8"
+   "notes": "Submit after the 1310 registration session with Barb (TPP Lounge). Deliver to both Rachael and Barb.",
+   "url": "https://app.notion.com/p/Submit-petition-to-Rachael-and-Barb-after-registration-3d5ea74eb77981fea210f3384ac44a1f"
+  },
+  {
+   "name": "Thesis guidelines check \u2014 TPP + Institute-wide (before Overleaf)",
+   "date": "2026-09-10T09:30:00.000-04:00",
+   "end": "2026-09-10T11:00:00.000-04:00",
+   "done": false,
+   "status": "Not Started",
+   "type": "Task",
+   "meeting_type": "Admin",
+   "priority": "High",
+   "energy": "Shallow",
+   "location": "",
+   "attendees": "",
+   "agenda": "Read the rules BEFORE creating the document, so the Overleaf file is right from the first commit rather than reformatted in January.\n\nTWO LAYERS, and they are different documents:\n\n1. INSTITUTE-WIDE (MIT Libraries, binding on everyone)\n   libraries.mit.edu/distinctive-collections/thesis-specs/\n   Key points already confirmed:\n     - Title page is ALWAYS page 1; every page counted in one consecutive sequence including prefatory material, figures, appendices.\n     - Abstract: 500 words or less, single-spaced, immediately after the title page. Avoid formulas/special characters.\n     - Body may be single, 1.5, or double spaced. Abstract, biography, notes, bibliography, acknowledgements are single-spaced.\n     - NO signature page in the final document - but your DEPARTMENT may require a separate one.\n     - Sans serif font suggested (not required) for readability.\n     - Degree conferral date must read February, May/June, or September only.\n     - Title page and abstract must MATCH the metadata you submit to the Libraries exactly.\n   Spec was revised April 2026 - read the current version, not a cached PDF.\n\n2. DEPARTMENT (TPP and AeroAstro - you are dual, so check BOTH)\n   Ask each program office directly. Departments set their own committee composition, signature page, internal deadlines, and page/chapter conventions, and the Institute page does not cover these.\n   For a DUAL degree the Libraries publish a specific sample title page: 'Dual degree with extra committee members'. Use that one, not the standard example.\n\nQUESTIONS TO GET ANSWERED IN WRITING:\n  - Does TPP have its own thesis format guide or internal deadline earlier than 12 Dec?\n  - For the dual degree, do BOTH departments sign, and how many readers total?\n  - Does either department require a separate signature page?\n  - Is there a TPP-specific abstract or policy-content requirement?\n\nContacts: mit-theses@mit.edu for Institute questions. Barb / Rachael for TPP. AeroAstro grad office for 16.",
+   "link": "",
+   "notes": "",
+   "url": "https://app.notion.com/p/Thesis-guidelines-check-TPP-Institute-wide-before-Overleaf-3d5ea74eb7798166967fd41b5132e7d3"
+  },
+  {
+   "name": "Dual degree petition \u2014 ASK Barb + Rachael what it requires",
+   "date": "2026-09-10T13:00:00.000-04:00",
+   "end": "2026-09-10T13:30:00.000-04:00",
+   "done": false,
+   "status": "Not Started",
+   "type": "Task",
+   "meeting_type": "Admin",
+   "priority": "High",
+   "energy": "Errand",
+   "location": "",
+   "attendees": "",
+   "agenda": "Groundwork call/email BEFORE drafting anything. You cannot write a petition until you know what form it takes.\n\nNOTE: you already meet Barb today (8 Sep, 1310, TPP Lounge) for class registration, and a petition to Rachael and Barb is filed for today at 1600. If the dual-degree petition comes up naturally in either, this task collapses into those - close it and move on.\n\nQUESTIONS:\n  1. Is there a specific dual-degree petition FORM, or is it a written memo?\n  2. Who signs: TPP, AeroAstro, or both? In what order?\n  3. Is there a deadline tied to the degree list you are applying for?\n  4. Does the petition need the thesis topic settled first? (Topic block is 29 Sep - if yes, that ordering matters.)\n  5. Does one thesis satisfy both degrees, or is separate work required?\n  6. Any precedent for TPP + AeroAstro specifically - who has done this before?\n\nQuestion 5 is the one that could change your whole plan. Ask it plainly.",
+   "link": "",
+   "notes": "",
+   "url": "https://app.notion.com/p/Dual-degree-petition-ASK-Barb-Rachael-what-it-requires-3d5ea74eb77981bcae7de8c0203cbdb5"
   }
  ],
  "history": [
@@ -833,7 +833,7 @@
   {
    "date": "2026-09-08",
    "total": 13,
-   "done": 3
+   "done": 5
   }
  ]
 }

@@ -1,5 +1,5 @@
 {
- "generated": "2026-09-08T19:30:42-04:00",
+ "generated": "2026-09-08T23:03:00-04:00",
  "today": "2026-09-08",
  "monday": "2026-09-07",
  "days": [
@@ -53,7 +53,7 @@
      "name": "The First Day of Classes breakfast bagel event will actually happen on Wednesday, Sep. 9th from 8am-10am in the large lounge (ground floor) to coincide with MIT's first day of classes! Previ",
      "date": "2026-09-08T08:00:00.000-04:00",
      "end": "2026-09-08T10:00:00.000-04:00",
-     "done": false,
+     "done": true,
      "kind": "Meeting",
      "src": "task",
      "location": "",
@@ -101,7 +101,7 @@
      "name": "ASK BARB TODAY: when is the TPP thesis proposal due?",
      "date": "2026-09-08T13:10:00.000-04:00",
      "end": "2026-09-08T13:25:00.000-04:00",
-     "done": false,
+     "done": true,
      "kind": "Admin",
      "src": "task",
      "location": "",
@@ -224,7 +224,7 @@
      "url": "https://app.notion.com/p/Call-Hilton-Marriott-re-hotel-night-of-7-Nov-3d3ea74eb77981188812c72df93e6286"
     },
     {
-     "name": "14.003 Lecture",
+     "name": "14.003 Microecon & Policy: Lecture 01: Minimum wage laws on jobs & earnings",
      "date": "2026-09-09T10:30:00.000-04:00",
      "end": "2026-09-09T12:00:00.000-04:00",
      "done": false,
@@ -233,7 +233,7 @@
      "location": "E51-376",
      "type": "Lecture",
      "meeting_type": "Class",
-     "url": "https://app.notion.com/p/14-003-Lecture-3d3ea74eb7798132902de5f43016933e"
+     "url": "https://app.notion.com/p/14-003-Microecon-Policy-Lecture-01-Minimum-wage-laws-on-jobs-earnings-3d3ea74eb7798132902de5f43016933e"
     },
     {
      "name": "AeroAstro Welcome Back Picnic",
@@ -248,7 +248,7 @@
      "url": "https://app.notion.com/p/AeroAstro-Welcome-Back-Picnic-3ceea74eb7798191b66ad74cbfb1d4a9"
     },
     {
-     "name": "IDS.412 Lecture",
+     "name": "IDS.412 Tech & Policy: Lecture 01: Introduction & semester overview",
      "date": "2026-09-09T13:00:00.000-04:00",
      "end": "2026-09-09T14:30:00.000-04:00",
      "done": false,
@@ -257,10 +257,10 @@
      "location": "66-168",
      "type": "Lecture",
      "meeting_type": "Class",
-     "url": "https://app.notion.com/p/IDS-412-Lecture-3d3ea74eb779814ba901c446cf3cf72b"
+     "url": "https://app.notion.com/p/IDS-412-Tech-Policy-Lecture-01-Introduction-semester-overview-3d3ea74eb779814ba901c446cf3cf72b"
     },
     {
-     "name": "16.990 Lecture",
+     "name": "16.990 Creative Teams: Lecture 01",
      "date": "2026-09-09T14:30:00.000-04:00",
      "end": "2026-09-09T16:00:00.000-04:00",
      "done": false,
@@ -269,19 +269,7 @@
      "location": "9-354",
      "type": "Lecture",
      "meeting_type": "Class",
-     "url": "https://app.notion.com/p/16-990-Lecture-3d3ea74eb77981a1bd1fd73f769992b7"
-    },
-    {
-     "name": "Ryan Yong visiting",
-     "date": "2026-09-09T16:00:00.000-04:00",
-     "end": "2026-09-09T20:00:00.000-04:00",
-     "done": false,
-     "kind": "Meeting",
-     "src": "task",
-     "location": "",
-     "type": "",
-     "meeting_type": "",
-     "url": "https://app.notion.com/p/Ryan-Yong-visiting-3d1ea74eb77981cd8382e163e7dd42e8"
+     "url": "https://app.notion.com/p/16-990-Creative-Teams-Lecture-01-3d3ea74eb77981a1bd1fd73f769992b7"
     },
     {
      "name": "Submit petition to Rachael and Barb (after registration)",
@@ -368,7 +356,7 @@
    "is_today": false,
    "items": [
     {
-     "name": "14.003 Recitation",
+     "name": "14.003 Microecon & Policy: Recitation 01",
      "date": "2026-09-11T09:00:00.000-04:00",
      "end": "2026-09-11T10:00:00.000-04:00",
      "done": false,
@@ -377,7 +365,7 @@
      "location": "E52-164",
      "type": "Seminar",
      "meeting_type": "Class",
-     "url": "https://app.notion.com/p/14-003-Recitation-3d3ea74eb77981118fd8da259e02e85c"
+     "url": "https://app.notion.com/p/14-003-Microecon-Policy-Recitation-01-3d3ea74eb77981118fd8da259e02e85c"
     },
     {
      "name": "Mug Making",
@@ -392,7 +380,7 @@
      "url": "https://app.notion.com/p/Mug-Making-3ceea74eb77981feb004f67f59bfc5f1"
     },
     {
-     "name": "16.S896 Lecture",
+     "name": "16.S896 RASCAL: Lecture 01",
      "date": "2026-09-11T15:00:00.000-04:00",
      "end": "2026-09-11T17:00:00.000-04:00",
      "done": false,
@@ -401,7 +389,7 @@
      "location": "35-225",
      "type": "Lecture",
      "meeting_type": "Class",
-     "url": "https://app.notion.com/p/16-S896-Lecture-3d3ea74eb77981789645cd0634a83f8b"
+     "url": "https://app.notion.com/p/16-S896-RASCAL-Lecture-01-3d3ea74eb77981789645cd0634a83f8b"
     },
     {
      "name": "TPP Retreat Weekend (IYR)",
@@ -550,5 +538,5 @@
    ]
   }
  ],
- "total": 42
+ "total": 41
 }
