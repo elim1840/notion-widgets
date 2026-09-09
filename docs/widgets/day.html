@@ -6,9 +6,9 @@
 <title>Day</title>
 <style>
   :root{
-    --bg:#191919; --panel:#202020; --line:#2f2f2f; --hair:#232323;
-    --ink:#e9e9e7; --dim:#9b9a97; --faint:#6f6e6b;
-    --now:#e06c6c; --blue:#5b93d3; --gold:#c9a227; --green:#5fa87a; --purple:#9a6dd7;
+    --bg:#191919; --panel:#202020; --line:#2f2f2f; --hair:#262626;
+    --ink:#e9e9e7; --dim:#9b9a97; --faint:#6b6a67;
+    --now:#e06c6c; --red:#e06c6c; --amber:#c9a227; --blue:#5b93d3; --gold:#c9a227; --green:#5fa87a; --purple:#9a6dd7;
     --gut:54px;             /* left time gutter */
   }
   @media (prefers-color-scheme: light){
@@ -27,7 +27,7 @@
   .dow{font-size:11px;color:var(--dim);text-transform:uppercase;
        letter-spacing:.1em;margin-top:3px}
   .rt{text-align:right}
-  .clk{font-size:22px;font-weight:600;font-variant-numeric:tabular-nums;line-height:1;
+  .clk{font-size:19px;font-weight:600;font-variant-numeric:tabular-nums;line-height:1;
        letter-spacing:-.01em}
   .meta{font-size:11px;color:var(--faint);margin-top:4px;font-variant-numeric:tabular-nums}
 
@@ -138,7 +138,7 @@
   .em{font-size:10px;color:var(--dim);font-variant-numeric:tabular-nums;
       white-space:normal;overflow-wrap:break-word;min-width:0}
   .ev.pt{border-left-style:solid}
-  .ev.pt .em::before{content:"\25C6 ";font-size:7px;vertical-align:1px}
+  .ev.pt .em::before{content:"\25C6 ";font-size:10px;vertical-align:1px}
 
   /* now line - unmistakable, labelled in 24h */
   .nowline{position:absolute;left:calc(var(--gut) - 2px);right:0;height:0;
@@ -172,7 +172,11 @@
   .ev.done, .li.done, .agi.done, .cati.done{
     background:rgba(95,168,122,.10) !important;
     opacity:1 !important;
+    filter:none !important;
   }
+  /* filled check on timeline events too (all-day .ad already has one) */
+  .ev.done .et::before{content:"\2713\00a0";color:#5fa87a;font-weight:700;
+    text-decoration:none;display:inline-block;text-decoration-line:none}
   .li.done, .agi.done, .cati.done{
     border-left:3px solid #5fa87a !important;
   }
@@ -338,17 +342,12 @@ function render(){
   document.getElementById('dnum').textContent = MON[parts[1]-1]+' '+parts[2];
   document.getElementById('dow').textContent  = DOW[dowOf(day.date)] +
     (isToday ? ' · today' : '');
-  const done = items.filter(t=>t.done).length;
-  let sum = `${done}/${items.length} done`;
-  // Overdue = tasks still owed. Past meetings are reported separately,
-  // never added in, because a finished meeting is not a debt.
-  if(isToday && COUNTS){
-    sum += ` · ${COUNTS.open} open · ${COUNTS.overdue} overdue`;
-    if(COUNTS.past_meetings) sum += ` · ${COUNTS.past_meetings} past mtgs`;
-  }
-  else {
+  // No vanity counter row: this header states WHICH day you are looking at,
+  // not a tally of open/overdue/done. Those live in the triage widget.
+  let sum = '';
+  if(!isToday){
     const delta = IDX - TODAY_IDX;
-    sum += delta===0 ? '' : ` · ${delta>0?'+':''}${delta}d`;
+    if(delta!==0) sum = `${delta>0?'+':''}${delta}d from today`;
   }
   document.getElementById('sum').textContent = sum;
   document.getElementById('clk').textContent = clkTxt();

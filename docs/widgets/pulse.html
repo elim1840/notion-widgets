@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Pulse</title>
+<style>
+  :root{
+    --bg:#191919; --panel:#202020; --line:#2f2f2f;
+    --ink:#e9e9e7; --dim:#9b9a97; --accent:#5b93d3; --red:#e06c6c; --warn:#d99b4a;
+  }
+  @media (prefers-color-scheme: light){
+    :root{ --bg:#fff; --panel:#f7f7f5; --line:#e6e5e1; --ink:#37352f; --dim:#787774; }
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--bg);color:var(--ink);padding:12px;
+       font:13px/1.4 -apple-system,BlinkMacSystemFont,"Segoe UI",Inter,sans-serif;
+       -webkit-font-smoothing:antialiased}
+  h1{font-size:10px;color:var(--dim);text-transform:uppercase;letter-spacing:.09em;
+     font-weight:600;margin-bottom:7px}
+  .head{display:flex;align-items:baseline;gap:11px;flex-wrap:wrap}
+  .big{font-size:30px;font-weight:600;line-height:1;letter-spacing:-.02em;
+       font-variant-numeric:tabular-nums}
+  .big.hot{color:var(--red)}
+  .big.unk{color:var(--warn);font-size:19px}
+  .lab{font-size:11px;color:var(--dim);text-transform:uppercase;letter-spacing:.07em;
+       font-weight:600;flex:1;min-width:120px}
+  .caveat{font-size:11px;color:var(--dim);margin-top:5px}
+  .act{margin-top:8px;padding:8px 10px;background:var(--panel);
+       border:1px solid var(--line);border-left:2px solid var(--accent);border-radius:3px}
+  .act .k{font-size:10px;color:var(--dim);text-transform:uppercase;letter-spacing:.07em;
+          font-weight:600;margin-bottom:4px}
+  .act .n{font-size:13px;font-weight:500;overflow-wrap:anywhere}
+  .act .m{font-size:11px;color:var(--dim);margin-top:3px;font-variant-numeric:tabular-nums}
+  .act a{color:var(--accent);text-decoration:none;font-size:11px;font-weight:600;
+         display:inline-block;margin-top:4px}
+  .act a:hover{text-decoration:underline}
+  .ctx{margin-top:8px;border-top:1px solid var(--line);padding-top:6px;
+       display:flex;flex-wrap:wrap;gap:3px 18px}
+  .ctx div{font-size:11px;color:var(--dim);overflow-wrap:anywhere}
+  .ctx b{color:var(--ink);font-weight:600;font-variant-numeric:tabular-nums}
+  .gap{margin-top:6px;font-size:10px;color:var(--warn);overflow-wrap:anywhere}
+  .err{font-size:12px;color:var(--warn);overflow-wrap:anywhere}
+</style>
+</head>
+<body>
+<h1>Thesis Pulse</h1>
+<div id="root"><div class="err">Loading&hellip;</div></div>
+<script>
+/* ---------- pure logic (unit-testable, no DOM) ---------- */
+
+var THESIS_RX = /thesis|dissertation|siddiqi|advisor|maneuver detection|space domain|overleaf|degree list|proposal/i;
+
+function pulseText(o){
+  return [o.name, o.notes, o.agenda, o.meeting_type, o.kind, o.type, o.phase, o.code]
+    .filter(Boolean).join(' ');
+}
+function pulseIsThesis(o){ return THESIS_RX.test(pulseText(o)); }
+function pulseDay(v){ return (v && typeof v === 'string') ? v.slice(0,10) : ''; }
+function pulseHM(v){
+  if(!v || typeof v !== 'string' || v.length < 16 || v.indexOf('T') < 0) return '';
+  return v.slice(11,13) + v.slice(14,16);
+}
+function pulseDiffDays(a, b){ // whole days from a(YYYY-MM-DD) to b
+  return Math.round((Date.parse(b + 'T00:00:00Z') - Date.parse(a + 'T00:00:00Z')) / 86400000);
+}
+
+function computePulse(T, W, S, Y, today){
+  var out = { today: today, errors: [] };
+
+  /* --- collect every thesis-tagged dated item from the task feeds --- */
+  var items = [];
+  function take(arr, src){
+    (arr || []).forEach(function(o){
+      if(!o || !pulseIsThesis(o)) return;
+      var d = pulseDay(o.date || o.due);
+      if(!d) return;
+      items.push({ name:o.name||'(unnamed)', day:d, hm:pulseHM(o.date), done:o.done===true,
+                   url:o.url||'', src:src });
+    });
+  }
+  take(T && T.overdue_items, 'overdue');
+  take(T && T.today_items, 'today');
+  take(T && T.upcoming, 'upcoming');
+  (W && W.days || []).forEach(function(d){ take(d.items, 'week'); });
+
+  // de-duplicate on name+day
+  var seen = {}, uniq = [];
+  items.forEach(function(i){ var k = i.name + '|' + i.day; if(!seen[k]){ seen[k] = 1; uniq.push(i); } });
+  items = uniq;
+  out.thesis_items_found = items.length;
+
+  /* --- HEADLINE: days since a thesis item was last closed --- */
+  var closed = items.filter(function(i){ return i.done && i.day <= today; })
+                    .sort(function(a,b){ return a.day < b.day ? 1 : -1; });
+  var hist = (T && T.history) || [];
+  out.window_start = hist.length ? hist[0].date : null;
+  out.window_days  = out.window_start ? pulseDiffDays(out.window_start, today) : null;
+
+  if(closed.length){
+    out.headline = pulseDiffDays(closed[0].day, today);
+    out.headline_exact = true;
+    out.last_closed = closed[0];
+  } else {
+    out.headline = out.window_days;          // may be null -> unknown
+    out.headline_exact = false;
+    out.last_closed = null;
+  }
+
+  /* --- THE ONE ACTION: longest-ignored open thesis item --- */
+  var open = items.filter(function(i){ return !i.done; })
+                  .sort(function(a,b){ return a.day < b.day ? -1 : (a.day > b.day ? 1 : 0); });
+  out.action = open.length ? open[0] : null;
+  if(out.action) out.action.age = pulseDiffDays(out.action.day, today);
+  out.next_thesis = null;
+  for(var i=0;i<open.length;i++){ if(open[i].day > today){ out.next_thesis = open[i]; break; } }
+
+  /* --- CONTEXT: nearest hard thesis deadline in the syllabus feed --- */
+  var ev = (Y && Y.events) || [];
+  var hard = ev.filter(function(e){
+      return pulseDay(e.date) >= today && /thesis|degree/i.test(pulseText(e));
+    }).sort(function(a,b){ return pulseDay(a.date) < pulseDay(b.date) ? -1 : 1; });
+  out.hard_deadline = hard.length
+    ? { name: hard[0].name || hard[0].note || '(unnamed)', code: hard[0].code || '',
+        day: pulseDay(hard[0].date), days: pulseDiffDays(today, pulseDay(hard[0].date)) }
+    : null;
+
+  /* --- CONTEXT: the next graded coursework that competes for the same hours --- */
+  var graded = ev.filter(function(e){ return e.graded === true && pulseDay(e.date) >= today; })
+                 .sort(function(a,b){ return pulseDay(a.date) < pulseDay(b.date) ? -1 : 1; });
+  out.next_graded = graded.length
+    ? { name: graded[0].name || '(unnamed)', code: graded[0].code || '',
+        day: pulseDay(graded[0].date), hm: pulseHM(graded[0].date) || (graded[0].time || ''),
+        days: pulseDiffDays(today, pulseDay(graded[0].date)) }
+    : null;
+
+  /* --- honest data gaps --- */
+  var gaps = [];
+  if(!items.length) gaps.push('No thesis-tagged item exists anywhere in the task feed.');
+  if(!out.headline_exact && out.window_days == null)
+    gaps.push('No completion history in the feed, so the headline cannot be computed.');
+  var c = Y && Y.counts;
+  if(c && c.courses_without_syllabus)
+    gaps.push(c.courses_without_syllabus + ' of ' + c.courses + ' course syllabi not loaded — those deadlines are invisible here.');
+  if(!out.hard_deadline) gaps.push('No dated thesis/degree deadline in the syllabus feed.');
+  var gen = pulseDay(T && T.generated);
+  if(gen && gen < today) gaps.push('Task data was generated ' + gen + ', not today.');
+  out.gaps = gaps;
+
+  return out;
+}
+
+/* ---------- render ---------- */
+function pulseStamp(day, hm){ return hm ? (day + ' ' + hm) : day; }
+
+function renderPulse(p){
+  var h = '';
+  var n = p.headline;
+  if(n == null){
+    h += '<div class="head"><div class="big unk">NO DATA</div>' +
+         '<div class="lab">days since a thesis item was closed</div></div>' +
+         '<div class="caveat">The feed carries no completion history, so this number cannot be computed. Do not read it as zero.</div>';
+  } else {
+    var cls = 'big' + (n >= 7 ? ' hot' : '');
+    h += '<div class="head"><div class="' + cls + '">' + (p.headline_exact ? '' : '&ge;') + n + '</div>' +
+         '<div class="lab">days since a thesis item was closed</div></div>';
+    h += '<div class="caveat">' + (p.headline_exact
+        ? ('Last closed: ' + p.last_closed.name + ' (' + p.last_closed.day + ').')
+        : ('None closed in the ' + p.window_days + ' days of history held (since ' +
+           p.window_start + '); true figure may be larger.'))
+      + '</div>';
+  }
+
+  if(p.action){
+    h += '<div class="act"><div class="k">Move this one today</div>' +
+         '<div class="n">' + p.action.name + '</div>' +
+         '<div class="m">' + pulseStamp(p.action.day, p.action.hm) +
+           (p.action.age > 0 ? ' &middot; sat ' + p.action.age + (p.action.age === 1 ? ' day' : ' days') : ' &middot; today') +
+         '</div>' +
+         (p.action.url ? '<a href="' + p.action.url + '" target="_blank" rel="noopener">Open in Notion &rarr;</a>' : '') +
+         '</div>';
+  } else {
+    h += '<div class="act"><div class="k">Move this one today</div>' +
+         '<div class="n">No open thesis item in the feed &mdash; a data gap, not an empty queue.</div></div>';
+  }
+
+  h += '<div class="ctx">';
+  if(p.hard_deadline){
+    h += '<div>' + p.hard_deadline.name + (p.hard_deadline.code ? ' &middot; ' + p.hard_deadline.code : '') +
+         ' &middot; ' + p.hard_deadline.day + ' &middot; <b>' + p.hard_deadline.days + ' days</b></div>';
+  }
+  if(p.next_graded){
+    h += '<div>Next graded: ' +
+         (p.next_graded.code ? p.next_graded.code + ' &middot; ' : '') + p.next_graded.name +
+         ' &middot; ' + pulseStamp(p.next_graded.day, p.next_graded.hm) +
+         ' &middot; <b>' + p.next_graded.days + ' days</b></div>';
+  }
+  h += '</div>';
+
+  if(p.gaps && p.gaps.length) h += '<div class="gap">' + p.gaps.join(' ') + '</div>';
+  return h;
+}
+
+/* ---------- boot ---------- */
+function bootPulse(){
+  var root = document.getElementById('root');
+  var f = function(u){ return fetch(u + '?t=' + Date.now(), {cache:'no-store'})
+      .then(function(r){ if(!r.ok) throw new Error(u + ' ' + r.status); return r.json(); }); };
+  Promise.all([f('../data/tasks.json'), f('../data/week.json'),
+               f('../data/spokes.json'), f('../data/syllabus.json')])
+    .then(function(a){
+      var T = a[0], today = (T && T.today) || new Date().toISOString().slice(0,10);
+      root.innerHTML = renderPulse(computePulse(T, a[1], a[2], a[3], today));
+    })
+    .catch(function(e){
+      root.innerHTML = '<div class="err">Data unavailable — ' + e.message +
+        '. No number is shown because none could be computed.</div>';
+    });
+}
+if(typeof document !== 'undefined') bootPulse();
+</script>
+</body>
+</html>

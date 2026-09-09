@@ -12,7 +12,7 @@
 }
 @media (prefers-color-scheme: light){
   :root{
-    --bg:#fff; --panel:#f7f7f5; --line:#e6e5e1; --hair:#ecebe7;
+    --bg:#fff; --panel:#f7f7f5; --line:#e6e5e1; --hair:#efeeec;
     --ink:#37352f; --dim:#787774; --faint:#9b9a97;
   }
 }
@@ -20,7 +20,7 @@
 html,body{width:100%}
 body{
   background:var(--bg); color:var(--ink);
-  font:13px/1.35 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Inter,sans-serif;
+  font:13px/1.35 -apple-system,BlinkMacSystemFont,"Segoe UI",Inter,sans-serif;
   font-variant-numeric:tabular-nums;
   -webkit-font-smoothing:antialiased;
   padding:0;
@@ -52,7 +52,7 @@ body{
 /* --- clock --- */
 .c-clock{flex:0 0 auto; padding-left:23px; align-items:flex-start}
 .clock{
-  font-size:46px; line-height:1; font-weight:300;
+  font-size:30px; line-height:1; font-weight:300;
   font-variant-numeric:tabular-nums; letter-spacing:.01em;
   display:flex; align-items:baseline;
 }
@@ -68,10 +68,10 @@ body{
 }
 .dot{width:8px;height:8px;border-radius:50%;background:var(--accent,var(--dim));flex:0 0 auto}
 .name{
-  font-size:22px; line-height:1.22; font-weight:500; color:var(--ink);
+  font-size:19px; line-height:1.22; font-weight:500; color:var(--ink);
   overflow-wrap:break-word;
 }
-.name.sm{font-size:19px}
+.name.sm{font-size:15px}
 .name.xs{font-size:15px; line-height:1.28}
 .meta{
   margin-top:7px; font-size:13px; color:var(--dim);
@@ -89,34 +89,27 @@ body{
 .nmeta{margin-top:5px; font-size:12px; color:var(--faint)}
 .nmeta .rm{color:var(--gold)}
 
-/* --- tally --- */
-.c-tally{flex:0 0 auto; align-items:flex-start; gap:9px; padding-right:20px}
-.tally{display:flex; flex-direction:column; gap:8px}
-.trow{display:flex; align-items:baseline; gap:8px; font-size:11px; letter-spacing:.06em; color:var(--faint); text-transform:uppercase}
-.tnum{font-size:19px; line-height:1; font-weight:600; color:var(--ink); font-variant-numeric:tabular-nums; min-width:22px; text-align:right}
-.tnum.red{color:var(--red)}
-.tnum.green{color:var(--green)}
+/* tally cell removed: vanity counters are banned. */
 
 /* --- day rail --- */
 .rail{position:absolute; left:0; right:0; bottom:0; height:14px; background:transparent}
 .railtrack{position:absolute; left:0; right:0; bottom:0; height:3px; background:var(--hair)}
 .railfill{position:absolute; left:0; bottom:0; height:3px; background:var(--line)}
 .tick{position:absolute; bottom:0; width:2px; height:8px; background:var(--faint); border-radius:1px; transform:translateX(-1px)}
-.tick.done{background:var(--green); opacity:.55}
+.tick.done{background:var(--green); opacity:1; height:10px}
 .tick.miss{background:var(--red)}
 .now{position:absolute; bottom:0; width:2px; height:14px; background:var(--accent,var(--blue)); transform:translateX(-1px)}
 .railend{position:absolute; bottom:4px; font-size:10px; letter-spacing:.12em; color:var(--faint)}
 .railend.l{left:23px} .railend.r{right:8px}
 
 .err{padding:16px 22px; color:var(--red); font-size:13px}
-@media (max-width:1040px){ .c-tally{display:none} }
 @media (max-width:760px){
-  .clock{font-size:34px}
+  .clock{font-size:30px}
   .cell{padding:11px 14px 18px}
   .c-clock{padding-left:20px}
   .name{font-size:19px} .name.sm{font-size:15px} .name.xs{font-size:15px}
   .c-next{min-width:150px; flex-basis:34%}
-  .cd{font-size:25px}
+  .cd{font-size:19px}
   .nname{font-size:13px}
 }
 @media (max-width:580px){
@@ -124,7 +117,7 @@ body{
   .name{font-size:15px} .name.sm{font-size:15px} .name.xs{font-size:15px}
   .meta{font-size:12px}
   .c-next{min-width:126px; flex-basis:30%}
-  .cd{font-size:22px}
+  .cd{font-size:19px}
 }
 </style>
 </head>
@@ -334,14 +327,8 @@ function render(){
       '<div class="nname">Nothing further scheduled today</div></div>');
   }
 
-  /* tally */
-  var all=DATA.today_items||[];
-  var doneN=all.filter(function(i){return i.done;}).length;
-  var openN=all.length-doneN;
-  h.push('<div class="cell c-tally"><div class="tally">'+
-    '<div class="trow"><span class="tnum">'+openN+'</span>open today</div>'+
-    '<div class="trow"><span class="tnum green">'+doneN+'</span>done of '+all.length+'</div>'+
-    '</div></div>');
+  /* No vanity tally row here (banned): the bar states what is happening NOW
+     and what is next. Counts live in the triage widget. */
 
   /* rail */
   var ticks="";

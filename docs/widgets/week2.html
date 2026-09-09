@@ -6,9 +6,9 @@
 <title>This week</title>
 <style>
   :root{
-    --bg:#191919; --panel:#202020; --line:#2f2f2f; --hair:#252525;
-    --ink:#e9e9e7; --dim:#9b9a97; --faint:#6f6e6b;
-    --now:#e06c6c; --blue:#5b93d3; --gold:#c9a227; --green:#5fa87a; --purple:#9a6dd7;
+    --bg:#191919; --panel:#202020; --line:#2f2f2f; --hair:#262626;
+    --ink:#e9e9e7; --dim:#9b9a97; --faint:#6b6a67;
+    --now:#e06c6c; --red:#e06c6c; --amber:#c9a227; --blue:#5b93d3; --gold:#c9a227; --green:#5fa87a; --purple:#9a6dd7;
     --gut:52px;
   }
   @media (prefers-color-scheme: light){
@@ -79,7 +79,10 @@
       background:var(--panel);border:1px solid var(--line);
       border-left:3px solid var(--blue);color:var(--ink);z-index:2;
       overflow:hidden;min-width:3px}
-  .ev .lab{display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;
+  /* Single-line gantt bar geometry needs nowrap, but the label is never
+     ellipsised: measureLane()/in-half-out-outl spills the full name outside
+     the bar instead. text-overflow:clip so a "…" can never render. */
+  .ev .lab{display:block;white-space:nowrap;overflow:hidden;text-overflow:clip;
       font-variant-numeric:tabular-nums;line-height:19px}
   .ev .lab b{font-weight:600;color:var(--dim);margin-right:5px;font-size:11px}
   /* label does not fit inside -> spill it to the right (or left near the edge) */
@@ -110,7 +113,7 @@
   .ad{font-size:10px;line-height:15px;background:var(--panel);
       border:1px dashed var(--line);border-left:3px solid var(--faint);
       border-radius:3px;padding:0 6px;color:var(--dim);text-decoration:none;
-      max-width:240px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+      max-width:240px;overflow-wrap:anywhere;white-space:normal}
   .ad.k-class{border-left-color:var(--gold)} .ad.k-res{border-left-color:var(--green)}
   .ad.k-admin{border-left-color:var(--purple)} .ad.k-mil{border-left-color:var(--now)}
   .ad.k-oth{border-left-color:var(--blue)}
@@ -139,10 +142,10 @@
   .li.k-mil{border-left-color:var(--now)}
   .li .lt{font-variant-numeric:tabular-nums;color:var(--dim);font-size:11px;
       flex:0 0 82px;font-weight:500}
-  .li .ln{flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+  .li .ln{flex:1;min-width:0;overflow-wrap:anywhere;white-space:normal}
   .li.done .ln{text-decoration:line-through;color:var(--faint)}
-  .li .lw{font-size:10px;color:var(--faint);flex:0 0 auto;max-width:120px;
-      overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+  .li .lw{font-size:10px;color:var(--faint);flex:0 1 auto;max-width:120px;
+      overflow-wrap:anywhere;white-space:normal}
   .lnone{font-size:11px;color:var(--faint);font-style:italic;padding:3px 0 3px 8px}
 
   /* COLUMNS mode */
@@ -166,7 +169,7 @@
   .cc .ct{font-variant-numeric:tabular-nums;color:var(--dim);font-size:10px;display:block;
       letter-spacing:.01em}
   .cc .cl{display:block;margin-top:3px;font-size:10px;color:var(--faint);
-      overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+      overflow-wrap:anywhere;white-space:normal}
   .cc .cl::before{content:"\1F4CD  ";opacity:.6;font-size:10px}
   .cc .cn{display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;
       overflow:hidden;overflow-wrap:anywhere}
@@ -249,7 +252,7 @@
   .cati:hover{background:var(--panel)}
   .cati .d{font-size:11px;color:var(--faint);text-transform:uppercase;letter-spacing:.05em}
   .cati .t{font-variant-numeric:tabular-nums;color:var(--dim);font-size:12px}
-  .cati .n{min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+  .cati .n{min-width:0;overflow-wrap:anywhere;white-space:normal}
   .cati.done .n{text-decoration:line-through;color:var(--faint)}
 
   /* FREE TIME */
@@ -354,13 +357,19 @@
     text-decoration-color:rgba(95,168,122,.8) !important;
     text-decoration-thickness:1px !important;
   }
-  .ev.done, .li.done, .agi.done, .cati.done{
+  .ev.done, .li.done, .agi.done, .cati.done, .cc.done, a.ad.done{
     background:rgba(95,168,122,.10) !important;
     opacity:1 !important;
+    filter:none !important;
   }
-  .li.done, .agi.done, .cati.done{
+  .li.done, .agi.done, .cati.done, .cc.done, a.ad.done{
     border-left:3px solid #5fa87a !important;
   }
+  /* filled check: completion reads as an achievement, at a glance */
+  .li.done .ln::before, .agi.done .n2::before,
+  .cati.done .n::before, .cc.done .cn::before, a.ad.done::before{
+    content:"\2713\00a0";color:#5fa87a;font-weight:700;
+    text-decoration:none;display:inline-block;text-decoration-line:none}
 </style>
 </head>
 <body>
