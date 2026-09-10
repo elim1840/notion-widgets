@@ -1,13 +1,13 @@
 {
- "generated": "2026-09-10T13:15:22-04:00",
+ "generated": "2026-09-10T15:55:06-04:00",
  "today": "2026-09-10",
  "counts": {
-  "total": 135,
-  "open": 126,
-  "done": 9,
-  "today_total": 9,
-  "today_done": 2,
-  "overdue": 21,
+  "total": 139,
+  "open": 128,
+  "done": 11,
+  "today_total": 10,
+  "today_done": 3,
+  "overdue": 17,
   "past_meetings": 35
  },
  "today_items": [
@@ -15,7 +15,7 @@
    "name": "MTG IYR dinner shopping run (Costco + H Mart)",
    "date": "2026-09-10",
    "end": "",
-   "done": false,
+   "done": true,
    "status": "",
    "type": "Meeting",
    "meeting_type": "Admin",
@@ -163,6 +163,23 @@
    "link": "",
    "notes": "",
    "url": "https://app.notion.com/p/TSK-Fix-all-Outlook-rules-based-on-sender-3d2ea74eb77981329bbbe979480c3329"
+  },
+  {
+   "name": "AFT Prep: Water + Liquid IV, sleep by 2300",
+   "date": "2026-09-10T22:00:00.000-04:00",
+   "end": "2026-09-10T22:15:00.000-04:00",
+   "done": false,
+   "status": "Not Started",
+   "type": "",
+   "meeting_type": "Military",
+   "priority": "",
+   "energy": "",
+   "location": "",
+   "attendees": "",
+   "agenda": "",
+   "link": "",
+   "notes": "Hydrate w/ water + Liquid IV nightly for AFT prep (AFT Wed 0910 0530 MIT ROTC). Drink more water through the day. Lights out / asleep by 2300 latest.",
+   "url": "https://app.notion.com/p/AFT-Prep-Water-Liquid-IV-sleep-by-2300-3d7ea74eb77981d39229ffbd03fb5b5e"
   }
  ],
  "overdue_items": [
@@ -388,23 +405,6 @@
    "url": "https://app.notion.com/p/TSK-Land-BOS-1800-DL2558-travel-home-3d3ea74eb77981ec97bccb28ca41caab"
   },
   {
-   "name": "TSK Sign up for MIT makerspace (M1T) training to 3D print",
-   "date": "2026-09-07",
-   "end": "",
-   "done": false,
-   "status": "Not Started",
-   "type": "Task",
-   "meeting_type": "Admin",
-   "priority": "",
-   "energy": "",
-   "location": "",
-   "attendees": "",
-   "agenda": "",
-   "link": "",
-   "notes": "Sign up for M1T training via make.mit.edu (required before independent 3D printer access). Training sessions posted weekly, sign up for a specific in-person session. Once trained: Metropolis and The Deep are the open-access makerspaces with 3D printers. Details logged in Obsidian: 20_Areas/Academic/Resources/mit-makerspaces-3d-printing.md (flagged unverified -- confirm exact current process live at make.mit.edu, site didn't extract cleanly during research).",
-   "url": "https://app.notion.com/p/TSK-Sign-up-for-MIT-makerspace-M1T-training-to-3D-print-3ceea74eb779814fb850c1aa9f739ce1"
-  },
-  {
    "name": "TSK Check Merch Store Progress",
    "date": "2026-09-07T12:00:00.000-04:00",
    "end": "2026-09-07T12:15:00.000-04:00",
@@ -420,57 +420,6 @@
    "link": "",
    "notes": "",
    "url": "https://app.notion.com/p/TSK-Check-Merch-Store-Progress-3d0ea74eb77981ed9118e5c11ce45533"
-  },
-  {
-   "name": "TSK Reach out to Dr. Tran re: Projects Day",
-   "date": "2026-09-08",
-   "end": "",
-   "done": false,
-   "status": "Not Started",
-   "type": "Task",
-   "meeting_type": "Research",
-   "priority": "",
-   "energy": "",
-   "location": "",
-   "attendees": "",
-   "agenda": "",
-   "link": "",
-   "notes": "",
-   "url": "https://app.notion.com/p/TSK-Reach-out-to-Dr-Tran-re-Projects-Day-3d2ea74eb779818983d8e1355b7d09f1"
-  },
-  {
-   "name": "TSK Reach out to LTC Koban re: SOCOM Ignite",
-   "date": "2026-09-08",
-   "end": "",
-   "done": false,
-   "status": "Not Started",
-   "type": "Task",
-   "meeting_type": "Military",
-   "priority": "",
-   "energy": "",
-   "location": "",
-   "attendees": "",
-   "agenda": "",
-   "link": "",
-   "notes": "",
-   "url": "https://app.notion.com/p/TSK-Reach-out-to-LTC-Koban-re-SOCOM-Ignite-3d2ea74eb77981b480abeaceefb10133"
-  },
-  {
-   "name": "TSK Reach out to MAJ Dulce re: ASEM",
-   "date": "2026-09-08",
-   "end": "",
-   "done": false,
-   "status": "Not Started",
-   "type": "Task",
-   "meeting_type": "Military",
-   "priority": "",
-   "energy": "",
-   "location": "",
-   "attendees": "",
-   "agenda": "",
-   "link": "",
-   "notes": "Ask MAJ Dulce about getting added to the ASEM trip to Wisconsin Madison, Oct 7-10 2026.",
-   "url": "https://app.notion.com/p/TSK-Reach-out-to-MAJ-Dulce-re-ASEM-3d2ea74eb77981949160fe855c5f4bd9"
   },
   {
    "name": "TSK SCUBA: email PE&W re: swim test (was due 9/4) + waitlist position",
@@ -525,23 +474,6 @@
   }
  ],
  "upcoming": [
-  {
-   "name": "MTG IYR dinner shopping run (Costco + H Mart)",
-   "date": "2026-09-10",
-   "end": "",
-   "done": false,
-   "status": "",
-   "type": "Meeting",
-   "meeting_type": "Admin",
-   "priority": "",
-   "energy": "",
-   "location": "Costco \u2192 H Mart",
-   "attendees": "",
-   "agenda": "",
-   "link": "",
-   "notes": "",
-   "url": "https://app.notion.com/p/MTG-IYR-dinner-shopping-run-Costco-H-Mart-3d3ea74eb77981bd9fe3c1440d06b22c"
-  },
   {
    "name": "TSK Thesis guidelines check: TPP + Institute-wide (before Overleaf)",
    "date": "2026-09-10T09:30:00.000-04:00",
@@ -645,6 +577,23 @@
    "url": "https://app.notion.com/p/TSK-Fix-all-Outlook-rules-based-on-sender-3d2ea74eb77981329bbbe979480c3329"
   },
   {
+   "name": "AFT Prep: Water + Liquid IV, sleep by 2300",
+   "date": "2026-09-10T22:00:00.000-04:00",
+   "end": "2026-09-10T22:15:00.000-04:00",
+   "done": false,
+   "status": "Not Started",
+   "type": "",
+   "meeting_type": "Military",
+   "priority": "",
+   "energy": "",
+   "location": "",
+   "attendees": "",
+   "agenda": "",
+   "link": "",
+   "notes": "Hydrate w/ water + Liquid IV nightly for AFT prep (AFT Wed 0910 0530 MIT ROTC). Drink more water through the day. Lights out / asleep by 2300 latest.",
+   "url": "https://app.notion.com/p/AFT-Prep-Water-Liquid-IV-sleep-by-2300-3d7ea74eb77981d39229ffbd03fb5b5e"
+  },
+  {
    "name": "MTG TPP Retreat Weekend (IYR)",
    "date": "2026-09-11",
    "end": "2026-09-13",
@@ -713,21 +662,21 @@
    "url": "https://app.notion.com/p/TSK-Brainstorm-GitHub-for-Lab-Management-continuity-security-3d2ea74eb77981b2bf66d5d99740d40e"
   },
   {
-   "name": "TSK Mug Making",
-   "date": "2026-09-11T13:00:00.000-04:00",
-   "end": "2026-09-11T14:30:00.000-04:00",
+   "name": "AFT Prep: Water + Liquid IV, sleep by 2300",
+   "date": "2026-09-11T22:00:00.000-04:00",
+   "end": "2026-09-11T22:15:00.000-04:00",
    "done": false,
    "status": "Not Started",
-   "type": "Task",
-   "meeting_type": "AeroAstro",
+   "type": "",
+   "meeting_type": "Military",
    "priority": "",
    "energy": "",
    "location": "",
    "attendees": "",
    "agenda": "",
    "link": "",
-   "notes": "Contact: Jun. RSVP REQUIRED.",
-   "url": "https://app.notion.com/p/TSK-Mug-Making-3ceea74eb77981feb004f67f59bfc5f1"
+   "notes": "Hydrate w/ water + Liquid IV nightly for AFT prep (AFT Wed 0910 0530 MIT ROTC). Drink more water through the day. Lights out / asleep by 2300 latest.",
+   "url": "https://app.notion.com/p/AFT-Prep-Water-Liquid-IV-sleep-by-2300-3d7ea74eb7798161bcf6e2b07929cb99"
   }
  ],
  "history": [
@@ -784,11 +733,11 @@
   {
    "date": "2026-09-07",
    "total": 3,
-   "done": 0
+   "done": 1
   },
   {
    "date": "2026-09-08",
-   "total": 13,
+   "total": 10,
    "done": 5
   },
   {
@@ -798,8 +747,8 @@
   },
   {
    "date": "2026-09-10",
-   "total": 9,
-   "done": 2
+   "total": 10,
+   "done": 3
   }
  ]
 }

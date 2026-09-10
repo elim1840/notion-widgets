@@ -1,5 +1,5 @@
 {
- "generated": "2026-09-10T13:15:22-04:00",
+ "generated": "2026-09-10T15:55:06-04:00",
  "today": "2026-09-10",
  "monday": "2026-09-07",
  "days": [
@@ -35,7 +35,7 @@
      "name": "TSK Sign up for MIT makerspace (M1T) training to 3D print",
      "date": "2026-09-07",
      "end": "",
-     "done": false,
+     "done": true,
      "kind": "Admin",
      "src": "task",
      "location": "",
@@ -168,42 +168,6 @@
      "type": "Task",
      "meeting_type": "Dr. Eric Evans (MIT)",
      "url": "https://app.notion.com/p/TSK-Offer-to-start-introduction-with-Dr-Eric-Evans-3d2ea74eb779813b9f47c556fffb4b1a"
-    },
-    {
-     "name": "TSK Reach out to Dr. Tran re: Projects Day",
-     "date": "2026-09-08",
-     "end": "",
-     "done": false,
-     "kind": "Research",
-     "src": "task",
-     "location": "",
-     "type": "Task",
-     "meeting_type": "Research",
-     "url": "https://app.notion.com/p/TSK-Reach-out-to-Dr-Tran-re-Projects-Day-3d2ea74eb779818983d8e1355b7d09f1"
-    },
-    {
-     "name": "TSK Reach out to LTC Koban re: SOCOM Ignite",
-     "date": "2026-09-08",
-     "end": "",
-     "done": false,
-     "kind": "Military",
-     "src": "task",
-     "location": "",
-     "type": "Task",
-     "meeting_type": "Military",
-     "url": "https://app.notion.com/p/TSK-Reach-out-to-LTC-Koban-re-SOCOM-Ignite-3d2ea74eb77981b480abeaceefb10133"
-    },
-    {
-     "name": "TSK Reach out to MAJ Dulce re: ASEM",
-     "date": "2026-09-08",
-     "end": "",
-     "done": false,
-     "kind": "Military",
-     "src": "task",
-     "location": "",
-     "type": "Task",
-     "meeting_type": "Military",
-     "url": "https://app.notion.com/p/TSK-Reach-out-to-MAJ-Dulce-re-ASEM-3d2ea74eb77981949160fe855c5f4bd9"
     }
    ]
   },
@@ -422,10 +386,22 @@
      "url": "https://app.notion.com/p/TSK-Fix-all-Outlook-rules-based-on-sender-3d2ea74eb77981329bbbe979480c3329"
     },
     {
+     "name": "AFT Prep: Water + Liquid IV, sleep by 2300",
+     "date": "2026-09-10T22:00:00.000-04:00",
+     "end": "2026-09-10T22:15:00.000-04:00",
+     "done": false,
+     "kind": "Military",
+     "src": "task",
+     "location": "",
+     "type": "",
+     "meeting_type": "Military",
+     "url": "https://app.notion.com/p/AFT-Prep-Water-Liquid-IV-sleep-by-2300-3d7ea74eb77981d39229ffbd03fb5b5e"
+    },
+    {
      "name": "MTG IYR dinner shopping run (Costco + H Mart)",
      "date": "2026-09-10",
      "end": "",
-     "done": false,
+     "done": true,
      "kind": "Admin",
      "src": "task",
      "location": "Costco \u2192 H Mart",
@@ -452,18 +428,6 @@
      "url": "https://app.notion.com/p/14-003-Microecon-Policy-Recitation-01-3d3ea74eb77981118fd8da259e02e85c"
     },
     {
-     "name": "TSK Mug Making",
-     "date": "2026-09-11T13:00:00.000-04:00",
-     "end": "2026-09-11T14:30:00.000-04:00",
-     "done": false,
-     "kind": "AeroAstro",
-     "src": "task",
-     "location": "",
-     "type": "Task",
-     "meeting_type": "AeroAstro",
-     "url": "https://app.notion.com/p/TSK-Mug-Making-3ceea74eb77981feb004f67f59bfc5f1"
-    },
-    {
      "name": "16.S896 RASCAL: Lecture 01",
      "date": "2026-09-11T15:00:00.000-04:00",
      "end": "2026-09-11T17:00:00.000-04:00",
@@ -474,6 +438,18 @@
      "type": "Lecture",
      "meeting_type": "Class",
      "url": "https://app.notion.com/p/16-S896-RASCAL-Lecture-01-3d3ea74eb77981789645cd0634a83f8b"
+    },
+    {
+     "name": "AFT Prep: Water + Liquid IV, sleep by 2300",
+     "date": "2026-09-11T22:00:00.000-04:00",
+     "end": "2026-09-11T22:15:00.000-04:00",
+     "done": false,
+     "kind": "Military",
+     "src": "task",
+     "location": "",
+     "type": "",
+     "meeting_type": "Military",
+     "url": "https://app.notion.com/p/AFT-Prep-Water-Liquid-IV-sleep-by-2300-3d7ea74eb7798161bcf6e2b07929cb99"
     },
     {
      "name": "MTG TPP Retreat Weekend (IYR)",
@@ -566,6 +542,18 @@
      "url": "https://app.notion.com/p/MTG-Housewarming-Party-at-Joce-s-3ceea74eb77981da84a1ce0a76053c62"
     },
     {
+     "name": "AFT Prep: Water + Liquid IV, sleep by 2300",
+     "date": "2026-09-12T22:00:00.000-04:00",
+     "end": "2026-09-12T22:15:00.000-04:00",
+     "done": false,
+     "kind": "Military",
+     "src": "task",
+     "location": "",
+     "type": "",
+     "meeting_type": "Military",
+     "url": "https://app.notion.com/p/AFT-Prep-Water-Liquid-IV-sleep-by-2300-3d7ea74eb7798111bd82ece0fb1f7137"
+    },
+    {
      "name": "TSK Claude Campus Ambassador: HARD DEADLINE 2359 PT",
      "date": "2026-09-12",
      "end": "",
@@ -576,6 +564,42 @@
      "type": "Task",
      "meeting_type": "Admin",
      "url": "https://app.notion.com/p/TSK-Claude-Campus-Ambassador-HARD-DEADLINE-2359-PT-3d5ea74eb779817881cee0f119bb99ce"
+    },
+    {
+     "name": "TSK Reach out to Dr. Tran re: Projects Day",
+     "date": "2026-09-12",
+     "end": "",
+     "done": false,
+     "kind": "Research",
+     "src": "task",
+     "location": "",
+     "type": "Task",
+     "meeting_type": "Research",
+     "url": "https://app.notion.com/p/TSK-Reach-out-to-Dr-Tran-re-Projects-Day-3d2ea74eb779818983d8e1355b7d09f1"
+    },
+    {
+     "name": "TSK Reach out to LTC Koban re: SOCOM Ignite",
+     "date": "2026-09-12",
+     "end": "",
+     "done": false,
+     "kind": "Military",
+     "src": "task",
+     "location": "",
+     "type": "Task",
+     "meeting_type": "Military",
+     "url": "https://app.notion.com/p/TSK-Reach-out-to-LTC-Koban-re-SOCOM-Ignite-3d2ea74eb77981b480abeaceefb10133"
+    },
+    {
+     "name": "TSK Reach out to MAJ Dulce re: ASEM",
+     "date": "2026-09-12",
+     "end": "",
+     "done": false,
+     "kind": "Military",
+     "src": "task",
+     "location": "",
+     "type": "Task",
+     "meeting_type": "Military",
+     "url": "https://app.notion.com/p/TSK-Reach-out-to-MAJ-Dulce-re-ASEM-3d2ea74eb77981949160fe855c5f4bd9"
     }
    ]
   },
@@ -583,18 +607,6 @@
    "date": "2026-09-13",
    "is_today": false,
    "items": [
-    {
-     "name": "MTG Coffee & Thrift Crawl",
-     "date": "2026-09-13T12:00:00.000-04:00",
-     "end": "2026-09-13T13:00:00.000-04:00",
-     "done": false,
-     "kind": "AeroAstro",
-     "src": "task",
-     "location": "",
-     "type": "Meeting",
-     "meeting_type": "AeroAstro",
-     "url": "https://app.notion.com/p/MTG-Coffee-Thrift-Crawl-3ceea74eb779812ea8d7e381c0e2cfcb"
-    },
     {
      "name": "TSK Upload thesis template to Overleaf + compile",
      "date": "2026-09-13T14:00:00.000-04:00",
@@ -620,6 +632,30 @@
      "url": "https://app.notion.com/p/TSK-Create-thesis-Overleaf-document-from-official-MIT-template-3d5ea74eb7798139abb7d34f72f0e1fa"
     },
     {
+     "name": "Amazon delivery: stationary order",
+     "date": "2026-09-13T17:00:00.000-04:00",
+     "end": "",
+     "done": false,
+     "kind": "Admin",
+     "src": "task",
+     "location": "Edgerton House, 143 Albany St, Apt 234B, Cambridge, MA 02139-4263",
+     "type": "",
+     "meeting_type": "Admin",
+     "url": "https://app.notion.com/p/Amazon-delivery-stationary-order-3d7ea74eb77981afab7ad2b0138f9df9"
+    },
+    {
+     "name": "AFT Prep: Water + Liquid IV, sleep by 2300",
+     "date": "2026-09-13T22:00:00.000-04:00",
+     "end": "2026-09-13T22:15:00.000-04:00",
+     "done": false,
+     "kind": "Military",
+     "src": "task",
+     "location": "",
+     "type": "",
+     "meeting_type": "Military",
+     "url": "https://app.notion.com/p/AFT-Prep-Water-Liquid-IV-sleep-by-2300-3d7ea74eb77981069829cdf4e2db5dd1"
+    },
+    {
      "name": "TSK Submit Scholar biography (docx) + headshot (jpeg) survey",
      "date": "2026-09-13T23:59:00.000-04:00",
      "end": "2026-09-14T00:14:00.000-04:00",
@@ -634,5 +670,5 @@
    ]
   }
  ],
- "total": 49
+ "total": 52
 }
