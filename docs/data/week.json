@@ -1,6 +1,6 @@
 {
- "generated": "2026-09-09T20:14:50-04:00",
- "today": "2026-09-09",
+ "generated": "2026-09-10T00:49:06-04:00",
+ "today": "2026-09-10",
  "monday": "2026-09-07",
  "days": [
   {
@@ -209,7 +209,7 @@
   },
   {
    "date": "2026-09-09",
-   "is_today": true,
+   "is_today": false,
    "items": [
     {
      "name": "14.003 Microecon & Policy: Lecture 01: Application: Impacts of minimum wage laws on jobs & earnings",
@@ -323,7 +323,7 @@
   },
   {
    "date": "2026-09-10",
-   "is_today": false,
+   "is_today": true,
    "items": [
     {
      "name": "TSK Call Hilton + Marriott re: hotel night of 7 Nov",
@@ -348,6 +348,30 @@
      "type": "Task",
      "meeting_type": "Admin",
      "url": "https://app.notion.com/p/TSK-Thesis-guidelines-check-TPP-Institute-wide-before-Overleaf-3d5ea74eb7798166967fd41b5132e7d3"
+    },
+    {
+     "name": "TSK Sign up for a Deep orientation slot",
+     "date": "2026-09-10T10:00:00.000-04:00",
+     "end": "2026-09-10T10:15:00.000-04:00",
+     "done": false,
+     "kind": "AeroAstro",
+     "src": "task",
+     "location": "",
+     "type": "Task",
+     "meeting_type": "AeroAstro",
+     "url": "https://app.notion.com/p/TSK-Sign-up-for-a-Deep-orientation-slot-3d7ea74eb77981d6a51cf3bc1f497410"
+    },
+    {
+     "name": "TSK Stationery run: Harvard Square, MUJI and Bob Slate",
+     "date": "2026-09-10T11:00:00.000-04:00",
+     "end": "2026-09-10T12:30:00.000-04:00",
+     "done": false,
+     "kind": "Personal",
+     "src": "task",
+     "location": "48 Brattle St and 30 Brattle St, Cambridge",
+     "type": "Task",
+     "meeting_type": "Personal",
+     "url": "https://app.notion.com/p/TSK-Stationery-run-Harvard-Square-MUJI-and-Bob-Slate-3d7ea74eb779816cb05bee914d30daf5"
     },
     {
      "name": "TSK Dual degree petition: ASK Barb + Rachael what it requires",
@@ -598,5 +622,5 @@
    ]
   }
  ],
- "total": 46
+ "total": 48
 }

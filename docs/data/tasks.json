@@ -1,23 +1,74 @@
 {
- "generated": "2026-09-09T20:14:50-04:00",
- "today": "2026-09-09",
+ "generated": "2026-09-10T00:49:06-04:00",
+ "today": "2026-09-10",
  "counts": {
-  "total": 132,
-  "open": 124,
+  "total": 134,
+  "open": 126,
   "done": 8,
-  "today_total": 2,
-  "today_done": 0,
-  "overdue": 20,
-  "past_meetings": 34
+  "today_total": 8,
+  "today_done": 1,
+  "overdue": 21,
+  "past_meetings": 35
  },
  "today_items": [
   {
-   "name": "MTG AeroAstro Welcome Back Picnic",
-   "date": "2026-09-09T12:00:00.000-04:00",
-   "end": "2026-09-09T14:00:00.000-04:00",
+   "name": "MTG IYR dinner shopping run (Costco + H Mart)",
+   "date": "2026-09-10",
+   "end": "",
+   "done": false,
+   "status": "",
+   "type": "Meeting",
+   "meeting_type": "Admin",
+   "priority": "",
+   "energy": "",
+   "location": "Costco \u2192 H Mart",
+   "attendees": "",
+   "agenda": "",
+   "link": "",
+   "notes": "",
+   "url": "https://app.notion.com/p/MTG-IYR-dinner-shopping-run-Costco-H-Mart-3d3ea74eb77981bd9fe3c1440d06b22c"
+  },
+  {
+   "name": "TSK Call Hilton + Marriott re: hotel night of 7 Nov",
+   "date": "2026-09-10T09:00:00.000-04:00",
+   "end": "2026-09-10T09:30:00.000-04:00",
+   "done": true,
+   "status": "Not Started",
+   "type": "Task",
+   "meeting_type": "Admin",
+   "priority": "",
+   "energy": "",
+   "location": "",
+   "attendees": "",
+   "agenda": "",
+   "link": "",
+   "notes": "Need one night, 7 Nov 2026. Call Hilton and Marriott directly (military/government rate + MIT student rate \u2014 ask for both, they are not always shown online). Location TBD \u2014 confirm which city before calling.",
+   "url": "https://app.notion.com/p/TSK-Call-Hilton-Marriott-re-hotel-night-of-7-Nov-3d3ea74eb77981188812c72df93e6286"
+  },
+  {
+   "name": "TSK Thesis guidelines check: TPP + Institute-wide (before Overleaf)",
+   "date": "2026-09-10T09:30:00.000-04:00",
+   "end": "2026-09-10T11:00:00.000-04:00",
    "done": false,
    "status": "Not Started",
-   "type": "Meeting",
+   "type": "Task",
+   "meeting_type": "Admin",
+   "priority": "High",
+   "energy": "Shallow",
+   "location": "",
+   "attendees": "",
+   "agenda": "Read the rules BEFORE creating the document, so the Overleaf file is right from the first commit rather than reformatted in January.\n\nTWO LAYERS, and they are different documents:\n\n1. INSTITUTE-WIDE (MIT Libraries, binding on everyone)\n   libraries.mit.edu/distinctive-collections/thesis-specs/\n   Key points already confirmed:\n     - Title page is ALWAYS page 1; every page counted in one consecutive sequence including prefatory material, figures, appendices.\n     - Abstract: 500 words or less, single-spaced, immediately after the title page. Avoid formulas/special characters.\n     - Body may be single, 1.5, or double spaced. Abstract, biography, notes, bibliography, acknowledgements are single-spaced.\n     - NO signature page in the final document - but your DEPARTMENT may require a separate one.\n     - Sans serif font suggested (not required) for readability.\n     - Degree conferral date must read February, May/June, or September only.\n     - Title page and abstract must MATCH the metadata you submit to the Libraries exactly.\n   Spec was revised April 2026 - read the current version, not a cached PDF.\n\n2. DEPARTMENT (TPP and AeroAstro - you are dual, so check BOTH)\n   Ask each program office directly. Departments set their own committee composition, signature page, internal deadlines, and page/chapter conventions, and the Institute page does not cover these.\n   For a DUAL degree the Libraries publish a specific sample title page: 'Dual degree with extra committee members'. Use that one, not the standard example.\n\nQUESTIONS TO GET ANSWERED IN WRITING:\n  - Does TPP have its own thesis format guide or internal deadline earlier than 12 Dec?\n  - For the dual degree, do BOTH departments sign, and how many readers total?\n  - Does either department require a separate signature page?\n  - Is there a TPP-specific abstract or policy-content requirement?\n\nContacts: mit-theses@mit.edu for Institute questions. Barb / Rachael for TPP. AeroAstro grad office for 16.",
+   "link": "",
+   "notes": "",
+   "url": "https://app.notion.com/p/TSK-Thesis-guidelines-check-TPP-Institute-wide-before-Overleaf-3d5ea74eb7798166967fd41b5132e7d3"
+  },
+  {
+   "name": "TSK Sign up for a Deep orientation slot",
+   "date": "2026-09-10T10:00:00.000-04:00",
+   "end": "2026-09-10T10:15:00.000-04:00",
+   "done": false,
+   "status": "Not Started",
+   "type": "Task",
    "meeting_type": "AeroAstro",
    "priority": "",
    "energy": "",
@@ -25,25 +76,76 @@
    "attendees": "",
    "agenda": "",
    "link": "",
-   "notes": "No specific contact/RSVP info given in the events table for this one.",
-   "url": "https://app.notion.com/p/MTG-AeroAstro-Welcome-Back-Picnic-3ceea74eb7798191b66ad74cbfb1d4a9"
+   "notes": "Sign up for a Deep orientation slot. Orientation is required even if previously completed. Getting started: join the Slack, attend orientation, then machine training and checkoff at open hours. Facility: mills, lathes, waterjet, laser cutter, filament and resin 3D printers. Usable for coursework, research, UROP and personal work.",
+   "url": "https://app.notion.com/p/TSK-Sign-up-for-a-Deep-orientation-slot-3d7ea74eb77981d6a51cf3bc1f497410"
   },
   {
-   "name": "TSK Submit petition to Rachael and Barb (after registration)",
-   "date": "2026-09-09T19:45:00.000-04:00",
-   "end": "2026-09-09T20:15:00.000-04:00",
+   "name": "TSK Stationery run: Harvard Square, MUJI and Bob Slate",
+   "date": "2026-09-10T11:00:00.000-04:00",
+   "end": "2026-09-10T12:30:00.000-04:00",
    "done": false,
    "status": "Not Started",
    "type": "Task",
-   "meeting_type": "TPP",
+   "meeting_type": "Personal",
+   "priority": "",
+   "energy": "",
+   "location": "48 Brattle St and 30 Brattle St, Cambridge",
+   "attendees": "",
+   "agenda": "",
+   "link": "",
+   "notes": "BIGGEST WIN IS PAPER, not pens. Printing packets on 24 lb / 90 gsm instead of standard 20 lb stops gel ink ghosting through the page. Hammermill Premium Multipurpose 24 lb, 97 bright, 500 sheets, rated for BOTH inkjet and laser so it is fuser safe. Staples SKU 166140. Check the shelf price in store: the listing showed 38.99 which looks like a multi ream pack, single reams run about 14. Never put coated or glossy paper through a laser printer. ROUTE: Red Line Kendall to Harvard, 2 stops. MUJI 48 Brattle and Bob Slate 30 Brattle are 100 feet apart. Blick at 619 Massachusetts Ave is walkable from MIT and stocks Zebra, Uni and Pentel. Staples or the Coop for paper and the binder. AT MUJI: gel ink pens 0.38 and 0.5 black, aluminium ruler, clear folders, pen case. AT BOB SLATE: handle the Japanese notebooks, Maruman, Kokuyo, Midori. Paper feel is the reason to come in person. Closes 1800 Thursday. BINDER: US Letter 1 inch 3 ring plus a 3 hole punch, Staples or Coop, about 15 dollars. NOT MUJI: Japanese binders are A4 with 26 or 30 holes and will not fit. ONLINE at jetpens.com, free shipping over 35 dollars, about 33 dollars total: Uni-ball Signo RT1 0.38 four colour set, black red green orange, 11.20, for the four marking roles; Uni Jetstream 0.38 black 2.50, fastest drying on cheap paper; Uni Kuru Toga Advance 0.5 pencil 8.50, lead rotates so the line stays even; Tombow MONO Zero 2.3 mm eraser 5.25 for precise corrections; Zebra Sarasa Mark On 0.4 red and blue 5.30. DO NOT BUY: more highlighters, the Mildliners already win; multi pens, slower than picking up a second pen; Zebra bLen, solves a problem you do not have.",
+   "url": "https://app.notion.com/p/TSK-Stationery-run-Harvard-Square-MUJI-and-Bob-Slate-3d7ea74eb779816cb05bee914d30daf5"
+  },
+  {
+   "name": "TSK Dual degree petition: ASK Barb + Rachael what it requires",
+   "date": "2026-09-10T13:00:00.000-04:00",
+   "end": "2026-09-10T13:30:00.000-04:00",
+   "done": false,
+   "status": "Not Started",
+   "type": "Task",
+   "meeting_type": "Admin",
    "priority": "High",
    "energy": "Errand",
    "location": "",
    "attendees": "",
+   "agenda": "Groundwork call/email BEFORE drafting anything. You cannot write a petition until you know what form it takes.\n\nNOTE: you already meet Barb today (8 Sep, 1310, TPP Lounge) for class registration, and a petition to Rachael and Barb is filed for today at 1600. If the dual-degree petition comes up naturally in either, this task collapses into those - close it and move on.\n\nQUESTIONS:\n  1. Is there a specific dual-degree petition FORM, or is it a written memo?\n  2. Who signs: TPP, AeroAstro, or both? In what order?\n  3. Is there a deadline tied to the degree list you are applying for?\n  4. Does the petition need the thesis topic settled first? (Topic block is 29 Sep - if yes, that ordering matters.)\n  5. Does one thesis satisfy both degrees, or is separate work required?\n  6. Any precedent for TPP + AeroAstro specifically - who has done this before?\n\nQuestion 5 is the one that could change your whole plan. Ask it plainly.",
+   "link": "",
+   "notes": "",
+   "url": "https://app.notion.com/p/TSK-Dual-degree-petition-ASK-Barb-Rachael-what-it-requires-3d5ea74eb77981bcae7de8c0203cbdb5"
+  },
+  {
+   "name": "MTG Muddy Charles Pub w/ Dinner",
+   "date": "2026-09-10T18:00:00.000-04:00",
+   "end": "2026-09-10T19:00:00.000-04:00",
+   "done": false,
+   "status": "Not Started",
+   "type": "Meeting",
+   "meeting_type": "AeroAstro",
+   "priority": "",
+   "energy": "",
+   "location": "Muddy Charles Pub",
+   "attendees": "",
    "agenda": "",
    "link": "",
-   "notes": "Submit after the 1310 registration session with Barb (TPP Lounge). Deliver to both Rachael and Barb.",
-   "url": "https://app.notion.com/p/TSK-Submit-petition-to-Rachael-and-Barb-after-registration-3d5ea74eb77981fea210f3384ac44a1f"
+   "notes": "Contact: Kevin + Marlene. No RSVP required.",
+   "url": "https://app.notion.com/p/MTG-Muddy-Charles-Pub-w-Dinner-3ceea74eb7798193ac66ea9854b26817"
+  },
+  {
+   "name": "TSK Fix all Outlook rules based on sender",
+   "date": "2026-09-10T19:00:00.000-04:00",
+   "end": "2026-09-10T20:00:00.000-04:00",
+   "done": false,
+   "status": "Not Started",
+   "type": "Task",
+   "meeting_type": "Admin",
+   "priority": "",
+   "energy": "",
+   "location": "",
+   "attendees": "",
+   "agenda": "",
+   "link": "",
+   "notes": "",
+   "url": "https://app.notion.com/p/TSK-Fix-all-Outlook-rules-based-on-sender-3d2ea74eb77981329bbbe979480c3329"
   }
  ],
  "overdue_items": [
@@ -386,25 +488,6 @@
    "link": "",
    "notes": "Collaborate with Charlie on white paper for Diffraqtion. Work throughout Monday Sept 8; must send to Charlie by Monday night.",
    "url": "https://app.notion.com/p/TSK-Work-on-Diffraqtion-White-Paper-w-Charlie-DUE-tonight-to-send-3d2ea74eb779815289aedbbc7c9b40fe"
-  }
- ],
- "upcoming": [
-  {
-   "name": "MTG AeroAstro Welcome Back Picnic",
-   "date": "2026-09-09T12:00:00.000-04:00",
-   "end": "2026-09-09T14:00:00.000-04:00",
-   "done": false,
-   "status": "Not Started",
-   "type": "Meeting",
-   "meeting_type": "AeroAstro",
-   "priority": "",
-   "energy": "",
-   "location": "",
-   "attendees": "",
-   "agenda": "",
-   "link": "",
-   "notes": "No specific contact/RSVP info given in the events table for this one.",
-   "url": "https://app.notion.com/p/MTG-AeroAstro-Welcome-Back-Picnic-3ceea74eb7798191b66ad74cbfb1d4a9"
   },
   {
    "name": "TSK Submit petition to Rachael and Barb (after registration)",
@@ -422,7 +505,9 @@
    "link": "",
    "notes": "Submit after the 1310 registration session with Barb (TPP Lounge). Deliver to both Rachael and Barb.",
    "url": "https://app.notion.com/p/TSK-Submit-petition-to-Rachael-and-Barb-after-registration-3d5ea74eb77981fea210f3384ac44a1f"
-  },
+  }
+ ],
+ "upcoming": [
   {
    "name": "MTG IYR dinner shopping run (Costco + H Mart)",
    "date": "2026-09-10",
@@ -456,6 +541,40 @@
    "link": "",
    "notes": "",
    "url": "https://app.notion.com/p/TSK-Thesis-guidelines-check-TPP-Institute-wide-before-Overleaf-3d5ea74eb7798166967fd41b5132e7d3"
+  },
+  {
+   "name": "TSK Sign up for a Deep orientation slot",
+   "date": "2026-09-10T10:00:00.000-04:00",
+   "end": "2026-09-10T10:15:00.000-04:00",
+   "done": false,
+   "status": "Not Started",
+   "type": "Task",
+   "meeting_type": "AeroAstro",
+   "priority": "",
+   "energy": "",
+   "location": "",
+   "attendees": "",
+   "agenda": "",
+   "link": "",
+   "notes": "Sign up for a Deep orientation slot. Orientation is required even if previously completed. Getting started: join the Slack, attend orientation, then machine training and checkoff at open hours. Facility: mills, lathes, waterjet, laser cutter, filament and resin 3D printers. Usable for coursework, research, UROP and personal work.",
+   "url": "https://app.notion.com/p/TSK-Sign-up-for-a-Deep-orientation-slot-3d7ea74eb77981d6a51cf3bc1f497410"
+  },
+  {
+   "name": "TSK Stationery run: Harvard Square, MUJI and Bob Slate",
+   "date": "2026-09-10T11:00:00.000-04:00",
+   "end": "2026-09-10T12:30:00.000-04:00",
+   "done": false,
+   "status": "Not Started",
+   "type": "Task",
+   "meeting_type": "Personal",
+   "priority": "",
+   "energy": "",
+   "location": "48 Brattle St and 30 Brattle St, Cambridge",
+   "attendees": "",
+   "agenda": "",
+   "link": "",
+   "notes": "BIGGEST WIN IS PAPER, not pens. Printing packets on 24 lb / 90 gsm instead of standard 20 lb stops gel ink ghosting through the page. Hammermill Premium Multipurpose 24 lb, 97 bright, 500 sheets, rated for BOTH inkjet and laser so it is fuser safe. Staples SKU 166140. Check the shelf price in store: the listing showed 38.99 which looks like a multi ream pack, single reams run about 14. Never put coated or glossy paper through a laser printer. ROUTE: Red Line Kendall to Harvard, 2 stops. MUJI 48 Brattle and Bob Slate 30 Brattle are 100 feet apart. Blick at 619 Massachusetts Ave is walkable from MIT and stocks Zebra, Uni and Pentel. Staples or the Coop for paper and the binder. AT MUJI: gel ink pens 0.38 and 0.5 black, aluminium ruler, clear folders, pen case. AT BOB SLATE: handle the Japanese notebooks, Maruman, Kokuyo, Midori. Paper feel is the reason to come in person. Closes 1800 Thursday. BINDER: US Letter 1 inch 3 ring plus a 3 hole punch, Staples or Coop, about 15 dollars. NOT MUJI: Japanese binders are A4 with 26 or 30 holes and will not fit. ONLINE at jetpens.com, free shipping over 35 dollars, about 33 dollars total: Uni-ball Signo RT1 0.38 four colour set, black red green orange, 11.20, for the four marking roles; Uni Jetstream 0.38 black 2.50, fastest drying on cheap paper; Uni Kuru Toga Advance 0.5 pencil 8.50, lead rotates so the line stays even; Tombow MONO Zero 2.3 mm eraser 5.25 for precise corrections; Zebra Sarasa Mark On 0.4 red and blue 5.30. DO NOT BUY: more highlighters, the Mildliners already win; multi pens, slower than picking up a second pen; Zebra bLen, solves a problem you do not have.",
+   "url": "https://app.notion.com/p/TSK-Stationery-run-Harvard-Square-MUJI-and-Bob-Slate-3d7ea74eb779816cb05bee914d30daf5"
   },
   {
    "name": "TSK Dual degree petition: ASK Barb + Rachael what it requires",
@@ -596,11 +715,6 @@
  ],
  "history": [
   {
-   "date": "2026-08-27",
-   "total": 0,
-   "done": 0
-  },
-  {
    "date": "2026-08-28",
    "total": 0,
    "done": 0
@@ -664,6 +778,11 @@
    "date": "2026-09-09",
    "total": 2,
    "done": 0
+  },
+  {
+   "date": "2026-09-10",
+   "total": 8,
+   "done": 1
   }
  ]
 }
