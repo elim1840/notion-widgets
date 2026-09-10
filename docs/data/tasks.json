@@ -1,12 +1,12 @@
 {
- "generated": "2026-09-10T09:44:00-04:00",
+ "generated": "2026-09-10T13:15:22-04:00",
  "today": "2026-09-10",
  "counts": {
-  "total": 134,
+  "total": 135,
   "open": 126,
-  "done": 8,
-  "today_total": 8,
-  "today_done": 1,
+  "done": 9,
+  "today_total": 9,
+  "today_done": 2,
   "overdue": 21,
   "past_meetings": 35
  },
@@ -82,8 +82,8 @@
   {
    "name": "TSK Stationery run: Harvard Square, MUJI and Bob Slate",
    "date": "2026-09-10T11:00:00.000-04:00",
-   "end": "2026-09-10T12:30:00.000-04:00",
-   "done": false,
+   "end": "2026-09-10T12:15:00.000-04:00",
+   "done": true,
    "status": "Not Started",
    "type": "Task",
    "meeting_type": "Personal",
@@ -95,6 +95,23 @@
    "link": "",
    "notes": "BIGGEST WIN IS PAPER, not pens. Printing packets on 24 lb / 90 gsm instead of standard 20 lb stops gel ink ghosting through the page. Hammermill Premium Multipurpose 24 lb, 97 bright, 500 sheets, rated for BOTH inkjet and laser so it is fuser safe. Staples SKU 166140. Check the shelf price in store: the listing showed 38.99 which looks like a multi ream pack, single reams run about 14. Never put coated or glossy paper through a laser printer. ROUTE: Red Line Kendall to Harvard, 2 stops. MUJI 48 Brattle and Bob Slate 30 Brattle are 100 feet apart. Blick at 619 Massachusetts Ave is walkable from MIT and stocks Zebra, Uni and Pentel. Staples or the Coop for paper and the binder. AT MUJI: gel ink pens 0.38 and 0.5 black, aluminium ruler, clear folders, pen case. AT BOB SLATE: handle the Japanese notebooks, Maruman, Kokuyo, Midori. Paper feel is the reason to come in person. Closes 1800 Thursday. BINDER: US Letter 1 inch 3 ring plus a 3 hole punch, Staples or Coop, about 15 dollars. NOT MUJI: Japanese binders are A4 with 26 or 30 holes and will not fit. ONLINE at jetpens.com, free shipping over 35 dollars, about 33 dollars total: Uni-ball Signo RT1 0.38 four colour set, black red green orange, 11.20, for the four marking roles; Uni Jetstream 0.38 black 2.50, fastest drying on cheap paper; Uni Kuru Toga Advance 0.5 pencil 8.50, lead rotates so the line stays even; Tombow MONO Zero 2.3 mm eraser 5.25 for precise corrections; Zebra Sarasa Mark On 0.4 red and blue 5.30. DO NOT BUY: more highlighters, the Mildliners already win; multi pens, slower than picking up a second pen; Zebra bLen, solves a problem you do not have.",
    "url": "https://app.notion.com/p/TSK-Stationery-run-Harvard-Square-MUJI-and-Bob-Slate-3d7ea74eb779816cb05bee914d30daf5"
+  },
+  {
+   "name": "The Deep Orientation",
+   "date": "2026-09-10T12:30:00.000-04:00",
+   "end": "2026-09-10T13:00:00.000-04:00",
+   "done": false,
+   "status": "Not Started",
+   "type": "",
+   "meeting_type": "Admin",
+   "priority": "",
+   "energy": "",
+   "location": "The Deep 37-072",
+   "attendees": "",
+   "agenda": "",
+   "link": "",
+   "notes": "",
+   "url": "https://app.notion.com/p/The-Deep-Orientation-3d7ea74eb779817abd6ed4c646a67d1a"
   },
   {
    "name": "TSK Dual degree petition: ASK Barb + Rachael what it requires",
@@ -560,21 +577,21 @@
    "url": "https://app.notion.com/p/TSK-Sign-up-for-a-Deep-orientation-slot-3d7ea74eb77981d6a51cf3bc1f497410"
   },
   {
-   "name": "TSK Stationery run: Harvard Square, MUJI and Bob Slate",
-   "date": "2026-09-10T11:00:00.000-04:00",
-   "end": "2026-09-10T12:30:00.000-04:00",
+   "name": "The Deep Orientation",
+   "date": "2026-09-10T12:30:00.000-04:00",
+   "end": "2026-09-10T13:00:00.000-04:00",
    "done": false,
    "status": "Not Started",
-   "type": "Task",
-   "meeting_type": "Personal",
+   "type": "",
+   "meeting_type": "Admin",
    "priority": "",
    "energy": "",
-   "location": "48 Brattle St and 30 Brattle St, Cambridge",
+   "location": "The Deep 37-072",
    "attendees": "",
    "agenda": "",
    "link": "",
-   "notes": "BIGGEST WIN IS PAPER, not pens. Printing packets on 24 lb / 90 gsm instead of standard 20 lb stops gel ink ghosting through the page. Hammermill Premium Multipurpose 24 lb, 97 bright, 500 sheets, rated for BOTH inkjet and laser so it is fuser safe. Staples SKU 166140. Check the shelf price in store: the listing showed 38.99 which looks like a multi ream pack, single reams run about 14. Never put coated or glossy paper through a laser printer. ROUTE: Red Line Kendall to Harvard, 2 stops. MUJI 48 Brattle and Bob Slate 30 Brattle are 100 feet apart. Blick at 619 Massachusetts Ave is walkable from MIT and stocks Zebra, Uni and Pentel. Staples or the Coop for paper and the binder. AT MUJI: gel ink pens 0.38 and 0.5 black, aluminium ruler, clear folders, pen case. AT BOB SLATE: handle the Japanese notebooks, Maruman, Kokuyo, Midori. Paper feel is the reason to come in person. Closes 1800 Thursday. BINDER: US Letter 1 inch 3 ring plus a 3 hole punch, Staples or Coop, about 15 dollars. NOT MUJI: Japanese binders are A4 with 26 or 30 holes and will not fit. ONLINE at jetpens.com, free shipping over 35 dollars, about 33 dollars total: Uni-ball Signo RT1 0.38 four colour set, black red green orange, 11.20, for the four marking roles; Uni Jetstream 0.38 black 2.50, fastest drying on cheap paper; Uni Kuru Toga Advance 0.5 pencil 8.50, lead rotates so the line stays even; Tombow MONO Zero 2.3 mm eraser 5.25 for precise corrections; Zebra Sarasa Mark On 0.4 red and blue 5.30. DO NOT BUY: more highlighters, the Mildliners already win; multi pens, slower than picking up a second pen; Zebra bLen, solves a problem you do not have.",
-   "url": "https://app.notion.com/p/TSK-Stationery-run-Harvard-Square-MUJI-and-Bob-Slate-3d7ea74eb779816cb05bee914d30daf5"
+   "notes": "",
+   "url": "https://app.notion.com/p/The-Deep-Orientation-3d7ea74eb779817abd6ed4c646a67d1a"
   },
   {
    "name": "TSK Dual degree petition: ASK Barb + Rachael what it requires",
@@ -781,8 +798,8 @@
   },
   {
    "date": "2026-09-10",
-   "total": 8,
-   "done": 1
+   "total": 9,
+   "done": 2
   }
  ]
 }
