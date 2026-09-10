@@ -1,5 +1,5 @@
 {
- "generated": "2026-09-10T15:55:06-04:00",
+ "generated": "2026-09-10T18:12:55-04:00",
  "today": "2026-09-10",
  "monday": "2026-09-07",
  "days": [
@@ -398,6 +398,18 @@
      "url": "https://app.notion.com/p/AFT-Prep-Water-Liquid-IV-sleep-by-2300-3d7ea74eb77981d39229ffbd03fb5b5e"
     },
     {
+     "name": "TEST GrokBot smoke \u2014 DELETE ME (trashed candidate)",
+     "date": "2026-09-10",
+     "end": "",
+     "done": true,
+     "kind": "Admin",
+     "src": "task",
+     "location": "",
+     "type": "Task",
+     "meeting_type": "Admin",
+     "url": "https://app.notion.com/p/TEST-GrokBot-smoke-DELETE-ME-trashed-candidate-3d7ea74eb77981d68a71fd285ade8899"
+    },
+    {
      "name": "MTG IYR dinner shopping run (Costco + H Mart)",
      "date": "2026-09-10",
      "end": "",
@@ -670,5 +682,5 @@
    ]
   }
  ],
- "total": 52
+ "total": 53
 }

@@ -1,16 +1,33 @@
 {
- "generated": "2026-09-10T15:55:06-04:00",
+ "generated": "2026-09-10T18:12:55-04:00",
  "today": "2026-09-10",
  "counts": {
-  "total": 139,
+  "total": 140,
   "open": 128,
-  "done": 11,
-  "today_total": 10,
-  "today_done": 3,
+  "done": 12,
+  "today_total": 11,
+  "today_done": 4,
   "overdue": 17,
   "past_meetings": 35
  },
  "today_items": [
+  {
+   "name": "TEST GrokBot smoke \u2014 DELETE ME (trashed candidate)",
+   "date": "2026-09-10",
+   "end": "",
+   "done": true,
+   "status": "Dropped",
+   "type": "Task",
+   "meeting_type": "Admin",
+   "priority": "Low",
+   "energy": "",
+   "location": "",
+   "attendees": "",
+   "agenda": "",
+   "link": "",
+   "notes": "Grok Bot Calendar Agent access test. Mark Dropped after verify.",
+   "url": "https://app.notion.com/p/TEST-GrokBot-smoke-DELETE-ME-trashed-candidate-3d7ea74eb77981d68a71fd285ade8899"
+  },
   {
    "name": "MTG IYR dinner shopping run (Costco + H Mart)",
    "date": "2026-09-10",
@@ -747,8 +764,8 @@
   },
   {
    "date": "2026-09-10",
-   "total": 10,
-   "done": 3
+   "total": 11,
+   "done": 4
   }
  ]
 }
