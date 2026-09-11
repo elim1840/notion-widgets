@@ -1,14 +1,14 @@
 {
- "generated": "2026-09-11T09:33:29-04:00",
+ "generated": "2026-09-11T13:14:23-04:00",
  "today": "2026-09-11",
  "counts": {
-  "total": 142,
-  "open": 130,
-  "done": 12,
+  "total": 143,
+  "open": 129,
+  "done": 14,
   "today_total": 6,
   "today_done": 0,
-  "overdue": 23,
-  "past_meetings": 36
+  "overdue": 22,
+  "past_meetings": 35
  },
  "today_items": [
   {
@@ -473,23 +473,6 @@
    "url": "https://app.notion.com/p/TSK-Dual-degree-petition-ASK-Barb-Rachael-what-it-requires-3d5ea74eb77981bcae7de8c0203cbdb5"
   },
   {
-   "name": "TSK Fix all Outlook rules based on sender",
-   "date": "2026-09-10T19:00:00.000-04:00",
-   "end": "2026-09-10T20:00:00.000-04:00",
-   "done": false,
-   "status": "Not Started",
-   "type": "Task",
-   "meeting_type": "Admin",
-   "priority": "",
-   "energy": "",
-   "location": "",
-   "attendees": "",
-   "agenda": "",
-   "link": "",
-   "notes": "",
-   "url": "https://app.notion.com/p/TSK-Fix-all-Outlook-rules-based-on-sender-3d2ea74eb77981329bbbe979480c3329"
-  },
-  {
    "name": "AFT Prep: Water + Liquid IV, sleep by 2300",
    "date": "2026-09-10T22:00:00.000-04:00",
    "end": "2026-09-10T22:15:00.000-04:00",
@@ -628,6 +611,23 @@
    "url": "https://app.notion.com/p/TSK-Claude-Campus-Ambassador-HARD-DEADLINE-2359-PT-3d5ea74eb779817881cee0f119bb99ce"
   },
   {
+   "name": "TSK Fix all Outlook rules based on sender",
+   "date": "2026-09-12",
+   "end": "",
+   "done": false,
+   "status": "Not Started",
+   "type": "Task",
+   "meeting_type": "Admin",
+   "priority": "",
+   "energy": "",
+   "location": "",
+   "attendees": "",
+   "agenda": "",
+   "link": "",
+   "notes": "",
+   "url": "https://app.notion.com/p/TSK-Fix-all-Outlook-rules-based-on-sender-3d2ea74eb77981329bbbe979480c3329"
+  },
+  {
    "name": "TSK Reach out to Dr. Tran re: Projects Day",
    "date": "2026-09-12",
    "end": "",
@@ -694,23 +694,6 @@
    "link": "",
    "notes": "Conditional: only act if no spot came through from the M1T makerspace training signup (task filed 7 Sep). If a spot was secured, tick Done and ignore. Avoids paying for / holding a digital training slot that is no longer needed.",
    "url": "https://app.notion.com/p/TSK-If-no-makerspace-training-spot-cancel-digital-training-signup-3d5ea74eb7798177b623c621d79f8b3f"
-  },
-  {
-   "name": "MTG Housewarming Party at Joce's",
-   "date": "2026-09-12T17:30:00.000-04:00",
-   "end": "2026-09-12T19:30:00.000-04:00",
-   "done": false,
-   "status": "Not Started",
-   "type": "Meeting",
-   "meeting_type": "",
-   "priority": "",
-   "energy": "",
-   "location": "Joce's",
-   "attendees": "",
-   "agenda": "",
-   "link": "",
-   "notes": "Partiful invite: https://partiful.com/e/0rBEYwEdbeYlSG3fNTTE",
-   "url": "https://app.notion.com/p/MTG-Housewarming-Party-at-Joce-s-3ceea74eb77981da84a1ce0a76053c62"
   }
  ],
  "history": [
@@ -776,8 +759,8 @@
   },
   {
    "date": "2026-09-10",
-   "total": 11,
-   "done": 4
+   "total": 10,
+   "done": 5
   },
   {
    "date": "2026-09-11",

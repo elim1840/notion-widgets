@@ -1,5 +1,5 @@
 {
- "generated": "2026-09-11T09:33:29-04:00",
+ "generated": "2026-09-11T13:14:23-04:00",
  "today": "2026-09-11",
  "monday": "2026-09-07",
  "days": [
@@ -365,25 +365,13 @@
      "name": "MTG Muddy Charles Pub w/ Dinner",
      "date": "2026-09-10T18:00:00.000-04:00",
      "end": "2026-09-10T19:00:00.000-04:00",
-     "done": false,
+     "done": true,
      "kind": "AeroAstro",
      "src": "task",
      "location": "Muddy Charles Pub",
      "type": "Meeting",
      "meeting_type": "AeroAstro",
      "url": "https://app.notion.com/p/MTG-Muddy-Charles-Pub-w-Dinner-3ceea74eb7798193ac66ea9854b26817"
-    },
-    {
-     "name": "TSK Fix all Outlook rules based on sender",
-     "date": "2026-09-10T19:00:00.000-04:00",
-     "end": "2026-09-10T20:00:00.000-04:00",
-     "done": false,
-     "kind": "Admin",
-     "src": "task",
-     "location": "",
-     "type": "Task",
-     "meeting_type": "Admin",
-     "url": "https://app.notion.com/p/TSK-Fix-all-Outlook-rules-based-on-sender-3d2ea74eb77981329bbbe979480c3329"
     },
     {
      "name": "AFT Prep: Water + Liquid IV, sleep by 2300",
@@ -557,7 +545,7 @@
      "name": "MTG Housewarming Party at Joce's",
      "date": "2026-09-12T17:30:00.000-04:00",
      "end": "2026-09-12T19:30:00.000-04:00",
-     "done": false,
+     "done": true,
      "kind": "Meeting",
      "src": "task",
      "location": "Joce's",
@@ -588,6 +576,18 @@
      "type": "Task",
      "meeting_type": "Admin",
      "url": "https://app.notion.com/p/TSK-Claude-Campus-Ambassador-HARD-DEADLINE-2359-PT-3d5ea74eb779817881cee0f119bb99ce"
+    },
+    {
+     "name": "TSK Fix all Outlook rules based on sender",
+     "date": "2026-09-12",
+     "end": "",
+     "done": false,
+     "kind": "Admin",
+     "src": "task",
+     "location": "",
+     "type": "Task",
+     "meeting_type": "Admin",
+     "url": "https://app.notion.com/p/TSK-Fix-all-Outlook-rules-based-on-sender-3d2ea74eb77981329bbbe979480c3329"
     },
     {
      "name": "TSK Reach out to Dr. Tran re: Projects Day",
@@ -668,6 +668,18 @@
      "url": "https://app.notion.com/p/Amazon-delivery-stationary-order-3d7ea74eb77981afab7ad2b0138f9df9"
     },
     {
+     "name": "Reach out to ASEM folks re: SOCOM Ignite",
+     "date": "2026-09-13T20:00:00.000-04:00",
+     "end": "2026-09-13T20:15:00.000-04:00",
+     "done": false,
+     "kind": "Military",
+     "src": "task",
+     "location": "",
+     "type": "",
+     "meeting_type": "Military",
+     "url": "https://app.notion.com/p/Reach-out-to-ASEM-folks-re-SOCOM-Ignite-3d8ea74eb77981fca6aec70f7a5fbc3f"
+    },
+    {
      "name": "AFT Prep: Water + Liquid IV, sleep by 2300",
      "date": "2026-09-13T22:00:00.000-04:00",
      "end": "2026-09-13T22:15:00.000-04:00",
@@ -694,5 +706,5 @@
    ]
   }
  ],
- "total": 54
+ "total": 55
 }
