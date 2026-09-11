@@ -1,5 +1,5 @@
 {
- "generated": "2026-09-11T13:14:23-04:00",
+ "generated": "2026-09-11T15:45:15-04:00",
  "today": "2026-09-11",
  "monday": "2026-09-07",
  "days": [
@@ -212,7 +212,7 @@
      "url": "https://app.notion.com/p/IDS-412-Tech-Policy-Lecture-01-Introduction-Why-Science-Technology-Public-Policy-3d3ea74eb779814ba901c446cf3cf72b"
     },
     {
-     "name": "16.990 Creative Teams: Lecture 01",
+     "name": "16.990 Creative Teams: Lecture 01: Introduction to class and creative teams",
      "date": "2026-09-09T14:30:00.000-04:00",
      "end": "2026-09-09T16:00:00.000-04:00",
      "done": false,
@@ -221,7 +221,7 @@
      "location": "9-354",
      "type": "Lecture",
      "meeting_type": "Class",
-     "url": "https://app.notion.com/p/16-990-Creative-Teams-Lecture-01-3d3ea74eb77981a1bd1fd73f769992b7"
+     "url": "https://app.notion.com/p/16-990-Creative-Teams-Lecture-01-Introduction-to-class-and-creative-teams-3d3ea74eb77981a1bd1fd73f769992b7"
     },
     {
      "name": "TSK Submit petition to Rachael and Barb (after registration)",
@@ -542,16 +542,16 @@
      "url": "https://app.notion.com/p/TSK-If-no-makerspace-training-spot-cancel-digital-training-signup-3d5ea74eb7798177b623c621d79f8b3f"
     },
     {
-     "name": "MTG Housewarming Party at Joce's",
-     "date": "2026-09-12T17:30:00.000-04:00",
-     "end": "2026-09-12T19:30:00.000-04:00",
-     "done": true,
-     "kind": "Meeting",
+     "name": "Work on Lunar Moon Base Abstract",
+     "date": "2026-09-12T13:00:00.000-04:00",
+     "end": "2026-09-12T15:00:00.000-04:00",
+     "done": false,
+     "kind": "Task",
      "src": "task",
-     "location": "Joce's",
-     "type": "Meeting",
+     "location": "",
+     "type": "Task",
      "meeting_type": "",
-     "url": "https://app.notion.com/p/MTG-Housewarming-Party-at-Joce-s-3ceea74eb77981da84a1ce0a76053c62"
+     "url": "https://app.notion.com/p/Work-on-Lunar-Moon-Base-Abstract-41918c718b5349958a19355202c243cf"
     },
     {
      "name": "AFT Prep: Water + Liquid IV, sleep by 2300",

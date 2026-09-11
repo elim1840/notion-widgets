@@ -1,6 +1,236 @@
 {
  "classes": [
   {
+   "name": "16.990 Creative Teams: Lecture 26: Learning from your final autobiographical papers",
+   "code": "16.990",
+   "date": "2026-12-09T14:30:00.000-04:00",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "9-354",
+   "url": "https://app.notion.com/p/16-990-Creative-Teams-Lecture-26-Learning-from-your-final-autobiographical-papers-3d8ea74eb77981c79aa2fc6a7671f50f"
+  },
+  {
+   "name": "16.990 Creative Teams: Lecture 25: Developing Personal and Interpersonal Skills: Negotiating your job offers",
+   "code": "16.990",
+   "date": "2026-12-07T14:30:00.000-04:00",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "9-354",
+   "url": "https://app.notion.com/p/16-990-Creative-Teams-Lecture-25-Developing-Personal-and-Interpersonal-Skills-Negotiating-your-jo-3d8ea74eb779811aa6d1fa26c8d7a004"
+  },
+  {
+   "name": "16.990 Creative Teams: Lecture 24: Leading Creative Teams in AI contexts; Practice negotiation skills",
+   "code": "16.990",
+   "date": "2026-12-02T14:30:00.000-04:00",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "9-354",
+   "url": "https://app.notion.com/p/16-990-Creative-Teams-Lecture-24-Leading-Creative-Teams-in-AI-contexts-Practice-negotiation-skill-3d8ea74eb77981f4886dfa3b3e97ef38"
+  },
+  {
+   "name": "16.990 Creative Teams: Lecture 23: Developing Teamwork and Organizational Skills: Creating motivating environments in",
+   "code": "16.990",
+   "date": "2026-11-30T14:30:00.000-04:00",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "9-354",
+   "url": "https://app.notion.com/p/16-990-Creative-Teams-Lecture-23-Developing-Teamwork-and-Organizational-Skills-Creating-motivatin-3d8ea74eb779819da6dfc97cc3199f31"
+  },
+  {
+   "name": "16.990 Creative Teams: Lecture 22: Developing Teamwork Skills: Learning from team experiences; Introduction to power and",
+   "code": "16.990",
+   "date": "2026-11-25T14:30:00.000-04:00",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "9-354",
+   "url": "https://app.notion.com/p/16-990-Creative-Teams-Lecture-22-Developing-Teamwork-Skills-Learning-from-team-experiences-Intro-3d8ea74eb779819d9d5ee3c9e6c031ea"
+  },
+  {
+   "name": "16.990 Creative Teams: Lecture 21",
+   "code": "16.990",
+   "date": "2026-11-23T14:30:00.000-04:00",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "9-354",
+   "url": "https://app.notion.com/p/16-990-Creative-Teams-Lecture-21-3d8ea74eb77981858d5cdeb5cd2513ed"
+  },
+  {
+   "name": "16.990 Creative Teams: Lecture 20: Developing Teamwork Skills: Groups will deliver their projects today",
+   "code": "16.990",
+   "date": "2026-11-18T14:30:00.000-04:00",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "9-354",
+   "url": "https://app.notion.com/p/16-990-Creative-Teams-Lecture-20-Developing-Teamwork-Skills-Groups-will-deliver-their-projects-to-3d8ea74eb7798173ae38f8a07d0b358b"
+  },
+  {
+   "name": "16.990 Creative Teams: Lecture 19: Developing Teamwork Skills: Groups will deliver their projects today",
+   "code": "16.990",
+   "date": "2026-11-16T14:30:00.000-04:00",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "9-354",
+   "url": "https://app.notion.com/p/16-990-Creative-Teams-Lecture-19-Developing-Teamwork-Skills-Groups-will-deliver-their-projects-to-3d8ea74eb77981988000dd7b477a312f"
+  },
+  {
+   "name": "16.990 Creative Teams: Lecture 18: Developing Personal Skills: Learning to lead: The role of growth mindsets",
+   "code": "16.990",
+   "date": "2026-11-09T14:30:00.000-04:00",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "9-354",
+   "url": "https://app.notion.com/p/16-990-Creative-Teams-Lecture-18-Developing-Personal-Skills-Learning-to-lead-The-role-of-growth--3d8ea74eb7798172acb9e11787336dd4"
+  },
+  {
+   "name": "16.990 Creative Teams: Lecture 17: Learning from your autobiographical paper assignment",
+   "code": "16.990",
+   "date": "2026-11-04T14:30:00.000-04:00",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "9-354",
+   "url": "https://app.notion.com/p/16-990-Creative-Teams-Lecture-17-Learning-from-your-autobiographical-paper-assignment-3d8ea74eb7798108a22bdd0aea1c834b"
+  },
+  {
+   "name": "16.990 Creative Teams: Lecture 16: Developing Teamwork Skills: Creative problem solving with AI",
+   "code": "16.990",
+   "date": "2026-11-02T14:30:00.000-04:00",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "9-354",
+   "url": "https://app.notion.com/p/16-990-Creative-Teams-Lecture-16-Developing-Teamwork-Skills-Creative-problem-solving-with-AI-3d8ea74eb77981a78382c983a90b2c85"
+  },
+  {
+   "name": "16.990 Creative Teams: Lecture 15: Guest lecture with Daniel J. Riccio, former Executive Vice President Hardware Engineering",
+   "code": "16.990",
+   "date": "2026-10-28T14:30:00.000-04:00",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "9-354",
+   "url": "https://app.notion.com/p/16-990-Creative-Teams-Lecture-15-Guest-lecture-with-Daniel-J-Riccio-former-Executive-Vice-Presid-3d8ea74eb779819d9c90f124a8a9e693"
+  },
+  {
+   "name": "16.990 Creative Teams: Lecture 14: Developing Teamwork Skills: Creative problem solving",
+   "code": "16.990",
+   "date": "2026-10-26T14:30:00.000-04:00",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "9-354",
+   "url": "https://app.notion.com/p/16-990-Creative-Teams-Lecture-14-Developing-Teamwork-Skills-Creative-problem-solving-3d8ea74eb77981ce91b5d3c56e2fdde4"
+  },
+  {
+   "name": "16.990 Creative Teams: Lecture 13: Developing Teamwork Skills: Leading in an inclusive engineering environment",
+   "code": "16.990",
+   "date": "2026-10-21T14:30:00.000-04:00",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "9-354",
+   "url": "https://app.notion.com/p/16-990-Creative-Teams-Lecture-13-Developing-Teamwork-Skills-Leading-in-an-inclusive-engineering-e-3d8ea74eb77981fab621cf505908aaea"
+  },
+  {
+   "name": "16.990 Creative Teams: Lecture 12: Developing Teamwork Skills: Leading a mid-point performance check-up",
+   "code": "16.990",
+   "date": "2026-10-19T14:30:00.000-04:00",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "9-354",
+   "url": "https://app.notion.com/p/16-990-Creative-Teams-Lecture-12-Developing-Teamwork-Skills-Leading-a-mid-point-performance-check-3d8ea74eb77981878cfec248e5fdaf65"
+  },
+  {
+   "name": "16.990 Creative Teams: Lecture 11: Guest lecture with Veronica Barner, Wind Energy Product Executive at GE Vernova",
+   "code": "16.990",
+   "date": "2026-10-14T14:30:00.000-04:00",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "9-354",
+   "url": "https://app.notion.com/p/16-990-Creative-Teams-Lecture-11-Guest-lecture-with-Veronica-Barner-Wind-Energy-Product-Executive-3d8ea74eb77981f5a104e9502e0f72c3"
+  },
+  {
+   "name": "16.990 Creative Teams: Lecture 10: Developing Interpersonal Skills: Giving and receiving feedback in teams",
+   "code": "16.990",
+   "date": "2026-10-13T14:30:00.000-04:00",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "9-354",
+   "url": "https://app.notion.com/p/16-990-Creative-Teams-Lecture-10-Developing-Interpersonal-Skills-Giving-and-receiving-feedback-in-3d8ea74eb7798134aacae257be7f48ba"
+  },
+  {
+   "name": "16.990 Creative Teams: Lecture 09: Developing Team and Organizational Skills: Communicating a shared team vision",
+   "code": "16.990",
+   "date": "2026-10-07T14:30:00.000-04:00",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "9-354",
+   "url": "https://app.notion.com/p/16-990-Creative-Teams-Lecture-09-Developing-Team-and-Organizational-Skills-Communicating-a-shared-3d8ea74eb77981a8ac9dc02b8ca88ca0"
+  },
+  {
+   "name": "16.990 Creative Teams: Lecture 08: Developing Team and Organizational Skills: Creating a shared team vision",
+   "code": "16.990",
+   "date": "2026-10-05T14:30:00.000-04:00",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "9-354",
+   "url": "https://app.notion.com/p/16-990-Creative-Teams-Lecture-08-Developing-Team-and-Organizational-Skills-Creating-a-shared-team-3d8ea74eb77981048b3deafe196697c4"
+  },
+  {
+   "name": "16.990 Creative Teams: Lecture 07: Developing Teamwork Skills: Launching new teams",
+   "code": "16.990",
+   "date": "2026-09-30T14:30:00.000-04:00",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "9-354",
+   "url": "https://app.notion.com/p/16-990-Creative-Teams-Lecture-07-Developing-Teamwork-Skills-Launching-new-teams-3d8ea74eb77981d5b300eb38a284a65b"
+  },
+  {
+   "name": "16.990 Creative Teams: Lecture 06: Developing Personal Skills: Values and Ethical decision making",
+   "code": "16.990",
+   "date": "2026-09-28T14:30:00.000-04:00",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "9-354",
+   "url": "https://app.notion.com/p/16-990-Creative-Teams-Lecture-06-Developing-Personal-Skills-Values-and-Ethical-decision-making-3d8ea74eb77981e7ba5af2d13dbe853f"
+  },
+  {
+   "name": "16.990 Creative Teams: Lecture 05: Developing Personal Skills: Leadership strengths and life stories",
+   "code": "16.990",
+   "date": "2026-09-23T14:30:00.000-04:00",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "9-354",
+   "url": "https://app.notion.com/p/16-990-Creative-Teams-Lecture-05-Developing-Personal-Skills-Leadership-strengths-and-life-stories-3d8ea74eb7798184a197e87d459157d8"
+  },
+  {
+   "name": "16.990 Creative Teams: Lecture 04: Developing Personal Skills: Personality and leadership",
+   "code": "16.990",
+   "date": "2026-09-21T14:30:00.000-04:00",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "9-354",
+   "url": "https://app.notion.com/p/16-990-Creative-Teams-Lecture-04-Developing-Personal-Skills-Personality-and-leadership-3d8ea74eb77981f299e1c7c27fcab473"
+  },
+  {
    "name": "TSK IDS.412: Read the IDS.412 syllabus before class",
    "code": "IDS.412",
    "date": "2026-09-09",
@@ -1047,7 +1277,7 @@
    "due": "",
    "status": "Not started",
    "type": "Presentation",
-   "room": "No room, submission. Class itself: 9-354 per syllabus v9 vs 33-218 per Canvas, unresolved.",
+   "room": "9-354",
    "url": "https://app.notion.com/p/16-S896-RASCAL-Presentation-01-Skills-Survey-Team-Pitches-Due-3d5ea74eb77981668e68ecad205e5417"
   },
   {
@@ -1127,7 +1357,7 @@
    "due": "",
    "status": "",
    "type": "Lecture",
-   "room": "E51-376",
+   "room": "E51-315",
    "url": "https://app.notion.com/p/14-003-Microecon-Policy-Lecture-03-Introducing-consumer-theory-The-foundation-of-microeconomics-3d3ea74eb779813d900dc288693e91d4"
   },
   {
@@ -1161,14 +1391,14 @@
    "url": "https://app.notion.com/p/IDS-412-Tech-Policy-Lecture-03-Knowledge-generation-3d3ea74eb779815f8390cbf673fa5389"
   },
   {
-   "name": "16.990 Creative Teams: Lecture 03",
+   "name": "16.990 Creative Teams: Lecture 03: Introduction to models of teams and team leadership (part two)",
    "code": "16.990",
    "date": "2026-09-16T14:30:00.000-04:00",
    "due": "",
    "status": "",
    "type": "Lecture",
-   "room": "9-354 per the registrar and per the Canvas section string \"Lecture 1 [MW2.30-4, 9-354]\". Canvas publishes no calendar event for this date, so the meeting itself is unconfirmed by Canvas.",
-   "url": "https://app.notion.com/p/16-990-Creative-Teams-Lecture-03-3d3ea74eb77981739594f7c7157aea3a"
+   "room": "9-354",
+   "url": "https://app.notion.com/p/16-990-Creative-Teams-Lecture-03-Introduction-to-models-of-teams-and-team-leadership-part-two-3d3ea74eb77981739594f7c7157aea3a"
   },
   {
    "name": "16.S896 RASCAL: Lecture 01",
@@ -1181,14 +1411,14 @@
    "url": "https://app.notion.com/p/16-S896-RASCAL-Lecture-01-3d3ea74eb77981789645cd0634a83f8b"
   },
   {
-   "name": "16.990 Creative Teams: Lecture 01",
+   "name": "16.990 Creative Teams: Lecture 01: Introduction to class and creative teams",
    "code": "16.990",
    "date": "2026-09-09T14:30:00.000-04:00",
    "due": "",
    "status": "",
    "type": "Lecture",
    "room": "9-354",
-   "url": "https://app.notion.com/p/16-990-Creative-Teams-Lecture-01-3d3ea74eb77981a1bd1fd73f769992b7"
+   "url": "https://app.notion.com/p/16-990-Creative-Teams-Lecture-01-Introduction-to-class-and-creative-teams-3d3ea74eb77981a1bd1fd73f769992b7"
   },
   {
    "name": "16.S896 RASCAL: Lecture 03",
@@ -1221,14 +1451,14 @@
    "url": "https://app.notion.com/p/IDS-412-Tech-Policy-Lecture-02-Policies-Institutions-and-Markets-3d3ea74eb77981d69d4ac5e486eba982"
   },
   {
-   "name": "16.990 Creative Teams: Lecture 02",
+   "name": "16.990 Creative Teams: Lecture 02: Introduction to leading teams (part one)",
    "code": "16.990",
    "date": "2026-09-14T14:30:00.000-04:00",
    "due": "",
    "status": "",
    "type": "Lecture",
-   "room": "9-354 per the registrar and per the Canvas section string \"Lecture 1 [MW2.30-4, 9-354]\". Canvas publishes no calendar event for this date, so the meeting itself is unconfirmed by Canvas.",
-   "url": "https://app.notion.com/p/16-990-Creative-Teams-Lecture-02-3d3ea74eb77981f5b253e0ac0282c890"
+   "room": "9-354",
+   "url": "https://app.notion.com/p/16-990-Creative-Teams-Lecture-02-Introduction-to-leading-teams-part-one-3d3ea74eb77981f5b253e0ac0282c890"
   }
  ],
  "projects": [
