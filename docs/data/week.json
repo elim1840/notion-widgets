@@ -1,6 +1,6 @@
 {
- "generated": "2026-09-10T20:11:32-04:00",
- "today": "2026-09-10",
+ "generated": "2026-09-11T00:39:55-04:00",
+ "today": "2026-09-11",
  "monday": "2026-09-07",
  "days": [
   {
@@ -287,7 +287,7 @@
   },
   {
    "date": "2026-09-10",
-   "is_today": true,
+   "is_today": false,
    "items": [
     {
      "name": "TSK Call Hilton + Marriott re: hotel night of 7 Nov",
@@ -425,7 +425,7 @@
   },
   {
    "date": "2026-09-11",
-   "is_today": false,
+   "is_today": true,
    "items": [
     {
      "name": "14.003 Microecon & Policy: Recitation 01",
@@ -438,6 +438,18 @@
      "type": "Seminar",
      "meeting_type": "Class",
      "url": "https://app.notion.com/p/14-003-Microecon-Policy-Recitation-01-3d3ea74eb77981118fd8da259e02e85c"
+    },
+    {
+     "name": "Packing list Friday morning 1100 spatula scrub daddy cleaner, lighter, canola oil, paper towels, water, blanket it gets cold",
+     "date": "2026-09-11T11:00:00.000-04:00",
+     "end": "",
+     "done": false,
+     "kind": "Meeting",
+     "src": "task",
+     "location": "",
+     "type": "",
+     "meeting_type": "",
+     "url": "https://app.notion.com/p/Packing-list-Friday-morning-1100-spatula-scrub-daddy-cleaner-lighter-canola-oil-paper-towels-wat-3d8ea74eb77981148825c328467d7707"
     },
     {
      "name": "16.S896 RASCAL: Lecture 01",
@@ -682,5 +694,5 @@
    ]
   }
  ],
- "total": 53
+ "total": 54
 }
