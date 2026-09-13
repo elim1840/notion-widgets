@@ -1,6 +1,426 @@
 {
  "classes": [
   {
+   "name": "[STUDY] 16.842 Systems Eng: Exam 01 T-1: Light retrieval pass: no new material",
+   "code": "16.842",
+   "date": "2026-11-30T12:00:00.000-05:00",
+   "due": "",
+   "status": "Not started",
+   "type": "",
+   "room": "",
+   "url": "https://app.notion.com/p/STUDY-16-842-Systems-Eng-Exam-01-T-1-Light-retrieval-pass-no-new-material-3daea74eb77981a28c65c5498304bc69"
+  },
+  {
+   "name": "[STUDY] 16.842 Systems Eng: Exam 01 T-4: Full blank-page recall of the whole syllabus, then close only the gaps you found",
+   "code": "16.842",
+   "date": "2026-11-27T08:00:00.000-05:00",
+   "due": "",
+   "status": "Not started",
+   "type": "",
+   "room": "",
+   "url": "https://app.notion.com/p/STUDY-16-842-Systems-Eng-Exam-01-T-4-Full-blank-page-recall-of-the-whole-syllabus-then-close-onl-3daea74eb77981198977ddf6e321ef06"
+  },
+  {
+   "name": "[STUDY] 16.842 Systems Eng: Exam 01 T-8: Past papers and problem sets under exam conditions, no notes",
+   "code": "16.842",
+   "date": "2026-11-23T08:00:00.000-05:00",
+   "due": "",
+   "status": "Not started",
+   "type": "",
+   "room": "",
+   "url": "https://app.notion.com/p/STUDY-16-842-Systems-Eng-Exam-01-T-8-Past-papers-and-problem-sets-under-exam-conditions-no-notes-3daea74eb77981e580e7e381b1f5cde4"
+  },
+  {
+   "name": "[STUDY] 16.842 Systems Eng: Exam 01 T-14: Closed-book retrieval: second half, same method",
+   "code": "16.842",
+   "date": "2026-11-17T08:00:00.000-05:00",
+   "due": "",
+   "status": "Not started",
+   "type": "",
+   "room": "",
+   "url": "https://app.notion.com/p/STUDY-16-842-Systems-Eng-Exam-01-T-14-Closed-book-retrieval-second-half-same-method-3daea74eb779810e8337ddda84680ed7"
+  },
+  {
+   "name": "[STUDY] 16.842 Systems Eng: Exam 01 T-21: Closed-book retrieval: first half of the material, write what you recall before checking",
+   "code": "16.842",
+   "date": "2026-11-10T08:00:00.000-05:00",
+   "due": "",
+   "status": "Not started",
+   "type": "",
+   "room": "",
+   "url": "https://app.notion.com/p/STUDY-16-842-Systems-Eng-Exam-01-T-21-Closed-book-retrieval-first-half-of-the-material-write-wh-3daea74eb7798185ad80e0edf35b7335"
+  },
+  {
+   "name": "[STUDY] 16.842 Systems Eng: Exam 01 T-28: Scope it: list every lecture and reading covered, then self-test cold to find the gaps",
+   "code": "16.842",
+   "date": "2026-11-03T09:00:00.000-05:00",
+   "due": "",
+   "status": "Not started",
+   "type": "",
+   "room": "",
+   "url": "https://app.notion.com/p/STUDY-16-842-Systems-Eng-Exam-01-T-28-Scope-it-list-every-lecture-and-reading-covered-then-self-3daea74eb77981978649fd0b751ec018"
+  },
+  {
+   "name": "[STUDY] 14.003 Microecon & Policy: Exam 02 T-1: Light retrieval pass: no new material",
+   "code": "14.003",
+   "date": "2026-11-15T08:00:00.000-05:00",
+   "due": "",
+   "status": "Not started",
+   "type": "",
+   "room": "",
+   "url": "https://app.notion.com/p/STUDY-14-003-Microecon-Policy-Exam-02-T-1-Light-retrieval-pass-no-new-material-3daea74eb779812d8caccfeabe95fd52"
+  },
+  {
+   "name": "[STUDY] 14.003 Microecon & Policy: Exam 02 T-4: Full blank-page recall of the whole syllabus, then close only the gaps you found",
+   "code": "14.003",
+   "date": "2026-11-12T08:00:00.000-05:00",
+   "due": "",
+   "status": "Not started",
+   "type": "",
+   "room": "",
+   "url": "https://app.notion.com/p/STUDY-14-003-Microecon-Policy-Exam-02-T-4-Full-blank-page-recall-of-the-whole-syllabus-then-cl-3daea74eb779818cb806dfaca6ead449"
+  },
+  {
+   "name": "[STUDY] 14.003 Microecon & Policy: Exam 02 T-8: Past papers and problem sets under exam conditions, no notes",
+   "code": "14.003",
+   "date": "2026-11-08T08:00:00.000-05:00",
+   "due": "",
+   "status": "Not started",
+   "type": "",
+   "room": "",
+   "url": "https://app.notion.com/p/STUDY-14-003-Microecon-Policy-Exam-02-T-8-Past-papers-and-problem-sets-under-exam-conditions-n-3daea74eb77981a2a8d7e41ba0a387d8"
+  },
+  {
+   "name": "[STUDY] 14.003 Microecon & Policy: Exam 02 T-14: Closed-book retrieval: second half, same method",
+   "code": "14.003",
+   "date": "2026-11-02T08:00:00.000-05:00",
+   "due": "",
+   "status": "Not started",
+   "type": "",
+   "room": "",
+   "url": "https://app.notion.com/p/STUDY-14-003-Microecon-Policy-Exam-02-T-14-Closed-book-retrieval-second-half-same-method-3daea74eb779815181c7ee5df96ee647"
+  },
+  {
+   "name": "[STUDY] 14.003 Microecon & Policy: Exam 02 T-21: Closed-book retrieval: first half of the material, write what you recall before checking",
+   "code": "14.003",
+   "date": "2026-10-26T08:00:00.000-04:00",
+   "due": "",
+   "status": "Not started",
+   "type": "",
+   "room": "",
+   "url": "https://app.notion.com/p/STUDY-14-003-Microecon-Policy-Exam-02-T-21-Closed-book-retrieval-first-half-of-the-material-w-3daea74eb7798133bed2e45141be0024"
+  },
+  {
+   "name": "[STUDY] 14.003 Microecon & Policy: Exam 02 T-28: Scope it: list every lecture and reading covered, then self-test cold to find the gaps",
+   "code": "14.003",
+   "date": "2026-10-19T12:00:00.000-04:00",
+   "due": "",
+   "status": "Not started",
+   "type": "",
+   "room": "",
+   "url": "https://app.notion.com/p/STUDY-14-003-Microecon-Policy-Exam-02-T-28-Scope-it-list-every-lecture-and-reading-covered-th-3daea74eb77981a197e1e13f30e3770f"
+  },
+  {
+   "name": "[STUDY] IDS.412 Tech & Policy: Exam 17 T-1: Light retrieval pass: no new material",
+   "code": "IDS.412",
+   "date": "2026-11-03T08:00:00.000-05:00",
+   "due": "",
+   "status": "Not started",
+   "type": "",
+   "room": "",
+   "url": "https://app.notion.com/p/STUDY-IDS-412-Tech-Policy-Exam-17-T-1-Light-retrieval-pass-no-new-material-3daea74eb779815499a2cac941b2a730"
+  },
+  {
+   "name": "[STUDY] IDS.412 Tech & Policy: Exam 17 T-4: Full blank-page recall of the whole syllabus, then close only the gaps you found",
+   "code": "IDS.412",
+   "date": "2026-10-31T08:00:00.000-04:00",
+   "due": "",
+   "status": "Not started",
+   "type": "",
+   "room": "",
+   "url": "https://app.notion.com/p/STUDY-IDS-412-Tech-Policy-Exam-17-T-4-Full-blank-page-recall-of-the-whole-syllabus-then-close--3daea74eb77981eca663fd1ebaee6805"
+  },
+  {
+   "name": "[STUDY] IDS.412 Tech & Policy: Exam 17 T-8: Past papers and problem sets under exam conditions, no notes",
+   "code": "IDS.412",
+   "date": "2026-10-27T08:00:00.000-04:00",
+   "due": "",
+   "status": "Not started",
+   "type": "",
+   "room": "",
+   "url": "https://app.notion.com/p/STUDY-IDS-412-Tech-Policy-Exam-17-T-8-Past-papers-and-problem-sets-under-exam-conditions-no-no-3daea74eb77981098c5dcacf55e88627"
+  },
+  {
+   "name": "[STUDY] IDS.412 Tech & Policy: Exam 17 T-14: Closed-book retrieval: second half, same method",
+   "code": "IDS.412",
+   "date": "2026-10-21T08:00:00.000-04:00",
+   "due": "",
+   "status": "Not started",
+   "type": "",
+   "room": "",
+   "url": "https://app.notion.com/p/STUDY-IDS-412-Tech-Policy-Exam-17-T-14-Closed-book-retrieval-second-half-same-method-3daea74eb77981f096a7d2026cb1f9c4"
+  },
+  {
+   "name": "[STUDY] IDS.412 Tech & Policy: Exam 17 T-21: Closed-book retrieval: first half of the material, write what you recall before checking",
+   "code": "IDS.412",
+   "date": "2026-10-14T08:00:00.000-04:00",
+   "due": "",
+   "status": "Not started",
+   "type": "",
+   "room": "",
+   "url": "https://app.notion.com/p/STUDY-IDS-412-Tech-Policy-Exam-17-T-21-Closed-book-retrieval-first-half-of-the-material-write-3daea74eb7798145b20cc093b391864b"
+  },
+  {
+   "name": "[STUDY] IDS.412 Tech & Policy: Exam 17 T-28: Scope it: list every lecture and reading covered, then self-test cold to find the gaps",
+   "code": "IDS.412",
+   "date": "2026-10-07T12:00:00.000-04:00",
+   "due": "",
+   "status": "Not started",
+   "type": "",
+   "room": "",
+   "url": "https://app.notion.com/p/STUDY-IDS-412-Tech-Policy-Exam-17-T-28-Scope-it-list-every-lecture-and-reading-covered-then-s-3daea74eb77981109e9affcedae331ed"
+  },
+  {
+   "name": "[STUDY] 14.003 Microecon & Policy: Exam 01 T-1: Light retrieval pass: no new material",
+   "code": "14.003",
+   "date": "2026-10-12T08:00:00.000-04:00",
+   "due": "",
+   "status": "Not started",
+   "type": "",
+   "room": "",
+   "url": "https://app.notion.com/p/STUDY-14-003-Microecon-Policy-Exam-01-T-1-Light-retrieval-pass-no-new-material-3daea74eb77981c6ac08dfa58d9e3777"
+  },
+  {
+   "name": "[STUDY] 14.003 Microecon & Policy: Exam 01 T-4: Full blank-page recall of the whole syllabus, then close only the gaps you found",
+   "code": "14.003",
+   "date": "2026-10-09T17:00:00.000-04:00",
+   "due": "",
+   "status": "Not started",
+   "type": "",
+   "room": "",
+   "url": "https://app.notion.com/p/STUDY-14-003-Microecon-Policy-Exam-01-T-4-Full-blank-page-recall-of-the-whole-syllabus-then-cl-3daea74eb779813680adff27aaacb808"
+  },
+  {
+   "name": "[STUDY] 14.003 Microecon & Policy: Exam 01 T-8: Past papers and problem sets under exam conditions, no notes",
+   "code": "14.003",
+   "date": "2026-10-05T08:00:00.000-04:00",
+   "due": "",
+   "status": "Not started",
+   "type": "",
+   "room": "",
+   "url": "https://app.notion.com/p/STUDY-14-003-Microecon-Policy-Exam-01-T-8-Past-papers-and-problem-sets-under-exam-conditions-n-3daea74eb779819180e6d7ff28d872ea"
+  },
+  {
+   "name": "[STUDY] 14.003 Microecon & Policy: Exam 01 T-14: Closed-book retrieval: second half, same method",
+   "code": "14.003",
+   "date": "2026-09-29T08:00:00.000-04:00",
+   "due": "",
+   "status": "Not started",
+   "type": "",
+   "room": "",
+   "url": "https://app.notion.com/p/STUDY-14-003-Microecon-Policy-Exam-01-T-14-Closed-book-retrieval-second-half-same-method-3daea74eb77981be93dbd9715f966237"
+  },
+  {
+   "name": "[STUDY] 14.003 Microecon & Policy: Exam 01 T-21: Closed-book retrieval: first half of the material, write what you recall before checking",
+   "code": "14.003",
+   "date": "2026-09-22T08:00:00.000-04:00",
+   "due": "",
+   "status": "Not started",
+   "type": "",
+   "room": "",
+   "url": "https://app.notion.com/p/STUDY-14-003-Microecon-Policy-Exam-01-T-21-Closed-book-retrieval-first-half-of-the-material-w-3daea74eb77981bcb1f6e2a8255008d5"
+  },
+  {
+   "name": "[STUDY] 14.003 Microecon & Policy: Exam 01 T-28: Scope it: list every lecture and reading covered, then self-test cold to find the gaps",
+   "code": "14.003",
+   "date": "2026-09-15T18:00:00.000-04:00",
+   "due": "",
+   "status": "Not started",
+   "type": "",
+   "room": "",
+   "url": "https://app.notion.com/p/STUDY-14-003-Microecon-Policy-Exam-01-T-28-Scope-it-list-every-lecture-and-reading-covered-th-3daea74eb779813fbc75e592b810e366"
+  },
+  {
+   "name": "[STUDY] 16.842 Systems Eng: Quiz 01 T-2: Light retrieval pass",
+   "code": "16.842",
+   "date": "2026-09-13T13:04:00.000-04:00",
+   "due": "",
+   "status": "Not started",
+   "type": "",
+   "room": "",
+   "url": "https://app.notion.com/p/STUDY-16-842-Systems-Eng-Quiz-01-T-2-Light-retrieval-pass-3daea74eb77981f3b395e6df9fa9453d"
+  },
+  {
+   "name": "[STUDY] 16.842 Systems Eng: Quiz 02 T-2: Light retrieval pass",
+   "code": "16.842",
+   "date": "2026-09-13T12:34:00.000-04:00",
+   "due": "",
+   "status": "Not started",
+   "type": "",
+   "room": "",
+   "url": "https://app.notion.com/p/STUDY-16-842-Systems-Eng-Quiz-02-T-2-Light-retrieval-pass-3daea74eb7798178a49fc09e747d42f4"
+  },
+  {
+   "name": "[DUE] 16.S896 RASCAL: Presentation 01: Skills Survey + Team Pitches",
+   "code": "16.S896",
+   "date": "2026-09-17T20:00:00.000-04:00",
+   "due": "",
+   "status": "Not started",
+   "type": "",
+   "room": "",
+   "url": "https://app.notion.com/p/DUE-16-S896-RASCAL-Presentation-01-Skills-Survey-Team-Pitches-3daea74eb77981fb9283e0232cbf0e24"
+  },
+  {
+   "name": "[DUE] 16.842 Systems Eng: Quiz 01: Pre-Reading (slides) Week 1, mandatory, 4 pts",
+   "code": "16.842",
+   "date": "2026-09-14T20:30:00.000-04:00",
+   "due": "",
+   "status": "Not started",
+   "type": "",
+   "room": "",
+   "url": "https://app.notion.com/p/DUE-16-842-Systems-Eng-Quiz-01-Pre-Reading-slides-Week-1-mandatory-4-pts-3daea74eb77981cdbc34dd084afadce0"
+  },
+  {
+   "name": "[DUE] 16.842 Systems Eng: Quiz 02: Pre-Readings (handbooks) Week 1, mandatory",
+   "code": "16.842",
+   "date": "2026-09-14T20:00:00.000-04:00",
+   "due": "",
+   "status": "Not started",
+   "type": "",
+   "room": "",
+   "url": "https://app.notion.com/p/DUE-16-842-Systems-Eng-Quiz-02-Pre-Readings-handbooks-Week-1-mandatory-3daea74eb77981458893de5220cf34db"
+  },
+  {
+   "name": "[DUE] 14.003 Microecon & Policy: Problem Set 02: Consumer theory",
+   "code": "14.003",
+   "date": "2026-10-07T19:00:00.000-04:00",
+   "due": "",
+   "status": "Not started",
+   "type": "",
+   "room": "",
+   "url": "https://app.notion.com/p/DUE-14-003-Microecon-Policy-Problem-Set-02-Consumer-theory-3daea74eb779815bb54af593ccc8b640"
+  },
+  {
+   "name": "[DUE] 14.003 Microecon & Policy: Problem Set 01: Minimum wage, research design, causal inference",
+   "code": "14.003",
+   "date": "2026-09-23T19:00:00.000-04:00",
+   "due": "",
+   "status": "Not started",
+   "type": "",
+   "room": "",
+   "url": "https://app.notion.com/p/DUE-14-003-Microecon-Policy-Problem-Set-01-Minimum-wage-research-design-causal-inference-3daea74eb779815ea169d2b6942cb480"
+  },
+  {
+   "name": "[DUE] IDS.412 Tech & Policy: Paper 1: federal regulatory comment",
+   "code": "IDS.412",
+   "date": "2026-10-25T19:00:00.000-04:00",
+   "due": "",
+   "status": "Not started",
+   "type": "",
+   "room": "",
+   "url": "https://app.notion.com/p/DUE-IDS-412-Tech-Policy-Paper-1-federal-regulatory-comment-3daea74eb7798107969ccdbdda6e59db"
+  },
+  {
+   "name": "[DUE] IDS.412 Tech & Policy: Paper I: conference status note",
+   "code": "IDS.412",
+   "date": "2026-10-22T19:00:00.000-04:00",
+   "due": "",
+   "status": "Not started",
+   "type": "",
+   "room": "",
+   "url": "https://app.notion.com/p/DUE-IDS-412-Tech-Policy-Paper-I-conference-status-note-3daea74eb77981dbbba7ec879c80f0ca"
+  },
+  {
+   "name": "[DUE] 16.990 Creative Teams: Task: Purchase Harvard course packet (Erik Peterson case)",
+   "code": "16.990",
+   "date": "2026-09-15T19:00:00.000-04:00",
+   "due": "",
+   "status": "Not started",
+   "type": "",
+   "room": "",
+   "url": "https://app.notion.com/p/DUE-16-990-Creative-Teams-Task-Purchase-Harvard-course-packet-Erik-Peterson-case-3daea74eb7798132a522e485bf4f2365"
+  },
+  {
+   "name": "[DUE] 16.990 Creative Teams: Assignment: Our graduate program & class surveys",
+   "code": "16.990",
+   "date": "2026-09-17T20:00:00.000-04:00",
+   "due": "",
+   "status": "Not started",
+   "type": "",
+   "room": "",
+   "url": "https://app.notion.com/p/DUE-16-990-Creative-Teams-Assignment-Our-graduate-program-class-surveys-3daea74eb7798131aaede4f9d9a4f19a"
+  },
+  {
+   "name": "[READ] 16.990 Creative Teams: Prep: Ancona, Bresman & Caldwell (2009) Six Steps to Leading High-Performing X-Teams",
+   "code": "16.990",
+   "date": "2026-09-13T18:00:00.000-04:00",
+   "due": "",
+   "status": "Not started",
+   "type": "",
+   "room": "",
+   "url": "https://app.notion.com/p/READ-16-990-Creative-Teams-Prep-Ancona-Bresman-Caldwell-2009-Six-Steps-to-Leading-High-Perfo-3daea74eb7798193a5d9f3ca1516fe0f"
+  },
+  {
+   "name": "[DUE] 16.990 Creative Teams: Assignment: Pre-Class Assignment: Introduction to leading teams (part one)",
+   "code": "16.990",
+   "date": "2026-09-13T20:00:00.000-04:00",
+   "due": "",
+   "status": "Not started",
+   "type": "",
+   "room": "",
+   "url": "https://app.notion.com/p/DUE-16-990-Creative-Teams-Assignment-Pre-Class-Assignment-Introduction-to-leading-teams-part-on-3daea74eb779817fbf7cd299b4a2182b"
+  },
+  {
+   "name": "[DUE] 16.990 Creative Teams: Assignment: Session 02 Qualtrics survey",
+   "code": "16.990",
+   "date": "2026-09-13T21:00:00.000-04:00",
+   "due": "",
+   "status": "Not started",
+   "type": "",
+   "room": "",
+   "url": "https://app.notion.com/p/DUE-16-990-Creative-Teams-Assignment-Session-02-Qualtrics-survey-3daea74eb77981669eabf3f40676488e"
+  },
+  {
+   "name": "[PREP] 16.990 Creative Teams: Lecture 02: Introduction to leading teams (part one)",
+   "code": "16.990",
+   "date": "2026-09-13T21:00:00.000-04:00",
+   "due": "",
+   "status": "Not started",
+   "type": "",
+   "room": "",
+   "url": "https://app.notion.com/p/PREP-16-990-Creative-Teams-Lecture-02-Introduction-to-leading-teams-part-one-3daea74eb779813eadf6d14fb051c4bb"
+  },
+  {
+   "name": "[PREP] IDS.412 Tech & Policy: Lecture 02: Policies, Institutions and Markets",
+   "code": "IDS.412",
+   "date": "2026-09-13T20:00:00.000-04:00",
+   "due": "",
+   "status": "Not started",
+   "type": "",
+   "room": "",
+   "url": "https://app.notion.com/p/PREP-IDS-412-Tech-Policy-Lecture-02-Policies-Institutions-and-Markets-3daea74eb77981eeb651dcd5a08111e9"
+  },
+  {
+   "name": "[PREP] 14.003 Microecon & Policy: Lecture 02: Testing theory: The fundamental problem of causa",
+   "code": "14.003",
+   "date": "2026-09-13T19:00:00.000-04:00",
+   "due": "",
+   "status": "Not started",
+   "type": "",
+   "room": "",
+   "url": "https://app.notion.com/p/PREP-14-003-Microecon-Policy-Lecture-02-Testing-theory-The-fundamental-problem-of-causa-3daea74eb779812e9e95cb9d7ace4348"
+  },
+  {
+   "name": "14.003 Homework",
+   "code": "14.003",
+   "date": "2026-09-13T19:00:00.000-04:00",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "",
+   "url": "https://app.notion.com/p/14-003-Homework-1fc5e9e33f53408cbdcb160c919a596e"
+  },
+  {
    "name": "16.990 Creative Teams: Lecture 26: Learning from your final autobiographical papers",
    "code": "16.990",
    "date": "2026-12-09T14:30:00.000-04:00",

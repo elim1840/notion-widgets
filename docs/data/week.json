@@ -1,5 +1,5 @@
 {
- "generated": "2026-09-13T10:31:26-04:00",
+ "generated": "2026-09-13T13:39:19-04:00",
  "today": "2026-09-13",
  "monday": "2026-09-07",
  "days": [
@@ -467,7 +467,7 @@
      "name": "MTG TPP Retreat Weekend (IYR)",
      "date": "2026-09-11",
      "end": "2026-09-13",
-     "done": false,
+     "done": true,
      "kind": "TPP",
      "src": "task",
      "location": "Camp location TBD (TPP retreat)",
@@ -632,28 +632,40 @@
    "is_today": true,
    "items": [
     {
-     "name": "TSK Upload thesis template to Overleaf + compile",
-     "date": "2026-09-13T14:00:00.000-04:00",
-     "end": "2026-09-13T15:00:00.000-04:00",
+     "name": "[STUDY] 16.842 Systems Eng: Quiz 02 T-2: Light retrieval pass",
+     "date": "2026-09-13T12:34:00.000-04:00",
+     "end": "2026-09-13T13:04:00.000-04:00",
      "done": false,
-     "kind": "Research",
-     "src": "task",
+     "kind": "16.842",
+     "src": "class",
      "location": "",
-     "type": "Task",
-     "meeting_type": "Research",
-     "url": "https://app.notion.com/p/TSK-Upload-thesis-template-to-Overleaf-compile-3d5ea74eb779815ebde5ead418bd2854"
+     "type": "",
+     "meeting_type": "Class",
+     "url": "https://app.notion.com/p/STUDY-16-842-Systems-Eng-Quiz-02-T-2-Light-retrieval-pass-3daea74eb7798178a49fc09e747d42f4"
     },
     {
-     "name": "TSK Create thesis Overleaf document from official MIT template",
-     "date": "2026-09-13T14:00:00.000-04:00",
-     "end": "2026-09-13T15:30:00.000-04:00",
+     "name": "[STUDY] 16.842 Systems Eng: Quiz 01 T-2: Light retrieval pass",
+     "date": "2026-09-13T13:04:00.000-04:00",
+     "end": "2026-09-13T13:34:00.000-04:00",
      "done": false,
-     "kind": "Research",
+     "kind": "16.842",
+     "src": "class",
+     "location": "",
+     "type": "",
+     "meeting_type": "Class",
+     "url": "https://app.notion.com/p/STUDY-16-842-Systems-Eng-Quiz-01-T-2-Light-retrieval-pass-3daea74eb77981f3b395e6df9fa9453d"
+    },
+    {
+     "name": "[Lab] Work on Draper Poster Presentation and Bio",
+     "date": "2026-09-13T17:00:00.000-04:00",
+     "end": "2026-09-13T19:00:00.000-04:00",
+     "done": false,
+     "kind": "Task",
      "src": "task",
      "location": "",
      "type": "Task",
-     "meeting_type": "Research",
-     "url": "https://app.notion.com/p/TSK-Create-thesis-Overleaf-document-from-official-MIT-template-3d5ea74eb7798139abb7d34f72f0e1fa"
+     "meeting_type": "",
+     "url": "https://app.notion.com/p/Lab-Work-on-Draper-Poster-Presentation-and-Bio-1b78c3da527b4e83beeb0489ff8bc30f"
     },
     {
      "name": "Amazon delivery: stationary order",
@@ -668,6 +680,42 @@
      "url": "https://app.notion.com/p/Amazon-delivery-stationary-order-3d7ea74eb77981afab7ad2b0138f9df9"
     },
     {
+     "name": "[READ] 16.990 Creative Teams: Prep: Ancona, Bresman & Caldwell (2009) Six Steps to Leading High-Performing X-Teams",
+     "date": "2026-09-13T18:00:00.000-04:00",
+     "end": "2026-09-13T19:00:00.000-04:00",
+     "done": false,
+     "kind": "16.990",
+     "src": "class",
+     "location": "",
+     "type": "",
+     "meeting_type": "Class",
+     "url": "https://app.notion.com/p/READ-16-990-Creative-Teams-Prep-Ancona-Bresman-Caldwell-2009-Six-Steps-to-Leading-High-Perfo-3daea74eb7798193a5d9f3ca1516fe0f"
+    },
+    {
+     "name": "[PREP] 14.003 Microecon & Policy: Lecture 02: Testing theory: The fundamental problem of causa",
+     "date": "2026-09-13T19:00:00.000-04:00",
+     "end": "2026-09-13T20:00:00.000-04:00",
+     "done": false,
+     "kind": "14.003",
+     "src": "class",
+     "location": "",
+     "type": "",
+     "meeting_type": "Class",
+     "url": "https://app.notion.com/p/PREP-14-003-Microecon-Policy-Lecture-02-Testing-theory-The-fundamental-problem-of-causa-3daea74eb779812e9e95cb9d7ace4348"
+    },
+    {
+     "name": "14.003 Homework",
+     "date": "2026-09-13T19:00:00.000-04:00",
+     "end": "2026-09-13T20:00:00.000-04:00",
+     "done": false,
+     "kind": "14.003",
+     "src": "class",
+     "location": "",
+     "type": "",
+     "meeting_type": "Class",
+     "url": "https://app.notion.com/p/14-003-Homework-1fc5e9e33f53408cbdcb160c919a596e"
+    },
+    {
      "name": "Reach out to ASEM folks re: SOCOM Ignite",
      "date": "2026-09-13T20:00:00.000-04:00",
      "end": "2026-09-13T20:15:00.000-04:00",
@@ -678,6 +726,54 @@
      "type": "",
      "meeting_type": "Military",
      "url": "https://app.notion.com/p/Reach-out-to-ASEM-folks-re-SOCOM-Ignite-3d8ea74eb77981fca6aec70f7a5fbc3f"
+    },
+    {
+     "name": "[DUE] 16.990 Creative Teams: Assignment: Pre-Class Assignment: Introduction to leading teams (part one)",
+     "date": "2026-09-13T20:00:00.000-04:00",
+     "end": "2026-09-13T20:15:00.000-04:00",
+     "done": false,
+     "kind": "16.990",
+     "src": "class",
+     "location": "",
+     "type": "",
+     "meeting_type": "Class",
+     "url": "https://app.notion.com/p/DUE-16-990-Creative-Teams-Assignment-Pre-Class-Assignment-Introduction-to-leading-teams-part-on-3daea74eb779817fbf7cd299b4a2182b"
+    },
+    {
+     "name": "[PREP] IDS.412 Tech & Policy: Lecture 02: Policies, Institutions and Markets",
+     "date": "2026-09-13T20:00:00.000-04:00",
+     "end": "2026-09-13T21:00:00.000-04:00",
+     "done": false,
+     "kind": "IDS.412",
+     "src": "class",
+     "location": "",
+     "type": "",
+     "meeting_type": "Class",
+     "url": "https://app.notion.com/p/PREP-IDS-412-Tech-Policy-Lecture-02-Policies-Institutions-and-Markets-3daea74eb77981eeb651dcd5a08111e9"
+    },
+    {
+     "name": "[DUE] 16.990 Creative Teams: Assignment: Session 02 Qualtrics survey",
+     "date": "2026-09-13T21:00:00.000-04:00",
+     "end": "2026-09-13T21:15:00.000-04:00",
+     "done": false,
+     "kind": "16.990",
+     "src": "class",
+     "location": "",
+     "type": "",
+     "meeting_type": "Class",
+     "url": "https://app.notion.com/p/DUE-16-990-Creative-Teams-Assignment-Session-02-Qualtrics-survey-3daea74eb77981669eabf3f40676488e"
+    },
+    {
+     "name": "[PREP] 16.990 Creative Teams: Lecture 02: Introduction to leading teams (part one)",
+     "date": "2026-09-13T21:00:00.000-04:00",
+     "end": "2026-09-13T22:00:00.000-04:00",
+     "done": false,
+     "kind": "16.990",
+     "src": "class",
+     "location": "",
+     "type": "",
+     "meeting_type": "Class",
+     "url": "https://app.notion.com/p/PREP-16-990-Creative-Teams-Lecture-02-Introduction-to-leading-teams-part-one-3daea74eb779813eadf6d14fb051c4bb"
     },
     {
      "name": "AFT Prep: Water + Liquid IV, sleep by 2300",
@@ -693,8 +789,8 @@
     },
     {
      "name": "TSK Submit Scholar biography (docx) + headshot (jpeg) survey",
-     "date": "2026-09-13T23:59:00.000-04:00",
-     "end": "2026-09-14T00:14:00.000-04:00",
+     "date": "2026-09-13T22:45:00.000-04:00",
+     "end": "2026-09-13T23:00:00.000-04:00",
      "done": false,
      "kind": "Research",
      "src": "task",
@@ -706,5 +802,5 @@
    ]
   }
  ],
- "total": 55
+ "total": 63
 }
