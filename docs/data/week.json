@@ -1,5 +1,5 @@
 {
- "generated": "2026-09-14T16:23:02-04:00",
+ "generated": "2026-09-14T19:16:13-04:00",
  "today": "2026-09-14",
  "monday": "2026-09-14",
  "days": [
@@ -80,6 +80,30 @@
      "url": "https://app.notion.com/p/16-S896-RASCAL-Lecture-02-Competition-Info-Session-special-Mon-session-3d5ea74eb7798197a5ffc5497475ca30"
     },
     {
+     "name": "Meal Prep until Wednesday",
+     "date": "2026-09-14T18:00:00.000-04:00",
+     "end": "2026-09-14T18:45:00.000-04:00",
+     "done": false,
+     "kind": "Task",
+     "src": "task",
+     "location": "",
+     "type": "Task",
+     "meeting_type": "",
+     "url": "https://app.notion.com/p/Meal-Prep-until-Wednesday-2b67a945abce481cabca7a7fd5099190"
+    },
+    {
+     "name": "Completer Draper Security Training",
+     "date": "2026-09-14T18:00:00.000-04:00",
+     "end": "2026-09-14T18:45:00.000-04:00",
+     "done": false,
+     "kind": "Task",
+     "src": "task",
+     "location": "",
+     "type": "Task",
+     "meeting_type": "",
+     "url": "https://app.notion.com/p/Completer-Draper-Security-Training-7c3b67f248a24963abe83d968d2cc561"
+    },
+    {
      "name": "Draft Letters for RASCAL get help",
      "date": "2026-09-14T18:00:00.000-04:00",
      "end": "2026-09-14T18:15:00.000-04:00",
@@ -152,6 +176,18 @@
      "url": "https://app.notion.com/p/STUDY-16-842-Systems-Eng-Quiz-01-T-2-Light-retrieval-pass-3daea74eb77981f3b395e6df9fa9453d"
     },
     {
+     "name": "TSK Cut and file the day's notes into the binder",
+     "date": "2026-09-14T22:00:00.000-04:00",
+     "end": "2026-09-14T22:15:00.000-04:00",
+     "done": false,
+     "kind": "Admin",
+     "src": "task",
+     "location": "",
+     "type": "Task",
+     "meeting_type": "Admin",
+     "url": "https://app.notion.com/p/TSK-Cut-and-file-the-day-s-notes-into-the-binder-3dbea74eb77981fd9735ed9be74c6ce5"
+    },
+    {
      "name": "AFT Prep: Water + Liquid IV, sleep by 2300",
      "date": "2026-09-14T22:00:00.000-04:00",
      "end": "2026-09-14T22:15:00.000-04:00",
@@ -180,6 +216,18 @@
      "type": "Lecture",
      "meeting_type": "Class",
      "url": "https://app.notion.com/p/16-842-Systems-Eng-Lecture-01-SE-Overview-Stakeholders-3d5ea74eb77981f4a439f7df80618056"
+    },
+    {
+     "name": "TSK 16.990 Buy Harvard course packet (Leading Creative Teams)",
+     "date": "2026-09-15T14:00:00.000-04:00",
+     "end": "2026-09-15T14:30:00.000-04:00",
+     "done": false,
+     "kind": "Class",
+     "src": "task",
+     "location": "",
+     "type": "Task",
+     "meeting_type": "Class",
+     "url": "https://app.notion.com/p/TSK-16-990-Buy-Harvard-course-packet-Leading-Creative-Teams-3dbea74eb77981cb8da7ec180bd2b7e6"
     },
     {
      "name": "TSK ESL Monthly Meeting - Introduction by Lab Advisors",
@@ -228,6 +276,18 @@
      "type": "Task",
      "meeting_type": "",
      "url": "https://app.notion.com/p/d2bf07c83c7b4118a5097f6124a3bb01"
+    },
+    {
+     "name": "TSK Cut and file the day's notes into the binder",
+     "date": "2026-09-15T22:00:00.000-04:00",
+     "end": "2026-09-15T22:15:00.000-04:00",
+     "done": false,
+     "kind": "Admin",
+     "src": "task",
+     "location": "",
+     "type": "Task",
+     "meeting_type": "Admin",
+     "url": "https://app.notion.com/p/TSK-Cut-and-file-the-day-s-notes-into-the-binder-3dbea74eb77981ac9956c0392d90a078"
     },
     {
      "name": "AFT Prep: Water + Liquid IV, sleep by 2300",
@@ -342,6 +402,18 @@
      "type": "Task",
      "meeting_type": "Personal",
      "url": "https://app.notion.com/p/Buy-travel-tickets-wedding-Columbus-Day-weekend-Fri-09-to-Mon-12-Oct-3daea74eb77981a88d5af288db3d0d4f"
+    },
+    {
+     "name": "TSK Cut and file the day's notes into the binder",
+     "date": "2026-09-16T22:00:00.000-04:00",
+     "end": "2026-09-16T22:15:00.000-04:00",
+     "done": false,
+     "kind": "Admin",
+     "src": "task",
+     "location": "",
+     "type": "Task",
+     "meeting_type": "Admin",
+     "url": "https://app.notion.com/p/TSK-Cut-and-file-the-day-s-notes-into-the-binder-3dbea74eb779817298a7c0dafa2fdffc"
     }
    ]
   },
@@ -349,6 +421,18 @@
    "date": "2026-09-17",
    "is_today": false,
    "items": [
+    {
+     "name": "Help Chris with BBQ at Edgerton",
+     "date": "2026-09-17T15:00:00.000-04:00",
+     "end": "2026-09-17T16:00:00.000-04:00",
+     "done": false,
+     "kind": "Task",
+     "src": "task",
+     "location": "",
+     "type": "Task",
+     "meeting_type": "",
+     "url": "https://app.notion.com/p/Help-Chris-with-BBQ-at-Edgerton-de33ddf8f7714345b988b6d5c657e497"
+    },
     {
      "name": "TSK AeroAstro Comm Lab Resume/CV Drop-In Event",
      "date": "2026-09-17T15:00:00.000-04:00",
@@ -396,6 +480,18 @@
      "type": "",
      "meeting_type": "Class",
      "url": "https://app.notion.com/p/DUE-16-990-Creative-Teams-Assignment-Our-graduate-program-class-surveys-3daea74eb7798131aaede4f9d9a4f19a"
+    },
+    {
+     "name": "TSK Cut and file the day's notes into the binder",
+     "date": "2026-09-17T22:00:00.000-04:00",
+     "end": "2026-09-17T22:15:00.000-04:00",
+     "done": false,
+     "kind": "Admin",
+     "src": "task",
+     "location": "",
+     "type": "Task",
+     "meeting_type": "Admin",
+     "url": "https://app.notion.com/p/TSK-Cut-and-file-the-day-s-notes-into-the-binder-3dbea74eb77981b9b38be1199d7d5774"
     }
    ]
   },
@@ -440,6 +536,18 @@
      "url": "https://app.notion.com/p/16-S896-RASCAL-Lecture-03-3d3ea74eb77981b29ed3c7fa60b49f11"
     },
     {
+     "name": "TSK Cut and file the day's notes into the binder",
+     "date": "2026-09-18T22:00:00.000-04:00",
+     "end": "2026-09-18T22:15:00.000-04:00",
+     "done": false,
+     "kind": "Admin",
+     "src": "task",
+     "location": "",
+     "type": "Task",
+     "meeting_type": "Admin",
+     "url": "https://app.notion.com/p/TSK-Cut-and-file-the-day-s-notes-into-the-binder-3dbea74eb77981a2b89dd69f50baf6b1"
+    },
+    {
      "name": "16.S896 RASCAL: Presentation 01: Skills Survey + Team Pitches Due",
      "date": "2026-09-18",
      "end": "",
@@ -457,6 +565,18 @@
    "date": "2026-09-19",
    "is_today": false,
    "items": [
+    {
+     "name": "TSK Build contact database: schema design + relationship cadence",
+     "date": "2026-09-19T08:00:00.000-04:00",
+     "end": "2026-09-19T10:00:00.000-04:00",
+     "done": false,
+     "kind": "Admin",
+     "src": "task",
+     "location": "",
+     "type": "Task",
+     "meeting_type": "Admin",
+     "url": "https://app.notion.com/p/TSK-Build-contact-database-schema-design-relationship-cadence-3dbea74eb7798143a58de10d124198f7"
+    },
     {
      "name": "TSK Upload thesis template to Overleaf + compile",
      "date": "2026-09-19",
@@ -502,5 +622,5 @@
    ]
   }
  ],
- "total": 38
+ "total": 48
 }
