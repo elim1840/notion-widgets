@@ -1,5 +1,5 @@
 {
- "generated": "2026-09-14T06:16:56-04:00",
+ "generated": "2026-09-14T12:25:47-04:00",
  "today": "2026-09-14",
  "monday": "2026-09-14",
  "days": [
@@ -56,6 +56,18 @@
      "url": "https://app.notion.com/p/16-990-Creative-Teams-Lecture-02-Introduction-to-leading-teams-part-one-3d3ea74eb77981f5b253e0ac0282c890"
     },
     {
+     "name": "Hmart Food for the Week",
+     "date": "2026-09-14T16:00:00.000-04:00",
+     "end": "2026-09-14T16:30:00.000-04:00",
+     "done": false,
+     "kind": "Task",
+     "src": "task",
+     "location": "",
+     "type": "Task",
+     "meeting_type": "",
+     "url": "https://app.notion.com/p/Hmart-Food-for-the-Week-f509dbe0bdb84ba38298d53447ff2a69"
+    },
+    {
      "name": "16.S896 RASCAL: Lecture 02: Competition Info Session (special Mon session)",
      "date": "2026-09-14T17:00:00.000-04:00",
      "end": "2026-09-14T18:30:00.000-04:00",
@@ -68,28 +80,28 @@
      "url": "https://app.notion.com/p/16-S896-RASCAL-Lecture-02-Competition-Info-Session-special-Mon-session-3d5ea74eb7798197a5ffc5497475ca30"
     },
     {
-     "name": "TSK Upload thesis template to Overleaf + compile",
-     "date": "2026-09-14T18:30:00.000-04:00",
-     "end": "2026-09-14T19:15:00.000-04:00",
+     "name": "Draft Letters for RASCAL get help",
+     "date": "2026-09-14T18:00:00.000-04:00",
+     "end": "2026-09-14T18:15:00.000-04:00",
      "done": false,
-     "kind": "Research",
+     "kind": "Task",
      "src": "task",
      "location": "",
      "type": "Task",
-     "meeting_type": "Research",
-     "url": "https://app.notion.com/p/TSK-Upload-thesis-template-to-Overleaf-compile-3d5ea74eb779815ebde5ead418bd2854"
+     "meeting_type": "",
+     "url": "https://app.notion.com/p/Draft-Letters-for-RASCAL-get-help-e6ae6396eaee4221b0337940e178214f"
     },
     {
-     "name": "TSK Create thesis Overleaf document from official MIT template",
-     "date": "2026-09-14T19:15:00.000-04:00",
-     "end": "2026-09-14T20:00:00.000-04:00",
+     "name": "Cancell RES to Viales look for a diff time and place",
+     "date": "2026-09-14T18:30:00.000-04:00",
+     "end": "2026-09-14T18:45:00.000-04:00",
      "done": false,
-     "kind": "Research",
+     "kind": "Task",
      "src": "task",
      "location": "",
      "type": "Task",
-     "meeting_type": "Research",
-     "url": "https://app.notion.com/p/TSK-Create-thesis-Overleaf-document-from-official-MIT-template-3d5ea74eb7798139abb7d34f72f0e1fa"
+     "meeting_type": "",
+     "url": "https://app.notion.com/p/Cancell-RES-to-Viales-look-for-a-diff-time-and-place-b5b05087cc2443e7903a7ac31d1ac70f"
     },
     {
      "name": "[DUE] 16.842 Systems Eng: Quiz 02: Pre-Readings (handbooks) Week 1, mandatory",
@@ -204,6 +216,18 @@
      "type": "",
      "meeting_type": "Class",
      "url": "https://app.notion.com/p/DUE-16-990-Creative-Teams-Task-Purchase-Harvard-course-packet-Erik-Peterson-case-3daea74eb7798132a522e485bf4f2365"
+    },
+    {
+     "name": "",
+     "date": "2026-09-15T19:45:00.000-04:00",
+     "end": "2026-09-15T20:15:00.000-04:00",
+     "done": false,
+     "kind": "Task",
+     "src": "task",
+     "location": "",
+     "type": "Task",
+     "meeting_type": "",
+     "url": "https://app.notion.com/p/d2bf07c83c7b4118a5097f6124a3bb01"
     },
     {
      "name": "AFT Prep: Water + Liquid IV, sleep by 2300",
@@ -432,7 +456,32 @@
   {
    "date": "2026-09-19",
    "is_today": false,
-   "items": []
+   "items": [
+    {
+     "name": "TSK Upload thesis template to Overleaf + compile",
+     "date": "2026-09-19",
+     "end": "",
+     "done": false,
+     "kind": "Research",
+     "src": "task",
+     "location": "",
+     "type": "Task",
+     "meeting_type": "Research",
+     "url": "https://app.notion.com/p/TSK-Upload-thesis-template-to-Overleaf-compile-3d5ea74eb779815ebde5ead418bd2854"
+    },
+    {
+     "name": "TSK Create thesis Overleaf document from official MIT template",
+     "date": "2026-09-19",
+     "end": "",
+     "done": false,
+     "kind": "Research",
+     "src": "task",
+     "location": "",
+     "type": "Task",
+     "meeting_type": "Research",
+     "url": "https://app.notion.com/p/TSK-Create-thesis-Overleaf-document-from-official-MIT-template-3d5ea74eb7798139abb7d34f72f0e1fa"
+    }
+   ]
   },
   {
    "date": "2026-09-20",
@@ -453,5 +502,5 @@
    ]
   }
  ],
- "total": 34
+ "total": 38
 }
