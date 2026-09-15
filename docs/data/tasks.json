@@ -1,5 +1,5 @@
 {
- "generated": "2026-09-15T02:42:47-04:00",
+ "generated": "2026-09-15T08:10:01-04:00",
  "today": "2026-09-15",
  "counts": {
   "total": 187,
@@ -13,8 +13,8 @@
  "today_items": [
   {
    "name": "Laundry Plan for the weeks and Costco Order and meal prep figure out rhythm",
-   "date": "2026-09-15T08:00:00.000-04:00",
-   "end": "2026-09-15T08:15:00.000-04:00",
+   "date": "2026-09-15T09:45:00.000-04:00",
+   "end": "2026-09-15T10:00:00.000-04:00",
    "done": false,
    "status": "",
    "type": "Task",
@@ -816,8 +816,8 @@
  "upcoming": [
   {
    "name": "Laundry Plan for the weeks and Costco Order and meal prep figure out rhythm",
-   "date": "2026-09-15T08:00:00.000-04:00",
-   "end": "2026-09-15T08:15:00.000-04:00",
+   "date": "2026-09-15T09:45:00.000-04:00",
+   "end": "2026-09-15T10:00:00.000-04:00",
    "done": false,
    "status": "",
    "type": "Task",
