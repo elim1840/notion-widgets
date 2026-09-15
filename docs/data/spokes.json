@@ -1,6 +1,26 @@
 {
  "classes": [
   {
+   "name": "[HW] 16.842 Systems Eng: Team assignment form",
+   "code": "16.842",
+   "date": "2026-09-18T17:15:00.000-04:00",
+   "due": "",
+   "status": "Done",
+   "type": "",
+   "room": "",
+   "url": "https://app.notion.com/p/HW-16-842-Systems-Eng-Team-assignment-form-3dcea74eb77981178147c8a801c069b9"
+  },
+  {
+   "name": "[HW] 16.842 Systems Eng: Office hours when2meet poll",
+   "code": "16.842",
+   "date": "2026-09-18T17:00:00.000-04:00",
+   "due": "",
+   "status": "Done",
+   "type": "",
+   "room": "",
+   "url": "https://app.notion.com/p/HW-16-842-Systems-Eng-Office-hours-when2meet-poll-3dcea74eb779813489a1cd0170e32eeb"
+  },
+  {
    "name": "IDS.412 Tech & Policy: Recitation",
    "code": "IDS.412",
    "date": "2026-12-09T16:00:00.000-05:00",

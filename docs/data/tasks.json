@@ -1,14 +1,14 @@
 {
- "generated": "2026-09-15T12:57:52-04:00",
+ "generated": "2026-09-15T16:03:13-04:00",
  "today": "2026-09-15",
  "counts": {
-  "total": 187,
-  "open": 171,
+  "total": 221,
+  "open": 205,
   "done": 16,
   "today_total": 7,
   "today_done": 0,
   "overdue": 44,
-  "past_meetings": 36
+  "past_meetings": 46
  },
  "today_items": [
   {
@@ -46,23 +46,6 @@
    "url": "https://app.notion.com/p/Cancel-Viale-reservation-and-call-Lanner-to-get-a-reservation-there-93e8c5a6966a4538ae1ce3769d4dbe81"
   },
   {
-   "name": "TSK 16.990 Buy Harvard course packet (Leading Creative Teams)",
-   "date": "2026-09-15T14:00:00.000-04:00",
-   "end": "2026-09-15T14:30:00.000-04:00",
-   "done": false,
-   "status": "Not Started",
-   "type": "Task",
-   "meeting_type": "Class",
-   "priority": "High",
-   "energy": "Errand",
-   "location": "",
-   "attendees": "",
-   "agenda": "",
-   "link": "",
-   "notes": "Purchase the Harvard Business Publishing course packet for 16.990 Leading Creative Teams.",
-   "url": "https://app.notion.com/p/TSK-16-990-Buy-Harvard-course-packet-Leading-Creative-Teams-3dbea74eb77981cb8da7ec180bd2b7e6"
-  },
-  {
    "name": "TSK ESL Monthly Meeting - Introduction by Lab Advisors",
    "date": "2026-09-15T17:00:00.000-04:00",
    "end": "2026-09-15T18:00:00.000-04:00",
@@ -80,12 +63,12 @@
    "url": "https://app.notion.com/p/TSK-ESL-Monthly-Meeting-Introduction-by-Lab-Advisors-3d0ea74eb77981df82b7f4f3a06b02f6"
   },
   {
-   "name": "",
-   "date": "2026-09-15T19:45:00.000-04:00",
-   "end": "2026-09-15T20:15:00.000-04:00",
+   "name": "Create Team RWB account + sign up for Fenway Spartan race",
+   "date": "2026-09-15T20:00:00.000-04:00",
+   "end": "",
    "done": false,
-   "status": "",
-   "type": "Task",
+   "status": "Not Started",
+   "type": "",
    "meeting_type": "",
    "priority": "",
    "energy": "",
@@ -93,8 +76,25 @@
    "attendees": "",
    "agenda": "",
    "link": "",
-   "notes": "",
-   "url": "https://app.notion.com/p/d2bf07c83c7b4118a5097f6124a3bb01"
+   "notes": "Link: https://members.teamrwb.org/events/124318 - sign up if spots still available.",
+   "url": "https://app.notion.com/p/Create-Team-RWB-account-sign-up-for-Fenway-Spartan-race-3dcea74eb779811f9783e587d0d555ae"
+  },
+  {
+   "name": "TSK 16.990 Buy Harvard course packet (Leading Creative Teams)",
+   "date": "2026-09-15T20:00:00.000-04:00",
+   "end": "2026-09-15T20:30:00.000-04:00",
+   "done": false,
+   "status": "Not Started",
+   "type": "Task",
+   "meeting_type": "Class",
+   "priority": "High",
+   "energy": "Errand",
+   "location": "",
+   "attendees": "",
+   "agenda": "",
+   "link": "",
+   "notes": "Purchase the Harvard Business Publishing course packet for 16.990 Leading Creative Teams.",
+   "url": "https://app.notion.com/p/TSK-16-990-Buy-Harvard-course-packet-Leading-Creative-Teams-3dbea74eb77981cb8da7ec180bd2b7e6"
   },
   {
    "name": "TSK Cut and file the day's notes into the binder",
@@ -849,23 +849,6 @@
    "url": "https://app.notion.com/p/Cancel-Viale-reservation-and-call-Lanner-to-get-a-reservation-there-93e8c5a6966a4538ae1ce3769d4dbe81"
   },
   {
-   "name": "TSK 16.990 Buy Harvard course packet (Leading Creative Teams)",
-   "date": "2026-09-15T14:00:00.000-04:00",
-   "end": "2026-09-15T14:30:00.000-04:00",
-   "done": false,
-   "status": "Not Started",
-   "type": "Task",
-   "meeting_type": "Class",
-   "priority": "High",
-   "energy": "Errand",
-   "location": "",
-   "attendees": "",
-   "agenda": "",
-   "link": "",
-   "notes": "Purchase the Harvard Business Publishing course packet for 16.990 Leading Creative Teams.",
-   "url": "https://app.notion.com/p/TSK-16-990-Buy-Harvard-course-packet-Leading-Creative-Teams-3dbea74eb77981cb8da7ec180bd2b7e6"
-  },
-  {
    "name": "TSK ESL Monthly Meeting - Introduction by Lab Advisors",
    "date": "2026-09-15T17:00:00.000-04:00",
    "end": "2026-09-15T18:00:00.000-04:00",
@@ -883,12 +866,12 @@
    "url": "https://app.notion.com/p/TSK-ESL-Monthly-Meeting-Introduction-by-Lab-Advisors-3d0ea74eb77981df82b7f4f3a06b02f6"
   },
   {
-   "name": "",
-   "date": "2026-09-15T19:45:00.000-04:00",
-   "end": "2026-09-15T20:15:00.000-04:00",
+   "name": "Create Team RWB account + sign up for Fenway Spartan race",
+   "date": "2026-09-15T20:00:00.000-04:00",
+   "end": "",
    "done": false,
-   "status": "",
-   "type": "Task",
+   "status": "Not Started",
+   "type": "",
    "meeting_type": "",
    "priority": "",
    "energy": "",
@@ -896,8 +879,25 @@
    "attendees": "",
    "agenda": "",
    "link": "",
-   "notes": "",
-   "url": "https://app.notion.com/p/d2bf07c83c7b4118a5097f6124a3bb01"
+   "notes": "Link: https://members.teamrwb.org/events/124318 - sign up if spots still available.",
+   "url": "https://app.notion.com/p/Create-Team-RWB-account-sign-up-for-Fenway-Spartan-race-3dcea74eb779811f9783e587d0d555ae"
+  },
+  {
+   "name": "TSK 16.990 Buy Harvard course packet (Leading Creative Teams)",
+   "date": "2026-09-15T20:00:00.000-04:00",
+   "end": "2026-09-15T20:30:00.000-04:00",
+   "done": false,
+   "status": "Not Started",
+   "type": "Task",
+   "meeting_type": "Class",
+   "priority": "High",
+   "energy": "Errand",
+   "location": "",
+   "attendees": "",
+   "agenda": "",
+   "link": "",
+   "notes": "Purchase the Harvard Business Publishing course packet for 16.990 Leading Creative Teams.",
+   "url": "https://app.notion.com/p/TSK-16-990-Buy-Harvard-course-packet-Leading-Creative-Teams-3dbea74eb77981cb8da7ec180bd2b7e6"
   },
   {
    "name": "TSK Cut and file the day's notes into the binder",
