@@ -1,6 +1,296 @@
 {
  "classes": [
   {
+   "name": "IDS.412 Tech & Policy: Recitation",
+   "code": "IDS.412",
+   "date": "2026-12-09T16:00:00.000-05:00",
+   "due": "",
+   "status": "Not started",
+   "type": "",
+   "room": "Room not published in the syllabus",
+   "url": "https://app.notion.com/p/IDS-412-Tech-Policy-Recitation-3dcea74eb7798125a9d8f07f9aba3468"
+  },
+  {
+   "name": "IDS.412 Tech & Policy: Recitation",
+   "code": "IDS.412",
+   "date": "2026-12-02T16:00:00.000-05:00",
+   "due": "",
+   "status": "Not started",
+   "type": "",
+   "room": "Room not published in the syllabus",
+   "url": "https://app.notion.com/p/IDS-412-Tech-Policy-Recitation-3dcea74eb779812db095f0653bb4039d"
+  },
+  {
+   "name": "IDS.412 Tech & Policy: Recitation",
+   "code": "IDS.412",
+   "date": "2026-11-18T16:00:00.000-05:00",
+   "due": "",
+   "status": "Not started",
+   "type": "",
+   "room": "Room not published in the syllabus",
+   "url": "https://app.notion.com/p/IDS-412-Tech-Policy-Recitation-3dcea74eb7798151bd64d282a8a55d3b"
+  },
+  {
+   "name": "IDS.412 Tech & Policy: Recitation",
+   "code": "IDS.412",
+   "date": "2026-11-04T16:00:00.000-05:00",
+   "due": "",
+   "status": "Not started",
+   "type": "",
+   "room": "Room not published in the syllabus",
+   "url": "https://app.notion.com/p/IDS-412-Tech-Policy-Recitation-3dcea74eb77981c5b12ff0c65e36e25f"
+  },
+  {
+   "name": "IDS.412 Tech & Policy: Recitation",
+   "code": "IDS.412",
+   "date": "2026-10-28T16:00:00.000-04:00",
+   "due": "",
+   "status": "Not started",
+   "type": "",
+   "room": "Room not published in the syllabus",
+   "url": "https://app.notion.com/p/IDS-412-Tech-Policy-Recitation-3dcea74eb779811bbc86fc5e7836e4ac"
+  },
+  {
+   "name": "IDS.412 Tech & Policy: Recitation",
+   "code": "IDS.412",
+   "date": "2026-10-21T16:00:00.000-04:00",
+   "due": "",
+   "status": "Not started",
+   "type": "",
+   "room": "Room not published in the syllabus",
+   "url": "https://app.notion.com/p/IDS-412-Tech-Policy-Recitation-3dcea74eb77981939415f5d142021a53"
+  },
+  {
+   "name": "IDS.412 Tech & Policy: Recitation",
+   "code": "IDS.412",
+   "date": "2026-10-14T16:00:00.000-04:00",
+   "due": "",
+   "status": "Not started",
+   "type": "",
+   "room": "Room not published in the syllabus",
+   "url": "https://app.notion.com/p/IDS-412-Tech-Policy-Recitation-3dcea74eb77981cb8774daced35f6e76"
+  },
+  {
+   "name": "IDS.412 Tech & Policy: Recitation",
+   "code": "IDS.412",
+   "date": "2026-10-07T16:00:00.000-04:00",
+   "due": "",
+   "status": "Not started",
+   "type": "",
+   "room": "Room not published in the syllabus",
+   "url": "https://app.notion.com/p/IDS-412-Tech-Policy-Recitation-3dcea74eb77981179a5cd634911c8dde"
+  },
+  {
+   "name": "IDS.412 Tech & Policy: Recitation",
+   "code": "IDS.412",
+   "date": "2026-09-30T16:00:00.000-04:00",
+   "due": "",
+   "status": "Not started",
+   "type": "",
+   "room": "Room not published in the syllabus",
+   "url": "https://app.notion.com/p/IDS-412-Tech-Policy-Recitation-3dcea74eb77981998541c286f35d03ff"
+  },
+  {
+   "name": "IDS.412 Tech & Policy: Recitation",
+   "code": "IDS.412",
+   "date": "2026-09-23T16:00:00.000-04:00",
+   "due": "",
+   "status": "Not started",
+   "type": "",
+   "room": "Room not published in the syllabus",
+   "url": "https://app.notion.com/p/IDS-412-Tech-Policy-Recitation-3dcea74eb7798103b3cde39b87258618"
+  },
+  {
+   "name": "IDS.412 Tech & Policy: Recitation",
+   "code": "IDS.412",
+   "date": "2026-09-16T16:00:00.000-04:00",
+   "due": "",
+   "status": "Not started",
+   "type": "",
+   "room": "Room not published in the syllabus",
+   "url": "https://app.notion.com/p/IDS-412-Tech-Policy-Recitation-3dcea74eb7798101b407d6cafefd3d8b"
+  },
+  {
+   "name": "[PREP] 16.842 Systems Eng: A5 T-3: Finish it: Final Project Presentation Materials",
+   "code": "16.842",
+   "date": "2026-12-04T19:00:00.000-05:00",
+   "due": "",
+   "status": "Not started",
+   "type": "",
+   "room": "",
+   "url": "https://app.notion.com/p/PREP-16-842-Systems-Eng-A5-T-3-Finish-it-Final-Project-Presentation-Materials-3dcea74eb7798109a162efc008b09f7a"
+  },
+  {
+   "name": "[PREP] 16.842 Systems Eng: A5 T-7: Build it: Final Project Presentation Materials",
+   "code": "16.842",
+   "date": "2026-11-30T19:00:00.000-05:00",
+   "due": "",
+   "status": "Not started",
+   "type": "",
+   "room": "",
+   "url": "https://app.notion.com/p/PREP-16-842-Systems-Eng-A5-T-7-Build-it-Final-Project-Presentation-Materials-3dcea74eb77981f68401c6be2d81aa7c"
+  },
+  {
+   "name": "[PREP] 16.842 Systems Eng: A5 T-14: Scope it: Final Project Presentation Materials",
+   "code": "16.842",
+   "date": "2026-11-23T20:45:00.000-05:00",
+   "due": "",
+   "status": "Not started",
+   "type": "",
+   "room": "",
+   "url": "https://app.notion.com/p/PREP-16-842-Systems-Eng-A5-T-14-Scope-it-Final-Project-Presentation-Materials-3dcea74eb77981ac8edacfb8fd8d486e"
+  },
+  {
+   "name": "[PREP] 16.842 Systems Eng: A6 T-3: Finish it: Written Reflective Memo (individual)",
+   "code": "16.842",
+   "date": "2026-11-13T19:00:00.000-05:00",
+   "due": "",
+   "status": "Not started",
+   "type": "",
+   "room": "",
+   "url": "https://app.notion.com/p/PREP-16-842-Systems-Eng-A6-T-3-Finish-it-Written-Reflective-Memo-individual-3dcea74eb77981a4be8ef831649e54b5"
+  },
+  {
+   "name": "[PREP] 16.842 Systems Eng: A6 T-7: Build it: Written Reflective Memo (individual)",
+   "code": "16.842",
+   "date": "2026-11-09T19:00:00.000-05:00",
+   "due": "",
+   "status": "Not started",
+   "type": "",
+   "room": "",
+   "url": "https://app.notion.com/p/PREP-16-842-Systems-Eng-A6-T-7-Build-it-Written-Reflective-Memo-individual-3dcea74eb77981ba828bd2283c1c1dae"
+  },
+  {
+   "name": "[PREP] 16.842 Systems Eng: A6 T-14: Scope it: Written Reflective Memo (individual)",
+   "code": "16.842",
+   "date": "2026-11-02T20:45:00.000-05:00",
+   "due": "",
+   "status": "Not started",
+   "type": "",
+   "room": "",
+   "url": "https://app.notion.com/p/PREP-16-842-Systems-Eng-A6-T-14-Scope-it-Written-Reflective-Memo-individual-3dcea74eb7798179a6b4c59c0aab44b9"
+  },
+  {
+   "name": "[PREP] 16.842 Systems Eng: A4 T-3: Finish it: Trade Space Exploration & Concept Selection",
+   "code": "16.842",
+   "date": "2026-11-06T19:00:00.000-05:00",
+   "due": "",
+   "status": "Not started",
+   "type": "",
+   "room": "",
+   "url": "https://app.notion.com/p/PREP-16-842-Systems-Eng-A4-T-3-Finish-it-Trade-Space-Exploration-Concept-Selection-3dcea74eb77981c290d0d893af98eb22"
+  },
+  {
+   "name": "[PREP] 16.842 Systems Eng: A4 T-7: Build it: Trade Space Exploration & Concept Selection",
+   "code": "16.842",
+   "date": "2026-11-02T19:00:00.000-05:00",
+   "due": "",
+   "status": "Not started",
+   "type": "",
+   "room": "",
+   "url": "https://app.notion.com/p/PREP-16-842-Systems-Eng-A4-T-7-Build-it-Trade-Space-Exploration-Concept-Selection-3dcea74eb77981cf9360c596bd16edbf"
+  },
+  {
+   "name": "[PREP] 16.842 Systems Eng: A4 T-14: Scope it: Trade Space Exploration & Concept Selection",
+   "code": "16.842",
+   "date": "2026-10-26T20:45:00.000-04:00",
+   "due": "",
+   "status": "Not started",
+   "type": "",
+   "room": "",
+   "url": "https://app.notion.com/p/PREP-16-842-Systems-Eng-A4-T-14-Scope-it-Trade-Space-Exploration-Concept-Selection-3dcea74eb779815595a5dbf01b24b8fc"
+  },
+  {
+   "name": "[PREP] 16.842 Systems Eng: A3 T-3: Finish it: System Architecture & Concept Generation",
+   "code": "16.842",
+   "date": "2026-10-23T19:00:00.000-04:00",
+   "due": "",
+   "status": "Not started",
+   "type": "",
+   "room": "",
+   "url": "https://app.notion.com/p/PREP-16-842-Systems-Eng-A3-T-3-Finish-it-System-Architecture-Concept-Generation-3dcea74eb77981f8af4eeaa3e45624a1"
+  },
+  {
+   "name": "[PREP] 16.842 Systems Eng: A3 T-7: Build it: System Architecture & Concept Generation",
+   "code": "16.842",
+   "date": "2026-10-19T19:00:00.000-04:00",
+   "due": "",
+   "status": "Not started",
+   "type": "",
+   "room": "",
+   "url": "https://app.notion.com/p/PREP-16-842-Systems-Eng-A3-T-7-Build-it-System-Architecture-Concept-Generation-3dcea74eb7798173b4aecec2630c3f03"
+  },
+  {
+   "name": "[PREP] 16.842 Systems Eng: A3 T-14: Scope it: System Architecture & Concept Generation",
+   "code": "16.842",
+   "date": "2026-10-12T20:45:00.000-04:00",
+   "due": "",
+   "status": "Not started",
+   "type": "",
+   "room": "",
+   "url": "https://app.notion.com/p/PREP-16-842-Systems-Eng-A3-T-14-Scope-it-System-Architecture-Concept-Generation-3dcea74eb77981398a7bf01ba833155e"
+  },
+  {
+   "name": "[PREP] 16.842 Systems Eng: A2 T-3: Finish it: Requirements Definition & Margins",
+   "code": "16.842",
+   "date": "2026-10-09T19:00:00.000-04:00",
+   "due": "",
+   "status": "Not started",
+   "type": "",
+   "room": "",
+   "url": "https://app.notion.com/p/PREP-16-842-Systems-Eng-A2-T-3-Finish-it-Requirements-Definition-Margins-3dcea74eb779810aab9bcd8fd9893938"
+  },
+  {
+   "name": "[PREP] 16.842 Systems Eng: A2 T-7: Build it: Requirements Definition & Margins",
+   "code": "16.842",
+   "date": "2026-10-05T19:00:00.000-04:00",
+   "due": "",
+   "status": "Not started",
+   "type": "",
+   "room": "",
+   "url": "https://app.notion.com/p/PREP-16-842-Systems-Eng-A2-T-7-Build-it-Requirements-Definition-Margins-3dcea74eb7798123bff3ea6d5f73a73d"
+  },
+  {
+   "name": "[PREP] 16.842 Systems Eng: A2 T-14: Scope it: Requirements Definition & Margins",
+   "code": "16.842",
+   "date": "2026-09-28T20:45:00.000-04:00",
+   "due": "",
+   "status": "Not started",
+   "type": "",
+   "room": "",
+   "url": "https://app.notion.com/p/PREP-16-842-Systems-Eng-A2-T-14-Scope-it-Requirements-Definition-Margins-3dcea74eb779817686cdcc9bf5a14a17"
+  },
+  {
+   "name": "[PREP] 16.842 Systems Eng: A1 T-3: Finish it: Team Formation, Stakeholders & ConOps",
+   "code": "16.842",
+   "date": "2026-09-25T19:00:00.000-04:00",
+   "due": "",
+   "status": "Not started",
+   "type": "",
+   "room": "",
+   "url": "https://app.notion.com/p/PREP-16-842-Systems-Eng-A1-T-3-Finish-it-Team-Formation-Stakeholders-ConOps-3dcea74eb77981b7b172c5f4c310ac66"
+  },
+  {
+   "name": "[PREP] 16.842 Systems Eng: A1 T-7: Build it: Team Formation, Stakeholders & ConOps",
+   "code": "16.842",
+   "date": "2026-09-21T19:00:00.000-04:00",
+   "due": "",
+   "status": "Not started",
+   "type": "",
+   "room": "",
+   "url": "https://app.notion.com/p/PREP-16-842-Systems-Eng-A1-T-7-Build-it-Team-Formation-Stakeholders-ConOps-3dcea74eb7798108b715e3e13d495f12"
+  },
+  {
+   "name": "[PREP] 16.842 Systems Eng: A1 T-14: Scope it: Team Formation, Stakeholders & ConOps",
+   "code": "16.842",
+   "date": "2026-09-15T19:00:00.000-04:00",
+   "due": "",
+   "status": "Not started",
+   "type": "",
+   "room": "",
+   "url": "https://app.notion.com/p/PREP-16-842-Systems-Eng-A1-T-14-Scope-it-Team-Formation-Stakeholders-ConOps-3dcea74eb77981679a48f9bbd6bf3d55"
+  },
+  {
    "name": "Template Page",
    "code": "24.134",
    "date": "2026-09-13",
@@ -23,7 +313,7 @@
   {
    "name": "[STUDY] 16.842 Systems Eng: Exam 01 T-4: Full blank-page recall of the whole syllabus, then close only the gaps you found",
    "code": "16.842",
-   "date": "2026-11-27T08:00:00.000-05:00",
+   "date": "2026-11-30T08:00:00.000-05:00",
    "due": "",
    "status": "Not started",
    "type": "",
@@ -281,24 +571,24 @@
    "url": "https://app.notion.com/p/DUE-16-S896-RASCAL-Presentation-01-Skills-Survey-Team-Pitches-3daea74eb77981fb9283e0232cbf0e24"
   },
   {
-   "name": "[DUE] 16.842 Systems Eng: Quiz 01: Pre-Reading (slides) Week 1, mandatory, 4 pts",
+   "name": "[PREP] 16.842 Systems Eng: Quiz 01: Pre-Reading (slides) Week 1, mandatory, 4 pts",
    "code": "16.842",
    "date": "2026-09-14T20:30:00.000-04:00",
    "due": "",
    "status": "Not started",
    "type": "",
    "room": "",
-   "url": "https://app.notion.com/p/DUE-16-842-Systems-Eng-Quiz-01-Pre-Reading-slides-Week-1-mandatory-4-pts-3daea74eb77981cdbc34dd084afadce0"
+   "url": "https://app.notion.com/p/PREP-16-842-Systems-Eng-Quiz-01-Pre-Reading-slides-Week-1-mandatory-4-pts-3daea74eb77981cdbc34dd084afadce0"
   },
   {
-   "name": "[DUE] 16.842 Systems Eng: Quiz 02: Pre-Readings (handbooks) Week 1, mandatory",
+   "name": "[PREP] 16.842 Systems Eng: Quiz 02: Pre-Readings (handbooks) Week 1, mandatory",
    "code": "16.842",
    "date": "2026-09-14T20:00:00.000-04:00",
    "due": "",
    "status": "Not started",
    "type": "",
    "room": "",
-   "url": "https://app.notion.com/p/DUE-16-842-Systems-Eng-Quiz-02-Pre-Readings-handbooks-Week-1-mandatory-3daea74eb77981458893de5220cf34db"
+   "url": "https://app.notion.com/p/PREP-16-842-Systems-Eng-Quiz-02-Pre-Readings-handbooks-Week-1-mandatory-3daea74eb77981458893de5220cf34db"
   },
   {
    "name": "[DUE] 14.003 Microecon & Policy: Problem Set 02: Consumer theory",
@@ -913,7 +1203,7 @@
   {
    "name": "16.842 Systems Eng: Quiz 02: Pre-Readings (handbooks) Week 1 (mandatory) DUE",
    "code": "16.842",
-   "date": "2026-09-15",
+   "date": "2026-09-15T11:00:00.000-04:00",
    "due": "",
    "status": "",
    "type": "",
@@ -923,7 +1213,7 @@
   {
    "name": "16.842 Systems Eng: Quiz 01: Pre-Reading (slides) Week 1 Quiz (mandatory, 4 pts) DUE",
    "code": "16.842",
-   "date": "2026-09-15",
+   "date": "2026-09-15T11:00:00.000-04:00",
    "due": "",
    "status": "",
    "type": "",

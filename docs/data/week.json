@@ -1,5 +1,5 @@
 {
- "generated": "2026-09-14T19:16:13-04:00",
+ "generated": "2026-09-14T21:39:41-04:00",
  "today": "2026-09-14",
  "monday": "2026-09-14",
  "days": [
@@ -128,7 +128,7 @@
      "url": "https://app.notion.com/p/Cancell-RES-to-Viales-look-for-a-diff-time-and-place-b5b05087cc2443e7903a7ac31d1ac70f"
     },
     {
-     "name": "[DUE] 16.842 Systems Eng: Quiz 02: Pre-Readings (handbooks) Week 1, mandatory",
+     "name": "[PREP] 16.842 Systems Eng: Quiz 02: Pre-Readings (handbooks) Week 1, mandatory",
      "date": "2026-09-14T20:00:00.000-04:00",
      "end": "2026-09-14T20:30:00.000-04:00",
      "done": false,
@@ -137,10 +137,10 @@
      "location": "",
      "type": "",
      "meeting_type": "Class",
-     "url": "https://app.notion.com/p/DUE-16-842-Systems-Eng-Quiz-02-Pre-Readings-handbooks-Week-1-mandatory-3daea74eb77981458893de5220cf34db"
+     "url": "https://app.notion.com/p/PREP-16-842-Systems-Eng-Quiz-02-Pre-Readings-handbooks-Week-1-mandatory-3daea74eb77981458893de5220cf34db"
     },
     {
-     "name": "[DUE] 16.842 Systems Eng: Quiz 01: Pre-Reading (slides) Week 1, mandatory, 4 pts",
+     "name": "[PREP] 16.842 Systems Eng: Quiz 01: Pre-Reading (slides) Week 1, mandatory, 4 pts",
      "date": "2026-09-14T20:30:00.000-04:00",
      "end": "2026-09-14T21:00:00.000-04:00",
      "done": false,
@@ -149,7 +149,7 @@
      "location": "",
      "type": "",
      "meeting_type": "Class",
-     "url": "https://app.notion.com/p/DUE-16-842-Systems-Eng-Quiz-01-Pre-Reading-slides-Week-1-mandatory-4-pts-3daea74eb77981cdbc34dd084afadce0"
+     "url": "https://app.notion.com/p/PREP-16-842-Systems-Eng-Quiz-01-Pre-Reading-slides-Week-1-mandatory-4-pts-3daea74eb77981cdbc34dd084afadce0"
     },
     {
      "name": "[STUDY] 16.842 Systems Eng: Quiz 02 T-2: Light retrieval pass",
@@ -206,6 +206,30 @@
    "is_today": false,
    "items": [
     {
+     "name": "16.842 Systems Eng: Quiz 02: Pre-Readings (handbooks) Week 1 (mandatory) DUE",
+     "date": "2026-09-15T11:00:00.000-04:00",
+     "end": "2026-09-15T11:15:00.000-04:00",
+     "done": false,
+     "kind": "16.842",
+     "src": "class",
+     "location": "Canvas (online)",
+     "type": "",
+     "meeting_type": "Class",
+     "url": "https://app.notion.com/p/16-842-Systems-Eng-Quiz-02-Pre-Readings-handbooks-Week-1-mandatory-DUE-3d6ea74eb77981e78c15d74e58b1acdd"
+    },
+    {
+     "name": "16.842 Systems Eng: Quiz 01: Pre-Reading (slides) Week 1 Quiz (mandatory, 4 pts) DUE",
+     "date": "2026-09-15T11:00:00.000-04:00",
+     "end": "2026-09-15T11:15:00.000-04:00",
+     "done": false,
+     "kind": "16.842",
+     "src": "class",
+     "location": "Canvas (online)",
+     "type": "",
+     "meeting_type": "Class",
+     "url": "https://app.notion.com/p/16-842-Systems-Eng-Quiz-01-Pre-Reading-slides-Week-1-Quiz-mandatory-4-pts-DUE-3d6ea74eb77981db9a4ff517de21b8bf"
+    },
+    {
      "name": "16.842 Systems Eng: Lecture 01: SE Overview & Stakeholders",
      "date": "2026-09-15T11:00:00.000-04:00",
      "end": "2026-09-15T13:00:00.000-04:00",
@@ -252,6 +276,18 @@
      "type": "",
      "meeting_type": "Class",
      "url": "https://app.notion.com/p/STUDY-14-003-Microecon-Policy-Exam-01-T-28-Scope-it-list-every-lecture-and-reading-covered-th-3daea74eb779813fbc75e592b810e366"
+    },
+    {
+     "name": "[PREP] 16.842 Systems Eng: A1 T-14: Scope it: Team Formation, Stakeholders & ConOps",
+     "date": "2026-09-15T19:00:00.000-04:00",
+     "end": "2026-09-15T20:00:00.000-04:00",
+     "done": false,
+     "kind": "16.842",
+     "src": "class",
+     "location": "",
+     "type": "",
+     "meeting_type": "Class",
+     "url": "https://app.notion.com/p/PREP-16-842-Systems-Eng-A1-T-14-Scope-it-Team-Formation-Stakeholders-ConOps-3dcea74eb77981679a48f9bbd6bf3d55"
     },
     {
      "name": "[DUE] 16.990 Creative Teams: Task: Purchase Harvard course packet (Erik Peterson case)",
@@ -324,30 +360,6 @@
      "type": "",
      "meeting_type": "Class",
      "url": "https://app.notion.com/p/TSK-16-842-Fundamentals-of-Systems-Engineering-Syllabus-At-A-Glance-3d6ea74eb779811d87a1df5c679c5b92"
-    },
-    {
-     "name": "16.842 Systems Eng: Quiz 02: Pre-Readings (handbooks) Week 1 (mandatory) DUE",
-     "date": "2026-09-15",
-     "end": "",
-     "done": false,
-     "kind": "16.842",
-     "src": "class",
-     "location": "Canvas (online)",
-     "type": "",
-     "meeting_type": "Class",
-     "url": "https://app.notion.com/p/16-842-Systems-Eng-Quiz-02-Pre-Readings-handbooks-Week-1-mandatory-DUE-3d6ea74eb77981e78c15d74e58b1acdd"
-    },
-    {
-     "name": "16.842 Systems Eng: Quiz 01: Pre-Reading (slides) Week 1 Quiz (mandatory, 4 pts) DUE",
-     "date": "2026-09-15",
-     "end": "",
-     "done": false,
-     "kind": "16.842",
-     "src": "class",
-     "location": "Canvas (online)",
-     "type": "",
-     "meeting_type": "Class",
-     "url": "https://app.notion.com/p/16-842-Systems-Eng-Quiz-01-Pre-Reading-slides-Week-1-Quiz-mandatory-4-pts-DUE-3d6ea74eb77981db9a4ff517de21b8bf"
     }
    ]
   },
@@ -390,6 +402,18 @@
      "type": "Lecture",
      "meeting_type": "Class",
      "url": "https://app.notion.com/p/16-990-Creative-Teams-Lecture-03-Introduction-to-models-of-teams-and-team-leadership-part-two-3d3ea74eb77981739594f7c7157aea3a"
+    },
+    {
+     "name": "IDS.412 Tech & Policy: Recitation",
+     "date": "2026-09-16T16:00:00.000-04:00",
+     "end": "2026-09-16T17:00:00.000-04:00",
+     "done": false,
+     "kind": "IDS.412",
+     "src": "class",
+     "location": "Room not published in the syllabus",
+     "type": "",
+     "meeting_type": "Class",
+     "url": "https://app.notion.com/p/IDS-412-Tech-Policy-Recitation-3dcea74eb7798101b407d6cafefd3d8b"
     },
     {
      "name": "Buy travel tickets: wedding, Columbus Day weekend (Fri 09 to Mon 12 Oct)",
@@ -622,5 +646,5 @@
    ]
   }
  ],
- "total": 48
+ "total": 50
 }
