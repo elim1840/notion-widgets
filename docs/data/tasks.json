@@ -1,12 +1,12 @@
 {
- "generated": "2026-09-15T16:03:13-04:00",
+ "generated": "2026-09-15T18:52:47-04:00",
  "today": "2026-09-15",
  "counts": {
-  "total": 221,
-  "open": 205,
-  "done": 16,
+  "total": 220,
+  "open": 202,
+  "done": 18,
   "today_total": 7,
-  "today_done": 0,
+  "today_done": 2,
   "overdue": 44,
   "past_meetings": 46
  },
@@ -15,7 +15,7 @@
    "name": "Laundry Plan for the weeks and Costco Order and meal prep figure out rhythm",
    "date": "2026-09-15T09:45:00.000-04:00",
    "end": "2026-09-15T10:00:00.000-04:00",
-   "done": false,
+   "done": true,
    "status": "",
    "type": "Task",
    "meeting_type": "",
@@ -32,7 +32,7 @@
    "name": "Cancel Viale reservation and call Lanner to get a reservation there",
    "date": "2026-09-15T13:00:00.000-04:00",
    "end": "2026-09-15T13:45:00.000-04:00",
-   "done": false,
+   "done": true,
    "status": "",
    "type": "Task",
    "meeting_type": "",
@@ -815,40 +815,6 @@
  ],
  "upcoming": [
   {
-   "name": "Laundry Plan for the weeks and Costco Order and meal prep figure out rhythm",
-   "date": "2026-09-15T09:45:00.000-04:00",
-   "end": "2026-09-15T10:00:00.000-04:00",
-   "done": false,
-   "status": "",
-   "type": "Task",
-   "meeting_type": "",
-   "priority": "",
-   "energy": "",
-   "location": "",
-   "attendees": "",
-   "agenda": "",
-   "link": "",
-   "notes": "",
-   "url": "https://app.notion.com/p/Laundry-Plan-for-the-weeks-and-Costco-Order-and-meal-prep-figure-out-rhythm-9636e92aacd8473f8301c858a90e6ccd"
-  },
-  {
-   "name": "Cancel Viale reservation and call Lanner to get a reservation there",
-   "date": "2026-09-15T13:00:00.000-04:00",
-   "end": "2026-09-15T13:45:00.000-04:00",
-   "done": false,
-   "status": "",
-   "type": "Task",
-   "meeting_type": "",
-   "priority": "",
-   "energy": "",
-   "location": "",
-   "attendees": "",
-   "agenda": "",
-   "link": "",
-   "notes": "",
-   "url": "https://app.notion.com/p/Cancel-Viale-reservation-and-call-Lanner-to-get-a-reservation-there-93e8c5a6966a4538ae1ce3769d4dbe81"
-  },
-  {
    "name": "TSK ESL Monthly Meeting - Introduction by Lab Advisors",
    "date": "2026-09-15T17:00:00.000-04:00",
    "end": "2026-09-15T18:00:00.000-04:00",
@@ -985,23 +951,6 @@
    "url": "https://app.notion.com/p/TSK-AFT-T-14-book-the-test-date-and-confirm-the-event-3dcea74eb77981ebabcfd0c0b53f298d"
   },
   {
-   "name": "Help Chris with BBQ at Edgerton",
-   "date": "2026-09-17T15:00:00.000-04:00",
-   "end": "2026-09-17T16:00:00.000-04:00",
-   "done": false,
-   "status": "",
-   "type": "Task",
-   "meeting_type": "",
-   "priority": "",
-   "energy": "",
-   "location": "",
-   "attendees": "",
-   "agenda": "",
-   "link": "",
-   "notes": "",
-   "url": "https://app.notion.com/p/Help-Chris-with-BBQ-at-Edgerton-de33ddf8f7714345b988b6d5c657e497"
-  },
-  {
    "name": "TSK AeroAstro Comm Lab Resume/CV Drop-In Event",
    "date": "2026-09-17T15:00:00.000-04:00",
    "end": "2026-09-17T17:00:00.000-04:00",
@@ -1017,6 +966,57 @@
    "link": "",
    "notes": "Drop-in anytime during session. Help with resume/CV structure, describing skills/experiences, formatting, general Q&A. Ahead of career fair.",
    "url": "https://app.notion.com/p/TSK-AeroAstro-Comm-Lab-Resume-CV-Drop-In-Event-3d0ea74eb779815cb10ef997e226316c"
+  },
+  {
+   "name": "TSK SERG Meeting - Intro Roundtable (add slide to deck)",
+   "date": "2026-09-17T17:00:00.000-04:00",
+   "end": "2026-09-17T18:00:00.000-04:00",
+   "done": false,
+   "status": "Not Started",
+   "type": "Task",
+   "meeting_type": "Research",
+   "priority": "",
+   "energy": "",
+   "location": "33-206 / Zoom: https://mit.zoom.us/j/6850762634",
+   "attendees": "",
+   "agenda": "",
+   "link": "",
+   "notes": "Bi-weekly SERG meetings 5-6pm Tue. Intro roundtable - add a slide: https://docs.google.com/presentation/d/1x-5FpTuZr4XVMjieqCY-ifFJxfzlGwxhMPhyP9U8m5c/edit",
+   "url": "https://app.notion.com/p/TSK-SERG-Meeting-Intro-Roundtable-add-slide-to-deck-3d0ea74eb779817990a1ecedfa11881a"
+  },
+  {
+   "name": "TSK Cut and file the day's notes into the binder",
+   "date": "2026-09-17T22:00:00.000-04:00",
+   "end": "2026-09-17T22:15:00.000-04:00",
+   "done": false,
+   "status": "Not Started",
+   "type": "Task",
+   "meeting_type": "Admin",
+   "priority": "Medium",
+   "energy": "Shallow",
+   "location": "",
+   "attendees": "",
+   "agenda": "",
+   "link": "",
+   "notes": "Cut the day's sheets, sort by class then by the number printed in each sheet's footer, punch and file. Unsure sheets go in the front pocket for the Sunday review. Guide: 02_Classes/BINDER-FILING-GUIDE.md",
+   "url": "https://app.notion.com/p/TSK-Cut-and-file-the-day-s-notes-into-the-binder-3dbea74eb77981b9b38be1199d7d5774"
+  },
+  {
+   "name": "TSK Send thesis template to Barb for format review",
+   "date": "2026-09-18T10:00:00.000-04:00",
+   "end": "2026-09-18T10:30:00.000-04:00",
+   "done": false,
+   "status": "Not Started",
+   "type": "Task",
+   "meeting_type": "Admin",
+   "priority": "High",
+   "energy": "Errand",
+   "location": "",
+   "attendees": "",
+   "agenda": "Send the compiled PDF (title page + front matter is enough - she does not need chapters) and ask her to confirm the format specifics only she can settle.\n\nTHE ASK, kept short:\n  'I've set up my thesis in the official MIT LaTeX template. Before I go further, could you confirm a few TPP-specific items?'\n\n  1. Exact degree name wording for the TPP S.M. on the title page\n  2. Who signs as Acceptor / graduate officer for TPP\n  3. For the dual TPP + AeroAstro degree, do BOTH departments sign, and are two Acceptors correct?\n  4. Does TPP require any special title-page program text?\n  5. Is there a TPP internal thesis deadline earlier than the Institute's 12 Dec title deadline?\n  6. Are thesis readers required beyond the supervisor, and how many?\n\nAttach the PDF. A concrete document gets a concrete answer; an abstract question gets 'check the website'.\n\nAlso worth asking, separately, whether Draper has required acknowledgment language for Draper Scholars.",
+   "link": "",
+   "notes": "",
+   "url": "https://app.notion.com/p/TSK-Send-thesis-template-to-Barb-for-format-review-3d5ea74eb77981e6a698d2e5563ade64"
   }
  ],
  "history": [
@@ -1088,7 +1088,7 @@
   {
    "date": "2026-09-15",
    "total": 7,
-   "done": 0
+   "done": 2
   }
  ]
 }

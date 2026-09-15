@@ -1,5 +1,5 @@
 {
- "generated": "2026-09-15T16:03:13-04:00",
+ "generated": "2026-09-15T18:52:47-04:00",
  "today": "2026-09-15",
  "monday": "2026-09-14",
  "days": [
@@ -233,7 +233,7 @@
      "name": "Laundry Plan for the weeks and Costco Order and meal prep figure out rhythm",
      "date": "2026-09-15T09:45:00.000-04:00",
      "end": "2026-09-15T10:00:00.000-04:00",
-     "done": false,
+     "done": true,
      "kind": "Task",
      "src": "task",
      "location": "",
@@ -257,7 +257,7 @@
      "name": "Cancel Viale reservation and call Lanner to get a reservation there",
      "date": "2026-09-15T13:00:00.000-04:00",
      "end": "2026-09-15T13:45:00.000-04:00",
-     "done": false,
+     "done": true,
      "kind": "Task",
      "src": "task",
      "location": "",
@@ -276,18 +276,6 @@
      "type": "Task",
      "meeting_type": "ESL",
      "url": "https://app.notion.com/p/TSK-ESL-Monthly-Meeting-Introduction-by-Lab-Advisors-3d0ea74eb77981df82b7f4f3a06b02f6"
-    },
-    {
-     "name": "[STUDY] 14.003 Microecon & Policy: Exam 01 T-28: Scope it: list every lecture and reading covered, then self-test cold to find the gaps",
-     "date": "2026-09-15T18:00:00.000-04:00",
-     "end": "2026-09-15T18:45:00.000-04:00",
-     "done": false,
-     "kind": "14.003",
-     "src": "class",
-     "location": "",
-     "type": "",
-     "meeting_type": "Class",
-     "url": "https://app.notion.com/p/STUDY-14-003-Microecon-Policy-Exam-01-T-28-Scope-it-list-every-lecture-and-reading-covered-th-3daea74eb779813fbc75e592b810e366"
     },
     {
      "name": "[PREP] 16.842 Systems Eng: A1 T-14: Scope it: Team Formation, Stakeholders & ConOps",
@@ -482,16 +470,16 @@
      "url": "https://app.notion.com/p/TSK-AFT-T-14-book-the-test-date-and-confirm-the-event-3dcea74eb77981ebabcfd0c0b53f298d"
     },
     {
-     "name": "Help Chris with BBQ at Edgerton",
-     "date": "2026-09-17T15:00:00.000-04:00",
-     "end": "2026-09-17T16:00:00.000-04:00",
+     "name": "[STUDY] 14.003 Microecon & Policy: Exam 01 T-28: Scope it: list every lecture and reading covered, then self-test cold to find the gaps",
+     "date": "2026-09-17T13:00:00.000-04:00",
+     "end": "2026-09-17T13:45:00.000-04:00",
      "done": false,
-     "kind": "Task",
-     "src": "task",
+     "kind": "14.003",
+     "src": "class",
      "location": "",
-     "type": "Task",
-     "meeting_type": "",
-     "url": "https://app.notion.com/p/Help-Chris-with-BBQ-at-Edgerton-de33ddf8f7714345b988b6d5c657e497"
+     "type": "",
+     "meeting_type": "Class",
+     "url": "https://app.notion.com/p/STUDY-14-003-Microecon-Policy-Exam-01-T-28-Scope-it-list-every-lecture-and-reading-covered-th-3daea74eb779813fbc75e592b810e366"
     },
     {
      "name": "TSK AeroAstro Comm Lab Resume/CV Drop-In Event",
@@ -718,5 +706,5 @@
    ]
   }
  ],
- "total": 56
+ "total": 55
 }
