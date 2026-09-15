@@ -1,20 +1,20 @@
 {
- "generated": "2026-09-14T21:39:41-04:00",
- "today": "2026-09-14",
+ "generated": "2026-09-15T02:42:47-04:00",
+ "today": "2026-09-15",
  "counts": {
-  "total": 179,
-  "open": 163,
+  "total": 187,
+  "open": 171,
   "done": 16,
   "today_total": 7,
   "today_done": 0,
-  "overdue": 37,
+  "overdue": 44,
   "past_meetings": 36
  },
  "today_items": [
   {
-   "name": "Hmart Food for the Week",
-   "date": "2026-09-14T16:00:00.000-04:00",
-   "end": "2026-09-14T16:30:00.000-04:00",
+   "name": "Laundry Plan for the weeks and Costco Order and meal prep figure out rhythm",
+   "date": "2026-09-15T08:00:00.000-04:00",
+   "end": "2026-09-15T08:15:00.000-04:00",
    "done": false,
    "status": "",
    "type": "Task",
@@ -26,12 +26,12 @@
    "agenda": "",
    "link": "",
    "notes": "",
-   "url": "https://app.notion.com/p/Hmart-Food-for-the-Week-f509dbe0bdb84ba38298d53447ff2a69"
+   "url": "https://app.notion.com/p/Laundry-Plan-for-the-weeks-and-Costco-Order-and-meal-prep-figure-out-rhythm-9636e92aacd8473f8301c858a90e6ccd"
   },
   {
-   "name": "Meal Prep until Wednesday",
-   "date": "2026-09-14T18:00:00.000-04:00",
-   "end": "2026-09-14T18:45:00.000-04:00",
+   "name": "Cancel Viale reservation and call Lanner to get a reservation there",
+   "date": "2026-09-15T13:00:00.000-04:00",
+   "end": "2026-09-15T13:45:00.000-04:00",
    "done": false,
    "status": "",
    "type": "Task",
@@ -43,46 +43,46 @@
    "agenda": "",
    "link": "",
    "notes": "",
-   "url": "https://app.notion.com/p/Meal-Prep-until-Wednesday-2b67a945abce481cabca7a7fd5099190"
+   "url": "https://app.notion.com/p/Cancel-Viale-reservation-and-call-Lanner-to-get-a-reservation-there-93e8c5a6966a4538ae1ce3769d4dbe81"
   },
   {
-   "name": "Completer Draper Security Training",
-   "date": "2026-09-14T18:00:00.000-04:00",
-   "end": "2026-09-14T18:45:00.000-04:00",
+   "name": "TSK 16.990 Buy Harvard course packet (Leading Creative Teams)",
+   "date": "2026-09-15T14:00:00.000-04:00",
+   "end": "2026-09-15T14:30:00.000-04:00",
    "done": false,
-   "status": "",
+   "status": "Not Started",
    "type": "Task",
-   "meeting_type": "",
-   "priority": "",
-   "energy": "",
+   "meeting_type": "Class",
+   "priority": "High",
+   "energy": "Errand",
    "location": "",
    "attendees": "",
    "agenda": "",
    "link": "",
-   "notes": "",
-   "url": "https://app.notion.com/p/Completer-Draper-Security-Training-7c3b67f248a24963abe83d968d2cc561"
+   "notes": "Purchase the Harvard Business Publishing course packet for 16.990 Leading Creative Teams.",
+   "url": "https://app.notion.com/p/TSK-16-990-Buy-Harvard-course-packet-Leading-Creative-Teams-3dbea74eb77981cb8da7ec180bd2b7e6"
   },
   {
-   "name": "Draft Letters for RASCAL get help",
-   "date": "2026-09-14T18:00:00.000-04:00",
-   "end": "2026-09-14T18:15:00.000-04:00",
+   "name": "TSK ESL Monthly Meeting - Introduction by Lab Advisors",
+   "date": "2026-09-15T17:00:00.000-04:00",
+   "end": "2026-09-15T18:00:00.000-04:00",
    "done": false,
-   "status": "",
+   "status": "Not Started",
    "type": "Task",
-   "meeting_type": "",
+   "meeting_type": "ESL",
    "priority": "",
    "energy": "",
-   "location": "",
+   "location": "33-206 / Zoom: https://mit.zoom.us/j/6850762634",
    "attendees": "",
    "agenda": "",
    "link": "",
    "notes": "",
-   "url": "https://app.notion.com/p/Draft-Letters-for-RASCAL-get-help-e6ae6396eaee4221b0337940e178214f"
+   "url": "https://app.notion.com/p/TSK-ESL-Monthly-Meeting-Introduction-by-Lab-Advisors-3d0ea74eb77981df82b7f4f3a06b02f6"
   },
   {
-   "name": "Cancell RES to Viales look for a diff time and place",
-   "date": "2026-09-14T18:30:00.000-04:00",
-   "end": "2026-09-14T18:45:00.000-04:00",
+   "name": "",
+   "date": "2026-09-15T19:45:00.000-04:00",
+   "end": "2026-09-15T20:15:00.000-04:00",
    "done": false,
    "status": "",
    "type": "Task",
@@ -94,12 +94,12 @@
    "agenda": "",
    "link": "",
    "notes": "",
-   "url": "https://app.notion.com/p/Cancell-RES-to-Viales-look-for-a-diff-time-and-place-b5b05087cc2443e7903a7ac31d1ac70f"
+   "url": "https://app.notion.com/p/d2bf07c83c7b4118a5097f6124a3bb01"
   },
   {
    "name": "TSK Cut and file the day's notes into the binder",
-   "date": "2026-09-14T22:00:00.000-04:00",
-   "end": "2026-09-14T22:15:00.000-04:00",
+   "date": "2026-09-15T22:00:00.000-04:00",
+   "end": "2026-09-15T22:15:00.000-04:00",
    "done": false,
    "status": "Not Started",
    "type": "Task",
@@ -111,12 +111,12 @@
    "agenda": "",
    "link": "",
    "notes": "Cut the day's sheets, sort by class then by the number printed in each sheet's footer, punch and file. Unsure sheets go in the front pocket for the Sunday review. Guide: 02_Classes/BINDER-FILING-GUIDE.md",
-   "url": "https://app.notion.com/p/TSK-Cut-and-file-the-day-s-notes-into-the-binder-3dbea74eb77981fd9735ed9be74c6ce5"
+   "url": "https://app.notion.com/p/TSK-Cut-and-file-the-day-s-notes-into-the-binder-3dbea74eb77981ac9956c0392d90a078"
   },
   {
    "name": "AFT Prep: Water + Liquid IV, sleep by 2300",
-   "date": "2026-09-14T22:00:00.000-04:00",
-   "end": "2026-09-14T22:15:00.000-04:00",
+   "date": "2026-09-15T22:00:00.000-04:00",
+   "end": "2026-09-15T22:15:00.000-04:00",
    "done": false,
    "status": "Not Started",
    "type": "",
@@ -128,7 +128,7 @@
    "agenda": "",
    "link": "",
    "notes": "Hydrate w/ water + Liquid IV nightly for AFT prep (AFT Wed 0910 0530 MIT ROTC). Drink more water through the day. Lights out / asleep by 2300 latest.",
-   "url": "https://app.notion.com/p/AFT-Prep-Water-Liquid-IV-sleep-by-2300-3d7ea74eb779810d8b0fdc3073b192b4"
+   "url": "https://app.notion.com/p/AFT-Prep-Water-Liquid-IV-sleep-by-2300-3d7ea74eb77981d5b2c6dc0505a41809"
   }
  ],
  "overdue_items": [
@@ -760,9 +760,7 @@
    "link": "",
    "notes": "Draper Scholar Symposium: submit biography (docx) + headshot (jpeg) via survey by 11:59 PM Sept 13, 2026. Survey: https://www.surveymonkey.com/r/2026scholarbiography - also includes final Poster Title, used for conference proceedings and judge assignment.",
    "url": "https://app.notion.com/p/TSK-Submit-Scholar-biography-docx-headshot-jpeg-survey-3cdea74eb7798140a03dc41b763c0c20"
-  }
- ],
- "upcoming": [
+  },
   {
    "name": "Hmart Food for the Week",
    "date": "2026-09-14T16:00:00.000-04:00",
@@ -813,11 +811,13 @@
    "link": "",
    "notes": "",
    "url": "https://app.notion.com/p/Completer-Draper-Security-Training-7c3b67f248a24963abe83d968d2cc561"
-  },
+  }
+ ],
+ "upcoming": [
   {
-   "name": "Draft Letters for RASCAL get help",
-   "date": "2026-09-14T18:00:00.000-04:00",
-   "end": "2026-09-14T18:15:00.000-04:00",
+   "name": "Laundry Plan for the weeks and Costco Order and meal prep figure out rhythm",
+   "date": "2026-09-15T08:00:00.000-04:00",
+   "end": "2026-09-15T08:15:00.000-04:00",
    "done": false,
    "status": "",
    "type": "Task",
@@ -829,12 +829,12 @@
    "agenda": "",
    "link": "",
    "notes": "",
-   "url": "https://app.notion.com/p/Draft-Letters-for-RASCAL-get-help-e6ae6396eaee4221b0337940e178214f"
+   "url": "https://app.notion.com/p/Laundry-Plan-for-the-weeks-and-Costco-Order-and-meal-prep-figure-out-rhythm-9636e92aacd8473f8301c858a90e6ccd"
   },
   {
-   "name": "Cancell RES to Viales look for a diff time and place",
-   "date": "2026-09-14T18:30:00.000-04:00",
-   "end": "2026-09-14T18:45:00.000-04:00",
+   "name": "Cancel Viale reservation and call Lanner to get a reservation there",
+   "date": "2026-09-15T13:00:00.000-04:00",
+   "end": "2026-09-15T13:45:00.000-04:00",
    "done": false,
    "status": "",
    "type": "Task",
@@ -846,41 +846,7 @@
    "agenda": "",
    "link": "",
    "notes": "",
-   "url": "https://app.notion.com/p/Cancell-RES-to-Viales-look-for-a-diff-time-and-place-b5b05087cc2443e7903a7ac31d1ac70f"
-  },
-  {
-   "name": "TSK Cut and file the day's notes into the binder",
-   "date": "2026-09-14T22:00:00.000-04:00",
-   "end": "2026-09-14T22:15:00.000-04:00",
-   "done": false,
-   "status": "Not Started",
-   "type": "Task",
-   "meeting_type": "Admin",
-   "priority": "Medium",
-   "energy": "Shallow",
-   "location": "",
-   "attendees": "",
-   "agenda": "",
-   "link": "",
-   "notes": "Cut the day's sheets, sort by class then by the number printed in each sheet's footer, punch and file. Unsure sheets go in the front pocket for the Sunday review. Guide: 02_Classes/BINDER-FILING-GUIDE.md",
-   "url": "https://app.notion.com/p/TSK-Cut-and-file-the-day-s-notes-into-the-binder-3dbea74eb77981fd9735ed9be74c6ce5"
-  },
-  {
-   "name": "AFT Prep: Water + Liquid IV, sleep by 2300",
-   "date": "2026-09-14T22:00:00.000-04:00",
-   "end": "2026-09-14T22:15:00.000-04:00",
-   "done": false,
-   "status": "Not Started",
-   "type": "",
-   "meeting_type": "Military",
-   "priority": "",
-   "energy": "",
-   "location": "",
-   "attendees": "",
-   "agenda": "",
-   "link": "",
-   "notes": "Hydrate w/ water + Liquid IV nightly for AFT prep (AFT Wed 0910 0530 MIT ROTC). Drink more water through the day. Lights out / asleep by 2300 latest.",
-   "url": "https://app.notion.com/p/AFT-Prep-Water-Liquid-IV-sleep-by-2300-3d7ea74eb779810d8b0fdc3073b192b4"
+   "url": "https://app.notion.com/p/Cancel-Viale-reservation-and-call-Lanner-to-get-a-reservation-there-93e8c5a6966a4538ae1ce3769d4dbe81"
   },
   {
    "name": "TSK 16.990 Buy Harvard course packet (Leading Creative Teams)",
@@ -966,14 +932,94 @@
    "link": "",
    "notes": "Hydrate w/ water + Liquid IV nightly for AFT prep (AFT Wed 0910 0530 MIT ROTC). Drink more water through the day. Lights out / asleep by 2300 latest.",
    "url": "https://app.notion.com/p/AFT-Prep-Water-Liquid-IV-sleep-by-2300-3d7ea74eb77981d5b2c6dc0505a41809"
+  },
+  {
+   "name": "Buy travel tickets: wedding, Columbus Day weekend (Fri 09 to Mon 12 Oct)",
+   "date": "2026-09-16T19:00:00.000-04:00",
+   "end": "2026-09-16T19:30:00.000-04:00",
+   "done": false,
+   "status": "Not Started",
+   "type": "Task",
+   "meeting_type": "Personal",
+   "priority": "High",
+   "energy": "Errand",
+   "location": "",
+   "attendees": "",
+   "agenda": "",
+   "link": "",
+   "notes": "Columbus Day 2026 is Mon 12 Oct, so the weekend is Fri 09 to Mon 12 Oct. Book before prices climb. Destination and travel mode not yet specified: confirm which city and whether flying or driving before booking.",
+   "url": "https://app.notion.com/p/Buy-travel-tickets-wedding-Columbus-Day-weekend-Fri-09-to-Mon-12-Oct-3daea74eb77981a88d5af288db3d0d4f"
+  },
+  {
+   "name": "TSK Cut and file the day's notes into the binder",
+   "date": "2026-09-16T22:00:00.000-04:00",
+   "end": "2026-09-16T22:15:00.000-04:00",
+   "done": false,
+   "status": "Not Started",
+   "type": "Task",
+   "meeting_type": "Admin",
+   "priority": "Medium",
+   "energy": "Shallow",
+   "location": "",
+   "attendees": "",
+   "agenda": "",
+   "link": "",
+   "notes": "Cut the day's sheets, sort by class then by the number printed in each sheet's footer, punch and file. Unsure sheets go in the front pocket for the Sunday review. Guide: 02_Classes/BINDER-FILING-GUIDE.md",
+   "url": "https://app.notion.com/p/TSK-Cut-and-file-the-day-s-notes-into-the-binder-3dbea74eb779817298a7c0dafa2fdffc"
+  },
+  {
+   "name": "TSK AFT T-14: book the test date and confirm the event",
+   "date": "2026-09-17T06:00:00.000-04:00",
+   "end": "2026-09-17T06:30:00.000-04:00",
+   "done": false,
+   "status": "Not Started",
+   "type": "",
+   "meeting_type": "Military",
+   "priority": "",
+   "energy": "",
+   "location": "",
+   "attendees": "",
+   "agenda": "",
+   "link": "",
+   "notes": "T-14 to the AFT on 10-01-2026.",
+   "url": "https://app.notion.com/p/TSK-AFT-T-14-book-the-test-date-and-confirm-the-event-3dcea74eb77981ebabcfd0c0b53f298d"
+  },
+  {
+   "name": "Help Chris with BBQ at Edgerton",
+   "date": "2026-09-17T15:00:00.000-04:00",
+   "end": "2026-09-17T16:00:00.000-04:00",
+   "done": false,
+   "status": "",
+   "type": "Task",
+   "meeting_type": "",
+   "priority": "",
+   "energy": "",
+   "location": "",
+   "attendees": "",
+   "agenda": "",
+   "link": "",
+   "notes": "",
+   "url": "https://app.notion.com/p/Help-Chris-with-BBQ-at-Edgerton-de33ddf8f7714345b988b6d5c657e497"
+  },
+  {
+   "name": "TSK AeroAstro Comm Lab Resume/CV Drop-In Event",
+   "date": "2026-09-17T15:00:00.000-04:00",
+   "end": "2026-09-17T17:00:00.000-04:00",
+   "done": false,
+   "status": "Not Started",
+   "type": "Task",
+   "meeting_type": "AeroAstro",
+   "priority": "",
+   "energy": "",
+   "location": "33-206",
+   "attendees": "",
+   "agenda": "",
+   "link": "",
+   "notes": "Drop-in anytime during session. Help with resume/CV structure, describing skills/experiences, formatting, general Q&A. Ahead of career fair.",
+   "url": "https://app.notion.com/p/TSK-AeroAstro-Comm-Lab-Resume-CV-Drop-In-Event-3d0ea74eb779815cb10ef997e226316c"
   }
  ],
  "history": [
-  {
-   "date": "2026-09-01",
-   "total": 2,
-   "done": 0
-  },
   {
    "date": "2026-09-02",
    "total": 1,
@@ -1036,6 +1082,11 @@
   },
   {
    "date": "2026-09-14",
+   "total": 7,
+   "done": 0
+  },
+  {
+   "date": "2026-09-15",
    "total": 7,
    "done": 0
   }

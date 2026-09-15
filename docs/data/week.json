@@ -1,11 +1,11 @@
 {
- "generated": "2026-09-14T21:39:41-04:00",
- "today": "2026-09-14",
+ "generated": "2026-09-15T02:42:47-04:00",
+ "today": "2026-09-15",
  "monday": "2026-09-14",
  "days": [
   {
    "date": "2026-09-14",
-   "is_today": true,
+   "is_today": false,
    "items": [
     {
      "name": "14.003 Microecon & Policy: Lecture 02: Testing theory: The fundamental problem of causal inference",
@@ -203,12 +203,24 @@
   },
   {
    "date": "2026-09-15",
-   "is_today": false,
+   "is_today": true,
    "items": [
     {
+     "name": "Laundry Plan for the weeks and Costco Order and meal prep figure out rhythm",
+     "date": "2026-09-15T08:00:00.000-04:00",
+     "end": "2026-09-15T08:15:00.000-04:00",
+     "done": false,
+     "kind": "Task",
+     "src": "task",
+     "location": "",
+     "type": "Task",
+     "meeting_type": "",
+     "url": "https://app.notion.com/p/Laundry-Plan-for-the-weeks-and-Costco-Order-and-meal-prep-figure-out-rhythm-9636e92aacd8473f8301c858a90e6ccd"
+    },
+    {
      "name": "16.842 Systems Eng: Quiz 02: Pre-Readings (handbooks) Week 1 (mandatory) DUE",
-     "date": "2026-09-15T11:00:00.000-04:00",
-     "end": "2026-09-15T11:15:00.000-04:00",
+     "date": "2026-09-15T09:00:00.000-04:00",
+     "end": "2026-09-15T09:15:00.000-04:00",
      "done": false,
      "kind": "16.842",
      "src": "class",
@@ -219,8 +231,8 @@
     },
     {
      "name": "16.842 Systems Eng: Quiz 01: Pre-Reading (slides) Week 1 Quiz (mandatory, 4 pts) DUE",
-     "date": "2026-09-15T11:00:00.000-04:00",
-     "end": "2026-09-15T11:15:00.000-04:00",
+     "date": "2026-09-15T09:15:00.000-04:00",
+     "end": "2026-09-15T09:30:00.000-04:00",
      "done": false,
      "kind": "16.842",
      "src": "class",
@@ -240,6 +252,18 @@
      "type": "Lecture",
      "meeting_type": "Class",
      "url": "https://app.notion.com/p/16-842-Systems-Eng-Lecture-01-SE-Overview-Stakeholders-3d5ea74eb77981f4a439f7df80618056"
+    },
+    {
+     "name": "Cancel Viale reservation and call Lanner to get a reservation there",
+     "date": "2026-09-15T13:00:00.000-04:00",
+     "end": "2026-09-15T13:45:00.000-04:00",
+     "done": false,
+     "kind": "Task",
+     "src": "task",
+     "location": "",
+     "type": "Task",
+     "meeting_type": "",
+     "url": "https://app.notion.com/p/Cancel-Viale-reservation-and-call-Lanner-to-get-a-reservation-there-93e8c5a6966a4538ae1ce3769d4dbe81"
     },
     {
      "name": "TSK 16.990 Buy Harvard course packet (Leading Creative Teams)",
@@ -446,6 +470,18 @@
    "is_today": false,
    "items": [
     {
+     "name": "TSK AFT T-14: book the test date and confirm the event",
+     "date": "2026-09-17T06:00:00.000-04:00",
+     "end": "2026-09-17T06:30:00.000-04:00",
+     "done": false,
+     "kind": "Military",
+     "src": "task",
+     "location": "",
+     "type": "",
+     "meeting_type": "Military",
+     "url": "https://app.notion.com/p/TSK-AFT-T-14-book-the-test-date-and-confirm-the-event-3dcea74eb77981ebabcfd0c0b53f298d"
+    },
+    {
      "name": "Help Chris with BBQ at Edgerton",
      "date": "2026-09-17T15:00:00.000-04:00",
      "end": "2026-09-17T16:00:00.000-04:00",
@@ -646,5 +682,5 @@
    ]
   }
  ],
- "total": 50
+ "total": 53
 }
