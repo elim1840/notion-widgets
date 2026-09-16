@@ -1,6 +1,6 @@
 {
- "generated": "2026-09-15T21:00:24-04:00",
- "today": "2026-09-15",
+ "generated": "2026-09-16T01:59:20-04:00",
+ "today": "2026-09-16",
  "monday": "2026-09-14",
  "days": [
   {
@@ -38,7 +38,7 @@
      "done": false,
      "kind": "IDS.412",
      "src": "class",
-     "location": "not published in Canvas; syllabus PDF: 66-168",
+     "location": "66-168",
      "type": "Lecture",
      "meeting_type": "Class",
      "url": "https://app.notion.com/p/IDS-412-Tech-Policy-Lecture-02-Policies-Institutions-and-Markets-3d3ea74eb77981d69d4ac5e486eba982"
@@ -203,7 +203,7 @@
   },
   {
    "date": "2026-09-15",
-   "is_today": true,
+   "is_today": false,
    "items": [
     {
      "name": "16.842 Systems Eng: Quiz 02: Pre-Readings (handbooks) Week 1 (mandatory) DUE",
@@ -290,18 +290,6 @@
      "url": "https://app.notion.com/p/TSK-ESL-Monthly-Meeting-Introduction-by-Lab-Advisors-3d0ea74eb77981df82b7f4f3a06b02f6"
     },
     {
-     "name": "[STUDY] 14.003 Microecon & Policy: Lecture 03 prep",
-     "date": "2026-09-15T18:45:00.000-04:00",
-     "end": "2026-09-15T19:45:00.000-04:00",
-     "done": false,
-     "kind": "14.003",
-     "src": "class",
-     "location": "",
-     "type": "",
-     "meeting_type": "Class",
-     "url": "https://app.notion.com/p/STUDY-14-003-Microecon-Policy-Lecture-03-prep-3dcea74eb7798133bddae36fbff3105e"
-    },
-    {
      "name": "14.003 Office Hours \u2014 Cristine von Dessauer",
      "date": "2026-09-15T19:30:00.000+00:00",
      "end": "2026-09-15T21:00:00.000+00:00",
@@ -324,30 +312,6 @@
      "type": "",
      "meeting_type": "Personal",
      "url": "https://app.notion.com/p/Create-Team-RWB-account-sign-up-for-Fenway-Spartan-race-3dcea74eb779811f9783e587d0d555ae"
-    },
-    {
-     "name": "[STUDY] IDS.412 Tech & Policy: Lecture 03 prep",
-     "date": "2026-09-15T19:45:00.000-04:00",
-     "end": "2026-09-15T21:15:00.000-04:00",
-     "done": false,
-     "kind": "IDS.412",
-     "src": "class",
-     "location": "",
-     "type": "",
-     "meeting_type": "Class",
-     "url": "https://app.notion.com/p/STUDY-IDS-412-Tech-Policy-Lecture-03-prep-3dcea74eb77981ab9b1acfbe534b0969"
-    },
-    {
-     "name": "[STUDY] 16.990 Creative Teams: Lecture 03 prep",
-     "date": "2026-09-15T21:15:00.000-04:00",
-     "end": "2026-09-15T22:15:00.000-04:00",
-     "done": false,
-     "kind": "16.990",
-     "src": "class",
-     "location": "",
-     "type": "",
-     "meeting_type": "Class",
-     "url": "https://app.notion.com/p/STUDY-16-990-Creative-Teams-Lecture-03-prep-3dcea74eb779816aa8e3d22d857abf7e"
     },
     {
      "name": "TSK Cut and file the day's notes into the binder",
@@ -425,8 +389,44 @@
   },
   {
    "date": "2026-09-16",
-   "is_today": false,
+   "is_today": true,
    "items": [
+    {
+     "name": "[STUDY] 14.003 Microecon & Policy: Lecture 03 prep",
+     "date": "2026-09-16T07:00:00.000-04:00",
+     "end": "2026-09-16T08:00:00.000-04:00",
+     "done": false,
+     "kind": "14.003",
+     "src": "class",
+     "location": "",
+     "type": "",
+     "meeting_type": "Class",
+     "url": "https://app.notion.com/p/STUDY-14-003-Microecon-Policy-Lecture-03-prep-3dcea74eb7798133bddae36fbff3105e"
+    },
+    {
+     "name": "[STUDY] IDS.412 Tech & Policy: Lecture 03 prep",
+     "date": "2026-09-16T08:00:00.000-04:00",
+     "end": "2026-09-16T10:00:00.000-04:00",
+     "done": false,
+     "kind": "IDS.412",
+     "src": "class",
+     "location": "",
+     "type": "",
+     "meeting_type": "Class",
+     "url": "https://app.notion.com/p/STUDY-IDS-412-Tech-Policy-Lecture-03-prep-3dcea74eb77981ab9b1acfbe534b0969"
+    },
+    {
+     "name": "Drop of Lunch at TPP",
+     "date": "2026-09-16T10:00:00.000-04:00",
+     "end": "2026-09-16T10:30:00.000-04:00",
+     "done": false,
+     "kind": "Meeting",
+     "src": "task",
+     "location": "",
+     "type": "",
+     "meeting_type": "",
+     "url": "https://app.notion.com/p/Drop-of-Lunch-at-TPP-25f2d0cba9ef450491c0af6230755c04"
+    },
     {
      "name": "14.003 Microecon & Policy: Lecture 03: Introducing consumer theory: The foundation of microeconomics",
      "date": "2026-09-16T10:30:00.000-04:00",
@@ -452,16 +452,16 @@
      "url": "https://app.notion.com/p/Space-Policy-Working-Group-prepare-submission-3ddea74eb77981b0a39ec21f0abfde2e"
     },
     {
-     "name": "Send an email to mit Registrar regarding class petition",
-     "date": "2026-09-16T12:30:00.000-04:00",
-     "end": "2026-09-16T12:45:00.000-04:00",
+     "name": "[STUDY] 16.990 Creative Teams: Lecture 03 prep",
+     "date": "2026-09-16T12:00:00.000-04:00",
+     "end": "2026-09-16T13:00:00.000-04:00",
      "done": false,
-     "kind": "Task",
-     "src": "task",
+     "kind": "16.990",
+     "src": "class",
      "location": "",
-     "type": "Task",
-     "meeting_type": "",
-     "url": "https://app.notion.com/p/Send-an-email-to-mit-Registrar-regarding-class-petition-ccd427fdfc074f92bc13c0bb53c3245d"
+     "type": "",
+     "meeting_type": "Class",
+     "url": "https://app.notion.com/p/STUDY-16-990-Creative-Teams-Lecture-03-prep-3dcea74eb779816aa8e3d22d857abf7e"
     },
     {
      "name": "IDS.412 Tech & Policy: Lecture 03: Knowledge generation",
@@ -470,7 +470,7 @@
      "done": false,
      "kind": "IDS.412",
      "src": "class",
-     "location": "not published in Canvas; syllabus PDF: 66-168",
+     "location": "66-168",
      "type": "Lecture",
      "meeting_type": "Class",
      "url": "https://app.notion.com/p/IDS-412-Tech-Policy-Lecture-03-Knowledge-generation-3d3ea74eb779815f8390cbf673fa5389"
@@ -488,7 +488,7 @@
      "url": "https://app.notion.com/p/16-990-Creative-Teams-Lecture-03-Introduction-to-models-of-teams-and-team-leadership-part-two-3d3ea74eb77981739594f7c7157aea3a"
     },
     {
-     "name": "IDS.412 Tech & Policy: Recitation",
+     "name": "IDS.412 Tech & Policy: Recitation Week 2",
      "date": "2026-09-16T16:00:00.000-04:00",
      "end": "2026-09-16T17:00:00.000-04:00",
      "done": false,
@@ -497,7 +497,7 @@
      "location": "66-168",
      "type": "",
      "meeting_type": "Class",
-     "url": "https://app.notion.com/p/IDS-412-Tech-Policy-Recitation-3dcea74eb7798101b407d6cafefd3d8b"
+     "url": "https://app.notion.com/p/IDS-412-Tech-Policy-Recitation-Week-2-3dcea74eb7798101b407d6cafefd3d8b"
     },
     {
      "name": "Submit Moon Landing abstract to the team",
@@ -626,6 +626,18 @@
      "url": "https://app.notion.com/p/TSK-AFT-T-14-book-the-test-date-and-confirm-the-event-3dcea74eb77981ebabcfd0c0b53f298d"
     },
     {
+     "name": "Send an email to mit Registrar regarding class petition",
+     "date": "2026-09-17T10:00:00.000-04:00",
+     "end": "2026-09-17T10:15:00.000-04:00",
+     "done": false,
+     "kind": "Task",
+     "src": "task",
+     "location": "",
+     "type": "Task",
+     "meeting_type": "",
+     "url": "https://app.notion.com/p/Send-an-email-to-mit-Registrar-regarding-class-petition-ccd427fdfc074f92bc13c0bb53c3245d"
+    },
+    {
      "name": "[STUDY] 14.003 Microecon & Policy: Exam 01 T-28: Scope it: list every lecture and reading covered, then self-test cold to find the gaps",
      "date": "2026-09-17T13:00:00.000-04:00",
      "end": "2026-09-17T13:45:00.000-04:00",
@@ -704,7 +716,7 @@
    "is_today": false,
    "items": [
     {
-     "name": "14.003 Microecon & Policy: Recitation 02",
+     "name": "14.003 Microecon & Policy: Recitation Week 2",
      "date": "2026-09-18T09:00:00.000-04:00",
      "end": "2026-09-18T10:00:00.000-04:00",
      "done": false,
@@ -713,7 +725,7 @@
      "location": "E52-164 at 0900 or E51-057 at 1000, choose either",
      "type": "Seminar",
      "meeting_type": "Class",
-     "url": "https://app.notion.com/p/14-003-Microecon-Policy-Recitation-02-3d3ea74eb77981bb82d9d670e305e3d0"
+     "url": "https://app.notion.com/p/14-003-Microecon-Policy-Recitation-Week-2-3d3ea74eb77981bb82d9d670e305e3d0"
     },
     {
      "name": "TSK Send thesis template to Barb for format review",
@@ -886,5 +898,5 @@
    ]
   }
  ],
- "total": 70
+ "total": 71
 }
