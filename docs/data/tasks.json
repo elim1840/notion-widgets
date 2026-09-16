@@ -1,11 +1,11 @@
 {
- "generated": "2026-09-16T07:18:31-04:00",
+ "generated": "2026-09-16T11:28:04-04:00",
  "today": "2026-09-16",
  "counts": {
-  "total": 226,
-  "open": 207,
+  "total": 227,
+  "open": 208,
   "done": 19,
-  "today_total": 8,
+  "today_total": 9,
   "today_done": 0,
   "overdue": 48,
   "past_meetings": 46
@@ -61,6 +61,23 @@
    "link": "",
    "notes": "Send the abstract to the team for review. This is the piece with an external dependency, so it goes first: the other two blocks are solo work that can slip a day without costing anyone else time. Follows on from 'Work on Lunar Moon Base Abstract' filed 09-12.",
    "url": "https://app.notion.com/p/Submit-Moon-Landing-abstract-to-the-team-3ddea74eb779814c85a7f698de718546"
+  },
+  {
+   "name": "Send emails to get quotes for dinner reservations",
+   "date": "2026-09-16T17:15:00.000-04:00",
+   "end": "2026-09-16T18:00:00.000-04:00",
+   "done": false,
+   "status": "",
+   "type": "Task",
+   "meeting_type": "",
+   "priority": "",
+   "energy": "",
+   "location": "",
+   "attendees": "",
+   "agenda": "",
+   "link": "",
+   "notes": "",
+   "url": "https://app.notion.com/p/Send-emails-to-get-quotes-for-dinner-reservations-0581680fd6634365a30bd777fcb293fb"
   },
   {
    "name": "Build Cursor project for Moon Landing paper",
@@ -883,6 +900,23 @@
    "url": "https://app.notion.com/p/Submit-Moon-Landing-abstract-to-the-team-3ddea74eb779814c85a7f698de718546"
   },
   {
+   "name": "Send emails to get quotes for dinner reservations",
+   "date": "2026-09-16T17:15:00.000-04:00",
+   "end": "2026-09-16T18:00:00.000-04:00",
+   "done": false,
+   "status": "",
+   "type": "Task",
+   "meeting_type": "",
+   "priority": "",
+   "energy": "",
+   "location": "",
+   "attendees": "",
+   "agenda": "",
+   "link": "",
+   "notes": "",
+   "url": "https://app.notion.com/p/Send-emails-to-get-quotes-for-dinner-reservations-0581680fd6634365a30bd777fcb293fb"
+  },
+  {
    "name": "Build Cursor project for Moon Landing paper",
    "date": "2026-09-16T18:00:00.000-04:00",
    "end": "2026-09-16T19:30:00.000-04:00",
@@ -1017,23 +1051,6 @@
    "link": "",
    "notes": "Bi-weekly SERG meetings 5-6pm Tue. Intro roundtable - add a slide: https://docs.google.com/presentation/d/1x-5FpTuZr4XVMjieqCY-ifFJxfzlGwxhMPhyP9U8m5c/edit",
    "url": "https://app.notion.com/p/TSK-SERG-Meeting-Intro-Roundtable-add-slide-to-deck-3d0ea74eb779817990a1ecedfa11881a"
-  },
-  {
-   "name": "TSK Cut and file the day's notes into the binder",
-   "date": "2026-09-17T22:00:00.000-04:00",
-   "end": "2026-09-17T22:15:00.000-04:00",
-   "done": false,
-   "status": "Not Started",
-   "type": "Task",
-   "meeting_type": "Admin",
-   "priority": "Medium",
-   "energy": "Shallow",
-   "location": "",
-   "attendees": "",
-   "agenda": "",
-   "link": "",
-   "notes": "Cut the day's sheets, sort by class then by the number printed in each sheet's footer, punch and file. Unsure sheets go in the front pocket for the Sunday review. Guide: 02_Classes/BINDER-FILING-GUIDE.md",
-   "url": "https://app.notion.com/p/TSK-Cut-and-file-the-day-s-notes-into-the-binder-3dbea74eb77981b9b38be1199d7d5774"
   }
  ],
  "history": [
@@ -1104,7 +1121,7 @@
   },
   {
    "date": "2026-09-16",
-   "total": 8,
+   "total": 9,
    "done": 0
   }
  ]
