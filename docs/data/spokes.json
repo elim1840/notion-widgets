@@ -1,6 +1,1006 @@
 {
  "classes": [
   {
+   "name": "14.003 Office Hours \u2014 Pratik Bhandari",
+   "code": "14.003",
+   "date": "2026-12-04T20:00:00.000+00:00",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "4-231",
+   "url": "https://app.notion.com/p/14-003-Office-Hours-Pratik-Bhandari-3dcea74eb779810d9139c45bbc24afe8"
+  },
+  {
+   "name": "14.003 Office Hours \u2014 Pratik Bhandari",
+   "code": "14.003",
+   "date": "2026-09-25T19:00:00.000+00:00",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "4-231",
+   "url": "https://app.notion.com/p/14-003-Office-Hours-Pratik-Bhandari-3dcea74eb7798121b7e8c5c8676bdadd"
+  },
+  {
+   "name": "14.003 Office Hours \u2014 Pratik Bhandari",
+   "code": "14.003",
+   "date": "2026-10-09T19:00:00.000+00:00",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "4-231",
+   "url": "https://app.notion.com/p/14-003-Office-Hours-Pratik-Bhandari-3dcea74eb7798124a00ef77d77834515"
+  },
+  {
+   "name": "14.003 Office Hours \u2014 Pratik Bhandari",
+   "code": "14.003",
+   "date": "2026-11-13T20:00:00.000+00:00",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "4-231",
+   "url": "https://app.notion.com/p/14-003-Office-Hours-Pratik-Bhandari-3dcea74eb77981478ddcfca149497265"
+  },
+  {
+   "name": "14.003 Office Hours \u2014 Pratik Bhandari",
+   "code": "14.003",
+   "date": "2026-09-18T19:00:00.000+00:00",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "4-231",
+   "url": "https://app.notion.com/p/14-003-Office-Hours-Pratik-Bhandari-3dcea74eb779815b97b7d1260679b296"
+  },
+  {
+   "name": "14.003 Office Hours \u2014 Pratik Bhandari",
+   "code": "14.003",
+   "date": "2026-12-11T20:00:00.000+00:00",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "4-231",
+   "url": "https://app.notion.com/p/14-003-Office-Hours-Pratik-Bhandari-3dcea74eb7798168a022d23fcb8065ab"
+  },
+  {
+   "name": "14.003 Office Hours \u2014 Pratik Bhandari",
+   "code": "14.003",
+   "date": "2026-10-02T19:00:00.000+00:00",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "4-231",
+   "url": "https://app.notion.com/p/14-003-Office-Hours-Pratik-Bhandari-3dcea74eb779816c99b6fb1f8eaecffd"
+  },
+  {
+   "name": "14.003 Office Hours \u2014 Pratik Bhandari",
+   "code": "14.003",
+   "date": "2026-11-06T20:00:00.000+00:00",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "4-231",
+   "url": "https://app.notion.com/p/14-003-Office-Hours-Pratik-Bhandari-3dcea74eb779816e96d4de3d2e1ed168"
+  },
+  {
+   "name": "14.003 Office Hours \u2014 Pratik Bhandari",
+   "code": "14.003",
+   "date": "2026-11-20T20:00:00.000+00:00",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "4-231",
+   "url": "https://app.notion.com/p/14-003-Office-Hours-Pratik-Bhandari-3dcea74eb779818481cefa260826d594"
+  },
+  {
+   "name": "14.003 Office Hours \u2014 Pratik Bhandari",
+   "code": "14.003",
+   "date": "2026-10-30T19:00:00.000+00:00",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "4-231",
+   "url": "https://app.notion.com/p/14-003-Office-Hours-Pratik-Bhandari-3dcea74eb77981a2a421e0ba3f743b4b"
+  },
+  {
+   "name": "14.003 Office Hours \u2014 Pratik Bhandari",
+   "code": "14.003",
+   "date": "2026-10-16T19:00:00.000+00:00",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "4-231",
+   "url": "https://app.notion.com/p/14-003-Office-Hours-Pratik-Bhandari-3dcea74eb77981e7bfd0c39e1f1da6e8"
+  },
+  {
+   "name": "14.003 Office Hours \u2014 Pratik Bhandari",
+   "code": "14.003",
+   "date": "2026-10-23T19:00:00.000+00:00",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "4-231",
+   "url": "https://app.notion.com/p/14-003-Office-Hours-Pratik-Bhandari-3dcea74eb77981f69b63da24092b48e6"
+  },
+  {
+   "name": "14.003 Office Hours \u2014 M\u00e9lyne Nzabonimpa",
+   "code": "14.003",
+   "date": "2026-09-24T18:00:00.000+00:00",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "E52-516",
+   "url": "https://app.notion.com/p/14-003-Office-Hours-M-lyne-Nzabonimpa-3dcea74eb77981018808f0b2b2325d96"
+  },
+  {
+   "name": "IDS.412 Office Hours \u2014 Noelle Eckley Selin",
+   "code": "IDS.412",
+   "date": "2026-09-16T18:30:00.000+00:00",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "TPP Lounge (E18 3rd floor)",
+   "url": "https://app.notion.com/p/IDS-412-Office-Hours-Noelle-Eckley-Selin-3dcea74eb77981049f77ebecd933c733"
+  },
+  {
+   "name": "IDS.412 Office Hours \u2014 Noelle Eckley Selin",
+   "code": "IDS.412",
+   "date": "2026-10-28T18:30:00.000+00:00",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "TPP Lounge (E18 3rd floor)",
+   "url": "https://app.notion.com/p/IDS-412-Office-Hours-Noelle-Eckley-Selin-3dcea74eb779810c9178f38d2dd454f7"
+  },
+  {
+   "name": "IDS.412 Office Hours \u2014 Noelle Eckley Selin",
+   "code": "IDS.412",
+   "date": "2026-09-23T18:30:00.000+00:00",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "TPP Lounge (E18 3rd floor)",
+   "url": "https://app.notion.com/p/IDS-412-Office-Hours-Noelle-Eckley-Selin-3dcea74eb7798111be40d0619d19eb76"
+  },
+  {
+   "name": "IDS.412 Office Hours \u2014 Noelle Eckley Selin",
+   "code": "IDS.412",
+   "date": "2026-11-04T19:30:00.000+00:00",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "TPP Lounge (E18 3rd floor)",
+   "url": "https://app.notion.com/p/IDS-412-Office-Hours-Noelle-Eckley-Selin-3dcea74eb7798115a9aff4c199e2712f"
+  },
+  {
+   "name": "IDS.412 Office Hours \u2014 Noelle Eckley Selin",
+   "code": "IDS.412",
+   "date": "2026-10-21T18:30:00.000+00:00",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "TPP Lounge (E18 3rd floor)",
+   "url": "https://app.notion.com/p/IDS-412-Office-Hours-Noelle-Eckley-Selin-3dcea74eb779811db52dd82c3f86bacc"
+  },
+  {
+   "name": "IDS.412 Office Hours \u2014 Noelle Eckley Selin",
+   "code": "IDS.412",
+   "date": "2026-12-09T19:30:00.000+00:00",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "TPP Lounge (E18 3rd floor)",
+   "url": "https://app.notion.com/p/IDS-412-Office-Hours-Noelle-Eckley-Selin-3dcea74eb779811f9606c5cd284b5ecb"
+  },
+  {
+   "name": "16.S896 Office Hours \u2014 George Lordos",
+   "code": "16.S896",
+   "date": "2026-09-18T18:00:00.000+00:00",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "33-218",
+   "url": "https://app.notion.com/p/16-S896-Office-Hours-George-Lordos-3dcea74eb77981209a9fc0db1559085d"
+  },
+  {
+   "name": "14.003 Office Hours \u2014 M\u00e9lyne Nzabonimpa",
+   "code": "14.003",
+   "date": "2026-10-15T18:00:00.000+00:00",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "E52-516",
+   "url": "https://app.notion.com/p/14-003-Office-Hours-M-lyne-Nzabonimpa-3dcea74eb77981269418f2447bd91b7e"
+  },
+  {
+   "name": "16.S896 Office Hours \u2014 George Lordos",
+   "code": "16.S896",
+   "date": "2026-11-06T19:00:00.000+00:00",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "33-218",
+   "url": "https://app.notion.com/p/16-S896-Office-Hours-George-Lordos-3dcea74eb779813da4e6f75732e0501c"
+  },
+  {
+   "name": "14.003 Office Hours \u2014 M\u00e9lyne Nzabonimpa",
+   "code": "14.003",
+   "date": "2026-11-19T19:00:00.000+00:00",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "E52-516",
+   "url": "https://app.notion.com/p/14-003-Office-Hours-M-lyne-Nzabonimpa-3dcea74eb77981439299fcacd1a511f1"
+  },
+  {
+   "name": "14.003 Office Hours \u2014 M\u00e9lyne Nzabonimpa",
+   "code": "14.003",
+   "date": "2026-10-29T18:00:00.000+00:00",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "E52-516",
+   "url": "https://app.notion.com/p/14-003-Office-Hours-M-lyne-Nzabonimpa-3dcea74eb779814f86dcd84a66d55daa"
+  },
+  {
+   "name": "IDS.412 Office Hours \u2014 Noelle Eckley Selin",
+   "code": "IDS.412",
+   "date": "2026-12-02T19:30:00.000+00:00",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "TPP Lounge (E18 3rd floor)",
+   "url": "https://app.notion.com/p/IDS-412-Office-Hours-Noelle-Eckley-Selin-3dcea74eb779814f93c0ee98a28e594c"
+  },
+  {
+   "name": "IDS.412 Office Hours \u2014 Noelle Eckley Selin",
+   "code": "IDS.412",
+   "date": "2026-11-18T19:30:00.000+00:00",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "TPP Lounge (E18 3rd floor)",
+   "url": "https://app.notion.com/p/IDS-412-Office-Hours-Noelle-Eckley-Selin-3dcea74eb77981508942cfced19f919d"
+  },
+  {
+   "name": "16.S896 Office Hours \u2014 George Lordos",
+   "code": "16.S896",
+   "date": "2026-11-13T19:00:00.000+00:00",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "33-218",
+   "url": "https://app.notion.com/p/16-S896-Office-Hours-George-Lordos-3dcea74eb779816f9eccf2bc4901e288"
+  },
+  {
+   "name": "16.S896 Office Hours \u2014 George Lordos",
+   "code": "16.S896",
+   "date": "2026-11-20T19:00:00.000+00:00",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "33-218",
+   "url": "https://app.notion.com/p/16-S896-Office-Hours-George-Lordos-3dcea74eb7798170b855ed9f0573551b"
+  },
+  {
+   "name": "14.003 Office Hours \u2014 M\u00e9lyne Nzabonimpa",
+   "code": "14.003",
+   "date": "2026-10-01T18:00:00.000+00:00",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "E52-516",
+   "url": "https://app.notion.com/p/14-003-Office-Hours-M-lyne-Nzabonimpa-3dcea74eb77981768ec4fdf6377ea9c9"
+  },
+  {
+   "name": "14.003 Office Hours \u2014 M\u00e9lyne Nzabonimpa",
+   "code": "14.003",
+   "date": "2026-12-10T19:00:00.000+00:00",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "E52-516",
+   "url": "https://app.notion.com/p/14-003-Office-Hours-M-lyne-Nzabonimpa-3dcea74eb779817b9790fbb5bfa91b8c"
+  },
+  {
+   "name": "14.003 Office Hours \u2014 M\u00e9lyne Nzabonimpa",
+   "code": "14.003",
+   "date": "2026-11-12T19:00:00.000+00:00",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "E52-516",
+   "url": "https://app.notion.com/p/14-003-Office-Hours-M-lyne-Nzabonimpa-3dcea74eb779817f91d8d5c5d2be55b7"
+  },
+  {
+   "name": "14.003 Office Hours \u2014 M\u00e9lyne Nzabonimpa",
+   "code": "14.003",
+   "date": "2026-10-22T18:00:00.000+00:00",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "E52-516",
+   "url": "https://app.notion.com/p/14-003-Office-Hours-M-lyne-Nzabonimpa-3dcea74eb7798187aaafdffc1f2498e0"
+  },
+  {
+   "name": "14.003 Office Hours \u2014 M\u00e9lyne Nzabonimpa",
+   "code": "14.003",
+   "date": "2026-11-05T19:00:00.000+00:00",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "E52-516",
+   "url": "https://app.notion.com/p/14-003-Office-Hours-M-lyne-Nzabonimpa-3dcea74eb77981909e4be49d5d9302b7"
+  },
+  {
+   "name": "IDS.412 Office Hours \u2014 Noelle Eckley Selin",
+   "code": "IDS.412",
+   "date": "2026-11-11T19:30:00.000+00:00",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "TPP Lounge (E18 3rd floor)",
+   "url": "https://app.notion.com/p/IDS-412-Office-Hours-Noelle-Eckley-Selin-3dcea74eb779819a9078d7825ea449c7"
+  },
+  {
+   "name": "14.003 Office Hours \u2014 M\u00e9lyne Nzabonimpa",
+   "code": "14.003",
+   "date": "2026-12-03T19:00:00.000+00:00",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "E52-516",
+   "url": "https://app.notion.com/p/14-003-Office-Hours-M-lyne-Nzabonimpa-3dcea74eb779819cb991fdbefee5aeb6"
+  },
+  {
+   "name": "16.S896 Office Hours \u2014 George Lordos",
+   "code": "16.S896",
+   "date": "2026-10-16T18:00:00.000+00:00",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "33-218",
+   "url": "https://app.notion.com/p/16-S896-Office-Hours-George-Lordos-3dcea74eb77981a4a4d3ff943d51e06a"
+  },
+  {
+   "name": "16.S896 Office Hours \u2014 George Lordos",
+   "code": "16.S896",
+   "date": "2026-10-02T18:00:00.000+00:00",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "33-218",
+   "url": "https://app.notion.com/p/16-S896-Office-Hours-George-Lordos-3dcea74eb77981b4a6dcef41c768e708"
+  },
+  {
+   "name": "16.S896 Office Hours \u2014 George Lordos",
+   "code": "16.S896",
+   "date": "2026-10-23T18:00:00.000+00:00",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "33-218",
+   "url": "https://app.notion.com/p/16-S896-Office-Hours-George-Lordos-3dcea74eb77981c18d38d06b8b0dd320"
+  },
+  {
+   "name": "16.S896 Office Hours \u2014 George Lordos",
+   "code": "16.S896",
+   "date": "2026-10-09T18:00:00.000+00:00",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "33-218",
+   "url": "https://app.notion.com/p/16-S896-Office-Hours-George-Lordos-3dcea74eb77981c3bdcbeb1cb846273b"
+  },
+  {
+   "name": "14.003 Office Hours \u2014 M\u00e9lyne Nzabonimpa",
+   "code": "14.003",
+   "date": "2026-10-08T18:00:00.000+00:00",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "E52-516",
+   "url": "https://app.notion.com/p/14-003-Office-Hours-M-lyne-Nzabonimpa-3dcea74eb77981c4b421f7f2f6f73b62"
+  },
+  {
+   "name": "16.S896 Office Hours \u2014 George Lordos",
+   "code": "16.S896",
+   "date": "2026-10-30T18:00:00.000+00:00",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "33-218",
+   "url": "https://app.notion.com/p/16-S896-Office-Hours-George-Lordos-3dcea74eb77981c6b2b3e8596757a052"
+  },
+  {
+   "name": "IDS.412 Office Hours \u2014 Noelle Eckley Selin",
+   "code": "IDS.412",
+   "date": "2026-10-14T18:30:00.000+00:00",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "TPP Lounge (E18 3rd floor)",
+   "url": "https://app.notion.com/p/IDS-412-Office-Hours-Noelle-Eckley-Selin-3dcea74eb77981d699cecde2e195ef0b"
+  },
+  {
+   "name": "16.S896 Office Hours \u2014 George Lordos",
+   "code": "16.S896",
+   "date": "2026-09-25T18:00:00.000+00:00",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "33-218",
+   "url": "https://app.notion.com/p/16-S896-Office-Hours-George-Lordos-3dcea74eb77981db914cde80c6f6e780"
+  },
+  {
+   "name": "16.S896 Office Hours \u2014 George Lordos",
+   "code": "16.S896",
+   "date": "2026-12-04T19:00:00.000+00:00",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "33-218",
+   "url": "https://app.notion.com/p/16-S896-Office-Hours-George-Lordos-3dcea74eb77981dfaf80ef56189677d4"
+  },
+  {
+   "name": "IDS.412 Office Hours \u2014 Noelle Eckley Selin",
+   "code": "IDS.412",
+   "date": "2026-10-07T18:30:00.000+00:00",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "TPP Lounge (E18 3rd floor)",
+   "url": "https://app.notion.com/p/IDS-412-Office-Hours-Noelle-Eckley-Selin-3dcea74eb77981ecb2f5c4889b24db33"
+  },
+  {
+   "name": "16.S896 Office Hours \u2014 George Lordos",
+   "code": "16.S896",
+   "date": "2026-12-11T19:00:00.000+00:00",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "33-218",
+   "url": "https://app.notion.com/p/16-S896-Office-Hours-George-Lordos-3dcea74eb77981f1ae10f44613276811"
+  },
+  {
+   "name": "IDS.412 Office Hours \u2014 Noelle Eckley Selin",
+   "code": "IDS.412",
+   "date": "2026-09-30T18:30:00.000+00:00",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "TPP Lounge (E18 3rd floor)",
+   "url": "https://app.notion.com/p/IDS-412-Office-Hours-Noelle-Eckley-Selin-3dcea74eb77981ffa40ed0d690e4e091"
+  },
+  {
+   "name": "14.003 Office Hours \u2014 Ragini Srinivasan",
+   "code": "14.003",
+   "date": "2026-11-11T21:30:00.000+00:00",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "E52-516",
+   "url": "https://app.notion.com/p/14-003-Office-Hours-Ragini-Srinivasan-3dcea74eb77981048e30c20150942931"
+  },
+  {
+   "name": "14.003 Office Hours \u2014 Cristine von Dessauer",
+   "code": "14.003",
+   "date": "2026-09-22T19:30:00.000+00:00",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "E52-416",
+   "url": "https://app.notion.com/p/14-003-Office-Hours-Cristine-von-Dessauer-3dcea74eb7798106a5cee6270cc48728"
+  },
+  {
+   "name": "14.003 Office Hours \u2014 Cristine von Dessauer",
+   "code": "14.003",
+   "date": "2026-12-08T20:30:00.000+00:00",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "E52-416",
+   "url": "https://app.notion.com/p/14-003-Office-Hours-Cristine-von-Dessauer-3dcea74eb779811086f7f22f1d586ab6"
+  },
+  {
+   "name": "14.003 Office Hours \u2014 Alicia Modestino",
+   "code": "14.003",
+   "date": "2026-10-21T18:00:00.000+00:00",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "E52-432",
+   "url": "https://app.notion.com/p/14-003-Office-Hours-Alicia-Modestino-3dcea74eb7798115bbc3f3c468e9ec81"
+  },
+  {
+   "name": "14.003 Office Hours \u2014 M\u00e9lyne Nzabonimpa",
+   "code": "14.003",
+   "date": "2026-09-17T18:00:00.000+00:00",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "E52-516",
+   "url": "https://app.notion.com/p/14-003-Office-Hours-M-lyne-Nzabonimpa-3dcea74eb779811fa191ce96990cd725"
+  },
+  {
+   "name": "14.003 Office Hours \u2014 Alicia Modestino",
+   "code": "14.003",
+   "date": "2026-12-02T19:00:00.000+00:00",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "E52-432",
+   "url": "https://app.notion.com/p/14-003-Office-Hours-Alicia-Modestino-3dcea74eb77981289849fd9f0ff3e047"
+  },
+  {
+   "name": "14.003 Office Hours \u2014 Anoushka Tamhane",
+   "code": "14.003",
+   "date": "2026-10-19T20:00:00.000+00:00",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "E52-516",
+   "url": "https://app.notion.com/p/14-003-Office-Hours-Anoushka-Tamhane-3dcea74eb779812daef1cf2c44ee6d1d"
+  },
+  {
+   "name": "14.003 Office Hours \u2014 Cristine von Dessauer",
+   "code": "14.003",
+   "date": "2026-10-06T19:30:00.000+00:00",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "E52-416",
+   "url": "https://app.notion.com/p/14-003-Office-Hours-Cristine-von-Dessauer-3dcea74eb779812db988f3d128c987d7"
+  },
+  {
+   "name": "14.003 Office Hours \u2014 Cristine von Dessauer",
+   "code": "14.003",
+   "date": "2026-10-27T19:30:00.000+00:00",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "E52-416",
+   "url": "https://app.notion.com/p/14-003-Office-Hours-Cristine-von-Dessauer-3dcea74eb779813a8a7bdfdedc042ba0"
+  },
+  {
+   "name": "14.003 Office Hours \u2014 Cristine von Dessauer",
+   "code": "14.003",
+   "date": "2026-11-10T20:30:00.000+00:00",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "E52-416",
+   "url": "https://app.notion.com/p/14-003-Office-Hours-Cristine-von-Dessauer-3dcea74eb779813db43eef2e7a286e6c"
+  },
+  {
+   "name": "14.003 Office Hours \u2014 Ragini Srinivasan",
+   "code": "14.003",
+   "date": "2026-09-23T20:30:00.000+00:00",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "E52-516",
+   "url": "https://app.notion.com/p/14-003-Office-Hours-Ragini-Srinivasan-3dcea74eb779813fb40bfac0c9fe9930"
+  },
+  {
+   "name": "14.003 Office Hours \u2014 Ragini Srinivasan",
+   "code": "14.003",
+   "date": "2026-11-04T21:30:00.000+00:00",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "E52-516",
+   "url": "https://app.notion.com/p/14-003-Office-Hours-Ragini-Srinivasan-3dcea74eb77981408adbf008d78bd13d"
+  },
+  {
+   "name": "14.003 Office Hours \u2014 Alicia Modestino",
+   "code": "14.003",
+   "date": "2026-10-28T18:00:00.000+00:00",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "E52-432",
+   "url": "https://app.notion.com/p/14-003-Office-Hours-Alicia-Modestino-3dcea74eb7798143a30ec1f1956d491b"
+  },
+  {
+   "name": "14.003 Office Hours \u2014 Cristine von Dessauer",
+   "code": "14.003",
+   "date": "2026-11-03T20:30:00.000+00:00",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "E52-416",
+   "url": "https://app.notion.com/p/14-003-Office-Hours-Cristine-von-Dessauer-3dcea74eb7798143b9f5e50b58a079a0"
+  },
+  {
+   "name": "14.003 Office Hours \u2014 Anoushka Tamhane",
+   "code": "14.003",
+   "date": "2026-11-16T21:00:00.000+00:00",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "E52-516",
+   "url": "https://app.notion.com/p/14-003-Office-Hours-Anoushka-Tamhane-3dcea74eb7798144bb43dbc86aeef7bc"
+  },
+  {
+   "name": "14.003 Office Hours \u2014 Alicia Modestino",
+   "code": "14.003",
+   "date": "2026-09-30T18:00:00.000+00:00",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "E52-432",
+   "url": "https://app.notion.com/p/14-003-Office-Hours-Alicia-Modestino-3dcea74eb7798147893fc40c0f220302"
+  },
+  {
+   "name": "14.003 Office Hours \u2014 Anoushka Tamhane",
+   "code": "14.003",
+   "date": "2026-09-28T20:00:00.000+00:00",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "E52-516",
+   "url": "https://app.notion.com/p/14-003-Office-Hours-Anoushka-Tamhane-3dcea74eb779814ca00fc1b71733cf32"
+  },
+  {
+   "name": "14.003 Office Hours \u2014 Ragini Srinivasan",
+   "code": "14.003",
+   "date": "2026-09-30T20:30:00.000+00:00",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "E52-516",
+   "url": "https://app.notion.com/p/14-003-Office-Hours-Ragini-Srinivasan-3dcea74eb779815481afc6171d6fd2d4"
+  },
+  {
+   "name": "14.003 Office Hours \u2014 Anoushka Tamhane",
+   "code": "14.003",
+   "date": "2026-11-23T21:00:00.000+00:00",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "E52-516",
+   "url": "https://app.notion.com/p/14-003-Office-Hours-Anoushka-Tamhane-3dcea74eb7798159a961c1e9ff240df5"
+  },
+  {
+   "name": "14.003 Office Hours \u2014 Cristine von Dessauer",
+   "code": "14.003",
+   "date": "2026-09-15T19:30:00.000+00:00",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "E52-416",
+   "url": "https://app.notion.com/p/14-003-Office-Hours-Cristine-von-Dessauer-3dcea74eb779815e904becd3d7b696f6"
+  },
+  {
+   "name": "14.003 Office Hours \u2014 Ragini Srinivasan",
+   "code": "14.003",
+   "date": "2026-10-07T20:30:00.000+00:00",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "E52-516",
+   "url": "https://app.notion.com/p/14-003-Office-Hours-Ragini-Srinivasan-3dcea74eb779815facf4dc47ee652bac"
+  },
+  {
+   "name": "14.003 Office Hours \u2014 Alicia Modestino",
+   "code": "14.003",
+   "date": "2026-10-14T18:00:00.000+00:00",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "E52-432",
+   "url": "https://app.notion.com/p/14-003-Office-Hours-Alicia-Modestino-3dcea74eb7798165846bea69e118d706"
+  },
+  {
+   "name": "14.003 Office Hours \u2014 Anoushka Tamhane",
+   "code": "14.003",
+   "date": "2026-11-09T21:00:00.000+00:00",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "E52-516",
+   "url": "https://app.notion.com/p/14-003-Office-Hours-Anoushka-Tamhane-3dcea74eb77981659111ea9f3f30ec44"
+  },
+  {
+   "name": "14.003 Office Hours \u2014 Alicia Modestino",
+   "code": "14.003",
+   "date": "2026-11-18T19:00:00.000+00:00",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "E52-432",
+   "url": "https://app.notion.com/p/14-003-Office-Hours-Alicia-Modestino-3dcea74eb77981659491deb2d6b06495"
+  },
+  {
+   "name": "14.003 Office Hours \u2014 Anoushka Tamhane",
+   "code": "14.003",
+   "date": "2026-12-07T21:00:00.000+00:00",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "E52-516",
+   "url": "https://app.notion.com/p/14-003-Office-Hours-Anoushka-Tamhane-3dcea74eb779816a8605fce4826a1f48"
+  },
+  {
+   "name": "14.003 Office Hours \u2014 Alicia Modestino",
+   "code": "14.003",
+   "date": "2026-12-09T19:00:00.000+00:00",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "E52-432",
+   "url": "https://app.notion.com/p/14-003-Office-Hours-Alicia-Modestino-3dcea74eb779816ba15ae3b94a72298e"
+  },
+  {
+   "name": "14.003 Office Hours \u2014 Cristine von Dessauer",
+   "code": "14.003",
+   "date": "2026-11-17T20:30:00.000+00:00",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "E52-416",
+   "url": "https://app.notion.com/p/14-003-Office-Hours-Cristine-von-Dessauer-3dcea74eb779816c824ff6f311db4473"
+  },
+  {
+   "name": "14.003 Office Hours \u2014 Ragini Srinivasan",
+   "code": "14.003",
+   "date": "2026-09-16T20:30:00.000+00:00",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "E52-516",
+   "url": "https://app.notion.com/p/14-003-Office-Hours-Ragini-Srinivasan-3dcea74eb7798175a7a0d28a94f011a8"
+  },
+  {
+   "name": "14.003 Office Hours \u2014 Alicia Modestino",
+   "code": "14.003",
+   "date": "2026-09-23T18:00:00.000+00:00",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "E52-432",
+   "url": "https://app.notion.com/p/14-003-Office-Hours-Alicia-Modestino-3dcea74eb779817db82cc0c84d45da1a"
+  },
+  {
+   "name": "14.003 Office Hours \u2014 Cristine von Dessauer",
+   "code": "14.003",
+   "date": "2026-10-20T19:30:00.000+00:00",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "E52-416",
+   "url": "https://app.notion.com/p/14-003-Office-Hours-Cristine-von-Dessauer-3dcea74eb779818899b7f78953523fb1"
+  },
+  {
+   "name": "14.003 Office Hours \u2014 Ragini Srinivasan",
+   "code": "14.003",
+   "date": "2026-11-18T21:30:00.000+00:00",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "E52-516",
+   "url": "https://app.notion.com/p/14-003-Office-Hours-Ragini-Srinivasan-3dcea74eb7798193a0f9e36a03988222"
+  },
+  {
+   "name": "14.003 Office Hours \u2014 Anoushka Tamhane",
+   "code": "14.003",
+   "date": "2026-11-30T21:00:00.000+00:00",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "E52-516",
+   "url": "https://app.notion.com/p/14-003-Office-Hours-Anoushka-Tamhane-3dcea74eb7798195b1fcf64730e1dc38"
+  },
+  {
+   "name": "14.003 Office Hours \u2014 Alicia Modestino",
+   "code": "14.003",
+   "date": "2026-09-16T18:00:00.000+00:00",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "E52-432",
+   "url": "https://app.notion.com/p/14-003-Office-Hours-Alicia-Modestino-3dcea74eb7798198874bda4b375d70bc"
+  },
+  {
+   "name": "14.003 Office Hours \u2014 Anoushka Tamhane",
+   "code": "14.003",
+   "date": "2026-10-05T20:00:00.000+00:00",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "E52-516",
+   "url": "https://app.notion.com/p/14-003-Office-Hours-Anoushka-Tamhane-3dcea74eb779819892bbf4129f08443e"
+  },
+  {
+   "name": "14.003 Office Hours \u2014 Alicia Modestino",
+   "code": "14.003",
+   "date": "2026-10-07T18:00:00.000+00:00",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "E52-432",
+   "url": "https://app.notion.com/p/14-003-Office-Hours-Alicia-Modestino-3dcea74eb779819db21bed21ff27037e"
+  },
+  {
+   "name": "14.003 Office Hours \u2014 Ragini Srinivasan",
+   "code": "14.003",
+   "date": "2026-10-14T20:30:00.000+00:00",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "E52-516",
+   "url": "https://app.notion.com/p/14-003-Office-Hours-Ragini-Srinivasan-3dcea74eb779819ebe4dff80c4564cee"
+  },
+  {
+   "name": "14.003 Office Hours \u2014 Anoushka Tamhane",
+   "code": "14.003",
+   "date": "2026-10-26T20:00:00.000+00:00",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "E52-516",
+   "url": "https://app.notion.com/p/14-003-Office-Hours-Anoushka-Tamhane-3dcea74eb779819f809fd2feb905c347"
+  },
+  {
+   "name": "14.003 Office Hours \u2014 Cristine von Dessauer",
+   "code": "14.003",
+   "date": "2026-10-13T19:30:00.000+00:00",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "E52-416",
+   "url": "https://app.notion.com/p/14-003-Office-Hours-Cristine-von-Dessauer-3dcea74eb779819f85f2f16a8d3f0a82"
+  },
+  {
+   "name": "14.003 Office Hours \u2014 Alicia Modestino",
+   "code": "14.003",
+   "date": "2026-11-04T19:00:00.000+00:00",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "E52-432",
+   "url": "https://app.notion.com/p/14-003-Office-Hours-Alicia-Modestino-3dcea74eb77981a885d9c448840e9a62"
+  },
+  {
+   "name": "14.003 Office Hours \u2014 Anoushka Tamhane",
+   "code": "14.003",
+   "date": "2026-10-12T20:00:00.000+00:00",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "E52-516",
+   "url": "https://app.notion.com/p/14-003-Office-Hours-Anoushka-Tamhane-3dcea74eb77981b18792de9b22f4e692"
+  },
+  {
+   "name": "14.003 Office Hours \u2014 Ragini Srinivasan",
+   "code": "14.003",
+   "date": "2026-10-21T20:30:00.000+00:00",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "E52-516",
+   "url": "https://app.notion.com/p/14-003-Office-Hours-Ragini-Srinivasan-3dcea74eb77981b6bcfad252d648d4ae"
+  },
+  {
+   "name": "14.003 Office Hours \u2014 Cristine von Dessauer",
+   "code": "14.003",
+   "date": "2026-12-01T20:30:00.000+00:00",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "E52-416",
+   "url": "https://app.notion.com/p/14-003-Office-Hours-Cristine-von-Dessauer-3dcea74eb77981bbb18edc85e79df58c"
+  },
+  {
+   "name": "14.003 Office Hours \u2014 Cristine von Dessauer",
+   "code": "14.003",
+   "date": "2026-11-24T20:30:00.000+00:00",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "E52-416",
+   "url": "https://app.notion.com/p/14-003-Office-Hours-Cristine-von-Dessauer-3dcea74eb77981cb8daef9dbdd29cac8"
+  },
+  {
+   "name": "14.003 Office Hours \u2014 Ragini Srinivasan",
+   "code": "14.003",
+   "date": "2026-10-28T20:30:00.000+00:00",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "E52-516",
+   "url": "https://app.notion.com/p/14-003-Office-Hours-Ragini-Srinivasan-3dcea74eb77981cf8637f6db27ff60a5"
+  },
+  {
+   "name": "14.003 Office Hours \u2014 Ragini Srinivasan",
+   "code": "14.003",
+   "date": "2026-12-09T21:30:00.000+00:00",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "E52-516",
+   "url": "https://app.notion.com/p/14-003-Office-Hours-Ragini-Srinivasan-3dcea74eb77981db9b2ef9e7d9348367"
+  },
+  {
+   "name": "14.003 Office Hours \u2014 Alicia Modestino",
+   "code": "14.003",
+   "date": "2026-11-11T19:00:00.000+00:00",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "E52-432",
+   "url": "https://app.notion.com/p/14-003-Office-Hours-Alicia-Modestino-3dcea74eb77981e2ace7fe92f0528027"
+  },
+  {
+   "name": "14.003 Office Hours \u2014 Anoushka Tamhane",
+   "code": "14.003",
+   "date": "2026-11-02T21:00:00.000+00:00",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "E52-516",
+   "url": "https://app.notion.com/p/14-003-Office-Hours-Anoushka-Tamhane-3dcea74eb77981e59616dd54d5c0e60b"
+  },
+  {
+   "name": "14.003 Office Hours \u2014 Cristine von Dessauer",
+   "code": "14.003",
+   "date": "2026-09-29T19:30:00.000+00:00",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "E52-416",
+   "url": "https://app.notion.com/p/14-003-Office-Hours-Cristine-von-Dessauer-3dcea74eb77981e68f20fe7dc3a48e52"
+  },
+  {
+   "name": "14.003 Office Hours \u2014 Anoushka Tamhane",
+   "code": "14.003",
+   "date": "2026-09-21T20:00:00.000+00:00",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "E52-516",
+   "url": "https://app.notion.com/p/14-003-Office-Hours-Anoushka-Tamhane-3dcea74eb77981fa86d6f3165398f682"
+  },
+  {
+   "name": "14.003 Office Hours \u2014 Ragini Srinivasan",
+   "code": "14.003",
+   "date": "2026-12-02T21:30:00.000+00:00",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "E52-516",
+   "url": "https://app.notion.com/p/14-003-Office-Hours-Ragini-Srinivasan-3dcea74eb77981feb8e9d8f01db4143e"
+  },
+  {
+   "name": "[STUDY] 16.990 Creative Teams: Lecture 03 prep",
+   "code": "16.990",
+   "date": "2026-09-15T21:15:00.000-04:00",
+   "due": "",
+   "status": "Not started",
+   "type": "",
+   "room": "",
+   "url": "https://app.notion.com/p/STUDY-16-990-Creative-Teams-Lecture-03-prep-3dcea74eb779816aa8e3d22d857abf7e"
+  },
+  {
+   "name": "[STUDY] IDS.412 Tech & Policy: Lecture 03 prep",
+   "code": "IDS.412",
+   "date": "2026-09-15T19:45:00.000-04:00",
+   "due": "",
+   "status": "Not started",
+   "type": "",
+   "room": "",
+   "url": "https://app.notion.com/p/STUDY-IDS-412-Tech-Policy-Lecture-03-prep-3dcea74eb77981ab9b1acfbe534b0969"
+  },
+  {
+   "name": "[STUDY] 14.003 Microecon & Policy: Lecture 03 prep",
+   "code": "14.003",
+   "date": "2026-09-15T18:45:00.000-04:00",
+   "due": "",
+   "status": "Not started",
+   "type": "",
+   "room": "",
+   "url": "https://app.notion.com/p/STUDY-14-003-Microecon-Policy-Lecture-03-prep-3dcea74eb7798133bddae36fbff3105e"
+  },
+  {
    "name": "[HW] 16.842 Systems Eng: Team assignment form",
    "code": "16.842",
    "date": "2026-09-18T17:15:00.000-04:00",
@@ -27,7 +1027,7 @@
    "due": "",
    "status": "Not started",
    "type": "",
-   "room": "Room not published in the syllabus",
+   "room": "66-168",
    "url": "https://app.notion.com/p/IDS-412-Tech-Policy-Recitation-3dcea74eb7798125a9d8f07f9aba3468"
   },
   {
@@ -37,7 +1037,7 @@
    "due": "",
    "status": "Not started",
    "type": "",
-   "room": "Room not published in the syllabus",
+   "room": "66-168",
    "url": "https://app.notion.com/p/IDS-412-Tech-Policy-Recitation-3dcea74eb779812db095f0653bb4039d"
   },
   {
@@ -47,7 +1047,7 @@
    "due": "",
    "status": "Not started",
    "type": "",
-   "room": "Room not published in the syllabus",
+   "room": "66-168",
    "url": "https://app.notion.com/p/IDS-412-Tech-Policy-Recitation-3dcea74eb7798151bd64d282a8a55d3b"
   },
   {
@@ -57,7 +1057,7 @@
    "due": "",
    "status": "Not started",
    "type": "",
-   "room": "Room not published in the syllabus",
+   "room": "66-168",
    "url": "https://app.notion.com/p/IDS-412-Tech-Policy-Recitation-3dcea74eb77981c5b12ff0c65e36e25f"
   },
   {
@@ -67,7 +1067,7 @@
    "due": "",
    "status": "Not started",
    "type": "",
-   "room": "Room not published in the syllabus",
+   "room": "66-168",
    "url": "https://app.notion.com/p/IDS-412-Tech-Policy-Recitation-3dcea74eb779811bbc86fc5e7836e4ac"
   },
   {
@@ -77,7 +1077,7 @@
    "due": "",
    "status": "Not started",
    "type": "",
-   "room": "Room not published in the syllabus",
+   "room": "66-168",
    "url": "https://app.notion.com/p/IDS-412-Tech-Policy-Recitation-3dcea74eb77981939415f5d142021a53"
   },
   {
@@ -87,7 +1087,7 @@
    "due": "",
    "status": "Not started",
    "type": "",
-   "room": "Room not published in the syllabus",
+   "room": "66-168",
    "url": "https://app.notion.com/p/IDS-412-Tech-Policy-Recitation-3dcea74eb77981cb8774daced35f6e76"
   },
   {
@@ -97,7 +1097,7 @@
    "due": "",
    "status": "Not started",
    "type": "",
-   "room": "Room not published in the syllabus",
+   "room": "66-168",
    "url": "https://app.notion.com/p/IDS-412-Tech-Policy-Recitation-3dcea74eb77981179a5cd634911c8dde"
   },
   {
@@ -107,7 +1107,7 @@
    "due": "",
    "status": "Not started",
    "type": "",
-   "room": "Room not published in the syllabus",
+   "room": "66-168",
    "url": "https://app.notion.com/p/IDS-412-Tech-Policy-Recitation-3dcea74eb77981998541c286f35d03ff"
   },
   {
@@ -117,7 +1117,7 @@
    "due": "",
    "status": "Not started",
    "type": "",
-   "room": "Room not published in the syllabus",
+   "room": "66-168",
    "url": "https://app.notion.com/p/IDS-412-Tech-Policy-Recitation-3dcea74eb7798103b3cde39b87258618"
   },
   {
@@ -127,7 +1127,7 @@
    "due": "",
    "status": "Not started",
    "type": "",
-   "room": "Room not published in the syllabus",
+   "room": "66-168",
    "url": "https://app.notion.com/p/IDS-412-Tech-Policy-Recitation-3dcea74eb7798101b407d6cafefd3d8b"
   },
   {
@@ -303,7 +1303,7 @@
   {
    "name": "[PREP] 16.842 Systems Eng: A1 T-14: Scope it: Team Formation, Stakeholders & ConOps",
    "code": "16.842",
-   "date": "2026-09-15T19:00:00.000-04:00",
+   "date": "2026-09-15",
    "due": "",
    "status": "Not started",
    "type": "",
@@ -613,7 +1613,7 @@
   {
    "name": "[DUE] 14.003 Microecon & Policy: Problem Set 02: Consumer theory",
    "code": "14.003",
-   "date": "2026-10-07T19:00:00.000-04:00",
+   "date": "2026-10-08T19:00:00.000-04:00",
    "due": "",
    "status": "Not started",
    "type": "",
@@ -653,7 +1653,7 @@
   {
    "name": "[DUE] 16.990 Creative Teams: Task: Purchase Harvard course packet (Erik Peterson case)",
    "code": "16.990",
-   "date": "2026-09-15T19:00:00.000-04:00",
+   "date": "2026-09-15",
    "due": "",
    "status": "Not started",
    "type": "",
@@ -1053,7 +2053,7 @@
   {
    "name": "TSK 16.842 Fundamentals of Systems Engineering: Syllabus At A Glance",
    "code": "16.842",
-   "date": "2026-09-15",
+   "date": "2026-09-15T10:00:00.000-04:00",
    "due": "",
    "status": "",
    "type": "",
@@ -1503,7 +2503,7 @@
   {
    "name": "14.003 Microecon & Policy: Problem Set 02: Consumer theory",
    "code": "14.003",
-   "date": "2026-10-07T23:59:00.000-04:00",
+   "date": "2026-10-08T23:59:00.000-04:00",
    "due": "",
    "status": "",
    "type": "",

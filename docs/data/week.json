@@ -1,5 +1,5 @@
 {
- "generated": "2026-09-15T18:52:47-04:00",
+ "generated": "2026-09-15T21:00:24-04:00",
  "today": "2026-09-15",
  "monday": "2026-09-14",
  "days": [
@@ -242,6 +242,18 @@
      "url": "https://app.notion.com/p/Laundry-Plan-for-the-weeks-and-Costco-Order-and-meal-prep-figure-out-rhythm-9636e92aacd8473f8301c858a90e6ccd"
     },
     {
+     "name": "TSK 16.842 Fundamentals of Systems Engineering: Syllabus At A Glance",
+     "date": "2026-09-15T10:00:00.000-04:00",
+     "end": "2026-09-15T10:30:00.000-04:00",
+     "done": false,
+     "kind": "16.842",
+     "src": "class",
+     "location": "",
+     "type": "",
+     "meeting_type": "Class",
+     "url": "https://app.notion.com/p/TSK-16-842-Fundamentals-of-Systems-Engineering-Syllabus-At-A-Glance-3d6ea74eb779811d87a1df5c679c5b92"
+    },
+    {
      "name": "16.842 Systems Eng: Lecture 01: SE Overview & Stakeholders",
      "date": "2026-09-15T11:00:00.000-04:00",
      "end": "2026-09-15T13:00:00.000-04:00",
@@ -278,52 +290,64 @@
      "url": "https://app.notion.com/p/TSK-ESL-Monthly-Meeting-Introduction-by-Lab-Advisors-3d0ea74eb77981df82b7f4f3a06b02f6"
     },
     {
-     "name": "[PREP] 16.842 Systems Eng: A1 T-14: Scope it: Team Formation, Stakeholders & ConOps",
-     "date": "2026-09-15T19:00:00.000-04:00",
-     "end": "2026-09-15T20:00:00.000-04:00",
+     "name": "[STUDY] 14.003 Microecon & Policy: Lecture 03 prep",
+     "date": "2026-09-15T18:45:00.000-04:00",
+     "end": "2026-09-15T19:45:00.000-04:00",
      "done": false,
-     "kind": "16.842",
+     "kind": "14.003",
      "src": "class",
      "location": "",
      "type": "",
      "meeting_type": "Class",
-     "url": "https://app.notion.com/p/PREP-16-842-Systems-Eng-A1-T-14-Scope-it-Team-Formation-Stakeholders-ConOps-3dcea74eb77981679a48f9bbd6bf3d55"
+     "url": "https://app.notion.com/p/STUDY-14-003-Microecon-Policy-Lecture-03-prep-3dcea74eb7798133bddae36fbff3105e"
     },
     {
-     "name": "[DUE] 16.990 Creative Teams: Task: Purchase Harvard course packet (Erik Peterson case)",
-     "date": "2026-09-15T19:00:00.000-04:00",
-     "end": "2026-09-15T19:30:00.000-04:00",
+     "name": "14.003 Office Hours \u2014 Cristine von Dessauer",
+     "date": "2026-09-15T19:30:00.000+00:00",
+     "end": "2026-09-15T21:00:00.000+00:00",
+     "done": false,
+     "kind": "14.003",
+     "src": "class",
+     "location": "E52-416",
+     "type": "",
+     "meeting_type": "Class",
+     "url": "https://app.notion.com/p/14-003-Office-Hours-Cristine-von-Dessauer-3dcea74eb779815e904becd3d7b696f6"
+    },
+    {
+     "name": "Create Team RWB account + sign up for Fenway Spartan race",
+     "date": "2026-09-15T19:45:00.000-04:00",
+     "end": "2026-09-15T20:30:00.000-04:00",
+     "done": false,
+     "kind": "Personal",
+     "src": "task",
+     "location": "",
+     "type": "",
+     "meeting_type": "Personal",
+     "url": "https://app.notion.com/p/Create-Team-RWB-account-sign-up-for-Fenway-Spartan-race-3dcea74eb779811f9783e587d0d555ae"
+    },
+    {
+     "name": "[STUDY] IDS.412 Tech & Policy: Lecture 03 prep",
+     "date": "2026-09-15T19:45:00.000-04:00",
+     "end": "2026-09-15T21:15:00.000-04:00",
+     "done": false,
+     "kind": "IDS.412",
+     "src": "class",
+     "location": "",
+     "type": "",
+     "meeting_type": "Class",
+     "url": "https://app.notion.com/p/STUDY-IDS-412-Tech-Policy-Lecture-03-prep-3dcea74eb77981ab9b1acfbe534b0969"
+    },
+    {
+     "name": "[STUDY] 16.990 Creative Teams: Lecture 03 prep",
+     "date": "2026-09-15T21:15:00.000-04:00",
+     "end": "2026-09-15T22:15:00.000-04:00",
      "done": false,
      "kind": "16.990",
      "src": "class",
      "location": "",
      "type": "",
      "meeting_type": "Class",
-     "url": "https://app.notion.com/p/DUE-16-990-Creative-Teams-Task-Purchase-Harvard-course-packet-Erik-Peterson-case-3daea74eb7798132a522e485bf4f2365"
-    },
-    {
-     "name": "Create Team RWB account + sign up for Fenway Spartan race",
-     "date": "2026-09-15T20:00:00.000-04:00",
-     "end": "",
-     "done": false,
-     "kind": "Meeting",
-     "src": "task",
-     "location": "",
-     "type": "",
-     "meeting_type": "",
-     "url": "https://app.notion.com/p/Create-Team-RWB-account-sign-up-for-Fenway-Spartan-race-3dcea74eb779811f9783e587d0d555ae"
-    },
-    {
-     "name": "TSK 16.990 Buy Harvard course packet (Leading Creative Teams)",
-     "date": "2026-09-15T20:00:00.000-04:00",
-     "end": "2026-09-15T20:30:00.000-04:00",
-     "done": false,
-     "kind": "Class",
-     "src": "task",
-     "location": "",
-     "type": "Task",
-     "meeting_type": "Class",
-     "url": "https://app.notion.com/p/TSK-16-990-Buy-Harvard-course-packet-Leading-Creative-Teams-3dbea74eb77981cb8da7ec180bd2b7e6"
+     "url": "https://app.notion.com/p/STUDY-16-990-Creative-Teams-Lecture-03-prep-3dcea74eb779816aa8e3d22d857abf7e"
     },
     {
      "name": "TSK Cut and file the day's notes into the binder",
@@ -350,6 +374,42 @@
      "url": "https://app.notion.com/p/AFT-Prep-Water-Liquid-IV-sleep-by-2300-3d7ea74eb77981d5b2c6dc0505a41809"
     },
     {
+     "name": "TSK 16.990 Buy Harvard course packet (Leading Creative Teams)",
+     "date": "2026-09-15",
+     "end": "",
+     "done": true,
+     "kind": "Class",
+     "src": "task",
+     "location": "",
+     "type": "Task",
+     "meeting_type": "Class",
+     "url": "https://app.notion.com/p/TSK-16-990-Buy-Harvard-course-packet-Leading-Creative-Teams-3dbea74eb77981cb8da7ec180bd2b7e6"
+    },
+    {
+     "name": "[PREP] 16.842 Systems Eng: A1 T-14: Scope it: Team Formation, Stakeholders & ConOps",
+     "date": "2026-09-15",
+     "end": "",
+     "done": false,
+     "kind": "16.842",
+     "src": "class",
+     "location": "",
+     "type": "",
+     "meeting_type": "Class",
+     "url": "https://app.notion.com/p/PREP-16-842-Systems-Eng-A1-T-14-Scope-it-Team-Formation-Stakeholders-ConOps-3dcea74eb77981679a48f9bbd6bf3d55"
+    },
+    {
+     "name": "[DUE] 16.990 Creative Teams: Task: Purchase Harvard course packet (Erik Peterson case)",
+     "date": "2026-09-15",
+     "end": "",
+     "done": false,
+     "kind": "16.990",
+     "src": "class",
+     "location": "",
+     "type": "",
+     "meeting_type": "Class",
+     "url": "https://app.notion.com/p/DUE-16-990-Creative-Teams-Task-Purchase-Harvard-course-packet-Erik-Peterson-case-3daea74eb7798132a522e485bf4f2365"
+    },
+    {
      "name": "MTG 24.133 Experiential Ethics: Fall Showcase, poster presentation",
      "date": "2026-09-15",
      "end": "",
@@ -360,18 +420,6 @@
      "type": "",
      "meeting_type": "Class",
      "url": "https://app.notion.com/p/MTG-24-133-Experiential-Ethics-Fall-Showcase-poster-presentation-3d6ea74eb779810ba842fd4d2aaa342b"
-    },
-    {
-     "name": "TSK 16.842 Fundamentals of Systems Engineering: Syllabus At A Glance",
-     "date": "2026-09-15",
-     "end": "",
-     "done": false,
-     "kind": "16.842",
-     "src": "class",
-     "location": "",
-     "type": "",
-     "meeting_type": "Class",
-     "url": "https://app.notion.com/p/TSK-16-842-Fundamentals-of-Systems-Engineering-Syllabus-At-A-Glance-3d6ea74eb779811d87a1df5c679c5b92"
     }
    ]
   },
@@ -390,6 +438,30 @@
      "type": "Lecture",
      "meeting_type": "Class",
      "url": "https://app.notion.com/p/14-003-Microecon-Policy-Lecture-03-Introducing-consumer-theory-The-foundation-of-microeconomics-3d3ea74eb779813d900dc288693e91d4"
+    },
+    {
+     "name": "Space Policy Working Group: prepare submission",
+     "date": "2026-09-16T12:00:00.000-04:00",
+     "end": "2026-09-16T12:30:00.000-04:00",
+     "done": false,
+     "kind": "TPP",
+     "src": "task",
+     "location": "",
+     "type": "",
+     "meeting_type": "TPP",
+     "url": "https://app.notion.com/p/Space-Policy-Working-Group-prepare-submission-3ddea74eb77981b0a39ec21f0abfde2e"
+    },
+    {
+     "name": "Send an email to mit Registrar regarding class petition",
+     "date": "2026-09-16T12:30:00.000-04:00",
+     "end": "2026-09-16T12:45:00.000-04:00",
+     "done": false,
+     "kind": "Task",
+     "src": "task",
+     "location": "",
+     "type": "Task",
+     "meeting_type": "",
+     "url": "https://app.notion.com/p/Send-an-email-to-mit-Registrar-regarding-class-petition-ccd427fdfc074f92bc13c0bb53c3245d"
     },
     {
      "name": "IDS.412 Tech & Policy: Lecture 03: Knowledge generation",
@@ -422,22 +494,106 @@
      "done": false,
      "kind": "IDS.412",
      "src": "class",
-     "location": "Room not published in the syllabus",
+     "location": "66-168",
      "type": "",
      "meeting_type": "Class",
      "url": "https://app.notion.com/p/IDS-412-Tech-Policy-Recitation-3dcea74eb7798101b407d6cafefd3d8b"
     },
     {
-     "name": "Buy travel tickets: wedding, Columbus Day weekend (Fri 09 to Mon 12 Oct)",
-     "date": "2026-09-16T19:00:00.000-04:00",
+     "name": "Submit Moon Landing abstract to the team",
+     "date": "2026-09-16T17:00:00.000-04:00",
+     "end": "2026-09-16T18:00:00.000-04:00",
+     "done": false,
+     "kind": "Research",
+     "src": "task",
+     "location": "",
+     "type": "",
+     "meeting_type": "Research",
+     "url": "https://app.notion.com/p/Submit-Moon-Landing-abstract-to-the-team-3ddea74eb779814c85a7f698de718546"
+    },
+    {
+     "name": "14.003 Office Hours \u2014 Alicia Modestino",
+     "date": "2026-09-16T18:00:00.000+00:00",
+     "end": "2026-09-16T19:30:00.000+00:00",
+     "done": false,
+     "kind": "14.003",
+     "src": "class",
+     "location": "E52-432",
+     "type": "",
+     "meeting_type": "Class",
+     "url": "https://app.notion.com/p/14-003-Office-Hours-Alicia-Modestino-3dcea74eb7798198874bda4b375d70bc"
+    },
+    {
+     "name": "Build Cursor project for Moon Landing paper",
+     "date": "2026-09-16T18:00:00.000-04:00",
      "end": "2026-09-16T19:30:00.000-04:00",
+     "done": false,
+     "kind": "Research",
+     "src": "task",
+     "location": "",
+     "type": "",
+     "meeting_type": "Research",
+     "url": "https://app.notion.com/p/Build-Cursor-project-for-Moon-Landing-paper-3ddea74eb779817a90b9d5dd9556303a"
+    },
+    {
+     "name": "IDS.412 Office Hours \u2014 Noelle Eckley Selin",
+     "date": "2026-09-16T18:30:00.000+00:00",
+     "end": "2026-09-16T19:30:00.000+00:00",
+     "done": false,
+     "kind": "IDS.412",
+     "src": "class",
+     "location": "TPP Lounge (E18 3rd floor)",
+     "type": "",
+     "meeting_type": "Class",
+     "url": "https://app.notion.com/p/IDS-412-Office-Hours-Noelle-Eckley-Selin-3dcea74eb77981049f77ebecd933c733"
+    },
+    {
+     "name": "Cancel travel tickets if needed: wedding, Columbus Day weekend (Fri 09 to Mon 12 Oct)",
+     "date": "2026-09-16T19:30:00.000-04:00",
+     "end": "2026-09-16T20:00:00.000-04:00",
      "done": false,
      "kind": "Personal",
      "src": "task",
      "location": "",
      "type": "Task",
      "meeting_type": "Personal",
-     "url": "https://app.notion.com/p/Buy-travel-tickets-wedding-Columbus-Day-weekend-Fri-09-to-Mon-12-Oct-3daea74eb77981a88d5af288db3d0d4f"
+     "url": "https://app.notion.com/p/Cancel-travel-tickets-if-needed-wedding-Columbus-Day-weekend-Fri-09-to-Mon-12-Oct-3daea74eb77981a88d5af288db3d0d4f"
+    },
+    {
+     "name": "Add Ian's code + LaTeX paper scaffold",
+     "date": "2026-09-16T20:15:00.000-04:00",
+     "end": "2026-09-16T21:45:00.000-04:00",
+     "done": false,
+     "kind": "Research",
+     "src": "task",
+     "location": "",
+     "type": "",
+     "meeting_type": "Research",
+     "url": "https://app.notion.com/p/Add-Ian-s-code-LaTeX-paper-scaffold-3ddea74eb77981bfa4e9ed78f56fea28"
+    },
+    {
+     "name": "14.003 Office Hours \u2014 Ragini Srinivasan",
+     "date": "2026-09-16T20:30:00.000+00:00",
+     "end": "2026-09-16T22:00:00.000+00:00",
+     "done": false,
+     "kind": "14.003",
+     "src": "class",
+     "location": "E52-516",
+     "type": "",
+     "meeting_type": "Class",
+     "url": "https://app.notion.com/p/14-003-Office-Hours-Ragini-Srinivasan-3dcea74eb7798175a7a0d28a94f011a8"
+    },
+    {
+     "name": "[DUE] Space Policy Working Group information",
+     "date": "2026-09-16T21:45:00.000-04:00",
+     "end": "2026-09-16T22:00:00.000-04:00",
+     "done": false,
+     "kind": "TPP",
+     "src": "task",
+     "location": "",
+     "type": "",
+     "meeting_type": "TPP",
+     "url": "https://app.notion.com/p/DUE-Space-Policy-Working-Group-information-3ddea74eb779819385fadf99b075d367"
     },
     {
      "name": "TSK Cut and file the day's notes into the binder",
@@ -482,18 +638,6 @@
      "url": "https://app.notion.com/p/STUDY-14-003-Microecon-Policy-Exam-01-T-28-Scope-it-list-every-lecture-and-reading-covered-th-3daea74eb779813fbc75e592b810e366"
     },
     {
-     "name": "TSK AeroAstro Comm Lab Resume/CV Drop-In Event",
-     "date": "2026-09-17T15:00:00.000-04:00",
-     "end": "2026-09-17T17:00:00.000-04:00",
-     "done": false,
-     "kind": "AeroAstro",
-     "src": "task",
-     "location": "33-206",
-     "type": "Task",
-     "meeting_type": "AeroAstro",
-     "url": "https://app.notion.com/p/TSK-AeroAstro-Comm-Lab-Resume-CV-Drop-In-Event-3d0ea74eb779815cb10ef997e226316c"
-    },
-    {
      "name": "TSK SERG Meeting - Intro Roundtable (add slide to deck)",
      "date": "2026-09-17T17:00:00.000-04:00",
      "end": "2026-09-17T18:00:00.000-04:00",
@@ -504,6 +648,18 @@
      "type": "Task",
      "meeting_type": "Research",
      "url": "https://app.notion.com/p/TSK-SERG-Meeting-Intro-Roundtable-add-slide-to-deck-3d0ea74eb779817990a1ecedfa11881a"
+    },
+    {
+     "name": "14.003 Office Hours \u2014 M\u00e9lyne Nzabonimpa",
+     "date": "2026-09-17T18:00:00.000+00:00",
+     "end": "2026-09-17T19:30:00.000+00:00",
+     "done": false,
+     "kind": "14.003",
+     "src": "class",
+     "location": "E52-516",
+     "type": "",
+     "meeting_type": "Class",
+     "url": "https://app.notion.com/p/14-003-Office-Hours-M-lyne-Nzabonimpa-3dcea74eb779811fa191ce96990cd725"
     },
     {
      "name": "[DUE] 16.S896 RASCAL: Presentation 01: Skills Survey + Team Pitches",
@@ -608,6 +764,30 @@
      "url": "https://app.notion.com/p/HW-16-842-Systems-Eng-Team-assignment-form-3dcea74eb77981178147c8a801c069b9"
     },
     {
+     "name": "16.S896 Office Hours \u2014 George Lordos",
+     "date": "2026-09-18T18:00:00.000+00:00",
+     "end": "2026-09-18T19:00:00.000+00:00",
+     "done": false,
+     "kind": "16.S896",
+     "src": "class",
+     "location": "33-218",
+     "type": "",
+     "meeting_type": "Class",
+     "url": "https://app.notion.com/p/16-S896-Office-Hours-George-Lordos-3dcea74eb77981209a9fc0db1559085d"
+    },
+    {
+     "name": "14.003 Office Hours \u2014 Pratik Bhandari",
+     "date": "2026-09-18T19:00:00.000+00:00",
+     "end": "2026-09-18T20:00:00.000+00:00",
+     "done": false,
+     "kind": "14.003",
+     "src": "class",
+     "location": "4-231",
+     "type": "",
+     "meeting_type": "Class",
+     "url": "https://app.notion.com/p/14-003-Office-Hours-Pratik-Bhandari-3dcea74eb779815b97b7d1260679b296"
+    },
+    {
      "name": "TSK Cut and file the day's notes into the binder",
      "date": "2026-09-18T22:00:00.000-04:00",
      "end": "2026-09-18T22:15:00.000-04:00",
@@ -706,5 +886,5 @@
    ]
   }
  ],
- "total": 55
+ "total": 70
 }
