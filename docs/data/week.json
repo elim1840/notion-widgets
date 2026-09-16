@@ -1,5 +1,5 @@
 {
- "generated": "2026-09-16T11:28:04-04:00",
+ "generated": "2026-09-16T15:00:54-04:00",
  "today": "2026-09-16",
  "monday": "2026-09-14",
  "days": [
@@ -281,7 +281,7 @@
      "name": "TSK ESL Monthly Meeting - Introduction by Lab Advisors",
      "date": "2026-09-15T17:00:00.000-04:00",
      "end": "2026-09-15T18:00:00.000-04:00",
-     "done": false,
+     "done": true,
      "kind": "ESL",
      "src": "task",
      "location": "33-206 / Zoom: https://mit.zoom.us/j/6850762634",
@@ -740,6 +740,18 @@
      "url": "https://app.notion.com/p/14-003-Microecon-Policy-Recitation-Week-2-3d3ea74eb77981bb82d9d670e305e3d0"
     },
     {
+     "name": "Haircut",
+     "date": "2026-09-18T10:00:00.000-04:00",
+     "end": "2026-09-18T11:00:00.000-04:00",
+     "done": false,
+     "kind": "Task",
+     "src": "task",
+     "location": "",
+     "type": "Task",
+     "meeting_type": "",
+     "url": "https://app.notion.com/p/Haircut-a9014ccef7ae4f168bb119103dbf0803"
+    },
+    {
      "name": "TSK Send thesis template to Barb for format review",
      "date": "2026-09-18T10:00:00.000-04:00",
      "end": "2026-09-18T10:30:00.000-04:00",
@@ -910,5 +922,5 @@
    ]
   }
  ],
- "total": 72
+ "total": 73
 }
