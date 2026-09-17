@@ -1,5 +1,5 @@
 {
- "generated": "2026-09-17T06:13:15-04:00",
+ "generated": "2026-09-17T11:01:40-04:00",
  "today": "2026-09-17",
  "monday": "2026-09-14",
  "days": [
@@ -639,8 +639,8 @@
     },
     {
      "name": "Send an email to mit Registrar regarding class petition",
-     "date": "2026-09-17T10:00:00.000-04:00",
-     "end": "2026-09-17T10:15:00.000-04:00",
+     "date": "2026-09-17T09:00:00.000-04:00",
+     "end": "2026-09-17T09:15:00.000-04:00",
      "done": false,
      "kind": "Task",
      "src": "task",
@@ -686,30 +686,6 @@
      "url": "https://app.notion.com/p/14-003-Office-Hours-M-lyne-Nzabonimpa-3dcea74eb779811fa191ce96990cd725"
     },
     {
-     "name": "[DUE] 16.S896 RASCAL: Presentation 01: Skills Survey + Team Pitches",
-     "date": "2026-09-17T20:00:00.000-04:00",
-     "end": "2026-09-17T20:30:00.000-04:00",
-     "done": false,
-     "kind": "16.S896",
-     "src": "class",
-     "location": "",
-     "type": "",
-     "meeting_type": "Class",
-     "url": "https://app.notion.com/p/DUE-16-S896-RASCAL-Presentation-01-Skills-Survey-Team-Pitches-3daea74eb77981fb9283e0232cbf0e24"
-    },
-    {
-     "name": "[DUE] 16.990 Creative Teams: Assignment: Our graduate program & class surveys",
-     "date": "2026-09-17T20:00:00.000-04:00",
-     "end": "2026-09-17T20:15:00.000-04:00",
-     "done": false,
-     "kind": "16.990",
-     "src": "class",
-     "location": "",
-     "type": "",
-     "meeting_type": "Class",
-     "url": "https://app.notion.com/p/DUE-16-990-Creative-Teams-Assignment-Our-graduate-program-class-surveys-3daea74eb7798131aaede4f9d9a4f19a"
-    },
-    {
      "name": "TSK Cut and file the day's notes into the binder",
      "date": "2026-09-17T22:00:00.000-04:00",
      "end": "2026-09-17T22:15:00.000-04:00",
@@ -720,6 +696,30 @@
      "type": "Task",
      "meeting_type": "Admin",
      "url": "https://app.notion.com/p/TSK-Cut-and-file-the-day-s-notes-into-the-binder-3dbea74eb77981b9b38be1199d7d5774"
+    },
+    {
+     "name": "[DUE] 16.S896 RASCAL: Presentation 01: Skills Survey + Team Pitches",
+     "date": "2026-09-17",
+     "end": "",
+     "done": false,
+     "kind": "16.S896",
+     "src": "class",
+     "location": "",
+     "type": "",
+     "meeting_type": "Class",
+     "url": "https://app.notion.com/p/DUE-16-S896-RASCAL-Presentation-01-Skills-Survey-Team-Pitches-3daea74eb77981fb9283e0232cbf0e24"
+    },
+    {
+     "name": "[DUE] 16.990 Creative Teams: Assignment: Our graduate program & class surveys",
+     "date": "2026-09-17",
+     "end": "",
+     "done": false,
+     "kind": "16.990",
+     "src": "class",
+     "location": "",
+     "type": "",
+     "meeting_type": "Class",
+     "url": "https://app.notion.com/p/DUE-16-990-Creative-Teams-Assignment-Our-graduate-program-class-surveys-3daea74eb7798131aaede4f9d9a4f19a"
     }
    ]
   },
@@ -836,6 +836,18 @@
      "url": "https://app.notion.com/p/TSK-Cut-and-file-the-day-s-notes-into-the-binder-3dbea74eb77981a2b89dd69f50baf6b1"
     },
     {
+     "name": "[DUE] 16.990 Creative Teams: Assignment: Personality Assessment",
+     "date": "2026-09-18T23:59:00.000-04:00",
+     "end": "2026-09-19T00:14:00.000-04:00",
+     "done": false,
+     "kind": "16.990",
+     "src": "class",
+     "location": "",
+     "type": "",
+     "meeting_type": "Class",
+     "url": "https://app.notion.com/p/DUE-16-990-Creative-Teams-Assignment-Personality-Assessment-3deea74eb779815a81dcd8077ff44961"
+    },
+    {
      "name": "16.S896 RASCAL: Presentation 01: Skills Survey + Team Pitches Due",
      "date": "2026-09-18",
      "end": "",
@@ -922,5 +934,5 @@
    ]
   }
  ],
- "total": 73
+ "total": 74
 }
