@@ -1,11 +1,11 @@
 {
- "generated": "2026-09-17T11:01:40-04:00",
+ "generated": "2026-09-17T15:00:28-04:00",
  "today": "2026-09-17",
  "counts": {
-  "total": 231,
-  "open": 210,
+  "total": 233,
+  "open": 212,
   "done": 21,
-  "today_total": 4,
+  "today_total": 5,
   "today_done": 0,
   "overdue": 55,
   "past_meetings": 46
@@ -61,6 +61,23 @@
    "link": "",
    "notes": "Bi-weekly SERG meetings 5-6pm Tue. Intro roundtable - add a slide: https://docs.google.com/presentation/d/1x-5FpTuZr4XVMjieqCY-ifFJxfzlGwxhMPhyP9U8m5c/edit",
    "url": "https://app.notion.com/p/TSK-SERG-Meeting-Intro-Roundtable-add-slide-to-deck-3d0ea74eb779817990a1ecedfa11881a"
+  },
+  {
+   "name": "Pick up To Go for Trevor",
+   "date": "2026-09-17T20:00:00.000-04:00",
+   "end": "2026-09-17T20:15:00.000-04:00",
+   "done": false,
+   "status": "",
+   "type": "Task",
+   "meeting_type": "",
+   "priority": "",
+   "energy": "",
+   "location": "",
+   "attendees": "",
+   "agenda": "",
+   "link": "",
+   "notes": "",
+   "url": "https://app.notion.com/p/Pick-up-To-Go-for-Trevor-e345295dece74497ae814bed0f12ed53"
   },
   {
    "name": "TSK Cut and file the day's notes into the binder",
@@ -815,6 +832,23 @@
    "url": "https://app.notion.com/p/TSK-SERG-Meeting-Intro-Roundtable-add-slide-to-deck-3d0ea74eb779817990a1ecedfa11881a"
   },
   {
+   "name": "Pick up To Go for Trevor",
+   "date": "2026-09-17T20:00:00.000-04:00",
+   "end": "2026-09-17T20:15:00.000-04:00",
+   "done": false,
+   "status": "",
+   "type": "Task",
+   "meeting_type": "",
+   "priority": "",
+   "energy": "",
+   "location": "",
+   "attendees": "",
+   "agenda": "",
+   "link": "",
+   "notes": "",
+   "url": "https://app.notion.com/p/Pick-up-To-Go-for-Trevor-e345295dece74497ae814bed0f12ed53"
+  },
+  {
    "name": "TSK Cut and file the day's notes into the binder",
    "date": "2026-09-17T22:00:00.000-04:00",
    "end": "2026-09-17T22:15:00.000-04:00",
@@ -934,38 +968,21 @@
    "url": "https://app.notion.com/p/TSK-Build-contact-database-schema-design-relationship-cadence-3dbea74eb7798143a58de10d124198f7"
   },
   {
-   "name": "TSK Household cleaning",
-   "date": "2026-09-20T08:15:00.000-04:00",
-   "end": "2026-09-20T08:45:00.000-04:00",
+   "name": "Review IEEE Aerospace + ASCEND venue requirements, RASC-AL code (Lunar Landing Site Paper)",
+   "date": "2026-09-19T14:00:00.000-04:00",
+   "end": "2026-09-19T15:00:00.000-04:00",
    "done": false,
    "status": "Not Started",
    "type": "",
-   "meeting_type": "Personal",
+   "meeting_type": "Research",
    "priority": "",
    "energy": "",
    "location": "",
    "attendees": "",
    "agenda": "",
    "link": "",
-   "notes": "",
-   "url": "https://app.notion.com/p/TSK-Household-cleaning-3dcea74eb7798136a95bd6948053638d"
-  },
-  {
-   "name": "TSK Submit Draper Scholar Symposium poster (PDF + PPTX)",
-   "date": "2026-09-20T23:59:00.000-04:00",
-   "end": "2026-09-21T00:14:00.000-04:00",
-   "done": false,
-   "status": "Not Started",
-   "type": "Task",
-   "meeting_type": "Research",
-   "priority": "High",
-   "energy": "",
-   "location": "",
-   "attendees": "",
-   "agenda": "",
-   "link": "",
-   "notes": "Draper Scholar Symposium poster deadline: 11:59 PM Sept 20, 2026. Upload PDF AND PowerPoint versions. Naming convention: LastFirst_AdvisorLastFirst_26.pdf and .pptx (e.g. DoeJane_SmithJohn_26.pdf) - fill in Yohan's and his advisor's actual names. Minor cosmetic fixes post-submission can go through the PowerPoint version only.",
-   "url": "https://app.notion.com/p/TSK-Submit-Draper-Scholar-Symposium-poster-PDF-PPTX-3cdea74eb77981d6a019d5e4cb131885"
+   "notes": "IEEE Aerospace 2027 abstract deadline already passed (Jul 1); paper deadline Oct 2, 2026. ASCEND 2027 abstract deadline Oct 8, 2026 8pm ET. Requirements + templates in Yohans-Second-Brain/04_Projects/Publications/Lunar-Landing-Site-Paper/Venue-Requirements/. RASC-AL code moved into the paper folder as RASC-AL/.",
+   "url": "https://app.notion.com/p/Review-IEEE-Aerospace-ASCEND-venue-requirements-RASC-AL-code-Lunar-Landing-Site-Paper-3deea74eb779818e9179ee0c076c6be4"
   }
  ],
  "history": [
@@ -1036,7 +1053,7 @@
   },
   {
    "date": "2026-09-17",
-   "total": 4,
+   "total": 5,
    "done": 0
   }
  ]
