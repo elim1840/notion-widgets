@@ -1,12 +1,12 @@
 {
- "generated": "2026-09-16T18:09:11-04:00",
+ "generated": "2026-09-16T20:30:09-04:00",
  "today": "2026-09-16",
  "counts": {
-  "total": 230,
+  "total": 231,
   "open": 210,
-  "done": 20,
+  "done": 21,
   "today_total": 9,
-  "today_done": 0,
+  "today_done": 1,
   "overdue": 47,
   "past_meetings": 46
  },
@@ -66,7 +66,7 @@
    "name": "Send emails to get quotes for dinner reservations",
    "date": "2026-09-16T17:15:00.000-04:00",
    "end": "2026-09-16T18:00:00.000-04:00",
-   "done": false,
+   "done": true,
    "status": "",
    "type": "Task",
    "meeting_type": "",
@@ -900,23 +900,6 @@
    "url": "https://app.notion.com/p/Submit-Moon-Landing-abstract-to-the-team-3ddea74eb779814c85a7f698de718546"
   },
   {
-   "name": "Send emails to get quotes for dinner reservations",
-   "date": "2026-09-16T17:15:00.000-04:00",
-   "end": "2026-09-16T18:00:00.000-04:00",
-   "done": false,
-   "status": "",
-   "type": "Task",
-   "meeting_type": "",
-   "priority": "",
-   "energy": "",
-   "location": "",
-   "attendees": "",
-   "agenda": "",
-   "link": "",
-   "notes": "",
-   "url": "https://app.notion.com/p/Send-emails-to-get-quotes-for-dinner-reservations-0581680fd6634365a30bd777fcb293fb"
-  },
-  {
    "name": "Build Cursor project for Moon Landing paper",
    "date": "2026-09-16T18:00:00.000-04:00",
    "end": "2026-09-16T19:30:00.000-04:00",
@@ -1051,6 +1034,23 @@
    "link": "",
    "notes": "Bi-weekly SERG meetings 5-6pm Tue. Intro roundtable - add a slide: https://docs.google.com/presentation/d/1x-5FpTuZr4XVMjieqCY-ifFJxfzlGwxhMPhyP9U8m5c/edit",
    "url": "https://app.notion.com/p/TSK-SERG-Meeting-Intro-Roundtable-add-slide-to-deck-3d0ea74eb779817990a1ecedfa11881a"
+  },
+  {
+   "name": "TSK Cut and file the day's notes into the binder",
+   "date": "2026-09-17T22:00:00.000-04:00",
+   "end": "2026-09-17T22:15:00.000-04:00",
+   "done": false,
+   "status": "Not Started",
+   "type": "Task",
+   "meeting_type": "Admin",
+   "priority": "Medium",
+   "energy": "Shallow",
+   "location": "",
+   "attendees": "",
+   "agenda": "",
+   "link": "",
+   "notes": "Cut the day's sheets, sort by class then by the number printed in each sheet's footer, punch and file. Unsure sheets go in the front pocket for the Sunday review. Guide: 02_Classes/BINDER-FILING-GUIDE.md",
+   "url": "https://app.notion.com/p/TSK-Cut-and-file-the-day-s-notes-into-the-binder-3dbea74eb77981b9b38be1199d7d5774"
   }
  ],
  "history": [
@@ -1122,7 +1122,7 @@
   {
    "date": "2026-09-16",
    "total": 9,
-   "done": 0
+   "done": 1
   }
  ]
 }
