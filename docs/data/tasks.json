@@ -1,9 +1,9 @@
 {
- "generated": "2026-09-17T18:08:06-04:00",
+ "generated": "2026-09-17T20:16:09-04:00",
  "today": "2026-09-17",
  "counts": {
-  "total": 233,
-  "open": 212,
+  "total": 234,
+  "open": 213,
   "done": 21,
   "today_total": 5,
   "today_done": 0,
@@ -968,21 +968,21 @@
    "url": "https://app.notion.com/p/TSK-Build-contact-database-schema-design-relationship-cadence-3dbea74eb7798143a58de10d124198f7"
   },
   {
-   "name": "Review IEEE Aerospace + ASCEND venue requirements, RASC-AL code (Lunar Landing Site Paper)",
-   "date": "2026-09-19T14:00:00.000-04:00",
-   "end": "2026-09-19T15:00:00.000-04:00",
+   "name": "Working Group scheduling meeting (Charlie, Nicole, Yohan) -- CIS grant",
+   "date": "2026-09-19T13:00:00.000-04:00",
+   "end": "2026-09-19T14:00:00.000-04:00",
    "done": false,
    "status": "Not Started",
    "type": "",
-   "meeting_type": "Research",
+   "meeting_type": "Admin",
    "priority": "",
    "energy": "",
    "location": "",
    "attendees": "",
    "agenda": "",
    "link": "",
-   "notes": "IEEE Aerospace 2027 abstract deadline already passed (Jul 1); paper deadline Oct 2, 2026. ASCEND 2027 abstract deadline Oct 8, 2026 8pm ET. Requirements + templates in Yohans-Second-Brain/04_Projects/Publications/Lunar-Landing-Site-Paper/Venue-Requirements/. RASC-AL code moved into the paper folder as RASC-AL/.",
-   "url": "https://app.notion.com/p/Review-IEEE-Aerospace-ASCEND-venue-requirements-RASC-AL-code-Lunar-Landing-Site-Paper-3deea74eb779818e9179ee0c076c6be4"
+   "notes": "CIS Working Group $2,000 grant approved (Charlie, Nicole, Yohan). Figure out session schedule for the term. Deliverables owed to cis-info@mit.edu: website blurb (title + <=100 words + photo), room-booking requests (date/time/attendee count), final meetings by last day of term, post-activity summary + photo + quote + session list within 3 weeks of final meeting. Reimbursement via ATLAS Self Service, approver Marie C. Senat, no alcohol/tax, MIT Tax ID 042 103 594.",
+   "url": "https://app.notion.com/p/Working-Group-scheduling-meeting-Charlie-Nicole-Yohan-CIS-grant-3deea74eb7798127ab0bcf15b20c67e5"
   }
  ],
  "history": [

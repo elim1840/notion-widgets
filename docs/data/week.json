@@ -1,5 +1,5 @@
 {
- "generated": "2026-09-17T18:08:06-04:00",
+ "generated": "2026-09-17T20:16:09-04:00",
  "today": "2026-09-17",
  "monday": "2026-09-14",
  "days": [
@@ -698,6 +698,18 @@
      "url": "https://app.notion.com/p/Pick-up-To-Go-for-Trevor-e345295dece74497ae814bed0f12ed53"
     },
     {
+     "name": "Work on 14.003 PSET",
+     "date": "2026-09-17T20:30:00.000-04:00",
+     "end": "2026-09-17T22:45:00.000-04:00",
+     "done": false,
+     "kind": "14.003",
+     "src": "class",
+     "location": "",
+     "type": "",
+     "meeting_type": "Class",
+     "url": "https://app.notion.com/p/Work-on-14-003-PSET-c32c07d1828d42ceba11689370b42121"
+    },
+    {
      "name": "TSK Cut and file the day's notes into the binder",
      "date": "2026-09-17T22:00:00.000-04:00",
      "end": "2026-09-17T22:15:00.000-04:00",
@@ -890,6 +902,18 @@
      "url": "https://app.notion.com/p/TSK-Build-contact-database-schema-design-relationship-cadence-3dbea74eb7798143a58de10d124198f7"
     },
     {
+     "name": "Working Group scheduling meeting (Charlie, Nicole, Yohan) -- CIS grant",
+     "date": "2026-09-19T13:00:00.000-04:00",
+     "end": "2026-09-19T14:00:00.000-04:00",
+     "done": false,
+     "kind": "Admin",
+     "src": "task",
+     "location": "",
+     "type": "",
+     "meeting_type": "Admin",
+     "url": "https://app.notion.com/p/Working-Group-scheduling-meeting-Charlie-Nicole-Yohan-CIS-grant-3deea74eb7798127ab0bcf15b20c67e5"
+    },
+    {
      "name": "Review IEEE Aerospace + ASCEND venue requirements, RASC-AL code (Lunar Landing Site Paper)",
      "date": "2026-09-19T14:00:00.000-04:00",
      "end": "2026-09-19T15:00:00.000-04:00",
@@ -958,5 +982,5 @@
    ]
   }
  ],
- "total": 76
+ "total": 78
 }
