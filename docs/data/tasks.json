@@ -1,50 +1,16 @@
 {
- "generated": "2026-09-18T05:27:45-04:00",
+ "generated": "2026-09-18T09:44:43-04:00",
  "today": "2026-09-18",
  "counts": {
   "total": 234,
   "open": 213,
   "done": 21,
-  "today_total": 3,
+  "today_total": 1,
   "today_done": 0,
   "overdue": 60,
   "past_meetings": 46
  },
  "today_items": [
-  {
-   "name": "Haircut",
-   "date": "2026-09-18T10:00:00.000-04:00",
-   "end": "2026-09-18T11:00:00.000-04:00",
-   "done": false,
-   "status": "",
-   "type": "Task",
-   "meeting_type": "",
-   "priority": "",
-   "energy": "",
-   "location": "",
-   "attendees": "",
-   "agenda": "",
-   "link": "",
-   "notes": "",
-   "url": "https://app.notion.com/p/Haircut-a9014ccef7ae4f168bb119103dbf0803"
-  },
-  {
-   "name": "TSK Send thesis template to Barb for format review",
-   "date": "2026-09-18T10:00:00.000-04:00",
-   "end": "2026-09-18T10:30:00.000-04:00",
-   "done": false,
-   "status": "Not Started",
-   "type": "Task",
-   "meeting_type": "Admin",
-   "priority": "High",
-   "energy": "Errand",
-   "location": "",
-   "attendees": "",
-   "agenda": "Send the compiled PDF (title page + front matter is enough - she does not need chapters) and ask her to confirm the format specifics only she can settle.\n\nTHE ASK, kept short:\n  'I've set up my thesis in the official MIT LaTeX template. Before I go further, could you confirm a few TPP-specific items?'\n\n  1. Exact degree name wording for the TPP S.M. on the title page\n  2. Who signs as Acceptor / graduate officer for TPP\n  3. For the dual TPP + AeroAstro degree, do BOTH departments sign, and are two Acceptors correct?\n  4. Does TPP require any special title-page program text?\n  5. Is there a TPP internal thesis deadline earlier than the Institute's 12 Dec title deadline?\n  6. Are thesis readers required beyond the supervisor, and how many?\n\nAttach the PDF. A concrete document gets a concrete answer; an abstract question gets 'check the website'.\n\nAlso worth asking, separately, whether Draper has required acknowledgment language for Draper Scholars.",
-   "link": "",
-   "notes": "",
-   "url": "https://app.notion.com/p/TSK-Send-thesis-template-to-Barb-for-format-review-3d5ea74eb77981e6a698d2e5563ade64"
-  },
   {
    "name": "TSK Cut and file the day's notes into the binder",
    "date": "2026-09-18T22:00:00.000-04:00",
@@ -747,40 +713,6 @@
  ],
  "upcoming": [
   {
-   "name": "Haircut",
-   "date": "2026-09-18T10:00:00.000-04:00",
-   "end": "2026-09-18T11:00:00.000-04:00",
-   "done": false,
-   "status": "",
-   "type": "Task",
-   "meeting_type": "",
-   "priority": "",
-   "energy": "",
-   "location": "",
-   "attendees": "",
-   "agenda": "",
-   "link": "",
-   "notes": "",
-   "url": "https://app.notion.com/p/Haircut-a9014ccef7ae4f168bb119103dbf0803"
-  },
-  {
-   "name": "TSK Send thesis template to Barb for format review",
-   "date": "2026-09-18T10:00:00.000-04:00",
-   "end": "2026-09-18T10:30:00.000-04:00",
-   "done": false,
-   "status": "Not Started",
-   "type": "Task",
-   "meeting_type": "Admin",
-   "priority": "High",
-   "energy": "Errand",
-   "location": "",
-   "attendees": "",
-   "agenda": "Send the compiled PDF (title page + front matter is enough - she does not need chapters) and ask her to confirm the format specifics only she can settle.\n\nTHE ASK, kept short:\n  'I've set up my thesis in the official MIT LaTeX template. Before I go further, could you confirm a few TPP-specific items?'\n\n  1. Exact degree name wording for the TPP S.M. on the title page\n  2. Who signs as Acceptor / graduate officer for TPP\n  3. For the dual TPP + AeroAstro degree, do BOTH departments sign, and are two Acceptors correct?\n  4. Does TPP require any special title-page program text?\n  5. Is there a TPP internal thesis deadline earlier than the Institute's 12 Dec title deadline?\n  6. Are thesis readers required beyond the supervisor, and how many?\n\nAttach the PDF. A concrete document gets a concrete answer; an abstract question gets 'check the website'.\n\nAlso worth asking, separately, whether Draper has required acknowledgment language for Draper Scholars.",
-   "link": "",
-   "notes": "",
-   "url": "https://app.notion.com/p/TSK-Send-thesis-template-to-Barb-for-format-review-3d5ea74eb77981e6a698d2e5563ade64"
-  },
-  {
    "name": "TSK Cut and file the day's notes into the binder",
    "date": "2026-09-18T22:00:00.000-04:00",
    "end": "2026-09-18T22:15:00.000-04:00",
@@ -847,6 +779,23 @@
    "link": "",
    "notes": "Design and build a contact database: decide properties, categories, and the cadence rules that keep relationships warm across many contacts. Brainstorm delivered 09-14-2026; see agenda in the session notes.",
    "url": "https://app.notion.com/p/TSK-Build-contact-database-schema-design-relationship-cadence-3dbea74eb7798143a58de10d124198f7"
+  },
+  {
+   "name": "TSK Send thesis template to Barb for format review",
+   "date": "2026-09-19T12:15:00.000-04:00",
+   "end": "2026-09-19T12:45:00.000-04:00",
+   "done": false,
+   "status": "Not Started",
+   "type": "Task",
+   "meeting_type": "Admin",
+   "priority": "High",
+   "energy": "Errand",
+   "location": "",
+   "attendees": "",
+   "agenda": "Send the compiled PDF (title page + front matter is enough - she does not need chapters) and ask her to confirm the format specifics only she can settle.\n\nTHE ASK, kept short:\n  'I've set up my thesis in the official MIT LaTeX template. Before I go further, could you confirm a few TPP-specific items?'\n\n  1. Exact degree name wording for the TPP S.M. on the title page\n  2. Who signs as Acceptor / graduate officer for TPP\n  3. For the dual TPP + AeroAstro degree, do BOTH departments sign, and are two Acceptors correct?\n  4. Does TPP require any special title-page program text?\n  5. Is there a TPP internal thesis deadline earlier than the Institute's 12 Dec title deadline?\n  6. Are thesis readers required beyond the supervisor, and how many?\n\nAttach the PDF. A concrete document gets a concrete answer; an abstract question gets 'check the website'.\n\nAlso worth asking, separately, whether Draper has required acknowledgment language for Draper Scholars.",
+   "link": "",
+   "notes": "",
+   "url": "https://app.notion.com/p/TSK-Send-thesis-template-to-Barb-for-format-review-3d5ea74eb77981e6a698d2e5563ade64"
   },
   {
    "name": "Working Group scheduling meeting (Charlie, Nicole, Yohan) -- CIS grant",
@@ -934,6 +883,23 @@
    "url": "https://app.notion.com/p/TSK-Cut-and-file-the-day-s-notes-into-the-binder-3dbea74eb77981509d38c17b4e6fef53"
   },
   {
+   "name": "Haircut",
+   "date": "2026-09-22T09:00:00.000-04:00",
+   "end": "2026-09-22T10:00:00.000-04:00",
+   "done": false,
+   "status": "",
+   "type": "Task",
+   "meeting_type": "",
+   "priority": "",
+   "energy": "",
+   "location": "",
+   "attendees": "",
+   "agenda": "",
+   "link": "",
+   "notes": "",
+   "url": "https://app.notion.com/p/Haircut-a9014ccef7ae4f168bb119103dbf0803"
+  },
+  {
    "name": "TSK Submit dual degree petition (TPP + AeroAstro)",
    "date": "2026-09-22T10:00:00.000-04:00",
    "end": "2026-09-22T11:30:00.000-04:00",
@@ -1019,7 +985,7 @@
   },
   {
    "date": "2026-09-18",
-   "total": 3,
+   "total": 1,
    "done": 0
   }
  ]
