@@ -1,6 +1,6 @@
 {
- "generated": "2026-09-18T20:21:47-04:00",
- "today": "2026-09-18",
+ "generated": "2026-09-19T00:50:41-04:00",
+ "today": "2026-09-19",
  "monday": "2026-09-14",
  "days": [
   {
@@ -749,7 +749,7 @@
   },
   {
    "date": "2026-09-18",
-   "is_today": true,
+   "is_today": false,
    "items": [
     {
      "name": "14.003 Microecon & Policy: Recitation Week 2",
@@ -863,7 +863,7 @@
   },
   {
    "date": "2026-09-19",
-   "is_today": false,
+   "is_today": true,
    "items": [
     {
      "name": "TSK Build contact database: schema design + relationship cadence",

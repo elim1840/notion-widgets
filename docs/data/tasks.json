@@ -1,32 +1,117 @@
 {
- "generated": "2026-09-18T20:21:47-04:00",
- "today": "2026-09-18",
+ "generated": "2026-09-19T00:50:41-04:00",
+ "today": "2026-09-19",
  "counts": {
   "total": 234,
   "open": 213,
   "done": 21,
-  "today_total": 1,
+  "today_total": 6,
   "today_done": 0,
-  "overdue": 60,
+  "overdue": 61,
   "past_meetings": 46
  },
  "today_items": [
   {
-   "name": "TSK Cut and file the day's notes into the binder",
-   "date": "2026-09-18T22:00:00.000-04:00",
-   "end": "2026-09-18T22:15:00.000-04:00",
+   "name": "TSK Upload thesis template to Overleaf + compile",
+   "date": "2026-09-19",
+   "end": "",
+   "done": false,
+   "status": "Not Started",
+   "type": "Task",
+   "meeting_type": "Research",
+   "priority": "High",
+   "energy": "Shallow",
+   "location": "",
+   "attendees": "",
+   "agenda": "FILE IS ALREADY BUILT: ~/Documents/Thesis-2027/MIT-thesis-Lim.zip (38 KB, 16 files)\n\nBuilt on the OFFICIAL mitthesis class (John H. Lienhard, CTAN v1.24, 2026-08-21) - the class the MIT Libraries specs are written against. Not a hand-rolled preamble.\n\nSTEPS:\n  1. overleaf.com -> New Project -> Upload Project -> MIT-thesis-Lim.zip\n  2. Menu -> Compiler: set to XeLaTeX or LuaLaTeX (NOT pdfLaTeX - the class needs a modern format)\n  3. Recompile. It should build clean.\n  4. Turn on Overleaf's GitHub sync so the thesis is version-controlled from day one.\n\nWHY IT WAS NOT COMPILED LOCALLY: the mitthesis class requires a LaTeX format dated 2022-06-01 or later. Tectonic 0.17 (the local engine) still ships a TeX Live 2020 bundle and refuses. BasicTeX 2026 would fix it but needs a sudo password. Overleaf runs a current TeX Live, so it will compile there. The document structure was verified by hand: 72/72 braces balanced, all environments matched.\n\nWHAT IS ALREADY FILLED IN:\n  - Dual degree, both programs on the title page (the class supports this natively)\n  - Your West Point B.S. as the previous degree\n  - Afreen Siddiqi as supervisor\n  - Chapter skeleton with the milestone dates written in as comments\n  - Placeholder abstract of roughly the right shape and length\n\nWHAT IS MARKED TODO IN THE FILE (real unknowns, do not guess):\n  - Exact degree names for both programs\n  - The Acceptor (graduate officer) for TPP and for AeroAstro\n  - Degree month: February or June 2027 - depends on the 29 Sep decision\n  - Whether TPP requires special title-page program text\n  - Whether readers are required, and who",
+   "link": "",
+   "notes": "",
+   "url": "https://app.notion.com/p/TSK-Upload-thesis-template-to-Overleaf-compile-3d5ea74eb779815ebde5ead418bd2854"
+  },
+  {
+   "name": "TSK Create thesis Overleaf document from official MIT template",
+   "date": "2026-09-19",
+   "end": "",
+   "done": false,
+   "status": "Not Started",
+   "type": "Task",
+   "meeting_type": "Research",
+   "priority": "High",
+   "energy": "Deep",
+   "location": "",
+   "attendees": "",
+   "agenda": "Do this AFTER the guidelines check on Thursday.\n\nUSE THE OFFICIAL TEMPLATE - do not build one from scratch:\n  web.mit.edu/thesis/tex/  -> official MIT thesis template in LaTeX, on Overleaf.\n  Developed 2023-2026 specifically to meet current MIT Libraries formatting requirements. Title, abstract and committee member pages are laid out automatically from the values you supply.\n  Produces PDF/A output for archivability and accessibility when using a LaTeX format dated Nov 2022 or later. Everything it needs ships in a standard TeX Live install.\n\nThis is the single biggest shortcut available: formatting compliance is already solved. Building your own preamble means re-deriving margins, pagination and title-page layout that the template gets right by construction.\n\nSET UP IN THIS ORDER:\n  1. Open the template on Overleaf, make your own copy.\n  2. Fill title page fields: name, previous degrees (BS Systems Engineering, West Point), BOTH degrees to be awarded, conferral date (February or June - matches the degree-list decision on 29 Sep), supervisor(s), department/program.\n  3. Use the DUAL DEGREE sample title page as reference - extra committee members.\n  4. Skeleton chapters matching the milestone plan: intro, literature review, methods, results, conclusion.\n  5. Turn on Overleaf's Git or GitHub integration so the document is version-controlled from day one, not a single blob that can be lost.\n  6. Share with Afreen Siddiqi and Dr. Palladino for read access now - not the week you want feedback.\n\nAn empty but correctly formatted document with real chapter headings is what makes 'work on thesis' become 'write section 2.1'. That is the whole point of doing it in September.",
+   "link": "",
+   "notes": "",
+   "url": "https://app.notion.com/p/TSK-Create-thesis-Overleaf-document-from-official-MIT-template-3d5ea74eb7798139abb7d34f72f0e1fa"
+  },
+  {
+   "name": "TSK Build contact database: schema design + relationship cadence",
+   "date": "2026-09-19T08:00:00.000-04:00",
+   "end": "2026-09-19T10:00:00.000-04:00",
    "done": false,
    "status": "Not Started",
    "type": "Task",
    "meeting_type": "Admin",
    "priority": "Medium",
-   "energy": "Shallow",
+   "energy": "Deep",
    "location": "",
    "attendees": "",
    "agenda": "",
    "link": "",
-   "notes": "Cut the day's sheets, sort by class then by the number printed in each sheet's footer, punch and file. Unsure sheets go in the front pocket for the Sunday review. Guide: 02_Classes/BINDER-FILING-GUIDE.md",
-   "url": "https://app.notion.com/p/TSK-Cut-and-file-the-day-s-notes-into-the-binder-3dbea74eb77981a2b89dd69f50baf6b1"
+   "notes": "Design and build a contact database: decide properties, categories, and the cadence rules that keep relationships warm across many contacts. Brainstorm delivered 09-14-2026; see agenda in the session notes.",
+   "url": "https://app.notion.com/p/TSK-Build-contact-database-schema-design-relationship-cadence-3dbea74eb7798143a58de10d124198f7"
+  },
+  {
+   "name": "TSK Send thesis template to Barb for format review",
+   "date": "2026-09-19T12:15:00.000-04:00",
+   "end": "2026-09-19T12:45:00.000-04:00",
+   "done": false,
+   "status": "Not Started",
+   "type": "Task",
+   "meeting_type": "Admin",
+   "priority": "High",
+   "energy": "Errand",
+   "location": "",
+   "attendees": "",
+   "agenda": "Send the compiled PDF (title page + front matter is enough - she does not need chapters) and ask her to confirm the format specifics only she can settle.\n\nTHE ASK, kept short:\n  'I've set up my thesis in the official MIT LaTeX template. Before I go further, could you confirm a few TPP-specific items?'\n\n  1. Exact degree name wording for the TPP S.M. on the title page\n  2. Who signs as Acceptor / graduate officer for TPP\n  3. For the dual TPP + AeroAstro degree, do BOTH departments sign, and are two Acceptors correct?\n  4. Does TPP require any special title-page program text?\n  5. Is there a TPP internal thesis deadline earlier than the Institute's 12 Dec title deadline?\n  6. Are thesis readers required beyond the supervisor, and how many?\n\nAttach the PDF. A concrete document gets a concrete answer; an abstract question gets 'check the website'.\n\nAlso worth asking, separately, whether Draper has required acknowledgment language for Draper Scholars.",
+   "link": "",
+   "notes": "",
+   "url": "https://app.notion.com/p/TSK-Send-thesis-template-to-Barb-for-format-review-3d5ea74eb77981e6a698d2e5563ade64"
+  },
+  {
+   "name": "Working Group scheduling meeting (Charlie, Nicole, Yohan) -- CIS grant",
+   "date": "2026-09-19T13:00:00.000-04:00",
+   "end": "2026-09-19T14:00:00.000-04:00",
+   "done": false,
+   "status": "Not Started",
+   "type": "",
+   "meeting_type": "Admin",
+   "priority": "",
+   "energy": "",
+   "location": "",
+   "attendees": "",
+   "agenda": "",
+   "link": "",
+   "notes": "CIS Working Group $2,000 grant approved (Charlie, Nicole, Yohan). Figure out session schedule for the term. Deliverables owed to cis-info@mit.edu: website blurb (title + <=100 words + photo), room-booking requests (date/time/attendee count), final meetings by last day of term, post-activity summary + photo + quote + session list within 3 weeks of final meeting. Reimbursement via ATLAS Self Service, approver Marie C. Senat, no alcohol/tax, MIT Tax ID 042 103 594.",
+   "url": "https://app.notion.com/p/Working-Group-scheduling-meeting-Charlie-Nicole-Yohan-CIS-grant-3deea74eb7798127ab0bcf15b20c67e5"
+  },
+  {
+   "name": "Review IEEE Aerospace + ASCEND venue requirements, RASC-AL code (Lunar Landing Site Paper)",
+   "date": "2026-09-19T14:00:00.000-04:00",
+   "end": "2026-09-19T15:00:00.000-04:00",
+   "done": false,
+   "status": "Not Started",
+   "type": "",
+   "meeting_type": "Research",
+   "priority": "",
+   "energy": "",
+   "location": "",
+   "attendees": "",
+   "agenda": "",
+   "link": "",
+   "notes": "IEEE Aerospace 2027 abstract deadline already passed (Jul 1); paper deadline Oct 2, 2026. ASCEND 2027 abstract deadline Oct 8, 2026 8pm ET. Requirements + templates in Yohans-Second-Brain/04_Projects/Publications/Lunar-Landing-Site-Paper/Venue-Requirements/. RASC-AL code moved into the paper folder as RASC-AL/.",
+   "url": "https://app.notion.com/p/Review-IEEE-Aerospace-ASCEND-venue-requirements-RASC-AL-code-Lunar-Landing-Site-Paper-3deea74eb779818e9179ee0c076c6be4"
   }
  ],
  "overdue_items": [
@@ -713,23 +798,6 @@
  ],
  "upcoming": [
   {
-   "name": "TSK Cut and file the day's notes into the binder",
-   "date": "2026-09-18T22:00:00.000-04:00",
-   "end": "2026-09-18T22:15:00.000-04:00",
-   "done": false,
-   "status": "Not Started",
-   "type": "Task",
-   "meeting_type": "Admin",
-   "priority": "Medium",
-   "energy": "Shallow",
-   "location": "",
-   "attendees": "",
-   "agenda": "",
-   "link": "",
-   "notes": "Cut the day's sheets, sort by class then by the number printed in each sheet's footer, punch and file. Unsure sheets go in the front pocket for the Sunday review. Guide: 02_Classes/BINDER-FILING-GUIDE.md",
-   "url": "https://app.notion.com/p/TSK-Cut-and-file-the-day-s-notes-into-the-binder-3dbea74eb77981a2b89dd69f50baf6b1"
-  },
-  {
    "name": "TSK Upload thesis template to Overleaf + compile",
    "date": "2026-09-19",
    "end": "",
@@ -915,14 +983,26 @@
    "link": "",
    "notes": "",
    "url": "https://app.notion.com/p/TSK-Submit-dual-degree-petition-TPP-AeroAstro-3d5ea74eb779819b8b96e3a7bc6f50be"
+  },
+  {
+   "name": "Yohan and Grace",
+   "date": "2026-09-22T15:00:00.000-04:00",
+   "end": "2026-09-22T16:00:00.000-04:00",
+   "done": false,
+   "status": "",
+   "type": "Meeting",
+   "meeting_type": "",
+   "priority": "",
+   "energy": "",
+   "location": "",
+   "attendees": "",
+   "agenda": "",
+   "link": "",
+   "notes": "",
+   "url": "https://app.notion.com/p/Yohan-and-Grace-3c38bef019bd4e0ab840b06164195a14"
   }
  ],
  "history": [
-  {
-   "date": "2026-09-05",
-   "total": 0,
-   "done": 0
-  },
   {
    "date": "2026-09-06",
    "total": 6,
@@ -986,6 +1066,11 @@
   {
    "date": "2026-09-18",
    "total": 1,
+   "done": 0
+  },
+  {
+   "date": "2026-09-19",
+   "total": 6,
    "done": 0
   }
  ]
