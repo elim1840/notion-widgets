@@ -1,6 +1,6 @@
 {
- "generated": "2026-09-19T21:06:43-04:00",
- "today": "2026-09-19",
+ "generated": "2026-09-20T02:13:52-04:00",
+ "today": "2026-09-20",
  "monday": "2026-09-14",
  "days": [
   {
@@ -863,7 +863,7 @@
   },
   {
    "date": "2026-09-19",
-   "is_today": true,
+   "is_today": false,
    "items": [
     {
      "name": "TSK Build contact database: schema design + relationship cadence",
@@ -941,7 +941,7 @@
   },
   {
    "date": "2026-09-20",
-   "is_today": false,
+   "is_today": true,
    "items": [
     {
      "name": "TSK Household cleaning",
