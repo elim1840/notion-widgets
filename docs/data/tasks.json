@@ -1,9 +1,9 @@
 {
- "generated": "2026-09-19T19:09:38-04:00",
+ "generated": "2026-09-19T21:06:43-04:00",
  "today": "2026-09-19",
  "counts": {
-  "total": 234,
-  "open": 213,
+  "total": 235,
+  "open": 214,
   "done": 21,
   "today_total": 6,
   "today_done": 0,
@@ -917,6 +917,23 @@
    "url": "https://app.notion.com/p/TSK-Household-cleaning-3dcea74eb7798136a95bd6948053638d"
   },
   {
+   "name": "Respond to Afreen for catering email",
+   "date": "2026-09-20T10:00:00.000-04:00",
+   "end": "2026-09-20T10:30:00.000-04:00",
+   "done": false,
+   "status": "Not Started",
+   "type": "Task",
+   "meeting_type": "Personal",
+   "priority": "",
+   "energy": "",
+   "location": "",
+   "attendees": "",
+   "agenda": "",
+   "link": "",
+   "notes": "",
+   "url": "https://app.notion.com/p/Respond-to-Afreen-for-catering-email-3e0ea74eb7798103947ff6ca56c15314"
+  },
+  {
    "name": "TSK Submit Draper Scholar Symposium poster (PDF + PPTX)",
    "date": "2026-09-20T23:59:00.000-04:00",
    "end": "2026-09-21T00:14:00.000-04:00",
@@ -983,23 +1000,6 @@
    "link": "",
    "notes": "",
    "url": "https://app.notion.com/p/TSK-Submit-dual-degree-petition-TPP-AeroAstro-3d5ea74eb779819b8b96e3a7bc6f50be"
-  },
-  {
-   "name": "Yohan and Grace",
-   "date": "2026-09-22T15:00:00.000-04:00",
-   "end": "2026-09-22T16:00:00.000-04:00",
-   "done": false,
-   "status": "",
-   "type": "Meeting",
-   "meeting_type": "",
-   "priority": "",
-   "energy": "",
-   "location": "",
-   "attendees": "",
-   "agenda": "",
-   "link": "",
-   "notes": "",
-   "url": "https://app.notion.com/p/Yohan-and-Grace-3c38bef019bd4e0ab840b06164195a14"
   }
  ],
  "history": [
