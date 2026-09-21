@@ -1,37 +1,20 @@
 {
- "generated": "2026-09-20T20:24:47-04:00",
- "today": "2026-09-20",
+ "generated": "2026-09-21T01:14:17-04:00",
+ "today": "2026-09-21",
  "counts": {
   "total": 236,
   "open": 215,
   "done": 21,
-  "today_total": 3,
+  "today_total": 2,
   "today_done": 0,
-  "overdue": 67,
+  "overdue": 70,
   "past_meetings": 46
  },
  "today_items": [
   {
-   "name": "TSK Household cleaning",
-   "date": "2026-09-20T08:15:00.000-04:00",
-   "end": "2026-09-20T08:45:00.000-04:00",
-   "done": false,
-   "status": "Not Started",
-   "type": "",
-   "meeting_type": "Personal",
-   "priority": "",
-   "energy": "",
-   "location": "",
-   "attendees": "",
-   "agenda": "",
-   "link": "",
-   "notes": "",
-   "url": "https://app.notion.com/p/TSK-Household-cleaning-3dcea74eb7798136a95bd6948053638d"
-  },
-  {
-   "name": "Respond to Afreen for catering email",
-   "date": "2026-09-20T10:00:00.000-04:00",
-   "end": "2026-09-20T10:30:00.000-04:00",
+   "name": "Claim free Neuro Gum pack at Costco or Walmart",
+   "date": "2026-09-21T20:00:00.000-04:00",
+   "end": "2026-09-21T20:30:00.000-04:00",
    "done": false,
    "status": "Not Started",
    "type": "Task",
@@ -43,24 +26,24 @@
    "agenda": "",
    "link": "",
    "notes": "",
-   "url": "https://app.notion.com/p/Respond-to-Afreen-for-catering-email-3e0ea74eb7798103947ff6ca56c15314"
+   "url": "https://app.notion.com/p/Claim-free-Neuro-Gum-pack-at-Costco-or-Walmart-3e1ea74eb7798103844ad365bc4175b7"
   },
   {
-   "name": "TSK Submit Draper Scholar Symposium poster (PDF + PPTX)",
-   "date": "2026-09-20T23:59:00.000-04:00",
-   "end": "2026-09-21T00:14:00.000-04:00",
+   "name": "TSK Cut and file the day's notes into the binder",
+   "date": "2026-09-21T22:00:00.000-04:00",
+   "end": "2026-09-21T22:15:00.000-04:00",
    "done": false,
    "status": "Not Started",
    "type": "Task",
-   "meeting_type": "Research",
-   "priority": "High",
-   "energy": "",
+   "meeting_type": "Admin",
+   "priority": "Medium",
+   "energy": "Shallow",
    "location": "",
    "attendees": "",
    "agenda": "",
    "link": "",
-   "notes": "Draper Scholar Symposium poster deadline: 11:59 PM Sept 20, 2026. Upload PDF AND PowerPoint versions. Naming convention: LastFirst_AdvisorLastFirst_26.pdf and .pptx (e.g. DoeJane_SmithJohn_26.pdf) - fill in Yohan's and his advisor's actual names. Minor cosmetic fixes post-submission can go through the PowerPoint version only.",
-   "url": "https://app.notion.com/p/TSK-Submit-Draper-Scholar-Symposium-poster-PDF-PPTX-3cdea74eb77981d6a019d5e4cb131885"
+   "notes": "Cut the day's sheets, sort by class then by the number printed in each sheet's footer, punch and file. Unsure sheets go in the front pocket for the Sunday review. Guide: 02_Classes/BINDER-FILING-GUIDE.md",
+   "url": "https://app.notion.com/p/TSK-Cut-and-file-the-day-s-notes-into-the-binder-3dbea74eb77981509d38c17b4e6fef53"
   }
  ],
  "overdue_items": [
@@ -747,57 +730,6 @@
  ],
  "upcoming": [
   {
-   "name": "TSK Household cleaning",
-   "date": "2026-09-20T08:15:00.000-04:00",
-   "end": "2026-09-20T08:45:00.000-04:00",
-   "done": false,
-   "status": "Not Started",
-   "type": "",
-   "meeting_type": "Personal",
-   "priority": "",
-   "energy": "",
-   "location": "",
-   "attendees": "",
-   "agenda": "",
-   "link": "",
-   "notes": "",
-   "url": "https://app.notion.com/p/TSK-Household-cleaning-3dcea74eb7798136a95bd6948053638d"
-  },
-  {
-   "name": "Respond to Afreen for catering email",
-   "date": "2026-09-20T10:00:00.000-04:00",
-   "end": "2026-09-20T10:30:00.000-04:00",
-   "done": false,
-   "status": "Not Started",
-   "type": "Task",
-   "meeting_type": "Personal",
-   "priority": "",
-   "energy": "",
-   "location": "",
-   "attendees": "",
-   "agenda": "",
-   "link": "",
-   "notes": "",
-   "url": "https://app.notion.com/p/Respond-to-Afreen-for-catering-email-3e0ea74eb7798103947ff6ca56c15314"
-  },
-  {
-   "name": "TSK Submit Draper Scholar Symposium poster (PDF + PPTX)",
-   "date": "2026-09-20T23:59:00.000-04:00",
-   "end": "2026-09-21T00:14:00.000-04:00",
-   "done": false,
-   "status": "Not Started",
-   "type": "Task",
-   "meeting_type": "Research",
-   "priority": "High",
-   "energy": "",
-   "location": "",
-   "attendees": "",
-   "agenda": "",
-   "link": "",
-   "notes": "Draper Scholar Symposium poster deadline: 11:59 PM Sept 20, 2026. Upload PDF AND PowerPoint versions. Naming convention: LastFirst_AdvisorLastFirst_26.pdf and .pptx (e.g. DoeJane_SmithJohn_26.pdf) - fill in Yohan's and his advisor's actual names. Minor cosmetic fixes post-submission can go through the PowerPoint version only.",
-   "url": "https://app.notion.com/p/TSK-Submit-Draper-Scholar-Symposium-poster-PDF-PPTX-3cdea74eb77981d6a019d5e4cb131885"
-  },
-  {
    "name": "Claim free Neuro Gum pack at Costco or Walmart",
    "date": "2026-09-21T20:00:00.000-04:00",
    "end": "2026-09-21T20:30:00.000-04:00",
@@ -949,14 +881,60 @@
    "link": "",
    "notes": "Cut the day's sheets, sort by class then by the number printed in each sheet's footer, punch and file. Unsure sheets go in the front pocket for the Sunday review. Guide: 02_Classes/BINDER-FILING-GUIDE.md",
    "url": "https://app.notion.com/p/TSK-Cut-and-file-the-day-s-notes-into-the-binder-3dbea74eb77981c19792ef01774ac804"
+  },
+  {
+   "name": "TSK AFT T-7: final prep session, confirm time and location",
+   "date": "2026-09-24T06:00:00.000-04:00",
+   "end": "2026-09-24T07:00:00.000-04:00",
+   "done": false,
+   "status": "Not Started",
+   "type": "",
+   "meeting_type": "Military",
+   "priority": "",
+   "energy": "",
+   "location": "",
+   "attendees": "",
+   "agenda": "",
+   "link": "",
+   "notes": "T-7 to the AFT on 10-01-2026.",
+   "url": "https://app.notion.com/p/TSK-AFT-T-7-final-prep-session-confirm-time-and-location-3dcea74eb7798190b507d19dc1be257b"
+  },
+  {
+   "name": "TSK Cut and file the day's notes into the binder",
+   "date": "2026-09-24T22:00:00.000-04:00",
+   "end": "2026-09-24T22:15:00.000-04:00",
+   "done": false,
+   "status": "Not Started",
+   "type": "Task",
+   "meeting_type": "Admin",
+   "priority": "Medium",
+   "energy": "Shallow",
+   "location": "",
+   "attendees": "",
+   "agenda": "",
+   "link": "",
+   "notes": "Cut the day's sheets, sort by class then by the number printed in each sheet's footer, punch and file. Unsure sheets go in the front pocket for the Sunday review. Guide: 02_Classes/BINDER-FILING-GUIDE.md",
+   "url": "https://app.notion.com/p/TSK-Cut-and-file-the-day-s-notes-into-the-binder-3dbea74eb77981f9bb3ee2294c450354"
+  },
+  {
+   "name": "TSK Cut and file the day's notes into the binder",
+   "date": "2026-09-25T22:00:00.000-04:00",
+   "end": "2026-09-25T22:15:00.000-04:00",
+   "done": false,
+   "status": "Not Started",
+   "type": "Task",
+   "meeting_type": "Admin",
+   "priority": "Medium",
+   "energy": "Shallow",
+   "location": "",
+   "attendees": "",
+   "agenda": "",
+   "link": "",
+   "notes": "Cut the day's sheets, sort by class then by the number printed in each sheet's footer, punch and file. Unsure sheets go in the front pocket for the Sunday review. Guide: 02_Classes/BINDER-FILING-GUIDE.md",
+   "url": "https://app.notion.com/p/TSK-Cut-and-file-the-day-s-notes-into-the-binder-3dbea74eb779815fba9af22e014dd844"
   }
  ],
  "history": [
-  {
-   "date": "2026-09-07",
-   "total": 3,
-   "done": 1
-  },
   {
    "date": "2026-09-08",
    "total": 10,
@@ -1020,6 +998,11 @@
   {
    "date": "2026-09-20",
    "total": 3,
+   "done": 0
+  },
+  {
+   "date": "2026-09-21",
+   "total": 2,
    "done": 0
   }
  ]
