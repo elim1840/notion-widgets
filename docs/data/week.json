@@ -1,5 +1,5 @@
 {
- "generated": "2026-09-21T01:14:17-04:00",
+ "generated": "2026-09-21T06:46:50-04:00",
  "today": "2026-09-21",
  "monday": "2026-09-21",
  "days": [
@@ -222,6 +222,18 @@
      "type": "",
      "meeting_type": "Class",
      "url": "https://app.notion.com/p/14-003-Microecon-Policy-Lecture-05-Consumer-choice-Theory-versus-constraints-3d6ea74eb77981e8bb17c80a0e95544a"
+    },
+    {
+     "name": "[FREE LUNCH] IDSS Cultural Lunch for Chuseok",
+     "date": "2026-09-23T12:00:00.000-04:00",
+     "end": "2026-09-23T13:15:00.000-04:00",
+     "done": false,
+     "kind": "Meeting",
+     "src": "task",
+     "location": "TPP Lounge, 3rd floor E17",
+     "type": "",
+     "meeting_type": "",
+     "url": "https://app.notion.com/p/FREE-LUNCH-IDSS-Cultural-Lunch-for-Chuseok-3e2ea74eb77981e690a9e33fd230086a"
     },
     {
      "name": "IDS.412 Tech & Policy: Lecture 05: Comparing/Evaluating/Improving Policy",
@@ -514,5 +526,5 @@
    ]
   }
  ],
- "total": 39
+ "total": 40
 }

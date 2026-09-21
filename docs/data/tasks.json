@@ -1,9 +1,9 @@
 {
- "generated": "2026-09-21T01:14:17-04:00",
+ "generated": "2026-09-21T06:46:50-04:00",
  "today": "2026-09-21",
  "counts": {
-  "total": 236,
-  "open": 215,
+  "total": 237,
+  "open": 216,
   "done": 21,
   "today_total": 2,
   "today_done": 0,
@@ -849,6 +849,23 @@
    "url": "https://app.notion.com/p/TSK-Submit-DA-2125-request-for-issue-turn-in-3dcea74eb779816980c9d4b2625c03de"
   },
   {
+   "name": "[FREE LUNCH] IDSS Cultural Lunch for Chuseok",
+   "date": "2026-09-23T12:00:00.000-04:00",
+   "end": "2026-09-23T13:15:00.000-04:00",
+   "done": false,
+   "status": "Not Started",
+   "type": "",
+   "meeting_type": "",
+   "priority": "",
+   "energy": "",
+   "location": "TPP Lounge, 3rd floor E17",
+   "attendees": "",
+   "agenda": "",
+   "link": "",
+   "notes": "Build-your-own bibimbap (beef or tofu). Bring your own Tupperware.",
+   "url": "https://app.notion.com/p/FREE-LUNCH-IDSS-Cultural-Lunch-for-Chuseok-3e2ea74eb77981e690a9e33fd230086a"
+  },
+  {
    "name": "ARMY ROTC UA COME IN OCP",
    "date": "2026-09-23T18:00:00.000-04:00",
    "end": "2026-09-23T19:30:00.000-04:00",
@@ -915,23 +932,6 @@
    "link": "",
    "notes": "Cut the day's sheets, sort by class then by the number printed in each sheet's footer, punch and file. Unsure sheets go in the front pocket for the Sunday review. Guide: 02_Classes/BINDER-FILING-GUIDE.md",
    "url": "https://app.notion.com/p/TSK-Cut-and-file-the-day-s-notes-into-the-binder-3dbea74eb77981f9bb3ee2294c450354"
-  },
-  {
-   "name": "TSK Cut and file the day's notes into the binder",
-   "date": "2026-09-25T22:00:00.000-04:00",
-   "end": "2026-09-25T22:15:00.000-04:00",
-   "done": false,
-   "status": "Not Started",
-   "type": "Task",
-   "meeting_type": "Admin",
-   "priority": "Medium",
-   "energy": "Shallow",
-   "location": "",
-   "attendees": "",
-   "agenda": "",
-   "link": "",
-   "notes": "Cut the day's sheets, sort by class then by the number printed in each sheet's footer, punch and file. Unsure sheets go in the front pocket for the Sunday review. Guide: 02_Classes/BINDER-FILING-GUIDE.md",
-   "url": "https://app.notion.com/p/TSK-Cut-and-file-the-day-s-notes-into-the-binder-3dbea74eb779815fba9af22e014dd844"
   }
  ],
  "history": [
