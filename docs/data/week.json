@@ -1,5 +1,5 @@
 {
- "generated": "2026-09-21T06:46:50-04:00",
+ "generated": "2026-09-21T12:45:02-04:00",
  "today": "2026-09-21",
  "monday": "2026-09-21",
  "days": [
@@ -18,6 +18,18 @@
      "type": "",
      "meeting_type": "Class",
      "url": "https://app.notion.com/p/14-003-Microecon-Policy-Lecture-04-Consumer-sovereignty-The-Carte-Blanche-principle-3d6ea74eb779810285f7edd0f5e9d6c1"
+    },
+    {
+     "name": "16.987 Grad Seminar: Seminar 02: Mental/Physical Health",
+     "date": "2026-09-21T11:30:00.000-04:00",
+     "end": "2026-09-21T13:00:00.000-04:00",
+     "done": false,
+     "kind": "16.987",
+     "src": "class",
+     "location": "37-252 (Marlar Lounge)",
+     "type": "Seminar",
+     "meeting_type": "Class",
+     "url": "https://app.notion.com/p/16-987-Grad-Seminar-Seminar-02-Mental-Physical-Health-3e2ea74eb779819b9b33c4a19264dd8b"
     },
     {
      "name": "IDS.412 Tech & Policy: Lecture 04: Knowledge Assessment (STS and other perspectives)",
@@ -44,16 +56,16 @@
      "url": "https://app.notion.com/p/16-990-Creative-Teams-Lecture-04-Developing-Personal-Skills-Personality-and-leadership-3d8ea74eb77981f299e1c7c27fcab473"
     },
     {
-     "name": "[PREP] 16.842 Systems Eng: A1 T-7: Build it: Team Formation, Stakeholders & ConOps",
-     "date": "2026-09-21T19:00:00.000-04:00",
+     "name": "PSET1 Prep",
+     "date": "2026-09-21T17:00:00.000-04:00",
      "end": "2026-09-21T20:30:00.000-04:00",
      "done": false,
-     "kind": "16.842",
+     "kind": "14.003",
      "src": "class",
      "location": "",
      "type": "",
      "meeting_type": "Class",
-     "url": "https://app.notion.com/p/PREP-16-842-Systems-Eng-A1-T-7-Build-it-Team-Formation-Stakeholders-ConOps-3dcea74eb7798108b715e3e13d495f12"
+     "url": "https://app.notion.com/p/PSET1-Prep-ba31c8b7a61645658a02337251e9e426"
     },
     {
      "name": "14.003 Office Hours \u2014 Anoushka Tamhane",
@@ -68,16 +80,16 @@
      "url": "https://app.notion.com/p/14-003-Office-Hours-Anoushka-Tamhane-3dcea74eb77981fa86d6f3165398f682"
     },
     {
-     "name": "Claim free Neuro Gum pack at Costco or Walmart",
-     "date": "2026-09-21T20:00:00.000-04:00",
-     "end": "2026-09-21T20:30:00.000-04:00",
+     "name": "[PREP] 16.842 Systems Eng: A1 T-7: Build it: Team Formation, Stakeholders & ConOps",
+     "date": "2026-09-21T20:30:00.000-04:00",
+     "end": "2026-09-21T22:00:00.000-04:00",
      "done": false,
-     "kind": "Personal",
-     "src": "task",
+     "kind": "16.842",
+     "src": "class",
      "location": "",
-     "type": "Task",
-     "meeting_type": "Personal",
-     "url": "https://app.notion.com/p/Claim-free-Neuro-Gum-pack-at-Costco-or-Walmart-3e1ea74eb7798103844ad365bc4175b7"
+     "type": "",
+     "meeting_type": "Class",
+     "url": "https://app.notion.com/p/PREP-16-842-Systems-Eng-A1-T-7-Build-it-Team-Formation-Stakeholders-ConOps-3dcea74eb7798108b715e3e13d495f12"
     },
     {
      "name": "TSK Cut and file the day's notes into the binder",
@@ -97,18 +109,6 @@
    "date": "2026-09-22",
    "is_today": false,
    "items": [
-    {
-     "name": "Haircut",
-     "date": "2026-09-22T09:00:00.000-04:00",
-     "end": "2026-09-22T10:00:00.000-04:00",
-     "done": false,
-     "kind": "Task",
-     "src": "task",
-     "location": "",
-     "type": "Task",
-     "meeting_type": "",
-     "url": "https://app.notion.com/p/Haircut-a9014ccef7ae4f168bb119103dbf0803"
-    },
     {
      "name": "TSK Submit dual degree petition (TPP + AeroAstro)",
      "date": "2026-09-22T10:00:00.000-04:00",
@@ -308,18 +308,6 @@
      "url": "https://app.notion.com/p/IDS-412-Office-Hours-Noelle-Eckley-Selin-3dcea74eb7798111be40d0619d19eb76"
     },
     {
-     "name": "[DUE] 14.003 Microecon & Policy: Problem Set 01: Minimum wage, research design, causal inference",
-     "date": "2026-09-23T19:00:00.000-04:00",
-     "end": "2026-09-23T20:00:00.000-04:00",
-     "done": false,
-     "kind": "14.003",
-     "src": "class",
-     "location": "",
-     "type": "",
-     "meeting_type": "Class",
-     "url": "https://app.notion.com/p/DUE-14-003-Microecon-Policy-Problem-Set-01-Minimum-wage-research-design-causal-inference-3daea74eb779815ea169d2b6942cb480"
-    },
-    {
      "name": "14.003 Office Hours \u2014 Ragini Srinivasan",
      "date": "2026-09-23T20:30:00.000+00:00",
      "end": "2026-09-23T22:00:00.000+00:00",
@@ -374,6 +362,18 @@
      "url": "https://app.notion.com/p/14-003-Office-Hours-M-lyne-Nzabonimpa-3dcea74eb77981018808f0b2b2325d96"
     },
     {
+     "name": "[DUE] 14.003 Microecon & Policy: Problem Set 01: Minimum wage, research design, causal inference",
+     "date": "2026-09-24T21:00:00.000-04:00",
+     "end": "2026-09-24T22:00:00.000-04:00",
+     "done": false,
+     "kind": "14.003",
+     "src": "class",
+     "location": "",
+     "type": "",
+     "meeting_type": "Class",
+     "url": "https://app.notion.com/p/DUE-14-003-Microecon-Policy-Problem-Set-01-Minimum-wage-research-design-causal-inference-3daea74eb779815ea169d2b6942cb480"
+    },
+    {
      "name": "TSK Cut and file the day's notes into the binder",
      "date": "2026-09-24T22:00:00.000-04:00",
      "end": "2026-09-24T22:15:00.000-04:00",
@@ -403,6 +403,30 @@
    "date": "2026-09-25",
    "is_today": false,
    "items": [
+    {
+     "name": "14.003 Microecon & Policy: Recitation Week 3",
+     "date": "2026-09-25T09:00:00.000-04:00",
+     "end": "2026-09-25T10:00:00.000-04:00",
+     "done": false,
+     "kind": "14.003",
+     "src": "class",
+     "location": "E52-164 at 0900, or E51-057 at 1000",
+     "type": "Seminar",
+     "meeting_type": "Class",
+     "url": "https://app.notion.com/p/14-003-Microecon-Policy-Recitation-Week-3-3e2ea74eb7798186a98fc129b9b07559"
+    },
+    {
+     "name": "Claim free Neuro Gum pack at Costco or Walmart",
+     "date": "2026-09-25T14:00:00.000-04:00",
+     "end": "2026-09-25T14:30:00.000-04:00",
+     "done": false,
+     "kind": "Personal",
+     "src": "task",
+     "location": "",
+     "type": "Task",
+     "meeting_type": "Personal",
+     "url": "https://app.notion.com/p/Claim-free-Neuro-Gum-pack-at-Costco-or-Walmart-3e1ea74eb7798103844ad365bc4175b7"
+    },
     {
      "name": "16.S896 RASCAL: Session 03: Team Kickoffs and Framework 1: Lordos Innovation Framework",
      "date": "2026-09-25T15:00:00.000-04:00",
@@ -526,5 +550,5 @@
    ]
   }
  ],
- "total": 40
+ "total": 42
 }

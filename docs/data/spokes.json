@@ -1,6 +1,226 @@
 {
  "classes": [
   {
+   "name": "14.003 Microecon & Policy: Recitation Week 10",
+   "code": "14.003",
+   "date": "2026-12-04T09:00:00.000-05:00",
+   "due": "",
+   "status": "",
+   "type": "Seminar",
+   "room": "E52-164 at 0900, or E51-057 at 1000",
+   "url": "https://app.notion.com/p/14-003-Microecon-Policy-Recitation-Week-10-3e2ea74eb77981bb865fc8c2fdcf2165"
+  },
+  {
+   "name": "14.003 Microecon & Policy: Recitation Optional Post-Exam Drop-In",
+   "code": "14.003",
+   "date": "2026-11-20T09:00:00.000-05:00",
+   "due": "",
+   "status": "",
+   "type": "Seminar",
+   "room": "E52-164 at 0900, or E51-057 at 1000",
+   "url": "https://app.notion.com/p/14-003-Microecon-Policy-Recitation-Optional-Post-Exam-Drop-In-3e2ea74eb77981559b62fbadc5923900"
+  },
+  {
+   "name": "14.003 Microecon & Policy: Recitation Week 9",
+   "code": "14.003",
+   "date": "2026-11-13T09:00:00.000-05:00",
+   "due": "",
+   "status": "",
+   "type": "Seminar",
+   "room": "E52-164 at 0900, or E51-057 at 1000",
+   "url": "https://app.notion.com/p/14-003-Microecon-Policy-Recitation-Week-9-3e2ea74eb77981409937d854bfe11a49"
+  },
+  {
+   "name": "14.003 Microecon & Policy: Recitation Week 8",
+   "code": "14.003",
+   "date": "2026-11-06T09:00:00.000-05:00",
+   "due": "",
+   "status": "",
+   "type": "Seminar",
+   "room": "E52-164 at 0900, or E51-057 at 1000",
+   "url": "https://app.notion.com/p/14-003-Microecon-Policy-Recitation-Week-8-3e2ea74eb77981dc86d8e8baca82527b"
+  },
+  {
+   "name": "14.003 Microecon & Policy: Recitation Week 7",
+   "code": "14.003",
+   "date": "2026-10-30T09:00:00.000-04:00",
+   "due": "",
+   "status": "",
+   "type": "Seminar",
+   "room": "E52-164 at 0900, or E51-057 at 1000",
+   "url": "https://app.notion.com/p/14-003-Microecon-Policy-Recitation-Week-7-3e2ea74eb77981329293de04417f866b"
+  },
+  {
+   "name": "14.003 Microecon & Policy: Recitation Week 6",
+   "code": "14.003",
+   "date": "2026-10-23T09:00:00.000-04:00",
+   "due": "",
+   "status": "",
+   "type": "Seminar",
+   "room": "E52-164 at 0900, or E51-057 at 1000",
+   "url": "https://app.notion.com/p/14-003-Microecon-Policy-Recitation-Week-6-3e2ea74eb77981a58426c67628fb2a89"
+  },
+  {
+   "name": "14.003 Microecon & Policy: Recitation Optional Post-Exam Drop-In",
+   "code": "14.003",
+   "date": "2026-10-16T09:00:00.000-04:00",
+   "due": "",
+   "status": "",
+   "type": "Seminar",
+   "room": "E52-164 at 0900, or E51-057 at 1000",
+   "url": "https://app.notion.com/p/14-003-Microecon-Policy-Recitation-Optional-Post-Exam-Drop-In-3e2ea74eb77981f588a3c396fa51623e"
+  },
+  {
+   "name": "14.003 Microecon & Policy: Recitation Week 5",
+   "code": "14.003",
+   "date": "2026-10-09T09:00:00.000-04:00",
+   "due": "",
+   "status": "",
+   "type": "Seminar",
+   "room": "E52-164 at 0900, or E51-057 at 1000",
+   "url": "https://app.notion.com/p/14-003-Microecon-Policy-Recitation-Week-5-3e2ea74eb779816ab971dabd2213d6a7"
+  },
+  {
+   "name": "14.003 Microecon & Policy: Recitation Week 4",
+   "code": "14.003",
+   "date": "2026-10-02T09:00:00.000-04:00",
+   "due": "",
+   "status": "",
+   "type": "Seminar",
+   "room": "E52-164 at 0900, or E51-057 at 1000",
+   "url": "https://app.notion.com/p/14-003-Microecon-Policy-Recitation-Week-4-3e2ea74eb7798129848ad0d85a9b7d30"
+  },
+  {
+   "name": "14.003 Microecon & Policy: Recitation Week 3",
+   "code": "14.003",
+   "date": "2026-09-25T09:00:00.000-04:00",
+   "due": "",
+   "status": "",
+   "type": "Seminar",
+   "room": "E52-164 at 0900, or E51-057 at 1000",
+   "url": "https://app.notion.com/p/14-003-Microecon-Policy-Recitation-Week-3-3e2ea74eb7798186a98fc129b9b07559"
+  },
+  {
+   "name": "16.987 Grad Seminar: Seminar 12: Community Engagement (Last day)",
+   "code": "16.987",
+   "date": "2026-12-07T11:30:00.000-05:00",
+   "due": "",
+   "status": "",
+   "type": "Seminar",
+   "room": "37-252 (Marlar Lounge)",
+   "url": "https://app.notion.com/p/16-987-Grad-Seminar-Seminar-12-Community-Engagement-Last-day-3e2ea74eb77981d7acc0eef380409f74"
+  },
+  {
+   "name": "16.987 Grad Seminar: Seminar 11: Professional Development: Internships",
+   "code": "16.987",
+   "date": "2026-11-30T11:30:00.000-05:00",
+   "due": "",
+   "status": "",
+   "type": "Seminar",
+   "room": "37-252 (Marlar Lounge)",
+   "url": "https://app.notion.com/p/16-987-Grad-Seminar-Seminar-11-Professional-Development-Internships-3e2ea74eb7798124a8f1cfe81a85b7fd"
+  },
+  {
+   "name": "16.987 Grad Seminar: Seminar 10: OGE Sponsored Event",
+   "code": "16.987",
+   "date": "2026-11-23T11:30:00.000-05:00",
+   "due": "",
+   "status": "",
+   "type": "Seminar",
+   "room": "37-252 (Marlar Lounge)",
+   "url": "https://app.notion.com/p/16-987-Grad-Seminar-Seminar-10-OGE-Sponsored-Event-3e2ea74eb7798120afead3b8e31b0721"
+  },
+  {
+   "name": "16.987 Grad Seminar: Seminar 09: UROPS",
+   "code": "16.987",
+   "date": "2026-11-16T11:30:00.000-05:00",
+   "due": "",
+   "status": "",
+   "type": "Seminar",
+   "room": "37-252 (Marlar Lounge)",
+   "url": "https://app.notion.com/p/16-987-Grad-Seminar-Seminar-09-UROPS-3e2ea74eb77981e7b98aea193d54b87a"
+  },
+  {
+   "name": "16.987 Grad Seminar: Seminar 08: Maximizing Impact by Minimizing Barriers",
+   "code": "16.987",
+   "date": "2026-11-09T11:30:00.000-05:00",
+   "due": "",
+   "status": "",
+   "type": "Seminar",
+   "room": "37-252 (Marlar Lounge)",
+   "url": "https://app.notion.com/p/16-987-Grad-Seminar-Seminar-08-Maximizing-Impact-by-Minimizing-Barriers-3e2ea74eb7798124ac1fe6f3bbcc23da"
+  },
+  {
+   "name": "16.987 Grad Seminar: Seminar 07: Research & Publishing",
+   "code": "16.987",
+   "date": "2026-11-02T11:30:00.000-05:00",
+   "due": "",
+   "status": "",
+   "type": "Seminar",
+   "room": "37-252 (Marlar Lounge)",
+   "url": "https://app.notion.com/p/16-987-Grad-Seminar-Seminar-07-Research-Publishing-3e2ea74eb77981b4a595d9f5c514701c"
+  },
+  {
+   "name": "16.987 Grad Seminar: Seminar 06: Professional Development: Networking",
+   "code": "16.987",
+   "date": "2026-10-26T11:30:00.000-04:00",
+   "due": "",
+   "status": "",
+   "type": "Seminar",
+   "room": "37-252 (Marlar Lounge)",
+   "url": "https://app.notion.com/p/16-987-Grad-Seminar-Seminar-06-Professional-Development-Networking-3e2ea74eb77981e69f3ed14a7f66bef6"
+  },
+  {
+   "name": "16.987 Grad Seminar: Seminar 05: GradEL",
+   "code": "16.987",
+   "date": "2026-10-19T11:30:00.000-04:00",
+   "due": "",
+   "status": "",
+   "type": "Seminar",
+   "room": "37-252 (Marlar Lounge)",
+   "url": "https://app.notion.com/p/16-987-Grad-Seminar-Seminar-05-GradEL-3e2ea74eb7798125ae9fd6696ec85575"
+  },
+  {
+   "name": "16.987 Grad Seminar: Seminar 04: Organizing a Research Paper",
+   "code": "16.987",
+   "date": "2026-10-05T11:30:00.000-04:00",
+   "due": "",
+   "status": "",
+   "type": "Seminar",
+   "room": "37-252 (Marlar Lounge)",
+   "url": "https://app.notion.com/p/16-987-Grad-Seminar-Seminar-04-Organizing-a-Research-Paper-3e2ea74eb77981a599f8d9a40622a468"
+  },
+  {
+   "name": "16.987 Grad Seminar: Seminar 03: Professional Development: Requirement Overview",
+   "code": "16.987",
+   "date": "2026-09-28T11:30:00.000-04:00",
+   "due": "",
+   "status": "",
+   "type": "Seminar",
+   "room": "37-252 (Marlar Lounge)",
+   "url": "https://app.notion.com/p/16-987-Grad-Seminar-Seminar-03-Professional-Development-Requirement-Overview-3e2ea74eb77981a79f78ff4462326f80"
+  },
+  {
+   "name": "16.987 Grad Seminar: Seminar 02: Mental/Physical Health",
+   "code": "16.987",
+   "date": "2026-09-21T11:30:00.000-04:00",
+   "due": "",
+   "status": "",
+   "type": "Seminar",
+   "room": "37-252 (Marlar Lounge)",
+   "url": "https://app.notion.com/p/16-987-Grad-Seminar-Seminar-02-Mental-Physical-Health-3e2ea74eb779819b9b33c4a19264dd8b"
+  },
+  {
+   "name": "PSET1 Prep",
+   "code": "14.003",
+   "date": "2026-09-21T17:00:00.000-04:00",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "",
+   "url": "https://app.notion.com/p/PSET1-Prep-ba31c8b7a61645658a02337251e9e426"
+  },
+  {
    "name": "Work on 14.003 PSET",
    "code": "14.003",
    "date": "2026-09-17T20:30:00.000-04:00",
@@ -1313,7 +1533,7 @@
   {
    "name": "[PREP] 16.842 Systems Eng: A1 T-7: Build it: Team Formation, Stakeholders & ConOps",
    "code": "16.842",
-   "date": "2026-09-21T19:00:00.000-04:00",
+   "date": "2026-09-21T20:30:00.000-04:00",
    "due": "",
    "status": "Not started",
    "type": "",
@@ -1643,7 +1863,7 @@
   {
    "name": "[DUE] 14.003 Microecon & Policy: Problem Set 01: Minimum wage, research design, causal inference",
    "code": "14.003",
-   "date": "2026-09-23T19:00:00.000-04:00",
+   "date": "2026-09-24T21:00:00.000-04:00",
    "due": "",
    "status": "Not started",
    "type": "",
