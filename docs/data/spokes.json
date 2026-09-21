@@ -1,6 +1,146 @@
 {
  "classes": [
   {
+   "name": "14.003 Microecon & Policy: Exam 03: Lectures 18 to 23, date not yet published",
+   "code": "14.003",
+   "date": "",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "not published",
+   "url": "https://app.notion.com/p/14-003-Microecon-Policy-Exam-03-Lectures-18-to-23-date-not-yet-published-3e2ea74eb7798184bab2c831eca2b546"
+  },
+  {
+   "name": "IDS.412 Tech & Policy: Assignment 02: Paper 2 written",
+   "code": "IDS.412",
+   "date": "2026-12-09T23:59:00.000-05:00",
+   "due": "",
+   "status": "Not started",
+   "type": "",
+   "room": "not published in Canvas",
+   "url": "https://app.notion.com/p/IDS-412-Tech-Policy-Assignment-02-Paper-2-written-3e2ea74eb779818ab5f3e216be39d7b8"
+  },
+  {
+   "name": "IDS.412 Tech & Policy: Recitation Week 14",
+   "code": "IDS.412",
+   "date": "2026-12-09T16:00:00.000-05:00",
+   "due": "",
+   "status": "Not started",
+   "type": "",
+   "room": "66-168",
+   "url": "https://app.notion.com/p/IDS-412-Tech-Policy-Recitation-Week-14-3e2ea74eb7798134a047e29b15fe8907"
+  },
+  {
+   "name": "16.990 Creative Teams: Lecture 26: Learning from your final autobiographical papers",
+   "code": "16.990",
+   "date": "2026-12-09T14:30:00.000-04:00",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "9-354",
+   "url": "https://app.notion.com/p/16-990-Creative-Teams-Lecture-26-Learning-from-your-final-autobiographical-papers-3e2ea74eb77981b9b7a9f1678ea8ccf5"
+  },
+  {
+   "name": "IDS.412 Tech & Policy: Seminar 26: Summary: Future of science, technology and policy II (virtual panel)",
+   "code": "IDS.412",
+   "date": "2026-12-09T13:00:00.000-05:00",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "virtual panel, no room published",
+   "url": "https://app.notion.com/p/IDS-412-Tech-Policy-Seminar-26-Summary-Future-of-science-technology-and-policy-II-virtual-pan-3e2ea74eb77981c8b872ea2d33add041"
+  },
+  {
+   "name": "14.003 Microecon & Policy: Lecture 23: Prediction, machine learning, and decision-making",
+   "code": "14.003",
+   "date": "2026-12-09T10:30:00.000-05:00",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "E51-376",
+   "url": "https://app.notion.com/p/14-003-Microecon-Policy-Lecture-23-Prediction-machine-learning-and-decision-making-3e2ea74eb779810e82d7fec39fd9c8f3"
+  },
+  {
+   "name": "16.842 Systems Eng: Presentation 02: Final Team Presentation (30 min)",
+   "code": "16.842",
+   "date": "2026-12-08T11:00:00.000-05:00",
+   "due": "",
+   "status": "Not started",
+   "type": "Presentation",
+   "room": "33-218",
+   "url": "https://app.notion.com/p/16-842-Systems-Eng-Presentation-02-Final-Team-Presentation-30-min-3e2ea74eb7798112a117f96e4c0491da"
+  },
+  {
+   "name": "16.990 Creative Teams: Lecture 25: Developing Personal and Interpersonal Skills: Negotiating your job offers",
+   "code": "16.990",
+   "date": "2026-12-07T14:30:00.000-04:00",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "9-354",
+   "url": "https://app.notion.com/p/16-990-Creative-Teams-Lecture-25-Developing-Personal-and-Interpersonal-Skills-Negotiating-your-jo-3e2ea74eb7798106ae45fbeb8fef1121"
+  },
+  {
+   "name": "IDS.412 Tech & Policy: Seminar 25: Summary: Future of science, technology and policy I (virtual panel)",
+   "code": "IDS.412",
+   "date": "2026-12-07T13:00:00.000-05:00",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "virtual panel, no room published",
+   "url": "https://app.notion.com/p/IDS-412-Tech-Policy-Seminar-25-Summary-Future-of-science-technology-and-policy-I-virtual-pane-3e2ea74eb7798105a16bd5c231c67798"
+  },
+  {
+   "name": "16.987 Grad Seminar: Seminar 12: Community Engagement (Last day)",
+   "code": "16.987",
+   "date": "2026-12-07T11:30:00.000-05:00",
+   "due": "",
+   "status": "",
+   "type": "Seminar",
+   "room": "37-252 (Marlar Lounge)",
+   "url": "https://app.notion.com/p/16-987-Grad-Seminar-Seminar-12-Community-Engagement-Last-day-3e2ea74eb77981fb99d9fb64d115c941"
+  },
+  {
+   "name": "14.003 Microecon & Policy: Lecture 22: Prediction, machine learning, and decision-making",
+   "code": "14.003",
+   "date": "2026-12-07T10:30:00.000-05:00",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "E51-376",
+   "url": "https://app.notion.com/p/14-003-Microecon-Policy-Lecture-22-Prediction-machine-learning-and-decision-making-3e2ea74eb77981229ec9cb911220c902"
+  },
+  {
+   "name": "16.842 Systems Eng: Presentation 01: A5 Final Project Presentation Materials DUE",
+   "code": "16.842",
+   "date": "2026-12-07",
+   "due": "",
+   "status": "Not started",
+   "type": "Presentation",
+   "room": "Submission channel not published in the syllabus",
+   "url": "https://app.notion.com/p/16-842-Systems-Eng-Presentation-01-A5-Final-Project-Presentation-Materials-DUE-3e2ea74eb779817091acfdb0170a53e4"
+  },
+  {
+   "name": "[PREP] 16.842 Systems Eng: A5 T-3: Finish it: Final Project Presentation Materials",
+   "code": "16.842",
+   "date": "2026-12-04T19:00:00.000-05:00",
+   "due": "",
+   "status": "Not started",
+   "type": "",
+   "room": "",
+   "url": "https://app.notion.com/p/PREP-16-842-Systems-Eng-A5-T-3-Finish-it-Final-Project-Presentation-Materials-3e2ea74eb77981e0a560cf50a8c0715b"
+  },
+  {
+   "name": "16.S896 RASCAL: Presentation 03: Final Concept Review (external judges, 20%)",
+   "code": "16.S896",
+   "date": "2026-12-04T15:00:00.000-05:00",
+   "due": "",
+   "status": "Not started",
+   "type": "Presentation",
+   "room": "9-354 per syllabus v9; Canvas section says 33-218; hybrid on Zoom. Conflict unresolved.",
+   "url": "https://app.notion.com/p/16-S896-RASCAL-Presentation-03-Final-Concept-Review-external-judges-20-3e2ea74eb779812a9f56d24ab6b515e6"
+  },
+  {
    "name": "14.003 Microecon & Policy: Recitation Week 10",
    "code": "14.003",
    "date": "2026-12-04T09:00:00.000-05:00",
@@ -8,7 +148,237 @@
    "status": "",
    "type": "Seminar",
    "room": "E52-164 at 0900, or E51-057 at 1000",
-   "url": "https://app.notion.com/p/14-003-Microecon-Policy-Recitation-Week-10-3e2ea74eb77981bb865fc8c2fdcf2165"
+   "url": "https://app.notion.com/p/14-003-Microecon-Policy-Recitation-Week-10-3e2ea74eb77981ccbdbcd5b2a56ee268"
+  },
+  {
+   "name": "16.S896 RASCAL: Assignment: A5: Seven Beat One Pager (5%)",
+   "code": "16.S896",
+   "date": "2026-12-04",
+   "due": "",
+   "status": "",
+   "type": "Homework",
+   "room": "No room, submission. Class itself: 9-354 per syllabus v9 vs 33-218 per Canvas, unresolved.",
+   "url": "https://app.notion.com/p/16-S896-RASCAL-Assignment-A5-Seven-Beat-One-Pager-5-3e2ea74eb779819d922aebd0c65d09ad"
+  },
+  {
+   "name": "14.003 Microecon & Policy: Problem Set 05: Externalities, risk and safety, adverse selection and moral hazard",
+   "code": "14.003",
+   "date": "2026-12-03T23:59:00.000-05:00",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "Not applicable, Gradescope submission. Room not published in Canvas",
+   "url": "https://app.notion.com/p/14-003-Microecon-Policy-Problem-Set-05-Externalities-risk-and-safety-adverse-selection-and-mor-3e2ea74eb77981fb973bf7112ec521e8"
+  },
+  {
+   "name": "IDS.412 Tech & Policy: Recitation Week 13",
+   "code": "IDS.412",
+   "date": "2026-12-02T16:00:00.000-05:00",
+   "due": "",
+   "status": "Not started",
+   "type": "",
+   "room": "66-168",
+   "url": "https://app.notion.com/p/IDS-412-Tech-Policy-Recitation-Week-13-3e2ea74eb779815c9bd3dc76bc631c28"
+  },
+  {
+   "name": "16.990 Creative Teams: Lecture 24: Leading Creative Teams in AI contexts; Practice negotiation skills",
+   "code": "16.990",
+   "date": "2026-12-02T14:30:00.000-04:00",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "9-354",
+   "url": "https://app.notion.com/p/16-990-Creative-Teams-Lecture-24-Leading-Creative-Teams-in-AI-contexts-Practice-negotiation-skill-3e2ea74eb779813aa889c48b2dbf9ea6"
+  },
+  {
+   "name": "IDS.412 Tech & Policy: Presentation 24: Summary: Presentations II",
+   "code": "IDS.412",
+   "date": "2026-12-02T13:00:00.000-05:00",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "66-168",
+   "url": "https://app.notion.com/p/IDS-412-Tech-Policy-Presentation-24-Summary-Presentations-II-3e2ea74eb779811790c6dec5fb1b98c8"
+  },
+  {
+   "name": "14.003 Microecon & Policy: Lecture 21: Discrimination in labor markets: Banning the box",
+   "code": "14.003",
+   "date": "2026-12-02T10:30:00.000-05:00",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "E51-376",
+   "url": "https://app.notion.com/p/14-003-Microecon-Policy-Lecture-21-Discrimination-in-labor-markets-Banning-the-box-3e2ea74eb77981c3ba0fd84bbaf925a5"
+  },
+  {
+   "name": "16.842 Systems Eng: Exam 01: Individual Oral Exam",
+   "code": "16.842",
+   "date": "2026-12-01T11:00:00.000-05:00",
+   "due": "",
+   "status": "Not started",
+   "type": "Exam",
+   "room": "33-218",
+   "url": "https://app.notion.com/p/16-842-Systems-Eng-Exam-01-Individual-Oral-Exam-3e2ea74eb77981d3b769dc395d54413b"
+  },
+  {
+   "name": "[PREP] 16.842 Systems Eng: A5 T-7: Build it: Final Project Presentation Materials",
+   "code": "16.842",
+   "date": "2026-11-30T19:00:00.000-05:00",
+   "due": "",
+   "status": "Not started",
+   "type": "",
+   "room": "",
+   "url": "https://app.notion.com/p/PREP-16-842-Systems-Eng-A5-T-7-Build-it-Final-Project-Presentation-Materials-3e2ea74eb77981c8b1fed2127eaa2fd2"
+  },
+  {
+   "name": "16.990 Creative Teams: Lecture 23: Developing Teamwork and Organizational Skills: Creating motivating environments in",
+   "code": "16.990",
+   "date": "2026-11-30T14:30:00.000-04:00",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "9-354",
+   "url": "https://app.notion.com/p/16-990-Creative-Teams-Lecture-23-Developing-Teamwork-and-Organizational-Skills-Creating-motivatin-3e2ea74eb7798127ac6bc5333ab3e45e"
+  },
+  {
+   "name": "IDS.412 Tech & Policy: Presentation 23: Summary: Presentations I",
+   "code": "IDS.412",
+   "date": "2026-11-30T13:00:00.000-05:00",
+   "due": "",
+   "status": "Not started",
+   "type": "",
+   "room": "66-168",
+   "url": "https://app.notion.com/p/IDS-412-Tech-Policy-Presentation-23-Summary-Presentations-I-3e2ea74eb77981f5b9adfdf30db73df8"
+  },
+  {
+   "name": "[STUDY] 16.842 Systems Eng: Exam 01 T-1: Light retrieval pass: no new material",
+   "code": "16.842",
+   "date": "2026-11-30T12:00:00.000-05:00",
+   "due": "",
+   "status": "Not started",
+   "type": "",
+   "room": "",
+   "url": "https://app.notion.com/p/STUDY-16-842-Systems-Eng-Exam-01-T-1-Light-retrieval-pass-no-new-material-3e2ea74eb7798164afc9e0f42aeb6a9f"
+  },
+  {
+   "name": "16.987 Grad Seminar: Seminar 11: Professional Development: Internships",
+   "code": "16.987",
+   "date": "2026-11-30T11:30:00.000-05:00",
+   "due": "",
+   "status": "",
+   "type": "Seminar",
+   "room": "37-252 (Marlar Lounge)",
+   "url": "https://app.notion.com/p/16-987-Grad-Seminar-Seminar-11-Professional-Development-Internships-3e2ea74eb7798123ad65e0291bf1d394"
+  },
+  {
+   "name": "14.003 Microecon & Policy: Lecture 20: Moral hazard in the housing market: Subprime lending",
+   "code": "14.003",
+   "date": "2026-11-30T10:30:00.000-05:00",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "E51-376",
+   "url": "https://app.notion.com/p/14-003-Microecon-Policy-Lecture-20-Moral-hazard-in-the-housing-market-Subprime-lending-3e2ea74eb7798115a202d3e8c626b698"
+  },
+  {
+   "name": "[STUDY] 16.842 Systems Eng: Exam 01 T-4: Full blank-page recall of the whole syllabus, then close only the gaps you found",
+   "code": "16.842",
+   "date": "2026-11-30T08:00:00.000-05:00",
+   "due": "",
+   "status": "Not started",
+   "type": "",
+   "room": "",
+   "url": "https://app.notion.com/p/STUDY-16-842-Systems-Eng-Exam-01-T-4-Full-blank-page-recall-of-the-whole-syllabus-then-close-onl-3e2ea74eb77981ff82f3efd81f3c12ab"
+  },
+  {
+   "name": "16.990 Creative Teams: Lecture 22: Developing Teamwork Skills: Learning from team experiences; Introduction to power and",
+   "code": "16.990",
+   "date": "2026-11-25T14:30:00.000-04:00",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "9-354",
+   "url": "https://app.notion.com/p/16-990-Creative-Teams-Lecture-22-Developing-Teamwork-Skills-Learning-from-team-experiences-Intro-3e2ea74eb77981c08437d22793f5668e"
+  },
+  {
+   "name": "IDS.412 Tech & Policy: Admin 22: No class: Thanksgiving week",
+   "code": "IDS.412",
+   "date": "2026-11-25T13:00:00.000-05:00",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "no class",
+   "url": "https://app.notion.com/p/IDS-412-Tech-Policy-Admin-22-No-class-Thanksgiving-week-3e2ea74eb77981958636d00442afd71c"
+  },
+  {
+   "name": "16.842 Systems Eng: Lecture 10: Integration & Operations",
+   "code": "16.842",
+   "date": "2026-11-24T11:00:00.000-05:00",
+   "due": "",
+   "status": "Not started",
+   "type": "Lecture",
+   "room": "33-218",
+   "url": "https://app.notion.com/p/16-842-Systems-Eng-Lecture-10-Integration-Operations-3e2ea74eb7798164afa0ce74ed540b16"
+  },
+  {
+   "name": "[PREP] 16.842 Systems Eng: A5 T-14: Scope it: Final Project Presentation Materials",
+   "code": "16.842",
+   "date": "2026-11-23T20:45:00.000-05:00",
+   "due": "",
+   "status": "Not started",
+   "type": "",
+   "room": "",
+   "url": "https://app.notion.com/p/PREP-16-842-Systems-Eng-A5-T-14-Scope-it-Final-Project-Presentation-Materials-3e2ea74eb779815dafc8e34a6ef850cb"
+  },
+  {
+   "name": "IDS.412 Tech & Policy: Admin 21: No class: Thanksgiving week",
+   "code": "IDS.412",
+   "date": "2026-11-23T13:00:00.000-05:00",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "no class",
+   "url": "https://app.notion.com/p/IDS-412-Tech-Policy-Admin-21-No-class-Thanksgiving-week-3e2ea74eb77981069be0fa2852d9b91f"
+  },
+  {
+   "name": "16.987 Grad Seminar: Seminar 10: OGE Sponsored Event",
+   "code": "16.987",
+   "date": "2026-11-23T11:30:00.000-05:00",
+   "due": "",
+   "status": "",
+   "type": "Seminar",
+   "room": "37-252 (Marlar Lounge)",
+   "url": "https://app.notion.com/p/16-987-Grad-Seminar-Seminar-10-OGE-Sponsored-Event-3e2ea74eb779819a850ff95367a23fd4"
+  },
+  {
+   "name": "14.003 Microecon & Policy: Lecture 19: Adverse selection",
+   "code": "14.003",
+   "date": "2026-11-23T10:30:00.000-05:00",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "E51-376",
+   "url": "https://app.notion.com/p/14-003-Microecon-Policy-Lecture-19-Adverse-selection-3e2ea74eb77981229a9bc136968a6d7b"
+  },
+  {
+   "name": "[STUDY] 16.842 Systems Eng: Exam 01 T-8: Past papers and problem sets under exam conditions, no notes",
+   "code": "16.842",
+   "date": "2026-11-23T08:00:00.000-05:00",
+   "due": "",
+   "status": "Not started",
+   "type": "",
+   "room": "",
+   "url": "https://app.notion.com/p/STUDY-16-842-Systems-Eng-Exam-01-T-8-Past-papers-and-problem-sets-under-exam-conditions-no-notes-3e2ea74eb77981b5968de28a169d5ac8"
+  },
+  {
+   "name": "16.S896 RASCAL: Session 11: WIP Presentations and Framework 5: Lordos Seven Beat Narrative",
+   "code": "16.S896",
+   "date": "2026-11-20T15:00:00.000-05:00",
+   "due": "",
+   "status": "",
+   "type": "Lecture",
+   "room": "9-354 per syllabus v9; Canvas section says 33-218; hybrid on Zoom. Conflict unresolved.",
+   "url": "https://app.notion.com/p/16-S896-RASCAL-Session-11-WIP-Presentations-and-Framework-5-Lordos-Seven-Beat-Narrative-3e2ea74eb77981ecb6f2e6ef758140dc"
   },
   {
    "name": "14.003 Microecon & Policy: Recitation Optional Post-Exam Drop-In",
@@ -18,7 +388,147 @@
    "status": "",
    "type": "Seminar",
    "room": "E52-164 at 0900, or E51-057 at 1000",
-   "url": "https://app.notion.com/p/14-003-Microecon-Policy-Recitation-Optional-Post-Exam-Drop-In-3e2ea74eb77981559b62fbadc5923900"
+   "url": "https://app.notion.com/p/14-003-Microecon-Policy-Recitation-Optional-Post-Exam-Drop-In-3e2ea74eb77981d9b106fad5a366d675"
+  },
+  {
+   "name": "16.S896 RASCAL: Assignment 02: Draft Proposal/Paper Due (20%)",
+   "code": "16.S896",
+   "date": "2026-11-20",
+   "due": "",
+   "status": "Not started",
+   "type": "Homework",
+   "room": "No room, submission. Class itself: 9-354 per syllabus v9 vs 33-218 per Canvas, unresolved.",
+   "url": "https://app.notion.com/p/16-S896-RASCAL-Assignment-02-Draft-Proposal-Paper-Due-20-3e2ea74eb77981bf84c3f079a0283bfa"
+  },
+  {
+   "name": "IDS.412 Tech & Policy: Recitation Week 11",
+   "code": "IDS.412",
+   "date": "2026-11-18T16:00:00.000-05:00",
+   "due": "",
+   "status": "Not started",
+   "type": "",
+   "room": "66-168",
+   "url": "https://app.notion.com/p/IDS-412-Tech-Policy-Recitation-Week-11-3e2ea74eb7798110abe7cf7de3be32c8"
+  },
+  {
+   "name": "IDS.412 Tech & Policy: Lecture 20: Cases: Environment II (air pollution and climate assessment)",
+   "code": "IDS.412",
+   "date": "2026-11-18T13:00:00.000-05:00",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "66-168",
+   "url": "https://app.notion.com/p/IDS-412-Tech-Policy-Lecture-20-Cases-Environment-II-air-pollution-and-climate-assessment-3e2ea74eb77981efba2bc2e1a5727384"
+  },
+  {
+   "name": "14.003 Microecon & Policy: Lecture 18: Risk and safety regulation: Hockey helmets, etc.",
+   "code": "14.003",
+   "date": "2026-11-18T10:30:00.000-05:00",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "E51-376",
+   "url": "https://app.notion.com/p/14-003-Microecon-Policy-Lecture-18-Risk-and-safety-regulation-Hockey-helmets-etc-3e2ea74eb7798133a1aed931119d6256"
+  },
+  {
+   "name": "16.842 Systems Eng: Lecture 09: Verification, Validation & Risk",
+   "code": "16.842",
+   "date": "2026-11-17T11:00:00.000-05:00",
+   "due": "",
+   "status": "Not started",
+   "type": "Lecture",
+   "room": "33-218",
+   "url": "https://app.notion.com/p/16-842-Systems-Eng-Lecture-09-Verification-Validation-Risk-3e2ea74eb7798102a55cd216a0470c51"
+  },
+  {
+   "name": "[STUDY] 16.842 Systems Eng: Exam 01 T-14: Closed-book retrieval: second half, same method",
+   "code": "16.842",
+   "date": "2026-11-17T08:00:00.000-05:00",
+   "due": "",
+   "status": "Not started",
+   "type": "",
+   "room": "",
+   "url": "https://app.notion.com/p/STUDY-16-842-Systems-Eng-Exam-01-T-14-Closed-book-retrieval-second-half-same-method-3e2ea74eb7798153b7ffcd22a7e6e1ba"
+  },
+  {
+   "name": "16.990 Creative Teams: Lecture 19: Developing Teamwork Skills: Groups will deliver their projects today",
+   "code": "16.990",
+   "date": "2026-11-16T14:30:00.000-04:00",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "9-354",
+   "url": "https://app.notion.com/p/16-990-Creative-Teams-Lecture-19-Developing-Teamwork-Skills-Groups-will-deliver-their-projects-to-3e2ea74eb77981fdb80ed7850ab62d12"
+  },
+  {
+   "name": "IDS.412 Tech & Policy: Lecture 19: Cases: Tech regulation, guest lecture Crystal Lee",
+   "code": "IDS.412",
+   "date": "2026-11-16T13:00:00.000-05:00",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "66-168",
+   "url": "https://app.notion.com/p/IDS-412-Tech-Policy-Lecture-19-Cases-Tech-regulation-guest-lecture-Crystal-Lee-3e2ea74eb7798172af9ac642373831a6"
+  },
+  {
+   "name": "16.987 Grad Seminar: Seminar 09: UROPS",
+   "code": "16.987",
+   "date": "2026-11-16T11:30:00.000-05:00",
+   "due": "",
+   "status": "",
+   "type": "Seminar",
+   "room": "37-252 (Marlar Lounge)",
+   "url": "https://app.notion.com/p/16-987-Grad-Seminar-Seminar-09-UROPS-3e2ea74eb779818c8e0ec92606c1f44c"
+  },
+  {
+   "name": "14.003 Microecon & Policy: Exam 02: Lectures 10 to 17",
+   "code": "14.003",
+   "date": "2026-11-16T10:30:00.000-05:00",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "E51-376, the normal lecture room, per the section name and the Class Overview PDF. Not separately confirmed for the exam in Canvas",
+   "url": "https://app.notion.com/p/14-003-Microecon-Policy-Exam-02-Lectures-10-to-17-3e2ea74eb77981cfa467db0209d20182"
+  },
+  {
+   "name": "16.842 Systems Eng: Assignment 06: A6 Written Reflective Memo (individual) DUE",
+   "code": "16.842",
+   "date": "2026-11-16",
+   "due": "",
+   "status": "Not started",
+   "type": "Homework",
+   "room": "Submission channel not published in the syllabus",
+   "url": "https://app.notion.com/p/16-842-Systems-Eng-Assignment-06-A6-Written-Reflective-Memo-individual-DUE-3e2ea74eb77981c29884eba90b987a81"
+  },
+  {
+   "name": "[STUDY] 14.003 Microecon & Policy: Exam 02 T-1: Light retrieval pass: no new material",
+   "code": "14.003",
+   "date": "2026-11-15T08:00:00.000-05:00",
+   "due": "",
+   "status": "Not started",
+   "type": "",
+   "room": "",
+   "url": "https://app.notion.com/p/STUDY-14-003-Microecon-Policy-Exam-02-T-1-Light-retrieval-pass-no-new-material-3e2ea74eb7798197ad7ac44516b05236"
+  },
+  {
+   "name": "[PREP] 16.842 Systems Eng: A6 T-3: Finish it: Written Reflective Memo (individual)",
+   "code": "16.842",
+   "date": "2026-11-13T19:00:00.000-05:00",
+   "due": "",
+   "status": "Not started",
+   "type": "",
+   "room": "",
+   "url": "https://app.notion.com/p/PREP-16-842-Systems-Eng-A6-T-3-Finish-it-Written-Reflective-Memo-individual-3e2ea74eb77981ba8b66f381edd4adf2"
+  },
+  {
+   "name": "16.S896 RASCAL: Session 10: WIP Presentations and Tool 2: FreeCAD Parametric Concept CAD",
+   "code": "16.S896",
+   "date": "2026-11-13T15:00:00.000-05:00",
+   "due": "",
+   "status": "",
+   "type": "Lecture",
+   "room": "9-354 per syllabus v9; Canvas section says 33-218; hybrid on Zoom. Conflict unresolved.",
+   "url": "https://app.notion.com/p/16-S896-RASCAL-Session-10-WIP-Presentations-and-Tool-2-FreeCAD-Parametric-Concept-CAD-3e2ea74eb7798185af44cf1f468fc18f"
   },
   {
    "name": "14.003 Microecon & Policy: Recitation Week 9",
@@ -28,7 +538,157 @@
    "status": "",
    "type": "Seminar",
    "room": "E52-164 at 0900, or E51-057 at 1000",
-   "url": "https://app.notion.com/p/14-003-Microecon-Policy-Recitation-Week-9-3e2ea74eb77981409937d854bfe11a49"
+   "url": "https://app.notion.com/p/14-003-Microecon-Policy-Recitation-Week-9-3e2ea74eb7798168914cf193022fb3f0"
+  },
+  {
+   "name": "16.S896 RASCAL: Assignment: A4: Cost Estimate with Calibration and Limits (5%)",
+   "code": "16.S896",
+   "date": "2026-11-13",
+   "due": "",
+   "status": "",
+   "type": "Homework",
+   "room": "No room, submission. Class itself: 9-354 per syllabus v9 vs 33-218 per Canvas, unresolved.",
+   "url": "https://app.notion.com/p/16-S896-RASCAL-Assignment-A4-Cost-Estimate-with-Calibration-and-Limits-5-3e2ea74eb77981139ad8c6b7a861ec9d"
+  },
+  {
+   "name": "14.003 Microecon & Policy: Problem Set 04: Trade and welfare",
+   "code": "14.003",
+   "date": "2026-11-12T23:59:00.000-05:00",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "Not applicable, Gradescope submission. Room not published in Canvas",
+   "url": "https://app.notion.com/p/14-003-Microecon-Policy-Problem-Set-04-Trade-and-welfare-3e2ea74eb779814ba47edb58d1c11bbf"
+  },
+  {
+   "name": "[STUDY] 14.003 Microecon & Policy: Exam 02 T-4: Full blank-page recall of the whole syllabus, then close only the gaps you found",
+   "code": "14.003",
+   "date": "2026-11-12T08:00:00.000-05:00",
+   "due": "",
+   "status": "Not started",
+   "type": "",
+   "room": "",
+   "url": "https://app.notion.com/p/STUDY-14-003-Microecon-Policy-Exam-02-T-4-Full-blank-page-recall-of-the-whole-syllabus-then-cl-3e2ea74eb77981c19bcdc2ddb2c384ea"
+  },
+  {
+   "name": "16.842 Systems Eng: Lecture 08: Safety",
+   "code": "16.842",
+   "date": "2026-11-10T11:00:00.000-05:00",
+   "due": "",
+   "status": "Not started",
+   "type": "Lecture",
+   "room": "33-218",
+   "url": "https://app.notion.com/p/16-842-Systems-Eng-Lecture-08-Safety-3e2ea74eb7798153ace5d4421c630de5"
+  },
+  {
+   "name": "[STUDY] 16.842 Systems Eng: Exam 01 T-21: Closed-book retrieval: first half of the material, write what you recall before checking",
+   "code": "16.842",
+   "date": "2026-11-10T08:00:00.000-05:00",
+   "due": "",
+   "status": "Not started",
+   "type": "",
+   "room": "",
+   "url": "https://app.notion.com/p/STUDY-16-842-Systems-Eng-Exam-01-T-21-Closed-book-retrieval-first-half-of-the-material-write-wh-3e2ea74eb779815ab316d628cafd0625"
+  },
+  {
+   "name": "[PREP] 16.842 Systems Eng: A6 T-7: Build it: Written Reflective Memo (individual)",
+   "code": "16.842",
+   "date": "2026-11-09T19:00:00.000-05:00",
+   "due": "",
+   "status": "Not started",
+   "type": "",
+   "room": "",
+   "url": "https://app.notion.com/p/PREP-16-842-Systems-Eng-A6-T-7-Build-it-Written-Reflective-Memo-individual-3e2ea74eb77981da8d22e9ff48a40131"
+  },
+  {
+   "name": "16.990 Creative Teams: Lecture 18: Developing Personal Skills: Learning to lead: The role of growth mindsets",
+   "code": "16.990",
+   "date": "2026-11-09T14:30:00.000-04:00",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "9-354",
+   "url": "https://app.notion.com/p/16-990-Creative-Teams-Lecture-18-Developing-Personal-Skills-Learning-to-lead-The-role-of-growth--3e2ea74eb779816a8006c425f4ae7357"
+  },
+  {
+   "name": "IDS.412 Tech & Policy: Admin 18: No class: project conference week",
+   "code": "IDS.412",
+   "date": "2026-11-09T13:00:00.000-05:00",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "no class",
+   "url": "https://app.notion.com/p/IDS-412-Tech-Policy-Admin-18-No-class-project-conference-week-3e2ea74eb779818886a5c08e27a800d6"
+  },
+  {
+   "name": "16.987 Grad Seminar: Seminar 08: Maximizing Impact by Minimizing Barriers",
+   "code": "16.987",
+   "date": "2026-11-09T11:30:00.000-05:00",
+   "due": "",
+   "status": "",
+   "type": "Seminar",
+   "room": "37-252 (Marlar Lounge)",
+   "url": "https://app.notion.com/p/16-987-Grad-Seminar-Seminar-08-Maximizing-Impact-by-Minimizing-Barriers-3e2ea74eb7798182aabed5b34687d7c5"
+  },
+  {
+   "name": "14.003 Microecon & Policy: Lecture 17: Externalities: Definition, consequences and remedies",
+   "code": "14.003",
+   "date": "2026-11-09T10:30:00.000-05:00",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "E51-376",
+   "url": "https://app.notion.com/p/14-003-Microecon-Policy-Lecture-17-Externalities-Definition-consequences-and-remedies-3e2ea74eb779812a9f0fc98930658c5b"
+  },
+  {
+   "name": "IDS.412 Tech & Policy: Presentation 02: Paper 2 conference",
+   "code": "IDS.412",
+   "date": "2026-11-09T09:00:00.000-05:00",
+   "due": "",
+   "status": "Not started",
+   "type": "",
+   "room": "not published in Canvas",
+   "url": "https://app.notion.com/p/IDS-412-Tech-Policy-Presentation-02-Paper-2-conference-3e2ea74eb779816d96fee477a5f8bdc3"
+  },
+  {
+   "name": "16.842 Systems Eng: Assignment 04: A4 Trade Space Exploration & Concept Selection DUE",
+   "code": "16.842",
+   "date": "2026-11-09",
+   "due": "",
+   "status": "Not started",
+   "type": "Homework",
+   "room": "Submission channel not published in the syllabus",
+   "url": "https://app.notion.com/p/16-842-Systems-Eng-Assignment-04-A4-Trade-Space-Exploration-Concept-Selection-DUE-3e2ea74eb7798100981deea071b7ef28"
+  },
+  {
+   "name": "[STUDY] 14.003 Microecon & Policy: Exam 02 T-8: Past papers and problem sets under exam conditions, no notes",
+   "code": "14.003",
+   "date": "2026-11-08T08:00:00.000-05:00",
+   "due": "",
+   "status": "Not started",
+   "type": "",
+   "room": "",
+   "url": "https://app.notion.com/p/STUDY-14-003-Microecon-Policy-Exam-02-T-8-Past-papers-and-problem-sets-under-exam-conditions-n-3e2ea74eb779812c9792c247494c4a91"
+  },
+  {
+   "name": "[PREP] 16.842 Systems Eng: A4 T-3: Finish it: Trade Space Exploration & Concept Selection",
+   "code": "16.842",
+   "date": "2026-11-06T19:00:00.000-05:00",
+   "due": "",
+   "status": "Not started",
+   "type": "",
+   "room": "",
+   "url": "https://app.notion.com/p/PREP-16-842-Systems-Eng-A4-T-3-Finish-it-Trade-Space-Exploration-Concept-Selection-3e2ea74eb7798112855ded17626ca3c2"
+  },
+  {
+   "name": "16.S896 RASCAL: Presentation 02: Concept Review (midterm, 15%)",
+   "code": "16.S896",
+   "date": "2026-11-06T15:00:00.000-05:00",
+   "due": "",
+   "status": "Not started",
+   "type": "Presentation",
+   "room": "9-354 per syllabus v9; Canvas section says 33-218; hybrid on Zoom. Conflict unresolved.",
+   "url": "https://app.notion.com/p/16-S896-RASCAL-Presentation-02-Concept-Review-midterm-15-3e2ea74eb77981b58e62d99d62596809"
   },
   {
    "name": "14.003 Microecon & Policy: Recitation Week 8",
@@ -38,7 +698,177 @@
    "status": "",
    "type": "Seminar",
    "room": "E52-164 at 0900, or E51-057 at 1000",
-   "url": "https://app.notion.com/p/14-003-Microecon-Policy-Recitation-Week-8-3e2ea74eb77981dc86d8e8baca82527b"
+   "url": "https://app.notion.com/p/14-003-Microecon-Policy-Recitation-Week-8-3e2ea74eb77981e6ab94f9cb8a364249"
+  },
+  {
+   "name": "16.S896 RASCAL: Assignment: A3: Robustness Scorecard, 10+ Vulnerabilities (5%)",
+   "code": "16.S896",
+   "date": "2026-11-06",
+   "due": "",
+   "status": "",
+   "type": "Homework",
+   "room": "No room, submission. Class itself: 9-354 per syllabus v9 vs 33-218 per Canvas, unresolved.",
+   "url": "https://app.notion.com/p/16-S896-RASCAL-Assignment-A3-Robustness-Scorecard-10-Vulnerabilities-5-3e2ea74eb77981c7831af5b36b0ef818"
+  },
+  {
+   "name": "IDS.412 Tech & Policy: Recitation Week 9",
+   "code": "IDS.412",
+   "date": "2026-11-04T16:00:00.000-05:00",
+   "due": "",
+   "status": "Not started",
+   "type": "",
+   "room": "66-168",
+   "url": "https://app.notion.com/p/IDS-412-Tech-Policy-Recitation-Week-9-3e2ea74eb779816fb26ad9019a64fb75"
+  },
+  {
+   "name": "16.990 Creative Teams: Lecture 17: Learning from your autobiographical paper assignment",
+   "code": "16.990",
+   "date": "2026-11-04T14:30:00.000-04:00",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "9-354",
+   "url": "https://app.notion.com/p/16-990-Creative-Teams-Lecture-17-Learning-from-your-autobiographical-paper-assignment-3e2ea74eb77981309181e6f6914e6113"
+  },
+  {
+   "name": "IDS.412 Tech & Policy: Exam 17: Midterm, in class short answer",
+   "code": "IDS.412",
+   "date": "2026-11-04T13:00:00.000-05:00",
+   "due": "",
+   "status": "Not started",
+   "type": "",
+   "room": "66-168",
+   "url": "https://app.notion.com/p/IDS-412-Tech-Policy-Exam-17-Midterm-in-class-short-answer-3e2ea74eb77981a5a98ec20849d72b35"
+  },
+  {
+   "name": "14.003 Microecon & Policy: Lecture 16: The free trade dilemma",
+   "code": "14.003",
+   "date": "2026-11-04T10:30:00.000-05:00",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "E51-376",
+   "url": "https://app.notion.com/p/14-003-Microecon-Policy-Lecture-16-The-free-trade-dilemma-3e2ea74eb7798112815bf34fb41d3750"
+  },
+  {
+   "name": "16.842 Systems Eng: Lecture 07: Finance, Budgets & Cost Estimation",
+   "code": "16.842",
+   "date": "2026-11-03T11:00:00.000-05:00",
+   "due": "",
+   "status": "Not started",
+   "type": "Lecture",
+   "room": "33-218",
+   "url": "https://app.notion.com/p/16-842-Systems-Eng-Lecture-07-Finance-Budgets-Cost-Estimation-3e2ea74eb77981fe9d1ae4ee412623ac"
+  },
+  {
+   "name": "[STUDY] 16.842 Systems Eng: Exam 01 T-28: Scope it: list every lecture and reading covered, then self-test cold to find the gaps",
+   "code": "16.842",
+   "date": "2026-11-03T09:00:00.000-05:00",
+   "due": "",
+   "status": "Not started",
+   "type": "",
+   "room": "",
+   "url": "https://app.notion.com/p/STUDY-16-842-Systems-Eng-Exam-01-T-28-Scope-it-list-every-lecture-and-reading-covered-then-self-3e2ea74eb779810c8ca9ea28ae5bcae1"
+  },
+  {
+   "name": "[STUDY] IDS.412 Tech & Policy: Exam 17 T-1: Light retrieval pass: no new material",
+   "code": "IDS.412",
+   "date": "2026-11-03T08:00:00.000-05:00",
+   "due": "",
+   "status": "Not started",
+   "type": "",
+   "room": "",
+   "url": "https://app.notion.com/p/STUDY-IDS-412-Tech-Policy-Exam-17-T-1-Light-retrieval-pass-no-new-material-3e2ea74eb7798181b953c7f1c7e33d64"
+  },
+  {
+   "name": "[PREP] 16.842 Systems Eng: A6 T-14: Scope it: Written Reflective Memo (individual)",
+   "code": "16.842",
+   "date": "2026-11-02T20:45:00.000-05:00",
+   "due": "",
+   "status": "Not started",
+   "type": "",
+   "room": "",
+   "url": "https://app.notion.com/p/PREP-16-842-Systems-Eng-A6-T-14-Scope-it-Written-Reflective-Memo-individual-3e2ea74eb77981e9adddf8b397d9edb9"
+  },
+  {
+   "name": "[PREP] 16.842 Systems Eng: A4 T-7: Build it: Trade Space Exploration & Concept Selection",
+   "code": "16.842",
+   "date": "2026-11-02T19:00:00.000-05:00",
+   "due": "",
+   "status": "Not started",
+   "type": "",
+   "room": "",
+   "url": "https://app.notion.com/p/PREP-16-842-Systems-Eng-A4-T-7-Build-it-Trade-Space-Exploration-Concept-Selection-3e2ea74eb77981a2a27ae266e7f341f7"
+  },
+  {
+   "name": "16.990 Creative Teams: Lecture 16: Developing Teamwork Skills: Creative problem solving with AI",
+   "code": "16.990",
+   "date": "2026-11-02T14:30:00.000-04:00",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "9-354",
+   "url": "https://app.notion.com/p/16-990-Creative-Teams-Lecture-16-Developing-Teamwork-Skills-Creative-problem-solving-with-AI-3e2ea74eb7798126ac88f3c46d1e8905"
+  },
+  {
+   "name": "IDS.412 Tech & Policy: Lecture 16: Cases: Health (funding sources and bias)",
+   "code": "IDS.412",
+   "date": "2026-11-02T13:00:00.000-05:00",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "66-168",
+   "url": "https://app.notion.com/p/IDS-412-Tech-Policy-Lecture-16-Cases-Health-funding-sources-and-bias-3e2ea74eb77981959860cd1fe94af55b"
+  },
+  {
+   "name": "16.987 Grad Seminar: Seminar 07: Research & Publishing",
+   "code": "16.987",
+   "date": "2026-11-02T11:30:00.000-05:00",
+   "due": "",
+   "status": "",
+   "type": "Seminar",
+   "room": "37-252 (Marlar Lounge)",
+   "url": "https://app.notion.com/p/16-987-Grad-Seminar-Seminar-07-Research-Publishing-3e2ea74eb779812da88fd5b683521fa3"
+  },
+  {
+   "name": "14.003 Microecon & Policy: Lecture 15: Does trade raise national income?",
+   "code": "14.003",
+   "date": "2026-11-02T10:30:00.000-05:00",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "E51-376",
+   "url": "https://app.notion.com/p/14-003-Microecon-Policy-Lecture-15-Does-trade-raise-national-income-3e2ea74eb77981bdb670c3b17add07de"
+  },
+  {
+   "name": "[STUDY] 14.003 Microecon & Policy: Exam 02 T-14: Closed-book retrieval: second half, same method",
+   "code": "14.003",
+   "date": "2026-11-02T08:00:00.000-05:00",
+   "due": "",
+   "status": "Not started",
+   "type": "",
+   "room": "",
+   "url": "https://app.notion.com/p/STUDY-14-003-Microecon-Policy-Exam-02-T-14-Closed-book-retrieval-second-half-same-method-3e2ea74eb7798125b71ce2facbc1cf4a"
+  },
+  {
+   "name": "[STUDY] IDS.412 Tech & Policy: Exam 17 T-4: Full blank-page recall of the whole syllabus, then close only the gaps you found",
+   "code": "IDS.412",
+   "date": "2026-10-31T08:00:00.000-04:00",
+   "due": "",
+   "status": "Not started",
+   "type": "",
+   "room": "",
+   "url": "https://app.notion.com/p/STUDY-IDS-412-Tech-Policy-Exam-17-T-4-Full-blank-page-recall-of-the-whole-syllabus-then-close--3e2ea74eb7798107b334c04ac0a6560a"
+  },
+  {
+   "name": "16.S896 RASCAL: Session 08: WIP Presentations and Framework 4: Adjusted AMCM Cost Modeling",
+   "code": "16.S896",
+   "date": "2026-10-30T15:00:00.000-04:00",
+   "due": "",
+   "status": "",
+   "type": "Lecture",
+   "room": "9-354 per syllabus v9; Canvas section says 33-218; hybrid on Zoom. Conflict unresolved.",
+   "url": "https://app.notion.com/p/16-S896-RASCAL-Session-08-WIP-Presentations-and-Framework-4-Adjusted-AMCM-Cost-Modeling-3e2ea74eb7798170859ffa152d54a17f"
   },
   {
    "name": "14.003 Microecon & Policy: Recitation Week 7",
@@ -48,7 +878,207 @@
    "status": "",
    "type": "Seminar",
    "room": "E52-164 at 0900, or E51-057 at 1000",
-   "url": "https://app.notion.com/p/14-003-Microecon-Policy-Recitation-Week-7-3e2ea74eb77981329293de04417f866b"
+   "url": "https://app.notion.com/p/14-003-Microecon-Policy-Recitation-Week-7-3e2ea74eb77981ee8a67e65faef5b5a7"
+  },
+  {
+   "name": "14.003 Microecon & Policy: Problem Set 03: Applied competitive analysis, market demand, general equilibrium",
+   "code": "14.003",
+   "date": "2026-10-29T23:59:00.000-04:00",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "Not applicable, Gradescope submission. Room not published in Canvas",
+   "url": "https://app.notion.com/p/14-003-Microecon-Policy-Problem-Set-03-Applied-competitive-analysis-market-demand-general-equi-3e2ea74eb779815eb882de3e5baf1a69"
+  },
+  {
+   "name": "IDS.412 Tech & Policy: Recitation Week 8",
+   "code": "IDS.412",
+   "date": "2026-10-28T16:00:00.000-04:00",
+   "due": "",
+   "status": "Not started",
+   "type": "",
+   "room": "66-168",
+   "url": "https://app.notion.com/p/IDS-412-Tech-Policy-Recitation-Week-8-3e2ea74eb77981f8b8a5fa143fa70607"
+  },
+  {
+   "name": "16.990 Creative Teams: Lecture 15: Guest lecture with Daniel J. Riccio, former Executive Vice President Hardware Engineering",
+   "code": "16.990",
+   "date": "2026-10-28T14:30:00.000-04:00",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "9-354",
+   "url": "https://app.notion.com/p/16-990-Creative-Teams-Lecture-15-Guest-lecture-with-Daniel-J-Riccio-former-Executive-Vice-Presid-3e2ea74eb77981a5ae7dd0dbe0dd51e4"
+  },
+  {
+   "name": "IDS.412 Tech & Policy: Lecture 15: Cases: Environment I",
+   "code": "IDS.412",
+   "date": "2026-10-28T13:00:00.000-04:00",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "66-168",
+   "url": "https://app.notion.com/p/IDS-412-Tech-Policy-Lecture-15-Cases-Environment-I-3e2ea74eb77981a09c7ff56b0cc676fe"
+  },
+  {
+   "name": "14.003 Microecon & Policy: Lecture 14: International trade and comparative advantage",
+   "code": "14.003",
+   "date": "2026-10-28T10:30:00.000-04:00",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "E51-376",
+   "url": "https://app.notion.com/p/14-003-Microecon-Policy-Lecture-14-International-trade-and-comparative-advantage-3e2ea74eb7798116b405df82bb8fefb2"
+  },
+  {
+   "name": "16.842 Systems Eng: Lecture 06: MDO",
+   "code": "16.842",
+   "date": "2026-10-27T11:00:00.000-04:00",
+   "due": "",
+   "status": "Not started",
+   "type": "Lecture",
+   "room": "33-218",
+   "url": "https://app.notion.com/p/16-842-Systems-Eng-Lecture-06-MDO-3e2ea74eb779813799fec152c1015a60"
+  },
+  {
+   "name": "[STUDY] IDS.412 Tech & Policy: Exam 17 T-8: Past papers and problem sets under exam conditions, no notes",
+   "code": "IDS.412",
+   "date": "2026-10-27T08:00:00.000-04:00",
+   "due": "",
+   "status": "Not started",
+   "type": "",
+   "room": "",
+   "url": "https://app.notion.com/p/STUDY-IDS-412-Tech-Policy-Exam-17-T-8-Past-papers-and-problem-sets-under-exam-conditions-no-no-3e2ea74eb7798183928ad7a594d8adfe"
+  },
+  {
+   "name": "16.S896 RASCAL: Competition: RASC-AL Q&A Session with NASA SMEs",
+   "code": "16.S896",
+   "date": "2026-10-27",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "External, RASC-AL Q&A session, not an MIT room. Class room 9-354 vs 33-218, unresolved.",
+   "url": "https://app.notion.com/p/16-S896-RASCAL-Competition-RASC-AL-Q-A-Session-with-NASA-SMEs-3e2ea74eb7798116ba37d00238f58d2e"
+  },
+  {
+   "name": "IDS.412 Tech & Policy: Assignment 01: Paper I written, regulatory comment",
+   "code": "IDS.412",
+   "date": "2026-10-26T23:59:00.000-04:00",
+   "due": "",
+   "status": "Not started",
+   "type": "",
+   "room": "not published in Canvas",
+   "url": "https://app.notion.com/p/IDS-412-Tech-Policy-Assignment-01-Paper-I-written-regulatory-comment-3e2ea74eb77981b4b07ac3bcde378e3c"
+  },
+  {
+   "name": "[PREP] 16.842 Systems Eng: A4 T-14: Scope it: Trade Space Exploration & Concept Selection",
+   "code": "16.842",
+   "date": "2026-10-26T20:45:00.000-04:00",
+   "due": "",
+   "status": "Not started",
+   "type": "",
+   "room": "",
+   "url": "https://app.notion.com/p/PREP-16-842-Systems-Eng-A4-T-14-Scope-it-Trade-Space-Exploration-Concept-Selection-3e2ea74eb779815c94dcc3c8ceb7fb59"
+  },
+  {
+   "name": "16.990 Creative Teams: Lecture 14: Developing Teamwork Skills: Creative problem solving",
+   "code": "16.990",
+   "date": "2026-10-26T14:30:00.000-04:00",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "9-354",
+   "url": "https://app.notion.com/p/16-990-Creative-Teams-Lecture-14-Developing-Teamwork-Skills-Creative-problem-solving-3e2ea74eb7798133b1dfe04a68224e30"
+  },
+  {
+   "name": "IDS.412 Tech & Policy: Lecture 14: Concepts: Socio-technical transitions",
+   "code": "IDS.412",
+   "date": "2026-10-26T13:00:00.000-04:00",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "66-168",
+   "url": "https://app.notion.com/p/IDS-412-Tech-Policy-Lecture-14-Concepts-Socio-technical-transitions-3e2ea74eb7798100b6a9f4ccc2973d57"
+  },
+  {
+   "name": "16.987 Grad Seminar: Seminar 06: Professional Development: Networking",
+   "code": "16.987",
+   "date": "2026-10-26T11:30:00.000-04:00",
+   "due": "",
+   "status": "",
+   "type": "Seminar",
+   "room": "37-252 (Marlar Lounge)",
+   "url": "https://app.notion.com/p/16-987-Grad-Seminar-Seminar-06-Professional-Development-Networking-3e2ea74eb7798152b1fec98d55e9a23f"
+  },
+  {
+   "name": "14.003 Microecon & Policy: Lecture 13: The gains from market integration: \u201cThe Digital Provide\u201d",
+   "code": "14.003",
+   "date": "2026-10-26T10:30:00.000-04:00",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "E51-376",
+   "url": "https://app.notion.com/p/14-003-Microecon-Policy-Lecture-13-The-gains-from-market-integration-The-Digital-Provide-3e2ea74eb779810f87b7c4833c125053"
+  },
+  {
+   "name": "[STUDY] 14.003 Microecon & Policy: Exam 02 T-21: Closed-book retrieval: first half of the material, write what you recall before checking",
+   "code": "14.003",
+   "date": "2026-10-26T08:00:00.000-04:00",
+   "due": "",
+   "status": "Not started",
+   "type": "",
+   "room": "",
+   "url": "https://app.notion.com/p/STUDY-14-003-Microecon-Policy-Exam-02-T-21-Closed-book-retrieval-first-half-of-the-material-w-3e2ea74eb77981e58c36f8af2592d0de"
+  },
+  {
+   "name": "16.842 Systems Eng: Assignment 03: A3 System Architecture & Concept Generation DUE",
+   "code": "16.842",
+   "date": "2026-10-26",
+   "due": "",
+   "status": "Not started",
+   "type": "Homework",
+   "room": "Submission channel not published in the syllabus",
+   "url": "https://app.notion.com/p/16-842-Systems-Eng-Assignment-03-A3-System-Architecture-Concept-Generation-DUE-3e2ea74eb7798141b802d42288ca3b7e"
+  },
+  {
+   "name": "[DUE] IDS.412 Tech & Policy: Paper 1: federal regulatory comment",
+   "code": "IDS.412",
+   "date": "2026-10-25T19:00:00.000-04:00",
+   "due": "",
+   "status": "Not started",
+   "type": "",
+   "room": "",
+   "url": "https://app.notion.com/p/DUE-IDS-412-Tech-Policy-Paper-1-federal-regulatory-comment-3e2ea74eb77981fc8f6fff2dba28c329"
+  },
+  {
+   "name": "IDS.412 Tech & Policy: Presentation 01: Paper I conference",
+   "code": "IDS.412",
+   "date": "2026-10-23T23:59:00.000-04:00",
+   "due": "",
+   "status": "Not started",
+   "type": "",
+   "room": "not published in Canvas",
+   "url": "https://app.notion.com/p/IDS-412-Tech-Policy-Presentation-01-Paper-I-conference-3e2ea74eb77981d3ace0d9c57be948e5"
+  },
+  {
+   "name": "[PREP] 16.842 Systems Eng: A3 T-3: Finish it: System Architecture & Concept Generation",
+   "code": "16.842",
+   "date": "2026-10-23T19:00:00.000-04:00",
+   "due": "",
+   "status": "Not started",
+   "type": "",
+   "room": "",
+   "url": "https://app.notion.com/p/PREP-16-842-Systems-Eng-A3-T-3-Finish-it-System-Architecture-Concept-Generation-3e2ea74eb7798171b7f4f33677b63552"
+  },
+  {
+   "name": "16.S896 RASCAL: Session 07: WIP Presentations and Framework 3: Designing for Robustness",
+   "code": "16.S896",
+   "date": "2026-10-23T15:00:00.000-04:00",
+   "due": "",
+   "status": "",
+   "type": "Lecture",
+   "room": "9-354 per syllabus v9; Canvas section says 33-218; hybrid on Zoom. Conflict unresolved.",
+   "url": "https://app.notion.com/p/16-S896-RASCAL-Session-07-WIP-Presentations-and-Framework-3-Designing-for-Robustness-3e2ea74eb7798134a419c102c0af11a2"
   },
   {
    "name": "14.003 Microecon & Policy: Recitation Week 6",
@@ -58,7 +1088,167 @@
    "status": "",
    "type": "Seminar",
    "room": "E52-164 at 0900, or E51-057 at 1000",
-   "url": "https://app.notion.com/p/14-003-Microecon-Policy-Recitation-Week-6-3e2ea74eb77981a58426c67628fb2a89"
+   "url": "https://app.notion.com/p/14-003-Microecon-Policy-Recitation-Week-6-3e2ea74eb7798133a928f5d5bfd0d5e0"
+  },
+  {
+   "name": "16.S896 RASCAL: Assignment: A2: Stakeholder Map, TO/BY/USING and Level 1 Requirements (5%)",
+   "code": "16.S896",
+   "date": "2026-10-23",
+   "due": "",
+   "status": "",
+   "type": "Homework",
+   "room": "No room, submission. Class itself: 9-354 per syllabus v9 vs 33-218 per Canvas, unresolved.",
+   "url": "https://app.notion.com/p/16-S896-RASCAL-Assignment-A2-Stakeholder-Map-TO-BY-USING-and-Level-1-Requirements-5-3e2ea74eb77981cb8eb3c0a78a8e819c"
+  },
+  {
+   "name": "[DUE] IDS.412 Tech & Policy: Paper I: conference status note",
+   "code": "IDS.412",
+   "date": "2026-10-22T19:00:00.000-04:00",
+   "due": "",
+   "status": "Not started",
+   "type": "",
+   "room": "",
+   "url": "https://app.notion.com/p/DUE-IDS-412-Tech-Policy-Paper-I-conference-status-note-3e2ea74eb779819e9657c1151f41e639"
+  },
+  {
+   "name": "IDS.412 Tech & Policy: Recitation Week 7",
+   "code": "IDS.412",
+   "date": "2026-10-21T16:00:00.000-04:00",
+   "due": "",
+   "status": "Not started",
+   "type": "",
+   "room": "66-168",
+   "url": "https://app.notion.com/p/IDS-412-Tech-Policy-Recitation-Week-7-3e2ea74eb77981eeb6e5df715359d57b"
+  },
+  {
+   "name": "16.990 Creative Teams: Lecture 13: Developing Teamwork Skills: Leading in an inclusive engineering environment",
+   "code": "16.990",
+   "date": "2026-10-21T14:30:00.000-04:00",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "9-354",
+   "url": "https://app.notion.com/p/16-990-Creative-Teams-Lecture-13-Developing-Teamwork-Skills-Leading-in-an-inclusive-engineering-e-3e2ea74eb77981d9afbac5860c8f1677"
+  },
+  {
+   "name": "IDS.412 Tech & Policy: Lecture 13: Cases: Technology and U.S. national interest, guest lecture Prof. Elizabeth Reynolds",
+   "code": "IDS.412",
+   "date": "2026-10-21T13:00:00.000-04:00",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "66-168",
+   "url": "https://app.notion.com/p/IDS-412-Tech-Policy-Lecture-13-Cases-Technology-and-U-S-national-interest-guest-lecture-Prof--3e2ea74eb77981a5958fe3ff253fc4e8"
+  },
+  {
+   "name": "14.003 Microecon & Policy: Lecture 12: Putting markets together: The Edgeworth box",
+   "code": "14.003",
+   "date": "2026-10-21T10:30:00.000-04:00",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "E51-376",
+   "url": "https://app.notion.com/p/14-003-Microecon-Policy-Lecture-12-Putting-markets-together-The-Edgeworth-box-3e2ea74eb779814392c0d0ceeb8448ee"
+  },
+  {
+   "name": "[STUDY] IDS.412 Tech & Policy: Exam 17 T-14: Closed-book retrieval: second half, same method",
+   "code": "IDS.412",
+   "date": "2026-10-21T08:00:00.000-04:00",
+   "due": "",
+   "status": "Not started",
+   "type": "",
+   "room": "",
+   "url": "https://app.notion.com/p/STUDY-IDS-412-Tech-Policy-Exam-17-T-14-Closed-book-retrieval-second-half-same-method-3e2ea74eb7798167a8dbfee6bff8426a"
+  },
+  {
+   "name": "16.842 Systems Eng: Lecture 05: Modeling, DSM & Trade Space Analysis",
+   "code": "16.842",
+   "date": "2026-10-20T11:00:00.000-04:00",
+   "due": "",
+   "status": "Not started",
+   "type": "Lecture",
+   "room": "33-218",
+   "url": "https://app.notion.com/p/16-842-Systems-Eng-Lecture-05-Modeling-DSM-Trade-Space-Analysis-3e2ea74eb77981ffa310d632ec45c548"
+  },
+  {
+   "name": "[PREP] 16.842 Systems Eng: A3 T-7: Build it: System Architecture & Concept Generation",
+   "code": "16.842",
+   "date": "2026-10-19T19:00:00.000-04:00",
+   "due": "",
+   "status": "Not started",
+   "type": "",
+   "room": "",
+   "url": "https://app.notion.com/p/PREP-16-842-Systems-Eng-A3-T-7-Build-it-System-Architecture-Concept-Generation-3e2ea74eb7798198aa76e75f5a7f9d91"
+  },
+  {
+   "name": "16.990 Creative Teams: Lecture 12: Developing Teamwork Skills: Leading a mid-point performance check-up",
+   "code": "16.990",
+   "date": "2026-10-19T14:30:00.000-04:00",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "9-354",
+   "url": "https://app.notion.com/p/16-990-Creative-Teams-Lecture-12-Developing-Teamwork-Skills-Leading-a-mid-point-performance-check-3e2ea74eb77981bea7c7d2cf935ebe22"
+  },
+  {
+   "name": "IDS.412 Tech & Policy: Lecture 12: Cases: Health I (Vaccines), guest lecture Prof. Tom Levenson",
+   "code": "IDS.412",
+   "date": "2026-10-19T13:00:00.000-04:00",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "66-168",
+   "url": "https://app.notion.com/p/IDS-412-Tech-Policy-Lecture-12-Cases-Health-I-Vaccines-guest-lecture-Prof-Tom-Levenson-3e2ea74eb779814399c1cf45b59b0482"
+  },
+  {
+   "name": "[STUDY] 14.003 Microecon & Policy: Exam 02 T-28: Scope it: list every lecture and reading covered, then self-test cold to find the gaps",
+   "code": "14.003",
+   "date": "2026-10-19T12:00:00.000-04:00",
+   "due": "",
+   "status": "Not started",
+   "type": "",
+   "room": "",
+   "url": "https://app.notion.com/p/STUDY-14-003-Microecon-Policy-Exam-02-T-28-Scope-it-list-every-lecture-and-reading-covered-th-3e2ea74eb7798171b8bdc7d1411f2c78"
+  },
+  {
+   "name": "16.987 Grad Seminar: Seminar 05: GradEL",
+   "code": "16.987",
+   "date": "2026-10-19T11:30:00.000-04:00",
+   "due": "",
+   "status": "",
+   "type": "Seminar",
+   "room": "37-252 (Marlar Lounge)",
+   "url": "https://app.notion.com/p/16-987-Grad-Seminar-Seminar-05-GradEL-3e2ea74eb779813c8d5cd8d2077e9166"
+  },
+  {
+   "name": "14.003 Microecon & Policy: Lecture 11: Applied competitive analysis: Free entry in a cartelized market",
+   "code": "14.003",
+   "date": "2026-10-19T10:30:00.000-04:00",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "E51-376",
+   "url": "https://app.notion.com/p/14-003-Microecon-Policy-Lecture-11-Applied-competitive-analysis-Free-entry-in-a-cartelized-mark-3e2ea74eb779814ea11ae2624db7b0f7"
+  },
+  {
+   "name": "16.S896 RASCAL: Competition: RASC-AL Questions for NASA Q&A Due",
+   "code": "16.S896",
+   "date": "2026-10-18T23:59:00.000-04:00",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "No room, submission. Class itself: 9-354 per syllabus v9 vs 33-218 per Canvas, unresolved.",
+   "url": "https://app.notion.com/p/16-S896-RASCAL-Competition-RASC-AL-Questions-for-NASA-Q-A-Due-3e2ea74eb7798125bc8ef66881418c2e"
+  },
+  {
+   "name": "16.S896 RASCAL: Session 06: WIP Presentations and Case Study 02: ECLIPSE",
+   "code": "16.S896",
+   "date": "2026-10-16T15:00:00.000-04:00",
+   "due": "",
+   "status": "",
+   "type": "Lecture",
+   "room": "9-354 per syllabus v9; Canvas section says 33-218; hybrid on Zoom. Conflict unresolved.",
+   "url": "https://app.notion.com/p/16-S896-RASCAL-Session-06-WIP-Presentations-and-Case-Study-02-ECLIPSE-3e2ea74eb779819289aafb2b70b015e2"
   },
   {
    "name": "14.003 Microecon & Policy: Recitation Optional Post-Exam Drop-In",
@@ -68,7 +1258,167 @@
    "status": "",
    "type": "Seminar",
    "room": "E52-164 at 0900, or E51-057 at 1000",
-   "url": "https://app.notion.com/p/14-003-Microecon-Policy-Recitation-Optional-Post-Exam-Drop-In-3e2ea74eb77981f588a3c396fa51623e"
+   "url": "https://app.notion.com/p/14-003-Microecon-Policy-Recitation-Optional-Post-Exam-Drop-In-3e2ea74eb77981c7aea1f1c25360f2c4"
+  },
+  {
+   "name": "IDS.412 Tech & Policy: Recitation Week 6",
+   "code": "IDS.412",
+   "date": "2026-10-14T16:00:00.000-04:00",
+   "due": "",
+   "status": "Not started",
+   "type": "",
+   "room": "66-168",
+   "url": "https://app.notion.com/p/IDS-412-Tech-Policy-Recitation-Week-6-3e2ea74eb77981a78e77d0e8299d7b30"
+  },
+  {
+   "name": "16.990 Creative Teams: Lecture 11: Guest lecture with Veronica Barner, Wind Energy Product Executive at GE Vernova",
+   "code": "16.990",
+   "date": "2026-10-14T14:30:00.000-04:00",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "9-354",
+   "url": "https://app.notion.com/p/16-990-Creative-Teams-Lecture-11-Guest-lecture-with-Veronica-Barner-Wind-Energy-Product-Executive-3e2ea74eb77981528910d1b5d15809da"
+  },
+  {
+   "name": "IDS.412 Tech & Policy: Lecture 11: Concepts: Imperfect information and consent (Risk)",
+   "code": "IDS.412",
+   "date": "2026-10-14T13:00:00.000-04:00",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "66-168",
+   "url": "https://app.notion.com/p/IDS-412-Tech-Policy-Lecture-11-Concepts-Imperfect-information-and-consent-Risk-3e2ea74eb7798160b169f9cb9fbbfdaf"
+  },
+  {
+   "name": "14.003 Microecon & Policy: Lecture 10: Applied competitive analysis: The incidence of a tax",
+   "code": "14.003",
+   "date": "2026-10-14T10:30:00.000-04:00",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "E51-376",
+   "url": "https://app.notion.com/p/14-003-Microecon-Policy-Lecture-10-Applied-competitive-analysis-The-incidence-of-a-tax-3e2ea74eb77981dd8c3ecee5303af81f"
+  },
+  {
+   "name": "[STUDY] IDS.412 Tech & Policy: Exam 17 T-21: Closed-book retrieval: first half of the material, write what you recall before checking",
+   "code": "IDS.412",
+   "date": "2026-10-14T08:00:00.000-04:00",
+   "due": "",
+   "status": "Not started",
+   "type": "",
+   "room": "",
+   "url": "https://app.notion.com/p/STUDY-IDS-412-Tech-Policy-Exam-17-T-21-Closed-book-retrieval-first-half-of-the-material-write-3e2ea74eb77981df82e5c8336e81aaf4"
+  },
+  {
+   "name": "16.S896 RASCAL: Assignment 01: RASC-AL Notice of Intent Due (optional)",
+   "code": "16.S896",
+   "date": "2026-10-13T23:59:00.000-04:00",
+   "due": "",
+   "status": "Not started",
+   "type": "Homework",
+   "room": "No room, submission. Class itself: 9-354 per syllabus v9 vs 33-218 per Canvas, unresolved.",
+   "url": "https://app.notion.com/p/16-S896-RASCAL-Assignment-01-RASC-AL-Notice-of-Intent-Due-optional-3e2ea74eb7798185a03aeb8fd5d53ad9"
+  },
+  {
+   "name": "16.990 Creative Teams: Lecture 10: Developing Interpersonal Skills: Giving and receiving feedback in teams",
+   "code": "16.990",
+   "date": "2026-10-13T14:30:00.000-04:00",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "9-354",
+   "url": "https://app.notion.com/p/16-990-Creative-Teams-Lecture-10-Developing-Interpersonal-Skills-Giving-and-receiving-feedback-in-3e2ea74eb77981b78581c508a2c6f1b4"
+  },
+  {
+   "name": "IDS.412 Tech & Policy: Lecture 10: Concepts: Information asymmetries and adverse selection",
+   "code": "IDS.412",
+   "date": "2026-10-13T13:00:00.000-04:00",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "66-168",
+   "url": "https://app.notion.com/p/IDS-412-Tech-Policy-Lecture-10-Concepts-Information-asymmetries-and-adverse-selection-3e2ea74eb77981848733f4f209c14c4f"
+  },
+  {
+   "name": "14.003 Microecon & Policy: Exam 01: Lectures 1 to 9",
+   "code": "14.003",
+   "date": "2026-10-13T10:30:00.000-04:00",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "not published in Canvas. Lecture normally meets in E51-376, but this exam falls on a Tuesday, which is not a normal class day, so confirm the room with staff",
+   "url": "https://app.notion.com/p/14-003-Microecon-Policy-Exam-01-Lectures-1-to-9-3e2ea74eb779819a9c7fe5e5f6222c29"
+  },
+  {
+   "name": "16.842 Systems Eng: No Class: MIT Monday Schedule",
+   "code": "16.842",
+   "date": "2026-10-13",
+   "due": "",
+   "status": "Not started",
+   "type": "Project",
+   "room": "No room: class does not meet",
+   "url": "https://app.notion.com/p/16-842-Systems-Eng-No-Class-MIT-Monday-Schedule-3e2ea74eb779815e8e6dd1f43d562956"
+  },
+  {
+   "name": "[PREP] 16.842 Systems Eng: A3 T-14: Scope it: System Architecture & Concept Generation",
+   "code": "16.842",
+   "date": "2026-10-12T20:45:00.000-04:00",
+   "due": "",
+   "status": "Not started",
+   "type": "",
+   "room": "",
+   "url": "https://app.notion.com/p/PREP-16-842-Systems-Eng-A3-T-14-Scope-it-System-Architecture-Concept-Generation-3e2ea74eb779811e9befddb566fc9db4"
+  },
+  {
+   "name": "[STUDY] 14.003 Microecon & Policy: Exam 01 T-1: Light retrieval pass: no new material",
+   "code": "14.003",
+   "date": "2026-10-12T08:00:00.000-04:00",
+   "due": "",
+   "status": "Not started",
+   "type": "",
+   "room": "",
+   "url": "https://app.notion.com/p/STUDY-14-003-Microecon-Policy-Exam-01-T-1-Light-retrieval-pass-no-new-material-3e2ea74eb779812e83b0fe24a08c9cc1"
+  },
+  {
+   "name": "16.842 Systems Eng: Assignment 02: A2 Requirements Definition & Margins Allocation DUE",
+   "code": "16.842",
+   "date": "2026-10-12",
+   "due": "",
+   "status": "Not started",
+   "type": "Homework",
+   "room": "Submission channel not published in the syllabus",
+   "url": "https://app.notion.com/p/16-842-Systems-Eng-Assignment-02-A2-Requirements-Definition-Margins-Allocation-DUE-3e2ea74eb77981198f10d28482f90a8d"
+  },
+  {
+   "name": "[PREP] 16.842 Systems Eng: A2 T-3: Finish it: Requirements Definition & Margins",
+   "code": "16.842",
+   "date": "2026-10-09T19:00:00.000-04:00",
+   "due": "",
+   "status": "Not started",
+   "type": "",
+   "room": "",
+   "url": "https://app.notion.com/p/PREP-16-842-Systems-Eng-A2-T-3-Finish-it-Requirements-Definition-Margins-3e2ea74eb77981b9ab68fe95cac5f434"
+  },
+  {
+   "name": "[STUDY] 14.003 Microecon & Policy: Exam 01 T-4: Full blank-page recall of the whole syllabus, then close only the gaps you found",
+   "code": "14.003",
+   "date": "2026-10-09T17:00:00.000-04:00",
+   "due": "",
+   "status": "Not started",
+   "type": "",
+   "room": "",
+   "url": "https://app.notion.com/p/STUDY-14-003-Microecon-Policy-Exam-01-T-4-Full-blank-page-recall-of-the-whole-syllabus-then-cl-3e2ea74eb77981aa881af9f608965add"
+  },
+  {
+   "name": "16.S896 RASCAL: Session 05: WIP Presentations and Framework 2: Stakeholder Analysis and Needs to Goals",
+   "code": "16.S896",
+   "date": "2026-10-09T15:00:00.000-04:00",
+   "due": "",
+   "status": "",
+   "type": "Lecture",
+   "room": "9-354 per syllabus v9; Canvas section says 33-218; hybrid on Zoom. Conflict unresolved.",
+   "url": "https://app.notion.com/p/16-S896-RASCAL-Session-05-WIP-Presentations-and-Framework-2-Stakeholder-Analysis-and-Needs-to-Goa-3e2ea74eb779814f9051c066e210b218"
   },
   {
    "name": "14.003 Microecon & Policy: Recitation Week 5",
@@ -78,7 +1428,177 @@
    "status": "",
    "type": "Seminar",
    "room": "E52-164 at 0900, or E51-057 at 1000",
-   "url": "https://app.notion.com/p/14-003-Microecon-Policy-Recitation-Week-5-3e2ea74eb779816ab971dabd2213d6a7"
+   "url": "https://app.notion.com/p/14-003-Microecon-Policy-Recitation-Week-5-3e2ea74eb7798103a239ca0015a96642"
+  },
+  {
+   "name": "16.S896 RASCAL: Milestone: WORMS Hardware Selections Final and Orders Placed",
+   "code": "16.S896",
+   "date": "2026-10-09",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "No room, submission. Class itself: 9-354 per syllabus v9 vs 33-218 per Canvas, unresolved.",
+   "url": "https://app.notion.com/p/16-S896-RASCAL-Milestone-WORMS-Hardware-Selections-Final-and-Orders-Placed-3e2ea74eb7798104b933db1d0e505d70"
+  },
+  {
+   "name": "16.S896 RASCAL: Assignment: A1: Four Pillar Positioning (individual, 5%)",
+   "code": "16.S896",
+   "date": "2026-10-09",
+   "due": "",
+   "status": "",
+   "type": "Homework",
+   "room": "No room, submission. Class itself: 9-354 per syllabus v9 vs 33-218 per Canvas, unresolved.",
+   "url": "https://app.notion.com/p/16-S896-RASCAL-Assignment-A1-Four-Pillar-Positioning-individual-5-3e2ea74eb77981d18893cde261ffca8f"
+  },
+  {
+   "name": "14.003 Microecon & Policy: Problem Set 02: Consumer theory",
+   "code": "14.003",
+   "date": "2026-10-08T23:59:00.000-04:00",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "Not applicable, Gradescope submission. Room not published in Canvas",
+   "url": "https://app.notion.com/p/14-003-Microecon-Policy-Problem-Set-02-Consumer-theory-3e2ea74eb77981708772d8ed9f291b0c"
+  },
+  {
+   "name": "[DUE] 14.003 Microecon & Policy: Problem Set 02: Consumer theory",
+   "code": "14.003",
+   "date": "2026-10-08T19:00:00.000-04:00",
+   "due": "",
+   "status": "Not started",
+   "type": "",
+   "room": "",
+   "url": "https://app.notion.com/p/DUE-14-003-Microecon-Policy-Problem-Set-02-Consumer-theory-3e2ea74eb77981aeae4bdb5b55cc80b4"
+  },
+  {
+   "name": "IDS.412 Tech & Policy: Recitation Week 5",
+   "code": "IDS.412",
+   "date": "2026-10-07T16:00:00.000-04:00",
+   "due": "",
+   "status": "Not started",
+   "type": "",
+   "room": "66-168",
+   "url": "https://app.notion.com/p/IDS-412-Tech-Policy-Recitation-Week-5-3e2ea74eb7798126868bd51f81f1a73a"
+  },
+  {
+   "name": "16.990 Creative Teams: Lecture 09: Developing Team and Organizational Skills: Communicating a shared team vision",
+   "code": "16.990",
+   "date": "2026-10-07T14:30:00.000-04:00",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "9-354",
+   "url": "https://app.notion.com/p/16-990-Creative-Teams-Lecture-09-Developing-Team-and-Organizational-Skills-Communicating-a-shared-3e2ea74eb779815e96b3c596f2f1609d"
+  },
+  {
+   "name": "IDS.412 Tech & Policy: Lecture 09: Standard-setting",
+   "code": "IDS.412",
+   "date": "2026-10-07T13:00:00.000-04:00",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "66-168",
+   "url": "https://app.notion.com/p/IDS-412-Tech-Policy-Lecture-09-Standard-setting-3e2ea74eb7798123b1f7d7ca9b82197b"
+  },
+  {
+   "name": "[STUDY] IDS.412 Tech & Policy: Exam 17 T-28: Scope it: list every lecture and reading covered, then self-test cold to find the gaps",
+   "code": "IDS.412",
+   "date": "2026-10-07T12:00:00.000-04:00",
+   "due": "",
+   "status": "Not started",
+   "type": "",
+   "room": "",
+   "url": "https://app.notion.com/p/STUDY-IDS-412-Tech-Policy-Exam-17-T-28-Scope-it-list-every-lecture-and-reading-covered-then-s-3e2ea74eb779817591b7e1dd3f1a5f03"
+  },
+  {
+   "name": "14.003 Microecon & Policy: Lecture 09: Consumer theory wrap-up and review",
+   "code": "14.003",
+   "date": "2026-10-07T10:30:00.000-04:00",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "E51-376",
+   "url": "https://app.notion.com/p/14-003-Microecon-Policy-Lecture-09-Consumer-theory-wrap-up-and-review-3e2ea74eb779812fb62cfaa27b26b798"
+  },
+  {
+   "name": "16.842 Systems Eng: Lecture 04: Concept & Architecture",
+   "code": "16.842",
+   "date": "2026-10-06T11:00:00.000-04:00",
+   "due": "",
+   "status": "Not started",
+   "type": "Lecture",
+   "room": "33-218",
+   "url": "https://app.notion.com/p/16-842-Systems-Eng-Lecture-04-Concept-Architecture-3e2ea74eb779816796f0eefec78c8783"
+  },
+  {
+   "name": "[PREP] 16.842 Systems Eng: A2 T-7: Build it: Requirements Definition & Margins",
+   "code": "16.842",
+   "date": "2026-10-05T19:00:00.000-04:00",
+   "due": "",
+   "status": "Not started",
+   "type": "",
+   "room": "",
+   "url": "https://app.notion.com/p/PREP-16-842-Systems-Eng-A2-T-7-Build-it-Requirements-Definition-Margins-3e2ea74eb77981408905df7b77189391"
+  },
+  {
+   "name": "16.990 Creative Teams: Lecture 08: Developing Team and Organizational Skills: Creating a shared team vision",
+   "code": "16.990",
+   "date": "2026-10-05T14:30:00.000-04:00",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "9-354",
+   "url": "https://app.notion.com/p/16-990-Creative-Teams-Lecture-08-Developing-Team-and-Organizational-Skills-Creating-a-shared-team-3e2ea74eb7798187a62af78434bb8517"
+  },
+  {
+   "name": "IDS.412 Tech & Policy: Lecture 08: Competition and Antitrust",
+   "code": "IDS.412",
+   "date": "2026-10-05T13:00:00.000-04:00",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "66-168",
+   "url": "https://app.notion.com/p/IDS-412-Tech-Policy-Lecture-08-Competition-and-Antitrust-3e2ea74eb77981b2867bcf02e67caf8e"
+  },
+  {
+   "name": "16.987 Grad Seminar: Seminar 04: Organizing a Research Paper",
+   "code": "16.987",
+   "date": "2026-10-05T11:30:00.000-04:00",
+   "due": "",
+   "status": "",
+   "type": "Seminar",
+   "room": "37-252 (Marlar Lounge)",
+   "url": "https://app.notion.com/p/16-987-Grad-Seminar-Seminar-04-Organizing-a-Research-Paper-3e2ea74eb7798185b694c3d277eadecd"
+  },
+  {
+   "name": "14.003 Microecon & Policy: Lecture 08: Giffen Goods: Income, substitution, and subsistence",
+   "code": "14.003",
+   "date": "2026-10-05T10:30:00.000-04:00",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "E51-376",
+   "url": "https://app.notion.com/p/14-003-Microecon-Policy-Lecture-08-Giffen-Goods-Income-substitution-and-subsistence-3e2ea74eb77981daaf02f044ebcd38ea"
+  },
+  {
+   "name": "[STUDY] 14.003 Microecon & Policy: Exam 01 T-8: Past papers and problem sets under exam conditions, no notes",
+   "code": "14.003",
+   "date": "2026-10-05T08:00:00.000-04:00",
+   "due": "",
+   "status": "Not started",
+   "type": "",
+   "room": "",
+   "url": "https://app.notion.com/p/STUDY-14-003-Microecon-Policy-Exam-01-T-8-Past-papers-and-problem-sets-under-exam-conditions-n-3e2ea74eb77981839417c9aba0b203c5"
+  },
+  {
+   "name": "16.S896 RASCAL: Session 04: WIP Presentations and Case Study 01: Moon to Mars",
+   "code": "16.S896",
+   "date": "2026-10-02T15:00:00.000-04:00",
+   "due": "",
+   "status": "",
+   "type": "Lecture",
+   "room": "9-354 per syllabus v9; Canvas section says 33-218; hybrid on Zoom. Conflict unresolved.",
+   "url": "https://app.notion.com/p/16-S896-RASCAL-Session-04-WIP-Presentations-and-Case-Study-01-Moon-to-Mars-3e2ea74eb77981cea2fde9b9cfdc1296"
   },
   {
    "name": "14.003 Microecon & Policy: Recitation Week 4",
@@ -88,7 +1608,597 @@
    "status": "",
    "type": "Seminar",
    "room": "E52-164 at 0900, or E51-057 at 1000",
-   "url": "https://app.notion.com/p/14-003-Microecon-Policy-Recitation-Week-4-3e2ea74eb7798129848ad0d85a9b7d30"
+   "url": "https://app.notion.com/p/14-003-Microecon-Policy-Recitation-Week-4-3e2ea74eb7798149b7b3ed9dab7861ba"
+  },
+  {
+   "name": "IDS.412 Tech & Policy: Recitation Week 4",
+   "code": "IDS.412",
+   "date": "2026-09-30T16:00:00.000-04:00",
+   "due": "",
+   "status": "Not started",
+   "type": "",
+   "room": "66-168",
+   "url": "https://app.notion.com/p/IDS-412-Tech-Policy-Recitation-Week-4-3e2ea74eb779811d9113d254546ecb03"
+  },
+  {
+   "name": "16.990 Creative Teams: Lecture 07: Developing Teamwork Skills: Launching new teams",
+   "code": "16.990",
+   "date": "2026-09-30T14:30:00.000-04:00",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "9-354",
+   "url": "https://app.notion.com/p/16-990-Creative-Teams-Lecture-07-Developing-Teamwork-Skills-Launching-new-teams-3e2ea74eb77981098e6aeaa0d83246dd"
+  },
+  {
+   "name": "IDS.412 Tech & Policy: Lecture 07: Innovation",
+   "code": "IDS.412",
+   "date": "2026-09-30T13:00:00.000-04:00",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "66-168",
+   "url": "https://app.notion.com/p/IDS-412-Tech-Policy-Lecture-07-Innovation-3e2ea74eb77981c884ecec0c86292ce9"
+  },
+  {
+   "name": "14.003 Microecon & Policy: Lecture 07: Income effects, substitution effects, and the design of anti-poverty programs",
+   "code": "14.003",
+   "date": "2026-09-30T10:30:00.000-04:00",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "E51-376",
+   "url": "https://app.notion.com/p/14-003-Microecon-Policy-Lecture-07-Income-effects-substitution-effects-and-the-design-of-anti--3e2ea74eb7798121ac35e4fba095bc23"
+  },
+  {
+   "name": "16.842 Systems Eng: Lecture 03: System Thinking",
+   "code": "16.842",
+   "date": "2026-09-29T11:00:00.000-04:00",
+   "due": "",
+   "status": "Not started",
+   "type": "Lecture",
+   "room": "33-218",
+   "url": "https://app.notion.com/p/16-842-Systems-Eng-Lecture-03-System-Thinking-3e2ea74eb779813e84b0e53e24898891"
+  },
+  {
+   "name": "[STUDY] 14.003 Microecon & Policy: Exam 01 T-14: Closed-book retrieval: second half, same method",
+   "code": "14.003",
+   "date": "2026-09-29T08:00:00.000-04:00",
+   "due": "",
+   "status": "Not started",
+   "type": "",
+   "room": "",
+   "url": "https://app.notion.com/p/STUDY-14-003-Microecon-Policy-Exam-01-T-14-Closed-book-retrieval-second-half-same-method-3e2ea74eb779814b95f9fa7602288712"
+  },
+  {
+   "name": "[PREP] 16.842 Systems Eng: A2 T-14: Scope it: Requirements Definition & Margins",
+   "code": "16.842",
+   "date": "2026-09-28T20:45:00.000-04:00",
+   "due": "",
+   "status": "Not started",
+   "type": "",
+   "room": "",
+   "url": "https://app.notion.com/p/PREP-16-842-Systems-Eng-A2-T-14-Scope-it-Requirements-Definition-Margins-3e2ea74eb77981b995fef5c182a8ae46"
+  },
+  {
+   "name": "16.990 Creative Teams: Lecture 06: Developing Personal Skills: Values and Ethical decision making",
+   "code": "16.990",
+   "date": "2026-09-28T14:30:00.000-04:00",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "9-354",
+   "url": "https://app.notion.com/p/16-990-Creative-Teams-Lecture-06-Developing-Personal-Skills-Values-and-Ethical-decision-making-3e2ea74eb7798140aeedfba16a0552eb"
+  },
+  {
+   "name": "IDS.412 Tech & Policy: Lecture 06: Property Rights",
+   "code": "IDS.412",
+   "date": "2026-09-28T13:00:00.000-04:00",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "66-168",
+   "url": "https://app.notion.com/p/IDS-412-Tech-Policy-Lecture-06-Property-Rights-3e2ea74eb77981509aa7df246d31d76e"
+  },
+  {
+   "name": "16.987 Grad Seminar: Seminar 03: Professional Development: Requirement Overview",
+   "code": "16.987",
+   "date": "2026-09-28T11:30:00.000-04:00",
+   "due": "",
+   "status": "",
+   "type": "Seminar",
+   "room": "37-252 (Marlar Lounge)",
+   "url": "https://app.notion.com/p/16-987-Grad-Seminar-Seminar-03-Professional-Development-Requirement-Overview-3e2ea74eb7798164b31ac430a6313562"
+  },
+  {
+   "name": "14.003 Microecon & Policy: Lecture 06: From preferences to demand curves",
+   "code": "14.003",
+   "date": "2026-09-28T10:30:00.000-04:00",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "E51-376",
+   "url": "https://app.notion.com/p/14-003-Microecon-Policy-Lecture-06-From-preferences-to-demand-curves-3e2ea74eb77981e5bba4cf25ce64d757"
+  },
+  {
+   "name": "[DUE] 16.990 Creative Teams: Assignment: Personality Assessment",
+   "code": "16.990",
+   "date": "2026-09-18T23:59:00.000-04:00",
+   "due": "",
+   "status": "Not started",
+   "type": "",
+   "room": "",
+   "url": "https://app.notion.com/p/DUE-16-990-Creative-Teams-Assignment-Personality-Assessment-3e2ea74eb77981eeb81bf0fe1deb6765"
+  },
+  {
+   "name": "[HW] 16.842 Systems Eng: Team assignment form",
+   "code": "16.842",
+   "date": "2026-09-18T17:15:00.000-04:00",
+   "due": "",
+   "status": "Done",
+   "type": "",
+   "room": "",
+   "url": "https://app.notion.com/p/HW-16-842-Systems-Eng-Team-assignment-form-3e2ea74eb779813db360cce5a1ede140"
+  },
+  {
+   "name": "[HW] 16.842 Systems Eng: Office hours when2meet poll",
+   "code": "16.842",
+   "date": "2026-09-18T17:00:00.000-04:00",
+   "due": "",
+   "status": "Done",
+   "type": "",
+   "room": "",
+   "url": "https://app.notion.com/p/HW-16-842-Systems-Eng-Office-hours-when2meet-poll-3e2ea74eb779813c8054ddd4a11c8df8"
+  },
+  {
+   "name": "14.003 Microecon & Policy: Recitation Week 2",
+   "code": "14.003",
+   "date": "2026-09-18T09:00:00.000-04:00",
+   "due": "",
+   "status": "",
+   "type": "Seminar",
+   "room": "E52-164 at 0900 or E51-057 at 1000, choose either",
+   "url": "https://app.notion.com/p/14-003-Microecon-Policy-Recitation-Week-2-3e2ea74eb77981408debfb420e3f3bdd"
+  },
+  {
+   "name": "16.S896 RASCAL: Presentation 01: Skills Survey + Team Pitches Due",
+   "code": "16.S896",
+   "date": "2026-09-18",
+   "due": "",
+   "status": "Not started",
+   "type": "Presentation",
+   "room": "9-354",
+   "url": "https://app.notion.com/p/16-S896-RASCAL-Presentation-01-Skills-Survey-Team-Pitches-Due-3e2ea74eb7798148bbced53f9c4679f4"
+  },
+  {
+   "name": "Work on 14.003 PSET",
+   "code": "14.003",
+   "date": "2026-09-17T20:30:00.000-04:00",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "",
+   "url": "https://app.notion.com/p/Work-on-14-003-PSET-3e2ea74eb77981cb9aa8d64ba1509a76"
+  },
+  {
+   "name": "[STUDY] 14.003 Microecon & Policy: Exam 01 T-28: Scope it: list every lecture and reading covered, then self-test cold to find the gaps",
+   "code": "14.003",
+   "date": "2026-09-17T13:00:00.000-04:00",
+   "due": "",
+   "status": "Not started",
+   "type": "",
+   "room": "",
+   "url": "https://app.notion.com/p/STUDY-14-003-Microecon-Policy-Exam-01-T-28-Scope-it-list-every-lecture-and-reading-covered-th-3e2ea74eb77981408ad5f6b5c67fad67"
+  },
+  {
+   "name": "[DUE] 16.S896 RASCAL: Presentation 01: Skills Survey + Team Pitches",
+   "code": "16.S896",
+   "date": "2026-09-17",
+   "due": "",
+   "status": "Not started",
+   "type": "",
+   "room": "",
+   "url": "https://app.notion.com/p/DUE-16-S896-RASCAL-Presentation-01-Skills-Survey-Team-Pitches-3e2ea74eb779819aaba9f7a26839694d"
+  },
+  {
+   "name": "[DUE] 16.990 Creative Teams: Assignment: Our graduate program & class surveys",
+   "code": "16.990",
+   "date": "2026-09-17",
+   "due": "",
+   "status": "Not started",
+   "type": "",
+   "room": "",
+   "url": "https://app.notion.com/p/DUE-16-990-Creative-Teams-Assignment-Our-graduate-program-class-surveys-3e2ea74eb77981eb97c2dc51861686cf"
+  },
+  {
+   "name": "IDS.412 Tech & Policy: Recitation Week 2",
+   "code": "IDS.412",
+   "date": "2026-09-16T16:00:00.000-04:00",
+   "due": "",
+   "status": "Not started",
+   "type": "",
+   "room": "66-168",
+   "url": "https://app.notion.com/p/IDS-412-Tech-Policy-Recitation-Week-2-3e2ea74eb779814bb208d519c5ee4d3a"
+  },
+  {
+   "name": "16.990 Creative Teams: Lecture 03: Introduction to models of teams and team leadership (part two)",
+   "code": "16.990",
+   "date": "2026-09-16T14:30:00.000-04:00",
+   "due": "",
+   "status": "",
+   "type": "Lecture",
+   "room": "9-354",
+   "url": "https://app.notion.com/p/16-990-Creative-Teams-Lecture-03-Introduction-to-models-of-teams-and-team-leadership-part-two-3e2ea74eb77981628f22e2a3300b4667"
+  },
+  {
+   "name": "IDS.412 Tech & Policy: Lecture 03: Knowledge generation",
+   "code": "IDS.412",
+   "date": "2026-09-16T13:00:00.000-04:00",
+   "due": "",
+   "status": "",
+   "type": "Lecture",
+   "room": "66-168",
+   "url": "https://app.notion.com/p/IDS-412-Tech-Policy-Lecture-03-Knowledge-generation-3e2ea74eb77981da9103ffe86a692fa8"
+  },
+  {
+   "name": "[STUDY] 16.990 Creative Teams: Lecture 03 prep",
+   "code": "16.990",
+   "date": "2026-09-16T12:00:00.000-04:00",
+   "due": "",
+   "status": "Not started",
+   "type": "",
+   "room": "",
+   "url": "https://app.notion.com/p/STUDY-16-990-Creative-Teams-Lecture-03-prep-3e2ea74eb7798162a4a9cf8bfe70e246"
+  },
+  {
+   "name": "[STUDY] IDS.412 Tech & Policy: Lecture 03 prep",
+   "code": "IDS.412",
+   "date": "2026-09-16T08:00:00.000-04:00",
+   "due": "",
+   "status": "Not started",
+   "type": "",
+   "room": "",
+   "url": "https://app.notion.com/p/STUDY-IDS-412-Tech-Policy-Lecture-03-prep-3e2ea74eb77981d184dcd24134f4b264"
+  },
+  {
+   "name": "[STUDY] 14.003 Microecon & Policy: Lecture 03 prep",
+   "code": "14.003",
+   "date": "2026-09-16T07:00:00.000-04:00",
+   "due": "",
+   "status": "Not started",
+   "type": "",
+   "room": "",
+   "url": "https://app.notion.com/p/STUDY-14-003-Microecon-Policy-Lecture-03-prep-3e2ea74eb779818d9da0e1bc93f67aab"
+  },
+  {
+   "name": "16.842 Systems Eng: Lecture 01: SE Overview & Stakeholders",
+   "code": "16.842",
+   "date": "2026-09-15T11:00:00.000-04:00",
+   "due": "",
+   "status": "Not started",
+   "type": "Lecture",
+   "room": "33-218",
+   "url": "https://app.notion.com/p/16-842-Systems-Eng-Lecture-01-SE-Overview-Stakeholders-3e2ea74eb77981b7959cccdd314ea5f8"
+  },
+  {
+   "name": "TSK 16.842 Fundamentals of Systems Engineering: Syllabus At A Glance",
+   "code": "16.842",
+   "date": "2026-09-15T10:00:00.000-04:00",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "",
+   "url": "https://app.notion.com/p/TSK-16-842-Fundamentals-of-Systems-Engineering-Syllabus-At-A-Glance-3e2ea74eb7798145b982eee8d4a0af8f"
+  },
+  {
+   "name": "16.842 Systems Eng: Quiz 01: Pre-Reading (slides) Week 1 Quiz (mandatory, 4 pts) DUE",
+   "code": "16.842",
+   "date": "2026-09-15T09:15:00.000-04:00",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "Canvas (online)",
+   "url": "https://app.notion.com/p/16-842-Systems-Eng-Quiz-01-Pre-Reading-slides-Week-1-Quiz-mandatory-4-pts-DUE-3e2ea74eb77981208154e088923cf9d8"
+  },
+  {
+   "name": "16.842 Systems Eng: Quiz 02: Pre-Readings (handbooks) Week 1 (mandatory) DUE",
+   "code": "16.842",
+   "date": "2026-09-15T09:00:00.000-04:00",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "Canvas (online)",
+   "url": "https://app.notion.com/p/16-842-Systems-Eng-Quiz-02-Pre-Readings-handbooks-Week-1-mandatory-DUE-3e2ea74eb7798188b754e09d60c27295"
+  },
+  {
+   "name": "[PREP] 16.842 Systems Eng: A1 T-14: Scope it: Team Formation, Stakeholders & ConOps",
+   "code": "16.842",
+   "date": "2026-09-15",
+   "due": "",
+   "status": "Not started",
+   "type": "",
+   "room": "",
+   "url": "https://app.notion.com/p/PREP-16-842-Systems-Eng-A1-T-14-Scope-it-Team-Formation-Stakeholders-ConOps-3e2ea74eb7798183b3bec444cecb7df5"
+  },
+  {
+   "name": "[DUE] 16.990 Creative Teams: Task: Purchase Harvard course packet (Erik Peterson case)",
+   "code": "16.990",
+   "date": "2026-09-15",
+   "due": "",
+   "status": "Not started",
+   "type": "",
+   "room": "",
+   "url": "https://app.notion.com/p/DUE-16-990-Creative-Teams-Task-Purchase-Harvard-course-packet-Erik-Peterson-case-3e2ea74eb77981f9b356dbebf5d9ccf9"
+  },
+  {
+   "name": "MTG 24.133 Experiential Ethics: Fall Showcase, poster presentation",
+   "code": "24.133",
+   "date": "2026-09-15",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "",
+   "url": "https://app.notion.com/p/MTG-24-133-Experiential-Ethics-Fall-Showcase-poster-presentation-3e2ea74eb77981739225f1ed72b6cd9f"
+  },
+  {
+   "name": "[STUDY] 16.842 Systems Eng: Quiz 01 T-2: Light retrieval pass",
+   "code": "16.842",
+   "date": "2026-09-14T21:30:00.000-04:00",
+   "due": "",
+   "status": "Not started",
+   "type": "",
+   "room": "",
+   "url": "https://app.notion.com/p/STUDY-16-842-Systems-Eng-Quiz-01-T-2-Light-retrieval-pass-3e2ea74eb77981e3ab83e2c5ea5918bc"
+  },
+  {
+   "name": "[STUDY] 16.842 Systems Eng: Quiz 02 T-2: Light retrieval pass",
+   "code": "16.842",
+   "date": "2026-09-14T21:00:00.000-04:00",
+   "due": "",
+   "status": "Not started",
+   "type": "",
+   "room": "",
+   "url": "https://app.notion.com/p/STUDY-16-842-Systems-Eng-Quiz-02-T-2-Light-retrieval-pass-3e2ea74eb779814aa41fd5fa32fa70bd"
+  },
+  {
+   "name": "[PREP] 16.842 Systems Eng: Quiz 01: Pre-Reading (slides) Week 1, mandatory, 4 pts",
+   "code": "16.842",
+   "date": "2026-09-14T20:30:00.000-04:00",
+   "due": "",
+   "status": "Not started",
+   "type": "",
+   "room": "",
+   "url": "https://app.notion.com/p/PREP-16-842-Systems-Eng-Quiz-01-Pre-Reading-slides-Week-1-mandatory-4-pts-3e2ea74eb7798144b61ee2215d49e789"
+  },
+  {
+   "name": "[PREP] 16.842 Systems Eng: Quiz 02: Pre-Readings (handbooks) Week 1, mandatory",
+   "code": "16.842",
+   "date": "2026-09-14T20:00:00.000-04:00",
+   "due": "",
+   "status": "Not started",
+   "type": "",
+   "room": "",
+   "url": "https://app.notion.com/p/PREP-16-842-Systems-Eng-Quiz-02-Pre-Readings-handbooks-Week-1-mandatory-3e2ea74eb7798169a157d1b711057cf9"
+  },
+  {
+   "name": "16.S896 RASCAL: Lecture 02: Competition Info Session (special Mon session)",
+   "code": "16.S896",
+   "date": "2026-09-14T17:00:00.000-04:00",
+   "due": "",
+   "status": "Not started",
+   "type": "Lecture",
+   "room": "35-225",
+   "url": "https://app.notion.com/p/16-S896-RASCAL-Lecture-02-Competition-Info-Session-special-Mon-session-3e2ea74eb77981b9947dc19442613fa6"
+  },
+  {
+   "name": "16.990 Creative Teams: Lecture 02: Introduction to leading teams (part one)",
+   "code": "16.990",
+   "date": "2026-09-14T14:30:00.000-04:00",
+   "due": "",
+   "status": "",
+   "type": "Lecture",
+   "room": "9-354",
+   "url": "https://app.notion.com/p/16-990-Creative-Teams-Lecture-02-Introduction-to-leading-teams-part-one-3e2ea74eb779819db62bcc35d5c3c7a8"
+  },
+  {
+   "name": "IDS.412 Tech & Policy: Lecture 02: Policies, Institutions and Markets",
+   "code": "IDS.412",
+   "date": "2026-09-14T13:00:00.000-04:00",
+   "due": "",
+   "status": "",
+   "type": "Lecture",
+   "room": "66-168",
+   "url": "https://app.notion.com/p/IDS-412-Tech-Policy-Lecture-02-Policies-Institutions-and-Markets-3e2ea74eb7798122b0aaeeb889951c4f"
+  },
+  {
+   "name": "16.987 Grad Seminar: Seminar 01",
+   "code": "16.987",
+   "date": "2026-09-14T11:30:00.000-04:00",
+   "due": "",
+   "status": "",
+   "type": "Seminar",
+   "room": "37-252",
+   "url": "https://app.notion.com/p/16-987-Grad-Seminar-Seminar-01-3e2ea74eb779816bbad8c07746423591"
+  },
+  {
+   "name": "[DUE] 16.990 Creative Teams: Assignment: Session 02 Qualtrics survey",
+   "code": "16.990",
+   "date": "2026-09-13T21:00:00.000-04:00",
+   "due": "",
+   "status": "Not started",
+   "type": "",
+   "room": "",
+   "url": "https://app.notion.com/p/DUE-16-990-Creative-Teams-Assignment-Session-02-Qualtrics-survey-3e2ea74eb77981dba6e2ee6083e6d6bf"
+  },
+  {
+   "name": "[PREP] 16.990 Creative Teams: Lecture 02: Introduction to leading teams (part one)",
+   "code": "16.990",
+   "date": "2026-09-13T21:00:00.000-04:00",
+   "due": "",
+   "status": "Not started",
+   "type": "",
+   "room": "",
+   "url": "https://app.notion.com/p/PREP-16-990-Creative-Teams-Lecture-02-Introduction-to-leading-teams-part-one-3e2ea74eb77981b0bed4fd5bf024f3be"
+  },
+  {
+   "name": "[DUE] 16.990 Creative Teams: Assignment: Pre-Class Assignment: Introduction to leading teams (part one)",
+   "code": "16.990",
+   "date": "2026-09-13T20:00:00.000-04:00",
+   "due": "",
+   "status": "Not started",
+   "type": "",
+   "room": "",
+   "url": "https://app.notion.com/p/DUE-16-990-Creative-Teams-Assignment-Pre-Class-Assignment-Introduction-to-leading-teams-part-on-3e2ea74eb7798141b77cd2428be4c6a1"
+  },
+  {
+   "name": "[PREP] IDS.412 Tech & Policy: Lecture 02: Policies, Institutions and Markets",
+   "code": "IDS.412",
+   "date": "2026-09-13T20:00:00.000-04:00",
+   "due": "",
+   "status": "Not started",
+   "type": "",
+   "room": "",
+   "url": "https://app.notion.com/p/PREP-IDS-412-Tech-Policy-Lecture-02-Policies-Institutions-and-Markets-3e2ea74eb779810e9404e76c534736d1"
+  },
+  {
+   "name": "[PREP] 14.003 Microecon & Policy: Lecture 02: Testing theory: The fundamental problem of causa",
+   "code": "14.003",
+   "date": "2026-09-13T19:00:00.000-04:00",
+   "due": "",
+   "status": "Not started",
+   "type": "",
+   "room": "",
+   "url": "https://app.notion.com/p/PREP-14-003-Microecon-Policy-Lecture-02-Testing-theory-The-fundamental-problem-of-causa-3e2ea74eb779812c8bc7ed0d03020078"
+  },
+  {
+   "name": "14.003 Homework",
+   "code": "14.003",
+   "date": "2026-09-13T19:00:00.000-04:00",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "",
+   "url": "https://app.notion.com/p/14-003-Homework-3e2ea74eb779816d9042d674f8fb5288"
+  },
+  {
+   "name": "[READ] 16.990 Creative Teams: Prep: Ancona, Bresman & Caldwell (2009) Six Steps to Leading High-Performing X-Teams",
+   "code": "16.990",
+   "date": "2026-09-13T18:00:00.000-04:00",
+   "due": "",
+   "status": "Not started",
+   "type": "",
+   "room": "",
+   "url": "https://app.notion.com/p/READ-16-990-Creative-Teams-Prep-Ancona-Bresman-Caldwell-2009-Six-Steps-to-Leading-High-Perfo-3e2ea74eb779812d95c3f90f49ea6de4"
+  },
+  {
+   "name": "Template Page",
+   "code": "24.134",
+   "date": "2026-09-13",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "",
+   "url": "https://app.notion.com/p/Template-Page-3e2ea74eb7798161967cd495db2345b6"
+  },
+  {
+   "name": "16.S896 RASCAL: Lecture 01",
+   "code": "16.S896",
+   "date": "2026-09-11T15:00:00.000-04:00",
+   "due": "",
+   "status": "",
+   "type": "Lecture",
+   "room": "9-354, breakout 33-218",
+   "url": "https://app.notion.com/p/16-S896-RASCAL-Lecture-01-3e2ea74eb77981b791ddd8b59a81744c"
+  },
+  {
+   "name": "14.003 Microecon & Policy: Recitation Week 1",
+   "code": "14.003",
+   "date": "2026-09-11T09:00:00.000-04:00",
+   "due": "",
+   "status": "",
+   "type": "Seminar",
+   "room": "E52-164 at 0900, or E51-057 at 1000",
+   "url": "https://app.notion.com/p/14-003-Microecon-Policy-Recitation-Week-1-3e2ea74eb779818f8b94d88d43c895ec"
+  },
+  {
+   "name": "TSK 24.133: Print the 24x36 poster before the showcase",
+   "code": "24.133",
+   "date": "2026-09-11",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "",
+   "url": "https://app.notion.com/p/TSK-24-133-Print-the-24x36-poster-before-the-showcase-3e2ea74eb7798157a4c5d144a6808d75"
+  },
+  {
+   "name": "TSK IDS.412: Read the IDS.412 syllabus before class",
+   "code": "IDS.412",
+   "date": "2026-09-09",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "",
+   "url": "https://app.notion.com/p/TSK-IDS-412-Read-the-IDS-412-syllabus-before-class-3e2ea74eb77981cab1dec559dc1629dd"
+  },
+  {
+   "name": "TSK 24.133: Confirm showcase location and the shareable component upload deadline",
+   "code": "24.133",
+   "date": "2026-09-09",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "",
+   "url": "https://app.notion.com/p/TSK-24-133-Confirm-showcase-location-and-the-shareable-component-upload-deadline-3e2ea74eb7798106b83afdf3499d11f6"
+  },
+  {
+   "name": "TSK 16.990: Read the 16.990 Spring 2026 syllabus, prior term, confirm Fall rules in class",
+   "code": "16.990",
+   "date": "2026-09-09",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "",
+   "url": "https://app.notion.com/p/TSK-16-990-Read-the-16-990-Spring-2026-syllabus-prior-term-confirm-Fall-rules-in-class-3e2ea74eb77981a4894cf340177157e1"
+  },
+  {
+   "name": "TSK 14.003: Read the 14.003 syllabus and Class Overview before class",
+   "code": "14.003",
+   "date": "2026-09-09",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "",
+   "url": "https://app.notion.com/p/TSK-14-003-Read-the-14-003-syllabus-and-Class-Overview-before-class-3e2ea74eb77981c9ab46c298d4055411"
+  },
+  {
+   "name": "TSK 16.842: Class overview: 2027 NASA RASC-AL: reference material hosted by 16.842",
+   "code": "16.842",
+   "date": "2026-09-01",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "",
+   "url": "https://app.notion.com/p/TSK-16-842-Class-overview-2027-NASA-RASC-AL-reference-material-hosted-by-16-842-3e2ea74eb77981ad9addc08a97791f36"
+  },
+  {
+   "name": "TSK 16.842: Class overview: 16.842: Generative AI (GAI) Policy",
+   "code": "16.842",
+   "date": "2026-09-01",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "",
+   "url": "https://app.notion.com/p/TSK-16-842-Class-overview-16-842-Generative-AI-GAI-Policy-3e2ea74eb77981ed8ed9e410d068ab04"
+  },
+  {
+   "name": "TSK 16.842: Class overview: 16.842 Textbooks & References",
+   "code": "16.842",
+   "date": "2026-09-01",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "",
+   "url": "https://app.notion.com/p/TSK-16-842-Class-overview-16-842-Textbooks-References-3e2ea74eb77981b3b62acbb467bbe870"
   },
   {
    "name": "14.003 Microecon & Policy: Recitation Week 3",
@@ -99,106 +2209,6 @@
    "type": "Seminar",
    "room": "E52-164 at 0900, or E51-057 at 1000",
    "url": "https://app.notion.com/p/14-003-Microecon-Policy-Recitation-Week-3-3e2ea74eb7798186a98fc129b9b07559"
-  },
-  {
-   "name": "16.987 Grad Seminar: Seminar 12: Community Engagement (Last day)",
-   "code": "16.987",
-   "date": "2026-12-07T11:30:00.000-05:00",
-   "due": "",
-   "status": "",
-   "type": "Seminar",
-   "room": "37-252 (Marlar Lounge)",
-   "url": "https://app.notion.com/p/16-987-Grad-Seminar-Seminar-12-Community-Engagement-Last-day-3e2ea74eb77981d7acc0eef380409f74"
-  },
-  {
-   "name": "16.987 Grad Seminar: Seminar 11: Professional Development: Internships",
-   "code": "16.987",
-   "date": "2026-11-30T11:30:00.000-05:00",
-   "due": "",
-   "status": "",
-   "type": "Seminar",
-   "room": "37-252 (Marlar Lounge)",
-   "url": "https://app.notion.com/p/16-987-Grad-Seminar-Seminar-11-Professional-Development-Internships-3e2ea74eb7798124a8f1cfe81a85b7fd"
-  },
-  {
-   "name": "16.987 Grad Seminar: Seminar 10: OGE Sponsored Event",
-   "code": "16.987",
-   "date": "2026-11-23T11:30:00.000-05:00",
-   "due": "",
-   "status": "",
-   "type": "Seminar",
-   "room": "37-252 (Marlar Lounge)",
-   "url": "https://app.notion.com/p/16-987-Grad-Seminar-Seminar-10-OGE-Sponsored-Event-3e2ea74eb7798120afead3b8e31b0721"
-  },
-  {
-   "name": "16.987 Grad Seminar: Seminar 09: UROPS",
-   "code": "16.987",
-   "date": "2026-11-16T11:30:00.000-05:00",
-   "due": "",
-   "status": "",
-   "type": "Seminar",
-   "room": "37-252 (Marlar Lounge)",
-   "url": "https://app.notion.com/p/16-987-Grad-Seminar-Seminar-09-UROPS-3e2ea74eb77981e7b98aea193d54b87a"
-  },
-  {
-   "name": "16.987 Grad Seminar: Seminar 08: Maximizing Impact by Minimizing Barriers",
-   "code": "16.987",
-   "date": "2026-11-09T11:30:00.000-05:00",
-   "due": "",
-   "status": "",
-   "type": "Seminar",
-   "room": "37-252 (Marlar Lounge)",
-   "url": "https://app.notion.com/p/16-987-Grad-Seminar-Seminar-08-Maximizing-Impact-by-Minimizing-Barriers-3e2ea74eb7798124ac1fe6f3bbcc23da"
-  },
-  {
-   "name": "16.987 Grad Seminar: Seminar 07: Research & Publishing",
-   "code": "16.987",
-   "date": "2026-11-02T11:30:00.000-05:00",
-   "due": "",
-   "status": "",
-   "type": "Seminar",
-   "room": "37-252 (Marlar Lounge)",
-   "url": "https://app.notion.com/p/16-987-Grad-Seminar-Seminar-07-Research-Publishing-3e2ea74eb77981b4a595d9f5c514701c"
-  },
-  {
-   "name": "16.987 Grad Seminar: Seminar 06: Professional Development: Networking",
-   "code": "16.987",
-   "date": "2026-10-26T11:30:00.000-04:00",
-   "due": "",
-   "status": "",
-   "type": "Seminar",
-   "room": "37-252 (Marlar Lounge)",
-   "url": "https://app.notion.com/p/16-987-Grad-Seminar-Seminar-06-Professional-Development-Networking-3e2ea74eb77981e69f3ed14a7f66bef6"
-  },
-  {
-   "name": "16.987 Grad Seminar: Seminar 05: GradEL",
-   "code": "16.987",
-   "date": "2026-10-19T11:30:00.000-04:00",
-   "due": "",
-   "status": "",
-   "type": "Seminar",
-   "room": "37-252 (Marlar Lounge)",
-   "url": "https://app.notion.com/p/16-987-Grad-Seminar-Seminar-05-GradEL-3e2ea74eb7798125ae9fd6696ec85575"
-  },
-  {
-   "name": "16.987 Grad Seminar: Seminar 04: Organizing a Research Paper",
-   "code": "16.987",
-   "date": "2026-10-05T11:30:00.000-04:00",
-   "due": "",
-   "status": "",
-   "type": "Seminar",
-   "room": "37-252 (Marlar Lounge)",
-   "url": "https://app.notion.com/p/16-987-Grad-Seminar-Seminar-04-Organizing-a-Research-Paper-3e2ea74eb77981a599f8d9a40622a468"
-  },
-  {
-   "name": "16.987 Grad Seminar: Seminar 03: Professional Development: Requirement Overview",
-   "code": "16.987",
-   "date": "2026-09-28T11:30:00.000-04:00",
-   "due": "",
-   "status": "",
-   "type": "Seminar",
-   "room": "37-252 (Marlar Lounge)",
-   "url": "https://app.notion.com/p/16-987-Grad-Seminar-Seminar-03-Professional-Development-Requirement-Overview-3e2ea74eb77981a79f78ff4462326f80"
   },
   {
    "name": "16.987 Grad Seminar: Seminar 02: Mental/Physical Health",
@@ -219,26 +2229,6 @@
    "type": "",
    "room": "",
    "url": "https://app.notion.com/p/PSET1-Prep-ba31c8b7a61645658a02337251e9e426"
-  },
-  {
-   "name": "Work on 14.003 PSET",
-   "code": "14.003",
-   "date": "2026-09-17T20:30:00.000-04:00",
-   "due": "",
-   "status": "",
-   "type": "",
-   "room": "",
-   "url": "https://app.notion.com/p/Work-on-14-003-PSET-c32c07d1828d42ceba11689370b42121"
-  },
-  {
-   "name": "[DUE] 16.990 Creative Teams: Assignment: Personality Assessment",
-   "code": "16.990",
-   "date": "2026-09-18T23:59:00.000-04:00",
-   "due": "",
-   "status": "Not started",
-   "type": "",
-   "room": "",
-   "url": "https://app.notion.com/p/DUE-16-990-Creative-Teams-Assignment-Personality-Assessment-3deea74eb779815a81dcd8077ff44961"
   },
   {
    "name": "14.003 Office Hours \u2014 Pratik Bhandari",
@@ -1211,146 +3201,6 @@
    "url": "https://app.notion.com/p/14-003-Office-Hours-Ragini-Srinivasan-3dcea74eb77981feb8e9d8f01db4143e"
   },
   {
-   "name": "[STUDY] 16.990 Creative Teams: Lecture 03 prep",
-   "code": "16.990",
-   "date": "2026-09-16T12:00:00.000-04:00",
-   "due": "",
-   "status": "Not started",
-   "type": "",
-   "room": "",
-   "url": "https://app.notion.com/p/STUDY-16-990-Creative-Teams-Lecture-03-prep-3dcea74eb779816aa8e3d22d857abf7e"
-  },
-  {
-   "name": "[STUDY] IDS.412 Tech & Policy: Lecture 03 prep",
-   "code": "IDS.412",
-   "date": "2026-09-16T08:00:00.000-04:00",
-   "due": "",
-   "status": "Not started",
-   "type": "",
-   "room": "",
-   "url": "https://app.notion.com/p/STUDY-IDS-412-Tech-Policy-Lecture-03-prep-3dcea74eb77981ab9b1acfbe534b0969"
-  },
-  {
-   "name": "[STUDY] 14.003 Microecon & Policy: Lecture 03 prep",
-   "code": "14.003",
-   "date": "2026-09-16T07:00:00.000-04:00",
-   "due": "",
-   "status": "Not started",
-   "type": "",
-   "room": "",
-   "url": "https://app.notion.com/p/STUDY-14-003-Microecon-Policy-Lecture-03-prep-3dcea74eb7798133bddae36fbff3105e"
-  },
-  {
-   "name": "[HW] 16.842 Systems Eng: Team assignment form",
-   "code": "16.842",
-   "date": "2026-09-18T17:15:00.000-04:00",
-   "due": "",
-   "status": "Done",
-   "type": "",
-   "room": "",
-   "url": "https://app.notion.com/p/HW-16-842-Systems-Eng-Team-assignment-form-3dcea74eb77981178147c8a801c069b9"
-  },
-  {
-   "name": "[HW] 16.842 Systems Eng: Office hours when2meet poll",
-   "code": "16.842",
-   "date": "2026-09-18T17:00:00.000-04:00",
-   "due": "",
-   "status": "Done",
-   "type": "",
-   "room": "",
-   "url": "https://app.notion.com/p/HW-16-842-Systems-Eng-Office-hours-when2meet-poll-3dcea74eb779813489a1cd0170e32eeb"
-  },
-  {
-   "name": "IDS.412 Tech & Policy: Recitation Week 14",
-   "code": "IDS.412",
-   "date": "2026-12-09T16:00:00.000-05:00",
-   "due": "",
-   "status": "Not started",
-   "type": "",
-   "room": "66-168",
-   "url": "https://app.notion.com/p/IDS-412-Tech-Policy-Recitation-Week-14-3dcea74eb7798125a9d8f07f9aba3468"
-  },
-  {
-   "name": "IDS.412 Tech & Policy: Recitation Week 13",
-   "code": "IDS.412",
-   "date": "2026-12-02T16:00:00.000-05:00",
-   "due": "",
-   "status": "Not started",
-   "type": "",
-   "room": "66-168",
-   "url": "https://app.notion.com/p/IDS-412-Tech-Policy-Recitation-Week-13-3dcea74eb779812db095f0653bb4039d"
-  },
-  {
-   "name": "IDS.412 Tech & Policy: Recitation Week 11",
-   "code": "IDS.412",
-   "date": "2026-11-18T16:00:00.000-05:00",
-   "due": "",
-   "status": "Not started",
-   "type": "",
-   "room": "66-168",
-   "url": "https://app.notion.com/p/IDS-412-Tech-Policy-Recitation-Week-11-3dcea74eb7798151bd64d282a8a55d3b"
-  },
-  {
-   "name": "IDS.412 Tech & Policy: Recitation Week 9",
-   "code": "IDS.412",
-   "date": "2026-11-04T16:00:00.000-05:00",
-   "due": "",
-   "status": "Not started",
-   "type": "",
-   "room": "66-168",
-   "url": "https://app.notion.com/p/IDS-412-Tech-Policy-Recitation-Week-9-3dcea74eb77981c5b12ff0c65e36e25f"
-  },
-  {
-   "name": "IDS.412 Tech & Policy: Recitation Week 8",
-   "code": "IDS.412",
-   "date": "2026-10-28T16:00:00.000-04:00",
-   "due": "",
-   "status": "Not started",
-   "type": "",
-   "room": "66-168",
-   "url": "https://app.notion.com/p/IDS-412-Tech-Policy-Recitation-Week-8-3dcea74eb779811bbc86fc5e7836e4ac"
-  },
-  {
-   "name": "IDS.412 Tech & Policy: Recitation Week 7",
-   "code": "IDS.412",
-   "date": "2026-10-21T16:00:00.000-04:00",
-   "due": "",
-   "status": "Not started",
-   "type": "",
-   "room": "66-168",
-   "url": "https://app.notion.com/p/IDS-412-Tech-Policy-Recitation-Week-7-3dcea74eb77981939415f5d142021a53"
-  },
-  {
-   "name": "IDS.412 Tech & Policy: Recitation Week 6",
-   "code": "IDS.412",
-   "date": "2026-10-14T16:00:00.000-04:00",
-   "due": "",
-   "status": "Not started",
-   "type": "",
-   "room": "66-168",
-   "url": "https://app.notion.com/p/IDS-412-Tech-Policy-Recitation-Week-6-3dcea74eb77981cb8774daced35f6e76"
-  },
-  {
-   "name": "IDS.412 Tech & Policy: Recitation Week 5",
-   "code": "IDS.412",
-   "date": "2026-10-07T16:00:00.000-04:00",
-   "due": "",
-   "status": "Not started",
-   "type": "",
-   "room": "66-168",
-   "url": "https://app.notion.com/p/IDS-412-Tech-Policy-Recitation-Week-5-3dcea74eb77981179a5cd634911c8dde"
-  },
-  {
-   "name": "IDS.412 Tech & Policy: Recitation Week 4",
-   "code": "IDS.412",
-   "date": "2026-09-30T16:00:00.000-04:00",
-   "due": "",
-   "status": "Not started",
-   "type": "",
-   "room": "66-168",
-   "url": "https://app.notion.com/p/IDS-412-Tech-Policy-Recitation-Week-4-3dcea74eb77981998541c286f35d03ff"
-  },
-  {
    "name": "IDS.412 Tech & Policy: Recitation Week 3",
    "code": "IDS.412",
    "date": "2026-09-23T16:00:00.000-04:00",
@@ -1359,166 +3209,6 @@
    "type": "",
    "room": "66-168",
    "url": "https://app.notion.com/p/IDS-412-Tech-Policy-Recitation-Week-3-3dcea74eb7798103b3cde39b87258618"
-  },
-  {
-   "name": "IDS.412 Tech & Policy: Recitation Week 2",
-   "code": "IDS.412",
-   "date": "2026-09-16T16:00:00.000-04:00",
-   "due": "",
-   "status": "Not started",
-   "type": "",
-   "room": "66-168",
-   "url": "https://app.notion.com/p/IDS-412-Tech-Policy-Recitation-Week-2-3dcea74eb7798101b407d6cafefd3d8b"
-  },
-  {
-   "name": "[PREP] 16.842 Systems Eng: A5 T-3: Finish it: Final Project Presentation Materials",
-   "code": "16.842",
-   "date": "2026-12-04T19:00:00.000-05:00",
-   "due": "",
-   "status": "Not started",
-   "type": "",
-   "room": "",
-   "url": "https://app.notion.com/p/PREP-16-842-Systems-Eng-A5-T-3-Finish-it-Final-Project-Presentation-Materials-3dcea74eb7798109a162efc008b09f7a"
-  },
-  {
-   "name": "[PREP] 16.842 Systems Eng: A5 T-7: Build it: Final Project Presentation Materials",
-   "code": "16.842",
-   "date": "2026-11-30T19:00:00.000-05:00",
-   "due": "",
-   "status": "Not started",
-   "type": "",
-   "room": "",
-   "url": "https://app.notion.com/p/PREP-16-842-Systems-Eng-A5-T-7-Build-it-Final-Project-Presentation-Materials-3dcea74eb77981f68401c6be2d81aa7c"
-  },
-  {
-   "name": "[PREP] 16.842 Systems Eng: A5 T-14: Scope it: Final Project Presentation Materials",
-   "code": "16.842",
-   "date": "2026-11-23T20:45:00.000-05:00",
-   "due": "",
-   "status": "Not started",
-   "type": "",
-   "room": "",
-   "url": "https://app.notion.com/p/PREP-16-842-Systems-Eng-A5-T-14-Scope-it-Final-Project-Presentation-Materials-3dcea74eb77981ac8edacfb8fd8d486e"
-  },
-  {
-   "name": "[PREP] 16.842 Systems Eng: A6 T-3: Finish it: Written Reflective Memo (individual)",
-   "code": "16.842",
-   "date": "2026-11-13T19:00:00.000-05:00",
-   "due": "",
-   "status": "Not started",
-   "type": "",
-   "room": "",
-   "url": "https://app.notion.com/p/PREP-16-842-Systems-Eng-A6-T-3-Finish-it-Written-Reflective-Memo-individual-3dcea74eb77981a4be8ef831649e54b5"
-  },
-  {
-   "name": "[PREP] 16.842 Systems Eng: A6 T-7: Build it: Written Reflective Memo (individual)",
-   "code": "16.842",
-   "date": "2026-11-09T19:00:00.000-05:00",
-   "due": "",
-   "status": "Not started",
-   "type": "",
-   "room": "",
-   "url": "https://app.notion.com/p/PREP-16-842-Systems-Eng-A6-T-7-Build-it-Written-Reflective-Memo-individual-3dcea74eb77981ba828bd2283c1c1dae"
-  },
-  {
-   "name": "[PREP] 16.842 Systems Eng: A6 T-14: Scope it: Written Reflective Memo (individual)",
-   "code": "16.842",
-   "date": "2026-11-02T20:45:00.000-05:00",
-   "due": "",
-   "status": "Not started",
-   "type": "",
-   "room": "",
-   "url": "https://app.notion.com/p/PREP-16-842-Systems-Eng-A6-T-14-Scope-it-Written-Reflective-Memo-individual-3dcea74eb7798179a6b4c59c0aab44b9"
-  },
-  {
-   "name": "[PREP] 16.842 Systems Eng: A4 T-3: Finish it: Trade Space Exploration & Concept Selection",
-   "code": "16.842",
-   "date": "2026-11-06T19:00:00.000-05:00",
-   "due": "",
-   "status": "Not started",
-   "type": "",
-   "room": "",
-   "url": "https://app.notion.com/p/PREP-16-842-Systems-Eng-A4-T-3-Finish-it-Trade-Space-Exploration-Concept-Selection-3dcea74eb77981c290d0d893af98eb22"
-  },
-  {
-   "name": "[PREP] 16.842 Systems Eng: A4 T-7: Build it: Trade Space Exploration & Concept Selection",
-   "code": "16.842",
-   "date": "2026-11-02T19:00:00.000-05:00",
-   "due": "",
-   "status": "Not started",
-   "type": "",
-   "room": "",
-   "url": "https://app.notion.com/p/PREP-16-842-Systems-Eng-A4-T-7-Build-it-Trade-Space-Exploration-Concept-Selection-3dcea74eb77981cf9360c596bd16edbf"
-  },
-  {
-   "name": "[PREP] 16.842 Systems Eng: A4 T-14: Scope it: Trade Space Exploration & Concept Selection",
-   "code": "16.842",
-   "date": "2026-10-26T20:45:00.000-04:00",
-   "due": "",
-   "status": "Not started",
-   "type": "",
-   "room": "",
-   "url": "https://app.notion.com/p/PREP-16-842-Systems-Eng-A4-T-14-Scope-it-Trade-Space-Exploration-Concept-Selection-3dcea74eb779815595a5dbf01b24b8fc"
-  },
-  {
-   "name": "[PREP] 16.842 Systems Eng: A3 T-3: Finish it: System Architecture & Concept Generation",
-   "code": "16.842",
-   "date": "2026-10-23T19:00:00.000-04:00",
-   "due": "",
-   "status": "Not started",
-   "type": "",
-   "room": "",
-   "url": "https://app.notion.com/p/PREP-16-842-Systems-Eng-A3-T-3-Finish-it-System-Architecture-Concept-Generation-3dcea74eb77981f8af4eeaa3e45624a1"
-  },
-  {
-   "name": "[PREP] 16.842 Systems Eng: A3 T-7: Build it: System Architecture & Concept Generation",
-   "code": "16.842",
-   "date": "2026-10-19T19:00:00.000-04:00",
-   "due": "",
-   "status": "Not started",
-   "type": "",
-   "room": "",
-   "url": "https://app.notion.com/p/PREP-16-842-Systems-Eng-A3-T-7-Build-it-System-Architecture-Concept-Generation-3dcea74eb7798173b4aecec2630c3f03"
-  },
-  {
-   "name": "[PREP] 16.842 Systems Eng: A3 T-14: Scope it: System Architecture & Concept Generation",
-   "code": "16.842",
-   "date": "2026-10-12T20:45:00.000-04:00",
-   "due": "",
-   "status": "Not started",
-   "type": "",
-   "room": "",
-   "url": "https://app.notion.com/p/PREP-16-842-Systems-Eng-A3-T-14-Scope-it-System-Architecture-Concept-Generation-3dcea74eb77981398a7bf01ba833155e"
-  },
-  {
-   "name": "[PREP] 16.842 Systems Eng: A2 T-3: Finish it: Requirements Definition & Margins",
-   "code": "16.842",
-   "date": "2026-10-09T19:00:00.000-04:00",
-   "due": "",
-   "status": "Not started",
-   "type": "",
-   "room": "",
-   "url": "https://app.notion.com/p/PREP-16-842-Systems-Eng-A2-T-3-Finish-it-Requirements-Definition-Margins-3dcea74eb779810aab9bcd8fd9893938"
-  },
-  {
-   "name": "[PREP] 16.842 Systems Eng: A2 T-7: Build it: Requirements Definition & Margins",
-   "code": "16.842",
-   "date": "2026-10-05T19:00:00.000-04:00",
-   "due": "",
-   "status": "Not started",
-   "type": "",
-   "room": "",
-   "url": "https://app.notion.com/p/PREP-16-842-Systems-Eng-A2-T-7-Build-it-Requirements-Definition-Margins-3dcea74eb7798123bff3ea6d5f73a73d"
-  },
-  {
-   "name": "[PREP] 16.842 Systems Eng: A2 T-14: Scope it: Requirements Definition & Margins",
-   "code": "16.842",
-   "date": "2026-09-28T20:45:00.000-04:00",
-   "due": "",
-   "status": "Not started",
-   "type": "",
-   "room": "",
-   "url": "https://app.notion.com/p/PREP-16-842-Systems-Eng-A2-T-14-Scope-it-Requirements-Definition-Margins-3dcea74eb779817686cdcc9bf5a14a17"
   },
   {
    "name": "[PREP] 16.842 Systems Eng: A1 T-3: Finish it: Team Formation, Stakeholders & ConOps",
@@ -1541,246 +3231,6 @@
    "url": "https://app.notion.com/p/PREP-16-842-Systems-Eng-A1-T-7-Build-it-Team-Formation-Stakeholders-ConOps-3dcea74eb7798108b715e3e13d495f12"
   },
   {
-   "name": "[PREP] 16.842 Systems Eng: A1 T-14: Scope it: Team Formation, Stakeholders & ConOps",
-   "code": "16.842",
-   "date": "2026-09-15",
-   "due": "",
-   "status": "Not started",
-   "type": "",
-   "room": "",
-   "url": "https://app.notion.com/p/PREP-16-842-Systems-Eng-A1-T-14-Scope-it-Team-Formation-Stakeholders-ConOps-3dcea74eb77981679a48f9bbd6bf3d55"
-  },
-  {
-   "name": "Template Page",
-   "code": "24.134",
-   "date": "2026-09-13",
-   "due": "",
-   "status": "",
-   "type": "",
-   "room": "",
-   "url": "https://app.notion.com/p/Template-Page-3dbea74eb77980b5b472f755909e2b2f"
-  },
-  {
-   "name": "[STUDY] 16.842 Systems Eng: Exam 01 T-1: Light retrieval pass: no new material",
-   "code": "16.842",
-   "date": "2026-11-30T12:00:00.000-05:00",
-   "due": "",
-   "status": "Not started",
-   "type": "",
-   "room": "",
-   "url": "https://app.notion.com/p/STUDY-16-842-Systems-Eng-Exam-01-T-1-Light-retrieval-pass-no-new-material-3daea74eb77981a28c65c5498304bc69"
-  },
-  {
-   "name": "[STUDY] 16.842 Systems Eng: Exam 01 T-4: Full blank-page recall of the whole syllabus, then close only the gaps you found",
-   "code": "16.842",
-   "date": "2026-11-30T08:00:00.000-05:00",
-   "due": "",
-   "status": "Not started",
-   "type": "",
-   "room": "",
-   "url": "https://app.notion.com/p/STUDY-16-842-Systems-Eng-Exam-01-T-4-Full-blank-page-recall-of-the-whole-syllabus-then-close-onl-3daea74eb77981198977ddf6e321ef06"
-  },
-  {
-   "name": "[STUDY] 16.842 Systems Eng: Exam 01 T-8: Past papers and problem sets under exam conditions, no notes",
-   "code": "16.842",
-   "date": "2026-11-23T08:00:00.000-05:00",
-   "due": "",
-   "status": "Not started",
-   "type": "",
-   "room": "",
-   "url": "https://app.notion.com/p/STUDY-16-842-Systems-Eng-Exam-01-T-8-Past-papers-and-problem-sets-under-exam-conditions-no-notes-3daea74eb77981e580e7e381b1f5cde4"
-  },
-  {
-   "name": "[STUDY] 16.842 Systems Eng: Exam 01 T-14: Closed-book retrieval: second half, same method",
-   "code": "16.842",
-   "date": "2026-11-17T08:00:00.000-05:00",
-   "due": "",
-   "status": "Not started",
-   "type": "",
-   "room": "",
-   "url": "https://app.notion.com/p/STUDY-16-842-Systems-Eng-Exam-01-T-14-Closed-book-retrieval-second-half-same-method-3daea74eb779810e8337ddda84680ed7"
-  },
-  {
-   "name": "[STUDY] 16.842 Systems Eng: Exam 01 T-21: Closed-book retrieval: first half of the material, write what you recall before checking",
-   "code": "16.842",
-   "date": "2026-11-10T08:00:00.000-05:00",
-   "due": "",
-   "status": "Not started",
-   "type": "",
-   "room": "",
-   "url": "https://app.notion.com/p/STUDY-16-842-Systems-Eng-Exam-01-T-21-Closed-book-retrieval-first-half-of-the-material-write-wh-3daea74eb7798185ad80e0edf35b7335"
-  },
-  {
-   "name": "[STUDY] 16.842 Systems Eng: Exam 01 T-28: Scope it: list every lecture and reading covered, then self-test cold to find the gaps",
-   "code": "16.842",
-   "date": "2026-11-03T09:00:00.000-05:00",
-   "due": "",
-   "status": "Not started",
-   "type": "",
-   "room": "",
-   "url": "https://app.notion.com/p/STUDY-16-842-Systems-Eng-Exam-01-T-28-Scope-it-list-every-lecture-and-reading-covered-then-self-3daea74eb77981978649fd0b751ec018"
-  },
-  {
-   "name": "[STUDY] 14.003 Microecon & Policy: Exam 02 T-1: Light retrieval pass: no new material",
-   "code": "14.003",
-   "date": "2026-11-15T08:00:00.000-05:00",
-   "due": "",
-   "status": "Not started",
-   "type": "",
-   "room": "",
-   "url": "https://app.notion.com/p/STUDY-14-003-Microecon-Policy-Exam-02-T-1-Light-retrieval-pass-no-new-material-3daea74eb779812d8caccfeabe95fd52"
-  },
-  {
-   "name": "[STUDY] 14.003 Microecon & Policy: Exam 02 T-4: Full blank-page recall of the whole syllabus, then close only the gaps you found",
-   "code": "14.003",
-   "date": "2026-11-12T08:00:00.000-05:00",
-   "due": "",
-   "status": "Not started",
-   "type": "",
-   "room": "",
-   "url": "https://app.notion.com/p/STUDY-14-003-Microecon-Policy-Exam-02-T-4-Full-blank-page-recall-of-the-whole-syllabus-then-cl-3daea74eb779818cb806dfaca6ead449"
-  },
-  {
-   "name": "[STUDY] 14.003 Microecon & Policy: Exam 02 T-8: Past papers and problem sets under exam conditions, no notes",
-   "code": "14.003",
-   "date": "2026-11-08T08:00:00.000-05:00",
-   "due": "",
-   "status": "Not started",
-   "type": "",
-   "room": "",
-   "url": "https://app.notion.com/p/STUDY-14-003-Microecon-Policy-Exam-02-T-8-Past-papers-and-problem-sets-under-exam-conditions-n-3daea74eb77981a2a8d7e41ba0a387d8"
-  },
-  {
-   "name": "[STUDY] 14.003 Microecon & Policy: Exam 02 T-14: Closed-book retrieval: second half, same method",
-   "code": "14.003",
-   "date": "2026-11-02T08:00:00.000-05:00",
-   "due": "",
-   "status": "Not started",
-   "type": "",
-   "room": "",
-   "url": "https://app.notion.com/p/STUDY-14-003-Microecon-Policy-Exam-02-T-14-Closed-book-retrieval-second-half-same-method-3daea74eb779815181c7ee5df96ee647"
-  },
-  {
-   "name": "[STUDY] 14.003 Microecon & Policy: Exam 02 T-21: Closed-book retrieval: first half of the material, write what you recall before checking",
-   "code": "14.003",
-   "date": "2026-10-26T08:00:00.000-04:00",
-   "due": "",
-   "status": "Not started",
-   "type": "",
-   "room": "",
-   "url": "https://app.notion.com/p/STUDY-14-003-Microecon-Policy-Exam-02-T-21-Closed-book-retrieval-first-half-of-the-material-w-3daea74eb7798133bed2e45141be0024"
-  },
-  {
-   "name": "[STUDY] 14.003 Microecon & Policy: Exam 02 T-28: Scope it: list every lecture and reading covered, then self-test cold to find the gaps",
-   "code": "14.003",
-   "date": "2026-10-19T12:00:00.000-04:00",
-   "due": "",
-   "status": "Not started",
-   "type": "",
-   "room": "",
-   "url": "https://app.notion.com/p/STUDY-14-003-Microecon-Policy-Exam-02-T-28-Scope-it-list-every-lecture-and-reading-covered-th-3daea74eb77981a197e1e13f30e3770f"
-  },
-  {
-   "name": "[STUDY] IDS.412 Tech & Policy: Exam 17 T-1: Light retrieval pass: no new material",
-   "code": "IDS.412",
-   "date": "2026-11-03T08:00:00.000-05:00",
-   "due": "",
-   "status": "Not started",
-   "type": "",
-   "room": "",
-   "url": "https://app.notion.com/p/STUDY-IDS-412-Tech-Policy-Exam-17-T-1-Light-retrieval-pass-no-new-material-3daea74eb779815499a2cac941b2a730"
-  },
-  {
-   "name": "[STUDY] IDS.412 Tech & Policy: Exam 17 T-4: Full blank-page recall of the whole syllabus, then close only the gaps you found",
-   "code": "IDS.412",
-   "date": "2026-10-31T08:00:00.000-04:00",
-   "due": "",
-   "status": "Not started",
-   "type": "",
-   "room": "",
-   "url": "https://app.notion.com/p/STUDY-IDS-412-Tech-Policy-Exam-17-T-4-Full-blank-page-recall-of-the-whole-syllabus-then-close--3daea74eb77981eca663fd1ebaee6805"
-  },
-  {
-   "name": "[STUDY] IDS.412 Tech & Policy: Exam 17 T-8: Past papers and problem sets under exam conditions, no notes",
-   "code": "IDS.412",
-   "date": "2026-10-27T08:00:00.000-04:00",
-   "due": "",
-   "status": "Not started",
-   "type": "",
-   "room": "",
-   "url": "https://app.notion.com/p/STUDY-IDS-412-Tech-Policy-Exam-17-T-8-Past-papers-and-problem-sets-under-exam-conditions-no-no-3daea74eb77981098c5dcacf55e88627"
-  },
-  {
-   "name": "[STUDY] IDS.412 Tech & Policy: Exam 17 T-14: Closed-book retrieval: second half, same method",
-   "code": "IDS.412",
-   "date": "2026-10-21T08:00:00.000-04:00",
-   "due": "",
-   "status": "Not started",
-   "type": "",
-   "room": "",
-   "url": "https://app.notion.com/p/STUDY-IDS-412-Tech-Policy-Exam-17-T-14-Closed-book-retrieval-second-half-same-method-3daea74eb77981f096a7d2026cb1f9c4"
-  },
-  {
-   "name": "[STUDY] IDS.412 Tech & Policy: Exam 17 T-21: Closed-book retrieval: first half of the material, write what you recall before checking",
-   "code": "IDS.412",
-   "date": "2026-10-14T08:00:00.000-04:00",
-   "due": "",
-   "status": "Not started",
-   "type": "",
-   "room": "",
-   "url": "https://app.notion.com/p/STUDY-IDS-412-Tech-Policy-Exam-17-T-21-Closed-book-retrieval-first-half-of-the-material-write-3daea74eb7798145b20cc093b391864b"
-  },
-  {
-   "name": "[STUDY] IDS.412 Tech & Policy: Exam 17 T-28: Scope it: list every lecture and reading covered, then self-test cold to find the gaps",
-   "code": "IDS.412",
-   "date": "2026-10-07T12:00:00.000-04:00",
-   "due": "",
-   "status": "Not started",
-   "type": "",
-   "room": "",
-   "url": "https://app.notion.com/p/STUDY-IDS-412-Tech-Policy-Exam-17-T-28-Scope-it-list-every-lecture-and-reading-covered-then-s-3daea74eb77981109e9affcedae331ed"
-  },
-  {
-   "name": "[STUDY] 14.003 Microecon & Policy: Exam 01 T-1: Light retrieval pass: no new material",
-   "code": "14.003",
-   "date": "2026-10-12T08:00:00.000-04:00",
-   "due": "",
-   "status": "Not started",
-   "type": "",
-   "room": "",
-   "url": "https://app.notion.com/p/STUDY-14-003-Microecon-Policy-Exam-01-T-1-Light-retrieval-pass-no-new-material-3daea74eb77981c6ac08dfa58d9e3777"
-  },
-  {
-   "name": "[STUDY] 14.003 Microecon & Policy: Exam 01 T-4: Full blank-page recall of the whole syllabus, then close only the gaps you found",
-   "code": "14.003",
-   "date": "2026-10-09T17:00:00.000-04:00",
-   "due": "",
-   "status": "Not started",
-   "type": "",
-   "room": "",
-   "url": "https://app.notion.com/p/STUDY-14-003-Microecon-Policy-Exam-01-T-4-Full-blank-page-recall-of-the-whole-syllabus-then-cl-3daea74eb779813680adff27aaacb808"
-  },
-  {
-   "name": "[STUDY] 14.003 Microecon & Policy: Exam 01 T-8: Past papers and problem sets under exam conditions, no notes",
-   "code": "14.003",
-   "date": "2026-10-05T08:00:00.000-04:00",
-   "due": "",
-   "status": "Not started",
-   "type": "",
-   "room": "",
-   "url": "https://app.notion.com/p/STUDY-14-003-Microecon-Policy-Exam-01-T-8-Past-papers-and-problem-sets-under-exam-conditions-n-3daea74eb779819180e6d7ff28d872ea"
-  },
-  {
-   "name": "[STUDY] 14.003 Microecon & Policy: Exam 01 T-14: Closed-book retrieval: second half, same method",
-   "code": "14.003",
-   "date": "2026-09-29T08:00:00.000-04:00",
-   "due": "",
-   "status": "Not started",
-   "type": "",
-   "room": "",
-   "url": "https://app.notion.com/p/STUDY-14-003-Microecon-Policy-Exam-01-T-14-Closed-book-retrieval-second-half-same-method-3daea74eb77981be93dbd9715f966237"
-  },
-  {
    "name": "[STUDY] 14.003 Microecon & Policy: Exam 01 T-21: Closed-book retrieval: first half of the material, write what you recall before checking",
    "code": "14.003",
    "date": "2026-09-22T13:00:00.000-04:00",
@@ -1791,76 +3241,6 @@
    "url": "https://app.notion.com/p/STUDY-14-003-Microecon-Policy-Exam-01-T-21-Closed-book-retrieval-first-half-of-the-material-w-3daea74eb77981bcb1f6e2a8255008d5"
   },
   {
-   "name": "[STUDY] 14.003 Microecon & Policy: Exam 01 T-28: Scope it: list every lecture and reading covered, then self-test cold to find the gaps",
-   "code": "14.003",
-   "date": "2026-09-17T13:00:00.000-04:00",
-   "due": "",
-   "status": "Not started",
-   "type": "",
-   "room": "",
-   "url": "https://app.notion.com/p/STUDY-14-003-Microecon-Policy-Exam-01-T-28-Scope-it-list-every-lecture-and-reading-covered-th-3daea74eb779813fbc75e592b810e366"
-  },
-  {
-   "name": "[STUDY] 16.842 Systems Eng: Quiz 01 T-2: Light retrieval pass",
-   "code": "16.842",
-   "date": "2026-09-14T21:30:00.000-04:00",
-   "due": "",
-   "status": "Not started",
-   "type": "",
-   "room": "",
-   "url": "https://app.notion.com/p/STUDY-16-842-Systems-Eng-Quiz-01-T-2-Light-retrieval-pass-3daea74eb77981f3b395e6df9fa9453d"
-  },
-  {
-   "name": "[STUDY] 16.842 Systems Eng: Quiz 02 T-2: Light retrieval pass",
-   "code": "16.842",
-   "date": "2026-09-14T21:00:00.000-04:00",
-   "due": "",
-   "status": "Not started",
-   "type": "",
-   "room": "",
-   "url": "https://app.notion.com/p/STUDY-16-842-Systems-Eng-Quiz-02-T-2-Light-retrieval-pass-3daea74eb7798178a49fc09e747d42f4"
-  },
-  {
-   "name": "[DUE] 16.S896 RASCAL: Presentation 01: Skills Survey + Team Pitches",
-   "code": "16.S896",
-   "date": "2026-09-17",
-   "due": "",
-   "status": "Not started",
-   "type": "",
-   "room": "",
-   "url": "https://app.notion.com/p/DUE-16-S896-RASCAL-Presentation-01-Skills-Survey-Team-Pitches-3daea74eb77981fb9283e0232cbf0e24"
-  },
-  {
-   "name": "[PREP] 16.842 Systems Eng: Quiz 01: Pre-Reading (slides) Week 1, mandatory, 4 pts",
-   "code": "16.842",
-   "date": "2026-09-14T20:30:00.000-04:00",
-   "due": "",
-   "status": "Not started",
-   "type": "",
-   "room": "",
-   "url": "https://app.notion.com/p/PREP-16-842-Systems-Eng-Quiz-01-Pre-Reading-slides-Week-1-mandatory-4-pts-3daea74eb77981cdbc34dd084afadce0"
-  },
-  {
-   "name": "[PREP] 16.842 Systems Eng: Quiz 02: Pre-Readings (handbooks) Week 1, mandatory",
-   "code": "16.842",
-   "date": "2026-09-14T20:00:00.000-04:00",
-   "due": "",
-   "status": "Not started",
-   "type": "",
-   "room": "",
-   "url": "https://app.notion.com/p/PREP-16-842-Systems-Eng-Quiz-02-Pre-Readings-handbooks-Week-1-mandatory-3daea74eb77981458893de5220cf34db"
-  },
-  {
-   "name": "[DUE] 14.003 Microecon & Policy: Problem Set 02: Consumer theory",
-   "code": "14.003",
-   "date": "2026-10-08T19:00:00.000-04:00",
-   "due": "",
-   "status": "Not started",
-   "type": "",
-   "room": "",
-   "url": "https://app.notion.com/p/DUE-14-003-Microecon-Policy-Problem-Set-02-Consumer-theory-3daea74eb779815bb54af593ccc8b640"
-  },
-  {
    "name": "[DUE] 14.003 Microecon & Policy: Problem Set 01: Minimum wage, research design, causal inference",
    "code": "14.003",
    "date": "2026-09-24T21:00:00.000-04:00",
@@ -1869,166 +3249,6 @@
    "type": "",
    "room": "",
    "url": "https://app.notion.com/p/DUE-14-003-Microecon-Policy-Problem-Set-01-Minimum-wage-research-design-causal-inference-3daea74eb779815ea169d2b6942cb480"
-  },
-  {
-   "name": "[DUE] IDS.412 Tech & Policy: Paper 1: federal regulatory comment",
-   "code": "IDS.412",
-   "date": "2026-10-25T19:00:00.000-04:00",
-   "due": "",
-   "status": "Not started",
-   "type": "",
-   "room": "",
-   "url": "https://app.notion.com/p/DUE-IDS-412-Tech-Policy-Paper-1-federal-regulatory-comment-3daea74eb7798107969ccdbdda6e59db"
-  },
-  {
-   "name": "[DUE] IDS.412 Tech & Policy: Paper I: conference status note",
-   "code": "IDS.412",
-   "date": "2026-10-22T19:00:00.000-04:00",
-   "due": "",
-   "status": "Not started",
-   "type": "",
-   "room": "",
-   "url": "https://app.notion.com/p/DUE-IDS-412-Tech-Policy-Paper-I-conference-status-note-3daea74eb77981dbbba7ec879c80f0ca"
-  },
-  {
-   "name": "[DUE] 16.990 Creative Teams: Task: Purchase Harvard course packet (Erik Peterson case)",
-   "code": "16.990",
-   "date": "2026-09-15",
-   "due": "",
-   "status": "Not started",
-   "type": "",
-   "room": "",
-   "url": "https://app.notion.com/p/DUE-16-990-Creative-Teams-Task-Purchase-Harvard-course-packet-Erik-Peterson-case-3daea74eb7798132a522e485bf4f2365"
-  },
-  {
-   "name": "[DUE] 16.990 Creative Teams: Assignment: Our graduate program & class surveys",
-   "code": "16.990",
-   "date": "2026-09-17",
-   "due": "",
-   "status": "Not started",
-   "type": "",
-   "room": "",
-   "url": "https://app.notion.com/p/DUE-16-990-Creative-Teams-Assignment-Our-graduate-program-class-surveys-3daea74eb7798131aaede4f9d9a4f19a"
-  },
-  {
-   "name": "[READ] 16.990 Creative Teams: Prep: Ancona, Bresman & Caldwell (2009) Six Steps to Leading High-Performing X-Teams",
-   "code": "16.990",
-   "date": "2026-09-13T18:00:00.000-04:00",
-   "due": "",
-   "status": "Not started",
-   "type": "",
-   "room": "",
-   "url": "https://app.notion.com/p/READ-16-990-Creative-Teams-Prep-Ancona-Bresman-Caldwell-2009-Six-Steps-to-Leading-High-Perfo-3daea74eb7798193a5d9f3ca1516fe0f"
-  },
-  {
-   "name": "[DUE] 16.990 Creative Teams: Assignment: Pre-Class Assignment: Introduction to leading teams (part one)",
-   "code": "16.990",
-   "date": "2026-09-13T20:00:00.000-04:00",
-   "due": "",
-   "status": "Not started",
-   "type": "",
-   "room": "",
-   "url": "https://app.notion.com/p/DUE-16-990-Creative-Teams-Assignment-Pre-Class-Assignment-Introduction-to-leading-teams-part-on-3daea74eb779817fbf7cd299b4a2182b"
-  },
-  {
-   "name": "[DUE] 16.990 Creative Teams: Assignment: Session 02 Qualtrics survey",
-   "code": "16.990",
-   "date": "2026-09-13T21:00:00.000-04:00",
-   "due": "",
-   "status": "Not started",
-   "type": "",
-   "room": "",
-   "url": "https://app.notion.com/p/DUE-16-990-Creative-Teams-Assignment-Session-02-Qualtrics-survey-3daea74eb77981669eabf3f40676488e"
-  },
-  {
-   "name": "[PREP] 16.990 Creative Teams: Lecture 02: Introduction to leading teams (part one)",
-   "code": "16.990",
-   "date": "2026-09-13T21:00:00.000-04:00",
-   "due": "",
-   "status": "Not started",
-   "type": "",
-   "room": "",
-   "url": "https://app.notion.com/p/PREP-16-990-Creative-Teams-Lecture-02-Introduction-to-leading-teams-part-one-3daea74eb779813eadf6d14fb051c4bb"
-  },
-  {
-   "name": "[PREP] IDS.412 Tech & Policy: Lecture 02: Policies, Institutions and Markets",
-   "code": "IDS.412",
-   "date": "2026-09-13T20:00:00.000-04:00",
-   "due": "",
-   "status": "Not started",
-   "type": "",
-   "room": "",
-   "url": "https://app.notion.com/p/PREP-IDS-412-Tech-Policy-Lecture-02-Policies-Institutions-and-Markets-3daea74eb77981eeb651dcd5a08111e9"
-  },
-  {
-   "name": "[PREP] 14.003 Microecon & Policy: Lecture 02: Testing theory: The fundamental problem of causa",
-   "code": "14.003",
-   "date": "2026-09-13T19:00:00.000-04:00",
-   "due": "",
-   "status": "Not started",
-   "type": "",
-   "room": "",
-   "url": "https://app.notion.com/p/PREP-14-003-Microecon-Policy-Lecture-02-Testing-theory-The-fundamental-problem-of-causa-3daea74eb779812e9e95cb9d7ace4348"
-  },
-  {
-   "name": "14.003 Homework",
-   "code": "14.003",
-   "date": "2026-09-13T19:00:00.000-04:00",
-   "due": "",
-   "status": "",
-   "type": "",
-   "room": "",
-   "url": "https://app.notion.com/p/14-003-Homework-1fc5e9e33f53408cbdcb160c919a596e"
-  },
-  {
-   "name": "16.990 Creative Teams: Lecture 26: Learning from your final autobiographical papers",
-   "code": "16.990",
-   "date": "2026-12-09T14:30:00.000-04:00",
-   "due": "",
-   "status": "",
-   "type": "",
-   "room": "9-354",
-   "url": "https://app.notion.com/p/16-990-Creative-Teams-Lecture-26-Learning-from-your-final-autobiographical-papers-3d8ea74eb77981c79aa2fc6a7671f50f"
-  },
-  {
-   "name": "16.990 Creative Teams: Lecture 25: Developing Personal and Interpersonal Skills: Negotiating your job offers",
-   "code": "16.990",
-   "date": "2026-12-07T14:30:00.000-04:00",
-   "due": "",
-   "status": "",
-   "type": "",
-   "room": "9-354",
-   "url": "https://app.notion.com/p/16-990-Creative-Teams-Lecture-25-Developing-Personal-and-Interpersonal-Skills-Negotiating-your-jo-3d8ea74eb779811aa6d1fa26c8d7a004"
-  },
-  {
-   "name": "16.990 Creative Teams: Lecture 24: Leading Creative Teams in AI contexts; Practice negotiation skills",
-   "code": "16.990",
-   "date": "2026-12-02T14:30:00.000-04:00",
-   "due": "",
-   "status": "",
-   "type": "",
-   "room": "9-354",
-   "url": "https://app.notion.com/p/16-990-Creative-Teams-Lecture-24-Leading-Creative-Teams-in-AI-contexts-Practice-negotiation-skill-3d8ea74eb77981f4886dfa3b3e97ef38"
-  },
-  {
-   "name": "16.990 Creative Teams: Lecture 23: Developing Teamwork and Organizational Skills: Creating motivating environments in",
-   "code": "16.990",
-   "date": "2026-11-30T14:30:00.000-04:00",
-   "due": "",
-   "status": "",
-   "type": "",
-   "room": "9-354",
-   "url": "https://app.notion.com/p/16-990-Creative-Teams-Lecture-23-Developing-Teamwork-and-Organizational-Skills-Creating-motivatin-3d8ea74eb779819da6dfc97cc3199f31"
-  },
-  {
-   "name": "16.990 Creative Teams: Lecture 22: Developing Teamwork Skills: Learning from team experiences; Introduction to power and",
-   "code": "16.990",
-   "date": "2026-11-25T14:30:00.000-04:00",
-   "due": "",
-   "status": "",
-   "type": "",
-   "room": "9-354",
-   "url": "https://app.notion.com/p/16-990-Creative-Teams-Lecture-22-Developing-Teamwork-Skills-Learning-from-team-experiences-Intro-3d8ea74eb779819d9d5ee3c9e6c031ea"
   },
   {
    "name": "16.990 Creative Teams: Lecture 21",
@@ -2051,146 +3271,6 @@
    "url": "https://app.notion.com/p/16-990-Creative-Teams-Lecture-20-Developing-Teamwork-Skills-Groups-will-deliver-their-projects-to-3d8ea74eb7798173ae38f8a07d0b358b"
   },
   {
-   "name": "16.990 Creative Teams: Lecture 19: Developing Teamwork Skills: Groups will deliver their projects today",
-   "code": "16.990",
-   "date": "2026-11-16T14:30:00.000-04:00",
-   "due": "",
-   "status": "",
-   "type": "",
-   "room": "9-354",
-   "url": "https://app.notion.com/p/16-990-Creative-Teams-Lecture-19-Developing-Teamwork-Skills-Groups-will-deliver-their-projects-to-3d8ea74eb77981988000dd7b477a312f"
-  },
-  {
-   "name": "16.990 Creative Teams: Lecture 18: Developing Personal Skills: Learning to lead: The role of growth mindsets",
-   "code": "16.990",
-   "date": "2026-11-09T14:30:00.000-04:00",
-   "due": "",
-   "status": "",
-   "type": "",
-   "room": "9-354",
-   "url": "https://app.notion.com/p/16-990-Creative-Teams-Lecture-18-Developing-Personal-Skills-Learning-to-lead-The-role-of-growth--3d8ea74eb7798172acb9e11787336dd4"
-  },
-  {
-   "name": "16.990 Creative Teams: Lecture 17: Learning from your autobiographical paper assignment",
-   "code": "16.990",
-   "date": "2026-11-04T14:30:00.000-04:00",
-   "due": "",
-   "status": "",
-   "type": "",
-   "room": "9-354",
-   "url": "https://app.notion.com/p/16-990-Creative-Teams-Lecture-17-Learning-from-your-autobiographical-paper-assignment-3d8ea74eb7798108a22bdd0aea1c834b"
-  },
-  {
-   "name": "16.990 Creative Teams: Lecture 16: Developing Teamwork Skills: Creative problem solving with AI",
-   "code": "16.990",
-   "date": "2026-11-02T14:30:00.000-04:00",
-   "due": "",
-   "status": "",
-   "type": "",
-   "room": "9-354",
-   "url": "https://app.notion.com/p/16-990-Creative-Teams-Lecture-16-Developing-Teamwork-Skills-Creative-problem-solving-with-AI-3d8ea74eb77981a78382c983a90b2c85"
-  },
-  {
-   "name": "16.990 Creative Teams: Lecture 15: Guest lecture with Daniel J. Riccio, former Executive Vice President Hardware Engineering",
-   "code": "16.990",
-   "date": "2026-10-28T14:30:00.000-04:00",
-   "due": "",
-   "status": "",
-   "type": "",
-   "room": "9-354",
-   "url": "https://app.notion.com/p/16-990-Creative-Teams-Lecture-15-Guest-lecture-with-Daniel-J-Riccio-former-Executive-Vice-Presid-3d8ea74eb779819d9c90f124a8a9e693"
-  },
-  {
-   "name": "16.990 Creative Teams: Lecture 14: Developing Teamwork Skills: Creative problem solving",
-   "code": "16.990",
-   "date": "2026-10-26T14:30:00.000-04:00",
-   "due": "",
-   "status": "",
-   "type": "",
-   "room": "9-354",
-   "url": "https://app.notion.com/p/16-990-Creative-Teams-Lecture-14-Developing-Teamwork-Skills-Creative-problem-solving-3d8ea74eb77981ce91b5d3c56e2fdde4"
-  },
-  {
-   "name": "16.990 Creative Teams: Lecture 13: Developing Teamwork Skills: Leading in an inclusive engineering environment",
-   "code": "16.990",
-   "date": "2026-10-21T14:30:00.000-04:00",
-   "due": "",
-   "status": "",
-   "type": "",
-   "room": "9-354",
-   "url": "https://app.notion.com/p/16-990-Creative-Teams-Lecture-13-Developing-Teamwork-Skills-Leading-in-an-inclusive-engineering-e-3d8ea74eb77981fab621cf505908aaea"
-  },
-  {
-   "name": "16.990 Creative Teams: Lecture 12: Developing Teamwork Skills: Leading a mid-point performance check-up",
-   "code": "16.990",
-   "date": "2026-10-19T14:30:00.000-04:00",
-   "due": "",
-   "status": "",
-   "type": "",
-   "room": "9-354",
-   "url": "https://app.notion.com/p/16-990-Creative-Teams-Lecture-12-Developing-Teamwork-Skills-Leading-a-mid-point-performance-check-3d8ea74eb77981878cfec248e5fdaf65"
-  },
-  {
-   "name": "16.990 Creative Teams: Lecture 11: Guest lecture with Veronica Barner, Wind Energy Product Executive at GE Vernova",
-   "code": "16.990",
-   "date": "2026-10-14T14:30:00.000-04:00",
-   "due": "",
-   "status": "",
-   "type": "",
-   "room": "9-354",
-   "url": "https://app.notion.com/p/16-990-Creative-Teams-Lecture-11-Guest-lecture-with-Veronica-Barner-Wind-Energy-Product-Executive-3d8ea74eb77981f5a104e9502e0f72c3"
-  },
-  {
-   "name": "16.990 Creative Teams: Lecture 10: Developing Interpersonal Skills: Giving and receiving feedback in teams",
-   "code": "16.990",
-   "date": "2026-10-13T14:30:00.000-04:00",
-   "due": "",
-   "status": "",
-   "type": "",
-   "room": "9-354",
-   "url": "https://app.notion.com/p/16-990-Creative-Teams-Lecture-10-Developing-Interpersonal-Skills-Giving-and-receiving-feedback-in-3d8ea74eb7798134aacae257be7f48ba"
-  },
-  {
-   "name": "16.990 Creative Teams: Lecture 09: Developing Team and Organizational Skills: Communicating a shared team vision",
-   "code": "16.990",
-   "date": "2026-10-07T14:30:00.000-04:00",
-   "due": "",
-   "status": "",
-   "type": "",
-   "room": "9-354",
-   "url": "https://app.notion.com/p/16-990-Creative-Teams-Lecture-09-Developing-Team-and-Organizational-Skills-Communicating-a-shared-3d8ea74eb77981a8ac9dc02b8ca88ca0"
-  },
-  {
-   "name": "16.990 Creative Teams: Lecture 08: Developing Team and Organizational Skills: Creating a shared team vision",
-   "code": "16.990",
-   "date": "2026-10-05T14:30:00.000-04:00",
-   "due": "",
-   "status": "",
-   "type": "",
-   "room": "9-354",
-   "url": "https://app.notion.com/p/16-990-Creative-Teams-Lecture-08-Developing-Team-and-Organizational-Skills-Creating-a-shared-team-3d8ea74eb77981048b3deafe196697c4"
-  },
-  {
-   "name": "16.990 Creative Teams: Lecture 07: Developing Teamwork Skills: Launching new teams",
-   "code": "16.990",
-   "date": "2026-09-30T14:30:00.000-04:00",
-   "due": "",
-   "status": "",
-   "type": "",
-   "room": "9-354",
-   "url": "https://app.notion.com/p/16-990-Creative-Teams-Lecture-07-Developing-Teamwork-Skills-Launching-new-teams-3d8ea74eb77981d5b300eb38a284a65b"
-  },
-  {
-   "name": "16.990 Creative Teams: Lecture 06: Developing Personal Skills: Values and Ethical decision making",
-   "code": "16.990",
-   "date": "2026-09-28T14:30:00.000-04:00",
-   "due": "",
-   "status": "",
-   "type": "",
-   "room": "9-354",
-   "url": "https://app.notion.com/p/16-990-Creative-Teams-Lecture-06-Developing-Personal-Skills-Values-and-Ethical-decision-making-3d8ea74eb77981e7ba5af2d13dbe853f"
-  },
-  {
    "name": "16.990 Creative Teams: Lecture 05: Developing Personal Skills: Leadership strengths and life stories",
    "code": "16.990",
    "date": "2026-09-23T14:30:00.000-04:00",
@@ -2211,276 +3291,6 @@
    "url": "https://app.notion.com/p/16-990-Creative-Teams-Lecture-04-Developing-Personal-Skills-Personality-and-leadership-3d8ea74eb77981f299e1c7c27fcab473"
   },
   {
-   "name": "TSK IDS.412: Read the IDS.412 syllabus before class",
-   "code": "IDS.412",
-   "date": "2026-09-09",
-   "due": "",
-   "status": "",
-   "type": "",
-   "room": "",
-   "url": "https://app.notion.com/p/TSK-IDS-412-Read-the-IDS-412-syllabus-before-class-3d6ea74eb779810899f7ed1e2e7a1634"
-  },
-  {
-   "name": "TSK 24.133: Print the 24x36 poster before the showcase",
-   "code": "24.133",
-   "date": "2026-09-11",
-   "due": "",
-   "status": "",
-   "type": "",
-   "room": "",
-   "url": "https://app.notion.com/p/TSK-24-133-Print-the-24x36-poster-before-the-showcase-3d6ea74eb779813885bcd51401eecee1"
-  },
-  {
-   "name": "TSK 24.133: Confirm showcase location and the shareable component upload deadline",
-   "code": "24.133",
-   "date": "2026-09-09",
-   "due": "",
-   "status": "",
-   "type": "",
-   "room": "",
-   "url": "https://app.notion.com/p/TSK-24-133-Confirm-showcase-location-and-the-shareable-component-upload-deadline-3d6ea74eb77981a69b58f940429d7eae"
-  },
-  {
-   "name": "MTG 24.133 Experiential Ethics: Fall Showcase, poster presentation",
-   "code": "24.133",
-   "date": "2026-09-15",
-   "due": "",
-   "status": "",
-   "type": "",
-   "room": "",
-   "url": "https://app.notion.com/p/MTG-24-133-Experiential-Ethics-Fall-Showcase-poster-presentation-3d6ea74eb779810ba842fd4d2aaa342b"
-  },
-  {
-   "name": "TSK 16.990: Read the 16.990 Spring 2026 syllabus, prior term, confirm Fall rules in class",
-   "code": "16.990",
-   "date": "2026-09-09",
-   "due": "",
-   "status": "",
-   "type": "",
-   "room": "",
-   "url": "https://app.notion.com/p/TSK-16-990-Read-the-16-990-Spring-2026-syllabus-prior-term-confirm-Fall-rules-in-class-3d6ea74eb779812e91cecc2e00b50dfd"
-  },
-  {
-   "name": "TSK 16.842: Class overview: 2027 NASA RASC-AL: reference material hosted by 16.842",
-   "code": "16.842",
-   "date": "2026-09-01",
-   "due": "",
-   "status": "",
-   "type": "",
-   "room": "",
-   "url": "https://app.notion.com/p/TSK-16-842-Class-overview-2027-NASA-RASC-AL-reference-material-hosted-by-16-842-3d6ea74eb77981f99d76c6d243b6eb71"
-  },
-  {
-   "name": "TSK 16.842: Class overview: 16.842: Generative AI (GAI) Policy",
-   "code": "16.842",
-   "date": "2026-09-01",
-   "due": "",
-   "status": "",
-   "type": "",
-   "room": "",
-   "url": "https://app.notion.com/p/TSK-16-842-Class-overview-16-842-Generative-AI-GAI-Policy-3d6ea74eb779816e901cef782dda92c6"
-  },
-  {
-   "name": "TSK 16.842: Class overview: 16.842 Textbooks & References",
-   "code": "16.842",
-   "date": "2026-09-01",
-   "due": "",
-   "status": "",
-   "type": "",
-   "room": "",
-   "url": "https://app.notion.com/p/TSK-16-842-Class-overview-16-842-Textbooks-References-3d6ea74eb7798164a5d9d64105747000"
-  },
-  {
-   "name": "TSK 16.842 Fundamentals of Systems Engineering: Syllabus At A Glance",
-   "code": "16.842",
-   "date": "2026-09-15T10:00:00.000-04:00",
-   "due": "",
-   "status": "",
-   "type": "",
-   "room": "",
-   "url": "https://app.notion.com/p/TSK-16-842-Fundamentals-of-Systems-Engineering-Syllabus-At-A-Glance-3d6ea74eb779811d87a1df5c679c5b92"
-  },
-  {
-   "name": "TSK 14.003: Read the 14.003 syllabus and Class Overview before class",
-   "code": "14.003",
-   "date": "2026-09-09",
-   "due": "",
-   "status": "",
-   "type": "",
-   "room": "",
-   "url": "https://app.notion.com/p/TSK-14-003-Read-the-14-003-syllabus-and-Class-Overview-before-class-3d6ea74eb77981a98873fe416b077dcb"
-  },
-  {
-   "name": "14.003 Microecon & Policy: Exam 03: Lectures 18 to 23, date not yet published",
-   "code": "14.003",
-   "date": "",
-   "due": "",
-   "status": "",
-   "type": "",
-   "room": "not published",
-   "url": "https://app.notion.com/p/14-003-Microecon-Policy-Exam-03-Lectures-18-to-23-date-not-yet-published-3d6ea74eb77981d686a4cb999d25a335"
-  },
-  {
-   "name": "14.003 Microecon & Policy: Lecture 23: Prediction, machine learning, and decision-making",
-   "code": "14.003",
-   "date": "2026-12-09T10:30:00.000-05:00",
-   "due": "",
-   "status": "",
-   "type": "",
-   "room": "E51-376",
-   "url": "https://app.notion.com/p/14-003-Microecon-Policy-Lecture-23-Prediction-machine-learning-and-decision-making-3d6ea74eb77981debe10fcd4770d18eb"
-  },
-  {
-   "name": "14.003 Microecon & Policy: Lecture 11: Applied competitive analysis: Free entry in a cartelized market",
-   "code": "14.003",
-   "date": "2026-10-19T10:30:00.000-04:00",
-   "due": "",
-   "status": "",
-   "type": "",
-   "room": "E51-376",
-   "url": "https://app.notion.com/p/14-003-Microecon-Policy-Lecture-11-Applied-competitive-analysis-Free-entry-in-a-cartelized-mark-3d6ea74eb7798101a60ac24fe15f61d2"
-  },
-  {
-   "name": "14.003 Microecon & Policy: Lecture 07: Income effects, substitution effects, and the design of anti-poverty programs",
-   "code": "14.003",
-   "date": "2026-09-30T10:30:00.000-04:00",
-   "due": "",
-   "status": "",
-   "type": "",
-   "room": "E51-376",
-   "url": "https://app.notion.com/p/14-003-Microecon-Policy-Lecture-07-Income-effects-substitution-effects-and-the-design-of-anti--3d6ea74eb77981509890e574dc0a741a"
-  },
-  {
-   "name": "IDS.412 Tech & Policy: Seminar 26: Summary: Future of science, technology and policy II (virtual panel)",
-   "code": "IDS.412",
-   "date": "2026-12-09T13:00:00.000-05:00",
-   "due": "",
-   "status": "",
-   "type": "",
-   "room": "virtual panel, no room published",
-   "url": "https://app.notion.com/p/IDS-412-Tech-Policy-Seminar-26-Summary-Future-of-science-technology-and-policy-II-virtual-pan-3d6ea74eb77981d7ba67c54af8e9ac19"
-  },
-  {
-   "name": "IDS.412 Tech & Policy: Seminar 25: Summary: Future of science, technology and policy I (virtual panel)",
-   "code": "IDS.412",
-   "date": "2026-12-07T13:00:00.000-05:00",
-   "due": "",
-   "status": "",
-   "type": "",
-   "room": "virtual panel, no room published",
-   "url": "https://app.notion.com/p/IDS-412-Tech-Policy-Seminar-25-Summary-Future-of-science-technology-and-policy-I-virtual-pane-3d6ea74eb77981aab7eae819751df6e9"
-  },
-  {
-   "name": "IDS.412 Tech & Policy: Presentation 24: Summary: Presentations II",
-   "code": "IDS.412",
-   "date": "2026-12-02T13:00:00.000-05:00",
-   "due": "",
-   "status": "",
-   "type": "",
-   "room": "66-168",
-   "url": "https://app.notion.com/p/IDS-412-Tech-Policy-Presentation-24-Summary-Presentations-II-3d6ea74eb77981b78bfec85f652df695"
-  },
-  {
-   "name": "IDS.412 Tech & Policy: Admin 22: No class: Thanksgiving week",
-   "code": "IDS.412",
-   "date": "2026-11-25T13:00:00.000-05:00",
-   "due": "",
-   "status": "",
-   "type": "",
-   "room": "no class",
-   "url": "https://app.notion.com/p/IDS-412-Tech-Policy-Admin-22-No-class-Thanksgiving-week-3d6ea74eb7798109b907ff6eb17d4cad"
-  },
-  {
-   "name": "IDS.412 Tech & Policy: Admin 21: No class: Thanksgiving week",
-   "code": "IDS.412",
-   "date": "2026-11-23T13:00:00.000-05:00",
-   "due": "",
-   "status": "",
-   "type": "",
-   "room": "no class",
-   "url": "https://app.notion.com/p/IDS-412-Tech-Policy-Admin-21-No-class-Thanksgiving-week-3d6ea74eb779815f9ed7c718f82fd30e"
-  },
-  {
-   "name": "IDS.412 Tech & Policy: Lecture 19: Cases: Tech regulation, guest lecture Crystal Lee",
-   "code": "IDS.412",
-   "date": "2026-11-16T13:00:00.000-05:00",
-   "due": "",
-   "status": "",
-   "type": "",
-   "room": "66-168",
-   "url": "https://app.notion.com/p/IDS-412-Tech-Policy-Lecture-19-Cases-Tech-regulation-guest-lecture-Crystal-Lee-3d6ea74eb779813181cfd453867dc11e"
-  },
-  {
-   "name": "IDS.412 Tech & Policy: Admin 18: No class: project conference week",
-   "code": "IDS.412",
-   "date": "2026-11-09T13:00:00.000-05:00",
-   "due": "",
-   "status": "",
-   "type": "",
-   "room": "no class",
-   "url": "https://app.notion.com/p/IDS-412-Tech-Policy-Admin-18-No-class-project-conference-week-3d6ea74eb779810e83e1d70048601d36"
-  },
-  {
-   "name": "IDS.412 Tech & Policy: Lecture 15: Cases: Environment I",
-   "code": "IDS.412",
-   "date": "2026-10-28T13:00:00.000-04:00",
-   "due": "",
-   "status": "",
-   "type": "",
-   "room": "66-168",
-   "url": "https://app.notion.com/p/IDS-412-Tech-Policy-Lecture-15-Cases-Environment-I-3d6ea74eb779812caf95c50ec548a13a"
-  },
-  {
-   "name": "IDS.412 Tech & Policy: Lecture 13: Cases: Technology and U.S. national interest, guest lecture Prof. Elizabeth Reynolds",
-   "code": "IDS.412",
-   "date": "2026-10-21T13:00:00.000-04:00",
-   "due": "",
-   "status": "",
-   "type": "",
-   "room": "66-168",
-   "url": "https://app.notion.com/p/IDS-412-Tech-Policy-Lecture-13-Cases-Technology-and-U-S-national-interest-guest-lecture-Prof--3d6ea74eb77981f1bc44fe224b10f0fd"
-  },
-  {
-   "name": "IDS.412 Tech & Policy: Lecture 12: Cases: Health I (Vaccines), guest lecture Prof. Tom Levenson",
-   "code": "IDS.412",
-   "date": "2026-10-19T13:00:00.000-04:00",
-   "due": "",
-   "status": "",
-   "type": "",
-   "room": "66-168",
-   "url": "https://app.notion.com/p/IDS-412-Tech-Policy-Lecture-12-Cases-Health-I-Vaccines-guest-lecture-Prof-Tom-Levenson-3d6ea74eb77981f2ba49da8079c2217d"
-  },
-  {
-   "name": "IDS.412 Tech & Policy: Lecture 10: Concepts: Information asymmetries and adverse selection",
-   "code": "IDS.412",
-   "date": "2026-10-13T13:00:00.000-04:00",
-   "due": "",
-   "status": "",
-   "type": "",
-   "room": "66-168",
-   "url": "https://app.notion.com/p/IDS-412-Tech-Policy-Lecture-10-Concepts-Information-asymmetries-and-adverse-selection-3d6ea74eb77981aab0dfc343455f24f4"
-  },
-  {
-   "name": "16.842 Systems Eng: Quiz 02: Pre-Readings (handbooks) Week 1 (mandatory) DUE",
-   "code": "16.842",
-   "date": "2026-09-15T09:00:00.000-04:00",
-   "due": "",
-   "status": "",
-   "type": "",
-   "room": "Canvas (online)",
-   "url": "https://app.notion.com/p/16-842-Systems-Eng-Quiz-02-Pre-Readings-handbooks-Week-1-mandatory-DUE-3d6ea74eb77981e78c15d74e58b1acdd"
-  },
-  {
-   "name": "16.842 Systems Eng: Quiz 01: Pre-Reading (slides) Week 1 Quiz (mandatory, 4 pts) DUE",
-   "code": "16.842",
-   "date": "2026-09-15T09:15:00.000-04:00",
-   "due": "",
-   "status": "",
-   "type": "",
-   "room": "Canvas (online)",
-   "url": "https://app.notion.com/p/16-842-Systems-Eng-Quiz-01-Pre-Reading-slides-Week-1-Quiz-mandatory-4-pts-DUE-3d6ea74eb77981db9a4ff517de21b8bf"
-  },
-  {
    "name": "16.S896 RASCAL: Milestone: Team and Lead Assignments Finalized",
    "code": "16.S896",
    "date": "2026-09-22",
@@ -2489,156 +3299,6 @@
    "type": "",
    "room": "No room, instructor milestone. Class room 9-354 vs 33-218, unresolved.",
    "url": "https://app.notion.com/p/16-S896-RASCAL-Milestone-Team-and-Lead-Assignments-Finalized-3d6ea74eb77981ae87c3d7b04452b809"
-  },
-  {
-   "name": "16.S896 RASCAL: Milestone: WORMS Hardware Selections Final and Orders Placed",
-   "code": "16.S896",
-   "date": "2026-10-09",
-   "due": "",
-   "status": "",
-   "type": "",
-   "room": "No room, submission. Class itself: 9-354 per syllabus v9 vs 33-218 per Canvas, unresolved.",
-   "url": "https://app.notion.com/p/16-S896-RASCAL-Milestone-WORMS-Hardware-Selections-Final-and-Orders-Placed-3d6ea74eb77981ad942fdbde29e7f240"
-  },
-  {
-   "name": "16.S896 RASCAL: Competition: RASC-AL Q&A Session with NASA SMEs",
-   "code": "16.S896",
-   "date": "2026-10-27",
-   "due": "",
-   "status": "",
-   "type": "",
-   "room": "External, RASC-AL Q&A session, not an MIT room. Class room 9-354 vs 33-218, unresolved.",
-   "url": "https://app.notion.com/p/16-S896-RASCAL-Competition-RASC-AL-Q-A-Session-with-NASA-SMEs-3d6ea74eb779817a8675ec5a6cd9df8d"
-  },
-  {
-   "name": "16.S896 RASCAL: Competition: RASC-AL Questions for NASA Q&A Due",
-   "code": "16.S896",
-   "date": "2026-10-18T23:59:00.000-04:00",
-   "due": "",
-   "status": "",
-   "type": "",
-   "room": "No room, submission. Class itself: 9-354 per syllabus v9 vs 33-218 per Canvas, unresolved.",
-   "url": "https://app.notion.com/p/16-S896-RASCAL-Competition-RASC-AL-Questions-for-NASA-Q-A-Due-3d6ea74eb77981f98313ca03f45e15bb"
-  },
-  {
-   "name": "16.S896 RASCAL: Assignment: A5: Seven Beat One Pager (5%)",
-   "code": "16.S896",
-   "date": "2026-12-04",
-   "due": "",
-   "status": "",
-   "type": "Homework",
-   "room": "No room, submission. Class itself: 9-354 per syllabus v9 vs 33-218 per Canvas, unresolved.",
-   "url": "https://app.notion.com/p/16-S896-RASCAL-Assignment-A5-Seven-Beat-One-Pager-5-3d6ea74eb7798126b498d936c51d7c3f"
-  },
-  {
-   "name": "16.S896 RASCAL: Assignment: A4: Cost Estimate with Calibration and Limits (5%)",
-   "code": "16.S896",
-   "date": "2026-11-13",
-   "due": "",
-   "status": "",
-   "type": "Homework",
-   "room": "No room, submission. Class itself: 9-354 per syllabus v9 vs 33-218 per Canvas, unresolved.",
-   "url": "https://app.notion.com/p/16-S896-RASCAL-Assignment-A4-Cost-Estimate-with-Calibration-and-Limits-5-3d6ea74eb77981599953c4ed6c92c01b"
-  },
-  {
-   "name": "16.S896 RASCAL: Assignment: A3: Robustness Scorecard, 10+ Vulnerabilities (5%)",
-   "code": "16.S896",
-   "date": "2026-11-06",
-   "due": "",
-   "status": "",
-   "type": "Homework",
-   "room": "No room, submission. Class itself: 9-354 per syllabus v9 vs 33-218 per Canvas, unresolved.",
-   "url": "https://app.notion.com/p/16-S896-RASCAL-Assignment-A3-Robustness-Scorecard-10-Vulnerabilities-5-3d6ea74eb77981249103fb4b0061a51d"
-  },
-  {
-   "name": "16.S896 RASCAL: Assignment: A2: Stakeholder Map, TO/BY/USING and Level 1 Requirements (5%)",
-   "code": "16.S896",
-   "date": "2026-10-23",
-   "due": "",
-   "status": "",
-   "type": "Homework",
-   "room": "No room, submission. Class itself: 9-354 per syllabus v9 vs 33-218 per Canvas, unresolved.",
-   "url": "https://app.notion.com/p/16-S896-RASCAL-Assignment-A2-Stakeholder-Map-TO-BY-USING-and-Level-1-Requirements-5-3d6ea74eb779817ab487ff084bf4e754"
-  },
-  {
-   "name": "16.S896 RASCAL: Assignment: A1: Four Pillar Positioning (individual, 5%)",
-   "code": "16.S896",
-   "date": "2026-10-09",
-   "due": "",
-   "status": "",
-   "type": "Homework",
-   "room": "No room, submission. Class itself: 9-354 per syllabus v9 vs 33-218 per Canvas, unresolved.",
-   "url": "https://app.notion.com/p/16-S896-RASCAL-Assignment-A1-Four-Pillar-Positioning-individual-5-3d6ea74eb7798179a1a8c481823373f6"
-  },
-  {
-   "name": "16.S896 RASCAL: Session 11: WIP Presentations and Framework 5: Lordos Seven Beat Narrative",
-   "code": "16.S896",
-   "date": "2026-11-20T15:00:00.000-05:00",
-   "due": "",
-   "status": "",
-   "type": "Lecture",
-   "room": "9-354 per syllabus v9; Canvas section says 33-218; hybrid on Zoom. Conflict unresolved.",
-   "url": "https://app.notion.com/p/16-S896-RASCAL-Session-11-WIP-Presentations-and-Framework-5-Lordos-Seven-Beat-Narrative-3d6ea74eb779814eb9ebdb7e99ca3270"
-  },
-  {
-   "name": "16.S896 RASCAL: Session 10: WIP Presentations and Tool 2: FreeCAD Parametric Concept CAD",
-   "code": "16.S896",
-   "date": "2026-11-13T15:00:00.000-05:00",
-   "due": "",
-   "status": "",
-   "type": "Lecture",
-   "room": "9-354 per syllabus v9; Canvas section says 33-218; hybrid on Zoom. Conflict unresolved.",
-   "url": "https://app.notion.com/p/16-S896-RASCAL-Session-10-WIP-Presentations-and-Tool-2-FreeCAD-Parametric-Concept-CAD-3d6ea74eb77981188542c6afe8a56974"
-  },
-  {
-   "name": "16.S896 RASCAL: Session 08: WIP Presentations and Framework 4: Adjusted AMCM Cost Modeling",
-   "code": "16.S896",
-   "date": "2026-10-30T15:00:00.000-04:00",
-   "due": "",
-   "status": "",
-   "type": "Lecture",
-   "room": "9-354 per syllabus v9; Canvas section says 33-218; hybrid on Zoom. Conflict unresolved.",
-   "url": "https://app.notion.com/p/16-S896-RASCAL-Session-08-WIP-Presentations-and-Framework-4-Adjusted-AMCM-Cost-Modeling-3d6ea74eb77981b6905dc9b6634ae8aa"
-  },
-  {
-   "name": "16.S896 RASCAL: Session 07: WIP Presentations and Framework 3: Designing for Robustness",
-   "code": "16.S896",
-   "date": "2026-10-23T15:00:00.000-04:00",
-   "due": "",
-   "status": "",
-   "type": "Lecture",
-   "room": "9-354 per syllabus v9; Canvas section says 33-218; hybrid on Zoom. Conflict unresolved.",
-   "url": "https://app.notion.com/p/16-S896-RASCAL-Session-07-WIP-Presentations-and-Framework-3-Designing-for-Robustness-3d6ea74eb77981d29eb2d16cf2c85da9"
-  },
-  {
-   "name": "16.S896 RASCAL: Session 06: WIP Presentations and Case Study 02: ECLIPSE",
-   "code": "16.S896",
-   "date": "2026-10-16T15:00:00.000-04:00",
-   "due": "",
-   "status": "",
-   "type": "Lecture",
-   "room": "9-354 per syllabus v9; Canvas section says 33-218; hybrid on Zoom. Conflict unresolved.",
-   "url": "https://app.notion.com/p/16-S896-RASCAL-Session-06-WIP-Presentations-and-Case-Study-02-ECLIPSE-3d6ea74eb77981fd9449fd5869e42128"
-  },
-  {
-   "name": "16.S896 RASCAL: Session 05: WIP Presentations and Framework 2: Stakeholder Analysis and Needs to Goals",
-   "code": "16.S896",
-   "date": "2026-10-09T15:00:00.000-04:00",
-   "due": "",
-   "status": "",
-   "type": "Lecture",
-   "room": "9-354 per syllabus v9; Canvas section says 33-218; hybrid on Zoom. Conflict unresolved.",
-   "url": "https://app.notion.com/p/16-S896-RASCAL-Session-05-WIP-Presentations-and-Framework-2-Stakeholder-Analysis-and-Needs-to-Goa-3d6ea74eb77981c59fb8e87e98e68652"
-  },
-  {
-   "name": "16.S896 RASCAL: Session 04: WIP Presentations and Case Study 01: Moon to Mars",
-   "code": "16.S896",
-   "date": "2026-10-02T15:00:00.000-04:00",
-   "due": "",
-   "status": "",
-   "type": "Lecture",
-   "room": "9-354 per syllabus v9; Canvas section says 33-218; hybrid on Zoom. Conflict unresolved.",
-   "url": "https://app.notion.com/p/16-S896-RASCAL-Session-04-WIP-Presentations-and-Case-Study-01-Moon-to-Mars-3d6ea74eb7798136b367c68d3d2c6eb0"
   },
   {
    "name": "16.S896 RASCAL: Session 03: Team Kickoffs and Framework 1: Lordos Innovation Framework",
@@ -2651,106 +3311,6 @@
    "url": "https://app.notion.com/p/16-S896-RASCAL-Session-03-Team-Kickoffs-and-Framework-1-Lordos-Innovation-Framework-3d6ea74eb779817d8833fe8ce5180040"
   },
   {
-   "name": "IDS.412 Tech & Policy: Presentation 23: Summary: Presentations I",
-   "code": "IDS.412",
-   "date": "2026-11-30T13:00:00.000-05:00",
-   "due": "",
-   "status": "Not started",
-   "type": "",
-   "room": "66-168",
-   "url": "https://app.notion.com/p/IDS-412-Tech-Policy-Presentation-23-Summary-Presentations-I-3d6ea74eb779811599eaeef39b0a7537"
-  },
-  {
-   "name": "IDS.412 Tech & Policy: Assignment 02: Paper 2 written",
-   "code": "IDS.412",
-   "date": "2026-12-09T23:59:00.000-05:00",
-   "due": "",
-   "status": "Not started",
-   "type": "",
-   "room": "not published in Canvas",
-   "url": "https://app.notion.com/p/IDS-412-Tech-Policy-Assignment-02-Paper-2-written-3d6ea74eb779813f84f5f00d2b933322"
-  },
-  {
-   "name": "IDS.412 Tech & Policy: Presentation 02: Paper 2 conference",
-   "code": "IDS.412",
-   "date": "2026-11-09T09:00:00.000-05:00",
-   "due": "",
-   "status": "Not started",
-   "type": "",
-   "room": "not published in Canvas",
-   "url": "https://app.notion.com/p/IDS-412-Tech-Policy-Presentation-02-Paper-2-conference-3d6ea74eb779817c95c3f3142b392821"
-  },
-  {
-   "name": "IDS.412 Tech & Policy: Exam 17: Midterm, in class short answer",
-   "code": "IDS.412",
-   "date": "2026-11-04T13:00:00.000-05:00",
-   "due": "",
-   "status": "Not started",
-   "type": "",
-   "room": "66-168",
-   "url": "https://app.notion.com/p/IDS-412-Tech-Policy-Exam-17-Midterm-in-class-short-answer-3d6ea74eb77981b5a0b7c5f252184fcd"
-  },
-  {
-   "name": "IDS.412 Tech & Policy: Assignment 01: Paper I written, regulatory comment",
-   "code": "IDS.412",
-   "date": "2026-10-26T23:59:00.000-04:00",
-   "due": "",
-   "status": "Not started",
-   "type": "",
-   "room": "not published in Canvas",
-   "url": "https://app.notion.com/p/IDS-412-Tech-Policy-Assignment-01-Paper-I-written-regulatory-comment-3d6ea74eb7798135b394fdaee9133da5"
-  },
-  {
-   "name": "IDS.412 Tech & Policy: Presentation 01: Paper I conference",
-   "code": "IDS.412",
-   "date": "2026-10-23T23:59:00.000-04:00",
-   "due": "",
-   "status": "Not started",
-   "type": "",
-   "room": "not published in Canvas",
-   "url": "https://app.notion.com/p/IDS-412-Tech-Policy-Presentation-01-Paper-I-conference-3d6ea74eb77981f5ab3fe70abc5d7f0f"
-  },
-  {
-   "name": "14.003 Microecon & Policy: Problem Set 05: Externalities, risk and safety, adverse selection and moral hazard",
-   "code": "14.003",
-   "date": "2026-12-03T23:59:00.000-05:00",
-   "due": "",
-   "status": "",
-   "type": "",
-   "room": "Not applicable, Gradescope submission. Room not published in Canvas",
-   "url": "https://app.notion.com/p/14-003-Microecon-Policy-Problem-Set-05-Externalities-risk-and-safety-adverse-selection-and-mor-3d6ea74eb77981658f76d6d9fe2f569e"
-  },
-  {
-   "name": "14.003 Microecon & Policy: Problem Set 04: Trade and welfare",
-   "code": "14.003",
-   "date": "2026-11-12T23:59:00.000-05:00",
-   "due": "",
-   "status": "",
-   "type": "",
-   "room": "Not applicable, Gradescope submission. Room not published in Canvas",
-   "url": "https://app.notion.com/p/14-003-Microecon-Policy-Problem-Set-04-Trade-and-welfare-3d6ea74eb7798103bb46fdb0407cfda4"
-  },
-  {
-   "name": "14.003 Microecon & Policy: Problem Set 03: Applied competitive analysis, market demand, general equilibrium",
-   "code": "14.003",
-   "date": "2026-10-29T23:59:00.000-04:00",
-   "due": "",
-   "status": "",
-   "type": "",
-   "room": "Not applicable, Gradescope submission. Room not published in Canvas",
-   "url": "https://app.notion.com/p/14-003-Microecon-Policy-Problem-Set-03-Applied-competitive-analysis-market-demand-general-equi-3d6ea74eb779816cb80cffdfb4d6b967"
-  },
-  {
-   "name": "14.003 Microecon & Policy: Problem Set 02: Consumer theory",
-   "code": "14.003",
-   "date": "2026-10-08T23:59:00.000-04:00",
-   "due": "",
-   "status": "",
-   "type": "",
-   "room": "Not applicable, Gradescope submission. Room not published in Canvas",
-   "url": "https://app.notion.com/p/14-003-Microecon-Policy-Problem-Set-02-Consumer-theory-3d6ea74eb779815dbe5be41dff7468fa"
-  },
-  {
    "name": "14.003 Microecon & Policy: Problem Set 01: Minimum wage, research design, causal inference",
    "code": "14.003",
    "date": "2026-09-24T23:59:00.000-04:00",
@@ -2759,106 +3319,6 @@
    "type": "",
    "room": "Not applicable, Gradescope submission. Room not published in Canvas",
    "url": "https://app.notion.com/p/14-003-Microecon-Policy-Problem-Set-01-Minimum-wage-research-design-causal-inference-3d6ea74eb7798173a68dddc9454870f3"
-  },
-  {
-   "name": "14.003 Microecon & Policy: Exam 02: Lectures 10 to 17",
-   "code": "14.003",
-   "date": "2026-11-16T10:30:00.000-05:00",
-   "due": "",
-   "status": "",
-   "type": "",
-   "room": "E51-376, the normal lecture room, per the section name and the Class Overview PDF. Not separately confirmed for the exam in Canvas",
-   "url": "https://app.notion.com/p/14-003-Microecon-Policy-Exam-02-Lectures-10-to-17-3d6ea74eb77981d99180e24a95c329dc"
-  },
-  {
-   "name": "14.003 Microecon & Policy: Exam 01: Lectures 1 to 9",
-   "code": "14.003",
-   "date": "2026-10-13T10:30:00.000-04:00",
-   "due": "",
-   "status": "",
-   "type": "",
-   "room": "not published in Canvas. Lecture normally meets in E51-376, but this exam falls on a Tuesday, which is not a normal class day, so confirm the room with staff",
-   "url": "https://app.notion.com/p/14-003-Microecon-Policy-Exam-01-Lectures-1-to-9-3d6ea74eb779812db810d96c0bc3c51f"
-  },
-  {
-   "name": "IDS.412 Tech & Policy: Lecture 20: Cases: Environment II (air pollution and climate assessment)",
-   "code": "IDS.412",
-   "date": "2026-11-18T13:00:00.000-05:00",
-   "due": "",
-   "status": "",
-   "type": "",
-   "room": "66-168",
-   "url": "https://app.notion.com/p/IDS-412-Tech-Policy-Lecture-20-Cases-Environment-II-air-pollution-and-climate-assessment-3d6ea74eb779811b9ac1d85d2413c880"
-  },
-  {
-   "name": "IDS.412 Tech & Policy: Lecture 16: Cases: Health (funding sources and bias)",
-   "code": "IDS.412",
-   "date": "2026-11-02T13:00:00.000-05:00",
-   "due": "",
-   "status": "",
-   "type": "",
-   "room": "66-168",
-   "url": "https://app.notion.com/p/IDS-412-Tech-Policy-Lecture-16-Cases-Health-funding-sources-and-bias-3d6ea74eb77981c9bc2ed9af60fb288e"
-  },
-  {
-   "name": "IDS.412 Tech & Policy: Lecture 14: Concepts: Socio-technical transitions",
-   "code": "IDS.412",
-   "date": "2026-10-26T13:00:00.000-04:00",
-   "due": "",
-   "status": "",
-   "type": "",
-   "room": "66-168",
-   "url": "https://app.notion.com/p/IDS-412-Tech-Policy-Lecture-14-Concepts-Socio-technical-transitions-3d6ea74eb77981ee95dffb69c3c2405f"
-  },
-  {
-   "name": "IDS.412 Tech & Policy: Lecture 11: Concepts: Imperfect information and consent (Risk)",
-   "code": "IDS.412",
-   "date": "2026-10-14T13:00:00.000-04:00",
-   "due": "",
-   "status": "",
-   "type": "",
-   "room": "66-168",
-   "url": "https://app.notion.com/p/IDS-412-Tech-Policy-Lecture-11-Concepts-Imperfect-information-and-consent-Risk-3d6ea74eb779818992c0d7b0a59e781c"
-  },
-  {
-   "name": "IDS.412 Tech & Policy: Lecture 09: Standard-setting",
-   "code": "IDS.412",
-   "date": "2026-10-07T13:00:00.000-04:00",
-   "due": "",
-   "status": "",
-   "type": "",
-   "room": "66-168",
-   "url": "https://app.notion.com/p/IDS-412-Tech-Policy-Lecture-09-Standard-setting-3d6ea74eb77981a7af20ce8d6502bb15"
-  },
-  {
-   "name": "IDS.412 Tech & Policy: Lecture 08: Competition and Antitrust",
-   "code": "IDS.412",
-   "date": "2026-10-05T13:00:00.000-04:00",
-   "due": "",
-   "status": "",
-   "type": "",
-   "room": "66-168",
-   "url": "https://app.notion.com/p/IDS-412-Tech-Policy-Lecture-08-Competition-and-Antitrust-3d6ea74eb779817c97f6e76cceb3113e"
-  },
-  {
-   "name": "IDS.412 Tech & Policy: Lecture 07: Innovation",
-   "code": "IDS.412",
-   "date": "2026-09-30T13:00:00.000-04:00",
-   "due": "",
-   "status": "",
-   "type": "",
-   "room": "66-168",
-   "url": "https://app.notion.com/p/IDS-412-Tech-Policy-Lecture-07-Innovation-3d6ea74eb779814d94b1dd056407fc3c"
-  },
-  {
-   "name": "IDS.412 Tech & Policy: Lecture 06: Property Rights",
-   "code": "IDS.412",
-   "date": "2026-09-28T13:00:00.000-04:00",
-   "due": "",
-   "status": "",
-   "type": "",
-   "room": "66-168",
-   "url": "https://app.notion.com/p/IDS-412-Tech-Policy-Lecture-06-Property-Rights-3d6ea74eb77981149512e206564601a9"
   },
   {
    "name": "IDS.412 Tech & Policy: Lecture 05: Comparing/Evaluating/Improving Policy",
@@ -2881,156 +3341,6 @@
    "url": "https://app.notion.com/p/IDS-412-Tech-Policy-Lecture-04-Knowledge-Assessment-STS-and-other-perspectives-3d6ea74eb7798195b707c95833934439"
   },
   {
-   "name": "14.003 Microecon & Policy: Lecture 22: Prediction, machine learning, and decision-making",
-   "code": "14.003",
-   "date": "2026-12-07T10:30:00.000-05:00",
-   "due": "",
-   "status": "",
-   "type": "",
-   "room": "E51-376",
-   "url": "https://app.notion.com/p/14-003-Microecon-Policy-Lecture-22-Prediction-machine-learning-and-decision-making-3d6ea74eb7798137bc2de086a5db1afc"
-  },
-  {
-   "name": "14.003 Microecon & Policy: Lecture 21: Discrimination in labor markets: Banning the box",
-   "code": "14.003",
-   "date": "2026-12-02T10:30:00.000-05:00",
-   "due": "",
-   "status": "",
-   "type": "",
-   "room": "E51-376",
-   "url": "https://app.notion.com/p/14-003-Microecon-Policy-Lecture-21-Discrimination-in-labor-markets-Banning-the-box-3d6ea74eb7798162ba6cc57161d77b78"
-  },
-  {
-   "name": "14.003 Microecon & Policy: Lecture 20: Moral hazard in the housing market: Subprime lending",
-   "code": "14.003",
-   "date": "2026-11-30T10:30:00.000-05:00",
-   "due": "",
-   "status": "",
-   "type": "",
-   "room": "E51-376",
-   "url": "https://app.notion.com/p/14-003-Microecon-Policy-Lecture-20-Moral-hazard-in-the-housing-market-Subprime-lending-3d6ea74eb77981da999ad5fdefb87ba3"
-  },
-  {
-   "name": "14.003 Microecon & Policy: Lecture 19: Adverse selection",
-   "code": "14.003",
-   "date": "2026-11-23T10:30:00.000-05:00",
-   "due": "",
-   "status": "",
-   "type": "",
-   "room": "E51-376",
-   "url": "https://app.notion.com/p/14-003-Microecon-Policy-Lecture-19-Adverse-selection-3d6ea74eb779819cb9b5d6f29daf6b67"
-  },
-  {
-   "name": "14.003 Microecon & Policy: Lecture 18: Risk and safety regulation: Hockey helmets, etc.",
-   "code": "14.003",
-   "date": "2026-11-18T10:30:00.000-05:00",
-   "due": "",
-   "status": "",
-   "type": "",
-   "room": "E51-376",
-   "url": "https://app.notion.com/p/14-003-Microecon-Policy-Lecture-18-Risk-and-safety-regulation-Hockey-helmets-etc-3d6ea74eb7798127bf5ece4dd5f4879d"
-  },
-  {
-   "name": "14.003 Microecon & Policy: Lecture 17: Externalities: Definition, consequences and remedies",
-   "code": "14.003",
-   "date": "2026-11-09T10:30:00.000-05:00",
-   "due": "",
-   "status": "",
-   "type": "",
-   "room": "E51-376",
-   "url": "https://app.notion.com/p/14-003-Microecon-Policy-Lecture-17-Externalities-Definition-consequences-and-remedies-3d6ea74eb77981c8b61bfe720f1b88f9"
-  },
-  {
-   "name": "14.003 Microecon & Policy: Lecture 16: The free trade dilemma",
-   "code": "14.003",
-   "date": "2026-11-04T10:30:00.000-05:00",
-   "due": "",
-   "status": "",
-   "type": "",
-   "room": "E51-376",
-   "url": "https://app.notion.com/p/14-003-Microecon-Policy-Lecture-16-The-free-trade-dilemma-3d6ea74eb77981908f73c43a352de143"
-  },
-  {
-   "name": "14.003 Microecon & Policy: Lecture 15: Does trade raise national income?",
-   "code": "14.003",
-   "date": "2026-11-02T10:30:00.000-05:00",
-   "due": "",
-   "status": "",
-   "type": "",
-   "room": "E51-376",
-   "url": "https://app.notion.com/p/14-003-Microecon-Policy-Lecture-15-Does-trade-raise-national-income-3d6ea74eb77981d4bbfccc4b7830c0a1"
-  },
-  {
-   "name": "14.003 Microecon & Policy: Lecture 14: International trade and comparative advantage",
-   "code": "14.003",
-   "date": "2026-10-28T10:30:00.000-04:00",
-   "due": "",
-   "status": "",
-   "type": "",
-   "room": "E51-376",
-   "url": "https://app.notion.com/p/14-003-Microecon-Policy-Lecture-14-International-trade-and-comparative-advantage-3d6ea74eb779813db25def743472b67e"
-  },
-  {
-   "name": "14.003 Microecon & Policy: Lecture 13: The gains from market integration: \u201cThe Digital Provide\u201d",
-   "code": "14.003",
-   "date": "2026-10-26T10:30:00.000-04:00",
-   "due": "",
-   "status": "",
-   "type": "",
-   "room": "E51-376",
-   "url": "https://app.notion.com/p/14-003-Microecon-Policy-Lecture-13-The-gains-from-market-integration-The-Digital-Provide-3d6ea74eb7798105a9a0f865aaef717e"
-  },
-  {
-   "name": "14.003 Microecon & Policy: Lecture 12: Putting markets together: The Edgeworth box",
-   "code": "14.003",
-   "date": "2026-10-21T10:30:00.000-04:00",
-   "due": "",
-   "status": "",
-   "type": "",
-   "room": "E51-376",
-   "url": "https://app.notion.com/p/14-003-Microecon-Policy-Lecture-12-Putting-markets-together-The-Edgeworth-box-3d6ea74eb7798118afd5ca7569dc6ba9"
-  },
-  {
-   "name": "14.003 Microecon & Policy: Lecture 10: Applied competitive analysis: The incidence of a tax",
-   "code": "14.003",
-   "date": "2026-10-14T10:30:00.000-04:00",
-   "due": "",
-   "status": "",
-   "type": "",
-   "room": "E51-376",
-   "url": "https://app.notion.com/p/14-003-Microecon-Policy-Lecture-10-Applied-competitive-analysis-The-incidence-of-a-tax-3d6ea74eb7798128ae03c5cdfdd41446"
-  },
-  {
-   "name": "14.003 Microecon & Policy: Lecture 09: Consumer theory wrap-up and review",
-   "code": "14.003",
-   "date": "2026-10-07T10:30:00.000-04:00",
-   "due": "",
-   "status": "",
-   "type": "",
-   "room": "E51-376",
-   "url": "https://app.notion.com/p/14-003-Microecon-Policy-Lecture-09-Consumer-theory-wrap-up-and-review-3d6ea74eb77981519feac35322b4acf0"
-  },
-  {
-   "name": "14.003 Microecon & Policy: Lecture 08: Giffen Goods: Income, substitution, and subsistence",
-   "code": "14.003",
-   "date": "2026-10-05T10:30:00.000-04:00",
-   "due": "",
-   "status": "",
-   "type": "",
-   "room": "E51-376",
-   "url": "https://app.notion.com/p/14-003-Microecon-Policy-Lecture-08-Giffen-Goods-Income-substitution-and-subsistence-3d6ea74eb7798140a881e8eaf39f3217"
-  },
-  {
-   "name": "14.003 Microecon & Policy: Lecture 06: From preferences to demand curves",
-   "code": "14.003",
-   "date": "2026-09-28T10:30:00.000-04:00",
-   "due": "",
-   "status": "",
-   "type": "",
-   "room": "E51-376",
-   "url": "https://app.notion.com/p/14-003-Microecon-Policy-Lecture-06-From-preferences-to-demand-curves-3d6ea74eb7798169b980c75f531c418a"
-  },
-  {
    "name": "14.003 Microecon & Policy: Lecture 05: Consumer choice: Theory versus constraints",
    "code": "14.003",
    "date": "2026-09-23T10:30:00.000-04:00",
@@ -3051,16 +3361,6 @@
    "url": "https://app.notion.com/p/14-003-Microecon-Policy-Lecture-04-Consumer-sovereignty-The-Carte-Blanche-principle-3d6ea74eb779810285f7edd0f5e9d6c1"
   },
   {
-   "name": "16.842 Systems Eng: Lecture 01: SE Overview & Stakeholders",
-   "code": "16.842",
-   "date": "2026-09-15T11:00:00.000-04:00",
-   "due": "",
-   "status": "Not started",
-   "type": "Lecture",
-   "room": "33-218",
-   "url": "https://app.notion.com/p/16-842-Systems-Eng-Lecture-01-SE-Overview-Stakeholders-3d5ea74eb77981f4a439f7df80618056"
-  },
-  {
    "name": "16.842 Systems Eng: Lecture 02: Requirements & Margins",
    "code": "16.842",
    "date": "2026-09-22T11:00:00.000-04:00",
@@ -3071,96 +3371,6 @@
    "url": "https://app.notion.com/p/16-842-Systems-Eng-Lecture-02-Requirements-Margins-3d5ea74eb77981a48d71fb409da4838b"
   },
   {
-   "name": "16.842 Systems Eng: Lecture 03: System Thinking",
-   "code": "16.842",
-   "date": "2026-09-29T11:00:00.000-04:00",
-   "due": "",
-   "status": "Not started",
-   "type": "Lecture",
-   "room": "33-218",
-   "url": "https://app.notion.com/p/16-842-Systems-Eng-Lecture-03-System-Thinking-3d5ea74eb7798194bb20f2f90b0aad55"
-  },
-  {
-   "name": "16.842 Systems Eng: Lecture 04: Concept & Architecture",
-   "code": "16.842",
-   "date": "2026-10-06T11:00:00.000-04:00",
-   "due": "",
-   "status": "Not started",
-   "type": "Lecture",
-   "room": "33-218",
-   "url": "https://app.notion.com/p/16-842-Systems-Eng-Lecture-04-Concept-Architecture-3d5ea74eb779815aaf0ac81e31721838"
-  },
-  {
-   "name": "16.842 Systems Eng: Lecture 05: Modeling, DSM & Trade Space Analysis",
-   "code": "16.842",
-   "date": "2026-10-20T11:00:00.000-04:00",
-   "due": "",
-   "status": "Not started",
-   "type": "Lecture",
-   "room": "33-218",
-   "url": "https://app.notion.com/p/16-842-Systems-Eng-Lecture-05-Modeling-DSM-Trade-Space-Analysis-3d5ea74eb779816bb3a7da3054862824"
-  },
-  {
-   "name": "16.842 Systems Eng: Lecture 06: MDO",
-   "code": "16.842",
-   "date": "2026-10-27T11:00:00.000-04:00",
-   "due": "",
-   "status": "Not started",
-   "type": "Lecture",
-   "room": "33-218",
-   "url": "https://app.notion.com/p/16-842-Systems-Eng-Lecture-06-MDO-3d5ea74eb779811a9519ec374af5c757"
-  },
-  {
-   "name": "16.842 Systems Eng: Lecture 07: Finance, Budgets & Cost Estimation",
-   "code": "16.842",
-   "date": "2026-11-03T11:00:00.000-05:00",
-   "due": "",
-   "status": "Not started",
-   "type": "Lecture",
-   "room": "33-218",
-   "url": "https://app.notion.com/p/16-842-Systems-Eng-Lecture-07-Finance-Budgets-Cost-Estimation-3d5ea74eb779810cb018c43d4a8b743a"
-  },
-  {
-   "name": "16.842 Systems Eng: Lecture 08: Safety",
-   "code": "16.842",
-   "date": "2026-11-10T11:00:00.000-05:00",
-   "due": "",
-   "status": "Not started",
-   "type": "Lecture",
-   "room": "33-218",
-   "url": "https://app.notion.com/p/16-842-Systems-Eng-Lecture-08-Safety-3d5ea74eb779817480acc4c484816d1e"
-  },
-  {
-   "name": "16.842 Systems Eng: Lecture 09: Verification, Validation & Risk",
-   "code": "16.842",
-   "date": "2026-11-17T11:00:00.000-05:00",
-   "due": "",
-   "status": "Not started",
-   "type": "Lecture",
-   "room": "33-218",
-   "url": "https://app.notion.com/p/16-842-Systems-Eng-Lecture-09-Verification-Validation-Risk-3d5ea74eb77981fabdbcf97aa927857c"
-  },
-  {
-   "name": "16.842 Systems Eng: Lecture 10: Integration & Operations",
-   "code": "16.842",
-   "date": "2026-11-24T11:00:00.000-05:00",
-   "due": "",
-   "status": "Not started",
-   "type": "Lecture",
-   "room": "33-218",
-   "url": "https://app.notion.com/p/16-842-Systems-Eng-Lecture-10-Integration-Operations-3d5ea74eb77981daa038d458c7e3fdad"
-  },
-  {
-   "name": "16.842 Systems Eng: No Class: MIT Monday Schedule",
-   "code": "16.842",
-   "date": "2026-10-13",
-   "due": "",
-   "status": "Not started",
-   "type": "Project",
-   "room": "No room: class does not meet",
-   "url": "https://app.notion.com/p/16-842-Systems-Eng-No-Class-MIT-Monday-Schedule-3d5ea74eb77981728f13e402b96fed20"
-  },
-  {
    "name": "16.842 Systems Eng: Assignment 01: A1 Team Formation, Stakeholders, ConOps DUE",
    "code": "16.842",
    "date": "2026-09-28",
@@ -3169,146 +3379,6 @@
    "type": "Homework",
    "room": "Submission channel not published in the syllabus",
    "url": "https://app.notion.com/p/16-842-Systems-Eng-Assignment-01-A1-Team-Formation-Stakeholders-ConOps-DUE-3d5ea74eb779817898e2c3426e6ffd5e"
-  },
-  {
-   "name": "16.842 Systems Eng: Assignment 02: A2 Requirements Definition & Margins Allocation DUE",
-   "code": "16.842",
-   "date": "2026-10-12",
-   "due": "",
-   "status": "Not started",
-   "type": "Homework",
-   "room": "Submission channel not published in the syllabus",
-   "url": "https://app.notion.com/p/16-842-Systems-Eng-Assignment-02-A2-Requirements-Definition-Margins-Allocation-DUE-3d5ea74eb77981928598c5541bd55532"
-  },
-  {
-   "name": "16.842 Systems Eng: Assignment 03: A3 System Architecture & Concept Generation DUE",
-   "code": "16.842",
-   "date": "2026-10-26",
-   "due": "",
-   "status": "Not started",
-   "type": "Homework",
-   "room": "Submission channel not published in the syllabus",
-   "url": "https://app.notion.com/p/16-842-Systems-Eng-Assignment-03-A3-System-Architecture-Concept-Generation-DUE-3d5ea74eb77981f1b413e4eb1ed842ae"
-  },
-  {
-   "name": "16.842 Systems Eng: Assignment 04: A4 Trade Space Exploration & Concept Selection DUE",
-   "code": "16.842",
-   "date": "2026-11-09",
-   "due": "",
-   "status": "Not started",
-   "type": "Homework",
-   "room": "Submission channel not published in the syllabus",
-   "url": "https://app.notion.com/p/16-842-Systems-Eng-Assignment-04-A4-Trade-Space-Exploration-Concept-Selection-DUE-3d5ea74eb77981eb8a0bd191d27a1e77"
-  },
-  {
-   "name": "16.842 Systems Eng: Assignment 06: A6 Written Reflective Memo (individual) DUE",
-   "code": "16.842",
-   "date": "2026-11-16",
-   "due": "",
-   "status": "Not started",
-   "type": "Homework",
-   "room": "Submission channel not published in the syllabus",
-   "url": "https://app.notion.com/p/16-842-Systems-Eng-Assignment-06-A6-Written-Reflective-Memo-individual-DUE-3d5ea74eb779815d9a25d49f453d942f"
-  },
-  {
-   "name": "16.842 Systems Eng: Presentation 01: A5 Final Project Presentation Materials DUE",
-   "code": "16.842",
-   "date": "2026-12-07",
-   "due": "",
-   "status": "Not started",
-   "type": "Presentation",
-   "room": "Submission channel not published in the syllabus",
-   "url": "https://app.notion.com/p/16-842-Systems-Eng-Presentation-01-A5-Final-Project-Presentation-Materials-DUE-3d5ea74eb7798193b3a8cb40ccf07446"
-  },
-  {
-   "name": "16.842 Systems Eng: Exam 01: Individual Oral Exam",
-   "code": "16.842",
-   "date": "2026-12-01T11:00:00.000-05:00",
-   "due": "",
-   "status": "Not started",
-   "type": "Exam",
-   "room": "33-218",
-   "url": "https://app.notion.com/p/16-842-Systems-Eng-Exam-01-Individual-Oral-Exam-3d5ea74eb779817fa452f3b7379ba5ca"
-  },
-  {
-   "name": "16.842 Systems Eng: Presentation 02: Final Team Presentation (30 min)",
-   "code": "16.842",
-   "date": "2026-12-08T11:00:00.000-05:00",
-   "due": "",
-   "status": "Not started",
-   "type": "Presentation",
-   "room": "33-218",
-   "url": "https://app.notion.com/p/16-842-Systems-Eng-Presentation-02-Final-Team-Presentation-30-min-3d5ea74eb77981a9b6bddc00e3609d11"
-  },
-  {
-   "name": "16.S896 RASCAL: Lecture 02: Competition Info Session (special Mon session)",
-   "code": "16.S896",
-   "date": "2026-09-14T17:00:00.000-04:00",
-   "due": "",
-   "status": "Not started",
-   "type": "Lecture",
-   "room": "35-225",
-   "url": "https://app.notion.com/p/16-S896-RASCAL-Lecture-02-Competition-Info-Session-special-Mon-session-3d5ea74eb7798197a5ffc5497475ca30"
-  },
-  {
-   "name": "16.S896 RASCAL: Presentation 01: Skills Survey + Team Pitches Due",
-   "code": "16.S896",
-   "date": "2026-09-18",
-   "due": "",
-   "status": "Not started",
-   "type": "Presentation",
-   "room": "9-354",
-   "url": "https://app.notion.com/p/16-S896-RASCAL-Presentation-01-Skills-Survey-Team-Pitches-Due-3d5ea74eb77981668e68ecad205e5417"
-  },
-  {
-   "name": "16.S896 RASCAL: Assignment 01: RASC-AL Notice of Intent Due (optional)",
-   "code": "16.S896",
-   "date": "2026-10-13T23:59:00.000-04:00",
-   "due": "",
-   "status": "Not started",
-   "type": "Homework",
-   "room": "No room, submission. Class itself: 9-354 per syllabus v9 vs 33-218 per Canvas, unresolved.",
-   "url": "https://app.notion.com/p/16-S896-RASCAL-Assignment-01-RASC-AL-Notice-of-Intent-Due-optional-3d5ea74eb77981c79bddf15157f21120"
-  },
-  {
-   "name": "16.S896 RASCAL: Presentation 02: Concept Review (midterm, 15%)",
-   "code": "16.S896",
-   "date": "2026-11-06T15:00:00.000-05:00",
-   "due": "",
-   "status": "Not started",
-   "type": "Presentation",
-   "room": "9-354 per syllabus v9; Canvas section says 33-218; hybrid on Zoom. Conflict unresolved.",
-   "url": "https://app.notion.com/p/16-S896-RASCAL-Presentation-02-Concept-Review-midterm-15-3d5ea74eb779817d9edff57ab65768a5"
-  },
-  {
-   "name": "16.S896 RASCAL: Assignment 02: Draft Proposal/Paper Due (20%)",
-   "code": "16.S896",
-   "date": "2026-11-20",
-   "due": "",
-   "status": "Not started",
-   "type": "Homework",
-   "room": "No room, submission. Class itself: 9-354 per syllabus v9 vs 33-218 per Canvas, unresolved.",
-   "url": "https://app.notion.com/p/16-S896-RASCAL-Assignment-02-Draft-Proposal-Paper-Due-20-3d5ea74eb7798186b383dee4283336db"
-  },
-  {
-   "name": "16.S896 RASCAL: Presentation 03: Final Concept Review (external judges, 20%)",
-   "code": "16.S896",
-   "date": "2026-12-04T15:00:00.000-05:00",
-   "due": "",
-   "status": "Not started",
-   "type": "Presentation",
-   "room": "9-354 per syllabus v9; Canvas section says 33-218; hybrid on Zoom. Conflict unresolved.",
-   "url": "https://app.notion.com/p/16-S896-RASCAL-Presentation-03-Final-Concept-Review-external-judges-20-3d5ea74eb779811d9e42ce0e0a09fc28"
-  },
-  {
-   "name": "14.003 Microecon & Policy: Recitation Week 1",
-   "code": "14.003",
-   "date": "2026-09-11T09:00:00.000-04:00",
-   "due": "",
-   "status": "",
-   "type": "Seminar",
-   "room": "E52-164 at 0900, or E51-057 at 1000",
-   "url": "https://app.notion.com/p/14-003-Microecon-Policy-Recitation-Week-1-3d3ea74eb77981118fd8da259e02e85c"
   },
   {
    "name": "14.003 Microecon & Policy: Lecture 02: Testing theory: The fundamental problem of causal inference",
@@ -3351,46 +3421,6 @@
    "url": "https://app.notion.com/p/IDS-412-Tech-Policy-Lecture-01-Introduction-Why-Science-Technology-Public-Policy-3d3ea74eb779814ba901c446cf3cf72b"
   },
   {
-   "name": "16.987 Grad Seminar: Seminar 01",
-   "code": "16.987",
-   "date": "2026-09-14T11:30:00.000-04:00",
-   "due": "",
-   "status": "",
-   "type": "Seminar",
-   "room": "37-252",
-   "url": "https://app.notion.com/p/16-987-Grad-Seminar-Seminar-01-3d3ea74eb77981558a66d8e03fbcb5c5"
-  },
-  {
-   "name": "IDS.412 Tech & Policy: Lecture 03: Knowledge generation",
-   "code": "IDS.412",
-   "date": "2026-09-16T13:00:00.000-04:00",
-   "due": "",
-   "status": "",
-   "type": "Lecture",
-   "room": "66-168",
-   "url": "https://app.notion.com/p/IDS-412-Tech-Policy-Lecture-03-Knowledge-generation-3d3ea74eb779815f8390cbf673fa5389"
-  },
-  {
-   "name": "16.990 Creative Teams: Lecture 03: Introduction to models of teams and team leadership (part two)",
-   "code": "16.990",
-   "date": "2026-09-16T14:30:00.000-04:00",
-   "due": "",
-   "status": "",
-   "type": "Lecture",
-   "room": "9-354",
-   "url": "https://app.notion.com/p/16-990-Creative-Teams-Lecture-03-Introduction-to-models-of-teams-and-team-leadership-part-two-3d3ea74eb77981739594f7c7157aea3a"
-  },
-  {
-   "name": "16.S896 RASCAL: Lecture 01",
-   "code": "16.S896",
-   "date": "2026-09-11T15:00:00.000-04:00",
-   "due": "",
-   "status": "",
-   "type": "Lecture",
-   "room": "9-354, breakout 33-218",
-   "url": "https://app.notion.com/p/16-S896-RASCAL-Lecture-01-3d3ea74eb77981789645cd0634a83f8b"
-  },
-  {
    "name": "16.990 Creative Teams: Lecture 01: Introduction to class and creative teams",
    "code": "16.990",
    "date": "2026-09-09T14:30:00.000-04:00",
@@ -3411,34 +3441,184 @@
    "url": "https://app.notion.com/p/16-S896-RASCAL-Lecture-03-3d3ea74eb77981b29ed3c7fa60b49f11"
   },
   {
-   "name": "14.003 Microecon & Policy: Recitation Week 2",
-   "code": "14.003",
-   "date": "2026-09-18T09:00:00.000-04:00",
+   "name": "[HW] 24.134 \u2014 Complete pre-reading + assignments (before Week 10)",
+   "code": "24.134",
+   "date": "2026-08-09",
    "due": "",
-   "status": "",
-   "type": "Seminar",
-   "room": "E52-164 at 0900 or E51-057 at 1000, choose either",
-   "url": "https://app.notion.com/p/14-003-Microecon-Policy-Recitation-Week-2-3d3ea74eb77981bb82d9d670e305e3d0"
+   "status": "Not started",
+   "type": "Homework",
+   "room": "",
+   "url": "https://app.notion.com/p/HW-24-134-Complete-pre-reading-assignments-before-Week-10-49789eb8592640b38b40838499820c17"
   },
   {
-   "name": "IDS.412 Tech & Policy: Lecture 02: Policies, Institutions and Markets",
-   "code": "IDS.412",
-   "date": "2026-09-14T13:00:00.000-04:00",
+   "name": "[HW] 24.134 \u2014 Complete pre-reading + assignments (before Week 9)",
+   "code": "24.134",
+   "date": "2026-08-02",
    "due": "",
-   "status": "",
-   "type": "Lecture",
-   "room": "66-168",
-   "url": "https://app.notion.com/p/IDS-412-Tech-Policy-Lecture-02-Policies-Institutions-and-Markets-3d3ea74eb77981d69d4ac5e486eba982"
+   "status": "Not started",
+   "type": "Homework",
+   "room": "",
+   "url": "https://app.notion.com/p/HW-24-134-Complete-pre-reading-assignments-before-Week-9-8204f614e8094d95886f096883d057fb"
   },
   {
-   "name": "16.990 Creative Teams: Lecture 02: Introduction to leading teams (part one)",
-   "code": "16.990",
-   "date": "2026-09-14T14:30:00.000-04:00",
+   "name": "[HW] 24.134 \u2014 Complete pre-reading + assignments (before Week 8)",
+   "code": "24.134",
+   "date": "2026-07-26",
    "due": "",
-   "status": "",
+   "status": "Not started",
+   "type": "Homework",
+   "room": "",
+   "url": "https://app.notion.com/p/HW-24-134-Complete-pre-reading-assignments-before-Week-8-2cdf60119e1f4bd5af501961c3c702f2"
+  },
+  {
+   "name": "[HW] 24.134 \u2014 Complete pre-reading + assignments (before Week 5)",
+   "code": "24.134",
+   "date": "2026-07-05",
+   "due": "",
+   "status": "Not started",
+   "type": "Homework",
+   "room": "",
+   "url": "https://app.notion.com/p/HW-24-134-Complete-pre-reading-assignments-before-Week-5-4d452ba54695450fbffdccf375ae2c21"
+  },
+  {
+   "name": "[HW] 24.134 \u2014 Complete pre-reading + assignments (before Week 6)",
+   "code": "24.134",
+   "date": "2026-07-12",
+   "due": "",
+   "status": "Not started",
+   "type": "Homework",
+   "room": "",
+   "url": "https://app.notion.com/p/HW-24-134-Complete-pre-reading-assignments-before-Week-6-b72639a7611f4d8d932dd34337eb5269"
+  },
+  {
+   "name": "[HW] 24.134 \u2014 Complete pre-reading + assignments (before Week 2)",
+   "code": "24.134",
+   "date": "2026-06-14",
+   "due": "",
+   "status": "Not started",
+   "type": "Homework",
+   "room": "",
+   "url": "https://app.notion.com/p/HW-24-134-Complete-pre-reading-assignments-before-Week-2-5bcdd49b22e34739a653a471b1286c1f"
+  },
+  {
+   "name": "24.134 \u2014 Showcase signup form due",
+   "code": "24.134",
+   "date": "2026-08-15",
+   "due": "",
+   "status": "Not started",
+   "type": "Homework",
+   "room": "",
+   "url": "https://app.notion.com/p/24-134-Showcase-signup-form-due-aa6260dcacc04d488ce7ccacbe34e22b"
+  },
+  {
+   "name": "24.134 \u2014 Meet TF to discuss project idea",
+   "code": "24.134",
+   "date": "2026-07-07",
+   "due": "",
+   "status": "Not started",
+   "type": "Project",
+   "room": "",
+   "url": "https://app.notion.com/p/24-134-Meet-TF-to-discuss-project-idea-36f2bb40626e4ba589beaf79345d2a9a"
+  },
+  {
+   "name": "24.134 \u2014 Ethical Case Study assignment due",
+   "code": "24.134",
+   "date": "2026-06-30T12:30:00.000-04:00",
+   "due": "",
+   "status": "Not started",
+   "type": "Homework",
+   "room": "",
+   "url": "https://app.notion.com/p/24-134-Ethical-Case-Study-assignment-due-1a85798a36c84c63b0d79aa973ce5ca4"
+  },
+  {
+   "name": "24.134 \u2014 Workshop project + submit shareable component draft",
+   "code": "24.134",
+   "date": "2026-07-28",
+   "due": "",
+   "status": "Not started",
+   "type": "",
+   "room": "",
+   "url": "https://app.notion.com/p/24-134-Workshop-project-submit-shareable-component-draft-88b822766cb644e5a630854ad7614d10"
+  },
+  {
+   "name": "24.134 \u2014 Submit project to TF + upload shareable component",
+   "code": "24.134",
+   "date": "2026-08-21",
+   "due": "",
+   "status": "Not started",
+   "type": "",
+   "room": "",
+   "url": "https://app.notion.com/p/24-134-Submit-project-to-TF-upload-shareable-component-9b7706085a7b4e94b073b5ecfa4f0317"
+  },
+  {
+   "name": "24.134 \u2014 Week 10: Living in Light of Your Values (Wrap-Up)",
+   "code": "24.134",
+   "date": "2026-08-12",
+   "due": "",
+   "status": "Not started",
    "type": "Lecture",
-   "room": "9-354",
-   "url": "https://app.notion.com/p/16-990-Creative-Teams-Lecture-02-Introduction-to-leading-teams-part-one-3d3ea74eb77981f5b253e0ac0282c890"
+   "room": "",
+   "url": "https://app.notion.com/p/24-134-Week-10-Living-in-Light-of-Your-Values-Wrap-Up-0e188bd001a6431da6cac7b7e8a7a238"
+  },
+  {
+   "name": "24.134 \u2014 Week 9: Ethics at MIT",
+   "code": "24.134",
+   "date": "2026-08-05",
+   "due": "",
+   "status": "Not started",
+   "type": "Lecture",
+   "room": "",
+   "url": "https://app.notion.com/p/24-134-Week-9-Ethics-at-MIT-7e6e1a6c2faf47a5b74e0afb08986530"
+  },
+  {
+   "name": "24.134 \u2014 Week 8: Project Workshop",
+   "code": "24.134",
+   "date": "2026-07-29",
+   "due": "",
+   "status": "Not started",
+   "type": "Lecture",
+   "room": "",
+   "url": "https://app.notion.com/p/24-134-Week-8-Project-Workshop-a3615205c9a648bca4f5f516fade88f5"
+  },
+  {
+   "name": "24.134 \u2014 Week 7: Responsibility and Social Roles",
+   "code": "24.134",
+   "date": "2026-07-22",
+   "due": "",
+   "status": "Not started",
+   "type": "Lecture",
+   "room": "",
+   "url": "https://app.notion.com/p/24-134-Week-7-Responsibility-and-Social-Roles-ab048536cd2d499d9e0957085805b5db"
+  },
+  {
+   "name": "24.134 \u2014 Week 5: Technology and Justice",
+   "code": "24.134",
+   "date": "2026-07-08",
+   "due": "",
+   "status": "Not started",
+   "type": "Lecture",
+   "room": "",
+   "url": "https://app.notion.com/p/24-134-Week-5-Technology-and-Justice-a1baef8257dc42088f42ff34e9a91188"
+  },
+  {
+   "name": "24.134 \u2014 Week 4: Values in Science and Technology",
+   "code": "24.134",
+   "date": "2026-07-01",
+   "due": "",
+   "status": "Not started",
+   "type": "Lecture",
+   "room": "",
+   "url": "https://app.notion.com/p/24-134-Week-4-Values-in-Science-and-Technology-81679a655d4e4a0295901c7f9acf7f23"
+  },
+  {
+   "name": "24.134 Experiential Ethics",
+   "code": "24.134",
+   "date": "",
+   "due": "",
+   "status": "Not started",
+   "type": "Lecture",
+   "room": "",
+   "url": "https://app.notion.com/p/24-134-Experiential-Ethics-696e9f9a7a8445b787740c028911cf4c"
   }
  ],
  "projects": [
