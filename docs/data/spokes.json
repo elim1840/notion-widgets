@@ -1,6 +1,186 @@
 {
  "classes": [
   {
+   "name": "[READ] 14.003 Microecon & Policy: Prep: Lecture 05: Finkelstein, Hendren & Shepard (2019) Subsidizing Health Insurance",
+   "code": "14.003",
+   "date": "2026-09-22T21:07:00.000-04:00",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "",
+   "url": "https://app.notion.com/p/READ-14-003-Microecon-Policy-Prep-Lecture-05-Finkelstein-Hendren-Shepard-2019-Subsidizing-3e3ea74eb77981e9bf28cf0f9f692949"
+  },
+  {
+   "name": "[READ] IDS.412 Tech & Policy: Prep: Lecture 05 pt2: Susskind, Sanderson, Lee",
+   "code": "IDS.412",
+   "date": "2026-09-22T19:37:00.000-04:00",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "",
+   "url": "https://app.notion.com/p/READ-IDS-412-Tech-Policy-Prep-Lecture-05-pt2-Susskind-Sanderson-Lee-3e3ea74eb77981c3b6a1f2107f35f0d7"
+  },
+  {
+   "name": "[READ] IDS.412 Tech & Policy: Prep: Lecture 05 pt1: Murphy (2002) Regulatory Competition + Vogel (1997) Trading Up",
+   "code": "IDS.412",
+   "date": "2026-09-22T18:15:00.000-04:00",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "",
+   "url": "https://app.notion.com/p/READ-IDS-412-Tech-Policy-Prep-Lecture-05-pt1-Murphy-2002-Regulatory-Competition-Vogel-199-3e3ea74eb77981a4b504f8064c77dfc7"
+  },
+  {
+   "name": "[READ] 16.990 Creative Teams: Prep: Lecture 05: Ligon (2008) Leadership Life Narrative + VIA Survey + Halstead case",
+   "code": "16.990",
+   "date": "2026-09-22T17:00:00.000-04:00",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "",
+   "url": "https://app.notion.com/p/READ-16-990-Creative-Teams-Prep-Lecture-05-Ligon-2008-Leadership-Life-Narrative-VIA-Survey--3e3ea74eb77981419892f8dd93905b55"
+  },
+  {
+   "name": "ECON PSET Q4-5",
+   "code": "14.003",
+   "date": "2026-09-22T16:00:00.000-04:00",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "",
+   "url": "https://app.notion.com/p/ECON-PSET-Q4-5-0ef98dc2b3934412a87d521b60cc772d"
+  },
+  {
+   "name": "ECON PSET Q2",
+   "code": "14.003",
+   "date": "2026-09-22T09:00:00.000-04:00",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "",
+   "url": "https://app.notion.com/p/ECON-PSET-Q2-fe3dd7e6df3c4395971d24e37dbd5ff6"
+  },
+  {
+   "name": "ECON PSET Q3",
+   "code": "14.003",
+   "date": "2026-09-22T13:00:00.000-04:00",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "",
+   "url": "https://app.notion.com/p/ECON-PSET-Q3-83cbdf40a20246b4abc9d368f01fb38c"
+  },
+  {
+   "name": "ECON PSET Q4-5",
+   "code": "14.003",
+   "date": "2026-09-22T16:00:00.000-04:00",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "",
+   "url": "https://app.notion.com/p/ECON-PSET-Q4-5-fe9ba651973542b0a2c100316edef175"
+  },
+  {
+   "name": "ECON PSET Q2",
+   "code": "14.003",
+   "date": "2026-09-22T09:00:00.000-04:00",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "",
+   "url": "https://app.notion.com/p/ECON-PSET-Q2-77a3e6056ed84ddebd41b3883366e20c"
+  },
+  {
+   "name": "ECON PSET 1 Q3",
+   "code": "14.003",
+   "date": "2026-09-22T13:00:00.000-04:00",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "",
+   "url": "https://app.notion.com/p/ECON-PSET-1-Q3-f6e74738dcb9463db7d7f9fe57174c2f"
+  },
+  {
+   "name": "[READ] 16.990 Creative Teams: Prep: Martha McCaskey case (Harvard Packet), values & ethical decision making",
+   "code": "16.990",
+   "date": "2026-09-27T14:00:00.000-04:00",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "",
+   "url": "https://app.notion.com/p/READ-16-990-Creative-Teams-Prep-Martha-McCaskey-case-Harvard-Packet-values-ethical-decision--3e3ea74eb77981e2a1abe67b3f4758eb"
+  },
+  {
+   "name": "[READ] 16.990 Creative Teams: Prep: Toegel & Barsoux (2012) How to become a better leader + Drucker (1999) Managing Oneself",
+   "code": "16.990",
+   "date": "2026-09-22T20:00:00.000-04:00",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "",
+   "url": "https://app.notion.com/p/READ-16-990-Creative-Teams-Prep-Toegel-Barsoux-2012-How-to-become-a-better-leader-Drucker--3e3ea74eb7798179afadce6f10317025"
+  },
+  {
+   "name": "[STUDY] 16.842 Systems Eng: Quiz 04 T-0: Light retrieval pass",
+   "code": "16.842",
+   "date": "2026-09-22T09:20:00.000-04:00",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "",
+   "url": "https://app.notion.com/p/STUDY-16-842-Systems-Eng-Quiz-04-T-0-Light-retrieval-pass-3e3ea74eb779818ab74dcb2c045417e2"
+  },
+  {
+   "name": "[STUDY] 16.842 Systems Eng: Quiz 03 T-0: Light retrieval pass",
+   "code": "16.842",
+   "date": "2026-09-22T09:00:00.000-04:00",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "",
+   "url": "https://app.notion.com/p/STUDY-16-842-Systems-Eng-Quiz-03-T-0-Light-retrieval-pass-3e3ea74eb7798167854dcb4403604c6d"
+  },
+  {
+   "name": "[PREP] 16.842 Systems Eng: Quiz 04: Pre-Readings (handbooks) Week 2, mandatory",
+   "code": "16.842",
+   "date": "2026-09-22T08:30:00.000-04:00",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "",
+   "url": "https://app.notion.com/p/PREP-16-842-Systems-Eng-Quiz-04-Pre-Readings-handbooks-Week-2-mandatory-3e3ea74eb779810aaba1c09ef72d5544"
+  },
+  {
+   "name": "[PREP] 16.842 Systems Eng: Quiz 03: Pre-Reading (slides) Week 2, mandatory",
+   "code": "16.842",
+   "date": "2026-09-22T08:00:00.000-04:00",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "",
+   "url": "https://app.notion.com/p/PREP-16-842-Systems-Eng-Quiz-03-Pre-Reading-slides-Week-2-mandatory-3e3ea74eb77981cea1eac740ddc7dafe"
+  },
+  {
+   "name": "[DUE] 16.842 Systems Eng: Quiz 04: Pre-Readings (handbooks) Week 2 (mandatory)",
+   "code": "16.842",
+   "date": "2026-09-22T10:00:00.000-04:00",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "",
+   "url": "https://app.notion.com/p/DUE-16-842-Systems-Eng-Quiz-04-Pre-Readings-handbooks-Week-2-mandatory-3e3ea74eb779814b9a93c034d87ffda1"
+  },
+  {
+   "name": "[DUE] 16.842 Systems Eng: Quiz 03: Pre-Reading (slides) Week 2 Quiz (mandatory, 9 pts)",
+   "code": "16.842",
+   "date": "2026-09-22T10:15:00.000-04:00",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "",
+   "url": "https://app.notion.com/p/DUE-16-842-Systems-Eng-Quiz-03-Pre-Reading-slides-Week-2-Quiz-mandatory-9-pts-3e3ea74eb7798154a83fc73fcc098228"
+  },
+  {
    "name": "14.003 Microecon & Policy: Exam 03: Lectures 18 to 23, date not yet published",
    "code": "14.003",
    "date": "",
@@ -3207,7 +3387,7 @@
    "due": "",
    "status": "Not started",
    "type": "",
-   "room": "66-168",
+   "room": "66-156",
    "url": "https://app.notion.com/p/IDS-412-Tech-Policy-Recitation-Week-3-3dcea74eb7798103b3cde39b87258618"
   },
   {
@@ -3233,7 +3413,7 @@
   {
    "name": "[STUDY] 14.003 Microecon & Policy: Exam 01 T-21: Closed-book retrieval: first half of the material, write what you recall before checking",
    "code": "14.003",
-   "date": "2026-09-22T13:00:00.000-04:00",
+   "date": "2026-09-26T11:00:00.000-04:00",
    "due": "",
    "status": "Not started",
    "type": "",
@@ -3313,7 +3493,7 @@
   {
    "name": "14.003 Microecon & Policy: Problem Set 01: Minimum wage, research design, causal inference",
    "code": "14.003",
-   "date": "2026-09-24T23:59:00.000-04:00",
+   "date": "2026-09-24T23:30:00.000-04:00",
    "due": "",
    "status": "",
    "type": "",
