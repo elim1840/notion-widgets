@@ -1,6 +1,46 @@
 {
  "classes": [
   {
+   "name": "Work on Assignment Notion Template",
+   "code": "16.842",
+   "date": "2026-09-24T09:30:00.000-04:00",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "",
+   "url": "https://app.notion.com/p/Work-on-Assignment-Notion-Template-eef347f2631445f0861232001c51039f"
+  },
+  {
+   "name": "[HW] 16.842 Systems Eng: A1 Team Formation, Stakeholders, ConOps: Work with team",
+   "code": "16.842",
+   "date": "2026-09-25T14:00:00.000-04:00",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "",
+   "url": "https://app.notion.com/p/HW-16-842-Systems-Eng-A1-Team-Formation-Stakeholders-ConOps-Work-with-team-3e3ea74eb7798168bcc8fdec73ef7b0f"
+  },
+  {
+   "name": "[HW] 16.842 Systems Eng: Lecture 03 pre-class: Complete System Thinking activities",
+   "code": "16.842",
+   "date": "2026-09-27T10:00:00.000-04:00",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "",
+   "url": "https://app.notion.com/p/HW-16-842-Systems-Eng-Lecture-03-pre-class-Complete-System-Thinking-activities-3e3ea74eb779818cb6cace2456539308"
+  },
+  {
+   "name": "[HW] 16.842 Systems Eng: Lecture 03 pre-class: Watch System Thinking videos",
+   "code": "16.842",
+   "date": "2026-09-27T09:00:00.000-04:00",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "",
+   "url": "https://app.notion.com/p/HW-16-842-Systems-Eng-Lecture-03-pre-class-Watch-System-Thinking-videos-3e3ea74eb77981faa4ebc63f586fc4ca"
+  },
+  {
    "name": "[READ] 14.003 Microecon & Policy: Prep: Lecture 05: Finkelstein, Hendren & Shepard (2019) Subsidizing Health Insurance",
    "code": "14.003",
    "date": "2026-09-22T21:07:00.000-04:00",
@@ -41,16 +81,6 @@
    "url": "https://app.notion.com/p/READ-16-990-Creative-Teams-Prep-Lecture-05-Ligon-2008-Leadership-Life-Narrative-VIA-Survey--3e3ea74eb77981419892f8dd93905b55"
   },
   {
-   "name": "ECON PSET Q4-5",
-   "code": "14.003",
-   "date": "2026-09-22T16:00:00.000-04:00",
-   "due": "",
-   "status": "",
-   "type": "",
-   "room": "",
-   "url": "https://app.notion.com/p/ECON-PSET-Q4-5-0ef98dc2b3934412a87d521b60cc772d"
-  },
-  {
    "name": "ECON PSET Q2",
    "code": "14.003",
    "date": "2026-09-22T09:00:00.000-04:00",
@@ -59,16 +89,6 @@
    "type": "",
    "room": "",
    "url": "https://app.notion.com/p/ECON-PSET-Q2-fe3dd7e6df3c4395971d24e37dbd5ff6"
-  },
-  {
-   "name": "ECON PSET Q3",
-   "code": "14.003",
-   "date": "2026-09-22T13:00:00.000-04:00",
-   "due": "",
-   "status": "",
-   "type": "",
-   "room": "",
-   "url": "https://app.notion.com/p/ECON-PSET-Q3-83cbdf40a20246b4abc9d368f01fb38c"
   },
   {
    "name": "ECON PSET Q4-5",

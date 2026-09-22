@@ -1,5 +1,5 @@
 {
- "generated": "2026-09-22T08:37:33-04:00",
+ "generated": "2026-09-22T13:17:35-04:00",
  "today": "2026-09-22",
  "monday": "2026-09-21",
  "days": [
@@ -218,18 +218,6 @@
      "url": "https://app.notion.com/p/16-842-Systems-Eng-Lecture-02-Requirements-Margins-3d5ea74eb77981a48d71fb409da4838b"
     },
     {
-     "name": "ECON PSET Q3",
-     "date": "2026-09-22T13:00:00.000-04:00",
-     "end": "2026-09-22T15:00:00.000-04:00",
-     "done": false,
-     "kind": "14.003",
-     "src": "class",
-     "location": "",
-     "type": "",
-     "meeting_type": "Class",
-     "url": "https://app.notion.com/p/ECON-PSET-Q3-83cbdf40a20246b4abc9d368f01fb38c"
-    },
-    {
      "name": "ECON PSET 1 Q3",
      "date": "2026-09-22T13:00:00.000-04:00",
      "end": "2026-09-22T15:00:00.000-04:00",
@@ -252,18 +240,6 @@
      "type": "Meeting",
      "meeting_type": "",
      "url": "https://app.notion.com/p/Yohan-and-Grace-3c38bef019bd4e0ab840b06164195a14"
-    },
-    {
-     "name": "ECON PSET Q4-5",
-     "date": "2026-09-22T16:00:00.000-04:00",
-     "end": "2026-09-22T20:00:00.000-04:00",
-     "done": false,
-     "kind": "14.003",
-     "src": "class",
-     "location": "",
-     "type": "",
-     "meeting_type": "Class",
-     "url": "https://app.notion.com/p/ECON-PSET-Q4-5-0ef98dc2b3934412a87d521b60cc772d"
     },
     {
      "name": "ECON PSET Q4-5",
@@ -530,6 +506,18 @@
      "url": "https://app.notion.com/p/TSK-AFT-T-7-final-prep-session-confirm-time-and-location-3dcea74eb7798190b507d19dc1be257b"
     },
     {
+     "name": "Work on Assignment Notion Template",
+     "date": "2026-09-24T09:30:00.000-04:00",
+     "end": "2026-09-24T10:00:00.000-04:00",
+     "done": false,
+     "kind": "16.842",
+     "src": "class",
+     "location": "",
+     "type": "",
+     "meeting_type": "Class",
+     "url": "https://app.notion.com/p/Work-on-Assignment-Notion-Template-eef347f2631445f0861232001c51039f"
+    },
+    {
      "name": "14.003 Office Hours \u2014 M\u00e9lyne Nzabonimpa",
      "date": "2026-09-24T18:00:00.000+00:00",
      "end": "2026-09-24T19:30:00.000+00:00",
@@ -609,8 +597,8 @@
     },
     {
      "name": "Claim free Neuro Gum pack at Costco or Walmart",
-     "date": "2026-09-25T14:00:00.000-04:00",
-     "end": "2026-09-25T14:30:00.000-04:00",
+     "date": "2026-09-25T13:00:00.000-04:00",
+     "end": "2026-09-25T13:30:00.000-04:00",
      "done": false,
      "kind": "Personal",
      "src": "task",
@@ -618,6 +606,18 @@
      "type": "Task",
      "meeting_type": "Personal",
      "url": "https://app.notion.com/p/Claim-free-Neuro-Gum-pack-at-Costco-or-Walmart-3e1ea74eb7798103844ad365bc4175b7"
+    },
+    {
+     "name": "[HW] 16.842 Systems Eng: A1 Team Formation, Stakeholders, ConOps: Work with team",
+     "date": "2026-09-25T14:00:00.000-04:00",
+     "end": "2026-09-25T15:00:00.000-04:00",
+     "done": false,
+     "kind": "16.842",
+     "src": "class",
+     "location": "",
+     "type": "",
+     "meeting_type": "Class",
+     "url": "https://app.notion.com/p/HW-16-842-Systems-Eng-A1-Team-Formation-Stakeholders-ConOps-Work-with-team-3e3ea74eb7798168bcc8fdec73ef7b0f"
     },
     {
      "name": "16.S896 RASCAL: Session 03: Team Kickoffs and Framework 1: Lordos Innovation Framework",
@@ -740,6 +740,30 @@
      "url": "https://app.notion.com/p/TSK-Household-cleaning-3dcea74eb77981908f26fa35d46c3741"
     },
     {
+     "name": "[HW] 16.842 Systems Eng: Lecture 03 pre-class: Watch System Thinking videos",
+     "date": "2026-09-27T09:00:00.000-04:00",
+     "end": "2026-09-27T10:00:00.000-04:00",
+     "done": false,
+     "kind": "16.842",
+     "src": "class",
+     "location": "",
+     "type": "",
+     "meeting_type": "Class",
+     "url": "https://app.notion.com/p/HW-16-842-Systems-Eng-Lecture-03-pre-class-Watch-System-Thinking-videos-3e3ea74eb77981faa4ebc63f586fc4ca"
+    },
+    {
+     "name": "[HW] 16.842 Systems Eng: Lecture 03 pre-class: Complete System Thinking activities",
+     "date": "2026-09-27T10:00:00.000-04:00",
+     "end": "2026-09-27T11:00:00.000-04:00",
+     "done": false,
+     "kind": "16.842",
+     "src": "class",
+     "location": "",
+     "type": "",
+     "meeting_type": "Class",
+     "url": "https://app.notion.com/p/HW-16-842-Systems-Eng-Lecture-03-pre-class-Complete-System-Thinking-activities-3e3ea74eb779818cb6cace2456539308"
+    },
+    {
      "name": "[READ] 16.990 Creative Teams: Prep: Martha McCaskey case (Harvard Packet), values & ethical decision making",
      "date": "2026-09-27T14:00:00.000-04:00",
      "end": "2026-09-27T14:45:00.000-04:00",
@@ -766,5 +790,5 @@
    ]
   }
  ],
- "total": 60
+ "total": 62
 }
