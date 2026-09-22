@@ -1,5 +1,5 @@
 {
- "generated": "2026-09-22T16:20:00-04:00",
+ "generated": "2026-09-22T19:07:32-04:00",
  "today": "2026-09-22",
  "monday": "2026-09-21",
  "days": [
@@ -254,30 +254,6 @@
      "url": "https://app.notion.com/p/ECON-PSET-Q4-5-fe9ba651973542b0a2c100316edef175"
     },
     {
-     "name": "[READ] 16.990 Creative Teams: Prep: Lecture 05: Ligon (2008) Leadership Life Narrative + VIA Survey + Halstead case",
-     "date": "2026-09-22T17:00:00.000-04:00",
-     "end": "2026-09-22T18:15:00.000-04:00",
-     "done": false,
-     "kind": "16.990",
-     "src": "class",
-     "location": "",
-     "type": "",
-     "meeting_type": "Class",
-     "url": "https://app.notion.com/p/READ-16-990-Creative-Teams-Prep-Lecture-05-Ligon-2008-Leadership-Life-Narrative-VIA-Survey--3e3ea74eb77981419892f8dd93905b55"
-    },
-    {
-     "name": "[READ] IDS.412 Tech & Policy: Prep: Lecture 05 pt1: Murphy (2002) Regulatory Competition + Vogel (1997) Trading Up",
-     "date": "2026-09-22T18:15:00.000-04:00",
-     "end": "2026-09-22T19:37:00.000-04:00",
-     "done": false,
-     "kind": "IDS.412",
-     "src": "class",
-     "location": "",
-     "type": "",
-     "meeting_type": "Class",
-     "url": "https://app.notion.com/p/READ-IDS-412-Tech-Policy-Prep-Lecture-05-pt1-Murphy-2002-Regulatory-Competition-Vogel-199-3e3ea74eb77981a4b504f8064c77dfc7"
-    },
-    {
      "name": "14.003 Office Hours \u2014 Cristine von Dessauer",
      "date": "2026-09-22T19:30:00.000+00:00",
      "end": "2026-09-22T21:00:00.000+00:00",
@@ -290,33 +266,9 @@
      "url": "https://app.notion.com/p/14-003-Office-Hours-Cristine-von-Dessauer-3dcea74eb7798106a5cee6270cc48728"
     },
     {
-     "name": "[READ] IDS.412 Tech & Policy: Prep: Lecture 05 pt2: Susskind, Sanderson, Lee",
-     "date": "2026-09-22T19:37:00.000-04:00",
-     "end": "2026-09-22T21:07:00.000-04:00",
-     "done": false,
-     "kind": "IDS.412",
-     "src": "class",
-     "location": "",
-     "type": "",
-     "meeting_type": "Class",
-     "url": "https://app.notion.com/p/READ-IDS-412-Tech-Policy-Prep-Lecture-05-pt2-Susskind-Sanderson-Lee-3e3ea74eb77981c3b6a1f2107f35f0d7"
-    },
-    {
-     "name": "[READ] 16.990 Creative Teams: Prep: Toegel & Barsoux (2012) How to become a better leader + Drucker (1999) Managing Oneself",
-     "date": "2026-09-22T20:00:00.000-04:00",
-     "end": "2026-09-22T20:30:00.000-04:00",
-     "done": false,
-     "kind": "16.990",
-     "src": "class",
-     "location": "",
-     "type": "",
-     "meeting_type": "Class",
-     "url": "https://app.notion.com/p/READ-16-990-Creative-Teams-Prep-Toegel-Barsoux-2012-How-to-become-a-better-leader-Drucker--3e3ea74eb7798179afadce6f10317025"
-    },
-    {
      "name": "[READ] 14.003 Microecon & Policy: Prep: Lecture 05: Finkelstein, Hendren & Shepard (2019) Subsidizing Health Insurance",
-     "date": "2026-09-22T21:07:00.000-04:00",
-     "end": "2026-09-22T21:26:00.000-04:00",
+     "date": "2026-09-22T20:00:00.000-04:00",
+     "end": "2026-09-22T22:00:00.000-04:00",
      "done": false,
      "kind": "14.003",
      "src": "class",
@@ -338,16 +290,28 @@
      "url": "https://app.notion.com/p/TSK-Cut-and-file-the-day-s-notes-into-the-binder-3dbea74eb779818ba033d2c76be94f74"
     },
     {
-     "name": "16.S896 RASCAL: Milestone: Team and Lead Assignments Finalized",
-     "date": "2026-09-22",
-     "end": "",
+     "name": "[READ] 16.990 Creative Teams: Prep: Lecture 05: Ligon (2008) Leadership Life Narrative + VIA Survey + Halstead case",
+     "date": "2026-09-22T22:00:00.000-04:00",
+     "end": "2026-09-22T23:00:00.000-04:00",
      "done": false,
-     "kind": "16.S896",
+     "kind": "16.990",
      "src": "class",
-     "location": "No room, instructor milestone. Class room 9-354 vs 33-218, unresolved.",
+     "location": "",
      "type": "",
      "meeting_type": "Class",
-     "url": "https://app.notion.com/p/16-S896-RASCAL-Milestone-Team-and-Lead-Assignments-Finalized-3d6ea74eb77981ae87c3d7b04452b809"
+     "url": "https://app.notion.com/p/READ-16-990-Creative-Teams-Prep-Lecture-05-Ligon-2008-Leadership-Life-Narrative-VIA-Survey--3e3ea74eb77981419892f8dd93905b55"
+    },
+    {
+     "name": "[READ] 16.990 Creative Teams: Prep: Toegel & Barsoux (2012) How to become a better leader + Drucker (1999) Managing Oneself",
+     "date": "2026-09-22T23:00:00.000-04:00",
+     "end": "2026-09-22T23:30:00.000-04:00",
+     "done": false,
+     "kind": "16.990",
+     "src": "class",
+     "location": "",
+     "type": "",
+     "meeting_type": "Class",
+     "url": "https://app.notion.com/p/READ-16-990-Creative-Teams-Prep-Toegel-Barsoux-2012-How-to-become-a-better-leader-Drucker--3e3ea74eb7798179afadce6f10317025"
     }
    ]
   },
@@ -355,6 +319,18 @@
    "date": "2026-09-23",
    "is_today": false,
    "items": [
+    {
+     "name": "[READ] IDS.412 Tech & Policy: Prep: Lecture 05 pt2: Susskind, Sanderson, Lee",
+     "date": "2026-09-23T07:30:00.000-04:00",
+     "end": "2026-09-23T09:00:00.000-04:00",
+     "done": false,
+     "kind": "IDS.412",
+     "src": "class",
+     "location": "",
+     "type": "",
+     "meeting_type": "Class",
+     "url": "https://app.notion.com/p/READ-IDS-412-Tech-Policy-Prep-Lecture-05-pt2-Susskind-Sanderson-Lee-3e3ea74eb77981c3b6a1f2107f35f0d7"
+    },
     {
      "name": "TSK Submit DA 2125 (request for issue/turn-in)",
      "date": "2026-09-23T08:00:00.000-04:00",
@@ -368,6 +344,18 @@
      "url": "https://app.notion.com/p/TSK-Submit-DA-2125-request-for-issue-turn-in-3dcea74eb779816980c9d4b2625c03de"
     },
     {
+     "name": "[READ] IDS.412 Tech & Policy: Prep: Lecture 05 pt1: Murphy (2002) Regulatory Competition + Vogel (1997) Trading Up",
+     "date": "2026-09-23T09:00:00.000-04:00",
+     "end": "2026-09-23T10:22:00.000-04:00",
+     "done": false,
+     "kind": "IDS.412",
+     "src": "class",
+     "location": "",
+     "type": "",
+     "meeting_type": "Class",
+     "url": "https://app.notion.com/p/READ-IDS-412-Tech-Policy-Prep-Lecture-05-pt1-Murphy-2002-Regulatory-Competition-Vogel-199-3e3ea74eb77981a4b504f8064c77dfc7"
+    },
+    {
      "name": "14.003 Microecon & Policy: Lecture 05: Consumer choice: Theory versus constraints",
      "date": "2026-09-23T10:30:00.000-04:00",
      "end": "2026-09-23T12:00:00.000-04:00",
@@ -378,6 +366,18 @@
      "type": "",
      "meeting_type": "Class",
      "url": "https://app.notion.com/p/14-003-Microecon-Policy-Lecture-05-Consumer-choice-Theory-versus-constraints-3d6ea74eb77981e8bb17c80a0e95544a"
+    },
+    {
+     "name": "Food in TPP Lounge bring container",
+     "date": "2026-09-23T12:00:00.000-04:00",
+     "end": "2026-09-23T13:00:00.000-04:00",
+     "done": false,
+     "kind": "Admin",
+     "src": "task",
+     "location": "",
+     "type": "",
+     "meeting_type": "Admin",
+     "url": "https://app.notion.com/p/Food-in-TPP-Lounge-bring-container-b74e5682a2a74842b011ac450d1cb30e"
     },
     {
      "name": "[FREE FOOD] IDSS Cultural Lunch for Chuseok",
@@ -564,6 +564,18 @@
      "type": "",
      "meeting_type": "Class",
      "url": "https://app.notion.com/p/14-003-Microecon-Policy-Problem-Set-01-Minimum-wage-research-design-causal-inference-3d6ea74eb7798173a68dddc9454870f3"
+    },
+    {
+     "name": "16.S896 RASCAL: Milestone: Team and Lead Assignments Finalized",
+     "date": "2026-09-24",
+     "end": "",
+     "done": false,
+     "kind": "16.S896",
+     "src": "class",
+     "location": "No room, instructor milestone. Class room 9-354 vs 33-218, unresolved.",
+     "type": "",
+     "meeting_type": "Class",
+     "url": "https://app.notion.com/p/16-S896-RASCAL-Milestone-Team-and-Lead-Assignments-Finalized-3d6ea74eb77981ae87c3d7b04452b809"
     }
    ]
   },
@@ -790,5 +802,5 @@
    ]
   }
  ],
- "total": 62
+ "total": 63
 }

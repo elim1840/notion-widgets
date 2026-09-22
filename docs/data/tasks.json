@@ -1,9 +1,9 @@
 {
- "generated": "2026-09-22T16:20:00-04:00",
+ "generated": "2026-09-22T19:07:32-04:00",
  "today": "2026-09-22",
  "counts": {
-  "total": 236,
-  "open": 215,
+  "total": 237,
+  "open": 216,
   "done": 21,
   "today_total": 2,
   "today_done": 0,
@@ -781,6 +781,23 @@
    "url": "https://app.notion.com/p/TSK-Submit-DA-2125-request-for-issue-turn-in-3dcea74eb779816980c9d4b2625c03de"
   },
   {
+   "name": "Food in TPP Lounge bring container",
+   "date": "2026-09-23T12:00:00.000-04:00",
+   "end": "2026-09-23T13:00:00.000-04:00",
+   "done": false,
+   "status": "",
+   "type": "",
+   "meeting_type": "Admin",
+   "priority": "",
+   "energy": "",
+   "location": "",
+   "attendees": "",
+   "agenda": "",
+   "link": "",
+   "notes": "",
+   "url": "https://app.notion.com/p/Food-in-TPP-Lounge-bring-container-b74e5682a2a74842b011ac450d1cb30e"
+  },
+  {
    "name": "[FREE FOOD] IDSS Cultural Lunch for Chuseok",
    "date": "2026-09-23T12:00:00.000-04:00",
    "end": "2026-09-23T13:15:00.000-04:00",
@@ -915,23 +932,6 @@
    "link": "",
    "notes": "Cut the day's sheets, sort by class then by the number printed in each sheet's footer, punch and file. Unsure sheets go in the front pocket for the Sunday review. Guide: 02_Classes/BINDER-FILING-GUIDE.md",
    "url": "https://app.notion.com/p/TSK-Cut-and-file-the-day-s-notes-into-the-binder-3dbea74eb779815fba9af22e014dd844"
-  },
-  {
-   "name": "TSK Review NSSA 2026-2027 Academic Scholarship: check eligibility and deadline",
-   "date": "2026-09-26",
-   "end": "",
-   "done": false,
-   "status": "Not Started",
-   "type": "",
-   "meeting_type": "TPP",
-   "priority": "",
-   "energy": "",
-   "location": "",
-   "attendees": "",
-   "agenda": "",
-   "link": "",
-   "notes": "National Security Space Association academic scholarship, 2026-2027 cycle, applications open. Worth checking against: dual MS TPP and AeroAstro at MIT, Draper Scholar, GEO satellite maneuver detection and SDA research, prior US Space Command work on SAR and ground sensors, Army ADA officer. Decide in this order: (1) does a current Draper Scholar qualify, or does existing funding disqualify, (2) is it open to graduate students or undergrad only, (3) what is the actual deadline. If it is a fit, the career database at ~/Documents/Resume and CV/career-database/ already has the material.",
-   "url": "https://app.notion.com/p/TSK-Review-NSSA-2026-2027-Academic-Scholarship-check-eligibility-and-deadline-3ddea74eb77981f0bed9e2137f5e5e39"
   }
  ],
  "history": [
