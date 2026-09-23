@@ -1,6 +1,26 @@
 {
  "classes": [
   {
+   "name": "[HW] 16.990 Creative Teams: First Hand-in Paper: Drucker Qs + Defining Events table",
+   "code": "16.990",
+   "date": "2026-09-26T14:00:00.000-04:00",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "",
+   "url": "https://app.notion.com/p/HW-16-990-Creative-Teams-First-Hand-in-Paper-Drucker-Qs-Defining-Events-table-3e4ea74eb77981d3909cd5ffe48615bc"
+  },
+  {
+   "name": "[DUE] 16.990 Creative Teams: First Hand-in Paper (Drucker self-assessment + Defining Events, 2 pages, hand in class 10/2)",
+   "code": "16.990",
+   "date": "2026-10-01T21:00:00.000-04:00",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "",
+   "url": "https://app.notion.com/p/DUE-16-990-Creative-Teams-First-Hand-in-Paper-Drucker-self-assessment-Defining-Events-2-pages--3e4ea74eb7798114a2a7ff7f67097cfe"
+  },
+  {
    "name": "Finish PSET",
    "code": "14.003",
    "date": "2026-09-24T07:00:00.000-04:00",
