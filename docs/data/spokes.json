@@ -1,6 +1,46 @@
 {
  "classes": [
   {
+   "name": "Finish PSET",
+   "code": "14.003",
+   "date": "2026-09-24T07:00:00.000-04:00",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "",
+   "url": "https://app.notion.com/p/Finish-PSET-8d4928a6e2c048febe68583e95520c7f"
+  },
+  {
+   "name": "Finish PSET",
+   "code": "14.003",
+   "date": "2026-09-23T19:30:00.000-04:00",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "",
+   "url": "https://app.notion.com/p/Finish-PSET-da116973a8ba41469e92261097b52953"
+  },
+  {
+   "name": "Compare PSET",
+   "code": "14.003",
+   "date": "2026-09-24T12:00:00.000-04:00",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "",
+   "url": "https://app.notion.com/p/Compare-PSET-5bcb8c0d3492401d9555d1eefcf44bc1"
+  },
+  {
+   "name": "Finish PSET",
+   "code": "14.003",
+   "date": "2026-09-23T19:30:00.000-04:00",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "",
+   "url": "https://app.notion.com/p/Finish-PSET-d2a1d39ef7334e3baafa1f87e3253208"
+  },
+  {
    "name": "Work on Assignment Notion Template",
    "code": "16.842",
    "date": "2026-09-24T09:30:00.000-04:00",
@@ -41,9 +81,9 @@
    "url": "https://app.notion.com/p/HW-16-842-Systems-Eng-Lecture-03-pre-class-Watch-System-Thinking-videos-3e3ea74eb77981faa4ebc63f586fc4ca"
   },
   {
-   "name": "[READ] 14.003 Microecon & Policy: Prep: Lecture 05: Finkelstein, Hendren & Shepard (2019) Subsidizing Health Insurance",
+   "name": "[READ] 14.003 Microecon & Policy: Prep: Lecture 05: Finkelstein, Hendren & Shepard (2019) Subsidizing Health Insurance and Lecture 4 Readings",
    "code": "14.003",
-   "date": "2026-09-22T20:00:00.000-04:00",
+   "date": "2026-09-23T07:00:00.000-04:00",
    "due": "",
    "status": "",
    "type": "",
@@ -73,7 +113,7 @@
   {
    "name": "[READ] 16.990 Creative Teams: Prep: Lecture 05: Ligon (2008) Leadership Life Narrative + VIA Survey + Halstead case",
    "code": "16.990",
-   "date": "2026-09-22T22:00:00.000-04:00",
+   "date": "2026-09-23T12:30:00.000-04:00",
    "due": "",
    "status": "",
    "type": "",
@@ -133,7 +173,7 @@
   {
    "name": "[READ] 16.990 Creative Teams: Prep: Toegel & Barsoux (2012) How to become a better leader + Drucker (1999) Managing Oneself",
    "code": "16.990",
-   "date": "2026-09-22T23:00:00.000-04:00",
+   "date": "2026-09-23T12:30:00.000-04:00",
    "due": "",
    "status": "",
    "type": "",
@@ -3443,7 +3483,7 @@
   {
    "name": "[DUE] 14.003 Microecon & Policy: Problem Set 01: Minimum wage, research design, causal inference",
    "code": "14.003",
-   "date": "2026-09-24T21:00:00.000-04:00",
+   "date": "2026-09-24T22:00:00.000-04:00",
    "due": "",
    "status": "Not started",
    "type": "",

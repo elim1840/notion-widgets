@@ -1,6 +1,6 @@
 {
- "generated": "2026-09-22T21:30:00-04:00",
- "today": "2026-09-22",
+ "generated": "2026-09-23T02:34:26-04:00",
+ "today": "2026-09-23",
  "monday": "2026-09-21",
  "days": [
   {
@@ -107,7 +107,7 @@
   },
   {
    "date": "2026-09-22",
-   "is_today": true,
+   "is_today": false,
    "items": [
     {
      "name": "[PREP] 16.842 Systems Eng: Quiz 03: Pre-Reading (slides) Week 2, mandatory",
@@ -266,18 +266,6 @@
      "url": "https://app.notion.com/p/14-003-Office-Hours-Cristine-von-Dessauer-3dcea74eb7798106a5cee6270cc48728"
     },
     {
-     "name": "[READ] 14.003 Microecon & Policy: Prep: Lecture 05: Finkelstein, Hendren & Shepard (2019) Subsidizing Health Insurance",
-     "date": "2026-09-22T20:00:00.000-04:00",
-     "end": "2026-09-22T22:00:00.000-04:00",
-     "done": false,
-     "kind": "14.003",
-     "src": "class",
-     "location": "",
-     "type": "",
-     "meeting_type": "Class",
-     "url": "https://app.notion.com/p/READ-14-003-Microecon-Policy-Prep-Lecture-05-Finkelstein-Hendren-Shepard-2019-Subsidizing-3e3ea74eb77981e9bf28cf0f9f692949"
-    },
-    {
      "name": "TSK Cut and file the day's notes into the binder",
      "date": "2026-09-22T22:00:00.000-04:00",
      "end": "2026-09-22T22:15:00.000-04:00",
@@ -288,37 +276,25 @@
      "type": "Task",
      "meeting_type": "Admin",
      "url": "https://app.notion.com/p/TSK-Cut-and-file-the-day-s-notes-into-the-binder-3dbea74eb779818ba033d2c76be94f74"
-    },
-    {
-     "name": "[READ] 16.990 Creative Teams: Prep: Lecture 05: Ligon (2008) Leadership Life Narrative + VIA Survey + Halstead case",
-     "date": "2026-09-22T22:00:00.000-04:00",
-     "end": "2026-09-22T23:00:00.000-04:00",
-     "done": false,
-     "kind": "16.990",
-     "src": "class",
-     "location": "",
-     "type": "",
-     "meeting_type": "Class",
-     "url": "https://app.notion.com/p/READ-16-990-Creative-Teams-Prep-Lecture-05-Ligon-2008-Leadership-Life-Narrative-VIA-Survey--3e3ea74eb77981419892f8dd93905b55"
-    },
-    {
-     "name": "[READ] 16.990 Creative Teams: Prep: Toegel & Barsoux (2012) How to become a better leader + Drucker (1999) Managing Oneself",
-     "date": "2026-09-22T23:00:00.000-04:00",
-     "end": "2026-09-22T23:30:00.000-04:00",
-     "done": false,
-     "kind": "16.990",
-     "src": "class",
-     "location": "",
-     "type": "",
-     "meeting_type": "Class",
-     "url": "https://app.notion.com/p/READ-16-990-Creative-Teams-Prep-Toegel-Barsoux-2012-How-to-become-a-better-leader-Drucker--3e3ea74eb7798179afadce6f10317025"
     }
    ]
   },
   {
    "date": "2026-09-23",
-   "is_today": false,
+   "is_today": true,
    "items": [
+    {
+     "name": "[READ] 14.003 Microecon & Policy: Prep: Lecture 05: Finkelstein, Hendren & Shepard (2019) Subsidizing Health Insurance and Lecture 4 Readings",
+     "date": "2026-09-23T07:00:00.000-04:00",
+     "end": "2026-09-23T09:00:00.000-04:00",
+     "done": false,
+     "kind": "14.003",
+     "src": "class",
+     "location": "",
+     "type": "",
+     "meeting_type": "Class",
+     "url": "https://app.notion.com/p/READ-14-003-Microecon-Policy-Prep-Lecture-05-Finkelstein-Hendren-Shepard-2019-Subsidizing-3e3ea74eb77981e9bf28cf0f9f692949"
+    },
     {
      "name": "[READ] IDS.412 Tech & Policy: Prep: Lecture 05 pt2: Susskind, Sanderson, Lee",
      "date": "2026-09-23T07:30:00.000-04:00",
@@ -390,6 +366,30 @@
      "type": "",
      "meeting_type": "",
      "url": "https://app.notion.com/p/FREE-FOOD-IDSS-Cultural-Lunch-for-Chuseok-3e2ea74eb77981e690a9e33fd230086a"
+    },
+    {
+     "name": "[READ] 16.990 Creative Teams: Prep: Lecture 05: Ligon (2008) Leadership Life Narrative + VIA Survey + Halstead case",
+     "date": "2026-09-23T12:30:00.000-04:00",
+     "end": "2026-09-23T13:00:00.000-04:00",
+     "done": false,
+     "kind": "16.990",
+     "src": "class",
+     "location": "",
+     "type": "",
+     "meeting_type": "Class",
+     "url": "https://app.notion.com/p/READ-16-990-Creative-Teams-Prep-Lecture-05-Ligon-2008-Leadership-Life-Narrative-VIA-Survey--3e3ea74eb77981419892f8dd93905b55"
+    },
+    {
+     "name": "[READ] 16.990 Creative Teams: Prep: Toegel & Barsoux (2012) How to become a better leader + Drucker (1999) Managing Oneself",
+     "date": "2026-09-23T12:30:00.000-04:00",
+     "end": "2026-09-23T13:00:00.000-04:00",
+     "done": false,
+     "kind": "16.990",
+     "src": "class",
+     "location": "",
+     "type": "",
+     "meeting_type": "Class",
+     "url": "https://app.notion.com/p/READ-16-990-Creative-Teams-Prep-Toegel-Barsoux-2012-How-to-become-a-better-leader-Drucker--3e3ea74eb7798179afadce6f10317025"
     },
     {
      "name": "IDS.412 Tech & Policy: Lecture 05: Comparing/Evaluating/Improving Policy",
@@ -464,6 +464,30 @@
      "url": "https://app.notion.com/p/IDS-412-Office-Hours-Noelle-Eckley-Selin-3dcea74eb7798111be40d0619d19eb76"
     },
     {
+     "name": "Finish PSET",
+     "date": "2026-09-23T19:30:00.000-04:00",
+     "end": "2026-09-23T23:00:00.000-04:00",
+     "done": false,
+     "kind": "14.003",
+     "src": "class",
+     "location": "",
+     "type": "",
+     "meeting_type": "Class",
+     "url": "https://app.notion.com/p/Finish-PSET-da116973a8ba41469e92261097b52953"
+    },
+    {
+     "name": "Finish PSET",
+     "date": "2026-09-23T19:30:00.000-04:00",
+     "end": "2026-09-23T23:00:00.000-04:00",
+     "done": false,
+     "kind": "14.003",
+     "src": "class",
+     "location": "",
+     "type": "",
+     "meeting_type": "Class",
+     "url": "https://app.notion.com/p/Finish-PSET-d2a1d39ef7334e3baafa1f87e3253208"
+    },
+    {
      "name": "14.003 Office Hours \u2014 Ragini Srinivasan",
      "date": "2026-09-23T20:30:00.000+00:00",
      "end": "2026-09-23T22:00:00.000+00:00",
@@ -506,6 +530,18 @@
      "url": "https://app.notion.com/p/TSK-AFT-T-7-final-prep-session-confirm-time-and-location-3dcea74eb7798190b507d19dc1be257b"
     },
     {
+     "name": "Finish PSET",
+     "date": "2026-09-24T07:00:00.000-04:00",
+     "end": "2026-09-24T08:00:00.000-04:00",
+     "done": false,
+     "kind": "14.003",
+     "src": "class",
+     "location": "",
+     "type": "",
+     "meeting_type": "Class",
+     "url": "https://app.notion.com/p/Finish-PSET-8d4928a6e2c048febe68583e95520c7f"
+    },
+    {
      "name": "Work on Assignment Notion Template",
      "date": "2026-09-24T09:30:00.000-04:00",
      "end": "2026-09-24T10:00:00.000-04:00",
@@ -516,6 +552,18 @@
      "type": "",
      "meeting_type": "Class",
      "url": "https://app.notion.com/p/Work-on-Assignment-Notion-Template-eef347f2631445f0861232001c51039f"
+    },
+    {
+     "name": "Compare PSET",
+     "date": "2026-09-24T12:00:00.000-04:00",
+     "end": "2026-09-24T14:00:00.000-04:00",
+     "done": false,
+     "kind": "14.003",
+     "src": "class",
+     "location": "",
+     "type": "",
+     "meeting_type": "Class",
+     "url": "https://app.notion.com/p/Compare-PSET-5bcb8c0d3492401d9555d1eefcf44bc1"
     },
     {
      "name": "14.003 Office Hours \u2014 M\u00e9lyne Nzabonimpa",
@@ -530,18 +578,6 @@
      "url": "https://app.notion.com/p/14-003-Office-Hours-M-lyne-Nzabonimpa-3dcea74eb77981018808f0b2b2325d96"
     },
     {
-     "name": "[DUE] 14.003 Microecon & Policy: Problem Set 01: Minimum wage, research design, causal inference",
-     "date": "2026-09-24T21:00:00.000-04:00",
-     "end": "2026-09-24T22:00:00.000-04:00",
-     "done": false,
-     "kind": "14.003",
-     "src": "class",
-     "location": "",
-     "type": "",
-     "meeting_type": "Class",
-     "url": "https://app.notion.com/p/DUE-14-003-Microecon-Policy-Problem-Set-01-Minimum-wage-research-design-causal-inference-3daea74eb779815ea169d2b6942cb480"
-    },
-    {
      "name": "TSK Cut and file the day's notes into the binder",
      "date": "2026-09-24T22:00:00.000-04:00",
      "end": "2026-09-24T22:15:00.000-04:00",
@@ -552,6 +588,18 @@
      "type": "Task",
      "meeting_type": "Admin",
      "url": "https://app.notion.com/p/TSK-Cut-and-file-the-day-s-notes-into-the-binder-3dbea74eb77981f9bb3ee2294c450354"
+    },
+    {
+     "name": "[DUE] 14.003 Microecon & Policy: Problem Set 01: Minimum wage, research design, causal inference",
+     "date": "2026-09-24T22:00:00.000-04:00",
+     "end": "2026-09-24T23:00:00.000-04:00",
+     "done": false,
+     "kind": "14.003",
+     "src": "class",
+     "location": "",
+     "type": "",
+     "meeting_type": "Class",
+     "url": "https://app.notion.com/p/DUE-14-003-Microecon-Policy-Problem-Set-01-Minimum-wage-research-design-causal-inference-3daea74eb779815ea169d2b6942cb480"
     },
     {
      "name": "14.003 Microecon & Policy: Problem Set 01: Minimum wage, research design, causal inference",
@@ -802,5 +850,5 @@
    ]
   }
  ],
- "total": 63
+ "total": 67
 }
