@@ -1,5 +1,5 @@
 {
- "generated": "2026-09-24T11:55:29-04:00",
+ "generated": "2026-09-24T15:45:43-04:00",
  "today": "2026-09-24",
  "monday": "2026-09-21",
  "days": [
@@ -786,11 +786,11 @@
      "date": "2026-09-26",
      "end": "",
      "done": false,
-     "kind": "TPP",
+     "kind": "Admin",
      "src": "task",
      "location": "",
-     "type": "",
-     "meeting_type": "TPP",
+     "type": "Opportunity",
+     "meeting_type": "Admin",
      "url": "https://app.notion.com/p/TSK-Review-NSSA-2026-2027-Academic-Scholarship-check-eligibility-and-deadline-3ddea74eb77981f0bed9e2137f5e5e39"
     }
    ]
@@ -848,18 +848,6 @@
      "url": "https://app.notion.com/p/HW-16-842-Systems-Eng-Lecture-03-pre-class-Complete-System-Thinking-activities-3e3ea74eb779818cb6cace2456539308"
     },
     {
-     "name": "[READ] 16.990 Creative Teams: Prep: Martha McCaskey case (Harvard Packet), values & ethical decision making",
-     "date": "2026-09-27T14:00:00.000-04:00",
-     "end": "2026-09-27T14:45:00.000-04:00",
-     "done": false,
-     "kind": "16.990",
-     "src": "class",
-     "location": "",
-     "type": "",
-     "meeting_type": "Class",
-     "url": "https://app.notion.com/p/READ-16-990-Creative-Teams-Prep-Martha-McCaskey-case-Harvard-Packet-values-ethical-decision--3e3ea74eb77981e2a1abe67b3f4758eb"
-    },
-    {
      "name": "Mahjong, charcuterie and wine at Joce Wang's",
      "date": "2026-09-27T17:00:00.000-04:00",
      "end": "2026-09-27T20:00:00.000-04:00",
@@ -870,6 +858,18 @@
      "type": "",
      "meeting_type": "Personal",
      "url": "https://app.notion.com/p/Mahjong-charcuterie-and-wine-at-Joce-Wang-s-3dcea74eb7798132b147db5352686e03"
+    },
+    {
+     "name": "[READ] 16.990 Creative Teams: Prep: Martha McCaskey case + role-play prep (Martha or Tom)",
+     "date": "2026-09-27T20:30:00.000-04:00",
+     "end": "2026-09-27T22:00:00.000-04:00",
+     "done": false,
+     "kind": "16.990",
+     "src": "class",
+     "location": "",
+     "type": "",
+     "meeting_type": "Class",
+     "url": "https://app.notion.com/p/READ-16-990-Creative-Teams-Prep-Martha-McCaskey-case-role-play-prep-Martha-or-Tom-3e3ea74eb77981e2a1abe67b3f4758eb"
     }
    ]
   }
