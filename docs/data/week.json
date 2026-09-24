@@ -1,5 +1,5 @@
 {
- "generated": "2026-09-24T07:42:51-04:00",
+ "generated": "2026-09-24T11:55:29-04:00",
  "today": "2026-09-24",
  "monday": "2026-09-21",
  "days": [
@@ -656,9 +656,21 @@
      "url": "https://app.notion.com/p/14-003-Microecon-Policy-Recitation-Week-3-3e2ea74eb7798186a98fc129b9b07559"
     },
     {
-     "name": "TSK Submit dual degree petition (TPP + AeroAstro)",
+     "name": "[HW] 16.842 Systems Eng: A1 Team Formation, Stakeholders, ConOps: Work with team",
      "date": "2026-09-25T10:00:00.000-04:00",
-     "end": "2026-09-25T11:30:00.000-04:00",
+     "end": "2026-09-25T11:00:00.000-04:00",
+     "done": false,
+     "kind": "16.842",
+     "src": "class",
+     "location": "",
+     "type": "",
+     "meeting_type": "Class",
+     "url": "https://app.notion.com/p/HW-16-842-Systems-Eng-A1-Team-Formation-Stakeholders-ConOps-Work-with-team-3e3ea74eb7798168bcc8fdec73ef7b0f"
+    },
+    {
+     "name": "TSK Submit dual degree petition (TPP + AeroAstro)",
+     "date": "2026-09-25T11:00:00.000-04:00",
+     "end": "2026-09-25T12:30:00.000-04:00",
      "done": false,
      "kind": "Admin",
      "src": "task",
@@ -678,18 +690,6 @@
      "type": "Task",
      "meeting_type": "Personal",
      "url": "https://app.notion.com/p/Claim-free-Neuro-Gum-pack-at-Costco-or-Walmart-3e1ea74eb7798103844ad365bc4175b7"
-    },
-    {
-     "name": "[HW] 16.842 Systems Eng: A1 Team Formation, Stakeholders, ConOps: Work with team",
-     "date": "2026-09-25T14:00:00.000-04:00",
-     "end": "2026-09-25T15:00:00.000-04:00",
-     "done": false,
-     "kind": "16.842",
-     "src": "class",
-     "location": "",
-     "type": "",
-     "meeting_type": "Class",
-     "url": "https://app.notion.com/p/HW-16-842-Systems-Eng-A1-Team-Formation-Stakeholders-ConOps-Work-with-team-3e3ea74eb7798168bcc8fdec73ef7b0f"
     },
     {
      "name": "16.S896 RASCAL: Session 03: Team Kickoffs and Framework 1: Lordos Innovation Framework",
