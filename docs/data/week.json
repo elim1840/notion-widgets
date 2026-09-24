@@ -1,6 +1,6 @@
 {
- "generated": "2026-09-23T21:00:36-04:00",
- "today": "2026-09-23",
+ "generated": "2026-09-24T02:09:49-04:00",
+ "today": "2026-09-24",
  "monday": "2026-09-21",
  "days": [
   {
@@ -244,7 +244,7 @@
     {
      "name": "ECON PSET Q4-5",
      "date": "2026-09-22T16:00:00.000-04:00",
-     "end": "2026-09-22T20:00:00.000-04:00",
+     "end": "2026-09-22T19:00:00.000-04:00",
      "done": false,
      "kind": "14.003",
      "src": "class",
@@ -281,7 +281,7 @@
   },
   {
    "date": "2026-09-23",
-   "is_today": true,
+   "is_today": false,
    "items": [
     {
      "name": "[READ] 14.003 Microecon & Policy: Prep: Lecture 05: Finkelstein, Hendren & Shepard (2019) Subsidizing Health Insurance and Lecture 4 Readings",
@@ -473,18 +473,6 @@
      "location": "",
      "type": "",
      "meeting_type": "Class",
-     "url": "https://app.notion.com/p/Finish-PSET-da116973a8ba41469e92261097b52953"
-    },
-    {
-     "name": "Finish PSET",
-     "date": "2026-09-23T19:30:00.000-04:00",
-     "end": "2026-09-23T23:00:00.000-04:00",
-     "done": false,
-     "kind": "14.003",
-     "src": "class",
-     "location": "",
-     "type": "",
-     "meeting_type": "Class",
      "url": "https://app.notion.com/p/Finish-PSET-d2a1d39ef7334e3baafa1f87e3253208"
     },
     {
@@ -515,7 +503,7 @@
   },
   {
    "date": "2026-09-24",
-   "is_today": false,
+   "is_today": true,
    "items": [
     {
      "name": "TSK AFT T-7: final prep session, confirm time and location",
@@ -532,7 +520,7 @@
     {
      "name": "Finish PSET",
      "date": "2026-09-24T07:00:00.000-04:00",
-     "end": "2026-09-24T08:00:00.000-04:00",
+     "end": "2026-09-24T09:00:00.000-04:00",
      "done": false,
      "kind": "14.003",
      "src": "class",
@@ -554,16 +542,28 @@
      "url": "https://app.notion.com/p/Work-on-Assignment-Notion-Template-eef347f2631445f0861232001c51039f"
     },
     {
-     "name": "Compare PSET",
-     "date": "2026-09-24T12:00:00.000-04:00",
-     "end": "2026-09-24T14:00:00.000-04:00",
+     "name": "Finish PSET ",
+     "date": "2026-09-24T11:00:00.000-04:00",
+     "end": "2026-09-24T15:00:00.000-04:00",
      "done": false,
      "kind": "14.003",
      "src": "class",
      "location": "",
      "type": "",
      "meeting_type": "Class",
-     "url": "https://app.notion.com/p/Compare-PSET-5bcb8c0d3492401d9555d1eefcf44bc1"
+     "url": "https://app.notion.com/p/Finish-PSET-5bcb8c0d3492401d9555d1eefcf44bc1"
+    },
+    {
+     "name": "Build up ECON Intuition Read",
+     "date": "2026-09-24T15:00:00.000-04:00",
+     "end": "2026-09-24T20:00:00.000-04:00",
+     "done": false,
+     "kind": "14.003",
+     "src": "class",
+     "location": "",
+     "type": "",
+     "meeting_type": "Class",
+     "url": "https://app.notion.com/p/Build-up-ECON-Intuition-Read-5a053362514a4c8cb4ed2e6fffa2fb07"
     },
     {
      "name": "14.003 Office Hours \u2014 M\u00e9lyne Nzabonimpa",
@@ -576,6 +576,18 @@
      "type": "",
      "meeting_type": "Class",
      "url": "https://app.notion.com/p/14-003-Office-Hours-M-lyne-Nzabonimpa-3dcea74eb77981018808f0b2b2325d96"
+    },
+    {
+     "name": "Build out a ECON agent something to breakdown concepts and teach in nice format like a real teacher that i cna ask questions, hook up to hermes?",
+     "date": "2026-09-24T20:00:00.000-04:00",
+     "end": "2026-09-24T21:00:00.000-04:00",
+     "done": false,
+     "kind": "14.003",
+     "src": "class",
+     "location": "",
+     "type": "",
+     "meeting_type": "Class",
+     "url": "https://app.notion.com/p/Build-out-a-ECON-agent-something-to-breakdown-concepts-and-teach-in-nice-format-like-a-real-teacher--1fddae11dc0745f1a5b0e815d4360c20"
     },
     {
      "name": "TSK Cut and file the day's notes into the binder",
@@ -657,8 +669,8 @@
     },
     {
      "name": "Claim free Neuro Gum pack at Costco or Walmart",
-     "date": "2026-09-25T13:00:00.000-04:00",
-     "end": "2026-09-25T13:30:00.000-04:00",
+     "date": "2026-09-25T11:30:00.000-04:00",
+     "end": "2026-09-25T12:00:00.000-04:00",
      "done": false,
      "kind": "Personal",
      "src": "task",
@@ -862,5 +874,5 @@
    ]
   }
  ],
- "total": 68
+ "total": 69
 }
