@@ -1,9 +1,9 @@
 {
- "generated": "2026-09-24T15:45:43-04:00",
+ "generated": "2026-09-24T18:58:00-04:00",
  "today": "2026-09-24",
  "counts": {
-  "total": 238,
-  "open": 217,
+  "total": 242,
+  "open": 221,
   "done": 21,
   "today_total": 2,
   "today_done": 0,
@@ -798,6 +798,23 @@
    "url": "https://app.notion.com/p/Claim-free-Neuro-Gum-pack-at-Costco-or-Walmart-3e1ea74eb7798103844ad365bc4175b7"
   },
   {
+   "name": "TSK Lunar Lander Paper: build out LaTeX (target IEEE Aerospace or ASCEND)",
+   "date": "2026-09-25T19:00:00.000-04:00",
+   "end": "2026-09-25T20:45:00.000-04:00",
+   "done": false,
+   "status": "This Week",
+   "type": "Task",
+   "meeting_type": "Research",
+   "priority": "High",
+   "energy": "Deep",
+   "location": "",
+   "attendees": "",
+   "agenda": "",
+   "link": "",
+   "notes": "Pick venue first, it decides the template. IEEE Aerospace 2027: full paper 6-20 pp due Oct 1/2 2026 (site lists both), IEEE template. ASCEND 2027: 1,000+ word abstract due Thu Oct 8 2026 2000 ET via ScholarOne, AIAA template, manuscript Apr 13 2027. Sources: aeroconf.org/key-dates, ascend.events/presenters.",
+   "url": "https://app.notion.com/p/TSK-Lunar-Lander-Paper-build-out-LaTeX-target-IEEE-Aerospace-or-ASCEND-3e5ea74eb7798138a7a8dd85aa7cf902"
+  },
+  {
    "name": "TSK Cut and file the day's notes into the binder",
    "date": "2026-09-25T22:00:00.000-04:00",
    "end": "2026-09-25T22:15:00.000-04:00",
@@ -830,6 +847,23 @@
    "link": "",
    "notes": "National Security Space Association academic scholarship, 2026-2027 cycle, applications open. Worth checking against: dual MS TPP and AeroAstro at MIT, Draper Scholar, GEO satellite maneuver detection and SDA research, prior US Space Command work on SAR and ground sensors, Army ADA officer. Decide in this order: (1) does a current Draper Scholar qualify, or does existing funding disqualify, (2) is it open to graduate students or undergrad only, (3) what is the actual deadline. If it is a fit, the career database at ~/Documents/Resume and CV/career-database/ already has the material.",
    "url": "https://app.notion.com/p/TSK-Review-NSSA-2026-2027-Academic-Scholarship-check-eligibility-and-deadline-3ddea74eb77981f0bed9e2137f5e5e39"
+  },
+  {
+   "name": "TSK TPP Short Thesis Proposal: read the assignment + outline",
+   "date": "2026-09-26T16:15:00.000-04:00",
+   "end": "2026-09-26T18:15:00.000-04:00",
+   "done": false,
+   "status": "This Week",
+   "type": "Task",
+   "meeting_type": "TPP",
+   "priority": "High",
+   "energy": "Deep",
+   "location": "",
+   "attendees": "",
+   "agenda": "",
+   "link": "",
+   "notes": "Assignment open on the TPP Student Resources Canvas site (Barb, TPP27 email). Submit by Fri 10/09. Long Thesis Proposal assignment will be posted soon. Sat block: open the Canvas assignment, note length/format/rubric, outline question, motivation, method, data.",
+   "url": "https://app.notion.com/p/TSK-TPP-Short-Thesis-Proposal-read-the-assignment-outline-3e5ea74eb77981e4afdbee130d3fe295"
   },
   {
    "name": "TSK Laundry",
@@ -866,6 +900,23 @@
    "url": "https://app.notion.com/p/TSK-Household-cleaning-3dcea74eb77981908f26fa35d46c3741"
   },
   {
+   "name": "TSK TPP Short Thesis Proposal: full rough draft",
+   "date": "2026-09-27T12:00:00.000-04:00",
+   "end": "2026-09-27T13:30:00.000-04:00",
+   "done": false,
+   "status": "This Week",
+   "type": "Task",
+   "meeting_type": "TPP",
+   "priority": "High",
+   "energy": "Deep",
+   "location": "",
+   "attendees": "",
+   "agenda": "",
+   "link": "",
+   "notes": "Assignment open on the TPP Student Resources Canvas site (Barb, TPP27 email). Submit by Fri 10/09. Long Thesis Proposal assignment will be posted soon. Sun block: complete rough draft against the outline.",
+   "url": "https://app.notion.com/p/TSK-TPP-Short-Thesis-Proposal-full-rough-draft-3e5ea74eb77981c9a985c0e83aee4a56"
+  },
+  {
    "name": "Mahjong, charcuterie and wine at Joce Wang's",
    "date": "2026-09-27T17:00:00.000-04:00",
    "end": "2026-09-27T20:00:00.000-04:00",
@@ -881,57 +932,6 @@
    "link": "",
    "notes": "Hosted by Joce Wang. Start time 1700 was given; the 1700-2000 span is an assumption, not from the invitation. No location was given.",
    "url": "https://app.notion.com/p/Mahjong-charcuterie-and-wine-at-Joce-Wang-s-3dcea74eb7798132b147db5352686e03"
-  },
-  {
-   "name": "TSK AFT T-3: taper, hydrate, confirm kit and paperwork",
-   "date": "2026-09-28T06:00:00.000-04:00",
-   "end": "2026-09-28T06:30:00.000-04:00",
-   "done": false,
-   "status": "Not Started",
-   "type": "",
-   "meeting_type": "Military",
-   "priority": "",
-   "energy": "",
-   "location": "",
-   "attendees": "",
-   "agenda": "",
-   "link": "",
-   "notes": "T-3 to the AFT on 10-01-2026. Mirrors the existing 'AFT Prep: Water + Liquid IV, sleep by 2300' pattern already in the calendar.",
-   "url": "https://app.notion.com/p/TSK-AFT-T-3-taper-hydrate-confirm-kit-and-paperwork-3dcea74eb779811fbb9fe8dea9538856"
-  },
-  {
-   "name": "TSK Cut and file the day's notes into the binder",
-   "date": "2026-09-28T22:00:00.000-04:00",
-   "end": "2026-09-28T22:15:00.000-04:00",
-   "done": false,
-   "status": "Not Started",
-   "type": "Task",
-   "meeting_type": "Admin",
-   "priority": "Medium",
-   "energy": "Shallow",
-   "location": "",
-   "attendees": "",
-   "agenda": "",
-   "link": "",
-   "notes": "Cut the day's sheets, sort by class then by the number printed in each sheet's footer, punch and file. Unsure sheets go in the front pocket for the Sunday review. Guide: 02_Classes/BINDER-FILING-GUIDE.md",
-   "url": "https://app.notion.com/p/TSK-Cut-and-file-the-day-s-notes-into-the-binder-3dbea74eb77981799f1ae8c970761e05"
-  },
-  {
-   "name": "Go Early and Network since you have to leave early for class",
-   "date": "2026-09-29T07:30:00.000-04:00",
-   "end": "2026-09-29T08:00:00.000-04:00",
-   "done": false,
-   "status": "",
-   "type": "Meeting",
-   "meeting_type": "",
-   "priority": "",
-   "energy": "",
-   "location": "",
-   "attendees": "",
-   "agenda": "",
-   "link": "",
-   "notes": "",
-   "url": "https://app.notion.com/p/Go-Early-and-Network-since-you-have-to-leave-early-for-class-d7dbee31c4864c14b2f577442c74830f"
   }
  ],
  "history": [

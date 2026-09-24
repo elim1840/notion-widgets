@@ -1,5 +1,5 @@
 {
- "generated": "2026-09-24T15:45:43-04:00",
+ "generated": "2026-09-24T18:58:00-04:00",
  "today": "2026-09-24",
  "monday": "2026-09-21",
  "days": [
@@ -554,16 +554,16 @@
      "url": "https://app.notion.com/p/Finish-PSET-5bcb8c0d3492401d9555d1eefcf44bc1"
     },
     {
-     "name": "Build up ECON Intuition Read",
-     "date": "2026-09-24T15:00:00.000-04:00",
-     "end": "2026-09-24T20:00:00.000-04:00",
+     "name": "[DUE] 14.003 Microecon & Policy: Problem Set 01: Minimum wage, research design, causal inference",
+     "date": "2026-09-24T17:30:00.000-04:00",
+     "end": "2026-09-24T18:30:00.000-04:00",
      "done": false,
      "kind": "14.003",
      "src": "class",
      "location": "",
      "type": "",
      "meeting_type": "Class",
-     "url": "https://app.notion.com/p/Build-up-ECON-Intuition-Read-5a053362514a4c8cb4ed2e6fffa2fb07"
+     "url": "https://app.notion.com/p/DUE-14-003-Microecon-Policy-Problem-Set-01-Minimum-wage-research-design-causal-inference-3daea74eb779815ea169d2b6942cb480"
     },
     {
      "name": "14.003 Office Hours \u2014 M\u00e9lyne Nzabonimpa",
@@ -578,16 +578,16 @@
      "url": "https://app.notion.com/p/14-003-Office-Hours-M-lyne-Nzabonimpa-3dcea74eb77981018808f0b2b2325d96"
     },
     {
-     "name": "Build out a ECON agent something to breakdown concepts and teach in nice format like a real teacher that i cna ask questions, hook up to hermes?",
-     "date": "2026-09-24T20:00:00.000-04:00",
-     "end": "2026-09-24T21:00:00.000-04:00",
+     "name": "Read up on ECON",
+     "date": "2026-09-24T19:00:00.000-04:00",
+     "end": "2026-09-24T22:00:00.000-04:00",
      "done": false,
      "kind": "14.003",
      "src": "class",
      "location": "",
      "type": "",
      "meeting_type": "Class",
-     "url": "https://app.notion.com/p/Build-out-a-ECON-agent-something-to-breakdown-concepts-and-teach-in-nice-format-like-a-real-teacher--1fddae11dc0745f1a5b0e815d4360c20"
+     "url": "https://app.notion.com/p/Read-up-on-ECON-1fddae11dc0745f1a5b0e815d4360c20"
     },
     {
      "name": "TSK Cut and file the day's notes into the binder",
@@ -600,18 +600,6 @@
      "type": "Task",
      "meeting_type": "Admin",
      "url": "https://app.notion.com/p/TSK-Cut-and-file-the-day-s-notes-into-the-binder-3dbea74eb77981f9bb3ee2294c450354"
-    },
-    {
-     "name": "[DUE] 14.003 Microecon & Policy: Problem Set 01: Minimum wage, research design, causal inference",
-     "date": "2026-09-24T22:00:00.000-04:00",
-     "end": "2026-09-24T23:00:00.000-04:00",
-     "done": false,
-     "kind": "14.003",
-     "src": "class",
-     "location": "",
-     "type": "",
-     "meeting_type": "Class",
-     "url": "https://app.notion.com/p/DUE-14-003-Microecon-Policy-Problem-Set-01-Minimum-wage-research-design-causal-inference-3daea74eb779815ea169d2b6942cb480"
     },
     {
      "name": "14.003 Microecon & Policy: Problem Set 01: Minimum wage, research design, causal inference",
@@ -728,16 +716,28 @@
      "url": "https://app.notion.com/p/14-003-Office-Hours-Pratik-Bhandari-3dcea74eb7798121b7e8c5c8676bdadd"
     },
     {
-     "name": "[PREP] 16.842 Systems Eng: A1 T-3: Finish it: Team Formation, Stakeholders & ConOps",
+     "name": "TSK Lunar Lander Paper: build out LaTeX (target IEEE Aerospace or ASCEND)",
      "date": "2026-09-25T19:00:00.000-04:00",
-     "end": "2026-09-25T20:30:00.000-04:00",
+     "end": "2026-09-25T20:45:00.000-04:00",
      "done": false,
-     "kind": "16.842",
+     "kind": "Research",
+     "src": "task",
+     "location": "",
+     "type": "Task",
+     "meeting_type": "Research",
+     "url": "https://app.notion.com/p/TSK-Lunar-Lander-Paper-build-out-LaTeX-target-IEEE-Aerospace-or-ASCEND-3e5ea74eb7798138a7a8dd85aa7cf902"
+    },
+    {
+     "name": "[READ] 16.990 Creative Teams: Prep: Martha McCaskey case + role-play prep (Martha or Tom)",
+     "date": "2026-09-25T20:45:00.000-04:00",
+     "end": "2026-09-25T21:45:00.000-04:00",
+     "done": false,
+     "kind": "16.990",
      "src": "class",
      "location": "",
      "type": "",
      "meeting_type": "Class",
-     "url": "https://app.notion.com/p/PREP-16-842-Systems-Eng-A1-T-3-Finish-it-Team-Formation-Stakeholders-ConOps-3dcea74eb77981b7b172c5f4c310ac66"
+     "url": "https://app.notion.com/p/READ-16-990-Creative-Teams-Prep-Martha-McCaskey-case-role-play-prep-Martha-or-Tom-3e3ea74eb77981e2a1abe67b3f4758eb"
     },
     {
      "name": "TSK Cut and file the day's notes into the binder",
@@ -750,6 +750,18 @@
      "type": "Task",
      "meeting_type": "Admin",
      "url": "https://app.notion.com/p/TSK-Cut-and-file-the-day-s-notes-into-the-binder-3dbea74eb779815fba9af22e014dd844"
+    },
+    {
+     "name": "[PREP] 16.842 Systems Eng: A1 T-3: Finish it: Team Formation, Stakeholders & ConOps",
+     "date": "2026-09-25",
+     "end": "",
+     "done": false,
+     "kind": "16.842",
+     "src": "class",
+     "location": "",
+     "type": "",
+     "meeting_type": "Class",
+     "url": "https://app.notion.com/p/PREP-16-842-Systems-Eng-A1-T-3-Finish-it-Team-Formation-Stakeholders-ConOps-3dcea74eb77981b7b172c5f4c310ac66"
     }
    ]
   },
@@ -757,6 +769,18 @@
    "date": "2026-09-26",
    "is_today": false,
    "items": [
+    {
+     "name": "Build up ECON Intuition Read",
+     "date": "2026-09-26T09:00:00.000-04:00",
+     "end": "2026-09-26T11:00:00.000-04:00",
+     "done": false,
+     "kind": "14.003",
+     "src": "class",
+     "location": "",
+     "type": "",
+     "meeting_type": "Class",
+     "url": "https://app.notion.com/p/Build-up-ECON-Intuition-Read-5a053362514a4c8cb4ed2e6fffa2fb07"
+    },
     {
      "name": "[STUDY] 14.003 Microecon & Policy: Exam 01 T-21: Closed-book retrieval: first half of the material, write what you recall before checking",
      "date": "2026-09-26T11:00:00.000-04:00",
@@ -772,7 +796,7 @@
     {
      "name": "[HW] 16.990 Creative Teams: First Hand-in Paper: Drucker Qs + Defining Events table",
      "date": "2026-09-26T14:00:00.000-04:00",
-     "end": "2026-09-26T16:00:00.000-04:00",
+     "end": "2026-09-26T15:00:00.000-04:00",
      "done": false,
      "kind": "16.990",
      "src": "class",
@@ -780,6 +804,54 @@
      "type": "",
      "meeting_type": "Class",
      "url": "https://app.notion.com/p/HW-16-990-Creative-Teams-First-Hand-in-Paper-Drucker-Qs-Defining-Events-table-3e4ea74eb77981d3909cd5ffe48615bc"
+    },
+    {
+     "name": "TSK TPP Short Thesis Proposal: read the assignment + outline",
+     "date": "2026-09-26T16:15:00.000-04:00",
+     "end": "2026-09-26T18:15:00.000-04:00",
+     "done": false,
+     "kind": "TPP",
+     "src": "task",
+     "location": "",
+     "type": "Task",
+     "meeting_type": "TPP",
+     "url": "https://app.notion.com/p/TSK-TPP-Short-Thesis-Proposal-read-the-assignment-outline-3e5ea74eb77981e4afdbee130d3fe295"
+    },
+    {
+     "name": "[READ] IDS.412 Tech & Policy: Prep: Lecture 06 pt1: WIPO What is IP + CORE Unit 21 Innovation",
+     "date": "2026-09-26T19:30:00.000-04:00",
+     "end": "2026-09-26T20:40:00.000-04:00",
+     "done": false,
+     "kind": "IDS.412",
+     "src": "class",
+     "location": "",
+     "type": "",
+     "meeting_type": "Class",
+     "url": "https://app.notion.com/p/READ-IDS-412-Tech-Policy-Prep-Lecture-06-pt1-WIPO-What-is-IP-CORE-Unit-21-Innovation-3e5ea74eb7798103a3d9daac5e8d671e"
+    },
+    {
+     "name": "[READ] IDS.412 Tech & Policy: Prep: Lecture 06 pt2: Kinsella + Heller & Eisenberg + Mildenberger",
+     "date": "2026-09-26T20:40:00.000-04:00",
+     "end": "2026-09-26T21:35:00.000-04:00",
+     "done": false,
+     "kind": "IDS.412",
+     "src": "class",
+     "location": "",
+     "type": "",
+     "meeting_type": "Class",
+     "url": "https://app.notion.com/p/READ-IDS-412-Tech-Policy-Prep-Lecture-06-pt2-Kinsella-Heller-Eisenberg-Mildenberger-3e5ea74eb77981a78a58d054d06e0067"
+    },
+    {
+     "name": "[READ] 14.003 Microecon & Policy: Prep: Lecture 06: Finkelstein, Hendren & Shepard (2019)",
+     "date": "2026-09-26T21:35:00.000-04:00",
+     "end": "2026-09-26T21:55:00.000-04:00",
+     "done": false,
+     "kind": "14.003",
+     "src": "class",
+     "location": "",
+     "type": "",
+     "meeting_type": "Class",
+     "url": "https://app.notion.com/p/READ-14-003-Microecon-Policy-Prep-Lecture-06-Finkelstein-Hendren-Shepard-2019-3e5ea74eb77981dc9baadf0f7ad21136"
     },
     {
      "name": "TSK Review NSSA 2026-2027 Academic Scholarship: check eligibility and deadline",
@@ -848,6 +920,18 @@
      "url": "https://app.notion.com/p/HW-16-842-Systems-Eng-Lecture-03-pre-class-Complete-System-Thinking-activities-3e3ea74eb779818cb6cace2456539308"
     },
     {
+     "name": "TSK TPP Short Thesis Proposal: full rough draft",
+     "date": "2026-09-27T12:00:00.000-04:00",
+     "end": "2026-09-27T13:30:00.000-04:00",
+     "done": false,
+     "kind": "TPP",
+     "src": "task",
+     "location": "",
+     "type": "Task",
+     "meeting_type": "TPP",
+     "url": "https://app.notion.com/p/TSK-TPP-Short-Thesis-Proposal-full-rough-draft-3e5ea74eb77981c9a985c0e83aee4a56"
+    },
+    {
      "name": "Mahjong, charcuterie and wine at Joce Wang's",
      "date": "2026-09-27T17:00:00.000-04:00",
      "end": "2026-09-27T20:00:00.000-04:00",
@@ -858,21 +942,9 @@
      "type": "",
      "meeting_type": "Personal",
      "url": "https://app.notion.com/p/Mahjong-charcuterie-and-wine-at-Joce-Wang-s-3dcea74eb7798132b147db5352686e03"
-    },
-    {
-     "name": "[READ] 16.990 Creative Teams: Prep: Martha McCaskey case + role-play prep (Martha or Tom)",
-     "date": "2026-09-27T20:30:00.000-04:00",
-     "end": "2026-09-27T22:00:00.000-04:00",
-     "done": false,
-     "kind": "16.990",
-     "src": "class",
-     "location": "",
-     "type": "",
-     "meeting_type": "Class",
-     "url": "https://app.notion.com/p/READ-16-990-Creative-Teams-Prep-Martha-McCaskey-case-role-play-prep-Martha-or-Tom-3e3ea74eb77981e2a1abe67b3f4758eb"
     }
    ]
   }
  ],
- "total": 69
+ "total": 75
 }

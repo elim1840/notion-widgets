@@ -1,19 +1,49 @@
 {
  "classes": [
   {
-   "name": "Build out a ECON agent something to breakdown concepts and teach in nice format like a real teacher that i cna ask questions, hook up to hermes?",
+   "name": "[READ] 14.003 Microecon & Policy: Prep: Lecture 06: Finkelstein, Hendren & Shepard (2019)",
    "code": "14.003",
-   "date": "2026-09-24T20:00:00.000-04:00",
+   "date": "2026-09-26T21:35:00.000-04:00",
    "due": "",
    "status": "",
    "type": "",
    "room": "",
-   "url": "https://app.notion.com/p/Build-out-a-ECON-agent-something-to-breakdown-concepts-and-teach-in-nice-format-like-a-real-teacher--1fddae11dc0745f1a5b0e815d4360c20"
+   "url": "https://app.notion.com/p/READ-14-003-Microecon-Policy-Prep-Lecture-06-Finkelstein-Hendren-Shepard-2019-3e5ea74eb77981dc9baadf0f7ad21136"
+  },
+  {
+   "name": "[READ] IDS.412 Tech & Policy: Prep: Lecture 06 pt2: Kinsella + Heller & Eisenberg + Mildenberger",
+   "code": "IDS.412",
+   "date": "2026-09-26T20:40:00.000-04:00",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "",
+   "url": "https://app.notion.com/p/READ-IDS-412-Tech-Policy-Prep-Lecture-06-pt2-Kinsella-Heller-Eisenberg-Mildenberger-3e5ea74eb77981a78a58d054d06e0067"
+  },
+  {
+   "name": "[READ] IDS.412 Tech & Policy: Prep: Lecture 06 pt1: WIPO What is IP + CORE Unit 21 Innovation",
+   "code": "IDS.412",
+   "date": "2026-09-26T19:30:00.000-04:00",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "",
+   "url": "https://app.notion.com/p/READ-IDS-412-Tech-Policy-Prep-Lecture-06-pt1-WIPO-What-is-IP-CORE-Unit-21-Innovation-3e5ea74eb7798103a3d9daac5e8d671e"
+  },
+  {
+   "name": "Read up on ECON",
+   "code": "14.003",
+   "date": "2026-09-24T19:00:00.000-04:00",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "",
+   "url": "https://app.notion.com/p/Read-up-on-ECON-1fddae11dc0745f1a5b0e815d4360c20"
   },
   {
    "name": "Build up ECON Intuition Read",
    "code": "14.003",
-   "date": "2026-09-24T15:00:00.000-04:00",
+   "date": "2026-09-26T09:00:00.000-04:00",
    "due": "",
    "status": "",
    "type": "",
@@ -193,7 +223,7 @@
   {
    "name": "[READ] 16.990 Creative Teams: Prep: Martha McCaskey case + role-play prep (Martha or Tom)",
    "code": "16.990",
-   "date": "2026-09-27T20:30:00.000-04:00",
+   "date": "2026-09-25T20:45:00.000-04:00",
    "due": "",
    "status": "",
    "type": "",
@@ -3483,7 +3513,7 @@
   {
    "name": "[PREP] 16.842 Systems Eng: A1 T-3: Finish it: Team Formation, Stakeholders & ConOps",
    "code": "16.842",
-   "date": "2026-09-25T19:00:00.000-04:00",
+   "date": "2026-09-25",
    "due": "",
    "status": "Not started",
    "type": "",
@@ -3513,7 +3543,7 @@
   {
    "name": "[DUE] 14.003 Microecon & Policy: Problem Set 01: Minimum wage, research design, causal inference",
    "code": "14.003",
-   "date": "2026-09-24T22:00:00.000-04:00",
+   "date": "2026-09-24T17:30:00.000-04:00",
    "due": "",
    "status": "Not started",
    "type": "",
