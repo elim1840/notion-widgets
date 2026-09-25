@@ -223,7 +223,7 @@
   {
    "name": "[READ] 16.990 Creative Teams: Prep: Martha McCaskey case + role-play prep (Martha or Tom)",
    "code": "16.990",
-   "date": "2026-09-25T12:00:00.000-04:00",
+   "date": "2026-09-25T17:00:00.000-04:00",
    "due": "",
    "status": "",
    "type": "",
@@ -3543,7 +3543,7 @@
   {
    "name": "[DUE] 14.003 Microecon & Policy: Problem Set 01: Minimum wage, research design, causal inference",
    "code": "14.003",
-   "date": "2026-09-24T17:30:00.000-04:00",
+   "date": "2026-09-24",
    "due": "",
    "status": "Not started",
    "type": "",
@@ -3613,7 +3613,7 @@
   {
    "name": "14.003 Microecon & Policy: Problem Set 01: Minimum wage, research design, causal inference",
    "code": "14.003",
-   "date": "2026-09-24T21:00:00.000-04:00",
+   "date": "2026-09-24",
    "due": "",
    "status": "",
    "type": "",

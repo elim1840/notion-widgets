@@ -1,6 +1,6 @@
 {
- "generated": "2026-09-24T21:14:57-04:00",
- "today": "2026-09-24",
+ "generated": "2026-09-25T02:10:57-04:00",
+ "today": "2026-09-25",
  "monday": "2026-09-21",
  "days": [
   {
@@ -503,7 +503,7 @@
   },
   {
    "date": "2026-09-24",
-   "is_today": true,
+   "is_today": false,
    "items": [
     {
      "name": "TSK AFT T-7: final prep session, confirm time and location",
@@ -554,18 +554,6 @@
      "url": "https://app.notion.com/p/Finish-PSET-5bcb8c0d3492401d9555d1eefcf44bc1"
     },
     {
-     "name": "[DUE] 14.003 Microecon & Policy: Problem Set 01: Minimum wage, research design, causal inference",
-     "date": "2026-09-24T17:30:00.000-04:00",
-     "end": "2026-09-24T18:30:00.000-04:00",
-     "done": false,
-     "kind": "14.003",
-     "src": "class",
-     "location": "",
-     "type": "",
-     "meeting_type": "Class",
-     "url": "https://app.notion.com/p/DUE-14-003-Microecon-Policy-Problem-Set-01-Minimum-wage-research-design-causal-inference-3daea74eb779815ea169d2b6942cb480"
-    },
-    {
      "name": "14.003 Office Hours \u2014 M\u00e9lyne Nzabonimpa",
      "date": "2026-09-24T18:00:00.000+00:00",
      "end": "2026-09-24T19:30:00.000+00:00",
@@ -576,18 +564,6 @@
      "type": "",
      "meeting_type": "Class",
      "url": "https://app.notion.com/p/14-003-Office-Hours-M-lyne-Nzabonimpa-3dcea74eb77981018808f0b2b2325d96"
-    },
-    {
-     "name": "14.003 Microecon & Policy: Problem Set 01: Minimum wage, research design, causal inference",
-     "date": "2026-09-24T21:00:00.000-04:00",
-     "end": "2026-09-24T21:30:00.000-04:00",
-     "done": false,
-     "kind": "14.003",
-     "src": "class",
-     "location": "Not applicable, Gradescope submission. Room not published in Canvas",
-     "type": "",
-     "meeting_type": "Class",
-     "url": "https://app.notion.com/p/14-003-Microecon-Policy-Problem-Set-01-Minimum-wage-research-design-causal-inference-3d6ea74eb7798173a68dddc9454870f3"
     },
     {
      "name": "TSK Cut and file the day's notes into the binder",
@@ -602,6 +578,18 @@
      "url": "https://app.notion.com/p/TSK-Cut-and-file-the-day-s-notes-into-the-binder-3dbea74eb77981f9bb3ee2294c450354"
     },
     {
+     "name": "[DUE] 14.003 Microecon & Policy: Problem Set 01: Minimum wage, research design, causal inference",
+     "date": "2026-09-24",
+     "end": "",
+     "done": false,
+     "kind": "14.003",
+     "src": "class",
+     "location": "",
+     "type": "",
+     "meeting_type": "Class",
+     "url": "https://app.notion.com/p/DUE-14-003-Microecon-Policy-Problem-Set-01-Minimum-wage-research-design-causal-inference-3daea74eb779815ea169d2b6942cb480"
+    },
+    {
      "name": "16.S896 RASCAL: Milestone: Team and Lead Assignments Finalized",
      "date": "2026-09-24",
      "end": "",
@@ -612,12 +600,24 @@
      "type": "",
      "meeting_type": "Class",
      "url": "https://app.notion.com/p/16-S896-RASCAL-Milestone-Team-and-Lead-Assignments-Finalized-3d6ea74eb77981ae87c3d7b04452b809"
+    },
+    {
+     "name": "14.003 Microecon & Policy: Problem Set 01: Minimum wage, research design, causal inference",
+     "date": "2026-09-24",
+     "end": "",
+     "done": false,
+     "kind": "14.003",
+     "src": "class",
+     "location": "Not applicable, Gradescope submission. Room not published in Canvas",
+     "type": "",
+     "meeting_type": "Class",
+     "url": "https://app.notion.com/p/14-003-Microecon-Policy-Problem-Set-01-Minimum-wage-research-design-causal-inference-3d6ea74eb7798173a68dddc9454870f3"
     }
    ]
   },
   {
    "date": "2026-09-25",
-   "is_today": false,
+   "is_today": true,
    "items": [
     {
      "name": "14.003 Microecon & Policy: Recitation Week 3",
@@ -656,18 +656,6 @@
      "url": "https://app.notion.com/p/Claim-free-Neuro-Gum-pack-at-Costco-or-Walmart-3e1ea74eb7798103844ad365bc4175b7"
     },
     {
-     "name": "[READ] 16.990 Creative Teams: Prep: Martha McCaskey case + role-play prep (Martha or Tom)",
-     "date": "2026-09-25T12:00:00.000-04:00",
-     "end": "2026-09-25T13:00:00.000-04:00",
-     "done": false,
-     "kind": "16.990",
-     "src": "class",
-     "location": "",
-     "type": "",
-     "meeting_type": "Class",
-     "url": "https://app.notion.com/p/READ-16-990-Creative-Teams-Prep-Martha-McCaskey-case-role-play-prep-Martha-or-Tom-3e3ea74eb77981e2a1abe67b3f4758eb"
-    },
-    {
      "name": "16.S896 RASCAL: Session 03: Team Kickoffs and Framework 1: Lordos Innovation Framework",
      "date": "2026-09-25T15:00:00.000-04:00",
      "end": "2026-09-25T17:00:00.000-04:00",
@@ -678,6 +666,18 @@
      "type": "Lecture",
      "meeting_type": "Class",
      "url": "https://app.notion.com/p/16-S896-RASCAL-Session-03-Team-Kickoffs-and-Framework-1-Lordos-Innovation-Framework-3d6ea74eb779817d8833fe8ce5180040"
+    },
+    {
+     "name": "[READ] 16.990 Creative Teams: Prep: Martha McCaskey case + role-play prep (Martha or Tom)",
+     "date": "2026-09-25T17:00:00.000-04:00",
+     "end": "2026-09-25T19:00:00.000-04:00",
+     "done": false,
+     "kind": "16.990",
+     "src": "class",
+     "location": "",
+     "type": "",
+     "meeting_type": "Class",
+     "url": "https://app.notion.com/p/READ-16-990-Creative-Teams-Prep-Martha-McCaskey-case-role-play-prep-Martha-or-Tom-3e3ea74eb77981e2a1abe67b3f4758eb"
     },
     {
      "name": "16.S896 Office Hours \u2014 George Lordos",
@@ -921,8 +921,8 @@
     },
     {
      "name": "TSK TPP Short Thesis Proposal: full rough draft",
-     "date": "2026-09-27T12:00:00.000-04:00",
-     "end": "2026-09-27T13:30:00.000-04:00",
+     "date": "2026-09-27T11:00:00.000-04:00",
+     "end": "2026-09-27T13:00:00.000-04:00",
      "done": false,
      "kind": "TPP",
      "src": "task",
