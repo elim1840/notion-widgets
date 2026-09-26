@@ -1,12 +1,12 @@
 {
- "generated": "2026-09-26T12:22:30-04:00",
+ "generated": "2026-09-26T15:17:29-04:00",
  "today": "2026-09-26",
  "counts": {
   "total": 243,
-  "open": 222,
-  "done": 21,
+  "open": 221,
+  "done": 22,
   "today_total": 2,
-  "today_done": 0,
+  "today_done": 1,
   "overdue": 83,
   "past_meetings": 47
  },
@@ -15,7 +15,7 @@
    "name": "TSK Review NSSA 2026-2027 Academic Scholarship: check eligibility and deadline",
    "date": "2026-09-26",
    "end": "",
-   "done": false,
+   "done": true,
    "status": "Not Started",
    "type": "Opportunity",
    "meeting_type": "Admin",
@@ -730,23 +730,6 @@
  ],
  "upcoming": [
   {
-   "name": "TSK Review NSSA 2026-2027 Academic Scholarship: check eligibility and deadline",
-   "date": "2026-09-26",
-   "end": "",
-   "done": false,
-   "status": "Not Started",
-   "type": "Opportunity",
-   "meeting_type": "Admin",
-   "priority": "",
-   "energy": "",
-   "location": "",
-   "attendees": "",
-   "agenda": "",
-   "link": "",
-   "notes": "National Security Space Association academic scholarship, 2026-2027 cycle, applications open. Worth checking against: dual MS TPP and AeroAstro at MIT, Draper Scholar, GEO satellite maneuver detection and SDA research, prior US Space Command work on SAR and ground sensors, Army ADA officer. Decide in this order: (1) does a current Draper Scholar qualify, or does existing funding disqualify, (2) is it open to graduate students or undergrad only, (3) what is the actual deadline. If it is a fit, the career database at ~/Documents/Resume and CV/career-database/ already has the material.",
-   "url": "https://app.notion.com/p/TSK-Review-NSSA-2026-2027-Academic-Scholarship-check-eligibility-and-deadline-3ddea74eb77981f0bed9e2137f5e5e39"
-  },
-  {
    "name": "TSK TPP Short Thesis Proposal: read the assignment + outline",
    "date": "2026-09-26T16:15:00.000-04:00",
    "end": "2026-09-26T18:15:00.000-04:00",
@@ -932,6 +915,23 @@
    "link": "",
    "notes": "",
    "url": "https://app.notion.com/p/TSK-Decide-February-2027-or-June-2027-degree-3d5ea74eb77981bdbe65de922228e5a3"
+  },
+  {
+   "name": "TSK SERG Meeting",
+   "date": "2026-09-29T17:00:00.000-04:00",
+   "end": "2026-09-29T18:00:00.000-04:00",
+   "done": false,
+   "status": "Not Started",
+   "type": "Task",
+   "meeting_type": "Research",
+   "priority": "",
+   "energy": "",
+   "location": "33-206 / Zoom: https://mit.zoom.us/j/6850762634",
+   "attendees": "",
+   "agenda": "",
+   "link": "",
+   "notes": "",
+   "url": "https://app.notion.com/p/TSK-SERG-Meeting-3d0ea74eb7798153aa03ec5ade9fa143"
   }
  ],
  "history": [
@@ -1003,7 +1003,7 @@
   {
    "date": "2026-09-26",
    "total": 2,
-   "done": 0
+   "done": 1
   }
  ]
 }
