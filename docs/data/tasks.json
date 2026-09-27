@@ -1,49 +1,66 @@
 {
- "generated": "2026-09-26T20:34:41-04:00",
- "today": "2026-09-26",
+ "generated": "2026-09-27T01:46:09-04:00",
+ "today": "2026-09-27",
  "counts": {
   "total": 243,
   "open": 221,
   "done": 22,
-  "today_total": 2,
-  "today_done": 1,
-  "overdue": 83,
+  "today_total": 3,
+  "today_done": 0,
+  "overdue": 84,
   "past_meetings": 47
  },
  "today_items": [
   {
-   "name": "TSK Review NSSA 2026-2027 Academic Scholarship: check eligibility and deadline",
-   "date": "2026-09-26",
-   "end": "",
-   "done": true,
+   "name": "TSK Laundry",
+   "date": "2026-09-27T08:00:00.000-04:00",
+   "end": "2026-09-27T08:15:00.000-04:00",
+   "done": false,
    "status": "Not Started",
-   "type": "Opportunity",
-   "meeting_type": "Admin",
+   "type": "",
+   "meeting_type": "Personal",
    "priority": "",
    "energy": "",
    "location": "",
    "attendees": "",
    "agenda": "",
    "link": "",
-   "notes": "National Security Space Association academic scholarship, 2026-2027 cycle, applications open. Worth checking against: dual MS TPP and AeroAstro at MIT, Draper Scholar, GEO satellite maneuver detection and SDA research, prior US Space Command work on SAR and ground sensors, Army ADA officer. Decide in this order: (1) does a current Draper Scholar qualify, or does existing funding disqualify, (2) is it open to graduate students or undergrad only, (3) what is the actual deadline. If it is a fit, the career database at ~/Documents/Resume and CV/career-database/ already has the material.",
-   "url": "https://app.notion.com/p/TSK-Review-NSSA-2026-2027-Academic-Scholarship-check-eligibility-and-deadline-3ddea74eb77981f0bed9e2137f5e5e39"
+   "notes": "",
+   "url": "https://app.notion.com/p/TSK-Laundry-3dcea74eb77981df9d89e016f2f247ae"
   },
   {
-   "name": "TSK TPP Short Thesis Proposal: read the assignment + outline",
-   "date": "2026-09-26T16:15:00.000-04:00",
-   "end": "2026-09-26T18:15:00.000-04:00",
+   "name": "TSK Household cleaning",
+   "date": "2026-09-27T08:15:00.000-04:00",
+   "end": "2026-09-27T08:45:00.000-04:00",
    "done": false,
-   "status": "This Week",
-   "type": "Task",
-   "meeting_type": "TPP",
-   "priority": "High",
-   "energy": "Deep",
+   "status": "Not Started",
+   "type": "",
+   "meeting_type": "Personal",
+   "priority": "",
+   "energy": "",
    "location": "",
    "attendees": "",
    "agenda": "",
    "link": "",
-   "notes": "Assignment open on the TPP Student Resources Canvas site (Barb, TPP27 email). Submit by Fri 10/09. Long Thesis Proposal assignment will be posted soon. Sat block: open the Canvas assignment, note length/format/rubric, outline question, motivation, method, data.",
-   "url": "https://app.notion.com/p/TSK-TPP-Short-Thesis-Proposal-read-the-assignment-outline-3e5ea74eb77981e4afdbee130d3fe295"
+   "notes": "",
+   "url": "https://app.notion.com/p/TSK-Household-cleaning-3dcea74eb77981908f26fa35d46c3741"
+  },
+  {
+   "name": "Mahjong, charcuterie and wine at Joce Wang's",
+   "date": "2026-09-27T17:00:00.000-04:00",
+   "end": "2026-09-27T20:00:00.000-04:00",
+   "done": false,
+   "status": "Not Started",
+   "type": "",
+   "meeting_type": "Personal",
+   "priority": "",
+   "energy": "",
+   "location": "",
+   "attendees": "",
+   "agenda": "",
+   "link": "",
+   "notes": "Hosted by Joce Wang. Start time 1700 was given; the 1700-2000 span is an assumption, not from the invitation. No location was given.",
+   "url": "https://app.notion.com/p/Mahjong-charcuterie-and-wine-at-Joce-Wang-s-3dcea74eb7798132b147db5352686e03"
   }
  ],
  "overdue_items": [
@@ -730,23 +747,6 @@
  ],
  "upcoming": [
   {
-   "name": "TSK TPP Short Thesis Proposal: read the assignment + outline",
-   "date": "2026-09-26T16:15:00.000-04:00",
-   "end": "2026-09-26T18:15:00.000-04:00",
-   "done": false,
-   "status": "This Week",
-   "type": "Task",
-   "meeting_type": "TPP",
-   "priority": "High",
-   "energy": "Deep",
-   "location": "",
-   "attendees": "",
-   "agenda": "",
-   "link": "",
-   "notes": "Assignment open on the TPP Student Resources Canvas site (Barb, TPP27 email). Submit by Fri 10/09. Long Thesis Proposal assignment will be posted soon. Sat block: open the Canvas assignment, note length/format/rubric, outline question, motivation, method, data.",
-   "url": "https://app.notion.com/p/TSK-TPP-Short-Thesis-Proposal-read-the-assignment-outline-3e5ea74eb77981e4afdbee130d3fe295"
-  },
-  {
    "name": "TSK Laundry",
    "date": "2026-09-27T08:00:00.000-04:00",
    "end": "2026-09-27T08:15:00.000-04:00",
@@ -932,14 +932,26 @@
    "link": "",
    "notes": "Cut the day's sheets, sort by class then by the number printed in each sheet's footer, punch and file. Unsure sheets go in the front pocket for the Sunday review. Guide: 02_Classes/BINDER-FILING-GUIDE.md",
    "url": "https://app.notion.com/p/TSK-Cut-and-file-the-day-s-notes-into-the-binder-3dbea74eb77981359fd7e110bd344109"
+  },
+  {
+   "name": "TSK Complete GitHub + Slides - AI/Thesis Org Tool Walkthrough (for ESL Oct 20)",
+   "date": "2026-09-30",
+   "end": "",
+   "done": false,
+   "status": "Not Started",
+   "type": "Task",
+   "meeting_type": "",
+   "priority": "",
+   "energy": "",
+   "location": "",
+   "attendees": "",
+   "agenda": "",
+   "link": "",
+   "notes": "Prep for ESL Monthly Meeting Oct 20 presentation - Yohan presenting AI and thesis organization tool walkthrough. Due end of September.",
+   "url": "https://app.notion.com/p/TSK-Complete-GitHub-Slides-AI-Thesis-Org-Tool-Walkthrough-for-ESL-Oct-20-3d0ea74eb77981b8b1a5dc98471caa90"
   }
  ],
  "history": [
-  {
-   "date": "2026-09-13",
-   "total": 5,
-   "done": 2
-  },
   {
    "date": "2026-09-14",
    "total": 7,
@@ -1004,6 +1016,11 @@
    "date": "2026-09-26",
    "total": 2,
    "done": 1
+  },
+  {
+   "date": "2026-09-27",
+   "total": 3,
+   "done": 0
   }
  ]
 }
