@@ -1,5 +1,5 @@
 {
- "generated": "2026-09-27T07:16:05-04:00",
+ "generated": "2026-09-27T11:43:36-04:00",
  "today": "2026-09-27",
  "monday": "2026-09-21",
  "days": [
@@ -848,30 +848,6 @@
      "url": "https://app.notion.com/p/TSK-Household-cleaning-3dcea74eb77981908f26fa35d46c3741"
     },
     {
-     "name": "[READ] 14.003 Microecon & Policy: Prep: Lecture 06: Finkelstein, Hendren & Shepard (2019)",
-     "date": "2026-09-27T09:00:00.000-04:00",
-     "end": "2026-09-27T11:00:00.000-04:00",
-     "done": false,
-     "kind": "14.003",
-     "src": "class",
-     "location": "",
-     "type": "",
-     "meeting_type": "Class",
-     "url": "https://app.notion.com/p/READ-14-003-Microecon-Policy-Prep-Lecture-06-Finkelstein-Hendren-Shepard-2019-3e5ea74eb77981dc9baadf0f7ad21136"
-    },
-    {
-     "name": "[HW] 16.842 Systems Eng: Lecture 03 pre-class: Complete System Thinking activities",
-     "date": "2026-09-27T10:00:00.000-04:00",
-     "end": "2026-09-27T11:00:00.000-04:00",
-     "done": false,
-     "kind": "16.842",
-     "src": "class",
-     "location": "",
-     "type": "",
-     "meeting_type": "Class",
-     "url": "https://app.notion.com/p/HW-16-842-Systems-Eng-Lecture-03-pre-class-Complete-System-Thinking-activities-3e3ea74eb779818cb6cace2456539308"
-    },
-    {
      "name": "[HW] 16.990 Creative Teams: First Hand-in Paper: Drucker Qs + Defining Events table",
      "date": "2026-09-27T11:00:00.000-04:00",
      "end": "2026-09-27T12:00:00.000-04:00",
@@ -896,6 +872,18 @@
      "url": "https://app.notion.com/p/READ-IDS-412-Tech-Policy-Prep-Lecture-06-pt1-WIPO-What-is-IP-CORE-Unit-21-Innovation-3e5ea74eb7798103a3d9daac5e8d671e"
     },
     {
+     "name": "[HW] 16.842 Systems Eng: Lecture 03 pre-class: Complete System Thinking activities",
+     "date": "2026-09-27T13:00:00.000-04:00",
+     "end": "2026-09-27T14:00:00.000-04:00",
+     "done": false,
+     "kind": "16.842",
+     "src": "class",
+     "location": "",
+     "type": "",
+     "meeting_type": "Class",
+     "url": "https://app.notion.com/p/HW-16-842-Systems-Eng-Lecture-03-pre-class-Complete-System-Thinking-activities-3e3ea74eb779818cb6cace2456539308"
+    },
+    {
      "name": "[READ] IDS.412 Tech & Policy: Prep: Lecture 06 pt2: Kinsella + Heller & Eisenberg + Mildenberger",
      "date": "2026-09-27T15:30:00.000-04:00",
      "end": "2026-09-27T16:25:00.000-04:00",
@@ -918,6 +906,18 @@
      "type": "",
      "meeting_type": "Personal",
      "url": "https://app.notion.com/p/Mahjong-charcuterie-and-wine-at-Joce-Wang-s-3dcea74eb7798132b147db5352686e03"
+    },
+    {
+     "name": "[READ] 14.003 Microecon & Policy: Prep: Lecture 06: Finkelstein, Hendren & Shepard (2019)",
+     "date": "2026-09-27T21:00:00.000-04:00",
+     "end": "2026-09-27T23:00:00.000-04:00",
+     "done": false,
+     "kind": "14.003",
+     "src": "class",
+     "location": "",
+     "type": "",
+     "meeting_type": "Class",
+     "url": "https://app.notion.com/p/READ-14-003-Microecon-Policy-Prep-Lecture-06-Finkelstein-Hendren-Shepard-2019-3e5ea74eb77981dc9baadf0f7ad21136"
     }
    ]
   }
