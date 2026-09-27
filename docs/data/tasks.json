@@ -1,5 +1,5 @@
 {
- "generated": "2026-09-26T18:03:13-04:00",
+ "generated": "2026-09-26T20:34:41-04:00",
  "today": "2026-09-26",
  "counts": {
   "total": 243,
@@ -781,23 +781,6 @@
    "url": "https://app.notion.com/p/TSK-Household-cleaning-3dcea74eb77981908f26fa35d46c3741"
   },
   {
-   "name": "TSK TPP Short Thesis Proposal: full rough draft",
-   "date": "2026-09-27T11:00:00.000-04:00",
-   "end": "2026-09-27T13:00:00.000-04:00",
-   "done": false,
-   "status": "This Week",
-   "type": "Task",
-   "meeting_type": "TPP",
-   "priority": "High",
-   "energy": "Deep",
-   "location": "",
-   "attendees": "",
-   "agenda": "",
-   "link": "",
-   "notes": "Assignment open on the TPP Student Resources Canvas site (Barb, TPP27 email). Submit by Fri 10/09. Long Thesis Proposal assignment will be posted soon. Sun block: complete rough draft against the outline.",
-   "url": "https://app.notion.com/p/TSK-TPP-Short-Thesis-Proposal-full-rough-draft-3e5ea74eb77981c9a985c0e83aee4a56"
-  },
-  {
    "name": "Mahjong, charcuterie and wine at Joce Wang's",
    "date": "2026-09-27T17:00:00.000-04:00",
    "end": "2026-09-27T20:00:00.000-04:00",
@@ -932,6 +915,23 @@
    "link": "",
    "notes": "",
    "url": "https://app.notion.com/p/TSK-SERG-Meeting-3d0ea74eb7798153aa03ec5ade9fa143"
+  },
+  {
+   "name": "TSK Cut and file the day's notes into the binder",
+   "date": "2026-09-29T22:00:00.000-04:00",
+   "end": "2026-09-29T22:15:00.000-04:00",
+   "done": false,
+   "status": "Not Started",
+   "type": "Task",
+   "meeting_type": "Admin",
+   "priority": "Medium",
+   "energy": "Shallow",
+   "location": "",
+   "attendees": "",
+   "agenda": "",
+   "link": "",
+   "notes": "Cut the day's sheets, sort by class then by the number printed in each sheet's footer, punch and file. Unsure sheets go in the front pocket for the Sunday review. Guide: 02_Classes/BINDER-FILING-GUIDE.md",
+   "url": "https://app.notion.com/p/TSK-Cut-and-file-the-day-s-notes-into-the-binder-3dbea74eb77981359fd7e110bd344109"
   }
  ],
  "history": [

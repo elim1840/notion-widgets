@@ -1,5 +1,5 @@
 {
- "generated": "2026-09-26T18:03:13-04:00",
+ "generated": "2026-09-26T20:34:41-04:00",
  "today": "2026-09-26",
  "monday": "2026-09-21",
  "days": [
@@ -794,18 +794,6 @@
      "url": "https://app.notion.com/p/STUDY-14-003-Microecon-Policy-Exam-01-T-21-Closed-book-retrieval-first-half-of-the-material-w-3daea74eb77981bcb1f6e2a8255008d5"
     },
     {
-     "name": "[HW] 16.990 Creative Teams: First Hand-in Paper: Drucker Qs + Defining Events table",
-     "date": "2026-09-26T14:00:00.000-04:00",
-     "end": "2026-09-26T15:00:00.000-04:00",
-     "done": false,
-     "kind": "16.990",
-     "src": "class",
-     "location": "",
-     "type": "",
-     "meeting_type": "Class",
-     "url": "https://app.notion.com/p/HW-16-990-Creative-Teams-First-Hand-in-Paper-Drucker-Qs-Defining-Events-table-3e4ea74eb77981d3909cd5ffe48615bc"
-    },
-    {
      "name": "TSK TPP Short Thesis Proposal: read the assignment + outline",
      "date": "2026-09-26T16:15:00.000-04:00",
      "end": "2026-09-26T18:15:00.000-04:00",
@@ -816,42 +804,6 @@
      "type": "Task",
      "meeting_type": "TPP",
      "url": "https://app.notion.com/p/TSK-TPP-Short-Thesis-Proposal-read-the-assignment-outline-3e5ea74eb77981e4afdbee130d3fe295"
-    },
-    {
-     "name": "[READ] IDS.412 Tech & Policy: Prep: Lecture 06 pt1: WIPO What is IP + CORE Unit 21 Innovation",
-     "date": "2026-09-26T19:30:00.000-04:00",
-     "end": "2026-09-26T20:40:00.000-04:00",
-     "done": false,
-     "kind": "IDS.412",
-     "src": "class",
-     "location": "",
-     "type": "",
-     "meeting_type": "Class",
-     "url": "https://app.notion.com/p/READ-IDS-412-Tech-Policy-Prep-Lecture-06-pt1-WIPO-What-is-IP-CORE-Unit-21-Innovation-3e5ea74eb7798103a3d9daac5e8d671e"
-    },
-    {
-     "name": "[READ] IDS.412 Tech & Policy: Prep: Lecture 06 pt2: Kinsella + Heller & Eisenberg + Mildenberger",
-     "date": "2026-09-26T20:40:00.000-04:00",
-     "end": "2026-09-26T21:35:00.000-04:00",
-     "done": false,
-     "kind": "IDS.412",
-     "src": "class",
-     "location": "",
-     "type": "",
-     "meeting_type": "Class",
-     "url": "https://app.notion.com/p/READ-IDS-412-Tech-Policy-Prep-Lecture-06-pt2-Kinsella-Heller-Eisenberg-Mildenberger-3e5ea74eb77981a78a58d054d06e0067"
-    },
-    {
-     "name": "[READ] 14.003 Microecon & Policy: Prep: Lecture 06: Finkelstein, Hendren & Shepard (2019)",
-     "date": "2026-09-26T21:35:00.000-04:00",
-     "end": "2026-09-26T21:55:00.000-04:00",
-     "done": false,
-     "kind": "14.003",
-     "src": "class",
-     "location": "",
-     "type": "",
-     "meeting_type": "Class",
-     "url": "https://app.notion.com/p/READ-14-003-Microecon-Policy-Prep-Lecture-06-Finkelstein-Hendren-Shepard-2019-3e5ea74eb77981dc9baadf0f7ad21136"
     },
     {
      "name": "TSK Review NSSA 2026-2027 Academic Scholarship: check eligibility and deadline",
@@ -896,16 +848,16 @@
      "url": "https://app.notion.com/p/TSK-Household-cleaning-3dcea74eb77981908f26fa35d46c3741"
     },
     {
-     "name": "[HW] 16.842 Systems Eng: Lecture 03 pre-class: Watch System Thinking videos",
+     "name": "[READ] 14.003 Microecon & Policy: Prep: Lecture 06: Finkelstein, Hendren & Shepard (2019)",
      "date": "2026-09-27T09:00:00.000-04:00",
-     "end": "2026-09-27T10:00:00.000-04:00",
+     "end": "2026-09-27T11:00:00.000-04:00",
      "done": false,
-     "kind": "16.842",
+     "kind": "14.003",
      "src": "class",
      "location": "",
      "type": "",
      "meeting_type": "Class",
-     "url": "https://app.notion.com/p/HW-16-842-Systems-Eng-Lecture-03-pre-class-Watch-System-Thinking-videos-3e3ea74eb77981faa4ebc63f586fc4ca"
+     "url": "https://app.notion.com/p/READ-14-003-Microecon-Policy-Prep-Lecture-06-Finkelstein-Hendren-Shepard-2019-3e5ea74eb77981dc9baadf0f7ad21136"
     },
     {
      "name": "[HW] 16.842 Systems Eng: Lecture 03 pre-class: Complete System Thinking activities",
@@ -920,16 +872,40 @@
      "url": "https://app.notion.com/p/HW-16-842-Systems-Eng-Lecture-03-pre-class-Complete-System-Thinking-activities-3e3ea74eb779818cb6cace2456539308"
     },
     {
-     "name": "TSK TPP Short Thesis Proposal: full rough draft",
+     "name": "[HW] 16.990 Creative Teams: First Hand-in Paper: Drucker Qs + Defining Events table",
      "date": "2026-09-27T11:00:00.000-04:00",
-     "end": "2026-09-27T13:00:00.000-04:00",
+     "end": "2026-09-27T12:00:00.000-04:00",
      "done": false,
-     "kind": "TPP",
-     "src": "task",
+     "kind": "16.990",
+     "src": "class",
      "location": "",
-     "type": "Task",
-     "meeting_type": "TPP",
-     "url": "https://app.notion.com/p/TSK-TPP-Short-Thesis-Proposal-full-rough-draft-3e5ea74eb77981c9a985c0e83aee4a56"
+     "type": "",
+     "meeting_type": "Class",
+     "url": "https://app.notion.com/p/HW-16-990-Creative-Teams-First-Hand-in-Paper-Drucker-Qs-Defining-Events-table-3e4ea74eb77981d3909cd5ffe48615bc"
+    },
+    {
+     "name": "[READ] IDS.412 Tech & Policy: Prep: Lecture 06 pt1: WIPO What is IP + CORE Unit 21 Innovation",
+     "date": "2026-09-27T12:00:00.000-04:00",
+     "end": "2026-09-27T13:10:00.000-04:00",
+     "done": false,
+     "kind": "IDS.412",
+     "src": "class",
+     "location": "",
+     "type": "",
+     "meeting_type": "Class",
+     "url": "https://app.notion.com/p/READ-IDS-412-Tech-Policy-Prep-Lecture-06-pt1-WIPO-What-is-IP-CORE-Unit-21-Innovation-3e5ea74eb7798103a3d9daac5e8d671e"
+    },
+    {
+     "name": "[READ] IDS.412 Tech & Policy: Prep: Lecture 06 pt2: Kinsella + Heller & Eisenberg + Mildenberger",
+     "date": "2026-09-27T15:30:00.000-04:00",
+     "end": "2026-09-27T16:25:00.000-04:00",
+     "done": false,
+     "kind": "IDS.412",
+     "src": "class",
+     "location": "",
+     "type": "",
+     "meeting_type": "Class",
+     "url": "https://app.notion.com/p/READ-IDS-412-Tech-Policy-Prep-Lecture-06-pt2-Kinsella-Heller-Eisenberg-Mildenberger-3e5ea74eb77981a78a58d054d06e0067"
     },
     {
      "name": "Mahjong, charcuterie and wine at Joce Wang's",
@@ -946,5 +922,5 @@
    ]
   }
  ],
- "total": 75
+ "total": 73
 }
