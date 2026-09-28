@@ -1,5 +1,5 @@
 {
- "generated": "2026-09-28T10:53:19-04:00",
+ "generated": "2026-09-28T17:01:56-04:00",
  "today": "2026-09-28",
  "monday": "2026-09-28",
  "days": [
@@ -80,6 +80,18 @@
      "url": "https://app.notion.com/p/HW-16-842-Systems-Eng-Lecture-03-pre-class-Watch-System-Thinking-videos-Finish-Part-2-3e3ea74eb77981faa4ebc63f586fc4ca"
     },
     {
+     "name": "[PREP] 16.842 Systems Eng: A2 T-14: Scope it: Requirements Definition & Margins",
+     "date": "2026-09-28T16:00:00.000-04:00",
+     "end": "2026-09-28T17:00:00.000-04:00",
+     "done": false,
+     "kind": "16.842",
+     "src": "class",
+     "location": "",
+     "type": "",
+     "meeting_type": "Class",
+     "url": "https://app.notion.com/p/PREP-16-842-Systems-Eng-A2-T-14-Scope-it-Requirements-Definition-Margins-3e2ea74eb77981b995fef5c182a8ae46"
+    },
+    {
      "name": "14.003 Office Hours \u2014 Anoushka Tamhane",
      "date": "2026-09-28T20:00:00.000+00:00",
      "end": "2026-09-28T21:30:00.000+00:00",
@@ -90,18 +102,6 @@
      "type": "",
      "meeting_type": "Class",
      "url": "https://app.notion.com/p/14-003-Office-Hours-Anoushka-Tamhane-3dcea74eb779814ca00fc1b71733cf32"
-    },
-    {
-     "name": "[PREP] 16.842 Systems Eng: A2 T-14: Scope it: Requirements Definition & Margins",
-     "date": "2026-09-28T20:45:00.000-04:00",
-     "end": "2026-09-28T21:45:00.000-04:00",
-     "done": false,
-     "kind": "16.842",
-     "src": "class",
-     "location": "",
-     "type": "",
-     "meeting_type": "Class",
-     "url": "https://app.notion.com/p/PREP-16-842-Systems-Eng-A2-T-14-Scope-it-Requirements-Definition-Margins-3e2ea74eb77981b995fef5c182a8ae46"
     },
     {
      "name": "[DUE] 16.842 Systems Eng: Assignment 01: A1 Team Formation, Stakeholders, ConOps",
@@ -170,6 +170,18 @@
      "url": "https://app.notion.com/p/STUDY-14-003-Microecon-Policy-Exam-01-T-14-Closed-book-retrieval-second-half-same-method-3e2ea74eb779814b95f9fa7602288712"
     },
     {
+     "name": "[HW] 16.990 Creative Teams: Autobiographical Paper: send feedback-story requests to 15-20 people",
+     "date": "2026-09-29T10:00:00.000-04:00",
+     "end": "2026-09-29T10:45:00.000-04:00",
+     "done": false,
+     "kind": "16.990",
+     "src": "class",
+     "location": "",
+     "type": "",
+     "meeting_type": "Class",
+     "url": "https://app.notion.com/p/HW-16-990-Creative-Teams-Autobiographical-Paper-send-feedback-story-requests-to-15-20-people-3e9ea74eb77981868f0fd8db434830fd"
+    },
+    {
      "name": "16.842 Systems Eng: Lecture 03: System Thinking",
      "date": "2026-09-29T11:00:00.000-04:00",
      "end": "2026-09-29T13:00:00.000-04:00",
@@ -192,6 +204,18 @@
      "type": "Task",
      "meeting_type": "Dr. Eric Evans (MIT)",
      "url": "https://app.notion.com/p/TSK-Dr-Eric-Evans-Research-Group-Monthly-Meeting-3d0ea74eb77981d39f4dd4af6dd15095"
+    },
+    {
+     "name": "[HW] 16.990 Creative Teams: First Hand-in Paper: Drucker Qs + Defining Events table",
+     "date": "2026-09-29T13:00:00.000-04:00",
+     "end": "2026-09-29T14:00:00.000-04:00",
+     "done": false,
+     "kind": "16.990",
+     "src": "class",
+     "location": "",
+     "type": "",
+     "meeting_type": "Class",
+     "url": "https://app.notion.com/p/HW-16-990-Creative-Teams-First-Hand-in-Paper-Drucker-Qs-Defining-Events-table-3e4ea74eb77981d3909cd5ffe48615bc"
     },
     {
      "name": "TSK Thesis topic: draft + submit for approval",
@@ -597,5 +621,5 @@
    ]
   }
  ],
- "total": 46
+ "total": 48
 }
