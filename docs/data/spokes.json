@@ -1,6 +1,566 @@
 {
  "classes": [
   {
+   "name": "[PREP] 16.842 Systems Eng: Final Team Presentation T-3: Finish it: full team run-through, 30 min timed",
+   "code": "16.842",
+   "date": "2026-12-05T14:00:00.000-05:00",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "",
+   "url": "https://app.notion.com/p/PREP-16-842-Systems-Eng-Final-Team-Presentation-T-3-Finish-it-full-team-run-through-30-min-time-3e9ea74eb77981b0ba1bc0b65018132f"
+  },
+  {
+   "name": "[DUE] 16.842 Systems Eng: Pre-Viewings Week 3 (MITx modules + Apply exercises, quiz)",
+   "code": "16.842",
+   "date": "2026-09-28T21:45:00.000-04:00",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "",
+   "url": "https://app.notion.com/p/DUE-16-842-Systems-Eng-Pre-Viewings-Week-3-MITx-modules-Apply-exercises-quiz-3e9ea74eb7798195b7a3f1cf6b98679e"
+  },
+  {
+   "name": "[PREP] IDS.412 Tech & Policy: Paper 2 conference T-3: Finish it: status update + outline",
+   "code": "IDS.412",
+   "date": "2026-11-06T13:15:00.000-05:00",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "",
+   "url": "https://app.notion.com/p/PREP-IDS-412-Tech-Policy-Paper-2-conference-T-3-Finish-it-status-update-outline-3e9ea74eb7798170ae52d484deef9b1b"
+  },
+  {
+   "name": "[PREP] 16.S896 RASCAL: Final Concept Review with external judges T-3: Finish it: Final Concept Review with external judges (20%)",
+   "code": "16.S896",
+   "date": "2026-12-01T09:30:00.000-05:00",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "",
+   "url": "https://app.notion.com/p/PREP-16-S896-RASCAL-Final-Concept-Review-with-external-judges-T-3-Finish-it-Final-Concept-Review-3e9ea74eb7798141928cc265a9fafa4a"
+  },
+  {
+   "name": "[PREP] 16.S896 RASCAL: Final Concept Review with external judges T-7: Build it: Final Concept Review with external judges (20%)",
+   "code": "16.S896",
+   "date": "2026-11-25T08:00:00.000-05:00",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "",
+   "url": "https://app.notion.com/p/PREP-16-S896-RASCAL-Final-Concept-Review-with-external-judges-T-7-Build-it-Final-Concept-Review--3e9ea74eb77981ba9aa8f2b76b4348e2"
+  },
+  {
+   "name": "[PREP] 16.S896 RASCAL: Final Concept Review with external judges T-14: Outline it: Final Concept Review with external judges (20%)",
+   "code": "16.S896",
+   "date": "2026-11-20T17:00:00.000-05:00",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "",
+   "url": "https://app.notion.com/p/PREP-16-S896-RASCAL-Final-Concept-Review-with-external-judges-T-14-Outline-it-Final-Concept-Revi-3e9ea74eb779813d839fdbc7ea628013"
+  },
+  {
+   "name": "[PREP] 16.S896 RASCAL: A5 T-3: Finish it: Seven-beat one-pager (5%)",
+   "code": "16.S896",
+   "date": "2026-12-01T08:00:00.000-05:00",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "",
+   "url": "https://app.notion.com/p/PREP-16-S896-RASCAL-A5-T-3-Finish-it-Seven-beat-one-pager-5-3e9ea74eb779813ebdd5ecdd0510e11c"
+  },
+  {
+   "name": "[PREP] 16.S896 RASCAL: A5 T-7: Build it: Seven-beat one-pager (5%)",
+   "code": "16.S896",
+   "date": "2026-11-28T17:00:00.000-05:00",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "",
+   "url": "https://app.notion.com/p/PREP-16-S896-RASCAL-A5-T-7-Build-it-Seven-beat-one-pager-5-3e9ea74eb77981c0be99ceef8e21e432"
+  },
+  {
+   "name": "[PREP] 16.S896 RASCAL: Draft proposal / paper, 5-7 pp T-3: Finish it: Draft proposal / paper, 5-7 pp (20%)",
+   "code": "16.S896",
+   "date": "2026-11-17T14:00:00.000-05:00",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "",
+   "url": "https://app.notion.com/p/PREP-16-S896-RASCAL-Draft-proposal-paper-5-7-pp-T-3-Finish-it-Draft-proposal-paper-5-7-pp--3e9ea74eb77981c8b1e9c64197b7c2c0"
+  },
+  {
+   "name": "[PREP] 16.S896 RASCAL: Draft proposal / paper, 5-7 pp T-7: Build it: Draft proposal / paper, 5-7 pp (20%)",
+   "code": "16.S896",
+   "date": "2026-11-12T17:00:00.000-05:00",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "",
+   "url": "https://app.notion.com/p/PREP-16-S896-RASCAL-Draft-proposal-paper-5-7-pp-T-7-Build-it-Draft-proposal-paper-5-7-pp--3e9ea74eb7798115a105d3b14454c25b"
+  },
+  {
+   "name": "[PREP] 16.S896 RASCAL: Draft proposal / paper, 5-7 pp T-14: Outline it: Draft proposal / paper, 5-7 pp (20%)",
+   "code": "16.S896",
+   "date": "2026-11-06T21:00:00.000-05:00",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "",
+   "url": "https://app.notion.com/p/PREP-16-S896-RASCAL-Draft-proposal-paper-5-7-pp-T-14-Outline-it-Draft-proposal-paper-5-7-p-3e9ea74eb77981289de8df89888de3dc"
+  },
+  {
+   "name": "[PREP] 16.S896 RASCAL: Draft proposal / paper, 5-7 pp T-21: Scope it: Draft proposal / paper, 5-7 pp (20%)",
+   "code": "16.S896",
+   "date": "2026-10-30T17:00:00.000-04:00",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "",
+   "url": "https://app.notion.com/p/PREP-16-S896-RASCAL-Draft-proposal-paper-5-7-pp-T-21-Scope-it-Draft-proposal-paper-5-7-pp--3e9ea74eb779810ebd4bf82462cca78a"
+  },
+  {
+   "name": "[PREP] 16.S896 RASCAL: A4 T-3: Finish it: Cost estimate with calibration and limits (5%)",
+   "code": "16.S896",
+   "date": "2026-11-10T14:00:00.000-05:00",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "",
+   "url": "https://app.notion.com/p/PREP-16-S896-RASCAL-A4-T-3-Finish-it-Cost-estimate-with-calibration-and-limits-5-3e9ea74eb77981318a66f510fe9c7fbe"
+  },
+  {
+   "name": "[PREP] 16.S896 RASCAL: A4 T-7: Build it: Cost estimate with calibration and limits (5%)",
+   "code": "16.S896",
+   "date": "2026-11-06T17:00:00.000-05:00",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "",
+   "url": "https://app.notion.com/p/PREP-16-S896-RASCAL-A4-T-7-Build-it-Cost-estimate-with-calibration-and-limits-5-3e9ea74eb7798145b7c5caea31a793e6"
+  },
+  {
+   "name": "[PREP] 16.S896 RASCAL: A3 T-3: Finish it: Robustness scorecard, 10+ vulnerabilities (5%)",
+   "code": "16.S896",
+   "date": "2026-11-03T14:00:00.000-05:00",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "",
+   "url": "https://app.notion.com/p/PREP-16-S896-RASCAL-A3-T-3-Finish-it-Robustness-scorecard-10-vulnerabilities-5-3e9ea74eb7798173a3a6ceeb6a2897e3"
+  },
+  {
+   "name": "[PREP] 16.S896 RASCAL: A3 T-7: Build it: Robustness scorecard, 10+ vulnerabilities (5%)",
+   "code": "16.S896",
+   "date": "2026-10-30T13:15:00.000-04:00",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "",
+   "url": "https://app.notion.com/p/PREP-16-S896-RASCAL-A3-T-7-Build-it-Robustness-scorecard-10-vulnerabilities-5-3e9ea74eb779813e9ca7c37df719e919"
+  },
+  {
+   "name": "[PREP] 16.S896 RASCAL: Concept Review T-3: Finish it: quad chart + timed presentation (15%)",
+   "code": "16.S896",
+   "date": "2026-11-03T17:00:00.000-05:00",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "",
+   "url": "https://app.notion.com/p/PREP-16-S896-RASCAL-Concept-Review-T-3-Finish-it-quad-chart-timed-presentation-15-3e9ea74eb779819d9518fa990e63f390"
+  },
+  {
+   "name": "[PREP] 16.S896 RASCAL: Concept Review T-7: Build it: quad chart + timed presentation (15%)",
+   "code": "16.S896",
+   "date": "2026-10-30T20:15:00.000-04:00",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "",
+   "url": "https://app.notion.com/p/PREP-16-S896-RASCAL-Concept-Review-T-7-Build-it-quad-chart-timed-presentation-15-3e9ea74eb77981249feee4771e443ddf"
+  },
+  {
+   "name": "[PREP] 16.S896 RASCAL: Concept Review T-14: Outline it: quad chart + timed presentation (15%)",
+   "code": "16.S896",
+   "date": "2026-10-23T17:00:00.000-04:00",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "",
+   "url": "https://app.notion.com/p/PREP-16-S896-RASCAL-Concept-Review-T-14-Outline-it-quad-chart-timed-presentation-15-3e9ea74eb779818eab42e4c7cc98b910"
+  },
+  {
+   "name": "[PREP] 16.S896 RASCAL: A2 T-3: Finish it: Stakeholder map, TO/BY/USING, Level 1 requirements (5%)",
+   "code": "16.S896",
+   "date": "2026-10-20T21:00:00.000-04:00",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "",
+   "url": "https://app.notion.com/p/PREP-16-S896-RASCAL-A2-T-3-Finish-it-Stakeholder-map-TO-BY-USING-Level-1-requirements-5-3e9ea74eb77981cf993ce07dc13fb4c7"
+  },
+  {
+   "name": "[PREP] 16.S896 RASCAL: A2 T-7: Build it: Stakeholder map, TO/BY/USING, Level 1 requirements (5%)",
+   "code": "16.S896",
+   "date": "2026-10-16T20:15:00.000-04:00",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "",
+   "url": "https://app.notion.com/p/PREP-16-S896-RASCAL-A2-T-7-Build-it-Stakeholder-map-TO-BY-USING-Level-1-requirements-5-3e9ea74eb779814bb38be26296b80de6"
+  },
+  {
+   "name": "[PREP] 16.S896 RASCAL: RASC-AL questions for NASA Q&A T-3: Finish it: RASC-AL questions for NASA Q&A",
+   "code": "16.S896",
+   "date": "2026-10-15T19:30:00.000-04:00",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "",
+   "url": "https://app.notion.com/p/PREP-16-S896-RASCAL-RASC-AL-questions-for-NASA-Q-A-T-3-Finish-it-RASC-AL-questions-for-NASA-Q-A-3e9ea74eb77981edbd9ec8a2828a53a1"
+  },
+  {
+   "name": "[PREP] 16.S896 RASCAL: RASC-AL Notice of Intent T-3: Finish it: RASC-AL Notice of Intent (optional)",
+   "code": "16.S896",
+   "date": "2026-10-10T17:00:00.000-04:00",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "",
+   "url": "https://app.notion.com/p/PREP-16-S896-RASCAL-RASC-AL-Notice-of-Intent-T-3-Finish-it-RASC-AL-Notice-of-Intent-optional-3e9ea74eb7798178bfc1db89e7e8e070"
+  },
+  {
+   "name": "[PREP] 16.S896 RASCAL: Milestone T-3: Finish it: WORMS hardware selections final, orders placed",
+   "code": "16.S896",
+   "date": "2026-10-06T08:00:00.000-04:00",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "",
+   "url": "https://app.notion.com/p/PREP-16-S896-RASCAL-Milestone-T-3-Finish-it-WORMS-hardware-selections-final-orders-placed-3e9ea74eb779815cb836c785514dfc93"
+  },
+  {
+   "name": "[PREP] 16.S896 RASCAL: A1 T-3: Finish it: Four Pillars quad chart",
+   "code": "16.S896",
+   "date": "2026-10-06T17:00:00.000-04:00",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "",
+   "url": "https://app.notion.com/p/PREP-16-S896-RASCAL-A1-T-3-Finish-it-Four-Pillars-quad-chart-3e9ea74eb77981a780c6cd9ca9d8e274"
+  },
+  {
+   "name": "[PREP] 16.S896 RASCAL: A1 T-7: Build it: Four Pillars quad chart",
+   "code": "16.S896",
+   "date": "2026-10-02T20:15:00.000-04:00",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "",
+   "url": "https://app.notion.com/p/PREP-16-S896-RASCAL-A1-T-7-Build-it-Four-Pillars-quad-chart-3e9ea74eb77981bf8e4dceae7d585617"
+  },
+  {
+   "name": "[PREP] IDS.412 Tech & Policy: Final presentation T-3: Finish it: Paper 2 elevator pitch (25%)",
+   "code": "IDS.412",
+   "date": "2026-11-25T20:30:00.000-05:00",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "",
+   "url": "https://app.notion.com/p/PREP-IDS-412-Tech-Policy-Final-presentation-T-3-Finish-it-Paper-2-elevator-pitch-25-3e9ea74eb779815296a7e42127cee6df"
+  },
+  {
+   "name": "[PREP] IDS.412 Tech & Policy: Final presentation T-7: Build it: Paper 2 elevator pitch (25%)",
+   "code": "IDS.412",
+   "date": "2026-11-23T17:00:00.000-05:00",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "",
+   "url": "https://app.notion.com/p/PREP-IDS-412-Tech-Policy-Final-presentation-T-7-Build-it-Paper-2-elevator-pitch-25-3e9ea74eb77981e69b3ad6036355bf75"
+  },
+  {
+   "name": "[PREP] IDS.412 Tech & Policy: Paper 2 T-3: Finish it: Knowledge-controversy case (25%)",
+   "code": "IDS.412",
+   "date": "2026-12-06T17:00:00.000-05:00",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "",
+   "url": "https://app.notion.com/p/PREP-IDS-412-Tech-Policy-Paper-2-T-3-Finish-it-Knowledge-controversy-case-25-3e9ea74eb7798121a8f3d8f0d3708dbc"
+  },
+  {
+   "name": "[PREP] IDS.412 Tech & Policy: Paper 2 T-7: Build it: Knowledge-controversy case (25%)",
+   "code": "IDS.412",
+   "date": "2026-12-02T17:00:00.000-05:00",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "",
+   "url": "https://app.notion.com/p/PREP-IDS-412-Tech-Policy-Paper-2-T-7-Build-it-Knowledge-controversy-case-25-3e9ea74eb77981db841fd18861829176"
+  },
+  {
+   "name": "[PREP] IDS.412 Tech & Policy: Paper 2 T-14: Outline it: Knowledge-controversy case (25%)",
+   "code": "IDS.412",
+   "date": "2026-11-25T19:30:00.000-05:00",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "",
+   "url": "https://app.notion.com/p/PREP-IDS-412-Tech-Policy-Paper-2-T-14-Outline-it-Knowledge-controversy-case-25-3e9ea74eb779811bb255ccdb07bc88ba"
+  },
+  {
+   "name": "[PREP] IDS.412 Tech & Policy: Paper 2 T-21: Scope it: Knowledge-controversy case (25%)",
+   "code": "IDS.412",
+   "date": "2026-11-18T20:30:00.000-05:00",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "",
+   "url": "https://app.notion.com/p/PREP-IDS-412-Tech-Policy-Paper-2-T-21-Scope-it-Knowledge-controversy-case-25-3e9ea74eb77981cfb3e0de66bd074f53"
+  },
+  {
+   "name": "[PREP] IDS.412 Tech & Policy: Paper 1 T-3: Finish it: Regulatory comment (20%)",
+   "code": "IDS.412",
+   "date": "2026-10-23T20:30:00.000-04:00",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "",
+   "url": "https://app.notion.com/p/PREP-IDS-412-Tech-Policy-Paper-1-T-3-Finish-it-Regulatory-comment-20-3e9ea74eb77981f79675c687de122f51"
+  },
+  {
+   "name": "[PREP] IDS.412 Tech & Policy: Paper 1 T-7: Build it: Regulatory comment (20%)",
+   "code": "IDS.412",
+   "date": "2026-10-19T08:00:00.000-04:00",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "",
+   "url": "https://app.notion.com/p/PREP-IDS-412-Tech-Policy-Paper-1-T-7-Build-it-Regulatory-comment-20-3e9ea74eb779815c8197cfb5ae008713"
+  },
+  {
+   "name": "[PREP] IDS.412 Tech & Policy: Paper 1 T-14: Outline it: Regulatory comment (20%)",
+   "code": "IDS.412",
+   "date": "2026-10-12T17:00:00.000-04:00",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "",
+   "url": "https://app.notion.com/p/PREP-IDS-412-Tech-Policy-Paper-1-T-14-Outline-it-Regulatory-comment-20-3e9ea74eb779813680f2e127b29b0897"
+  },
+  {
+   "name": "[PREP] IDS.412 Tech & Policy: Paper 1 T-21: Scope it: Regulatory comment (20%)",
+   "code": "IDS.412",
+   "date": "2026-10-05T16:00:00.000-04:00",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "",
+   "url": "https://app.notion.com/p/PREP-IDS-412-Tech-Policy-Paper-1-T-21-Scope-it-Regulatory-comment-20-3e9ea74eb77981519889f2dc8e7d0e38"
+  },
+  {
+   "name": "[PREP] 14.003 Microecon & Policy: Problem Set 05 T-3: Finish it: Externalities, risk, adverse selection, moral hazard",
+   "code": "14.003",
+   "date": "2026-11-30T08:00:00.000-05:00",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "",
+   "url": "https://app.notion.com/p/PREP-14-003-Microecon-Policy-Problem-Set-05-T-3-Finish-it-Externalities-risk-adverse-selecti-3e9ea74eb779817da054f6afcdc4c34a"
+  },
+  {
+   "name": "[PREP] 14.003 Microecon & Policy: Problem Set 05 T-7: Build it: Externalities, risk, adverse selection, moral hazard",
+   "code": "14.003",
+   "date": "2026-11-25T17:00:00.000-05:00",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "",
+   "url": "https://app.notion.com/p/PREP-14-003-Microecon-Policy-Problem-Set-05-T-7-Build-it-Externalities-risk-adverse-selectio-3e9ea74eb77981d3ae85c791e07e1573"
+  },
+  {
+   "name": "[PREP] 14.003 Microecon & Policy: Problem Set 05 T-14: Outline it: Externalities, risk, adverse selection, moral hazard",
+   "code": "14.003",
+   "date": "2026-11-19T17:00:00.000-05:00",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "",
+   "url": "https://app.notion.com/p/PREP-14-003-Microecon-Policy-Problem-Set-05-T-14-Outline-it-Externalities-risk-adverse-selec-3e9ea74eb779817babd9e7ab5cd19a46"
+  },
+  {
+   "name": "[PREP] 14.003 Microecon & Policy: Problem Set 04 T-3: Finish it: Trade and welfare",
+   "code": "14.003",
+   "date": "2026-11-08T17:00:00.000-05:00",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "",
+   "url": "https://app.notion.com/p/PREP-14-003-Microecon-Policy-Problem-Set-04-T-3-Finish-it-Trade-and-welfare-3e9ea74eb7798153bac1f34b45d071e4"
+  },
+  {
+   "name": "[PREP] 14.003 Microecon & Policy: Problem Set 04 T-7: Build it: Trade and welfare",
+   "code": "14.003",
+   "date": "2026-11-05T17:00:00.000-05:00",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "",
+   "url": "https://app.notion.com/p/PREP-14-003-Microecon-Policy-Problem-Set-04-T-7-Build-it-Trade-and-welfare-3e9ea74eb77981ae8dfac514c6361758"
+  },
+  {
+   "name": "[PREP] 14.003 Microecon & Policy: Problem Set 04 T-14: Outline it: Trade and welfare",
+   "code": "14.003",
+   "date": "2026-10-29T17:00:00.000-04:00",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "",
+   "url": "https://app.notion.com/p/PREP-14-003-Microecon-Policy-Problem-Set-04-T-14-Outline-it-Trade-and-welfare-3e9ea74eb7798157bb4ee93b98752dc3"
+  },
+  {
+   "name": "[PREP] 14.003 Microecon & Policy: Problem Set 03 T-3: Finish it: Applied competitive analysis, market demand, GE",
+   "code": "14.003",
+   "date": "2026-10-26T17:00:00.000-04:00",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "",
+   "url": "https://app.notion.com/p/PREP-14-003-Microecon-Policy-Problem-Set-03-T-3-Finish-it-Applied-competitive-analysis-market-3e9ea74eb77981909590ef3e2d4b4c67"
+  },
+  {
+   "name": "[PREP] 14.003 Microecon & Policy: Problem Set 03 T-7: Build it: Applied competitive analysis, market demand, GE",
+   "code": "14.003",
+   "date": "2026-10-22T20:15:00.000-04:00",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "",
+   "url": "https://app.notion.com/p/PREP-14-003-Microecon-Policy-Problem-Set-03-T-7-Build-it-Applied-competitive-analysis-market--3e9ea74eb779813e9769fc34622e3d13"
+  },
+  {
+   "name": "[PREP] 14.003 Microecon & Policy: Problem Set 03 T-14: Outline it: Applied competitive analysis, market demand, GE",
+   "code": "14.003",
+   "date": "2026-10-15T17:00:00.000-04:00",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "",
+   "url": "https://app.notion.com/p/PREP-14-003-Microecon-Policy-Problem-Set-03-T-14-Outline-it-Applied-competitive-analysis-mark-3e9ea74eb7798188b732c63e2262eb57"
+  },
+  {
+   "name": "[PREP] 14.003 Microecon & Policy: Problem Set 02 T-3: Finish it: Consumer theory",
+   "code": "14.003",
+   "date": "2026-10-05T17:00:00.000-04:00",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "",
+   "url": "https://app.notion.com/p/PREP-14-003-Microecon-Policy-Problem-Set-02-T-3-Finish-it-Consumer-theory-3e9ea74eb779813b9fbef5ec0de7b04d"
+  },
+  {
+   "name": "[PREP] 14.003 Microecon & Policy: Problem Set 02 T-7: Build it: Consumer theory",
+   "code": "14.003",
+   "date": "2026-10-01T19:30:00.000-04:00",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "",
+   "url": "https://app.notion.com/p/PREP-14-003-Microecon-Policy-Problem-Set-02-T-7-Build-it-Consumer-theory-3e9ea74eb77981f087c0df4dbe3113cd"
+  },
+  {
+   "name": "[PREP] 16.990 Creative Teams: Vision Speech T-3: Finish it: rehearse, record final take, check against rubric",
+   "code": "16.990",
+   "date": "2026-10-13T21:00:00.000-04:00",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "",
+   "url": "https://app.notion.com/p/PREP-16-990-Creative-Teams-Vision-Speech-T-3-Finish-it-rehearse-record-final-take-check-agains-3e9ea74eb7798150b52ed4affd853b0a"
+  },
+  {
+   "name": "[PREP] 16.990 Creative Teams: Vision Speech T-7: Build it: full draft + delivery plan, first recorded run",
+   "code": "16.990",
+   "date": "2026-10-09T20:30:00.000-04:00",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "",
+   "url": "https://app.notion.com/p/PREP-16-990-Creative-Teams-Vision-Speech-T-7-Build-it-full-draft-delivery-plan-first-recorded-3e9ea74eb7798178a49be18a463acd08"
+  },
+  {
+   "name": "[DUE] 16.990 Creative Teams: Vision Speech (5-7 min recorded video, 25%)",
+   "code": "16.990",
+   "date": "2026-10-16T21:30:00.000-04:00",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "",
+   "url": "https://app.notion.com/p/DUE-16-990-Creative-Teams-Vision-Speech-5-7-min-recorded-video-25-3e9ea74eb77981cdbb78d2226542ed6c"
+  },
+  {
+   "name": "[PREP] 16.990 Creative Teams: Autobiographical Paper T-3: Finish it: check every section and the 5-page limit",
+   "code": "16.990",
+   "date": "2026-11-04T17:15:00.000-05:00",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "",
+   "url": "https://app.notion.com/p/PREP-16-990-Creative-Teams-Autobiographical-Paper-T-3-Finish-it-check-every-section-and-the-5-pa-3e9ea74eb77981a48241d780227e7292"
+  },
+  {
+   "name": "[PREP] 16.990 Creative Teams: Autobiographical Paper T-7: Build it: full draft of all four sections + both appendix tables",
+   "code": "16.990",
+   "date": "2026-10-31T10:15:00.000-04:00",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "",
+   "url": "https://app.notion.com/p/PREP-16-990-Creative-Teams-Autobiographical-Paper-T-7-Build-it-full-draft-of-all-four-sections--3e9ea74eb779819c81f5f6acd32fb634"
+  },
+  {
+   "name": "[HW] 16.990 Creative Teams: Autobiographical Paper: send feedback-story requests to 15-20 people",
+   "code": "16.990",
+   "date": "2026-09-27T23:00:00.000-04:00",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "",
+   "url": "https://app.notion.com/p/HW-16-990-Creative-Teams-Autobiographical-Paper-send-feedback-story-requests-to-15-20-people-3e9ea74eb77981868f0fd8db434830fd"
+  },
+  {
+   "name": "[DUE] 16.990 Creative Teams: Autobiographical Paper (5 pp + appendices)",
+   "code": "16.990",
+   "date": "2026-11-07T21:00:00.000-05:00",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "",
+   "url": "https://app.notion.com/p/DUE-16-990-Creative-Teams-Autobiographical-Paper-5-pp-appendices-3e9ea74eb77981ac8319e2f322ad9282"
+  },
+  {
+   "name": "[READ] 16.990 Creative Teams: Prep: Lecture 07: Ericksen & Dyer (2004) Right from the Start, pp 447-462",
+   "code": "16.990",
+   "date": "2026-09-29T19:30:00.000-04:00",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "",
+   "url": "https://app.notion.com/p/READ-16-990-Creative-Teams-Prep-Lecture-07-Ericksen-Dyer-2004-Right-from-the-Start-pp-447-4-3e9ea74eb77981318c96cf01f79e75f7"
+  },
+  {
+   "name": "[PREP] 16.990 Creative Teams: First Hand-in Paper T-3: Finish it: tighten both pages, check against the brief",
+   "code": "16.990",
+   "date": "2026-09-29T18:00:00.000-04:00",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "",
+   "url": "https://app.notion.com/p/PREP-16-990-Creative-Teams-First-Hand-in-Paper-T-3-Finish-it-tighten-both-pages-check-against-t-3e9ea74eb77981a9a98ed39bf85bdd25"
+  },
+  {
    "name": "[HW] 16.S896 RASCAL: A1 Four Pillars quad chart: build the slide",
    "code": "16.S896",
    "date": "2026-10-08T16:00:00.000-04:00",
@@ -13,7 +573,7 @@
   {
    "name": "[READ] 14.003 Microecon & Policy: Prep: Lecture 06: Finkelstein, Hendren & Shepard (2019)",
    "code": "14.003",
-   "date": "2026-09-27T21:00:00.000-04:00",
+   "date": "2026-09-27T22:00:00.000-04:00",
    "due": "",
    "status": "",
    "type": "",
@@ -141,14 +701,14 @@
    "url": "https://app.notion.com/p/HW-16-842-Systems-Eng-Lecture-03-pre-class-Complete-System-Thinking-activities-3e3ea74eb779818cb6cace2456539308"
   },
   {
-   "name": "[HW] 16.842 Systems Eng: Lecture 03 pre-class: Watch System Thinking videos",
+   "name": "[HW] 16.842 Systems Eng: Lecture 03 pre-class: Watch System Thinking videos Finish Part 2",
    "code": "16.842",
    "date": "2026-09-28T16:00:00.000-04:00",
    "due": "",
    "status": "",
    "type": "",
    "room": "",
-   "url": "https://app.notion.com/p/HW-16-842-Systems-Eng-Lecture-03-pre-class-Watch-System-Thinking-videos-3e3ea74eb77981faa4ebc63f586fc4ca"
+   "url": "https://app.notion.com/p/HW-16-842-Systems-Eng-Lecture-03-pre-class-Watch-System-Thinking-videos-Finish-Part-2-3e3ea74eb77981faa4ebc63f586fc4ca"
   },
   {
    "name": "[READ] 14.003 Microecon & Policy: Prep: Lecture 05: Finkelstein, Hendren & Shepard (2019) Subsidizing Health Insurance and Lecture 4 Readings",
@@ -321,14 +881,14 @@
    "url": "https://app.notion.com/p/14-003-Microecon-Policy-Exam-03-Lectures-18-to-23-date-not-yet-published-3e2ea74eb7798184bab2c831eca2b546"
   },
   {
-   "name": "IDS.412 Tech & Policy: Assignment 02: Paper 2 written",
+   "name": "[DUE] IDS.412 Tech & Policy: Assignment 02: Paper 2 written",
    "code": "IDS.412",
-   "date": "2026-12-09T23:59:00.000-05:00",
+   "date": "2026-12-09T21:30:00.000-05:00",
    "due": "",
    "status": "Not started",
    "type": "",
    "room": "not published in Canvas",
-   "url": "https://app.notion.com/p/IDS-412-Tech-Policy-Assignment-02-Paper-2-written-3e2ea74eb779818ab5f3e216be39d7b8"
+   "url": "https://app.notion.com/p/DUE-IDS-412-Tech-Policy-Assignment-02-Paper-2-written-3e2ea74eb779818ab5f3e216be39d7b8"
   },
   {
    "name": "IDS.412 Tech & Policy: Recitation Week 14",
@@ -421,14 +981,14 @@
    "url": "https://app.notion.com/p/14-003-Microecon-Policy-Lecture-22-Prediction-machine-learning-and-decision-making-3e2ea74eb77981229ec9cb911220c902"
   },
   {
-   "name": "16.842 Systems Eng: Presentation 01: A5 Final Project Presentation Materials DUE",
+   "name": "[DUE] 16.842 Systems Eng: Presentation 01: A5 Final Project Presentation Materials",
    "code": "16.842",
-   "date": "2026-12-07",
+   "date": "2026-12-07T21:30:00.000-05:00",
    "due": "",
    "status": "Not started",
    "type": "Presentation",
    "room": "Submission channel not published in the syllabus",
-   "url": "https://app.notion.com/p/16-842-Systems-Eng-Presentation-01-A5-Final-Project-Presentation-Materials-DUE-3e2ea74eb779817091acfdb0170a53e4"
+   "url": "https://app.notion.com/p/DUE-16-842-Systems-Eng-Presentation-01-A5-Final-Project-Presentation-Materials-3e2ea74eb779817091acfdb0170a53e4"
   },
   {
    "name": "[PREP] 16.842 Systems Eng: A5 T-3: Finish it: Final Project Presentation Materials",
@@ -461,24 +1021,24 @@
    "url": "https://app.notion.com/p/14-003-Microecon-Policy-Recitation-Week-10-3e2ea74eb77981ccbdbcd5b2a56ee268"
   },
   {
-   "name": "16.S896 RASCAL: Assignment: A5: Seven Beat One Pager (5%)",
+   "name": "[DUE] 16.S896 RASCAL: Assignment: A5: Seven Beat One Pager (5%)",
    "code": "16.S896",
-   "date": "2026-12-04",
+   "date": "2026-12-04T13:30:00.000-05:00",
    "due": "",
    "status": "",
    "type": "Homework",
    "room": "No room, submission. Class itself: 9-354 per syllabus v9 vs 33-218 per Canvas, unresolved.",
-   "url": "https://app.notion.com/p/16-S896-RASCAL-Assignment-A5-Seven-Beat-One-Pager-5-3e2ea74eb779819d922aebd0c65d09ad"
+   "url": "https://app.notion.com/p/DUE-16-S896-RASCAL-Assignment-A5-Seven-Beat-One-Pager-5-3e2ea74eb779819d922aebd0c65d09ad"
   },
   {
-   "name": "14.003 Microecon & Policy: Problem Set 05: Externalities, risk and safety, adverse selection and moral hazard",
+   "name": "[DUE] 14.003 Microecon & Policy: Problem Set 05: Externalities, risk and safety, adverse selection and moral hazard",
    "code": "14.003",
-   "date": "2026-12-03T23:59:00.000-05:00",
+   "date": "2026-12-03T21:30:00.000-05:00",
    "due": "",
    "status": "",
    "type": "",
    "room": "Not applicable, Gradescope submission. Room not published in Canvas",
-   "url": "https://app.notion.com/p/14-003-Microecon-Policy-Problem-Set-05-Externalities-risk-and-safety-adverse-selection-and-mor-3e2ea74eb77981fb973bf7112ec521e8"
+   "url": "https://app.notion.com/p/DUE-14-003-Microecon-Policy-Problem-Set-05-Externalities-risk-and-safety-adverse-selection-an-3e2ea74eb77981fb973bf7112ec521e8"
   },
   {
    "name": "IDS.412 Tech & Policy: Recitation Week 13",
@@ -701,14 +1261,14 @@
    "url": "https://app.notion.com/p/14-003-Microecon-Policy-Recitation-Optional-Post-Exam-Drop-In-3e2ea74eb77981d9b106fad5a366d675"
   },
   {
-   "name": "16.S896 RASCAL: Assignment 02: Draft Proposal/Paper Due (20%)",
+   "name": "[DUE] 16.S896 RASCAL: Assignment 02: Draft Proposal/Paper (20%)",
    "code": "16.S896",
-   "date": "2026-11-20",
+   "date": "2026-11-20T13:30:00.000-05:00",
    "due": "",
    "status": "Not started",
    "type": "Homework",
    "room": "No room, submission. Class itself: 9-354 per syllabus v9 vs 33-218 per Canvas, unresolved.",
-   "url": "https://app.notion.com/p/16-S896-RASCAL-Assignment-02-Draft-Proposal-Paper-Due-20-3e2ea74eb77981bf84c3f079a0283bfa"
+   "url": "https://app.notion.com/p/DUE-16-S896-RASCAL-Assignment-02-Draft-Proposal-Paper-20-3e2ea74eb77981bf84c3f079a0283bfa"
   },
   {
    "name": "IDS.412 Tech & Policy: Recitation Week 11",
@@ -801,14 +1361,14 @@
    "url": "https://app.notion.com/p/14-003-Microecon-Policy-Exam-02-Lectures-10-to-17-3e2ea74eb77981cfa467db0209d20182"
   },
   {
-   "name": "16.842 Systems Eng: Assignment 06: A6 Written Reflective Memo (individual) DUE",
+   "name": "[DUE] 16.842 Systems Eng: Assignment 06: A6 Written Reflective Memo (individual)",
    "code": "16.842",
-   "date": "2026-11-16",
+   "date": "2026-11-16T21:30:00.000-05:00",
    "due": "",
    "status": "Not started",
    "type": "Homework",
    "room": "Submission channel not published in the syllabus",
-   "url": "https://app.notion.com/p/16-842-Systems-Eng-Assignment-06-A6-Written-Reflective-Memo-individual-DUE-3e2ea74eb77981c29884eba90b987a81"
+   "url": "https://app.notion.com/p/DUE-16-842-Systems-Eng-Assignment-06-A6-Written-Reflective-Memo-individual-3e2ea74eb77981c29884eba90b987a81"
   },
   {
    "name": "[STUDY] 14.003 Microecon & Policy: Exam 02 T-1: Light retrieval pass: no new material",
@@ -851,24 +1411,24 @@
    "url": "https://app.notion.com/p/14-003-Microecon-Policy-Recitation-Week-9-3e2ea74eb7798168914cf193022fb3f0"
   },
   {
-   "name": "16.S896 RASCAL: Assignment: A4: Cost Estimate with Calibration and Limits (5%)",
+   "name": "[DUE] 16.S896 RASCAL: Assignment: A4: Cost Estimate with Calibration and Limits (5%)",
    "code": "16.S896",
-   "date": "2026-11-13",
+   "date": "2026-11-13T13:30:00.000-05:00",
    "due": "",
    "status": "",
    "type": "Homework",
    "room": "No room, submission. Class itself: 9-354 per syllabus v9 vs 33-218 per Canvas, unresolved.",
-   "url": "https://app.notion.com/p/16-S896-RASCAL-Assignment-A4-Cost-Estimate-with-Calibration-and-Limits-5-3e2ea74eb77981139ad8c6b7a861ec9d"
+   "url": "https://app.notion.com/p/DUE-16-S896-RASCAL-Assignment-A4-Cost-Estimate-with-Calibration-and-Limits-5-3e2ea74eb77981139ad8c6b7a861ec9d"
   },
   {
-   "name": "14.003 Microecon & Policy: Problem Set 04: Trade and welfare",
+   "name": "[DUE] 14.003 Microecon & Policy: Problem Set 04: Trade and welfare",
    "code": "14.003",
-   "date": "2026-11-12T23:59:00.000-05:00",
+   "date": "2026-11-12T21:30:00.000-05:00",
    "due": "",
    "status": "",
    "type": "",
    "room": "Not applicable, Gradescope submission. Room not published in Canvas",
-   "url": "https://app.notion.com/p/14-003-Microecon-Policy-Problem-Set-04-Trade-and-welfare-3e2ea74eb779814ba47edb58d1c11bbf"
+   "url": "https://app.notion.com/p/DUE-14-003-Microecon-Policy-Problem-Set-04-Trade-and-welfare-3e2ea74eb779814ba47edb58d1c11bbf"
   },
   {
    "name": "[STUDY] 14.003 Microecon & Policy: Exam 02 T-4: Full blank-page recall of the whole syllabus, then close only the gaps you found",
@@ -961,14 +1521,14 @@
    "url": "https://app.notion.com/p/IDS-412-Tech-Policy-Presentation-02-Paper-2-conference-3e2ea74eb779816d96fee477a5f8bdc3"
   },
   {
-   "name": "16.842 Systems Eng: Assignment 04: A4 Trade Space Exploration & Concept Selection DUE",
+   "name": "[DUE] 16.842 Systems Eng: Assignment 04: A4 Trade Space Exploration & Concept Selection",
    "code": "16.842",
-   "date": "2026-11-09",
+   "date": "2026-11-09T21:30:00.000-05:00",
    "due": "",
    "status": "Not started",
    "type": "Homework",
    "room": "Submission channel not published in the syllabus",
-   "url": "https://app.notion.com/p/16-842-Systems-Eng-Assignment-04-A4-Trade-Space-Exploration-Concept-Selection-DUE-3e2ea74eb7798100981deea071b7ef28"
+   "url": "https://app.notion.com/p/DUE-16-842-Systems-Eng-Assignment-04-A4-Trade-Space-Exploration-Concept-Selection-3e2ea74eb7798100981deea071b7ef28"
   },
   {
    "name": "[STUDY] 14.003 Microecon & Policy: Exam 02 T-8: Past papers and problem sets under exam conditions, no notes",
@@ -1011,14 +1571,14 @@
    "url": "https://app.notion.com/p/14-003-Microecon-Policy-Recitation-Week-8-3e2ea74eb77981e6ab94f9cb8a364249"
   },
   {
-   "name": "16.S896 RASCAL: Assignment: A3: Robustness Scorecard, 10+ Vulnerabilities (5%)",
+   "name": "[DUE] 16.S896 RASCAL: Assignment: A3: Robustness Scorecard, 10+ Vulnerabilities (5%)",
    "code": "16.S896",
-   "date": "2026-11-06",
+   "date": "2026-11-06T13:30:00.000-05:00",
    "due": "",
    "status": "",
    "type": "Homework",
    "room": "No room, submission. Class itself: 9-354 per syllabus v9 vs 33-218 per Canvas, unresolved.",
-   "url": "https://app.notion.com/p/16-S896-RASCAL-Assignment-A3-Robustness-Scorecard-10-Vulnerabilities-5-3e2ea74eb77981c7831af5b36b0ef818"
+   "url": "https://app.notion.com/p/DUE-16-S896-RASCAL-Assignment-A3-Robustness-Scorecard-10-Vulnerabilities-5-3e2ea74eb77981c7831af5b36b0ef818"
   },
   {
    "name": "IDS.412 Tech & Policy: Recitation Week 9",
@@ -1191,14 +1751,14 @@
    "url": "https://app.notion.com/p/14-003-Microecon-Policy-Recitation-Week-7-3e2ea74eb77981ee8a67e65faef5b5a7"
   },
   {
-   "name": "14.003 Microecon & Policy: Problem Set 03: Applied competitive analysis, market demand, general equilibrium",
+   "name": "[DUE] 14.003 Microecon & Policy: Problem Set 03: Applied competitive analysis, market demand, general equilibrium",
    "code": "14.003",
-   "date": "2026-10-29T23:59:00.000-04:00",
+   "date": "2026-10-29T21:30:00.000-04:00",
    "due": "",
    "status": "",
    "type": "",
    "room": "Not applicable, Gradescope submission. Room not published in Canvas",
-   "url": "https://app.notion.com/p/14-003-Microecon-Policy-Problem-Set-03-Applied-competitive-analysis-market-demand-general-equi-3e2ea74eb779815eb882de3e5baf1a69"
+   "url": "https://app.notion.com/p/DUE-14-003-Microecon-Policy-Problem-Set-03-Applied-competitive-analysis-market-demand-general-3e2ea74eb779815eb882de3e5baf1a69"
   },
   {
    "name": "IDS.412 Tech & Policy: Recitation Week 8",
@@ -1271,14 +1831,14 @@
    "url": "https://app.notion.com/p/16-S896-RASCAL-Competition-RASC-AL-Q-A-Session-with-NASA-SMEs-3e2ea74eb7798116ba37d00238f58d2e"
   },
   {
-   "name": "IDS.412 Tech & Policy: Assignment 01: Paper I written, regulatory comment",
+   "name": "[DUE] IDS.412 Tech & Policy: Assignment 01: Paper I written, regulatory comment",
    "code": "IDS.412",
-   "date": "2026-10-26T23:59:00.000-04:00",
+   "date": "2026-10-25T19:00:00.000-04:00",
    "due": "",
    "status": "Not started",
    "type": "",
    "room": "not published in Canvas",
-   "url": "https://app.notion.com/p/IDS-412-Tech-Policy-Assignment-01-Paper-I-written-regulatory-comment-3e2ea74eb77981b4b07ac3bcde378e3c"
+   "url": "https://app.notion.com/p/DUE-IDS-412-Tech-Policy-Assignment-01-Paper-I-written-regulatory-comment-3e2ea74eb77981b4b07ac3bcde378e3c"
   },
   {
    "name": "[PREP] 16.842 Systems Eng: A4 T-14: Scope it: Trade Space Exploration & Concept Selection",
@@ -1341,24 +1901,14 @@
    "url": "https://app.notion.com/p/STUDY-14-003-Microecon-Policy-Exam-02-T-21-Closed-book-retrieval-first-half-of-the-material-w-3e2ea74eb77981e58c36f8af2592d0de"
   },
   {
-   "name": "16.842 Systems Eng: Assignment 03: A3 System Architecture & Concept Generation DUE",
+   "name": "[DUE] 16.842 Systems Eng: Assignment 03: A3 System Architecture & Concept Generation",
    "code": "16.842",
-   "date": "2026-10-26",
+   "date": "2026-10-26T21:30:00.000-04:00",
    "due": "",
    "status": "Not started",
    "type": "Homework",
    "room": "Submission channel not published in the syllabus",
-   "url": "https://app.notion.com/p/16-842-Systems-Eng-Assignment-03-A3-System-Architecture-Concept-Generation-DUE-3e2ea74eb7798141b802d42288ca3b7e"
-  },
-  {
-   "name": "[DUE] IDS.412 Tech & Policy: Paper 1: federal regulatory comment",
-   "code": "IDS.412",
-   "date": "2026-10-25T19:00:00.000-04:00",
-   "due": "",
-   "status": "Not started",
-   "type": "",
-   "room": "",
-   "url": "https://app.notion.com/p/DUE-IDS-412-Tech-Policy-Paper-1-federal-regulatory-comment-3e2ea74eb77981fc8f6fff2dba28c329"
+   "url": "https://app.notion.com/p/DUE-16-842-Systems-Eng-Assignment-03-A3-System-Architecture-Concept-Generation-3e2ea74eb7798141b802d42288ca3b7e"
   },
   {
    "name": "IDS.412 Tech & Policy: Presentation 01: Paper I conference",
@@ -1401,14 +1951,14 @@
    "url": "https://app.notion.com/p/14-003-Microecon-Policy-Recitation-Week-6-3e2ea74eb7798133a928f5d5bfd0d5e0"
   },
   {
-   "name": "16.S896 RASCAL: Assignment: A2: Stakeholder Map, TO/BY/USING and Level 1 Requirements (5%)",
+   "name": "[DUE] 16.S896 RASCAL: Assignment: A2: Stakeholder Map, TO/BY/USING and Level 1 Requirements (5%)",
    "code": "16.S896",
-   "date": "2026-10-23",
+   "date": "2026-10-23T13:30:00.000-04:00",
    "due": "",
    "status": "",
    "type": "Homework",
    "room": "No room, submission. Class itself: 9-354 per syllabus v9 vs 33-218 per Canvas, unresolved.",
-   "url": "https://app.notion.com/p/16-S896-RASCAL-Assignment-A2-Stakeholder-Map-TO-BY-USING-and-Level-1-Requirements-5-3e2ea74eb77981cb8eb3c0a78a8e819c"
+   "url": "https://app.notion.com/p/DUE-16-S896-RASCAL-Assignment-A2-Stakeholder-Map-TO-BY-USING-and-Level-1-Requirements-5-3e2ea74eb77981cb8eb3c0a78a8e819c"
   },
   {
    "name": "[DUE] IDS.412 Tech & Policy: Paper I: conference status note",
@@ -1541,14 +2091,14 @@
    "url": "https://app.notion.com/p/14-003-Microecon-Policy-Lecture-11-Applied-competitive-analysis-Free-entry-in-a-cartelized-mark-3e2ea74eb779814ea11ae2624db7b0f7"
   },
   {
-   "name": "16.S896 RASCAL: Competition: RASC-AL Questions for NASA Q&A Due",
+   "name": "[DUE] 16.S896 RASCAL: Competition: RASC-AL Questions for NASA Q&A",
    "code": "16.S896",
-   "date": "2026-10-18T23:59:00.000-04:00",
+   "date": "2026-10-18T21:00:00.000-04:00",
    "due": "",
    "status": "",
    "type": "",
    "room": "No room, submission. Class itself: 9-354 per syllabus v9 vs 33-218 per Canvas, unresolved.",
-   "url": "https://app.notion.com/p/16-S896-RASCAL-Competition-RASC-AL-Questions-for-NASA-Q-A-Due-3e2ea74eb7798125bc8ef66881418c2e"
+   "url": "https://app.notion.com/p/DUE-16-S896-RASCAL-Competition-RASC-AL-Questions-for-NASA-Q-A-3e2ea74eb7798125bc8ef66881418c2e"
   },
   {
    "name": "16.S896 RASCAL: Session 06: WIP Presentations and Case Study 02: ECLIPSE",
@@ -1621,14 +2171,14 @@
    "url": "https://app.notion.com/p/STUDY-IDS-412-Tech-Policy-Exam-17-T-21-Closed-book-retrieval-first-half-of-the-material-write-3e2ea74eb77981df82e5c8336e81aaf4"
   },
   {
-   "name": "16.S896 RASCAL: Assignment 01: RASC-AL Notice of Intent Due (optional)",
+   "name": "[DUE] 16.S896 RASCAL: Assignment 01: RASC-AL Notice of Intent (optional)",
    "code": "16.S896",
-   "date": "2026-10-13T23:59:00.000-04:00",
+   "date": "2026-10-13T21:00:00.000-04:00",
    "due": "",
    "status": "Not started",
    "type": "Homework",
    "room": "No room, submission. Class itself: 9-354 per syllabus v9 vs 33-218 per Canvas, unresolved.",
-   "url": "https://app.notion.com/p/16-S896-RASCAL-Assignment-01-RASC-AL-Notice-of-Intent-Due-optional-3e2ea74eb7798185a03aeb8fd5d53ad9"
+   "url": "https://app.notion.com/p/DUE-16-S896-RASCAL-Assignment-01-RASC-AL-Notice-of-Intent-optional-3e2ea74eb7798185a03aeb8fd5d53ad9"
   },
   {
    "name": "16.990 Creative Teams: Lecture 10: Developing Interpersonal Skills: Giving and receiving feedback in teams",
@@ -1691,14 +2241,14 @@
    "url": "https://app.notion.com/p/STUDY-14-003-Microecon-Policy-Exam-01-T-1-Light-retrieval-pass-no-new-material-3e2ea74eb779812e83b0fe24a08c9cc1"
   },
   {
-   "name": "16.842 Systems Eng: Assignment 02: A2 Requirements Definition & Margins Allocation DUE",
+   "name": "[DUE] 16.842 Systems Eng: Assignment 02: A2 Requirements Definition & Margins Allocation",
    "code": "16.842",
-   "date": "2026-10-12",
+   "date": "2026-10-12T21:30:00.000-04:00",
    "due": "",
    "status": "Not started",
    "type": "Homework",
    "room": "Submission channel not published in the syllabus",
-   "url": "https://app.notion.com/p/16-842-Systems-Eng-Assignment-02-A2-Requirements-Definition-Margins-Allocation-DUE-3e2ea74eb77981198f10d28482f90a8d"
+   "url": "https://app.notion.com/p/DUE-16-842-Systems-Eng-Assignment-02-A2-Requirements-Definition-Margins-Allocation-3e2ea74eb77981198f10d28482f90a8d"
   },
   {
    "name": "[PREP] 16.842 Systems Eng: A2 T-3: Finish it: Requirements Definition & Margins",
@@ -1741,14 +2291,14 @@
    "url": "https://app.notion.com/p/14-003-Microecon-Policy-Recitation-Week-5-3e2ea74eb7798103a239ca0015a96642"
   },
   {
-   "name": "16.S896 RASCAL: Milestone: WORMS Hardware Selections Final and Orders Placed",
+   "name": "[DUE] 16.S896 RASCAL: Milestone: WORMS Hardware Selections Final and Orders Placed",
    "code": "16.S896",
-   "date": "2026-10-09",
+   "date": "2026-10-09T13:30:00.000-04:00",
    "due": "",
    "status": "",
    "type": "",
    "room": "No room, submission. Class itself: 9-354 per syllabus v9 vs 33-218 per Canvas, unresolved.",
-   "url": "https://app.notion.com/p/16-S896-RASCAL-Milestone-WORMS-Hardware-Selections-Final-and-Orders-Placed-3e2ea74eb7798104b933db1d0e505d70"
+   "url": "https://app.notion.com/p/DUE-16-S896-RASCAL-Milestone-WORMS-Hardware-Selections-Final-and-Orders-Placed-3e2ea74eb7798104b933db1d0e505d70"
   },
   {
    "name": "[DUE] 16.S896 RASCAL: A1: Four Pillars quad chart (individual, 5 pts)",
@@ -1761,24 +2311,14 @@
    "url": "https://app.notion.com/p/DUE-16-S896-RASCAL-A1-Four-Pillars-quad-chart-individual-5-pts-3e2ea74eb77981d18893cde261ffca8f"
   },
   {
-   "name": "14.003 Microecon & Policy: Problem Set 02: Consumer theory",
-   "code": "14.003",
-   "date": "2026-10-08T23:59:00.000-04:00",
-   "due": "",
-   "status": "",
-   "type": "",
-   "room": "Not applicable, Gradescope submission. Room not published in Canvas",
-   "url": "https://app.notion.com/p/14-003-Microecon-Policy-Problem-Set-02-Consumer-theory-3e2ea74eb77981708772d8ed9f291b0c"
-  },
-  {
    "name": "[DUE] 14.003 Microecon & Policy: Problem Set 02: Consumer theory",
    "code": "14.003",
    "date": "2026-10-08T19:00:00.000-04:00",
    "due": "",
-   "status": "Not started",
+   "status": "",
    "type": "",
-   "room": "",
-   "url": "https://app.notion.com/p/DUE-14-003-Microecon-Policy-Problem-Set-02-Consumer-theory-3e2ea74eb77981aeae4bdb5b55cc80b4"
+   "room": "Not applicable, Gradescope submission. Room not published in Canvas",
+   "url": "https://app.notion.com/p/DUE-14-003-Microecon-Policy-Problem-Set-02-Consumer-theory-3e2ea74eb77981708772d8ed9f291b0c"
   },
   {
    "name": "IDS.412 Tech & Policy: Recitation Week 5",
@@ -2291,14 +2831,14 @@
    "url": "https://app.notion.com/p/PREP-16-842-Systems-Eng-Quiz-02-Pre-Readings-handbooks-Week-1-mandatory-3e2ea74eb7798169a157d1b711057cf9"
   },
   {
-   "name": "16.S896 RASCAL: Lecture 02: Competition Info Session (special Mon session)",
+   "name": "16.S896 RASCAL: Competition Info Session (special Mon session, not a numbered class session)",
    "code": "16.S896",
    "date": "2026-09-14T17:00:00.000-04:00",
    "due": "",
    "status": "Not started",
    "type": "Lecture",
    "room": "35-225",
-   "url": "https://app.notion.com/p/16-S896-RASCAL-Lecture-02-Competition-Info-Session-special-Mon-session-3e2ea74eb77981b9947dc19442613fa6"
+   "url": "https://app.notion.com/p/16-S896-RASCAL-Competition-Info-Session-special-Mon-session-not-a-numbered-class-session-3e2ea74eb77981b9947dc19442613fa6"
   },
   {
    "name": "16.990 Creative Teams: Lecture 02: Introduction to leading teams (part one)",
@@ -3681,14 +4221,14 @@
    "url": "https://app.notion.com/p/16-842-Systems-Eng-Lecture-02-Requirements-Margins-3d5ea74eb77981a48d71fb409da4838b"
   },
   {
-   "name": "16.842 Systems Eng: Assignment 01: A1 Team Formation, Stakeholders, ConOps DUE",
+   "name": "[DUE] 16.842 Systems Eng: Assignment 01: A1 Team Formation, Stakeholders, ConOps",
    "code": "16.842",
-   "date": "2026-09-28",
+   "date": "2026-09-28T21:30:00.000-04:00",
    "due": "",
    "status": "Not started",
    "type": "Homework",
    "room": "Submission channel not published in the syllabus",
-   "url": "https://app.notion.com/p/16-842-Systems-Eng-Assignment-01-A1-Team-Formation-Stakeholders-ConOps-DUE-3d5ea74eb779817898e2c3426e6ffd5e"
+   "url": "https://app.notion.com/p/DUE-16-842-Systems-Eng-Assignment-01-A1-Team-Formation-Stakeholders-ConOps-3d5ea74eb779817898e2c3426e6ffd5e"
   },
   {
    "name": "14.003 Microecon & Policy: Lecture 02: Testing theory: The fundamental problem of causal inference",

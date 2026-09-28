@@ -1,66 +1,49 @@
 {
- "generated": "2026-09-27T21:00:17-04:00",
- "today": "2026-09-27",
+ "generated": "2026-09-28T02:51:21-04:00",
+ "today": "2026-09-28",
  "counts": {
   "total": 243,
   "open": 221,
   "done": 22,
-  "today_total": 3,
+  "today_total": 2,
   "today_done": 0,
-  "overdue": 84,
+  "overdue": 87,
   "past_meetings": 47
  },
  "today_items": [
   {
-   "name": "TSK Laundry",
-   "date": "2026-09-27T08:00:00.000-04:00",
-   "end": "2026-09-27T08:15:00.000-04:00",
+   "name": "TSK AFT T-3: taper, hydrate, confirm kit and paperwork",
+   "date": "2026-09-28T06:00:00.000-04:00",
+   "end": "2026-09-28T06:30:00.000-04:00",
    "done": false,
    "status": "Not Started",
    "type": "",
-   "meeting_type": "Personal",
+   "meeting_type": "Military",
    "priority": "",
    "energy": "",
    "location": "",
    "attendees": "",
    "agenda": "",
    "link": "",
-   "notes": "",
-   "url": "https://app.notion.com/p/TSK-Laundry-3dcea74eb77981df9d89e016f2f247ae"
+   "notes": "T-3 to the AFT on 10-01-2026. Mirrors the existing 'AFT Prep: Water + Liquid IV, sleep by 2300' pattern already in the calendar.",
+   "url": "https://app.notion.com/p/TSK-AFT-T-3-taper-hydrate-confirm-kit-and-paperwork-3dcea74eb779811fbb9fe8dea9538856"
   },
   {
-   "name": "TSK Household cleaning",
-   "date": "2026-09-27T08:15:00.000-04:00",
-   "end": "2026-09-27T08:45:00.000-04:00",
+   "name": "TSK Cut and file the day's notes into the binder",
+   "date": "2026-09-28T22:00:00.000-04:00",
+   "end": "2026-09-28T22:15:00.000-04:00",
    "done": false,
    "status": "Not Started",
-   "type": "",
-   "meeting_type": "Personal",
-   "priority": "",
-   "energy": "",
+   "type": "Task",
+   "meeting_type": "Admin",
+   "priority": "Medium",
+   "energy": "Shallow",
    "location": "",
    "attendees": "",
    "agenda": "",
    "link": "",
-   "notes": "",
-   "url": "https://app.notion.com/p/TSK-Household-cleaning-3dcea74eb77981908f26fa35d46c3741"
-  },
-  {
-   "name": "Mahjong, charcuterie and wine at Joce Wang's",
-   "date": "2026-09-27T17:00:00.000-04:00",
-   "end": "2026-09-27T20:00:00.000-04:00",
-   "done": false,
-   "status": "Not Started",
-   "type": "",
-   "meeting_type": "Personal",
-   "priority": "",
-   "energy": "",
-   "location": "",
-   "attendees": "",
-   "agenda": "",
-   "link": "",
-   "notes": "Hosted by Joce Wang. Start time 1700 was given; the 1700-2000 span is an assumption, not from the invitation. No location was given.",
-   "url": "https://app.notion.com/p/Mahjong-charcuterie-and-wine-at-Joce-Wang-s-3dcea74eb7798132b147db5352686e03"
+   "notes": "Cut the day's sheets, sort by class then by the number printed in each sheet's footer, punch and file. Unsure sheets go in the front pocket for the Sunday review. Guide: 02_Classes/BINDER-FILING-GUIDE.md",
+   "url": "https://app.notion.com/p/TSK-Cut-and-file-the-day-s-notes-into-the-binder-3dbea74eb77981799f1ae8c970761e05"
   }
  ],
  "overdue_items": [
@@ -747,57 +730,6 @@
  ],
  "upcoming": [
   {
-   "name": "TSK Laundry",
-   "date": "2026-09-27T08:00:00.000-04:00",
-   "end": "2026-09-27T08:15:00.000-04:00",
-   "done": false,
-   "status": "Not Started",
-   "type": "",
-   "meeting_type": "Personal",
-   "priority": "",
-   "energy": "",
-   "location": "",
-   "attendees": "",
-   "agenda": "",
-   "link": "",
-   "notes": "",
-   "url": "https://app.notion.com/p/TSK-Laundry-3dcea74eb77981df9d89e016f2f247ae"
-  },
-  {
-   "name": "TSK Household cleaning",
-   "date": "2026-09-27T08:15:00.000-04:00",
-   "end": "2026-09-27T08:45:00.000-04:00",
-   "done": false,
-   "status": "Not Started",
-   "type": "",
-   "meeting_type": "Personal",
-   "priority": "",
-   "energy": "",
-   "location": "",
-   "attendees": "",
-   "agenda": "",
-   "link": "",
-   "notes": "",
-   "url": "https://app.notion.com/p/TSK-Household-cleaning-3dcea74eb77981908f26fa35d46c3741"
-  },
-  {
-   "name": "Mahjong, charcuterie and wine at Joce Wang's",
-   "date": "2026-09-27T17:00:00.000-04:00",
-   "end": "2026-09-27T20:00:00.000-04:00",
-   "done": false,
-   "status": "Not Started",
-   "type": "",
-   "meeting_type": "Personal",
-   "priority": "",
-   "energy": "",
-   "location": "",
-   "attendees": "",
-   "agenda": "",
-   "link": "",
-   "notes": "Hosted by Joce Wang. Start time 1700 was given; the 1700-2000 span is an assumption, not from the invitation. No location was given.",
-   "url": "https://app.notion.com/p/Mahjong-charcuterie-and-wine-at-Joce-Wang-s-3dcea74eb7798132b147db5352686e03"
-  },
-  {
    "name": "TSK AFT T-3: taper, hydrate, confirm kit and paperwork",
    "date": "2026-09-28T06:00:00.000-04:00",
    "end": "2026-09-28T06:30:00.000-04:00",
@@ -949,14 +881,60 @@
    "link": "",
    "notes": "Prep for ESL Monthly Meeting Oct 20 presentation - Yohan presenting AI and thesis organization tool walkthrough. Due end of September.",
    "url": "https://app.notion.com/p/TSK-Complete-GitHub-Slides-AI-Thesis-Org-Tool-Walkthrough-for-ESL-Oct-20-3d0ea74eb77981b8b1a5dc98471caa90"
+  },
+  {
+   "name": "TSK Build thesis milestone tracker: backward-planned from submission",
+   "date": "2026-09-30T14:00:00.000-04:00",
+   "end": "2026-09-30T16:00:00.000-04:00",
+   "done": false,
+   "status": "Not Started",
+   "type": "Task",
+   "meeting_type": "Research",
+   "priority": "High",
+   "energy": "Deep",
+   "location": "",
+   "attendees": "",
+   "agenda": "Build the milestone schedule BACKWARD from submission, with a full month of review buffer before the deadline. Do this the day after the topic block, once a scope exists to plan against.\n\nTHE RULE: 'complete' means complete one month before the deadline, not on it. That month is not slack - it is the review window, and it is the first thing that gets eaten if it is not scheduled.\n\nBACKWARD PLAN (Feb 2027 case, thesis due 15 Jan 2027):\n  15 Jan 2027  SUBMIT\n  08 Jan       formatting, figures, references frozen\n  01 Jan       incorporate final feedback\n  15 DEC 2026  FULL DRAFT COMPLETE - one month out. Everything after this is review, not writing.\n  15 Dec       to Afreen Siddiqi (SERG) - allow 2 weeks for a real read\n  15 Dec       to Dr. Palladino (Draper) - same window, PARALLEL not sequential\n  01 Dec       results chapter done\n  15 Nov       analysis complete, figures generated\n  01 Nov       methods chapter done\n  15 Oct       literature review done\n  01 Oct       detector working on real data\n\nIf the decision lands on June 2027 instead, shift every date four months later - the shape holds.\n\nREVIEWERS - name them and ask each for a committed turnaround, in writing:\n  Afreen Siddiqi (SERG)\n  Dr. Palladino (Draper)\n  TPP thesis reader\n  AeroAstro reader (dual degree - two departments may each want a read)\n  A peer for a cold read on clarity\nReviews run in PARALLEL. Sequential reviews are what turn a month of buffer into a week.\n\nBUILD IT AS: rows in the Projects database with real Next Milestone Dates, so portfolio.html and research.html track it instead of rendering an empty schema. Every milestone gets a date AND a one-line definition of done - a milestone without one slips silently.\n\nTHE TEST: on 15 Dec, is there a document a reader could read end to end? If the honest answer is no, the schedule was fiction and needs re-cutting in November, not January.",
+   "link": "",
+   "notes": "",
+   "url": "https://app.notion.com/p/TSK-Build-thesis-milestone-tracker-backward-planned-from-submission-3d5ea74eb779810fa027c5dfbc863eb0"
+  },
+  {
+   "name": "GradEL Event 32-124",
+   "date": "2026-09-30T17:00:00.000-04:00",
+   "end": "2026-09-30T19:00:00.000-04:00",
+   "done": false,
+   "status": "",
+   "type": "Meeting",
+   "meeting_type": "",
+   "priority": "",
+   "energy": "",
+   "location": "",
+   "attendees": "",
+   "agenda": "",
+   "link": "",
+   "notes": "",
+   "url": "https://app.notion.com/p/GradEL-Event-32-124-a2c2349748ca46279ffe12557af121d7"
+  },
+  {
+   "name": "TSK Cut and file the day's notes into the binder",
+   "date": "2026-09-30T22:00:00.000-04:00",
+   "end": "2026-09-30T22:15:00.000-04:00",
+   "done": false,
+   "status": "Not Started",
+   "type": "Task",
+   "meeting_type": "Admin",
+   "priority": "Medium",
+   "energy": "Shallow",
+   "location": "",
+   "attendees": "",
+   "agenda": "",
+   "link": "",
+   "notes": "Cut the day's sheets, sort by class then by the number printed in each sheet's footer, punch and file. Unsure sheets go in the front pocket for the Sunday review. Guide: 02_Classes/BINDER-FILING-GUIDE.md",
+   "url": "https://app.notion.com/p/TSK-Cut-and-file-the-day-s-notes-into-the-binder-3dbea74eb77981f6b2b1c05c40c25235"
   }
  ],
  "history": [
-  {
-   "date": "2026-09-14",
-   "total": 7,
-   "done": 0
-  },
   {
    "date": "2026-09-15",
    "total": 7,
@@ -1020,6 +998,11 @@
   {
    "date": "2026-09-27",
    "total": 3,
+   "done": 0
+  },
+  {
+   "date": "2026-09-28",
+   "total": 2,
    "done": 0
   }
  ]
