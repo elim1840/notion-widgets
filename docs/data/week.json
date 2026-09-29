@@ -1,5 +1,5 @@
 {
- "generated": "2026-09-29T14:46:43-04:00",
+ "generated": "2026-09-29T18:48:21-04:00",
  "today": "2026-09-29",
  "monday": "2026-09-28",
  "days": [
@@ -158,18 +158,6 @@
      "url": "https://app.notion.com/p/16-842-Systems-Eng-Lecture-03-System-Thinking-3e2ea74eb779813e84b0e53e24898891"
     },
     {
-     "name": "[HW] 16.990 Creative Teams: First Hand-in Paper: Drucker Qs + Defining Events table",
-     "date": "2026-09-29T13:00:00.000-04:00",
-     "end": "2026-09-29T14:00:00.000-04:00",
-     "done": false,
-     "kind": "16.990",
-     "src": "class",
-     "location": "",
-     "type": "",
-     "meeting_type": "Class",
-     "url": "https://app.notion.com/p/HW-16-990-Creative-Teams-First-Hand-in-Paper-Drucker-Qs-Defining-Events-table-3e4ea74eb77981d3909cd5ffe48615bc"
-    },
-    {
      "name": "TSK Thesis topic: draft + submit for approval",
      "date": "2026-09-29T14:00:00.000-04:00",
      "end": "2026-09-30T16:00:00.000-04:00",
@@ -194,6 +182,18 @@
      "url": "https://app.notion.com/p/TSK-Dr-Eric-Evans-Research-Group-Monthly-Meeting-3d0ea74eb77981d39f4dd4af6dd15095"
     },
     {
+     "name": "[HW] 16.990 Creative Teams: First Hand-in Paper: Drucker Qs + Defining Events table",
+     "date": "2026-09-29T15:30:00.000-04:00",
+     "end": "2026-09-29T16:30:00.000-04:00",
+     "done": false,
+     "kind": "16.990",
+     "src": "class",
+     "location": "",
+     "type": "",
+     "meeting_type": "Class",
+     "url": "https://app.notion.com/p/HW-16-990-Creative-Teams-First-Hand-in-Paper-Drucker-Qs-Defining-Events-table-3e4ea74eb77981d3909cd5ffe48615bc"
+    },
+    {
      "name": "TSK Decide: February 2027 or June 2027 degree?",
      "date": "2026-09-29T16:00:00.000-04:00",
      "end": "2026-09-29T16:30:00.000-04:00",
@@ -206,21 +206,9 @@
      "url": "https://app.notion.com/p/TSK-Decide-February-2027-or-June-2027-degree-3d5ea74eb77981bdbe65de922228e5a3"
     },
     {
-     "name": "TSK SERG Meeting",
-     "date": "2026-09-29T17:00:00.000-04:00",
-     "end": "2026-09-29T18:00:00.000-04:00",
-     "done": false,
-     "kind": "Research",
-     "src": "task",
-     "location": "33-206 / Zoom: https://mit.zoom.us/j/6850762634",
-     "type": "Task",
-     "meeting_type": "Research",
-     "url": "https://app.notion.com/p/TSK-SERG-Meeting-3d0ea74eb7798153aa03ec5ade9fa143"
-    },
-    {
      "name": "[PREP] 16.990 Creative Teams: First Hand-in Paper T-3: Finish it: tighten both pages, check against the brief",
-     "date": "2026-09-29T18:00:00.000-04:00",
-     "end": "2026-09-29T19:30:00.000-04:00",
+     "date": "2026-09-29T17:00:00.000-04:00",
+     "end": "2026-09-29T18:30:00.000-04:00",
      "done": false,
      "kind": "16.990",
      "src": "class",
@@ -228,6 +216,18 @@
      "type": "",
      "meeting_type": "Class",
      "url": "https://app.notion.com/p/PREP-16-990-Creative-Teams-First-Hand-in-Paper-T-3-Finish-it-tighten-both-pages-check-against-t-3e9ea74eb77981a9a98ed39bf85bdd25"
+    },
+    {
+     "name": "[READ] 14.003 Microecon & Policy: Prep: Lecture 07: IRETA (2014) + Doleac, Mukherjee & Schnell (2018)",
+     "date": "2026-09-29T18:30:00.000-04:00",
+     "end": "2026-09-29T19:30:00.000-04:00",
+     "done": false,
+     "kind": "14.003",
+     "src": "class",
+     "location": "",
+     "type": "",
+     "meeting_type": "Class",
+     "url": "https://app.notion.com/p/READ-14-003-Microecon-Policy-Prep-Lecture-07-IRETA-2014-Doleac-Mukherjee-Schnell-2018-3eaea74eb779815b8526e088030dcdf0"
     },
     {
      "name": "14.003 Office Hours \u2014 Cristine von Dessauer",
@@ -252,6 +252,30 @@
      "type": "",
      "meeting_type": "Class",
      "url": "https://app.notion.com/p/READ-16-990-Creative-Teams-Prep-Lecture-07-Ericksen-Dyer-2004-Right-from-the-Start-pp-447-4-3e9ea74eb77981318c96cf01f79e75f7"
+    },
+    {
+     "name": "[READ] IDS.412 Tech & Policy: Prep: Lecture 07 pt1: Mazzucato (2016) Market fixing to market-creating",
+     "date": "2026-09-29T20:15:00.000-04:00",
+     "end": "2026-09-29T20:50:00.000-04:00",
+     "done": false,
+     "kind": "IDS.412",
+     "src": "class",
+     "location": "",
+     "type": "",
+     "meeting_type": "Class",
+     "url": "https://app.notion.com/p/READ-IDS-412-Tech-Policy-Prep-Lecture-07-pt1-Mazzucato-2016-Market-fixing-to-market-creating-3eaea74eb77981528c8dc8fe040e6e1b"
+    },
+    {
+     "name": "[READ] IDS.412 Tech & Policy: Prep: Lecture 07 pt2: Pfotenhauer & Jasanoff (2017) Panacea or diagnosis?",
+     "date": "2026-09-29T21:30:00.000-04:00",
+     "end": "2026-09-29T22:30:00.000-04:00",
+     "done": false,
+     "kind": "IDS.412",
+     "src": "class",
+     "location": "",
+     "type": "",
+     "meeting_type": "Class",
+     "url": "https://app.notion.com/p/READ-IDS-412-Tech-Policy-Prep-Lecture-07-pt2-Pfotenhauer-Jasanoff-2017-Panacea-or-diagnosi-3eaea74eb7798125acc4eabb065825bc"
     },
     {
      "name": "TSK Cut and file the day's notes into the binder",
@@ -634,5 +658,5 @@
    ]
   }
  ],
- "total": 49
+ "total": 51
 }

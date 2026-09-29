@@ -1,11 +1,11 @@
 {
- "generated": "2026-09-29T14:46:43-04:00",
+ "generated": "2026-09-29T18:48:21-04:00",
  "today": "2026-09-29",
  "counts": {
-  "total": 246,
-  "open": 224,
+  "total": 245,
+  "open": 223,
   "done": 22,
-  "today_total": 5,
+  "today_total": 4,
   "today_done": 0,
   "overdue": 89,
   "past_meetings": 47
@@ -61,23 +61,6 @@
    "link": "",
    "notes": "",
    "url": "https://app.notion.com/p/TSK-Decide-February-2027-or-June-2027-degree-3d5ea74eb77981bdbe65de922228e5a3"
-  },
-  {
-   "name": "TSK SERG Meeting",
-   "date": "2026-09-29T17:00:00.000-04:00",
-   "end": "2026-09-29T18:00:00.000-04:00",
-   "done": false,
-   "status": "Not Started",
-   "type": "Task",
-   "meeting_type": "Research",
-   "priority": "",
-   "energy": "",
-   "location": "33-206 / Zoom: https://mit.zoom.us/j/6850762634",
-   "attendees": "",
-   "agenda": "",
-   "link": "",
-   "notes": "",
-   "url": "https://app.notion.com/p/TSK-SERG-Meeting-3d0ea74eb7798153aa03ec5ade9fa143"
   },
   {
    "name": "TSK Cut and file the day's notes into the binder",
@@ -832,23 +815,6 @@
    "url": "https://app.notion.com/p/TSK-Decide-February-2027-or-June-2027-degree-3d5ea74eb77981bdbe65de922228e5a3"
   },
   {
-   "name": "TSK SERG Meeting",
-   "date": "2026-09-29T17:00:00.000-04:00",
-   "end": "2026-09-29T18:00:00.000-04:00",
-   "done": false,
-   "status": "Not Started",
-   "type": "Task",
-   "meeting_type": "Research",
-   "priority": "",
-   "energy": "",
-   "location": "33-206 / Zoom: https://mit.zoom.us/j/6850762634",
-   "attendees": "",
-   "agenda": "",
-   "link": "",
-   "notes": "",
-   "url": "https://app.notion.com/p/TSK-SERG-Meeting-3d0ea74eb7798153aa03ec5ade9fa143"
-  },
-  {
    "name": "TSK Cut and file the day's notes into the binder",
    "date": "2026-09-29T22:00:00.000-04:00",
    "end": "2026-09-29T22:15:00.000-04:00",
@@ -983,6 +949,23 @@
    "link": "",
    "notes": "Assignment open on the TPP Student Resources Canvas site (Barb, TPP27 email). Submit by Fri 10/09. Long Thesis Proposal assignment will be posted soon. Sun block: complete rough draft against the outline.",
    "url": "https://app.notion.com/p/TSK-TPP-Short-Thesis-Proposal-full-rough-draft-3e5ea74eb77981c9a985c0e83aee4a56"
+  },
+  {
+   "name": "TSK Cut and file the day's notes into the binder",
+   "date": "2026-10-02T22:00:00.000-04:00",
+   "end": "2026-10-02T22:15:00.000-04:00",
+   "done": false,
+   "status": "Not Started",
+   "type": "Task",
+   "meeting_type": "Admin",
+   "priority": "Medium",
+   "energy": "Shallow",
+   "location": "",
+   "attendees": "",
+   "agenda": "",
+   "link": "",
+   "notes": "Cut the day's sheets, sort by class then by the number printed in each sheet's footer, punch and file. Unsure sheets go in the front pocket for the Sunday review. Guide: 02_Classes/BINDER-FILING-GUIDE.md",
+   "url": "https://app.notion.com/p/TSK-Cut-and-file-the-day-s-notes-into-the-binder-3dbea74eb779813ab282e3511ee6f77b"
   }
  ],
  "history": [
@@ -1053,7 +1036,7 @@
   },
   {
    "date": "2026-09-29",
-   "total": 5,
+   "total": 4,
    "done": 0
   }
  ]
