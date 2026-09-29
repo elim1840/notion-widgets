@@ -1,5 +1,5 @@
 {
- "generated": "2026-09-29T09:19:47-04:00",
+ "generated": "2026-09-29T14:46:43-04:00",
  "today": "2026-09-29",
  "counts": {
   "total": 246,
@@ -11,23 +11,6 @@
   "past_meetings": 47
  },
  "today_items": [
-  {
-   "name": "TSK Dr. Eric Evans Research Group Monthly Meeting",
-   "date": "2026-09-29T12:00:00.000-04:00",
-   "end": "2026-09-29T13:00:00.000-04:00",
-   "done": false,
-   "status": "Not Started",
-   "type": "Task",
-   "meeting_type": "Dr. Eric Evans (MIT)",
-   "priority": "",
-   "energy": "",
-   "location": "",
-   "attendees": "",
-   "agenda": "",
-   "link": "",
-   "notes": "Recurring: last Tuesday of each month, 12pm. Research updates, feedback, cross-effort coordination, related work in AeroAstro/industry. Lunch provided. Email Dr. Evans directly for conflicts or food allergies/preferences.",
-   "url": "https://app.notion.com/p/TSK-Dr-Eric-Evans-Research-Group-Monthly-Meeting-3d0ea74eb77981d39f4dd4af6dd15095"
-  },
   {
    "name": "TSK Thesis topic: draft + submit for approval",
    "date": "2026-09-29T14:00:00.000-04:00",
@@ -44,6 +27,23 @@
    "link": "",
    "notes": "",
    "url": "https://app.notion.com/p/TSK-Thesis-topic-draft-submit-for-approval-3d5ea74eb77981e5b5d4c7c72ec94a64"
+  },
+  {
+   "name": "TSK Dr. Eric Evans Research Group Monthly Meeting",
+   "date": "2026-09-29T15:00:00.000-04:00",
+   "end": "2026-09-29T16:00:00.000-04:00",
+   "done": false,
+   "status": "Not Started",
+   "type": "Task",
+   "meeting_type": "Dr. Eric Evans (MIT)",
+   "priority": "",
+   "energy": "",
+   "location": "",
+   "attendees": "",
+   "agenda": "",
+   "link": "",
+   "notes": "Recurring: last Tuesday of each month, 12pm. Research updates, feedback, cross-effort coordination, related work in AeroAstro/industry. Lunch provided. Email Dr. Evans directly for conflicts or food allergies/preferences.",
+   "url": "https://app.notion.com/p/TSK-Dr-Eric-Evans-Research-Group-Monthly-Meeting-3d0ea74eb77981d39f4dd4af6dd15095"
   },
   {
    "name": "TSK Decide: February 2027 or June 2027 degree?",
@@ -781,23 +781,6 @@
  ],
  "upcoming": [
   {
-   "name": "TSK Dr. Eric Evans Research Group Monthly Meeting",
-   "date": "2026-09-29T12:00:00.000-04:00",
-   "end": "2026-09-29T13:00:00.000-04:00",
-   "done": false,
-   "status": "Not Started",
-   "type": "Task",
-   "meeting_type": "Dr. Eric Evans (MIT)",
-   "priority": "",
-   "energy": "",
-   "location": "",
-   "attendees": "",
-   "agenda": "",
-   "link": "",
-   "notes": "Recurring: last Tuesday of each month, 12pm. Research updates, feedback, cross-effort coordination, related work in AeroAstro/industry. Lunch provided. Email Dr. Evans directly for conflicts or food allergies/preferences.",
-   "url": "https://app.notion.com/p/TSK-Dr-Eric-Evans-Research-Group-Monthly-Meeting-3d0ea74eb77981d39f4dd4af6dd15095"
-  },
-  {
    "name": "TSK Thesis topic: draft + submit for approval",
    "date": "2026-09-29T14:00:00.000-04:00",
    "end": "2026-09-30T16:00:00.000-04:00",
@@ -813,6 +796,23 @@
    "link": "",
    "notes": "",
    "url": "https://app.notion.com/p/TSK-Thesis-topic-draft-submit-for-approval-3d5ea74eb77981e5b5d4c7c72ec94a64"
+  },
+  {
+   "name": "TSK Dr. Eric Evans Research Group Monthly Meeting",
+   "date": "2026-09-29T15:00:00.000-04:00",
+   "end": "2026-09-29T16:00:00.000-04:00",
+   "done": false,
+   "status": "Not Started",
+   "type": "Task",
+   "meeting_type": "Dr. Eric Evans (MIT)",
+   "priority": "",
+   "energy": "",
+   "location": "",
+   "attendees": "",
+   "agenda": "",
+   "link": "",
+   "notes": "Recurring: last Tuesday of each month, 12pm. Research updates, feedback, cross-effort coordination, related work in AeroAstro/industry. Lunch provided. Email Dr. Evans directly for conflicts or food allergies/preferences.",
+   "url": "https://app.notion.com/p/TSK-Dr-Eric-Evans-Research-Group-Monthly-Meeting-3d0ea74eb77981d39f4dd4af6dd15095"
   },
   {
    "name": "TSK Decide: February 2027 or June 2027 degree?",
