@@ -1,5 +1,5 @@
 {
- "generated": "2026-09-28T17:01:56-04:00",
+ "generated": "2026-09-28T20:58:10-04:00",
  "today": "2026-09-28",
  "monday": "2026-09-28",
  "days": [
@@ -106,7 +106,7 @@
     {
      "name": "[DUE] 16.842 Systems Eng: Assignment 01: A1 Team Formation, Stakeholders, ConOps",
      "date": "2026-09-28T21:30:00.000-04:00",
-     "end": "2026-09-28T21:45:00.000-04:00",
+     "end": "2026-09-28T22:00:00.000-04:00",
      "done": false,
      "kind": "16.842",
      "src": "class",
@@ -114,18 +114,6 @@
      "type": "Homework",
      "meeting_type": "Class",
      "url": "https://app.notion.com/p/DUE-16-842-Systems-Eng-Assignment-01-A1-Team-Formation-Stakeholders-ConOps-3d5ea74eb779817898e2c3426e6ffd5e"
-    },
-    {
-     "name": "[DUE] 16.842 Systems Eng: Pre-Viewings Week 3 (MITx modules + Apply exercises, quiz)",
-     "date": "2026-09-28T21:45:00.000-04:00",
-     "end": "2026-09-28T22:00:00.000-04:00",
-     "done": false,
-     "kind": "16.842",
-     "src": "class",
-     "location": "",
-     "type": "",
-     "meeting_type": "Class",
-     "url": "https://app.notion.com/p/DUE-16-842-Systems-Eng-Pre-Viewings-Week-3-MITx-modules-Apply-exercises-quiz-3e9ea74eb7798195b7a3f1cf6b98679e"
     },
     {
      "name": "TSK Cut and file the day's notes into the binder",
@@ -146,18 +134,6 @@
    "is_today": false,
    "items": [
     {
-     "name": "Go Early and Network since you have to leave early for class",
-     "date": "2026-09-29T07:30:00.000-04:00",
-     "end": "2026-09-29T08:00:00.000-04:00",
-     "done": false,
-     "kind": "Meeting",
-     "src": "task",
-     "location": "",
-     "type": "Meeting",
-     "meeting_type": "",
-     "url": "https://app.notion.com/p/Go-Early-and-Network-since-you-have-to-leave-early-for-class-d7dbee31c4864c14b2f577442c74830f"
-    },
-    {
      "name": "[STUDY] 14.003 Microecon & Policy: Exam 01 T-14: Closed-book retrieval: second half, same method",
      "date": "2026-09-29T08:00:00.000-04:00",
      "end": "2026-09-29T10:00:00.000-04:00",
@@ -168,18 +144,6 @@
      "type": "",
      "meeting_type": "Class",
      "url": "https://app.notion.com/p/STUDY-14-003-Microecon-Policy-Exam-01-T-14-Closed-book-retrieval-second-half-same-method-3e2ea74eb779814b95f9fa7602288712"
-    },
-    {
-     "name": "[HW] 16.990 Creative Teams: Autobiographical Paper: send feedback-story requests to 15-20 people",
-     "date": "2026-09-29T10:00:00.000-04:00",
-     "end": "2026-09-29T10:45:00.000-04:00",
-     "done": false,
-     "kind": "16.990",
-     "src": "class",
-     "location": "",
-     "type": "",
-     "meeting_type": "Class",
-     "url": "https://app.notion.com/p/HW-16-990-Creative-Teams-Autobiographical-Paper-send-feedback-story-requests-to-15-20-people-3e9ea74eb77981868f0fd8db434830fd"
     },
     {
      "name": "16.842 Systems Eng: Lecture 03: System Thinking",
@@ -228,6 +192,18 @@
      "type": "Task",
      "meeting_type": "Research",
      "url": "https://app.notion.com/p/TSK-Thesis-topic-draft-submit-for-approval-3d5ea74eb77981e5b5d4c7c72ec94a64"
+    },
+    {
+     "name": "[HW] 16.990 Creative Teams: Autobiographical Paper: send feedback-story requests to 15-20 people Make Google Form and Send to Friends",
+     "date": "2026-09-29T14:00:00.000-04:00",
+     "end": "2026-09-29T14:45:00.000-04:00",
+     "done": false,
+     "kind": "16.990",
+     "src": "class",
+     "location": "",
+     "type": "",
+     "meeting_type": "Class",
+     "url": "https://app.notion.com/p/HW-16-990-Creative-Teams-Autobiographical-Paper-send-feedback-story-requests-to-15-20-people-Make-3e9ea74eb77981868f0fd8db434830fd"
     },
     {
      "name": "TSK Decide: February 2027 or June 2027 degree?",
@@ -300,6 +276,18 @@
      "type": "Task",
      "meeting_type": "Admin",
      "url": "https://app.notion.com/p/TSK-Cut-and-file-the-day-s-notes-into-the-binder-3dbea74eb77981359fd7e110bd344109"
+    },
+    {
+     "name": "[DUE] 16.842 Systems Eng: Pre-Viewings Week 3 (MITx modules + Apply exercises, quiz)",
+     "date": "2026-09-29",
+     "end": "",
+     "done": false,
+     "kind": "16.842",
+     "src": "class",
+     "location": "",
+     "type": "",
+     "meeting_type": "Class",
+     "url": "https://app.notion.com/p/DUE-16-842-Systems-Eng-Pre-Viewings-Week-3-MITx-modules-Apply-exercises-quiz-3e9ea74eb7798195b7a3f1cf6b98679e"
     }
    ]
   },
@@ -600,7 +588,20 @@
   {
    "date": "2026-10-03",
    "is_today": false,
-   "items": []
+   "items": [
+    {
+     "name": "TSK ESL Lab Meeting PowerPoint: AI and Thesis Organization Tool Walkthrough",
+     "date": "2026-10-03T10:00:00.000-04:00",
+     "end": "2026-10-03T12:00:00.000-04:00",
+     "done": false,
+     "kind": "ESL",
+     "src": "task",
+     "location": "",
+     "type": "Task",
+     "meeting_type": "ESL",
+     "url": "https://app.notion.com/p/TSK-ESL-Lab-Meeting-PowerPoint-AI-and-Thesis-Organization-Tool-Walkthrough-3e9ea74eb77981099bfdd6f6a9a8bf51"
+    }
+   ]
   },
   {
    "date": "2026-10-04",
@@ -617,9 +618,21 @@
      "type": "",
      "meeting_type": "Personal",
      "url": "https://app.notion.com/p/TSK-Household-cleaning-3dcea74eb77981c09808ee41d66d6022"
+    },
+    {
+     "name": "TSK TPP Seminar presentation: build the deck",
+     "date": "2026-10-04T10:00:00.000-04:00",
+     "end": "2026-10-04T12:00:00.000-04:00",
+     "done": false,
+     "kind": "TPP",
+     "src": "task",
+     "location": "",
+     "type": "Task",
+     "meeting_type": "TPP",
+     "url": "https://app.notion.com/p/TSK-TPP-Seminar-presentation-build-the-deck-3e9ea74eb77981b09754da1baf505b4e"
     }
    ]
   }
  ],
- "total": 48
+ "total": 49
 }

@@ -1,9 +1,9 @@
 {
- "generated": "2026-09-28T17:01:56-04:00",
+ "generated": "2026-09-28T20:58:10-04:00",
  "today": "2026-09-28",
  "counts": {
-  "total": 243,
-  "open": 221,
+  "total": 246,
+  "open": 224,
   "done": 22,
   "today_total": 2,
   "today_done": 0,
@@ -764,23 +764,6 @@
    "url": "https://app.notion.com/p/TSK-Cut-and-file-the-day-s-notes-into-the-binder-3dbea74eb77981799f1ae8c970761e05"
   },
   {
-   "name": "Go Early and Network since you have to leave early for class",
-   "date": "2026-09-29T07:30:00.000-04:00",
-   "end": "2026-09-29T08:00:00.000-04:00",
-   "done": false,
-   "status": "",
-   "type": "Meeting",
-   "meeting_type": "",
-   "priority": "",
-   "energy": "",
-   "location": "",
-   "attendees": "",
-   "agenda": "",
-   "link": "",
-   "notes": "",
-   "url": "https://app.notion.com/p/Go-Early-and-Network-since-you-have-to-leave-early-for-class-d7dbee31c4864c14b2f577442c74830f"
-  },
-  {
    "name": "TSK Dr. Eric Evans Research Group Monthly Meeting",
    "date": "2026-09-29T12:00:00.000-04:00",
    "end": "2026-09-29T13:00:00.000-04:00",
@@ -932,6 +915,23 @@
    "link": "",
    "notes": "Cut the day's sheets, sort by class then by the number printed in each sheet's footer, punch and file. Unsure sheets go in the front pocket for the Sunday review. Guide: 02_Classes/BINDER-FILING-GUIDE.md",
    "url": "https://app.notion.com/p/TSK-Cut-and-file-the-day-s-notes-into-the-binder-3dbea74eb77981f6b2b1c05c40c25235"
+  },
+  {
+   "name": "TSK Complete AFT requirement (Army Fitness Test)",
+   "date": "2026-10-01T08:00:00.000-04:00",
+   "end": "2026-10-01T09:30:00.000-04:00",
+   "done": false,
+   "status": "Not Started",
+   "type": "",
+   "meeting_type": "Military",
+   "priority": "",
+   "energy": "",
+   "location": "",
+   "attendees": "",
+   "agenda": "",
+   "link": "",
+   "notes": "Test date 10-01-2026, set by Yohan 09-14-2026. The requirement must be complete before 10-29-2026; doing it on 10-01 clears it four weeks early instead of on the last possible day.",
+   "url": "https://app.notion.com/p/TSK-Complete-AFT-requirement-Army-Fitness-Test-3dcea74eb77981fa8da6f042e2bb35f7"
   }
  ],
  "history": [
