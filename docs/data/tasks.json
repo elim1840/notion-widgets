@@ -1,37 +1,88 @@
 {
- "generated": "2026-09-28T20:58:10-04:00",
- "today": "2026-09-28",
+ "generated": "2026-09-29T02:40:30-04:00",
+ "today": "2026-09-29",
  "counts": {
   "total": 246,
   "open": 224,
   "done": 22,
-  "today_total": 2,
+  "today_total": 5,
   "today_done": 0,
-  "overdue": 87,
+  "overdue": 89,
   "past_meetings": 47
  },
  "today_items": [
   {
-   "name": "TSK AFT T-3: taper, hydrate, confirm kit and paperwork",
-   "date": "2026-09-28T06:00:00.000-04:00",
-   "end": "2026-09-28T06:30:00.000-04:00",
+   "name": "TSK Dr. Eric Evans Research Group Monthly Meeting",
+   "date": "2026-09-29T12:00:00.000-04:00",
+   "end": "2026-09-29T13:00:00.000-04:00",
    "done": false,
    "status": "Not Started",
-   "type": "",
-   "meeting_type": "Military",
+   "type": "Task",
+   "meeting_type": "Dr. Eric Evans (MIT)",
    "priority": "",
    "energy": "",
    "location": "",
    "attendees": "",
    "agenda": "",
    "link": "",
-   "notes": "T-3 to the AFT on 10-01-2026. Mirrors the existing 'AFT Prep: Water + Liquid IV, sleep by 2300' pattern already in the calendar.",
-   "url": "https://app.notion.com/p/TSK-AFT-T-3-taper-hydrate-confirm-kit-and-paperwork-3dcea74eb779811fbb9fe8dea9538856"
+   "notes": "Recurring: last Tuesday of each month, 12pm. Research updates, feedback, cross-effort coordination, related work in AeroAstro/industry. Lunch provided. Email Dr. Evans directly for conflicts or food allergies/preferences.",
+   "url": "https://app.notion.com/p/TSK-Dr-Eric-Evans-Research-Group-Monthly-Meeting-3d0ea74eb77981d39f4dd4af6dd15095"
+  },
+  {
+   "name": "TSK Thesis topic: draft + submit for approval",
+   "date": "2026-09-29T14:00:00.000-04:00",
+   "end": "2026-09-30T16:00:00.000-04:00",
+   "done": false,
+   "status": "Not Started",
+   "type": "Task",
+   "meeting_type": "Research",
+   "priority": "High",
+   "energy": "Deep",
+   "location": "",
+   "attendees": "",
+   "agenda": "Two-hour block, deliberately BEFORE the registrar deadlines so the topic is settled while there is still room to change course.\n\nWHY NOW, not December: THESIS-SCOPE.md is your recorded blocker, and an undefined scope is what makes every other thesis task un-startable. A topic on paper turns 'work on thesis' into specific next actions.\n\nMIT deadlines this sits against:\n  Add Date          Fri 09 Oct 2026 \u2014 last day to add full-term subjects\n  DROP DATE         Wed 18 Nov 2026 \u2014 last day to cancel full-term subjects\n  Thesis title due  Fri 12 Dec 2026 \u2014 submit/change advanced degree thesis title for a February degree, $85 late fee after (verify against your dept's own deadline, which can be earlier)\n  Thesis due        Fri 15 Jan 2027\n\nOutput of this block: one page \u2014 title, the question, why it matters, what data, what method, and what a defensible result looks like. Then send it to Afreen Siddiqi (SERG) and Dr. Palladino (Draper) for sign-off.\n\nDeciding the topic by end of September means the 18 Nov drop date is a real option if the term load turns out wrong. Deciding in December means it is not.",
+   "link": "",
+   "notes": "",
+   "url": "https://app.notion.com/p/TSK-Thesis-topic-draft-submit-for-approval-3d5ea74eb77981e5b5d4c7c72ec94a64"
+  },
+  {
+   "name": "TSK Decide: February 2027 or June 2027 degree?",
+   "date": "2026-09-29T16:00:00.000-04:00",
+   "end": "2026-09-29T16:30:00.000-04:00",
+   "done": false,
+   "status": "Not Started",
+   "type": "Task",
+   "meeting_type": "Research",
+   "priority": "High",
+   "energy": "Deep",
+   "location": "",
+   "attendees": "",
+   "agenda": "Half an hour right after the thesis topic block on the same afternoon.\n\nThis single decision re-anchors everything: thesis due date, title deadline, countdown widgets, how much runway the scope can assume, and whether the Feb dates in Thesis-Timeline.md are live or dead.\n\nFeb 2027 = thesis in by 15 Jan, ~130 days from now.\nJun 2027 = degree list application 7 May 2027, roughly four more months of work.\n\nWorth asking Afreen Siddiqi and Dr. Palladino which is realistic for the scope you land on in the topic block, rather than deciding alone.",
+   "link": "",
+   "notes": "",
+   "url": "https://app.notion.com/p/TSK-Decide-February-2027-or-June-2027-degree-3d5ea74eb77981bdbe65de922228e5a3"
+  },
+  {
+   "name": "TSK SERG Meeting",
+   "date": "2026-09-29T17:00:00.000-04:00",
+   "end": "2026-09-29T18:00:00.000-04:00",
+   "done": false,
+   "status": "Not Started",
+   "type": "Task",
+   "meeting_type": "Research",
+   "priority": "",
+   "energy": "",
+   "location": "33-206 / Zoom: https://mit.zoom.us/j/6850762634",
+   "attendees": "",
+   "agenda": "",
+   "link": "",
+   "notes": "",
+   "url": "https://app.notion.com/p/TSK-SERG-Meeting-3d0ea74eb7798153aa03ec5ade9fa143"
   },
   {
    "name": "TSK Cut and file the day's notes into the binder",
-   "date": "2026-09-28T22:00:00.000-04:00",
-   "end": "2026-09-28T22:15:00.000-04:00",
+   "date": "2026-09-29T22:00:00.000-04:00",
+   "end": "2026-09-29T22:15:00.000-04:00",
    "done": false,
    "status": "Not Started",
    "type": "Task",
@@ -43,7 +94,7 @@
    "agenda": "",
    "link": "",
    "notes": "Cut the day's sheets, sort by class then by the number printed in each sheet's footer, punch and file. Unsure sheets go in the front pocket for the Sunday review. Guide: 02_Classes/BINDER-FILING-GUIDE.md",
-   "url": "https://app.notion.com/p/TSK-Cut-and-file-the-day-s-notes-into-the-binder-3dbea74eb77981799f1ae8c970761e05"
+   "url": "https://app.notion.com/p/TSK-Cut-and-file-the-day-s-notes-into-the-binder-3dbea74eb77981359fd7e110bd344109"
   }
  ],
  "overdue_items": [
@@ -730,40 +781,6 @@
  ],
  "upcoming": [
   {
-   "name": "TSK AFT T-3: taper, hydrate, confirm kit and paperwork",
-   "date": "2026-09-28T06:00:00.000-04:00",
-   "end": "2026-09-28T06:30:00.000-04:00",
-   "done": false,
-   "status": "Not Started",
-   "type": "",
-   "meeting_type": "Military",
-   "priority": "",
-   "energy": "",
-   "location": "",
-   "attendees": "",
-   "agenda": "",
-   "link": "",
-   "notes": "T-3 to the AFT on 10-01-2026. Mirrors the existing 'AFT Prep: Water + Liquid IV, sleep by 2300' pattern already in the calendar.",
-   "url": "https://app.notion.com/p/TSK-AFT-T-3-taper-hydrate-confirm-kit-and-paperwork-3dcea74eb779811fbb9fe8dea9538856"
-  },
-  {
-   "name": "TSK Cut and file the day's notes into the binder",
-   "date": "2026-09-28T22:00:00.000-04:00",
-   "end": "2026-09-28T22:15:00.000-04:00",
-   "done": false,
-   "status": "Not Started",
-   "type": "Task",
-   "meeting_type": "Admin",
-   "priority": "Medium",
-   "energy": "Shallow",
-   "location": "",
-   "attendees": "",
-   "agenda": "",
-   "link": "",
-   "notes": "Cut the day's sheets, sort by class then by the number printed in each sheet's footer, punch and file. Unsure sheets go in the front pocket for the Sunday review. Guide: 02_Classes/BINDER-FILING-GUIDE.md",
-   "url": "https://app.notion.com/p/TSK-Cut-and-file-the-day-s-notes-into-the-binder-3dbea74eb77981799f1ae8c970761e05"
-  },
-  {
    "name": "TSK Dr. Eric Evans Research Group Monthly Meeting",
    "date": "2026-09-29T12:00:00.000-04:00",
    "end": "2026-09-29T13:00:00.000-04:00",
@@ -932,14 +949,43 @@
    "link": "",
    "notes": "Test date 10-01-2026, set by Yohan 09-14-2026. The requirement must be complete before 10-29-2026; doing it on 10-01 clears it four weeks early instead of on the last possible day.",
    "url": "https://app.notion.com/p/TSK-Complete-AFT-requirement-Army-Fitness-Test-3dcea74eb77981fa8da6f042e2bb35f7"
+  },
+  {
+   "name": "TSK Cut and file the day's notes into the binder",
+   "date": "2026-10-01T22:00:00.000-04:00",
+   "end": "2026-10-01T22:15:00.000-04:00",
+   "done": false,
+   "status": "Not Started",
+   "type": "Task",
+   "meeting_type": "Admin",
+   "priority": "Medium",
+   "energy": "Shallow",
+   "location": "",
+   "attendees": "",
+   "agenda": "",
+   "link": "",
+   "notes": "Cut the day's sheets, sort by class then by the number printed in each sheet's footer, punch and file. Unsure sheets go in the front pocket for the Sunday review. Guide: 02_Classes/BINDER-FILING-GUIDE.md",
+   "url": "https://app.notion.com/p/TSK-Cut-and-file-the-day-s-notes-into-the-binder-3dbea74eb779819fbd17cd80456fb1d8"
+  },
+  {
+   "name": "TSK TPP Short Thesis Proposal: full rough draft",
+   "date": "2026-10-02T10:00:00.000-04:00",
+   "end": "2026-10-02T12:00:00.000-04:00",
+   "done": false,
+   "status": "This Week",
+   "type": "Task",
+   "meeting_type": "TPP",
+   "priority": "High",
+   "energy": "Deep",
+   "location": "",
+   "attendees": "",
+   "agenda": "",
+   "link": "",
+   "notes": "Assignment open on the TPP Student Resources Canvas site (Barb, TPP27 email). Submit by Fri 10/09. Long Thesis Proposal assignment will be posted soon. Sun block: complete rough draft against the outline.",
+   "url": "https://app.notion.com/p/TSK-TPP-Short-Thesis-Proposal-full-rough-draft-3e5ea74eb77981c9a985c0e83aee4a56"
   }
  ],
  "history": [
-  {
-   "date": "2026-09-15",
-   "total": 7,
-   "done": 4
-  },
   {
    "date": "2026-09-16",
    "total": 9,
@@ -1003,6 +1049,11 @@
   {
    "date": "2026-09-28",
    "total": 2,
+   "done": 0
+  },
+  {
+   "date": "2026-09-29",
+   "total": 5,
    "done": 0
   }
  ]

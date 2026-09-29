@@ -1,11 +1,11 @@
 {
- "generated": "2026-09-28T20:58:10-04:00",
- "today": "2026-09-28",
+ "generated": "2026-09-29T02:40:30-04:00",
+ "today": "2026-09-29",
  "monday": "2026-09-28",
  "days": [
   {
    "date": "2026-09-28",
-   "is_today": true,
+   "is_today": false,
    "items": [
     {
      "name": "TSK AFT T-3: taper, hydrate, confirm kit and paperwork",
@@ -131,19 +131,19 @@
   },
   {
    "date": "2026-09-29",
-   "is_today": false,
+   "is_today": true,
    "items": [
     {
-     "name": "[STUDY] 14.003 Microecon & Policy: Exam 01 T-14: Closed-book retrieval: second half, same method",
-     "date": "2026-09-29T08:00:00.000-04:00",
-     "end": "2026-09-29T10:00:00.000-04:00",
+     "name": "[HW] 16.990 Creative Teams: Autobiographical Paper: send feedback-story requests to 15-20 people Make Google Form and Send to Friends",
+     "date": "2026-09-29T09:45:00.000-04:00",
+     "end": "2026-09-29T10:30:00.000-04:00",
      "done": false,
-     "kind": "14.003",
+     "kind": "16.990",
      "src": "class",
      "location": "",
      "type": "",
      "meeting_type": "Class",
-     "url": "https://app.notion.com/p/STUDY-14-003-Microecon-Policy-Exam-01-T-14-Closed-book-retrieval-second-half-same-method-3e2ea74eb779814b95f9fa7602288712"
+     "url": "https://app.notion.com/p/HW-16-990-Creative-Teams-Autobiographical-Paper-send-feedback-story-requests-to-15-20-people-Make-3e9ea74eb77981868f0fd8db434830fd"
     },
     {
      "name": "16.842 Systems Eng: Lecture 03: System Thinking",
@@ -192,18 +192,6 @@
      "type": "Task",
      "meeting_type": "Research",
      "url": "https://app.notion.com/p/TSK-Thesis-topic-draft-submit-for-approval-3d5ea74eb77981e5b5d4c7c72ec94a64"
-    },
-    {
-     "name": "[HW] 16.990 Creative Teams: Autobiographical Paper: send feedback-story requests to 15-20 people Make Google Form and Send to Friends",
-     "date": "2026-09-29T14:00:00.000-04:00",
-     "end": "2026-09-29T14:45:00.000-04:00",
-     "done": false,
-     "kind": "16.990",
-     "src": "class",
-     "location": "",
-     "type": "",
-     "meeting_type": "Class",
-     "url": "https://app.notion.com/p/HW-16-990-Creative-Teams-Autobiographical-Paper-send-feedback-story-requests-to-15-20-people-Make-3e9ea74eb77981868f0fd8db434830fd"
     },
     {
      "name": "TSK Decide: February 2027 or June 2027 degree?",
@@ -444,6 +432,18 @@
      "type": "",
      "meeting_type": "Military",
      "url": "https://app.notion.com/p/TSK-Complete-AFT-requirement-Army-Fitness-Test-3dcea74eb77981fa8da6f042e2bb35f7"
+    },
+    {
+     "name": "[STUDY] 14.003 Microecon & Policy: Exam 01 T-14: Closed-book retrieval: second half, same method",
+     "date": "2026-10-01T14:45:00.000-04:00",
+     "end": "2026-10-01T16:45:00.000-04:00",
+     "done": false,
+     "kind": "14.003",
+     "src": "class",
+     "location": "",
+     "type": "",
+     "meeting_type": "Class",
+     "url": "https://app.notion.com/p/STUDY-14-003-Microecon-Policy-Exam-01-T-14-Closed-book-retrieval-second-half-same-method-3e2ea74eb779814b95f9fa7602288712"
     },
     {
      "name": "14.003 Office Hours \u2014 M\u00e9lyne Nzabonimpa",
