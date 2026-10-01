@@ -1,6 +1,16 @@
 {
  "classes": [
   {
+   "name": "Work on insights for Sys Eng",
+   "code": "16.842",
+   "date": "2026-10-02T12:00:00.000-04:00",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "",
+   "url": "https://app.notion.com/p/Work-on-insights-for-Sys-Eng-ceaee667496f42e2bf46590a49d269a5"
+  },
+  {
    "name": "[HW] 16.990 Creative Teams: First Hand-in Paper: finish and submit-ready (Drucker Qs + Defining Events)",
    "code": "16.990",
    "date": "2026-09-30T19:30:00.000-04:00",
@@ -503,7 +513,7 @@
   {
    "name": "[PREP] 14.003 Microecon & Policy: Problem Set 02 T-7: Build it: Consumer theory",
    "code": "14.003",
-   "date": "2026-10-01T19:30:00.000-04:00",
+   "date": "2026-10-02T13:30:00.000-04:00",
    "due": "",
    "status": "",
    "type": "",
@@ -673,7 +683,7 @@
   {
    "name": "[DUE] 16.990 Creative Teams: First Hand-in Paper (Drucker self-assessment + Defining Events, 2 pages max, online submission)",
    "code": "16.990",
-   "date": "2026-10-01T21:00:00.000-04:00",
+   "date": "2026-10-01",
    "due": "",
    "status": "",
    "type": "",
@@ -2553,7 +2563,7 @@
   {
    "name": "[STUDY] 14.003 Microecon & Policy: Exam 01 T-14: Closed-book retrieval: second half, same method",
    "code": "14.003",
-   "date": "2026-10-01T15:15:00.000-04:00",
+   "date": "2026-10-01T16:00:00.000-04:00",
    "due": "",
    "status": "Not started",
    "type": "",
