@@ -1,6 +1,6 @@
 {
- "generated": "2026-09-30T22:09:31-04:00",
- "today": "2026-09-30",
+ "generated": "2026-10-01T04:53:54-04:00",
+ "today": "2026-10-01",
  "monday": "2026-09-28",
  "days": [
   {
@@ -305,7 +305,7 @@
   },
   {
    "date": "2026-09-30",
-   "is_today": true,
+   "is_today": false,
    "items": [
     {
      "name": "14.003 Microecon & Policy: Lecture 07: From preferences to demand curves",
@@ -467,7 +467,7 @@
   },
   {
    "date": "2026-10-01",
-   "is_today": false,
+   "is_today": true,
    "items": [
     {
      "name": "TSK Complete AFT requirement (Army Fitness Test)",
@@ -484,7 +484,7 @@
     {
      "name": "[STUDY] 14.003 Microecon & Policy: Exam 01 T-14: Closed-book retrieval: second half, same method",
      "date": "2026-10-01T14:45:00.000-04:00",
-     "end": "2026-10-01T16:45:00.000-04:00",
+     "end": "2026-10-01T19:30:00.000-04:00",
      "done": false,
      "kind": "14.003",
      "src": "class",
