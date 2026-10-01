@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-01T04:53:54-04:00",
+ "generated": "2026-10-01T11:56:51-04:00",
  "today": "2026-10-01",
  "monday": "2026-09-28",
  "days": [
@@ -483,7 +483,7 @@
     },
     {
      "name": "[STUDY] 14.003 Microecon & Policy: Exam 01 T-14: Closed-book retrieval: second half, same method",
-     "date": "2026-10-01T14:45:00.000-04:00",
+     "date": "2026-10-01T15:15:00.000-04:00",
      "end": "2026-10-01T19:30:00.000-04:00",
      "done": false,
      "kind": "14.003",
