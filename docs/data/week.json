@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-02T14:02:10-04:00",
+ "generated": "2026-10-02T18:11:56-04:00",
  "today": "2026-10-02",
  "monday": "2026-09-28",
  "days": [
@@ -584,18 +584,6 @@
      "url": "https://app.notion.com/p/PREP-14-003-Microecon-Policy-Problem-Set-02-T-7-Build-it-Consumer-theory-3e9ea74eb77981f087c0df4dbe3113cd"
     },
     {
-     "name": "16.S896 RASCAL: Session 04: WIP Presentations and Case Study 01: Moon to Mars ask about Tomo",
-     "date": "2026-10-02T15:00:00.000-04:00",
-     "end": "2026-10-02T17:00:00.000-04:00",
-     "done": false,
-     "kind": "16.S896",
-     "src": "class",
-     "location": "9-354 per syllabus v9; Canvas section says 33-218; hybrid on Zoom. Conflict unresolved.",
-     "type": "Lecture",
-     "meeting_type": "Class",
-     "url": "https://app.notion.com/p/16-S896-RASCAL-Session-04-WIP-Presentations-and-Case-Study-01-Moon-to-Mars-ask-about-Tomo-3e2ea74eb77981cea2fde9b9cfdc1296"
-    },
-    {
      "name": "16.S896 Office Hours \u2014 George Lordos",
      "date": "2026-10-02T18:00:00.000+00:00",
      "end": "2026-10-02T19:00:00.000+00:00",
@@ -620,16 +608,16 @@
      "url": "https://app.notion.com/p/14-003-Office-Hours-Pratik-Bhandari-3dcea74eb779816c99b6fb1f8eaecffd"
     },
     {
-     "name": "[PREP] 16.S896 RASCAL: A1 T-7: Build it: Four Pillars quad chart",
-     "date": "2026-10-02T20:15:00.000-04:00",
-     "end": "2026-10-02T21:45:00.000-04:00",
+     "name": "Finish Problem 1-2 ECON PSET",
+     "date": "2026-10-02T19:30:00.000-04:00",
+     "end": "2026-10-02T22:00:00.000-04:00",
      "done": false,
-     "kind": "16.S896",
+     "kind": "14.003",
      "src": "class",
      "location": "",
      "type": "",
      "meeting_type": "Class",
-     "url": "https://app.notion.com/p/PREP-16-S896-RASCAL-A1-T-7-Build-it-Four-Pillars-quad-chart-3e9ea74eb77981bf8e4dceae7d585617"
+     "url": "https://app.notion.com/p/Finish-Problem-1-2-ECON-PSET-defc4825847541d39d4b4ff1ff1dbc0b"
     },
     {
      "name": "TSK Cut and file the day's notes into the binder",
@@ -660,6 +648,18 @@
      "type": "Task",
      "meeting_type": "ESL",
      "url": "https://app.notion.com/p/TSK-ESL-Lab-Meeting-PowerPoint-AI-and-Thesis-Organization-Tool-Walkthrough-3e9ea74eb77981099bfdd6f6a9a8bf51"
+    },
+    {
+     "name": "[PREP] 16.S896 RASCAL: A1 T-7: Build it: Four Pillars quad chart",
+     "date": "2026-10-03T17:45:00.000-04:00",
+     "end": "2026-10-03T19:15:00.000-04:00",
+     "done": false,
+     "kind": "16.S896",
+     "src": "class",
+     "location": "",
+     "type": "",
+     "meeting_type": "Class",
+     "url": "https://app.notion.com/p/PREP-16-S896-RASCAL-A1-T-7-Build-it-Four-Pillars-quad-chart-3e9ea74eb77981bf8e4dceae7d585617"
     }
    ]
   },

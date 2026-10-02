@@ -1,6 +1,16 @@
 {
  "classes": [
   {
+   "name": "Finish Problem 1-2 ECON PSET",
+   "code": "14.003",
+   "date": "2026-10-02T19:30:00.000-04:00",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "",
+   "url": "https://app.notion.com/p/Finish-Problem-1-2-ECON-PSET-defc4825847541d39d4b4ff1ff1dbc0b"
+  },
+  {
    "name": "Work on insights for Sys Eng",
    "code": "16.842",
    "date": "2026-10-02T12:00:00.000-04:00",
@@ -303,7 +313,7 @@
   {
    "name": "[PREP] 16.S896 RASCAL: A1 T-7: Build it: Four Pillars quad chart",
    "code": "16.S896",
-   "date": "2026-10-02T20:15:00.000-04:00",
+   "date": "2026-10-03T17:45:00.000-04:00",
    "due": "",
    "status": "",
    "type": "",
@@ -2489,16 +2499,6 @@
    "type": "",
    "room": "",
    "url": "https://app.notion.com/p/STUDY-14-003-Microecon-Policy-Exam-01-T-8-Past-papers-and-problem-sets-under-exam-conditions-n-3e2ea74eb77981839417c9aba0b203c5"
-  },
-  {
-   "name": "16.S896 RASCAL: Session 04: WIP Presentations and Case Study 01: Moon to Mars ask about Tomo",
-   "code": "16.S896",
-   "date": "2026-10-02T15:00:00.000-04:00",
-   "due": "",
-   "status": "",
-   "type": "Lecture",
-   "room": "9-354 per syllabus v9; Canvas section says 33-218; hybrid on Zoom. Conflict unresolved.",
-   "url": "https://app.notion.com/p/16-S896-RASCAL-Session-04-WIP-Presentations-and-Case-Study-01-Moon-to-Mars-ask-about-Tomo-3e2ea74eb77981cea2fde9b9cfdc1296"
   },
   {
    "name": "14.003 Microecon & Policy: Recitation Week 4",
