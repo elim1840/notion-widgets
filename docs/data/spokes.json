@@ -1,6 +1,16 @@
 {
  "classes": [
   {
+   "name": "PSET Q2",
+   "code": "14.003",
+   "date": "2026-10-03T12:00:00.000-04:00",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "",
+   "url": "https://app.notion.com/p/PSET-Q2-bf965e6c8bfa4955ae073d95363ae837"
+  },
+  {
    "name": "Finish Problem 1-2 ECON PSET",
    "code": "14.003",
    "date": "2026-10-02T19:30:00.000-04:00",
@@ -313,7 +323,7 @@
   {
    "name": "[PREP] 16.S896 RASCAL: A1 T-7: Build it: Four Pillars quad chart",
    "code": "16.S896",
-   "date": "2026-10-03T17:45:00.000-04:00",
+   "date": "2026-10-06T13:00:00.000-04:00",
    "due": "",
    "status": "",
    "type": "",

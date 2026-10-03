@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-03T08:01:50-04:00",
+ "generated": "2026-10-03T12:15:41-04:00",
  "today": "2026-10-03",
  "monday": "2026-09-28",
  "days": [
@@ -638,16 +638,16 @@
    "is_today": true,
    "items": [
     {
-     "name": "[PREP] 16.S896 RASCAL: A1 T-7: Build it: Four Pillars quad chart",
-     "date": "2026-10-03T17:45:00.000-04:00",
-     "end": "2026-10-03T19:15:00.000-04:00",
+     "name": "PSET Q2",
+     "date": "2026-10-03T12:00:00.000-04:00",
+     "end": "2026-10-03T13:30:00.000-04:00",
      "done": false,
-     "kind": "16.S896",
+     "kind": "14.003",
      "src": "class",
      "location": "",
      "type": "",
      "meeting_type": "Class",
-     "url": "https://app.notion.com/p/PREP-16-S896-RASCAL-A1-T-7-Build-it-Four-Pillars-quad-chart-3e9ea74eb77981bf8e4dceae7d585617"
+     "url": "https://app.notion.com/p/PSET-Q2-bf965e6c8bfa4955ae073d95363ae837"
     }
    ]
   },
