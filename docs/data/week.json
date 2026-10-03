@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-03T12:15:41-04:00",
+ "generated": "2026-10-03T15:19:20-04:00",
  "today": "2026-10-03",
  "monday": "2026-09-28",
  "days": [
@@ -648,6 +648,18 @@
      "type": "",
      "meeting_type": "Class",
      "url": "https://app.notion.com/p/PSET-Q2-bf965e6c8bfa4955ae073d95363ae837"
+    },
+    {
+     "name": "PSET Q3",
+     "date": "2026-10-03T15:00:00.000-04:00",
+     "end": "2026-10-03T16:30:00.000-04:00",
+     "done": false,
+     "kind": "14.003",
+     "src": "class",
+     "location": "",
+     "type": "",
+     "meeting_type": "Class",
+     "url": "https://app.notion.com/p/PSET-Q3-b10c73038bbf4b3c9beeb0c4edff0101"
     }
    ]
   },
@@ -668,19 +680,55 @@
      "url": "https://app.notion.com/p/TSK-Household-cleaning-3dcea74eb77981c09808ee41d66d6022"
     },
     {
-     "name": "TSK TPP Seminar presentation: build the deck",
-     "date": "2026-10-04T10:00:00.000-04:00",
-     "end": "2026-10-04T12:00:00.000-04:00",
+     "name": "Read/Prep: 16.990: L8 Shared team vision",
+     "date": "2026-10-04T09:45:00.000-04:00",
+     "end": "2026-10-04T11:30:00.000-04:00",
      "done": false,
-     "kind": "TPP",
-     "src": "task",
+     "kind": "16.990",
+     "src": "class",
      "location": "",
-     "type": "Task",
-     "meeting_type": "TPP",
-     "url": "https://app.notion.com/p/TSK-TPP-Seminar-presentation-build-the-deck-3e9ea74eb77981b09754da1baf505b4e"
+     "type": "",
+     "meeting_type": "Class",
+     "url": "https://app.notion.com/p/Read-Prep-16-990-L8-Shared-team-vision-3eeea74eb779813384cee051b238685c"
+    },
+    {
+     "name": "Study Economics ",
+     "date": "2026-10-04T13:30:00.000-04:00",
+     "end": "2026-10-04T18:00:00.000-04:00",
+     "done": false,
+     "kind": "14.003",
+     "src": "class",
+     "location": "",
+     "type": "",
+     "meeting_type": "Class",
+     "url": "https://app.notion.com/p/Study-Economics-9be303e720c449dfb8497acc7922e65e"
+    },
+    {
+     "name": "Read/Prep: IDS.412: L8 Competition & Antitrust (part 2)",
+     "date": "2026-10-04T19:45:00.000-04:00",
+     "end": "2026-10-04T22:15:00.000-04:00",
+     "done": false,
+     "kind": "IDS.412",
+     "src": "class",
+     "location": "",
+     "type": "",
+     "meeting_type": "Class",
+     "url": "https://app.notion.com/p/Read-Prep-IDS-412-L8-Competition-Antitrust-part-2-3eeea74eb77981f7b0aac59c5fbcce51"
+    },
+    {
+     "name": "Read/Prep: 14.003: L8 Eissa & Liebman 1996 (EITC)",
+     "date": "2026-10-04T22:30:00.000-04:00",
+     "end": "2026-10-04T23:00:00.000-04:00",
+     "done": false,
+     "kind": "14.003",
+     "src": "class",
+     "location": "",
+     "type": "",
+     "meeting_type": "Class",
+     "url": "https://app.notion.com/p/Read-Prep-14-003-L8-Eissa-Liebman-1996-EITC-3eeea74eb7798142aa84e2fd4cbe0eba"
     }
    ]
   }
  ],
- "total": 53
+ "total": 57
 }
