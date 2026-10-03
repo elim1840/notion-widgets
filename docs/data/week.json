@@ -1,6 +1,6 @@
 {
- "generated": "2026-10-02T21:11:58-04:00",
- "today": "2026-10-02",
+ "generated": "2026-10-03T02:33:23-04:00",
+ "today": "2026-10-03",
  "monday": "2026-09-28",
  "days": [
   {
@@ -533,7 +533,7 @@
   },
   {
    "date": "2026-10-02",
-   "is_today": true,
+   "is_today": false,
    "items": [
     {
      "name": "14.003 Microecon & Policy: Recitation Week 4",
@@ -635,20 +635,8 @@
   },
   {
    "date": "2026-10-03",
-   "is_today": false,
+   "is_today": true,
    "items": [
-    {
-     "name": "TSK ESL Lab Meeting PowerPoint: AI and Thesis Organization Tool Walkthrough",
-     "date": "2026-10-03T10:00:00.000-04:00",
-     "end": "2026-10-03T12:00:00.000-04:00",
-     "done": false,
-     "kind": "ESL",
-     "src": "task",
-     "location": "",
-     "type": "Task",
-     "meeting_type": "ESL",
-     "url": "https://app.notion.com/p/TSK-ESL-Lab-Meeting-PowerPoint-AI-and-Thesis-Organization-Tool-Walkthrough-3e9ea74eb77981099bfdd6f6a9a8bf51"
-    },
     {
      "name": "[PREP] 16.S896 RASCAL: A1 T-7: Build it: Four Pillars quad chart",
      "date": "2026-10-03T17:45:00.000-04:00",
@@ -694,5 +682,5 @@
    ]
   }
  ],
- "total": 54
+ "total": 53
 }
