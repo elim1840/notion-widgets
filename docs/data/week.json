@@ -1,6 +1,6 @@
 {
- "generated": "2026-10-03T21:46:21-04:00",
- "today": "2026-10-03",
+ "generated": "2026-10-04T03:41:49-04:00",
+ "today": "2026-10-04",
  "monday": "2026-09-28",
  "days": [
   {
@@ -635,7 +635,7 @@
   },
   {
    "date": "2026-10-03",
-   "is_today": true,
+   "is_today": false,
    "items": [
     {
      "name": "PSET Q2",
@@ -665,7 +665,7 @@
   },
   {
    "date": "2026-10-04",
-   "is_today": false,
+   "is_today": true,
    "items": [
     {
      "name": "TSK Household cleaning",

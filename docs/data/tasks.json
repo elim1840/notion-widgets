@@ -1,16 +1,34 @@
 {
- "generated": "2026-10-03T21:46:21-04:00",
- "today": "2026-10-03",
+ "generated": "2026-10-04T03:41:49-04:00",
+ "today": "2026-10-04",
  "counts": {
   "total": 253,
   "open": 231,
   "done": 22,
-  "today_total": 0,
+  "today_total": 1,
   "today_done": 0,
   "overdue": 101,
   "past_meetings": 48
  },
- "today_items": [],
+ "today_items": [
+  {
+   "name": "TSK Household cleaning",
+   "date": "2026-10-04T08:15:00.000-04:00",
+   "end": "2026-10-04T08:45:00.000-04:00",
+   "done": false,
+   "status": "Not Started",
+   "type": "",
+   "meeting_type": "Personal",
+   "priority": "",
+   "energy": "",
+   "location": "",
+   "attendees": "",
+   "agenda": "",
+   "link": "",
+   "notes": "",
+   "url": "https://app.notion.com/p/TSK-Household-cleaning-3dcea74eb77981c09808ee41d66d6022"
+  }
+ ],
  "overdue_items": [
   {
    "name": "TSK Diffraqtion meeting w/ PI Dr. Eric Evans",
@@ -829,14 +847,43 @@
    "link": "",
    "notes": "Open the Partiful invite and update your RSVP. Once the party date is set, add the event to Personal Events.",
    "url": "https://app.notion.com/p/TSK-Update-Partiful-RSVP-Mariko-s-Halloween-party-3e9ea74eb77981f686bde375e53f5198"
+  },
+  {
+   "name": "TSK Laundry",
+   "date": "2026-10-11T08:00:00.000-04:00",
+   "end": "2026-10-11T08:15:00.000-04:00",
+   "done": false,
+   "status": "Not Started",
+   "type": "",
+   "meeting_type": "Personal",
+   "priority": "",
+   "energy": "",
+   "location": "",
+   "attendees": "",
+   "agenda": "",
+   "link": "",
+   "notes": "",
+   "url": "https://app.notion.com/p/TSK-Laundry-3dcea74eb7798180a1c6d30b45c485a3"
+  },
+  {
+   "name": "TSK Household cleaning",
+   "date": "2026-10-11T08:15:00.000-04:00",
+   "end": "2026-10-11T08:45:00.000-04:00",
+   "done": false,
+   "status": "Not Started",
+   "type": "",
+   "meeting_type": "Personal",
+   "priority": "",
+   "energy": "",
+   "location": "",
+   "attendees": "",
+   "agenda": "",
+   "link": "",
+   "notes": "",
+   "url": "https://app.notion.com/p/TSK-Household-cleaning-3dcea74eb779811fbaf1d5c2d839b2d7"
   }
  ],
  "history": [
-  {
-   "date": "2026-09-20",
-   "total": 3,
-   "done": 0
-  },
   {
    "date": "2026-09-21",
    "total": 1,
@@ -900,6 +947,11 @@
   {
    "date": "2026-10-03",
    "total": 0,
+   "done": 0
+  },
+  {
+   "date": "2026-10-04",
+   "total": 1,
    "done": 0
   }
  ]
