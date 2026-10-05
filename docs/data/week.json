@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-05T06:52:32-04:00",
+ "generated": "2026-10-05T15:29:05-04:00",
  "today": "2026-10-05",
  "monday": "2026-10-05",
  "days": [
@@ -8,21 +8,9 @@
    "is_today": true,
    "items": [
     {
-     "name": "Read/Prep: IDS.412: L8 Competition & Antitrust (part 2)",
-     "date": "2026-10-05T07:00:00.000-04:00",
-     "end": "2026-10-05T08:00:00.000-04:00",
-     "done": false,
-     "kind": "IDS.412",
-     "src": "class",
-     "location": "",
-     "type": "",
-     "meeting_type": "Class",
-     "url": "https://app.notion.com/p/Read-Prep-IDS-412-L8-Competition-Antitrust-part-2-3eeea74eb77981f7b0aac59c5fbcce51"
-    },
-    {
      "name": "Read/Prep: 14.003: L8 Eissa & Liebman 1996 (EITC)",
-     "date": "2026-10-05T08:00:00.000-04:00",
-     "end": "2026-10-05T09:00:00.000-04:00",
+     "date": "2026-10-05T09:00:00.000-04:00",
+     "end": "2026-10-05T10:00:00.000-04:00",
      "done": false,
      "kind": "14.003",
      "src": "class",
@@ -30,18 +18,6 @@
      "type": "",
      "meeting_type": "Class",
      "url": "https://app.notion.com/p/Read-Prep-14-003-L8-Eissa-Liebman-1996-EITC-3eeea74eb7798142aa84e2fd4cbe0eba"
-    },
-    {
-     "name": "Finish PSET ",
-     "date": "2026-10-05T09:00:00.000-04:00",
-     "end": "2026-10-05T10:30:00.000-04:00",
-     "done": false,
-     "kind": "14.003",
-     "src": "class",
-     "location": "",
-     "type": "",
-     "meeting_type": "Class",
-     "url": "https://app.notion.com/p/Finish-PSET-75e8d8c9fa6b4ed9b45cbab244c451da"
     },
     {
      "name": "14.003 Microecon & Policy: Lecture 08: Income effects, substitution effects, and the design of anti-poverty programs",
@@ -138,6 +114,18 @@
      "type": "Task",
      "meeting_type": "Admin",
      "url": "https://app.notion.com/p/TSK-Cut-and-file-the-day-s-notes-into-the-binder-3dbea74eb7798118a3e0eb1a16f957b4"
+    },
+    {
+     "name": "Read/Prep: IDS.412: L8 Competition & Antitrust (part 2)",
+     "date": "2026-10-05",
+     "end": "",
+     "done": false,
+     "kind": "IDS.412",
+     "src": "class",
+     "location": "",
+     "type": "",
+     "meeting_type": "Class",
+     "url": "https://app.notion.com/p/Read-Prep-IDS-412-L8-Competition-Antitrust-part-2-3eeea74eb77981f7b0aac59c5fbcce51"
     }
    ]
   },
@@ -228,6 +216,18 @@
      "type": "Task",
      "meeting_type": "Admin",
      "url": "https://app.notion.com/p/TSK-Cut-and-file-the-day-s-notes-into-the-binder-3dbea74eb77981f89690c78149d8d29c"
+    },
+    {
+     "name": "Finish PSET ",
+     "date": "2026-10-06",
+     "end": "",
+     "done": false,
+     "kind": "14.003",
+     "src": "class",
+     "location": "",
+     "type": "",
+     "meeting_type": "Class",
+     "url": "https://app.notion.com/p/Finish-PSET-75e8d8c9fa6b4ed9b45cbab244c451da"
     },
     {
      "name": "[PREP] 16.S896 RASCAL: A1 T-7: Build it: Four Pillars quad chart",
@@ -432,6 +432,18 @@
      "type": "",
      "meeting_type": "Class",
      "url": "https://app.notion.com/p/DUE-14-003-Microecon-Policy-Problem-Set-02-Consumer-theory-3e2ea74eb77981708772d8ed9f291b0c"
+    },
+    {
+     "name": "TSK Submit ASCEND 2027 abstract (SDA or Lunar Lander paper)",
+     "date": "2026-10-08T20:00:00.000-04:00",
+     "end": "",
+     "done": false,
+     "kind": "Meeting",
+     "src": "task",
+     "location": "",
+     "type": "Opportunity",
+     "meeting_type": "",
+     "url": "https://app.notion.com/p/TSK-Submit-ASCEND-2027-abstract-SDA-or-Lunar-Lander-paper-3f0ea74eb779819fbbbde057d52ae92a"
     },
     {
      "name": "TSK Cut and file the day's notes into the binder",
@@ -658,5 +670,5 @@
    ]
   }
  ],
- "total": 51
+ "total": 52
 }

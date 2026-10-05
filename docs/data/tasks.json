@@ -1,9 +1,9 @@
 {
- "generated": "2026-10-05T06:52:32-04:00",
+ "generated": "2026-10-05T15:29:05-04:00",
  "today": "2026-10-05",
  "counts": {
-  "total": 253,
-  "open": 231,
+  "total": 258,
+  "open": 236,
   "done": 22,
   "today_total": 1,
   "today_done": 0,
@@ -762,6 +762,23 @@
    "link": "",
    "notes": "Cut the day's sheets, sort by class then by the number printed in each sheet's footer, punch and file. Unsure sheets go in the front pocket for the Sunday review. Guide: 02_Classes/BINDER-FILING-GUIDE.md",
    "url": "https://app.notion.com/p/TSK-Cut-and-file-the-day-s-notes-into-the-binder-3dbea74eb77981cd94f1c2a546c53162"
+  },
+  {
+   "name": "TSK Submit ASCEND 2027 abstract (SDA or Lunar Lander paper)",
+   "date": "2026-10-08T20:00:00.000-04:00",
+   "end": "",
+   "done": false,
+   "status": "Not Started",
+   "type": "Opportunity",
+   "meeting_type": "",
+   "priority": "High",
+   "energy": "Deep",
+   "location": "",
+   "attendees": "",
+   "agenda": "",
+   "link": "",
+   "notes": "Fit 5/5. Abstracts due Thu Oct 8, 2026, 8 PM ET; space domain awareness is a named National Security subtopic, and lunar/robotic exploration and space infrastructure tracks fit the Lunar Lander paper (IEEE Aerospace full-paper deadline was Oct 2). Added by the Monday Opportunity Scout 2026-10-05.",
+   "url": "https://app.notion.com/p/TSK-Submit-ASCEND-2027-abstract-SDA-or-Lunar-Lander-paper-3f0ea74eb779819fbbbde057d52ae92a"
   },
   {
    "name": "TSK Cut and file the day's notes into the binder",
