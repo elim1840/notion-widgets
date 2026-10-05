@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-04T19:47:24-04:00",
+ "generated": "2026-10-04T23:44:30-04:00",
  "today": "2026-10-04",
  "monday": "2026-09-28",
  "days": [
@@ -702,33 +702,9 @@
      "type": "",
      "meeting_type": "Class",
      "url": "https://app.notion.com/p/Study-Economics-9be303e720c449dfb8497acc7922e65e"
-    },
-    {
-     "name": "Read/Prep: IDS.412: L8 Competition & Antitrust (part 2)",
-     "date": "2026-10-04T19:45:00.000-04:00",
-     "end": "2026-10-04T22:15:00.000-04:00",
-     "done": false,
-     "kind": "IDS.412",
-     "src": "class",
-     "location": "",
-     "type": "",
-     "meeting_type": "Class",
-     "url": "https://app.notion.com/p/Read-Prep-IDS-412-L8-Competition-Antitrust-part-2-3eeea74eb77981f7b0aac59c5fbcce51"
-    },
-    {
-     "name": "Read/Prep: 14.003: L8 Eissa & Liebman 1996 (EITC)",
-     "date": "2026-10-04T22:30:00.000-04:00",
-     "end": "2026-10-04T23:00:00.000-04:00",
-     "done": false,
-     "kind": "14.003",
-     "src": "class",
-     "location": "",
-     "type": "",
-     "meeting_type": "Class",
-     "url": "https://app.notion.com/p/Read-Prep-14-003-L8-Eissa-Liebman-1996-EITC-3eeea74eb7798142aa84e2fd4cbe0eba"
     }
    ]
   }
  ],
- "total": 57
+ "total": 55
 }

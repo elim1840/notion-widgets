@@ -1,6 +1,16 @@
 {
  "classes": [
   {
+   "name": "Finish PSET ",
+   "code": "14.003",
+   "date": "2026-10-05T09:00:00.000-04:00",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "",
+   "url": "https://app.notion.com/p/Finish-PSET-75e8d8c9fa6b4ed9b45cbab244c451da"
+  },
+  {
    "name": "Read/Prep: 16.842: L4 Concept & Architecture pre-read",
    "code": "16.842",
    "date": "2026-10-05T20:45:00.000-04:00",
@@ -13,7 +23,7 @@
   {
    "name": "Read/Prep: 14.003: L9 Giffen goods (Jensen & Miller 2008)",
    "code": "14.003",
-   "date": "2026-10-06T14:45:00.000-04:00",
+   "date": "2026-10-07T09:00:00.000-04:00",
    "due": "",
    "status": "",
    "type": "",
@@ -23,7 +33,7 @@
   {
    "name": "Read/Prep: 16.990: L9 Draft vision speech",
    "code": "16.990",
-   "date": "2026-10-05T22:30:00.000-04:00",
+   "date": "2026-10-06T15:30:00.000-04:00",
    "due": "",
    "status": "",
    "type": "",
@@ -43,7 +53,7 @@
   {
    "name": "Read/Prep: 14.003: L8 Eissa & Liebman 1996 (EITC)",
    "code": "14.003",
-   "date": "2026-10-04T22:30:00.000-04:00",
+   "date": "2026-10-05T08:00:00.000-04:00",
    "due": "",
    "status": "",
    "type": "",
@@ -63,7 +73,7 @@
   {
    "name": "Read/Prep: IDS.412: L8 Competition & Antitrust (part 2)",
    "code": "IDS.412",
-   "date": "2026-10-04T19:45:00.000-04:00",
+   "date": "2026-10-05T07:00:00.000-04:00",
    "due": "",
    "status": "",
    "type": "",
@@ -73,7 +83,7 @@
   {
    "name": "Read/Prep: IDS.412: L9 Standard-setting",
    "code": "IDS.412",
-   "date": "2026-10-06T19:30:00.000-04:00",
+   "date": "2026-10-06T17:00:00.000-04:00",
    "due": "",
    "status": "",
    "type": "",
@@ -413,7 +423,7 @@
   {
    "name": "[PREP] 16.S896 RASCAL: A1 T-3: Finish it: Four Pillars quad chart",
    "code": "16.S896",
-   "date": "2026-10-06T17:00:00.000-04:00",
+   "date": "2026-10-08T09:45:00.000-04:00",
    "due": "",
    "status": "",
    "type": "",
@@ -423,7 +433,7 @@
   {
    "name": "[PREP] 16.S896 RASCAL: A1 T-7: Build it: Four Pillars quad chart",
    "code": "16.S896",
-   "date": "2026-10-06T13:00:00.000-04:00",
+   "date": "2026-10-06",
    "due": "",
    "status": "",
    "type": "",
@@ -523,7 +533,7 @@
   {
    "name": "[PREP] IDS.412 Tech & Policy: Paper 1 T-21: Scope it: Regulatory comment (20%)",
    "code": "IDS.412",
-   "date": "2026-10-05T17:00:00.000-04:00",
+   "date": "2026-10-14T02:30:00.000-04:00",
    "due": "",
    "status": "",
    "type": "",
@@ -623,7 +633,7 @@
   {
    "name": "[PREP] 14.003 Microecon & Policy: Problem Set 02 T-3: Finish it: Consumer theory",
    "code": "14.003",
-   "date": "2026-10-05T18:00:00.000-04:00",
+   "date": "2026-10-06",
    "due": "",
    "status": "",
    "type": "",
@@ -2553,7 +2563,7 @@
   {
    "name": "[PREP] 16.842 Systems Eng: A2 T-7: Build it: Requirements Definition & Margins",
    "code": "16.842",
-   "date": "2026-10-05T19:30:00.000-04:00",
+   "date": "2026-10-05T19:45:00.000-04:00",
    "due": "",
    "status": "Not started",
    "type": "",
@@ -2603,7 +2613,7 @@
   {
    "name": "[STUDY] 14.003 Microecon & Policy: Exam 01 T-8: Past papers and problem sets under exam conditions, no notes",
    "code": "14.003",
-   "date": "2026-10-05T08:00:00.000-04:00",
+   "date": "2026-10-08",
    "due": "",
    "status": "Not started",
    "type": "",
