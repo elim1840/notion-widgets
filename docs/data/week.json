@@ -1,710 +1,662 @@
 {
- "generated": "2026-10-04T23:44:30-04:00",
- "today": "2026-10-04",
- "monday": "2026-09-28",
+ "generated": "2026-10-05T06:52:32-04:00",
+ "today": "2026-10-05",
+ "monday": "2026-10-05",
  "days": [
   {
-   "date": "2026-09-28",
-   "is_today": false,
+   "date": "2026-10-05",
+   "is_today": true,
    "items": [
     {
-     "name": "TSK AFT T-3: taper, hydrate, confirm kit and paperwork",
-     "date": "2026-09-28T06:00:00.000-04:00",
-     "end": "2026-09-28T06:30:00.000-04:00",
+     "name": "Read/Prep: IDS.412: L8 Competition & Antitrust (part 2)",
+     "date": "2026-10-05T07:00:00.000-04:00",
+     "end": "2026-10-05T08:00:00.000-04:00",
      "done": false,
-     "kind": "Military",
-     "src": "task",
+     "kind": "IDS.412",
+     "src": "class",
      "location": "",
      "type": "",
-     "meeting_type": "Military",
-     "url": "https://app.notion.com/p/TSK-AFT-T-3-taper-hydrate-confirm-kit-and-paperwork-3dcea74eb779811fbb9fe8dea9538856"
+     "meeting_type": "Class",
+     "url": "https://app.notion.com/p/Read-Prep-IDS-412-L8-Competition-Antitrust-part-2-3eeea74eb77981f7b0aac59c5fbcce51"
     },
     {
-     "name": "14.003 Microecon & Policy: Lecture 06: Consumer choice: Theory versus constraints",
-     "date": "2026-09-28T10:30:00.000-04:00",
-     "end": "2026-09-28T12:00:00.000-04:00",
+     "name": "Read/Prep: 14.003: L8 Eissa & Liebman 1996 (EITC)",
+     "date": "2026-10-05T08:00:00.000-04:00",
+     "end": "2026-10-05T09:00:00.000-04:00",
+     "done": false,
+     "kind": "14.003",
+     "src": "class",
+     "location": "",
+     "type": "",
+     "meeting_type": "Class",
+     "url": "https://app.notion.com/p/Read-Prep-14-003-L8-Eissa-Liebman-1996-EITC-3eeea74eb7798142aa84e2fd4cbe0eba"
+    },
+    {
+     "name": "Finish PSET ",
+     "date": "2026-10-05T09:00:00.000-04:00",
+     "end": "2026-10-05T10:30:00.000-04:00",
+     "done": false,
+     "kind": "14.003",
+     "src": "class",
+     "location": "",
+     "type": "",
+     "meeting_type": "Class",
+     "url": "https://app.notion.com/p/Finish-PSET-75e8d8c9fa6b4ed9b45cbab244c451da"
+    },
+    {
+     "name": "14.003 Microecon & Policy: Lecture 08: Income effects, substitution effects, and the design of anti-poverty programs",
+     "date": "2026-10-05T10:30:00.000-04:00",
+     "end": "2026-10-05T12:00:00.000-04:00",
      "done": false,
      "kind": "14.003",
      "src": "class",
      "location": "E51-376",
      "type": "",
      "meeting_type": "Class",
-     "url": "https://app.notion.com/p/14-003-Microecon-Policy-Lecture-06-Consumer-choice-Theory-versus-constraints-3e2ea74eb77981e5bba4cf25ce64d757"
+     "url": "https://app.notion.com/p/14-003-Microecon-Policy-Lecture-08-Income-effects-substitution-effects-and-the-design-of-anti--3e2ea74eb77981daaf02f044ebcd38ea"
     },
     {
-     "name": "16.987 Grad Seminar: Seminar 03: Professional Development: Requirement Overview",
-     "date": "2026-09-28T11:30:00.000-04:00",
-     "end": "2026-09-28T13:00:00.000-04:00",
+     "name": "16.987 Grad Seminar: Seminar 04: Organizing a Research Paper",
+     "date": "2026-10-05T11:30:00.000-04:00",
+     "end": "2026-10-05T13:00:00.000-04:00",
      "done": false,
      "kind": "16.987",
      "src": "class",
      "location": "37-252 (Marlar Lounge)",
      "type": "Seminar",
      "meeting_type": "Class",
-     "url": "https://app.notion.com/p/16-987-Grad-Seminar-Seminar-03-Professional-Development-Requirement-Overview-3e2ea74eb7798164b31ac430a6313562"
+     "url": "https://app.notion.com/p/16-987-Grad-Seminar-Seminar-04-Organizing-a-Research-Paper-3e2ea74eb7798185b694c3d277eadecd"
     },
     {
-     "name": "IDS.412 Tech & Policy: Lecture 06: Property Rights",
-     "date": "2026-09-28T13:00:00.000-04:00",
-     "end": "2026-09-28T14:30:00.000-04:00",
+     "name": "IDS.412 Tech & Policy: Lecture 08: Competition and Antitrust",
+     "date": "2026-10-05T13:00:00.000-04:00",
+     "end": "2026-10-05T14:30:00.000-04:00",
      "done": false,
      "kind": "IDS.412",
      "src": "class",
      "location": "66-168",
      "type": "",
      "meeting_type": "Class",
-     "url": "https://app.notion.com/p/IDS-412-Tech-Policy-Lecture-06-Property-Rights-3e2ea74eb77981509aa7df246d31d76e"
+     "url": "https://app.notion.com/p/IDS-412-Tech-Policy-Lecture-08-Competition-and-Antitrust-3e2ea74eb77981b2867bcf02e67caf8e"
     },
     {
-     "name": "16.990 Creative Teams: Lecture 06: Developing Personal Skills: Values and Ethical decision making",
-     "date": "2026-09-28T14:30:00.000-04:00",
-     "end": "2026-09-28T16:00:00.000-04:00",
+     "name": "16.990 Creative Teams: Lecture 08: Developing Team and Organizational Skills: Creating a shared team vision",
+     "date": "2026-10-05T14:30:00.000-04:00",
+     "end": "2026-10-05T16:00:00.000-04:00",
      "done": false,
      "kind": "16.990",
      "src": "class",
      "location": "9-354",
      "type": "",
      "meeting_type": "Class",
-     "url": "https://app.notion.com/p/16-990-Creative-Teams-Lecture-06-Developing-Personal-Skills-Values-and-Ethical-decision-making-3e2ea74eb7798140aeedfba16a0552eb"
+     "url": "https://app.notion.com/p/16-990-Creative-Teams-Lecture-08-Developing-Team-and-Organizational-Skills-Creating-a-shared-team-3e2ea74eb7798187a62af78434bb8517"
     },
     {
-     "name": "[HW] 16.842 Systems Eng: Lecture 03 pre-class: Watch System Thinking videos Finish Part 2",
-     "date": "2026-09-28T16:00:00.000-04:00",
-     "end": "2026-09-28T17:30:00.000-04:00",
+     "name": "[PREP] 16.842 Systems Eng: A2 T-7: Build it: Requirements Definition & Margins",
+     "date": "2026-10-05T19:45:00.000-04:00",
+     "end": "2026-10-05T20:45:00.000-04:00",
      "done": false,
      "kind": "16.842",
      "src": "class",
      "location": "",
      "type": "",
      "meeting_type": "Class",
-     "url": "https://app.notion.com/p/HW-16-842-Systems-Eng-Lecture-03-pre-class-Watch-System-Thinking-videos-Finish-Part-2-3e3ea74eb77981faa4ebc63f586fc4ca"
-    },
-    {
-     "name": "[PREP] 16.842 Systems Eng: A2 T-14: Scope it: Requirements Definition & Margins",
-     "date": "2026-09-28T16:00:00.000-04:00",
-     "end": "2026-09-28T17:00:00.000-04:00",
-     "done": false,
-     "kind": "16.842",
-     "src": "class",
-     "location": "",
-     "type": "",
-     "meeting_type": "Class",
-     "url": "https://app.notion.com/p/PREP-16-842-Systems-Eng-A2-T-14-Scope-it-Requirements-Definition-Margins-3e2ea74eb77981b995fef5c182a8ae46"
+     "url": "https://app.notion.com/p/PREP-16-842-Systems-Eng-A2-T-7-Build-it-Requirements-Definition-Margins-3e2ea74eb77981408905df7b77189391"
     },
     {
      "name": "14.003 Office Hours \u2014 Anoushka Tamhane",
-     "date": "2026-09-28T20:00:00.000+00:00",
-     "end": "2026-09-28T21:30:00.000+00:00",
+     "date": "2026-10-05T20:00:00.000+00:00",
+     "end": "2026-10-05T21:30:00.000+00:00",
      "done": false,
      "kind": "14.003",
      "src": "class",
      "location": "E52-516",
      "type": "",
      "meeting_type": "Class",
-     "url": "https://app.notion.com/p/14-003-Office-Hours-Anoushka-Tamhane-3dcea74eb779814ca00fc1b71733cf32"
+     "url": "https://app.notion.com/p/14-003-Office-Hours-Anoushka-Tamhane-3dcea74eb779819892bbf4129f08443e"
     },
     {
-     "name": "[DUE] 16.842 Systems Eng: Assignment 01: A1 Team Formation, Stakeholders, ConOps",
-     "date": "2026-09-28T21:30:00.000-04:00",
-     "end": "2026-09-28T22:00:00.000-04:00",
+     "name": "Read/Prep: 16.842: L4 Concept & Architecture pre-read",
+     "date": "2026-10-05T20:45:00.000-04:00",
+     "end": "2026-10-05T21:45:00.000-04:00",
      "done": false,
      "kind": "16.842",
      "src": "class",
-     "location": "Submission channel not published in the syllabus",
-     "type": "Homework",
+     "location": "",
+     "type": "",
      "meeting_type": "Class",
-     "url": "https://app.notion.com/p/DUE-16-842-Systems-Eng-Assignment-01-A1-Team-Formation-Stakeholders-ConOps-3d5ea74eb779817898e2c3426e6ffd5e"
+     "url": "https://app.notion.com/p/Read-Prep-16-842-L4-Concept-Architecture-pre-read-3eeea74eb77981118ce5f3501e5a7df7"
     },
     {
      "name": "TSK Cut and file the day's notes into the binder",
-     "date": "2026-09-28T22:00:00.000-04:00",
-     "end": "2026-09-28T22:15:00.000-04:00",
+     "date": "2026-10-05T22:00:00.000-04:00",
+     "end": "2026-10-05T22:15:00.000-04:00",
      "done": false,
      "kind": "Admin",
      "src": "task",
      "location": "",
      "type": "Task",
      "meeting_type": "Admin",
-     "url": "https://app.notion.com/p/TSK-Cut-and-file-the-day-s-notes-into-the-binder-3dbea74eb77981799f1ae8c970761e05"
+     "url": "https://app.notion.com/p/TSK-Cut-and-file-the-day-s-notes-into-the-binder-3dbea74eb7798118a3e0eb1a16f957b4"
     }
    ]
   },
   {
-   "date": "2026-09-29",
+   "date": "2026-10-06",
    "is_today": false,
    "items": [
     {
-     "name": "[HW] 16.990 Creative Teams: Autobiographical Paper: send feedback-story requests to 15-20 people Make Google Form and Send to Friends",
-     "date": "2026-09-29T09:45:00.000-04:00",
-     "end": "2026-09-29T10:30:00.000-04:00",
+     "name": "[PREP] 16.S896 RASCAL: Milestone T-3: Finish it: WORMS hardware selections final, orders placed",
+     "date": "2026-10-06T08:00:00.000-04:00",
+     "end": "2026-10-06T09:30:00.000-04:00",
+     "done": false,
+     "kind": "16.S896",
+     "src": "class",
+     "location": "",
+     "type": "",
+     "meeting_type": "Class",
+     "url": "https://app.notion.com/p/PREP-16-S896-RASCAL-Milestone-T-3-Finish-it-WORMS-hardware-selections-final-orders-placed-3e9ea74eb779815cb836c785514dfc93"
+    },
+    {
+     "name": "Read/Prep: 16.990: L9 Rehearse & time vision speech",
+     "date": "2026-10-06T09:45:00.000-04:00",
+     "end": "2026-10-06T10:45:00.000-04:00",
      "done": false,
      "kind": "16.990",
      "src": "class",
      "location": "",
      "type": "",
      "meeting_type": "Class",
-     "url": "https://app.notion.com/p/HW-16-990-Creative-Teams-Autobiographical-Paper-send-feedback-story-requests-to-15-20-people-Make-3e9ea74eb77981868f0fd8db434830fd"
+     "url": "https://app.notion.com/p/Read-Prep-16-990-L9-Rehearse-time-vision-speech-3eeea74eb77981829e20f42d2d0235c8"
     },
     {
-     "name": "16.842 Systems Eng: Lecture 03: System Thinking",
-     "date": "2026-09-29T11:00:00.000-04:00",
-     "end": "2026-09-29T13:00:00.000-04:00",
+     "name": "16.842 Systems Eng: Lecture 04: Concept & Architecture",
+     "date": "2026-10-06T11:00:00.000-04:00",
+     "end": "2026-10-06T13:00:00.000-04:00",
      "done": false,
      "kind": "16.842",
      "src": "class",
      "location": "33-218",
      "type": "Lecture",
      "meeting_type": "Class",
-     "url": "https://app.notion.com/p/16-842-Systems-Eng-Lecture-03-System-Thinking-3e2ea74eb779813e84b0e53e24898891"
+     "url": "https://app.notion.com/p/16-842-Systems-Eng-Lecture-04-Concept-Architecture-3e2ea74eb779816796f0eefec78c8783"
     },
     {
-     "name": "TSK Thesis topic: draft + submit for approval",
-     "date": "2026-09-29T14:00:00.000-04:00",
-     "end": "2026-09-30T16:00:00.000-04:00",
-     "done": false,
-     "kind": "Research",
-     "src": "task",
-     "location": "",
-     "type": "Task",
-     "meeting_type": "Research",
-     "url": "https://app.notion.com/p/TSK-Thesis-topic-draft-submit-for-approval-3d5ea74eb77981e5b5d4c7c72ec94a64"
-    },
-    {
-     "name": "TSK Dr. Eric Evans Research Group Monthly Meeting",
-     "date": "2026-09-29T15:00:00.000-04:00",
-     "end": "2026-09-29T16:00:00.000-04:00",
-     "done": false,
-     "kind": "Dr. Eric Evans (MIT)",
-     "src": "task",
-     "location": "",
-     "type": "Task",
-     "meeting_type": "Dr. Eric Evans (MIT)",
-     "url": "https://app.notion.com/p/TSK-Dr-Eric-Evans-Research-Group-Monthly-Meeting-3d0ea74eb77981d39f4dd4af6dd15095"
-    },
-    {
-     "name": "[HW] 16.990 Creative Teams: First Hand-in Paper: Drucker Qs + Defining Events table",
-     "date": "2026-09-29T15:30:00.000-04:00",
-     "end": "2026-09-29T16:30:00.000-04:00",
+     "name": "Read/Prep: 16.990: L9 Draft vision speech",
+     "date": "2026-10-06T15:30:00.000-04:00",
+     "end": "2026-10-06T16:30:00.000-04:00",
      "done": false,
      "kind": "16.990",
      "src": "class",
      "location": "",
      "type": "",
      "meeting_type": "Class",
-     "url": "https://app.notion.com/p/HW-16-990-Creative-Teams-First-Hand-in-Paper-Drucker-Qs-Defining-Events-table-3e4ea74eb77981d3909cd5ffe48615bc"
+     "url": "https://app.notion.com/p/Read-Prep-16-990-L9-Draft-vision-speech-3eeea74eb77981178628dcd224662e43"
     },
     {
-     "name": "TSK Decide: February 2027 or June 2027 degree?",
-     "date": "2026-09-29T16:00:00.000-04:00",
-     "end": "2026-09-29T16:30:00.000-04:00",
+     "name": "Read/Prep: IDS.412: L9 Standard-setting",
+     "date": "2026-10-06T17:00:00.000-04:00",
+     "end": "2026-10-06T19:30:00.000-04:00",
      "done": false,
-     "kind": "Research",
-     "src": "task",
-     "location": "",
-     "type": "Task",
-     "meeting_type": "Research",
-     "url": "https://app.notion.com/p/TSK-Decide-February-2027-or-June-2027-degree-3d5ea74eb77981bdbe65de922228e5a3"
-    },
-    {
-     "name": "[PREP] 16.990 Creative Teams: First Hand-in Paper T-3: Finish it: tighten both pages, check against the brief",
-     "date": "2026-09-29T17:00:00.000-04:00",
-     "end": "2026-09-29T18:30:00.000-04:00",
-     "done": false,
-     "kind": "16.990",
+     "kind": "IDS.412",
      "src": "class",
      "location": "",
      "type": "",
      "meeting_type": "Class",
-     "url": "https://app.notion.com/p/PREP-16-990-Creative-Teams-First-Hand-in-Paper-T-3-Finish-it-tighten-both-pages-check-against-t-3e9ea74eb77981a9a98ed39bf85bdd25"
-    },
-    {
-     "name": "[READ] 14.003 Microecon & Policy: Prep: Lecture 07: IRETA (2014) + Doleac, Mukherjee & Schnell (2018)",
-     "date": "2026-09-29T18:30:00.000-04:00",
-     "end": "2026-09-29T19:30:00.000-04:00",
-     "done": false,
-     "kind": "14.003",
-     "src": "class",
-     "location": "",
-     "type": "",
-     "meeting_type": "Class",
-     "url": "https://app.notion.com/p/READ-14-003-Microecon-Policy-Prep-Lecture-07-IRETA-2014-Doleac-Mukherjee-Schnell-2018-3eaea74eb779815b8526e088030dcdf0"
+     "url": "https://app.notion.com/p/Read-Prep-IDS-412-L9-Standard-setting-3eeea74eb77981f89f1bebed20b10a01"
     },
     {
      "name": "14.003 Office Hours \u2014 Cristine von Dessauer",
-     "date": "2026-09-29T19:30:00.000+00:00",
-     "end": "2026-09-29T21:00:00.000+00:00",
+     "date": "2026-10-06T19:30:00.000+00:00",
+     "end": "2026-10-06T21:00:00.000+00:00",
      "done": false,
      "kind": "14.003",
      "src": "class",
      "location": "E52-416",
      "type": "",
      "meeting_type": "Class",
-     "url": "https://app.notion.com/p/14-003-Office-Hours-Cristine-von-Dessauer-3dcea74eb77981e68f20fe7dc3a48e52"
-    },
-    {
-     "name": "[READ] 16.990 Creative Teams: Prep: Lecture 07: Ericksen & Dyer (2004) Right from the Start, pp 447-462",
-     "date": "2026-09-29T19:30:00.000-04:00",
-     "end": "2026-09-29T20:15:00.000-04:00",
-     "done": false,
-     "kind": "16.990",
-     "src": "class",
-     "location": "",
-     "type": "",
-     "meeting_type": "Class",
-     "url": "https://app.notion.com/p/READ-16-990-Creative-Teams-Prep-Lecture-07-Ericksen-Dyer-2004-Right-from-the-Start-pp-447-4-3e9ea74eb77981318c96cf01f79e75f7"
-    },
-    {
-     "name": "[READ] IDS.412 Tech & Policy: Prep: Lecture 07 pt1: Mazzucato (2016) Market fixing to market-creating",
-     "date": "2026-09-29T20:15:00.000-04:00",
-     "end": "2026-09-29T20:50:00.000-04:00",
-     "done": false,
-     "kind": "IDS.412",
-     "src": "class",
-     "location": "",
-     "type": "",
-     "meeting_type": "Class",
-     "url": "https://app.notion.com/p/READ-IDS-412-Tech-Policy-Prep-Lecture-07-pt1-Mazzucato-2016-Market-fixing-to-market-creating-3eaea74eb77981528c8dc8fe040e6e1b"
-    },
-    {
-     "name": "[READ] IDS.412 Tech & Policy: Prep: Lecture 07 pt2: Pfotenhauer & Jasanoff (2017) Panacea or diagnosis?",
-     "date": "2026-09-29T21:30:00.000-04:00",
-     "end": "2026-09-29T22:30:00.000-04:00",
-     "done": false,
-     "kind": "IDS.412",
-     "src": "class",
-     "location": "",
-     "type": "",
-     "meeting_type": "Class",
-     "url": "https://app.notion.com/p/READ-IDS-412-Tech-Policy-Prep-Lecture-07-pt2-Pfotenhauer-Jasanoff-2017-Panacea-or-diagnosi-3eaea74eb7798125acc4eabb065825bc"
+     "url": "https://app.notion.com/p/14-003-Office-Hours-Cristine-von-Dessauer-3dcea74eb779812db988f3d128c987d7"
     },
     {
      "name": "TSK Cut and file the day's notes into the binder",
-     "date": "2026-09-29T22:00:00.000-04:00",
-     "end": "2026-09-29T22:15:00.000-04:00",
+     "date": "2026-10-06T22:00:00.000-04:00",
+     "end": "2026-10-06T22:15:00.000-04:00",
      "done": false,
      "kind": "Admin",
      "src": "task",
      "location": "",
      "type": "Task",
      "meeting_type": "Admin",
-     "url": "https://app.notion.com/p/TSK-Cut-and-file-the-day-s-notes-into-the-binder-3dbea74eb77981359fd7e110bd344109"
+     "url": "https://app.notion.com/p/TSK-Cut-and-file-the-day-s-notes-into-the-binder-3dbea74eb77981f89690c78149d8d29c"
     },
     {
-     "name": "[DUE] 16.842 Systems Eng: Pre-Viewings Week 3 (MITx modules + Apply exercises, quiz)",
-     "date": "2026-09-29",
+     "name": "[PREP] 16.S896 RASCAL: A1 T-7: Build it: Four Pillars quad chart",
+     "date": "2026-10-06",
      "end": "",
      "done": false,
-     "kind": "16.842",
+     "kind": "16.S896",
      "src": "class",
      "location": "",
      "type": "",
      "meeting_type": "Class",
-     "url": "https://app.notion.com/p/DUE-16-842-Systems-Eng-Pre-Viewings-Week-3-MITx-modules-Apply-exercises-quiz-3e9ea74eb7798195b7a3f1cf6b98679e"
+     "url": "https://app.notion.com/p/PREP-16-S896-RASCAL-A1-T-7-Build-it-Four-Pillars-quad-chart-3e9ea74eb77981bf8e4dceae7d585617"
+    },
+    {
+     "name": "[PREP] 14.003 Microecon & Policy: Problem Set 02 T-3: Finish it: Consumer theory",
+     "date": "2026-10-06",
+     "end": "",
+     "done": false,
+     "kind": "14.003",
+     "src": "class",
+     "location": "",
+     "type": "",
+     "meeting_type": "Class",
+     "url": "https://app.notion.com/p/PREP-14-003-Microecon-Policy-Problem-Set-02-T-3-Finish-it-Consumer-theory-3e9ea74eb779813b9fbef5ec0de7b04d"
     }
    ]
   },
   {
-   "date": "2026-09-30",
+   "date": "2026-10-07",
    "is_today": false,
    "items": [
     {
-     "name": "14.003 Microecon & Policy: Lecture 07: From preferences to demand curves",
-     "date": "2026-09-30T10:30:00.000-04:00",
-     "end": "2026-09-30T12:00:00.000-04:00",
+     "name": "Read/Prep: 14.003: L9 Giffen goods (Jensen & Miller 2008)",
+     "date": "2026-10-07T09:00:00.000-04:00",
+     "end": "2026-10-07T10:15:00.000-04:00",
+     "done": false,
+     "kind": "14.003",
+     "src": "class",
+     "location": "",
+     "type": "",
+     "meeting_type": "Class",
+     "url": "https://app.notion.com/p/Read-Prep-14-003-L9-Giffen-goods-Jensen-Miller-2008-3eeea74eb7798111b4dbe9e3720ac15d"
+    },
+    {
+     "name": "14.003 Microecon & Policy: Lecture 09: Giffen goods: Income, substitution, and subsistence",
+     "date": "2026-10-07T10:30:00.000-04:00",
+     "end": "2026-10-07T12:00:00.000-04:00",
      "done": false,
      "kind": "14.003",
      "src": "class",
      "location": "E51-376",
      "type": "",
      "meeting_type": "Class",
-     "url": "https://app.notion.com/p/14-003-Microecon-Policy-Lecture-07-From-preferences-to-demand-curves-3e2ea74eb7798121ac35e4fba095bc23"
+     "url": "https://app.notion.com/p/14-003-Microecon-Policy-Lecture-09-Giffen-goods-Income-substitution-and-subsistence-3e2ea74eb779812fb62cfaa27b26b798"
     },
     {
-     "name": "IDS.412 Tech & Policy: Lecture 07: Innovation",
-     "date": "2026-09-30T13:00:00.000-04:00",
-     "end": "2026-09-30T14:30:00.000-04:00",
+     "name": "[STUDY] IDS.412 Tech & Policy: Exam 17 T-28: Scope it: list every lecture and reading covered, then self-test cold to find the gaps",
+     "date": "2026-10-07T12:00:00.000-04:00",
+     "end": "2026-10-07T12:45:00.000-04:00",
+     "done": false,
+     "kind": "IDS.412",
+     "src": "class",
+     "location": "",
+     "type": "",
+     "meeting_type": "Class",
+     "url": "https://app.notion.com/p/STUDY-IDS-412-Tech-Policy-Exam-17-T-28-Scope-it-list-every-lecture-and-reading-covered-then-s-3e2ea74eb779817591b7e1dd3f1a5f03"
+    },
+    {
+     "name": "IDS.412 Tech & Policy: Lecture 09: Standard-setting",
+     "date": "2026-10-07T13:00:00.000-04:00",
+     "end": "2026-10-07T14:30:00.000-04:00",
      "done": false,
      "kind": "IDS.412",
      "src": "class",
      "location": "66-168",
      "type": "",
      "meeting_type": "Class",
-     "url": "https://app.notion.com/p/IDS-412-Tech-Policy-Lecture-07-Innovation-3e2ea74eb77981c884ecec0c86292ce9"
+     "url": "https://app.notion.com/p/IDS-412-Tech-Policy-Lecture-09-Standard-setting-3e2ea74eb7798123b1f7d7ca9b82197b"
     },
     {
-     "name": "TSK Build thesis milestone tracker: backward-planned from submission",
-     "date": "2026-09-30T14:00:00.000-04:00",
-     "end": "2026-09-30T16:00:00.000-04:00",
-     "done": false,
-     "kind": "Research",
-     "src": "task",
-     "location": "",
-     "type": "Task",
-     "meeting_type": "Research",
-     "url": "https://app.notion.com/p/TSK-Build-thesis-milestone-tracker-backward-planned-from-submission-3d5ea74eb779810fa027c5dfbc863eb0"
-    },
-    {
-     "name": "16.990 Creative Teams: Lecture 07: Developing Teamwork Skills: Launching new teams",
-     "date": "2026-09-30T14:30:00.000-04:00",
-     "end": "2026-09-30T16:00:00.000-04:00",
+     "name": "16.990 Creative Teams: Lecture 09: Developing Team and Organizational Skills: Communicating a shared team vision",
+     "date": "2026-10-07T14:30:00.000-04:00",
+     "end": "2026-10-07T16:00:00.000-04:00",
      "done": false,
      "kind": "16.990",
      "src": "class",
      "location": "9-354",
      "type": "",
      "meeting_type": "Class",
-     "url": "https://app.notion.com/p/16-990-Creative-Teams-Lecture-07-Developing-Teamwork-Skills-Launching-new-teams-3e2ea74eb77981098e6aeaa0d83246dd"
+     "url": "https://app.notion.com/p/16-990-Creative-Teams-Lecture-09-Developing-Team-and-Organizational-Skills-Communicating-a-shared-3e2ea74eb779815e96b3c596f2f1609d"
     },
     {
-     "name": "IDS.412 Tech & Policy: Recitation Week 4",
-     "date": "2026-09-30T16:00:00.000-04:00",
-     "end": "2026-09-30T17:00:00.000-04:00",
+     "name": "IDS.412 Tech & Policy: Recitation Week 5",
+     "date": "2026-10-07T16:00:00.000-04:00",
+     "end": "2026-10-07T17:00:00.000-04:00",
      "done": false,
      "kind": "IDS.412",
      "src": "class",
-     "location": "66-168",
+     "location": "66-156",
      "type": "",
      "meeting_type": "Class",
-     "url": "https://app.notion.com/p/IDS-412-Tech-Policy-Recitation-Week-4-3e2ea74eb779811d9113d254546ecb03"
-    },
-    {
-     "name": "GradEL Event 32-124",
-     "date": "2026-09-30T17:00:00.000-04:00",
-     "end": "2026-09-30T19:00:00.000-04:00",
-     "done": false,
-     "kind": "Meeting",
-     "src": "task",
-     "location": "",
-     "type": "Meeting",
-     "meeting_type": "",
-     "url": "https://app.notion.com/p/GradEL-Event-32-124-a2c2349748ca46279ffe12557af121d7"
+     "url": "https://app.notion.com/p/IDS-412-Tech-Policy-Recitation-Week-5-3e2ea74eb7798126868bd51f81f1a73a"
     },
     {
      "name": "14.003 Office Hours \u2014 Alicia Modestino",
-     "date": "2026-09-30T18:00:00.000+00:00",
-     "end": "2026-09-30T19:30:00.000+00:00",
+     "date": "2026-10-07T18:00:00.000+00:00",
+     "end": "2026-10-07T19:30:00.000+00:00",
      "done": false,
      "kind": "14.003",
      "src": "class",
      "location": "E52-432",
      "type": "",
      "meeting_type": "Class",
-     "url": "https://app.notion.com/p/14-003-Office-Hours-Alicia-Modestino-3dcea74eb7798147893fc40c0f220302"
+     "url": "https://app.notion.com/p/14-003-Office-Hours-Alicia-Modestino-3dcea74eb779819db21bed21ff27037e"
     },
     {
      "name": "IDS.412 Office Hours \u2014 Noelle Eckley Selin",
-     "date": "2026-09-30T18:30:00.000+00:00",
-     "end": "2026-09-30T19:30:00.000+00:00",
+     "date": "2026-10-07T18:30:00.000+00:00",
+     "end": "2026-10-07T19:30:00.000+00:00",
      "done": false,
      "kind": "IDS.412",
      "src": "class",
      "location": "TPP Lounge (E18 3rd floor)",
      "type": "",
      "meeting_type": "Class",
-     "url": "https://app.notion.com/p/IDS-412-Office-Hours-Noelle-Eckley-Selin-3dcea74eb77981ffa40ed0d690e4e091"
-    },
-    {
-     "name": "[HW] 16.990 Creative Teams: First Hand-in Paper: finish and submit-ready (Drucker Qs + Defining Events)",
-     "date": "2026-09-30T19:30:00.000-04:00",
-     "end": "2026-09-30T21:00:00.000-04:00",
-     "done": false,
-     "kind": "16.990",
-     "src": "class",
-     "location": "",
-     "type": "",
-     "meeting_type": "Class",
-     "url": "https://app.notion.com/p/HW-16-990-Creative-Teams-First-Hand-in-Paper-finish-and-submit-ready-Drucker-Qs-Defining-Event-3ebea74eb77981c4a77ed99790f4bb97"
+     "url": "https://app.notion.com/p/IDS-412-Office-Hours-Noelle-Eckley-Selin-3dcea74eb77981ecb2f5c4889b24db33"
     },
     {
      "name": "14.003 Office Hours \u2014 Ragini Srinivasan",
-     "date": "2026-09-30T20:30:00.000+00:00",
-     "end": "2026-09-30T22:00:00.000+00:00",
+     "date": "2026-10-07T20:30:00.000+00:00",
+     "end": "2026-10-07T22:00:00.000+00:00",
      "done": false,
      "kind": "14.003",
      "src": "class",
      "location": "E52-516",
      "type": "",
      "meeting_type": "Class",
-     "url": "https://app.notion.com/p/14-003-Office-Hours-Ragini-Srinivasan-3dcea74eb779815481afc6171d6fd2d4"
-    },
-    {
-     "name": "TSK [PKG] Finish PKG Fellowship application",
-     "date": "2026-09-30T21:00:00.000-04:00",
-     "end": "2026-09-30T22:30:00.000-04:00",
-     "done": false,
-     "kind": "Admin",
-     "src": "task",
-     "location": "",
-     "type": "Task",
-     "meeting_type": "Admin",
-     "url": "https://app.notion.com/p/TSK-PKG-Finish-PKG-Fellowship-application-3ebea74eb77981e496dccafc4203b4fd"
+     "url": "https://app.notion.com/p/14-003-Office-Hours-Ragini-Srinivasan-3dcea74eb779815facf4dc47ee652bac"
     },
     {
      "name": "TSK Cut and file the day's notes into the binder",
-     "date": "2026-09-30T22:00:00.000-04:00",
-     "end": "2026-09-30T22:15:00.000-04:00",
+     "date": "2026-10-07T22:00:00.000-04:00",
+     "end": "2026-10-07T22:15:00.000-04:00",
      "done": false,
      "kind": "Admin",
      "src": "task",
      "location": "",
      "type": "Task",
      "meeting_type": "Admin",
-     "url": "https://app.notion.com/p/TSK-Cut-and-file-the-day-s-notes-into-the-binder-3dbea74eb77981f6b2b1c05c40c25235"
-    },
-    {
-     "name": "TSK Complete GitHub + Slides - AI/Thesis Org Tool Walkthrough (for ESL Oct 20)",
-     "date": "2026-09-30",
-     "end": "",
-     "done": false,
-     "kind": "Task",
-     "src": "task",
-     "location": "",
-     "type": "Task",
-     "meeting_type": "",
-     "url": "https://app.notion.com/p/TSK-Complete-GitHub-Slides-AI-Thesis-Org-Tool-Walkthrough-for-ESL-Oct-20-3d0ea74eb77981b8b1a5dc98471caa90"
+     "url": "https://app.notion.com/p/TSK-Cut-and-file-the-day-s-notes-into-the-binder-3dbea74eb77981cd94f1c2a546c53162"
     }
    ]
   },
   {
-   "date": "2026-10-01",
+   "date": "2026-10-08",
    "is_today": false,
    "items": [
     {
-     "name": "TSK Complete AFT requirement (Army Fitness Test)",
-     "date": "2026-10-01T08:00:00.000-04:00",
-     "end": "2026-10-01T09:30:00.000-04:00",
+     "name": "[PREP] 16.S896 RASCAL: A1 T-3: Finish it: Four Pillars quad chart",
+     "date": "2026-10-08T09:45:00.000-04:00",
+     "end": "2026-10-08T11:15:00.000-04:00",
      "done": false,
-     "kind": "Military",
-     "src": "task",
-     "location": "",
-     "type": "",
-     "meeting_type": "Military",
-     "url": "https://app.notion.com/p/TSK-Complete-AFT-requirement-Army-Fitness-Test-3dcea74eb77981fa8da6f042e2bb35f7"
-    },
-    {
-     "name": "[STUDY] 14.003 Microecon & Policy: Exam 01 T-14: Closed-book retrieval: second half, same method",
-     "date": "2026-10-01T16:00:00.000-04:00",
-     "end": "2026-10-01T18:00:00.000-04:00",
-     "done": false,
-     "kind": "14.003",
+     "kind": "16.S896",
      "src": "class",
      "location": "",
      "type": "",
      "meeting_type": "Class",
-     "url": "https://app.notion.com/p/STUDY-14-003-Microecon-Policy-Exam-01-T-14-Closed-book-retrieval-second-half-same-method-3e2ea74eb779814b95f9fa7602288712"
+     "url": "https://app.notion.com/p/PREP-16-S896-RASCAL-A1-T-3-Finish-it-Four-Pillars-quad-chart-3e9ea74eb77981a780c6cd9ca9d8e274"
+    },
+    {
+     "name": "[HW] 16.S896 RASCAL: A1 Four Pillars quad chart: build the slide",
+     "date": "2026-10-08T16:00:00.000-04:00",
+     "end": "2026-10-08T17:30:00.000-04:00",
+     "done": false,
+     "kind": "16.S896",
+     "src": "class",
+     "location": "",
+     "type": "",
+     "meeting_type": "Class",
+     "url": "https://app.notion.com/p/HW-16-S896-RASCAL-A1-Four-Pillars-quad-chart-build-the-slide-3e6ea74eb77981af8bb0eff21505f34d"
     },
     {
      "name": "14.003 Office Hours \u2014 M\u00e9lyne Nzabonimpa",
-     "date": "2026-10-01T18:00:00.000+00:00",
-     "end": "2026-10-01T19:30:00.000+00:00",
+     "date": "2026-10-08T18:00:00.000+00:00",
+     "end": "2026-10-08T19:30:00.000+00:00",
      "done": false,
      "kind": "14.003",
      "src": "class",
      "location": "E52-516",
      "type": "",
      "meeting_type": "Class",
-     "url": "https://app.notion.com/p/14-003-Office-Hours-M-lyne-Nzabonimpa-3dcea74eb77981768ec4fdf6377ea9c9"
+     "url": "https://app.notion.com/p/14-003-Office-Hours-M-lyne-Nzabonimpa-3dcea74eb77981c4b421f7f2f6f73b62"
+    },
+    {
+     "name": "[DUE] 14.003 Microecon & Policy: Problem Set 02: Consumer theory",
+     "date": "2026-10-08T19:00:00.000-04:00",
+     "end": "2026-10-08T20:00:00.000-04:00",
+     "done": false,
+     "kind": "14.003",
+     "src": "class",
+     "location": "Not applicable, Gradescope submission. Room not published in Canvas",
+     "type": "",
+     "meeting_type": "Class",
+     "url": "https://app.notion.com/p/DUE-14-003-Microecon-Policy-Problem-Set-02-Consumer-theory-3e2ea74eb77981708772d8ed9f291b0c"
     },
     {
      "name": "TSK Cut and file the day's notes into the binder",
-     "date": "2026-10-01T22:00:00.000-04:00",
-     "end": "2026-10-01T22:15:00.000-04:00",
+     "date": "2026-10-08T22:00:00.000-04:00",
+     "end": "2026-10-08T22:15:00.000-04:00",
      "done": false,
      "kind": "Admin",
      "src": "task",
      "location": "",
      "type": "Task",
      "meeting_type": "Admin",
-     "url": "https://app.notion.com/p/TSK-Cut-and-file-the-day-s-notes-into-the-binder-3dbea74eb779819fbd17cd80456fb1d8"
+     "url": "https://app.notion.com/p/TSK-Cut-and-file-the-day-s-notes-into-the-binder-3dbea74eb779810b9c0ccfec0edfb42d"
     },
     {
-     "name": "[DUE] 16.990 Creative Teams: First Hand-in Paper (Drucker self-assessment + Defining Events, 2 pages max, online submission)",
-     "date": "2026-10-01",
+     "name": "[STUDY] 14.003 Microecon & Policy: Exam 01 T-8: Past papers and problem sets under exam conditions, no notes",
+     "date": "2026-10-08",
      "end": "",
      "done": false,
-     "kind": "16.990",
+     "kind": "14.003",
      "src": "class",
      "location": "",
      "type": "",
      "meeting_type": "Class",
-     "url": "https://app.notion.com/p/DUE-16-990-Creative-Teams-First-Hand-in-Paper-Drucker-self-assessment-Defining-Events-2-pages--3e4ea74eb7798114a2a7ff7f67097cfe"
+     "url": "https://app.notion.com/p/STUDY-14-003-Microecon-Policy-Exam-01-T-8-Past-papers-and-problem-sets-under-exam-conditions-n-3e2ea74eb77981839417c9aba0b203c5"
     }
    ]
   },
   {
-   "date": "2026-10-02",
+   "date": "2026-10-09",
    "is_today": false,
    "items": [
     {
-     "name": "14.003 Microecon & Policy: Recitation Week 4",
-     "date": "2026-10-02T09:00:00.000-04:00",
-     "end": "2026-10-02T10:00:00.000-04:00",
+     "name": "14.003 Microecon & Policy: Recitation Week 5",
+     "date": "2026-10-09T09:00:00.000-04:00",
+     "end": "2026-10-09T10:00:00.000-04:00",
      "done": false,
      "kind": "14.003",
      "src": "class",
      "location": "E52-164 at 0900, or E51-057 at 1000",
      "type": "Seminar",
      "meeting_type": "Class",
-     "url": "https://app.notion.com/p/14-003-Microecon-Policy-Recitation-Week-4-3e2ea74eb7798149b7b3ed9dab7861ba"
+     "url": "https://app.notion.com/p/14-003-Microecon-Policy-Recitation-Week-5-3e2ea74eb7798103a239ca0015a96642"
     },
     {
-     "name": "TSK TPP Short Thesis Proposal: full rough draft",
-     "date": "2026-10-02T10:00:00.000-04:00",
-     "end": "2026-10-02T12:00:00.000-04:00",
+     "name": "[DUE] 16.S896 RASCAL: Milestone: WORMS Hardware Selections Final and Orders Placed",
+     "date": "2026-10-09T13:30:00.000-04:00",
+     "end": "2026-10-09T13:45:00.000-04:00",
      "done": false,
-     "kind": "TPP",
-     "src": "task",
-     "location": "",
-     "type": "Task",
-     "meeting_type": "TPP",
-     "url": "https://app.notion.com/p/TSK-TPP-Short-Thesis-Proposal-full-rough-draft-3e5ea74eb77981c9a985c0e83aee4a56"
-    },
-    {
-     "name": "Work on insights for Sys Eng",
-     "date": "2026-10-02T12:00:00.000-04:00",
-     "end": "2026-10-02T13:00:00.000-04:00",
-     "done": false,
-     "kind": "16.842",
+     "kind": "16.S896",
      "src": "class",
-     "location": "",
+     "location": "No room, submission. Class itself: 9-354 per syllabus v9 vs 33-218 per Canvas, unresolved.",
      "type": "",
      "meeting_type": "Class",
-     "url": "https://app.notion.com/p/Work-on-insights-for-Sys-Eng-ceaee667496f42e2bf46590a49d269a5"
+     "url": "https://app.notion.com/p/DUE-16-S896-RASCAL-Milestone-WORMS-Hardware-Selections-Final-and-Orders-Placed-3e2ea74eb7798104b933db1d0e505d70"
     },
     {
-     "name": "[PREP] 14.003 Microecon & Policy: Problem Set 02 T-7: Build it: Consumer theory",
-     "date": "2026-10-02T13:30:00.000-04:00",
-     "end": "2026-10-02T15:00:00.000-04:00",
+     "name": "[DUE] 16.S896 RASCAL: A1: Four Pillars quad chart (individual, 5 pts)",
+     "date": "2026-10-09T13:45:00.000-04:00",
+     "end": "2026-10-09T14:00:00.000-04:00",
+     "done": false,
+     "kind": "16.S896",
+     "src": "class",
+     "location": "No room, submission. Class itself: 9-354 per syllabus v9 vs 33-218 per Canvas, unresolved.",
+     "type": "Homework",
+     "meeting_type": "Class",
+     "url": "https://app.notion.com/p/DUE-16-S896-RASCAL-A1-Four-Pillars-quad-chart-individual-5-pts-3e2ea74eb77981d18893cde261ffca8f"
+    },
+    {
+     "name": "16.S896 RASCAL: Session 05: WIP Presentations and Framework 2: Stakeholder Analysis and Needs to Goals",
+     "date": "2026-10-09T15:00:00.000-04:00",
+     "end": "2026-10-09T17:00:00.000-04:00",
+     "done": false,
+     "kind": "16.S896",
+     "src": "class",
+     "location": "9-354 per syllabus v9; Canvas section says 33-218; hybrid on Zoom. Conflict unresolved.",
+     "type": "Lecture",
+     "meeting_type": "Class",
+     "url": "https://app.notion.com/p/16-S896-RASCAL-Session-05-WIP-Presentations-and-Framework-2-Stakeholder-Analysis-and-Needs-to-Goa-3e2ea74eb779814f9051c066e210b218"
+    },
+    {
+     "name": "[STUDY] 14.003 Microecon & Policy: Exam 01 T-4: Full blank-page recall of the whole syllabus, then close only the gaps you found",
+     "date": "2026-10-09T17:00:00.000-04:00",
+     "end": "2026-10-09T19:00:00.000-04:00",
      "done": false,
      "kind": "14.003",
      "src": "class",
      "location": "",
      "type": "",
      "meeting_type": "Class",
-     "url": "https://app.notion.com/p/PREP-14-003-Microecon-Policy-Problem-Set-02-T-7-Build-it-Consumer-theory-3e9ea74eb77981f087c0df4dbe3113cd"
+     "url": "https://app.notion.com/p/STUDY-14-003-Microecon-Policy-Exam-01-T-4-Full-blank-page-recall-of-the-whole-syllabus-then-cl-3e2ea74eb77981aa881af9f608965add"
     },
     {
      "name": "16.S896 Office Hours \u2014 George Lordos",
-     "date": "2026-10-02T18:00:00.000+00:00",
-     "end": "2026-10-02T19:00:00.000+00:00",
+     "date": "2026-10-09T18:00:00.000+00:00",
+     "end": "2026-10-09T19:00:00.000+00:00",
      "done": false,
      "kind": "16.S896",
      "src": "class",
      "location": "33-218",
      "type": "",
      "meeting_type": "Class",
-     "url": "https://app.notion.com/p/16-S896-Office-Hours-George-Lordos-3dcea74eb77981b4a6dcef41c768e708"
+     "url": "https://app.notion.com/p/16-S896-Office-Hours-George-Lordos-3dcea74eb77981c3bdcbeb1cb846273b"
     },
     {
      "name": "14.003 Office Hours \u2014 Pratik Bhandari",
-     "date": "2026-10-02T19:00:00.000+00:00",
-     "end": "2026-10-02T20:00:00.000+00:00",
+     "date": "2026-10-09T19:00:00.000+00:00",
+     "end": "2026-10-09T20:00:00.000+00:00",
      "done": false,
      "kind": "14.003",
      "src": "class",
      "location": "4-231",
      "type": "",
      "meeting_type": "Class",
-     "url": "https://app.notion.com/p/14-003-Office-Hours-Pratik-Bhandari-3dcea74eb779816c99b6fb1f8eaecffd"
+     "url": "https://app.notion.com/p/14-003-Office-Hours-Pratik-Bhandari-3dcea74eb7798124a00ef77d77834515"
     },
     {
-     "name": "Finish Problem 1-2 ECON PSET",
-     "date": "2026-10-02T19:30:00.000-04:00",
-     "end": "2026-10-02T22:00:00.000-04:00",
+     "name": "[PREP] 16.842 Systems Eng: A2 T-3: Finish it: Requirements Definition & Margins",
+     "date": "2026-10-09T19:00:00.000-04:00",
+     "end": "2026-10-09T20:30:00.000-04:00",
      "done": false,
-     "kind": "14.003",
+     "kind": "16.842",
      "src": "class",
      "location": "",
      "type": "",
      "meeting_type": "Class",
-     "url": "https://app.notion.com/p/Finish-Problem-1-2-ECON-PSET-defc4825847541d39d4b4ff1ff1dbc0b"
+     "url": "https://app.notion.com/p/PREP-16-842-Systems-Eng-A2-T-3-Finish-it-Requirements-Definition-Margins-3e2ea74eb77981b9ab68fe95cac5f434"
     },
     {
-     "name": "TSK Cut and file the day's notes into the binder",
-     "date": "2026-10-02T22:00:00.000-04:00",
-     "end": "2026-10-02T22:15:00.000-04:00",
-     "done": false,
-     "kind": "Admin",
-     "src": "task",
-     "location": "",
-     "type": "Task",
-     "meeting_type": "Admin",
-     "url": "https://app.notion.com/p/TSK-Cut-and-file-the-day-s-notes-into-the-binder-3dbea74eb779813ab282e3511ee6f77b"
-    }
-   ]
-  },
-  {
-   "date": "2026-10-03",
-   "is_today": false,
-   "items": [
-    {
-     "name": "PSET Q2",
-     "date": "2026-10-03T12:00:00.000-04:00",
-     "end": "2026-10-03T13:30:00.000-04:00",
-     "done": false,
-     "kind": "14.003",
-     "src": "class",
-     "location": "",
-     "type": "",
-     "meeting_type": "Class",
-     "url": "https://app.notion.com/p/PSET-Q2-bf965e6c8bfa4955ae073d95363ae837"
-    },
-    {
-     "name": "PSET Q3",
-     "date": "2026-10-03T15:00:00.000-04:00",
-     "end": "2026-10-03T16:30:00.000-04:00",
-     "done": false,
-     "kind": "14.003",
-     "src": "class",
-     "location": "",
-     "type": "",
-     "meeting_type": "Class",
-     "url": "https://app.notion.com/p/PSET-Q3-b10c73038bbf4b3c9beeb0c4edff0101"
-    }
-   ]
-  },
-  {
-   "date": "2026-10-04",
-   "is_today": true,
-   "items": [
-    {
-     "name": "TSK Household cleaning",
-     "date": "2026-10-04T08:15:00.000-04:00",
-     "end": "2026-10-04T08:45:00.000-04:00",
-     "done": false,
-     "kind": "Personal",
-     "src": "task",
-     "location": "",
-     "type": "",
-     "meeting_type": "Personal",
-     "url": "https://app.notion.com/p/TSK-Household-cleaning-3dcea74eb77981c09808ee41d66d6022"
-    },
-    {
-     "name": "Read/Prep: 16.990: L8 Shared team vision",
-     "date": "2026-10-04T09:45:00.000-04:00",
-     "end": "2026-10-04T11:30:00.000-04:00",
+     "name": "[PREP] 16.990 Creative Teams: Vision Speech T-7: Build it: full draft + delivery plan, first recorded run",
+     "date": "2026-10-09T20:30:00.000-04:00",
+     "end": "2026-10-09T22:00:00.000-04:00",
      "done": false,
      "kind": "16.990",
      "src": "class",
      "location": "",
      "type": "",
      "meeting_type": "Class",
-     "url": "https://app.notion.com/p/Read-Prep-16-990-L8-Shared-team-vision-3eeea74eb779813384cee051b238685c"
+     "url": "https://app.notion.com/p/PREP-16-990-Creative-Teams-Vision-Speech-T-7-Build-it-full-draft-delivery-plan-first-recorded-3e9ea74eb7798178a49be18a463acd08"
     },
     {
-     "name": "Study Economics ",
-     "date": "2026-10-04T15:15:00.000-04:00",
-     "end": "2026-10-04T18:00:00.000-04:00",
+     "name": "TSK Cut and file the day's notes into the binder",
+     "date": "2026-10-09T22:00:00.000-04:00",
+     "end": "2026-10-09T22:15:00.000-04:00",
      "done": false,
-     "kind": "14.003",
+     "kind": "Admin",
+     "src": "task",
+     "location": "",
+     "type": "Task",
+     "meeting_type": "Admin",
+     "url": "https://app.notion.com/p/TSK-Cut-and-file-the-day-s-notes-into-the-binder-3dbea74eb779811da8dbd0bfba5d44f4"
+    },
+    {
+     "name": "[DUE] TPP Short Thesis Proposal (submit on TPP Student Resources Canvas)",
+     "date": "2026-10-09",
+     "end": "",
+     "done": false,
+     "kind": "TPP",
+     "src": "task",
+     "location": "",
+     "type": "Task",
+     "meeting_type": "TPP",
+     "url": "https://app.notion.com/p/DUE-TPP-Short-Thesis-Proposal-submit-on-TPP-Student-Resources-Canvas-3e5ea74eb77981948183d48157c86ae4"
+    }
+   ]
+  },
+  {
+   "date": "2026-10-10",
+   "is_today": false,
+   "items": [
+    {
+     "name": "TSK Update Partiful RSVP: Mariko's Halloween party",
+     "date": "2026-10-10T12:00:00.000-04:00",
+     "end": "2026-10-10T12:15:00.000-04:00",
+     "done": false,
+     "kind": "Personal",
+     "src": "task",
+     "location": "",
+     "type": "Task",
+     "meeting_type": "Personal",
+     "url": "https://app.notion.com/p/TSK-Update-Partiful-RSVP-Mariko-s-Halloween-party-3e9ea74eb77981f686bde375e53f5198"
+    },
+    {
+     "name": "[PREP] 16.S896 RASCAL: RASC-AL Notice of Intent T-3: Finish it: RASC-AL Notice of Intent (optional)",
+     "date": "2026-10-10T17:00:00.000-04:00",
+     "end": "2026-10-10T18:30:00.000-04:00",
+     "done": false,
+     "kind": "16.S896",
      "src": "class",
      "location": "",
      "type": "",
      "meeting_type": "Class",
-     "url": "https://app.notion.com/p/Study-Economics-9be303e720c449dfb8497acc7922e65e"
+     "url": "https://app.notion.com/p/PREP-16-S896-RASCAL-RASC-AL-Notice-of-Intent-T-3-Finish-it-RASC-AL-Notice-of-Intent-optional-3e9ea74eb7798178bfc1db89e7e8e070"
+    }
+   ]
+  },
+  {
+   "date": "2026-10-11",
+   "is_today": false,
+   "items": [
+    {
+     "name": "TSK Laundry",
+     "date": "2026-10-11T08:00:00.000-04:00",
+     "end": "2026-10-11T08:15:00.000-04:00",
+     "done": false,
+     "kind": "Personal",
+     "src": "task",
+     "location": "",
+     "type": "",
+     "meeting_type": "Personal",
+     "url": "https://app.notion.com/p/TSK-Laundry-3dcea74eb7798180a1c6d30b45c485a3"
+    },
+    {
+     "name": "TSK Household cleaning",
+     "date": "2026-10-11T08:15:00.000-04:00",
+     "end": "2026-10-11T08:45:00.000-04:00",
+     "done": false,
+     "kind": "Personal",
+     "src": "task",
+     "location": "",
+     "type": "",
+     "meeting_type": "Personal",
+     "url": "https://app.notion.com/p/TSK-Household-cleaning-3dcea74eb779811fbaf1d5c2d839b2d7"
     }
    ]
   }
  ],
- "total": 55
+ "total": 51
 }
