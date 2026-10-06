@@ -1,6 +1,16 @@
 {
  "classes": [
   {
+   "name": "16.990 Creative Teams: Guest Lecture: Dan Riccio (former Apple SVP Hardware Engineering)",
+   "code": "16.990",
+   "date": "2026-10-05T18:30:00.000+00:00",
+   "due": "",
+   "status": "",
+   "type": "Lecture",
+   "room": "9-354",
+   "url": "https://app.notion.com/p/16-990-Creative-Teams-Guest-Lecture-Dan-Riccio-former-Apple-SVP-Hardware-Engineering-3f1ea74eb779815fbaa1d7dd0f03682a"
+  },
+  {
    "name": "Read/Prep: 16.S896: Session 05 Framework 2 readings (Stakeholder Analysis, Needs to Goals) + WIP check",
    "code": "16.S896",
    "date": "2026-10-08T13:15:00.000-04:00",
@@ -43,7 +53,7 @@
   {
    "name": "Read/Prep: 16.990: L9 Draft vision speech",
    "code": "16.990",
-   "date": "2026-10-08T08:00:00.000-04:00",
+   "date": "2026-10-11T23:45:00.000+00:00",
    "due": "",
    "status": "",
    "type": "",
@@ -53,7 +63,7 @@
   {
    "name": "Read/Prep: 16.990: L8 Shared team vision",
    "code": "16.990",
-   "date": "2026-10-04T09:45:00.000-04:00",
+   "date": "2026-10-06T23:45:00.000+00:00",
    "due": "",
    "status": "",
    "type": "",
@@ -73,7 +83,7 @@
   {
    "name": "Read/Prep: 16.990: L9 Rehearse & time vision speech",
    "code": "16.990",
-   "date": "2026-10-06T09:45:00.000-04:00",
+   "date": "2026-10-12T23:30:00.000+00:00",
    "due": "",
    "status": "",
    "type": "",
@@ -2523,7 +2533,7 @@
   {
    "name": "16.990 Creative Teams: Lecture 09: Developing Team and Organizational Skills: Communicating a shared team vision",
    "code": "16.990",
-   "date": "2026-10-07T14:30:00.000-04:00",
+   "date": "2026-10-13T18:30:00.000+00:00",
    "due": "",
    "status": "",
    "type": "",
@@ -2583,7 +2593,7 @@
   {
    "name": "16.990 Creative Teams: Lecture 08: Developing Team and Organizational Skills: Creating a shared team vision",
    "code": "16.990",
-   "date": "2026-10-05T14:30:00.000-04:00",
+   "date": "2026-10-07T18:30:00.000+00:00",
    "due": "",
    "status": "",
    "type": "",

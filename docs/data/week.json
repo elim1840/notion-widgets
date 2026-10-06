@@ -1,11 +1,11 @@
 {
- "generated": "2026-10-05T20:55:13-04:00",
- "today": "2026-10-05",
+ "generated": "2026-10-06T03:07:45-04:00",
+ "today": "2026-10-06",
  "monday": "2026-10-05",
  "days": [
   {
    "date": "2026-10-05",
-   "is_today": true,
+   "is_today": false,
    "items": [
     {
      "name": "Read/Prep: 14.003: L8 Eissa & Liebman 1996 (EITC)",
@@ -56,16 +56,16 @@
      "url": "https://app.notion.com/p/IDS-412-Tech-Policy-Lecture-08-Competition-and-Antitrust-3e2ea74eb77981b2867bcf02e67caf8e"
     },
     {
-     "name": "16.990 Creative Teams: Lecture 08: Developing Team and Organizational Skills: Creating a shared team vision",
-     "date": "2026-10-05T14:30:00.000-04:00",
-     "end": "2026-10-05T16:00:00.000-04:00",
+     "name": "16.990 Creative Teams: Guest Lecture: Dan Riccio (former Apple SVP Hardware Engineering)",
+     "date": "2026-10-05T18:30:00.000+00:00",
+     "end": "2026-10-05T20:00:00.000+00:00",
      "done": false,
      "kind": "16.990",
      "src": "class",
      "location": "9-354",
-     "type": "",
+     "type": "Lecture",
      "meeting_type": "Class",
-     "url": "https://app.notion.com/p/16-990-Creative-Teams-Lecture-08-Developing-Team-and-Organizational-Skills-Creating-a-shared-team-3e2ea74eb7798187a62af78434bb8517"
+     "url": "https://app.notion.com/p/16-990-Creative-Teams-Guest-Lecture-Dan-Riccio-former-Apple-SVP-Hardware-Engineering-3f1ea74eb779815fbaa1d7dd0f03682a"
     },
     {
      "name": "14.003 Office Hours \u2014 Anoushka Tamhane",
@@ -131,7 +131,7 @@
   },
   {
    "date": "2026-10-06",
-   "is_today": false,
+   "is_today": true,
    "items": [
     {
      "name": "[PREP] 16.S896 RASCAL: Milestone T-3: Finish it: WORMS hardware selections final, orders placed",
@@ -144,18 +144,6 @@
      "type": "",
      "meeting_type": "Class",
      "url": "https://app.notion.com/p/PREP-16-S896-RASCAL-Milestone-T-3-Finish-it-WORMS-hardware-selections-final-orders-placed-3e9ea74eb779815cb836c785514dfc93"
-    },
-    {
-     "name": "Read/Prep: 16.990: L9 Rehearse & time vision speech",
-     "date": "2026-10-06T09:45:00.000-04:00",
-     "end": "2026-10-06T10:45:00.000-04:00",
-     "done": false,
-     "kind": "16.990",
-     "src": "class",
-     "location": "",
-     "type": "",
-     "meeting_type": "Class",
-     "url": "https://app.notion.com/p/Read-Prep-16-990-L9-Rehearse-time-vision-speech-3eeea74eb77981829e20f42d2d0235c8"
     },
     {
      "name": "16.842 Systems Eng: Lecture 04: Concept & Architecture",
@@ -204,6 +192,18 @@
      "type": "Task",
      "meeting_type": "Admin",
      "url": "https://app.notion.com/p/TSK-Cut-and-file-the-day-s-notes-into-the-binder-3dbea74eb77981f89690c78149d8d29c"
+    },
+    {
+     "name": "Read/Prep: 16.990: L8 Shared team vision",
+     "date": "2026-10-06T23:45:00.000+00:00",
+     "end": "2026-10-07T01:30:00.000+00:00",
+     "done": false,
+     "kind": "16.990",
+     "src": "class",
+     "location": "",
+     "type": "",
+     "meeting_type": "Class",
+     "url": "https://app.notion.com/p/Read-Prep-16-990-L8-Shared-team-vision-3eeea74eb779813384cee051b238685c"
     },
     {
      "name": "Finish PSET ",
@@ -296,18 +296,6 @@
      "url": "https://app.notion.com/p/IDS-412-Tech-Policy-Lecture-09-Standard-setting-3e2ea74eb7798123b1f7d7ca9b82197b"
     },
     {
-     "name": "16.990 Creative Teams: Lecture 09: Developing Team and Organizational Skills: Communicating a shared team vision",
-     "date": "2026-10-07T14:30:00.000-04:00",
-     "end": "2026-10-07T16:00:00.000-04:00",
-     "done": false,
-     "kind": "16.990",
-     "src": "class",
-     "location": "9-354",
-     "type": "",
-     "meeting_type": "Class",
-     "url": "https://app.notion.com/p/16-990-Creative-Teams-Lecture-09-Developing-Team-and-Organizational-Skills-Communicating-a-shared-3e2ea74eb779815e96b3c596f2f1609d"
-    },
-    {
      "name": "IDS.412 Tech & Policy: Recitation Week 5",
      "date": "2026-10-07T16:00:00.000-04:00",
      "end": "2026-10-07T17:00:00.000-04:00",
@@ -330,6 +318,18 @@
      "type": "",
      "meeting_type": "Class",
      "url": "https://app.notion.com/p/14-003-Office-Hours-Alicia-Modestino-3dcea74eb779819db21bed21ff27037e"
+    },
+    {
+     "name": "16.990 Creative Teams: Lecture 08: Developing Team and Organizational Skills: Creating a shared team vision",
+     "date": "2026-10-07T18:30:00.000+00:00",
+     "end": "2026-10-07T20:00:00.000+00:00",
+     "done": false,
+     "kind": "16.990",
+     "src": "class",
+     "location": "9-354",
+     "type": "",
+     "meeting_type": "Class",
+     "url": "https://app.notion.com/p/16-990-Creative-Teams-Lecture-08-Developing-Team-and-Organizational-Skills-Creating-a-shared-team-3e2ea74eb7798187a62af78434bb8517"
     },
     {
      "name": "IDS.412 Office Hours \u2014 Noelle Eckley Selin",
@@ -385,18 +385,6 @@
    "date": "2026-10-08",
    "is_today": false,
    "items": [
-    {
-     "name": "Read/Prep: 16.990: L9 Draft vision speech",
-     "date": "2026-10-08T08:00:00.000-04:00",
-     "end": "2026-10-08T09:00:00.000-04:00",
-     "done": false,
-     "kind": "16.990",
-     "src": "class",
-     "location": "",
-     "type": "",
-     "meeting_type": "Class",
-     "url": "https://app.notion.com/p/Read-Prep-16-990-L9-Draft-vision-speech-3eeea74eb77981178628dcd224662e43"
-    },
     {
      "name": "[PREP] 16.S896 RASCAL: A1 T-3: Finish it: Four Pillars quad chart",
      "date": "2026-10-08T09:45:00.000-04:00",
@@ -690,6 +678,18 @@
      "type": "",
      "meeting_type": "Personal",
      "url": "https://app.notion.com/p/TSK-Household-cleaning-3dcea74eb779811fbaf1d5c2d839b2d7"
+    },
+    {
+     "name": "Read/Prep: 16.990: L9 Draft vision speech",
+     "date": "2026-10-11T23:45:00.000+00:00",
+     "end": "2026-10-12T00:45:00.000+00:00",
+     "done": false,
+     "kind": "16.990",
+     "src": "class",
+     "location": "",
+     "type": "",
+     "meeting_type": "Class",
+     "url": "https://app.notion.com/p/Read-Prep-16-990-L9-Draft-vision-speech-3eeea74eb77981178628dcd224662e43"
     }
    ]
   }

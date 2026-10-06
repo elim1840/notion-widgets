@@ -1,20 +1,20 @@
 {
- "generated": "2026-10-05T20:55:13-04:00",
- "today": "2026-10-05",
+ "generated": "2026-10-06T03:07:45-04:00",
+ "today": "2026-10-06",
  "counts": {
   "total": 259,
   "open": 237,
   "done": 22,
   "today_total": 1,
   "today_done": 0,
-  "overdue": 102,
+  "overdue": 103,
   "past_meetings": 48
  },
  "today_items": [
   {
    "name": "TSK Cut and file the day's notes into the binder",
-   "date": "2026-10-05T22:00:00.000-04:00",
-   "end": "2026-10-05T22:15:00.000-04:00",
+   "date": "2026-10-06T22:00:00.000-04:00",
+   "end": "2026-10-06T22:15:00.000-04:00",
    "done": false,
    "status": "Not Started",
    "type": "Task",
@@ -26,7 +26,7 @@
    "agenda": "",
    "link": "",
    "notes": "Cut the day's sheets, sort by class then by the number printed in each sheet's footer, punch and file. Unsure sheets go in the front pocket for the Sunday review. Guide: 02_Classes/BINDER-FILING-GUIDE.md",
-   "url": "https://app.notion.com/p/TSK-Cut-and-file-the-day-s-notes-into-the-binder-3dbea74eb7798118a3e0eb1a16f957b4"
+   "url": "https://app.notion.com/p/TSK-Cut-and-file-the-day-s-notes-into-the-binder-3dbea74eb77981f89690c78149d8d29c"
   }
  ],
  "overdue_items": [
@@ -714,23 +714,6 @@
  "upcoming": [
   {
    "name": "TSK Cut and file the day's notes into the binder",
-   "date": "2026-10-05T22:00:00.000-04:00",
-   "end": "2026-10-05T22:15:00.000-04:00",
-   "done": false,
-   "status": "Not Started",
-   "type": "Task",
-   "meeting_type": "Admin",
-   "priority": "Medium",
-   "energy": "Shallow",
-   "location": "",
-   "attendees": "",
-   "agenda": "",
-   "link": "",
-   "notes": "Cut the day's sheets, sort by class then by the number printed in each sheet's footer, punch and file. Unsure sheets go in the front pocket for the Sunday review. Guide: 02_Classes/BINDER-FILING-GUIDE.md",
-   "url": "https://app.notion.com/p/TSK-Cut-and-file-the-day-s-notes-into-the-binder-3dbea74eb7798118a3e0eb1a16f957b4"
-  },
-  {
-   "name": "TSK Cut and file the day's notes into the binder",
    "date": "2026-10-06T22:00:00.000-04:00",
    "end": "2026-10-06T22:15:00.000-04:00",
    "done": false,
@@ -898,14 +881,26 @@
    "link": "",
    "notes": "",
    "url": "https://app.notion.com/p/TSK-Household-cleaning-3dcea74eb779811fbaf1d5c2d839b2d7"
+  },
+  {
+   "name": "TSK SERG Meeting",
+   "date": "2026-10-13T17:00:00.000-04:00",
+   "end": "2026-10-13T18:00:00.000-04:00",
+   "done": false,
+   "status": "Not Started",
+   "type": "Task",
+   "meeting_type": "Research",
+   "priority": "",
+   "energy": "",
+   "location": "33-206 / Zoom: https://mit.zoom.us/j/6850762634",
+   "attendees": "",
+   "agenda": "",
+   "link": "",
+   "notes": "",
+   "url": "https://app.notion.com/p/TSK-SERG-Meeting-3d0ea74eb779812287f3e6d70334716d"
   }
  ],
  "history": [
-  {
-   "date": "2026-09-22",
-   "total": 2,
-   "done": 0
-  },
   {
    "date": "2026-09-23",
    "total": 5,
@@ -968,6 +963,11 @@
   },
   {
    "date": "2026-10-05",
+   "total": 1,
+   "done": 0
+  },
+  {
+   "date": "2026-10-06",
    "total": 1,
    "done": 0
   }
