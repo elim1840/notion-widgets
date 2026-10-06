@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-06T15:31:49-04:00",
+ "generated": "2026-10-06T19:15:13-04:00",
  "today": "2026-10-06",
  "counts": {
   "total": 261,
@@ -764,23 +764,6 @@
    "url": "https://app.notion.com/p/TSK-Cut-and-file-the-day-s-notes-into-the-binder-3dbea74eb77981f89690c78149d8d29c"
   },
   {
-   "name": "Read/Prep: TPP: Short Thesis Proposal, finish draft + submit",
-   "date": "2026-10-07T19:30:00.000-04:00",
-   "end": "2026-10-07T21:30:00.000-04:00",
-   "done": false,
-   "status": "Not Started",
-   "type": "Task",
-   "meeting_type": "TPP",
-   "priority": "High",
-   "energy": "",
-   "location": "",
-   "attendees": "",
-   "agenda": "",
-   "link": "",
-   "notes": "Finish rough draft, check against assignment, submit on TPP Student Resources Canvas (per Barb's TPP27 email). Due Fri Oct 9 (time unconfirmed, check Canvas).",
-   "url": "https://app.notion.com/p/Read-Prep-TPP-Short-Thesis-Proposal-finish-draft-submit-3f0ea74eb7798194a671f54f4abed0c8"
-  },
-  {
    "name": "TSK Cut and file the day's notes into the binder",
    "date": "2026-10-07T22:00:00.000-04:00",
    "end": "2026-10-07T22:15:00.000-04:00",
@@ -796,6 +779,23 @@
    "link": "",
    "notes": "Cut the day's sheets, sort by class then by the number printed in each sheet's footer, punch and file. Unsure sheets go in the front pocket for the Sunday review. Guide: 02_Classes/BINDER-FILING-GUIDE.md",
    "url": "https://app.notion.com/p/TSK-Cut-and-file-the-day-s-notes-into-the-binder-3dbea74eb77981cd94f1c2a546c53162"
+  },
+  {
+   "name": "Read/Prep: TPP: Short Thesis Proposal, finish draft + submit",
+   "date": "2026-10-08T08:00:00.000-04:00",
+   "end": "2026-10-08T08:45:00.000-04:00",
+   "done": false,
+   "status": "Not Started",
+   "type": "Task",
+   "meeting_type": "TPP",
+   "priority": "High",
+   "energy": "",
+   "location": "",
+   "attendees": "",
+   "agenda": "",
+   "link": "",
+   "notes": "Finish rough draft, check against assignment, submit on TPP Student Resources Canvas (per Barb's TPP27 email). Due Fri Oct 9 (time unconfirmed, check Canvas).",
+   "url": "https://app.notion.com/p/Read-Prep-TPP-Short-Thesis-Proposal-finish-draft-submit-3f0ea74eb7798194a671f54f4abed0c8"
   },
   {
    "name": "TSK Submit ASCEND 2027 abstract (SDA or Lunar Lander paper)",

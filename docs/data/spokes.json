@@ -1,9 +1,19 @@
 {
  "classes": [
   {
+   "name": "Check PSET 2",
+   "code": "14.003",
+   "date": "2026-10-06T18:00:00.000-04:00",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "",
+   "url": "https://app.notion.com/p/Check-PSET-2-931a64c460ed42a0bccfeade8cbbcbcb"
+  },
+  {
    "name": "Read Up on Micro-econ",
    "code": "14.003",
-   "date": "2026-10-06T15:30:00.000-04:00",
+   "date": "2026-10-06T19:45:00.000-04:00",
    "due": "",
    "status": "",
    "type": "",
@@ -53,7 +63,7 @@
   {
    "name": "Read/Prep: 14.003: L9 Giffen goods (Jensen & Miller 2008)",
    "code": "14.003",
-   "date": "2026-10-07T09:00:00.000-04:00",
+   "date": "2026-10-07T08:30:00.000-04:00",
    "due": "",
    "status": "",
    "type": "",
@@ -73,7 +83,7 @@
   {
    "name": "Read/Prep: 16.990: L8 Shared team vision",
    "code": "16.990",
-   "date": "2026-10-06T19:00:00.000-04:00",
+   "date": "2026-10-06T18:15:00.000-04:00",
    "due": "",
    "status": "",
    "type": "",
@@ -663,7 +673,7 @@
   {
    "name": "[PREP] 14.003 Microecon & Policy: Problem Set 02 T-3: Finish it: Consumer theory",
    "code": "14.003",
-   "date": "2026-10-06T21:00:00.000-04:00",
+   "date": "2026-10-06",
    "due": "",
    "status": "",
    "type": "",

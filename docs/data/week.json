@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-06T15:31:49-04:00",
+ "generated": "2026-10-06T19:15:13-04:00",
  "today": "2026-10-06",
  "monday": "2026-10-05",
  "days": [
@@ -158,21 +158,21 @@
      "url": "https://app.notion.com/p/Go-to-Grad-Lounge-0f50b6ed49f54ad88ebc04ff46508591"
     },
     {
-     "name": "Read Up on Micro-econ",
-     "date": "2026-10-06T15:30:00.000-04:00",
-     "end": "2026-10-06T18:00:00.000-04:00",
+     "name": "Check PSET 2",
+     "date": "2026-10-06T18:00:00.000-04:00",
+     "end": "2026-10-06T18:15:00.000-04:00",
      "done": false,
      "kind": "14.003",
      "src": "class",
      "location": "",
      "type": "",
      "meeting_type": "Class",
-     "url": "https://app.notion.com/p/Read-Up-on-Micro-econ-61b71400b7054b399594d5300b4d4ba2"
+     "url": "https://app.notion.com/p/Check-PSET-2-931a64c460ed42a0bccfeade8cbbcbcb"
     },
     {
      "name": "Read/Prep: 16.990: L8 Shared team vision",
-     "date": "2026-10-06T19:00:00.000-04:00",
-     "end": "2026-10-06T21:00:00.000-04:00",
+     "date": "2026-10-06T18:15:00.000-04:00",
+     "end": "2026-10-06T19:15:00.000-04:00",
      "done": false,
      "kind": "16.990",
      "src": "class",
@@ -194,16 +194,16 @@
      "url": "https://app.notion.com/p/14-003-Office-Hours-Cristine-von-Dessauer-3dcea74eb779812db988f3d128c987d7"
     },
     {
-     "name": "[PREP] 14.003 Microecon & Policy: Problem Set 02 T-3: Finish it: Consumer theory",
-     "date": "2026-10-06T21:00:00.000-04:00",
-     "end": "2026-10-06T22:15:00.000-04:00",
+     "name": "Read Up on Micro-econ",
+     "date": "2026-10-06T19:45:00.000-04:00",
+     "end": "2026-10-06T22:30:00.000-04:00",
      "done": false,
      "kind": "14.003",
      "src": "class",
      "location": "",
      "type": "",
      "meeting_type": "Class",
-     "url": "https://app.notion.com/p/PREP-14-003-Microecon-Policy-Problem-Set-02-T-3-Finish-it-Consumer-theory-3e9ea74eb779813b9fbef5ec0de7b04d"
+     "url": "https://app.notion.com/p/Read-Up-on-Micro-econ-61b71400b7054b399594d5300b4d4ba2"
     },
     {
      "name": "TSK Cut and file the day's notes into the binder",
@@ -252,6 +252,18 @@
      "type": "",
      "meeting_type": "Class",
      "url": "https://app.notion.com/p/PREP-16-S896-RASCAL-A1-T-7-Build-it-Four-Pillars-quad-chart-3e9ea74eb77981bf8e4dceae7d585617"
+    },
+    {
+     "name": "[PREP] 14.003 Microecon & Policy: Problem Set 02 T-3: Finish it: Consumer theory",
+     "date": "2026-10-06",
+     "end": "",
+     "done": false,
+     "kind": "14.003",
+     "src": "class",
+     "location": "",
+     "type": "",
+     "meeting_type": "Class",
+     "url": "https://app.notion.com/p/PREP-14-003-Microecon-Policy-Problem-Set-02-T-3-Finish-it-Consumer-theory-3e9ea74eb779813b9fbef5ec0de7b04d"
     }
    ]
   },
@@ -261,8 +273,8 @@
    "items": [
     {
      "name": "Read/Prep: 14.003: L9 Giffen goods (Jensen & Miller 2008)",
-     "date": "2026-10-07T09:00:00.000-04:00",
-     "end": "2026-10-07T10:15:00.000-04:00",
+     "date": "2026-10-07T08:30:00.000-04:00",
+     "end": "2026-10-07T09:45:00.000-04:00",
      "done": false,
      "kind": "14.003",
      "src": "class",
@@ -356,18 +368,6 @@
      "url": "https://app.notion.com/p/IDS-412-Office-Hours-Noelle-Eckley-Selin-3dcea74eb77981ecb2f5c4889b24db33"
     },
     {
-     "name": "Read/Prep: TPP: Short Thesis Proposal, finish draft + submit",
-     "date": "2026-10-07T19:30:00.000-04:00",
-     "end": "2026-10-07T21:30:00.000-04:00",
-     "done": false,
-     "kind": "TPP",
-     "src": "task",
-     "location": "",
-     "type": "Task",
-     "meeting_type": "TPP",
-     "url": "https://app.notion.com/p/Read-Prep-TPP-Short-Thesis-Proposal-finish-draft-submit-3f0ea74eb7798194a671f54f4abed0c8"
-    },
-    {
      "name": "14.003 Office Hours \u2014 Ragini Srinivasan",
      "date": "2026-10-07T20:30:00.000+00:00",
      "end": "2026-10-07T22:00:00.000+00:00",
@@ -409,6 +409,18 @@
    "date": "2026-10-08",
    "is_today": false,
    "items": [
+    {
+     "name": "Read/Prep: TPP: Short Thesis Proposal, finish draft + submit",
+     "date": "2026-10-08T08:00:00.000-04:00",
+     "end": "2026-10-08T08:45:00.000-04:00",
+     "done": false,
+     "kind": "TPP",
+     "src": "task",
+     "location": "",
+     "type": "Task",
+     "meeting_type": "TPP",
+     "url": "https://app.notion.com/p/Read-Prep-TPP-Short-Thesis-Proposal-finish-draft-submit-3f0ea74eb7798194a671f54f4abed0c8"
+    },
     {
      "name": "[PREP] 16.S896 RASCAL: A1 T-3: Finish it: Four Pillars quad chart",
      "date": "2026-10-08T09:45:00.000-04:00",
@@ -718,5 +730,5 @@
    ]
   }
  ],
- "total": 56
+ "total": 57
 }
