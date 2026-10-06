@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-05T15:29:05-04:00",
+ "generated": "2026-10-05T20:55:13-04:00",
  "today": "2026-10-05",
  "monday": "2026-10-05",
  "days": [
@@ -68,18 +68,6 @@
      "url": "https://app.notion.com/p/16-990-Creative-Teams-Lecture-08-Developing-Team-and-Organizational-Skills-Creating-a-shared-team-3e2ea74eb7798187a62af78434bb8517"
     },
     {
-     "name": "[PREP] 16.842 Systems Eng: A2 T-7: Build it: Requirements Definition & Margins",
-     "date": "2026-10-05T19:45:00.000-04:00",
-     "end": "2026-10-05T20:45:00.000-04:00",
-     "done": false,
-     "kind": "16.842",
-     "src": "class",
-     "location": "",
-     "type": "",
-     "meeting_type": "Class",
-     "url": "https://app.notion.com/p/PREP-16-842-Systems-Eng-A2-T-7-Build-it-Requirements-Definition-Margins-3e2ea74eb77981408905df7b77189391"
-    },
-    {
      "name": "14.003 Office Hours \u2014 Anoushka Tamhane",
      "date": "2026-10-05T20:00:00.000+00:00",
      "end": "2026-10-05T21:30:00.000+00:00",
@@ -90,18 +78,6 @@
      "type": "",
      "meeting_type": "Class",
      "url": "https://app.notion.com/p/14-003-Office-Hours-Anoushka-Tamhane-3dcea74eb779819892bbf4129f08443e"
-    },
-    {
-     "name": "Read/Prep: 16.842: L4 Concept & Architecture pre-read",
-     "date": "2026-10-05T20:45:00.000-04:00",
-     "end": "2026-10-05T21:45:00.000-04:00",
-     "done": false,
-     "kind": "16.842",
-     "src": "class",
-     "location": "",
-     "type": "",
-     "meeting_type": "Class",
-     "url": "https://app.notion.com/p/Read-Prep-16-842-L4-Concept-Architecture-pre-read-3eeea74eb77981118ce5f3501e5a7df7"
     },
     {
      "name": "TSK Cut and file the day's notes into the binder",
@@ -116,6 +92,18 @@
      "url": "https://app.notion.com/p/TSK-Cut-and-file-the-day-s-notes-into-the-binder-3dbea74eb7798118a3e0eb1a16f957b4"
     },
     {
+     "name": "Read/Prep: 16.842: L4 Concept & Architecture pre-read",
+     "date": "2026-10-05",
+     "end": "",
+     "done": false,
+     "kind": "16.842",
+     "src": "class",
+     "location": "",
+     "type": "",
+     "meeting_type": "Class",
+     "url": "https://app.notion.com/p/Read-Prep-16-842-L4-Concept-Architecture-pre-read-3eeea74eb77981118ce5f3501e5a7df7"
+    },
+    {
      "name": "Read/Prep: IDS.412: L8 Competition & Antitrust (part 2)",
      "date": "2026-10-05",
      "end": "",
@@ -126,6 +114,18 @@
      "type": "",
      "meeting_type": "Class",
      "url": "https://app.notion.com/p/Read-Prep-IDS-412-L8-Competition-Antitrust-part-2-3eeea74eb77981f7b0aac59c5fbcce51"
+    },
+    {
+     "name": "[PREP] 16.842 Systems Eng: A2 T-7: Build it: Requirements Definition & Margins",
+     "date": "2026-10-05",
+     "end": "",
+     "done": false,
+     "kind": "16.842",
+     "src": "class",
+     "location": "",
+     "type": "",
+     "meeting_type": "Class",
+     "url": "https://app.notion.com/p/PREP-16-842-Systems-Eng-A2-T-7-Build-it-Requirements-Definition-Margins-3e2ea74eb77981408905df7b77189391"
     }
    ]
   },
@@ -168,18 +168,6 @@
      "type": "Lecture",
      "meeting_type": "Class",
      "url": "https://app.notion.com/p/16-842-Systems-Eng-Lecture-04-Concept-Architecture-3e2ea74eb779816796f0eefec78c8783"
-    },
-    {
-     "name": "Read/Prep: 16.990: L9 Draft vision speech",
-     "date": "2026-10-06T15:30:00.000-04:00",
-     "end": "2026-10-06T16:30:00.000-04:00",
-     "done": false,
-     "kind": "16.990",
-     "src": "class",
-     "location": "",
-     "type": "",
-     "meeting_type": "Class",
-     "url": "https://app.notion.com/p/Read-Prep-16-990-L9-Draft-vision-speech-3eeea74eb77981178628dcd224662e43"
     },
     {
      "name": "Read/Prep: IDS.412: L9 Standard-setting",
@@ -356,6 +344,18 @@
      "url": "https://app.notion.com/p/IDS-412-Office-Hours-Noelle-Eckley-Selin-3dcea74eb77981ecb2f5c4889b24db33"
     },
     {
+     "name": "Read/Prep: TPP: Short Thesis Proposal, finish draft + submit",
+     "date": "2026-10-07T19:30:00.000-04:00",
+     "end": "2026-10-07T21:30:00.000-04:00",
+     "done": false,
+     "kind": "TPP",
+     "src": "task",
+     "location": "",
+     "type": "Task",
+     "meeting_type": "TPP",
+     "url": "https://app.notion.com/p/Read-Prep-TPP-Short-Thesis-Proposal-finish-draft-submit-3f0ea74eb7798194a671f54f4abed0c8"
+    },
+    {
      "name": "14.003 Office Hours \u2014 Ragini Srinivasan",
      "date": "2026-10-07T20:30:00.000+00:00",
      "end": "2026-10-07T22:00:00.000+00:00",
@@ -386,6 +386,18 @@
    "is_today": false,
    "items": [
     {
+     "name": "Read/Prep: 16.990: L9 Draft vision speech",
+     "date": "2026-10-08T08:00:00.000-04:00",
+     "end": "2026-10-08T09:00:00.000-04:00",
+     "done": false,
+     "kind": "16.990",
+     "src": "class",
+     "location": "",
+     "type": "",
+     "meeting_type": "Class",
+     "url": "https://app.notion.com/p/Read-Prep-16-990-L9-Draft-vision-speech-3eeea74eb77981178628dcd224662e43"
+    },
+    {
      "name": "[PREP] 16.S896 RASCAL: A1 T-3: Finish it: Four Pillars quad chart",
      "date": "2026-10-08T09:45:00.000-04:00",
      "end": "2026-10-08T11:15:00.000-04:00",
@@ -396,6 +408,18 @@
      "type": "",
      "meeting_type": "Class",
      "url": "https://app.notion.com/p/PREP-16-S896-RASCAL-A1-T-3-Finish-it-Four-Pillars-quad-chart-3e9ea74eb77981a780c6cd9ca9d8e274"
+    },
+    {
+     "name": "Read/Prep: 16.S896: Session 05 Framework 2 readings (Stakeholder Analysis, Needs to Goals) + WIP check",
+     "date": "2026-10-08T13:15:00.000-04:00",
+     "end": "2026-10-08T14:45:00.000-04:00",
+     "done": false,
+     "kind": "16.S896",
+     "src": "class",
+     "location": "",
+     "type": "",
+     "meeting_type": "Class",
+     "url": "https://app.notion.com/p/Read-Prep-16-S896-Session-05-Framework-2-readings-Stakeholder-Analysis-Needs-to-Goals-WIP-che-3f0ea74eb77981069e99f582096d5109"
     },
     {
      "name": "[HW] 16.S896 RASCAL: A1 Four Pillars quad chart: build the slide",
@@ -670,5 +694,5 @@
    ]
   }
  ],
- "total": 52
+ "total": 54
 }

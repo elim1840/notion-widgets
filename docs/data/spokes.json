@@ -1,6 +1,16 @@
 {
  "classes": [
   {
+   "name": "Read/Prep: 16.S896: Session 05 Framework 2 readings (Stakeholder Analysis, Needs to Goals) + WIP check",
+   "code": "16.S896",
+   "date": "2026-10-08T13:15:00.000-04:00",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "",
+   "url": "https://app.notion.com/p/Read-Prep-16-S896-Session-05-Framework-2-readings-Stakeholder-Analysis-Needs-to-Goals-WIP-che-3f0ea74eb77981069e99f582096d5109"
+  },
+  {
    "name": "Finish PSET ",
    "code": "14.003",
    "date": "2026-10-06",
@@ -13,7 +23,7 @@
   {
    "name": "Read/Prep: 16.842: L4 Concept & Architecture pre-read",
    "code": "16.842",
-   "date": "2026-10-05T20:45:00.000-04:00",
+   "date": "2026-10-05",
    "due": "",
    "status": "",
    "type": "",
@@ -33,7 +43,7 @@
   {
    "name": "Read/Prep: 16.990: L9 Draft vision speech",
    "code": "16.990",
-   "date": "2026-10-06T15:30:00.000-04:00",
+   "date": "2026-10-08T08:00:00.000-04:00",
    "due": "",
    "status": "",
    "type": "",
@@ -2563,7 +2573,7 @@
   {
    "name": "[PREP] 16.842 Systems Eng: A2 T-7: Build it: Requirements Definition & Margins",
    "code": "16.842",
-   "date": "2026-10-05T19:45:00.000-04:00",
+   "date": "2026-10-05",
    "due": "",
    "status": "Not started",
    "type": "",

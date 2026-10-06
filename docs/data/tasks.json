@@ -1,9 +1,9 @@
 {
- "generated": "2026-10-05T15:29:05-04:00",
+ "generated": "2026-10-05T20:55:13-04:00",
  "today": "2026-10-05",
  "counts": {
-  "total": 258,
-  "open": 236,
+  "total": 259,
+  "open": 237,
   "done": 22,
   "today_total": 1,
   "today_done": 0,
@@ -745,6 +745,23 @@
    "link": "",
    "notes": "Cut the day's sheets, sort by class then by the number printed in each sheet's footer, punch and file. Unsure sheets go in the front pocket for the Sunday review. Guide: 02_Classes/BINDER-FILING-GUIDE.md",
    "url": "https://app.notion.com/p/TSK-Cut-and-file-the-day-s-notes-into-the-binder-3dbea74eb77981f89690c78149d8d29c"
+  },
+  {
+   "name": "Read/Prep: TPP: Short Thesis Proposal, finish draft + submit",
+   "date": "2026-10-07T19:30:00.000-04:00",
+   "end": "2026-10-07T21:30:00.000-04:00",
+   "done": false,
+   "status": "Not Started",
+   "type": "Task",
+   "meeting_type": "TPP",
+   "priority": "High",
+   "energy": "",
+   "location": "",
+   "attendees": "",
+   "agenda": "",
+   "link": "",
+   "notes": "Finish rough draft, check against assignment, submit on TPP Student Resources Canvas (per Barb's TPP27 email). Due Fri Oct 9 (time unconfirmed, check Canvas).",
+   "url": "https://app.notion.com/p/Read-Prep-TPP-Short-Thesis-Proposal-finish-draft-submit-3f0ea74eb7798194a671f54f4abed0c8"
   },
   {
    "name": "TSK Cut and file the day's notes into the binder",
