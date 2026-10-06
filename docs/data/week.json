@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-06T10:10:40-04:00",
+ "generated": "2026-10-06T15:31:49-04:00",
  "today": "2026-10-06",
  "monday": "2026-10-05",
  "days": [
@@ -146,20 +146,20 @@
      "url": "https://app.notion.com/p/16-842-Systems-Eng-Lecture-04-Concept-Architecture-3e2ea74eb779816796f0eefec78c8783"
     },
     {
-     "name": "Finish PSET ",
-     "date": "2026-10-06T13:00:00.000-04:00",
+     "name": "Go to Grad Lounge",
+     "date": "2026-10-06T13:30:00.000-04:00",
      "end": "2026-10-06T14:00:00.000-04:00",
      "done": false,
-     "kind": "14.003",
-     "src": "class",
+     "kind": "Meeting",
+     "src": "task",
      "location": "",
-     "type": "",
-     "meeting_type": "Class",
-     "url": "https://app.notion.com/p/Finish-PSET-75e8d8c9fa6b4ed9b45cbab244c451da"
+     "type": "Meeting",
+     "meeting_type": "",
+     "url": "https://app.notion.com/p/Go-to-Grad-Lounge-0f50b6ed49f54ad88ebc04ff46508591"
     },
     {
      "name": "Read Up on Micro-econ",
-     "date": "2026-10-06T14:00:00.000-04:00",
+     "date": "2026-10-06T15:30:00.000-04:00",
      "end": "2026-10-06T18:00:00.000-04:00",
      "done": false,
      "kind": "14.003",
@@ -171,7 +171,7 @@
     },
     {
      "name": "Read/Prep: 16.990: L8 Shared team vision",
-     "date": "2026-10-06T18:00:00.000-04:00",
+     "date": "2026-10-06T19:00:00.000-04:00",
      "end": "2026-10-06T21:00:00.000-04:00",
      "done": false,
      "kind": "16.990",
@@ -216,6 +216,18 @@
      "type": "Task",
      "meeting_type": "Admin",
      "url": "https://app.notion.com/p/TSK-Cut-and-file-the-day-s-notes-into-the-binder-3dbea74eb77981f89690c78149d8d29c"
+    },
+    {
+     "name": "Finish PSET ",
+     "date": "2026-10-06",
+     "end": "",
+     "done": false,
+     "kind": "14.003",
+     "src": "class",
+     "location": "",
+     "type": "",
+     "meeting_type": "Class",
+     "url": "https://app.notion.com/p/Finish-PSET-75e8d8c9fa6b4ed9b45cbab244c451da"
     },
     {
      "name": "[PREP] 16.S896 RASCAL: Milestone T-3: Finish it: WORMS hardware selections final, orders placed",
@@ -706,5 +718,5 @@
    ]
   }
  ],
- "total": 55
+ "total": 56
 }

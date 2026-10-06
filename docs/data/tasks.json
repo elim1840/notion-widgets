@@ -1,16 +1,33 @@
 {
- "generated": "2026-10-06T10:10:40-04:00",
+ "generated": "2026-10-06T15:31:49-04:00",
  "today": "2026-10-06",
  "counts": {
-  "total": 259,
-  "open": 237,
+  "total": 261,
+  "open": 239,
   "done": 22,
-  "today_total": 1,
+  "today_total": 2,
   "today_done": 0,
   "overdue": 103,
   "past_meetings": 48
  },
  "today_items": [
+  {
+   "name": "Go to Grad Lounge",
+   "date": "2026-10-06T13:30:00.000-04:00",
+   "end": "2026-10-06T14:00:00.000-04:00",
+   "done": false,
+   "status": "",
+   "type": "Meeting",
+   "meeting_type": "",
+   "priority": "",
+   "energy": "",
+   "location": "",
+   "attendees": "",
+   "agenda": "",
+   "link": "",
+   "notes": "",
+   "url": "https://app.notion.com/p/Go-to-Grad-Lounge-0f50b6ed49f54ad88ebc04ff46508591"
+  },
   {
    "name": "TSK Cut and file the day's notes into the binder",
    "date": "2026-10-06T22:00:00.000-04:00",
@@ -713,6 +730,23 @@
  ],
  "upcoming": [
   {
+   "name": "Go to Grad Lounge",
+   "date": "2026-10-06T13:30:00.000-04:00",
+   "end": "2026-10-06T14:00:00.000-04:00",
+   "done": false,
+   "status": "",
+   "type": "Meeting",
+   "meeting_type": "",
+   "priority": "",
+   "energy": "",
+   "location": "",
+   "attendees": "",
+   "agenda": "",
+   "link": "",
+   "notes": "",
+   "url": "https://app.notion.com/p/Go-to-Grad-Lounge-0f50b6ed49f54ad88ebc04ff46508591"
+  },
+  {
    "name": "TSK Cut and file the day's notes into the binder",
    "date": "2026-10-06T22:00:00.000-04:00",
    "end": "2026-10-06T22:15:00.000-04:00",
@@ -968,7 +1002,7 @@
   },
   {
    "date": "2026-10-06",
-   "total": 1,
+   "total": 2,
    "done": 0
   }
  ]
