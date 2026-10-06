@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-06T03:07:45-04:00",
+ "generated": "2026-10-06T10:10:40-04:00",
  "today": "2026-10-06",
  "monday": "2026-10-05",
  "days": [
@@ -134,18 +134,6 @@
    "is_today": true,
    "items": [
     {
-     "name": "[PREP] 16.S896 RASCAL: Milestone T-3: Finish it: WORMS hardware selections final, orders placed",
-     "date": "2026-10-06T08:00:00.000-04:00",
-     "end": "2026-10-06T09:30:00.000-04:00",
-     "done": false,
-     "kind": "16.S896",
-     "src": "class",
-     "location": "",
-     "type": "",
-     "meeting_type": "Class",
-     "url": "https://app.notion.com/p/PREP-16-S896-RASCAL-Milestone-T-3-Finish-it-WORMS-hardware-selections-final-orders-placed-3e9ea74eb779815cb836c785514dfc93"
-    },
-    {
      "name": "16.842 Systems Eng: Lecture 04: Concept & Architecture",
      "date": "2026-10-06T11:00:00.000-04:00",
      "end": "2026-10-06T13:00:00.000-04:00",
@@ -158,16 +146,40 @@
      "url": "https://app.notion.com/p/16-842-Systems-Eng-Lecture-04-Concept-Architecture-3e2ea74eb779816796f0eefec78c8783"
     },
     {
-     "name": "Read/Prep: IDS.412: L9 Standard-setting",
-     "date": "2026-10-06T17:00:00.000-04:00",
-     "end": "2026-10-06T19:30:00.000-04:00",
+     "name": "Finish PSET ",
+     "date": "2026-10-06T13:00:00.000-04:00",
+     "end": "2026-10-06T14:00:00.000-04:00",
      "done": false,
-     "kind": "IDS.412",
+     "kind": "14.003",
      "src": "class",
      "location": "",
      "type": "",
      "meeting_type": "Class",
-     "url": "https://app.notion.com/p/Read-Prep-IDS-412-L9-Standard-setting-3eeea74eb77981f89f1bebed20b10a01"
+     "url": "https://app.notion.com/p/Finish-PSET-75e8d8c9fa6b4ed9b45cbab244c451da"
+    },
+    {
+     "name": "Read Up on Micro-econ",
+     "date": "2026-10-06T14:00:00.000-04:00",
+     "end": "2026-10-06T18:00:00.000-04:00",
+     "done": false,
+     "kind": "14.003",
+     "src": "class",
+     "location": "",
+     "type": "",
+     "meeting_type": "Class",
+     "url": "https://app.notion.com/p/Read-Up-on-Micro-econ-61b71400b7054b399594d5300b4d4ba2"
+    },
+    {
+     "name": "Read/Prep: 16.990: L8 Shared team vision",
+     "date": "2026-10-06T18:00:00.000-04:00",
+     "end": "2026-10-06T21:00:00.000-04:00",
+     "done": false,
+     "kind": "16.990",
+     "src": "class",
+     "location": "",
+     "type": "",
+     "meeting_type": "Class",
+     "url": "https://app.notion.com/p/Read-Prep-16-990-L8-Shared-team-vision-3eeea74eb779813384cee051b238685c"
     },
     {
      "name": "14.003 Office Hours \u2014 Cristine von Dessauer",
@@ -182,6 +194,18 @@
      "url": "https://app.notion.com/p/14-003-Office-Hours-Cristine-von-Dessauer-3dcea74eb779812db988f3d128c987d7"
     },
     {
+     "name": "[PREP] 14.003 Microecon & Policy: Problem Set 02 T-3: Finish it: Consumer theory",
+     "date": "2026-10-06T21:00:00.000-04:00",
+     "end": "2026-10-06T22:15:00.000-04:00",
+     "done": false,
+     "kind": "14.003",
+     "src": "class",
+     "location": "",
+     "type": "",
+     "meeting_type": "Class",
+     "url": "https://app.notion.com/p/PREP-14-003-Microecon-Policy-Problem-Set-02-T-3-Finish-it-Consumer-theory-3e9ea74eb779813b9fbef5ec0de7b04d"
+    },
+    {
      "name": "TSK Cut and file the day's notes into the binder",
      "date": "2026-10-06T22:00:00.000-04:00",
      "end": "2026-10-06T22:15:00.000-04:00",
@@ -194,28 +218,16 @@
      "url": "https://app.notion.com/p/TSK-Cut-and-file-the-day-s-notes-into-the-binder-3dbea74eb77981f89690c78149d8d29c"
     },
     {
-     "name": "Read/Prep: 16.990: L8 Shared team vision",
-     "date": "2026-10-06T23:45:00.000+00:00",
-     "end": "2026-10-07T01:30:00.000+00:00",
-     "done": false,
-     "kind": "16.990",
-     "src": "class",
-     "location": "",
-     "type": "",
-     "meeting_type": "Class",
-     "url": "https://app.notion.com/p/Read-Prep-16-990-L8-Shared-team-vision-3eeea74eb779813384cee051b238685c"
-    },
-    {
-     "name": "Finish PSET ",
+     "name": "[PREP] 16.S896 RASCAL: Milestone T-3: Finish it: WORMS hardware selections final, orders placed",
      "date": "2026-10-06",
      "end": "",
      "done": false,
-     "kind": "14.003",
+     "kind": "16.S896",
      "src": "class",
      "location": "",
      "type": "",
      "meeting_type": "Class",
-     "url": "https://app.notion.com/p/Finish-PSET-75e8d8c9fa6b4ed9b45cbab244c451da"
+     "url": "https://app.notion.com/p/PREP-16-S896-RASCAL-Milestone-T-3-Finish-it-WORMS-hardware-selections-final-orders-placed-3e9ea74eb779815cb836c785514dfc93"
     },
     {
      "name": "[PREP] 16.S896 RASCAL: A1 T-7: Build it: Four Pillars quad chart",
@@ -228,18 +240,6 @@
      "type": "",
      "meeting_type": "Class",
      "url": "https://app.notion.com/p/PREP-16-S896-RASCAL-A1-T-7-Build-it-Four-Pillars-quad-chart-3e9ea74eb77981bf8e4dceae7d585617"
-    },
-    {
-     "name": "[PREP] 14.003 Microecon & Policy: Problem Set 02 T-3: Finish it: Consumer theory",
-     "date": "2026-10-06",
-     "end": "",
-     "done": false,
-     "kind": "14.003",
-     "src": "class",
-     "location": "",
-     "type": "",
-     "meeting_type": "Class",
-     "url": "https://app.notion.com/p/PREP-14-003-Microecon-Policy-Problem-Set-02-T-3-Finish-it-Consumer-theory-3e9ea74eb779813b9fbef5ec0de7b04d"
     }
    ]
   },
@@ -378,6 +378,18 @@
      "type": "Task",
      "meeting_type": "Admin",
      "url": "https://app.notion.com/p/TSK-Cut-and-file-the-day-s-notes-into-the-binder-3dbea74eb77981cd94f1c2a546c53162"
+    },
+    {
+     "name": "Read/Prep: IDS.412: L9 Standard-setting",
+     "date": "2026-10-07",
+     "end": "",
+     "done": false,
+     "kind": "IDS.412",
+     "src": "class",
+     "location": "",
+     "type": "",
+     "meeting_type": "Class",
+     "url": "https://app.notion.com/p/Read-Prep-IDS-412-L9-Standard-setting-3eeea74eb77981f89f1bebed20b10a01"
     }
    ]
   },
@@ -694,5 +706,5 @@
    ]
   }
  ],
- "total": 54
+ "total": 55
 }

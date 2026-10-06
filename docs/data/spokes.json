@@ -1,6 +1,16 @@
 {
  "classes": [
   {
+   "name": "Read Up on Micro-econ",
+   "code": "14.003",
+   "date": "2026-10-06T14:00:00.000-04:00",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "",
+   "url": "https://app.notion.com/p/Read-Up-on-Micro-econ-61b71400b7054b399594d5300b4d4ba2"
+  },
+  {
    "name": "16.990 Creative Teams: Guest Lecture: Dan Riccio (former Apple SVP Hardware Engineering)",
    "code": "16.990",
    "date": "2026-10-05T18:30:00.000+00:00",
@@ -23,7 +33,7 @@
   {
    "name": "Finish PSET ",
    "code": "14.003",
-   "date": "2026-10-06",
+   "date": "2026-10-06T13:00:00.000-04:00",
    "due": "",
    "status": "",
    "type": "",
@@ -63,7 +73,7 @@
   {
    "name": "Read/Prep: 16.990: L8 Shared team vision",
    "code": "16.990",
-   "date": "2026-10-06T23:45:00.000+00:00",
+   "date": "2026-10-06T18:00:00.000-04:00",
    "due": "",
    "status": "",
    "type": "",
@@ -103,7 +113,7 @@
   {
    "name": "Read/Prep: IDS.412: L9 Standard-setting",
    "code": "IDS.412",
-   "date": "2026-10-06T17:00:00.000-04:00",
+   "date": "2026-10-07",
    "due": "",
    "status": "",
    "type": "",
@@ -433,7 +443,7 @@
   {
    "name": "[PREP] 16.S896 RASCAL: Milestone T-3: Finish it: WORMS hardware selections final, orders placed",
    "code": "16.S896",
-   "date": "2026-10-06T08:00:00.000-04:00",
+   "date": "2026-10-06",
    "due": "",
    "status": "",
    "type": "",
@@ -653,7 +663,7 @@
   {
    "name": "[PREP] 14.003 Microecon & Policy: Problem Set 02 T-3: Finish it: Consumer theory",
    "code": "14.003",
-   "date": "2026-10-06",
+   "date": "2026-10-06T21:00:00.000-04:00",
    "due": "",
    "status": "",
    "type": "",
