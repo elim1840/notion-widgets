@@ -1,37 +1,20 @@
 {
- "generated": "2026-10-06T22:34:01-04:00",
- "today": "2026-10-06",
+ "generated": "2026-10-07T05:15:58-04:00",
+ "today": "2026-10-07",
  "counts": {
   "total": 261,
   "open": 239,
   "done": 22,
-  "today_total": 2,
+  "today_total": 1,
   "today_done": 0,
-  "overdue": 103,
-  "past_meetings": 48
+  "overdue": 104,
+  "past_meetings": 49
  },
  "today_items": [
   {
-   "name": "Go to Grad Lounge",
-   "date": "2026-10-06T13:30:00.000-04:00",
-   "end": "2026-10-06T14:00:00.000-04:00",
-   "done": false,
-   "status": "",
-   "type": "Meeting",
-   "meeting_type": "",
-   "priority": "",
-   "energy": "",
-   "location": "",
-   "attendees": "",
-   "agenda": "",
-   "link": "",
-   "notes": "",
-   "url": "https://app.notion.com/p/Go-to-Grad-Lounge-0f50b6ed49f54ad88ebc04ff46508591"
-  },
-  {
    "name": "TSK Cut and file the day's notes into the binder",
-   "date": "2026-10-06T22:00:00.000-04:00",
-   "end": "2026-10-06T22:15:00.000-04:00",
+   "date": "2026-10-07T22:00:00.000-04:00",
+   "end": "2026-10-07T22:15:00.000-04:00",
    "done": false,
    "status": "Not Started",
    "type": "Task",
@@ -43,7 +26,7 @@
    "agenda": "",
    "link": "",
    "notes": "Cut the day's sheets, sort by class then by the number printed in each sheet's footer, punch and file. Unsure sheets go in the front pocket for the Sunday review. Guide: 02_Classes/BINDER-FILING-GUIDE.md",
-   "url": "https://app.notion.com/p/TSK-Cut-and-file-the-day-s-notes-into-the-binder-3dbea74eb77981f89690c78149d8d29c"
+   "url": "https://app.notion.com/p/TSK-Cut-and-file-the-day-s-notes-into-the-binder-3dbea74eb77981cd94f1c2a546c53162"
   }
  ],
  "overdue_items": [
@@ -730,40 +713,6 @@
  ],
  "upcoming": [
   {
-   "name": "Go to Grad Lounge",
-   "date": "2026-10-06T13:30:00.000-04:00",
-   "end": "2026-10-06T14:00:00.000-04:00",
-   "done": false,
-   "status": "",
-   "type": "Meeting",
-   "meeting_type": "",
-   "priority": "",
-   "energy": "",
-   "location": "",
-   "attendees": "",
-   "agenda": "",
-   "link": "",
-   "notes": "",
-   "url": "https://app.notion.com/p/Go-to-Grad-Lounge-0f50b6ed49f54ad88ebc04ff46508591"
-  },
-  {
-   "name": "TSK Cut and file the day's notes into the binder",
-   "date": "2026-10-06T22:00:00.000-04:00",
-   "end": "2026-10-06T22:15:00.000-04:00",
-   "done": false,
-   "status": "Not Started",
-   "type": "Task",
-   "meeting_type": "Admin",
-   "priority": "Medium",
-   "energy": "Shallow",
-   "location": "",
-   "attendees": "",
-   "agenda": "",
-   "link": "",
-   "notes": "Cut the day's sheets, sort by class then by the number printed in each sheet's footer, punch and file. Unsure sheets go in the front pocket for the Sunday review. Guide: 02_Classes/BINDER-FILING-GUIDE.md",
-   "url": "https://app.notion.com/p/TSK-Cut-and-file-the-day-s-notes-into-the-binder-3dbea74eb77981f89690c78149d8d29c"
-  },
-  {
    "name": "TSK Cut and file the day's notes into the binder",
    "date": "2026-10-07T22:00:00.000-04:00",
    "end": "2026-10-07T22:15:00.000-04:00",
@@ -936,11 +885,6 @@
  ],
  "history": [
   {
-   "date": "2026-09-23",
-   "total": 5,
-   "done": 0
-  },
-  {
    "date": "2026-09-24",
    "total": 2,
    "done": 0
@@ -1003,6 +947,11 @@
   {
    "date": "2026-10-06",
    "total": 2,
+   "done": 0
+  },
+  {
+   "date": "2026-10-07",
+   "total": 1,
    "done": 0
   }
  ]

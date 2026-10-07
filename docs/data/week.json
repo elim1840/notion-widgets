@@ -1,6 +1,6 @@
 {
- "generated": "2026-10-06T22:34:01-04:00",
- "today": "2026-10-06",
+ "generated": "2026-10-07T05:15:58-04:00",
+ "today": "2026-10-07",
  "monday": "2026-10-05",
  "days": [
   {
@@ -131,7 +131,7 @@
   },
   {
    "date": "2026-10-06",
-   "is_today": true,
+   "is_today": false,
    "items": [
     {
      "name": "16.842 Systems Eng: Lecture 04: Concept & Architecture",
@@ -269,12 +269,24 @@
   },
   {
    "date": "2026-10-07",
-   "is_today": false,
+   "is_today": true,
    "items": [
     {
+     "name": "Study ECON",
+     "date": "2026-10-07T06:00:00.000-04:00",
+     "end": "2026-10-07T09:00:00.000-04:00",
+     "done": false,
+     "kind": "14.003",
+     "src": "class",
+     "location": "",
+     "type": "",
+     "meeting_type": "Class",
+     "url": "https://app.notion.com/p/Study-ECON-fa6ada95acff412ca475c8f06975a047"
+    },
+    {
      "name": "Read/Prep: 14.003: L9 Giffen goods (Jensen & Miller 2008)",
-     "date": "2026-10-07T08:30:00.000-04:00",
-     "end": "2026-10-07T09:45:00.000-04:00",
+     "date": "2026-10-07T09:00:00.000-04:00",
+     "end": "2026-10-07T10:15:00.000-04:00",
      "done": false,
      "kind": "14.003",
      "src": "class",
@@ -742,5 +754,5 @@
    ]
   }
  ],
- "total": 58
+ "total": 59
 }
