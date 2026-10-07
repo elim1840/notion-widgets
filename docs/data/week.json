@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-07T12:44:59-04:00",
+ "generated": "2026-10-07T17:37:56-04:00",
  "today": "2026-10-07",
  "monday": "2026-10-05",
  "days": [
@@ -342,18 +342,6 @@
      "type": "",
      "meeting_type": "Class",
      "url": "https://app.notion.com/p/IDS-412-Tech-Policy-Recitation-Week-5-3e2ea74eb7798126868bd51f81f1a73a"
-    },
-    {
-     "name": "[STUDY] IDS.412 Tech & Policy: Exam 17 T-28: Scope it: list every lecture and reading covered, then self-test cold to find the gaps",
-     "date": "2026-10-07T17:00:00.000-04:00",
-     "end": "2026-10-07T17:45:00.000-04:00",
-     "done": false,
-     "kind": "IDS.412",
-     "src": "class",
-     "location": "",
-     "type": "",
-     "meeting_type": "Class",
-     "url": "https://app.notion.com/p/STUDY-IDS-412-Tech-Policy-Exam-17-T-28-Scope-it-list-every-lecture-and-reading-covered-then-s-3e2ea74eb779817591b7e1dd3f1a5f03"
     },
     {
      "name": "14.003 Office Hours \u2014 Alicia Modestino",
@@ -754,5 +742,5 @@
    ]
   }
  ],
- "total": 59
+ "total": 58
 }
