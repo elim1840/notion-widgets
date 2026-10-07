@@ -1,6 +1,16 @@
 {
  "classes": [
   {
+   "name": "Work on Speech Template",
+   "code": "16.990",
+   "date": "2026-10-07T12:00:00.000-04:00",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "",
+   "url": "https://app.notion.com/p/Work-on-Speech-Template-3859f151498f4230a125b82971b77973"
+  },
+  {
    "name": "Check PSET 2",
    "code": "14.003",
    "date": "2026-10-06T18:00:00.000-04:00",
@@ -83,7 +93,7 @@
   {
    "name": "Read/Prep: 16.990: L8 Shared team vision",
    "code": "16.990",
-   "date": "2026-10-06T18:15:00.000-04:00",
+   "date": "2026-10-06",
    "due": "",
    "status": "",
    "type": "",
@@ -2573,7 +2583,7 @@
   {
    "name": "[STUDY] IDS.412 Tech & Policy: Exam 17 T-28: Scope it: list every lecture and reading covered, then self-test cold to find the gaps",
    "code": "IDS.412",
-   "date": "2026-10-07T12:00:00.000-04:00",
+   "date": "2026-10-07T17:00:00.000-04:00",
    "due": "",
    "status": "Not started",
    "type": "",
