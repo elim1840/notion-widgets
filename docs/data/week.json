@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-08T03:44:31-04:00",
+ "generated": "2026-10-08T10:57:27-04:00",
  "today": "2026-10-08",
  "monday": "2026-10-05",
  "days": [
@@ -434,30 +434,6 @@
      "url": "https://app.notion.com/p/Read-Prep-TPP-Short-Thesis-Proposal-finish-draft-submit-3f0ea74eb7798194a671f54f4abed0c8"
     },
     {
-     "name": "[PREP] 16.S896 RASCAL: A1 T-3: Finish it: Four Pillars quad chart",
-     "date": "2026-10-08T09:45:00.000-04:00",
-     "end": "2026-10-08T11:15:00.000-04:00",
-     "done": false,
-     "kind": "16.S896",
-     "src": "class",
-     "location": "",
-     "type": "",
-     "meeting_type": "Class",
-     "url": "https://app.notion.com/p/PREP-16-S896-RASCAL-A1-T-3-Finish-it-Four-Pillars-quad-chart-3e9ea74eb77981a780c6cd9ca9d8e274"
-    },
-    {
-     "name": "Read/Prep: 16.S896: Session 05 Framework 2 readings (Stakeholder Analysis, Needs to Goals) + WIP check",
-     "date": "2026-10-08T13:15:00.000-04:00",
-     "end": "2026-10-08T14:45:00.000-04:00",
-     "done": false,
-     "kind": "16.S896",
-     "src": "class",
-     "location": "",
-     "type": "",
-     "meeting_type": "Class",
-     "url": "https://app.notion.com/p/Read-Prep-16-S896-Session-05-Framework-2-readings-Stakeholder-Analysis-Needs-to-Goals-WIP-che-3f0ea74eb77981069e99f582096d5109"
-    },
-    {
      "name": "[HW] 16.S896 RASCAL: A1 Four Pillars quad chart: build the slide",
      "date": "2026-10-08T16:00:00.000-04:00",
      "end": "2026-10-08T17:30:00.000-04:00",
@@ -516,6 +492,30 @@
      "type": "Task",
      "meeting_type": "Admin",
      "url": "https://app.notion.com/p/TSK-Cut-and-file-the-day-s-notes-into-the-binder-3dbea74eb779810b9c0ccfec0edfb42d"
+    },
+    {
+     "name": "Read/Prep: 16.S896: Session 05 Framework 2 readings (Stakeholder Analysis, Needs to Goals) + WIP check",
+     "date": "2026-10-08",
+     "end": "",
+     "done": false,
+     "kind": "16.S896",
+     "src": "class",
+     "location": "",
+     "type": "",
+     "meeting_type": "Class",
+     "url": "https://app.notion.com/p/Read-Prep-16-S896-Session-05-Framework-2-readings-Stakeholder-Analysis-Needs-to-Goals-WIP-che-3f0ea74eb77981069e99f582096d5109"
+    },
+    {
+     "name": "[PREP] 16.S896 RASCAL: A1 T-3: Finish it: Four Pillars quad chart",
+     "date": "2026-10-08",
+     "end": "",
+     "done": false,
+     "kind": "16.S896",
+     "src": "class",
+     "location": "",
+     "type": "",
+     "meeting_type": "Class",
+     "url": "https://app.notion.com/p/PREP-16-S896-RASCAL-A1-T-3-Finish-it-Four-Pillars-quad-chart-3e9ea74eb77981a780c6cd9ca9d8e274"
     },
     {
      "name": "[STUDY] 14.003 Microecon & Policy: Exam 01 T-8: Past papers and problem sets under exam conditions, no notes",
