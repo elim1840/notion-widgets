@@ -1,6 +1,16 @@
 {
  "classes": [
   {
+   "name": "Run all prompts for Econ and build interactive Slide Deck",
+   "code": "14.003",
+   "date": "2026-10-08T17:00:00.000-04:00",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "",
+   "url": "https://app.notion.com/p/Run-all-prompts-for-Econ-and-build-interactive-Slide-Deck-c40db801feb8444dbd52f318f1c474a8"
+  },
+  {
    "name": "Study ECON",
    "code": "14.003",
    "date": "2026-10-07T06:00:00.000-04:00",
@@ -803,7 +813,7 @@
   {
    "name": "[HW] 16.S896 RASCAL: A1 Four Pillars quad chart: build the slide",
    "code": "16.S896",
-   "date": "2026-10-08T16:00:00.000-04:00",
+   "date": "2026-10-08",
    "due": "",
    "status": "",
    "type": "",
@@ -2533,7 +2543,7 @@
   {
    "name": "[DUE] 16.S896 RASCAL: Milestone: WORMS Hardware Selections Final and Orders Placed",
    "code": "16.S896",
-   "date": "2026-10-09T13:30:00.000-04:00",
+   "date": "2026-10-09",
    "due": "",
    "status": "",
    "type": "",
@@ -2543,7 +2553,7 @@
   {
    "name": "[DUE] 16.S896 RASCAL: A1: Four Pillars quad chart (individual, 5 pts)",
    "code": "16.S896",
-   "date": "2026-10-09T13:45:00.000-04:00",
+   "date": "2026-10-09",
    "due": "",
    "status": "",
    "type": "Homework",
@@ -2553,7 +2563,7 @@
   {
    "name": "[DUE] 14.003 Microecon & Policy: Problem Set 02: Consumer theory",
    "code": "14.003",
-   "date": "2026-10-08T19:00:00.000-04:00",
+   "date": "2026-10-08",
    "due": "",
    "status": "",
    "type": "",
@@ -2673,7 +2683,7 @@
   {
    "name": "[STUDY] 14.003 Microecon & Policy: Exam 01 T-8: Past papers and problem sets under exam conditions, no notes",
    "code": "14.003",
-   "date": "2026-10-08",
+   "date": "2026-10-08T13:00:00.000-04:00",
    "due": "",
    "status": "Not started",
    "type": "",
