@@ -1,20 +1,54 @@
 {
- "generated": "2026-10-07T21:19:15-04:00",
- "today": "2026-10-07",
+ "generated": "2026-10-08T03:44:31-04:00",
+ "today": "2026-10-08",
  "counts": {
   "total": 261,
   "open": 239,
   "done": 22,
-  "today_total": 1,
+  "today_total": 3,
   "today_done": 0,
-  "overdue": 104,
+  "overdue": 105,
   "past_meetings": 49
  },
  "today_items": [
   {
+   "name": "Read/Prep: TPP: Short Thesis Proposal, finish draft + submit",
+   "date": "2026-10-08T08:00:00.000-04:00",
+   "end": "2026-10-08T08:45:00.000-04:00",
+   "done": false,
+   "status": "Not Started",
+   "type": "Task",
+   "meeting_type": "TPP",
+   "priority": "High",
+   "energy": "",
+   "location": "",
+   "attendees": "",
+   "agenda": "",
+   "link": "",
+   "notes": "Finish rough draft, check against assignment, submit on TPP Student Resources Canvas (per Barb's TPP27 email). Due Fri Oct 9 (time unconfirmed, check Canvas).",
+   "url": "https://app.notion.com/p/Read-Prep-TPP-Short-Thesis-Proposal-finish-draft-submit-3f0ea74eb7798194a671f54f4abed0c8"
+  },
+  {
+   "name": "TSK Submit ASCEND 2027 abstract (SDA or Lunar Lander paper)",
+   "date": "2026-10-08T20:00:00.000-04:00",
+   "end": "",
+   "done": false,
+   "status": "Not Started",
+   "type": "Opportunity",
+   "meeting_type": "",
+   "priority": "High",
+   "energy": "Deep",
+   "location": "",
+   "attendees": "",
+   "agenda": "",
+   "link": "",
+   "notes": "Fit 5/5. Abstracts due Thu Oct 8, 2026, 8 PM ET; space domain awareness is a named National Security subtopic, and lunar/robotic exploration and space infrastructure tracks fit the Lunar Lander paper (IEEE Aerospace full-paper deadline was Oct 2). Added by the Monday Opportunity Scout 2026-10-05.",
+   "url": "https://app.notion.com/p/TSK-Submit-ASCEND-2027-abstract-SDA-or-Lunar-Lander-paper-3f0ea74eb779819fbbbde057d52ae92a"
+  },
+  {
    "name": "TSK Cut and file the day's notes into the binder",
-   "date": "2026-10-07T22:00:00.000-04:00",
-   "end": "2026-10-07T22:15:00.000-04:00",
+   "date": "2026-10-08T22:00:00.000-04:00",
+   "end": "2026-10-08T22:15:00.000-04:00",
    "done": false,
    "status": "Not Started",
    "type": "Task",
@@ -26,7 +60,7 @@
    "agenda": "",
    "link": "",
    "notes": "Cut the day's sheets, sort by class then by the number printed in each sheet's footer, punch and file. Unsure sheets go in the front pocket for the Sunday review. Guide: 02_Classes/BINDER-FILING-GUIDE.md",
-   "url": "https://app.notion.com/p/TSK-Cut-and-file-the-day-s-notes-into-the-binder-3dbea74eb77981cd94f1c2a546c53162"
+   "url": "https://app.notion.com/p/TSK-Cut-and-file-the-day-s-notes-into-the-binder-3dbea74eb779810b9c0ccfec0edfb42d"
   }
  ],
  "overdue_items": [
@@ -713,23 +747,6 @@
  ],
  "upcoming": [
   {
-   "name": "TSK Cut and file the day's notes into the binder",
-   "date": "2026-10-07T22:00:00.000-04:00",
-   "end": "2026-10-07T22:15:00.000-04:00",
-   "done": false,
-   "status": "Not Started",
-   "type": "Task",
-   "meeting_type": "Admin",
-   "priority": "Medium",
-   "energy": "Shallow",
-   "location": "",
-   "attendees": "",
-   "agenda": "",
-   "link": "",
-   "notes": "Cut the day's sheets, sort by class then by the number printed in each sheet's footer, punch and file. Unsure sheets go in the front pocket for the Sunday review. Guide: 02_Classes/BINDER-FILING-GUIDE.md",
-   "url": "https://app.notion.com/p/TSK-Cut-and-file-the-day-s-notes-into-the-binder-3dbea74eb77981cd94f1c2a546c53162"
-  },
-  {
    "name": "Read/Prep: TPP: Short Thesis Proposal, finish draft + submit",
    "date": "2026-10-08T08:00:00.000-04:00",
    "end": "2026-10-08T08:45:00.000-04:00",
@@ -881,14 +898,26 @@
    "link": "",
    "notes": "",
    "url": "https://app.notion.com/p/TSK-SERG-Meeting-3d0ea74eb779812287f3e6d70334716d"
+  },
+  {
+   "name": "MTG Lab Group Meeting",
+   "date": "2026-10-15T13:00:00.000-04:00",
+   "end": "2026-10-15T14:00:00.000-04:00",
+   "done": false,
+   "status": "Next Week",
+   "type": "Meeting",
+   "meeting_type": "Research",
+   "priority": "",
+   "energy": "",
+   "location": "",
+   "attendees": "",
+   "agenda": "",
+   "link": "",
+   "notes": "Organizers want guest speaker suggestions (faculty, industry, government experts); reply to them with ideas. Location not given. End time not given; defaulted to 1 hour.",
+   "url": "https://app.notion.com/p/MTG-Lab-Group-Meeting-3f1ea74eb77981ca96b7fe7975ffb443"
   }
  ],
  "history": [
-  {
-   "date": "2026-09-24",
-   "total": 2,
-   "done": 0
-  },
   {
    "date": "2026-09-25",
    "total": 4,
@@ -952,6 +981,11 @@
   {
    "date": "2026-10-07",
    "total": 1,
+   "done": 0
+  },
+  {
+   "date": "2026-10-08",
+   "total": 3,
    "done": 0
   }
  ]
