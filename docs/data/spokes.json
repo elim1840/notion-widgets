@@ -1,6 +1,26 @@
 {
  "classes": [
   {
+   "name": "Read/Prep: IDS.412: L10 Information asymmetries & adverse selection readings",
+   "code": "IDS.412",
+   "date": "2026-10-12T13:15:00.000-04:00",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "",
+   "url": "https://app.notion.com/p/Read-Prep-IDS-412-L10-Information-asymmetries-adverse-selection-readings-3f4ea74eb77981109f7dfe6f860ded06"
+  },
+  {
+   "name": "Read/Prep: 16.990: L10 Feedback in teams readings + Alex Sander case",
+   "code": "16.990",
+   "date": "2026-10-12T10:00:00.000-04:00",
+   "due": "",
+   "status": "",
+   "type": "",
+   "room": "",
+   "url": "https://app.notion.com/p/Read-Prep-16-990-L10-Feedback-in-teams-readings-Alex-Sander-case-3f4ea74eb7798164a9e2d9d98eb81c17"
+  },
+  {
    "name": "Run all prompts for Econ and build interactive Slide Deck",
    "code": "14.003",
    "date": "2026-10-08T17:00:00.000-04:00",
