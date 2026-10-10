@@ -1,6 +1,6 @@
 {
- "generated": "2026-10-09T22:31:38-04:00",
- "today": "2026-10-09",
+ "generated": "2026-10-10T05:00:54-04:00",
+ "today": "2026-10-10",
  "monday": "2026-10-05",
  "days": [
   {
@@ -545,7 +545,7 @@
   },
   {
    "date": "2026-10-09",
-   "is_today": true,
+   "is_today": false,
    "items": [
     {
      "name": "14.003 Microecon & Policy: Recitation Week 5",
@@ -683,7 +683,7 @@
   },
   {
    "date": "2026-10-10",
-   "is_today": false,
+   "is_today": true,
    "items": [
     {
      "name": "TSK Update Partiful RSVP: Mariko's Halloween party",

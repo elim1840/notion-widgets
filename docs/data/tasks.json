@@ -1,49 +1,32 @@
 {
- "generated": "2026-10-09T22:31:38-04:00",
- "today": "2026-10-09",
+ "generated": "2026-10-10T05:00:54-04:00",
+ "today": "2026-10-10",
  "counts": {
   "total": 261,
   "open": 239,
   "done": 22,
-  "today_total": 2,
+  "today_total": 1,
   "today_done": 0,
-  "overdue": 108,
+  "overdue": 110,
   "past_meetings": 49
  },
  "today_items": [
   {
-   "name": "[DUE] TPP Short Thesis Proposal (submit on TPP Student Resources Canvas)",
-   "date": "2026-10-09",
-   "end": "",
+   "name": "TSK Update Partiful RSVP: Mariko's Halloween party",
+   "date": "2026-10-10T12:00:00.000-04:00",
+   "end": "2026-10-10T12:15:00.000-04:00",
    "done": false,
    "status": "Not Started",
    "type": "Task",
-   "meeting_type": "TPP",
-   "priority": "High",
-   "energy": "Shallow",
+   "meeting_type": "Personal",
+   "priority": "Low",
+   "energy": "Errand",
    "location": "",
    "attendees": "",
    "agenda": "",
    "link": "",
-   "notes": "Assignment open on the TPP Student Resources Canvas site (Barb, TPP27 email). Submit by Fri 10/09. Long Thesis Proposal assignment will be posted soon. Due time not stated in the email; confirm on the Canvas assignment.",
-   "url": "https://app.notion.com/p/DUE-TPP-Short-Thesis-Proposal-submit-on-TPP-Student-Resources-Canvas-3e5ea74eb77981948183d48157c86ae4"
-  },
-  {
-   "name": "TSK Cut and file the day's notes into the binder",
-   "date": "2026-10-09T22:00:00.000-04:00",
-   "end": "2026-10-09T22:15:00.000-04:00",
-   "done": false,
-   "status": "Not Started",
-   "type": "Task",
-   "meeting_type": "Admin",
-   "priority": "Medium",
-   "energy": "Shallow",
-   "location": "",
-   "attendees": "",
-   "agenda": "",
-   "link": "",
-   "notes": "Cut the day's sheets, sort by class then by the number printed in each sheet's footer, punch and file. Unsure sheets go in the front pocket for the Sunday review. Guide: 02_Classes/BINDER-FILING-GUIDE.md",
-   "url": "https://app.notion.com/p/TSK-Cut-and-file-the-day-s-notes-into-the-binder-3dbea74eb779811da8dbd0bfba5d44f4"
+   "notes": "Open the Partiful invite and update your RSVP. Once the party date is set, add the event to Personal Events.",
+   "url": "https://app.notion.com/p/TSK-Update-Partiful-RSVP-Mariko-s-Halloween-party-3e9ea74eb77981f686bde375e53f5198"
   }
  ],
  "overdue_items": [
@@ -730,40 +713,6 @@
  ],
  "upcoming": [
   {
-   "name": "[DUE] TPP Short Thesis Proposal (submit on TPP Student Resources Canvas)",
-   "date": "2026-10-09",
-   "end": "",
-   "done": false,
-   "status": "Not Started",
-   "type": "Task",
-   "meeting_type": "TPP",
-   "priority": "High",
-   "energy": "Shallow",
-   "location": "",
-   "attendees": "",
-   "agenda": "",
-   "link": "",
-   "notes": "Assignment open on the TPP Student Resources Canvas site (Barb, TPP27 email). Submit by Fri 10/09. Long Thesis Proposal assignment will be posted soon. Due time not stated in the email; confirm on the Canvas assignment.",
-   "url": "https://app.notion.com/p/DUE-TPP-Short-Thesis-Proposal-submit-on-TPP-Student-Resources-Canvas-3e5ea74eb77981948183d48157c86ae4"
-  },
-  {
-   "name": "TSK Cut and file the day's notes into the binder",
-   "date": "2026-10-09T22:00:00.000-04:00",
-   "end": "2026-10-09T22:15:00.000-04:00",
-   "done": false,
-   "status": "Not Started",
-   "type": "Task",
-   "meeting_type": "Admin",
-   "priority": "Medium",
-   "energy": "Shallow",
-   "location": "",
-   "attendees": "",
-   "agenda": "",
-   "link": "",
-   "notes": "Cut the day's sheets, sort by class then by the number printed in each sheet's footer, punch and file. Unsure sheets go in the front pocket for the Sunday review. Guide: 02_Classes/BINDER-FILING-GUIDE.md",
-   "url": "https://app.notion.com/p/TSK-Cut-and-file-the-day-s-notes-into-the-binder-3dbea74eb779811da8dbd0bfba5d44f4"
-  },
-  {
    "name": "TSK Update Partiful RSVP: Mariko's Halloween party",
    "date": "2026-10-10T12:00:00.000-04:00",
    "end": "2026-10-10T12:15:00.000-04:00",
@@ -851,11 +800,6 @@
  ],
  "history": [
   {
-   "date": "2026-09-26",
-   "total": 2,
-   "done": 1
-  },
-  {
    "date": "2026-09-27",
    "total": 3,
    "done": 0
@@ -918,6 +862,11 @@
   {
    "date": "2026-10-09",
    "total": 2,
+   "done": 0
+  },
+  {
+   "date": "2026-10-10",
+   "total": 1,
    "done": 0
   }
  ]
